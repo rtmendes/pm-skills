@@ -10,6 +10,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - No unreleased changes documented yet.
 
+## [2.5.0] - 2026-03-02
+
+### Added
+- Foundation persona capability (`F-02`) with:
+  - `skills/foundation-persona/` skill + references
+  - `/persona` command at `commands/persona.md`
+  - AGENTS discovery coverage for foundation classification
+
+### Highlights
+- `M-09` taxonomy updates shipped with explicit foundation classification handling.
+- `M-10` lane closure evidence captured in release planning/checklist artifacts.
+- Doc-hygiene closure completed across README/getting-started and release metadata references.
+- `F-03` and `F-04` remain deferred from `v2.5.0`.
+
 ## [2.4.3] - 2026-02-16
 
 ### Added
