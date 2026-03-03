@@ -56,7 +56,7 @@ AI: *Produces a comprehensive PRD with problem statement, success metrics,
 
 ### What You Get
 
-- **24 skills** covering the entire product lifecycle
+- **25 skills** covering the full PM lifecycle (24 phase skills + 1 foundation persona skill)
 - **Professional templates** based on industry best practices
 - **Real-world examples** showing what good looks like
 - **Works with any AI assistant** (Claude, ChatGPT, Copilot, etc.)
@@ -230,7 +230,7 @@ Claude Code automatically discovers skills via the `AGENTS.md` file and command 
 
 #### Available Commands
 
-All 24 skills have corresponding slash commands:
+All 25 skills have corresponding slash commands:
 
 | Phase | Commands |
 |-------|----------|
@@ -280,7 +280,7 @@ git submodule add https://github.com/product-on-purpose/pm-skills.git .pm-skills
 #### How It Works
 
 Modern AI coding assistants discover skills through the `AGENTS.md` file at the repository root. This file:
-- Lists all 24 skills with paths and descriptions
+- Lists all 25 skills with paths and descriptions
 - Provides workflow bundles
 - Documents available commands
 
@@ -634,7 +634,7 @@ Bundles are pre-defined sequences of skills for common workflows.
 
 **Use when:** Comprehensive product development
 
-**Skills included:** All 24 skills across 6 phases
+**Skills included:** All 24 phase skills across 6 phases
 
 See `_bundles/` directory for detailed bundle documentation.
 

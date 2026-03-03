@@ -5,7 +5,7 @@
   <br>
 </h1>
 
-<h4 align="center">A curated collection of 24 best-practice, plug-and-play product management “agent skills” plus templates and workflow bundles for consistent, professional PM outputs.</h4>
+<h4 align="center">A curated collection of 25 best-practice, plug-and-play product management “agent skills” (24 phase skills + 1 foundation persona skill) plus templates and workflow bundles for consistent, professional PM outputs.</h4>
 
 <p align="center">
   <a href="https://github.com/product-on-purpose/pm-skills/issues/new?labels=bug">Report a Bug</a>
@@ -21,10 +21,10 @@
     <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat-square" alt="License">
   </a>
   <a href="https://github.com/product-on-purpose/pm-skills/releases">
-    <img src="https://img.shields.io/badge/version-2.4.3-blue.svg?style=flat-square" alt="Version">
+    <img src="https://img.shields.io/badge/version-2.5.0-blue.svg?style=flat-square" alt="Version">
   </a>
-  <a href="#the-24-skills">
-    <img src="https://img.shields.io/badge/skills-24-brightgreen.svg?style=flat-square" alt="Skills">
+  <a href="#the-skills">
+    <img src="https://img.shields.io/badge/skills-25-brightgreen.svg?style=flat-square" alt="Skills">
   </a>
   <a href="https://agentskills.io/specification">
     <img src="https://img.shields.io/badge/spec-agentskills.io-orange.svg?style=flat-square" alt="Agent Skills Spec">
@@ -57,7 +57,7 @@
   </a>
 </p>
 
-> **🔥MCP Server Available!** If you are using VS Code, Claude Desktop, Claude Code (CLI), Github Copilot, Cursor, etc... check out **[pm-skills-mcp](https://github.com/product-on-purpose/pm-skills-mcp)** for instant MCP access to all 24 skills and workflows - no file management required.
+> **🔥MCP Server Available!** If you are using VS Code, Claude Desktop, Claude Code (CLI), Github Copilot, Cursor, etc... check out **[pm-skills-mcp](https://github.com/product-on-purpose/pm-skills-mcp)** for instant MCP access to all 25 skills and workflows - no file management required.
 
 ---
 
@@ -91,7 +91,7 @@
   - [Alternative: openskills CLI](#alternative-openskills-cli)
 - [Usage](#usage)
   - [How Skills Work](#how-skills-work)
-  - [The 24 Skills](#the-24-skills)
+  - [The Skills](#the-skills)
   - [Quick Examples](#quick-examples)
   - [Workflow Bundles](#workflow-bundles)
 - [Project Status](#project-status)
@@ -118,89 +118,80 @@ git clone https://github.com/product-on-purpose/pm-skills.git && cd pm-skills
 
 ---
 
-**What's New (v2.4)**
+**What's New (Recent Releases)**
 <details>
-<summary>Cross-repo MCP drift guardrail (blocking-default)</summary>
+<summary>v2.5.0 - Persona + Foundation/Utility + Sample Library</summary>
 
-- `validate-mcp-sync` guardrail remains active for `pm-skills` vs `pm-skills-mcp` skill drift checks.
-- Drift check output remains actionable and includes the manual sync checklist.
-- Default mode is `block` in `v2.3.0`; manual runs can still use `mode=observe`.
-- MCP alignment closure (`B-01`) is now recorded as `closed-aligned` on pinned refs.
-- See `docs/guides/validate-mcp-sync.md` for rollout and troubleshooting.
+- Active shipped lane: `F-02` persona skill + `M-09` foundation/utility taxonomy + `M-10` sample library.
+- `M-10` content-alignment gate is explicitly closed with evidence in `docs/internal/release-planning/checklist_v2.5.0.md`.
+- Deferred from `v2.5.0` by design: `F-03` and `F-04`.
+- Release note: `docs/releases/Release_v2.5.0.md`.
 
 </details>
 <details>
-<summary>v2.4 contract lock shipped</summary>
+<summary>v2.4.3 - Patch: release metadata/link alignment</summary>
 
-- `B-03` output behavior contract and `B-04` config contract are now `closed-aligned`.
-- Release note published: `docs/releases/Release_v2.4.md`.
-- `docs/internal/release-planning/checklist_v2.4.0.md` is now `Shipped`.
-- Delivery-plan canonical v2.4 closure summary is tracked in `docs/internal/delivery-plan/v2.4-contract-lock-summary.md` (with local working evidence kept in `_NOTES/delivery-plan/`).
-
-</details>
-<details>
-<summary>Governance and release execution clarity</summary>
-
-- Added planning persistence policy and tier map:
-  - `docs/internal/planning-persistence-policy.md`
-  - `docs/internal/planning-artifact-tier-map.md`
-- Established canonical backlog governance:
-  - `docs/internal/backlog-canonical.md`
-- Added explicit release execution/checklists:
-  - `docs/internal/release-planning/Release_v2.2_to_v2.5_execution-plan.md`
-  - `docs/internal/release-planning/checklist_v2.2.0.md` through `docs/internal/release-planning/checklist_v2.5.0.md`
+- Patch lane focused on post-`v2.4.2` documentation and release-link alignment.
+- No behavior or contract changes from `v2.4.2`.
+- Release note: `docs/releases/Release_v2.4.3.md`.
 
 </details>
 <details>
-<summary>MCP version alignment model updated</summary>
+<summary>v2.4.2 - Governance and tracked-vs-local artifact hygiene</summary>
 
-- PM-Skills and PM-Skills MCP now use direct version tracking from `v2.4.x` onward.
-- Compatibility docs updated to anchor `pm-skills v2.4.x` to `pm-skills-mcp v2.4.x`.
-- `validate-mcp-sync` now also checks pinned source metadata and contract-version parity.
-
-</details>
-<details>
-<summary>v2.0 compatibility baseline remains in place</summary>
-
-- Flat skills layout (`skills/{phase-skill}/`) and command realignment remain the canonical structure.
-- Sync helper, release packaging, and command validation workflow remain unchanged.
+- Canonical governance docs aligned in tracked `docs/internal/` structure.
+- Release continuity docs prepared for upcoming `v2.5` lane decisions.
+- Release note: `docs/releases/Release_v2.4.2.md`.
 
 </details>
 <details>
-<summary>Previous v2.0 details</summary>
-<details>
-<summary>Sync helper for discovery (.claude/)</summary>
+<summary>v2.4.1 - Patch: docs/release alignment follow-up</summary>
 
-- Skills are now flat (`skills/{phase-skill}/`). Some tools (openskills CLI, certain Claude Code setups) look for `.claude/skills` and `.claude/commands`.
-- Run `./scripts/sync-claude.sh` (macOS/Linux) or `./scripts/sync-claude.ps1` (Windows) after cloning or unzipping to regenerate `.claude/skills` and `.claude/commands` from the flat source.
-- The release ZIP ships only `.claude/pm-skills-for-claude.md`; the sync helper creates the rest locally. Keep `.claude/` untracked.
+- Follow-up patch for release documentation consistency.
+- No behavior or contract changes from `v2.4.0`.
+- Release note: `docs/releases/Release_v2.4.1.md`.
 
 </details>
 <details>
-<summary>Flat skills layout + command realignment</summary>
+<summary>v2.4.0 - Contract lock closure</summary>
 
-- All 24 skills live at `skills/{phase-skill}/`.
-- Every slash command points to the flat path (no nested phase folders).
-- Bundles updated to reference the new paths.
-
-</details>
-<details>
-<summary>Reproducible builds</summary>
-
-- `scripts/build-release.(sh|ps1)` packages `pm-skills-v2.0.zip` + SHA256.
-- `scripts/validate-commands.(sh|ps1)` ensures commands reference valid skills/templates/examples.
-See `scripts/README_SCRIPTS.md` for script usage, FAQs, and troubleshooting.
-- Release workflow uploads ZIP + hash automatically on tag push.
+- `B-03` output behavior contract and `B-04` config contract closed-aligned.
+- Release checklist moved to shipped state for `v2.4.0`.
+- Release note: `docs/releases/Release_v2.4.0.md`.
 
 </details>
 <details>
-<summary>Docs refresh</summary>
+<summary>v2.3.0 - MCP sync guardrail defaults to blocking</summary>
 
-- README/QUICKSTART/AGENTS/bundles/guides reference flat paths.
-- Skill templates relocated to `docs/templates/skill-template/` with updated links.
-- Added project-structure and release notes updates for 2.0.1 tidy-up.
+- `validate-mcp-sync` default mode switched to `block`.
+- Guardrail output and rollout guidance documented in `docs/guides/validate-mcp-sync.md`.
+- Release note: `docs/releases/Release_v2.3.md`.
 
 </details>
+<details>
+<summary>v2.2.0 - Governance + release-planning baseline</summary>
+
+- Introduced cross-repo sync checker in observe-first phase.
+- Added canonical planning persistence and release-checklist scaffolding.
+- Release note: `docs/releases/Release_v2.2.md`.
+
+</details>
+<details>
+<summary>v2.0.x baseline - Flat structure and reproducible packaging</summary>
+
+- Flat skill layout (`skills/{phase-skill}/`) and command realignment established as baseline.
+- Sync helper and release packaging scripts became canonical install/release path.
+- Release notes: `docs/releases/Release_v2.0.md` plus follow-up entries in `CHANGELOG.md`.
+
+</details>
+<details>
+<summary>Pre-2.x history - grouped legacy baseline (1.x and 0.x)</summary>
+
+- `1.2.0` to `1.1.0`: security hardening, CI governance, and documentation baseline expansion.
+- `1.0.x`: initial stable Triple Diamond baseline plus slash-command completion.
+- `0.x`: initial repository scaffolding and early phased skill build-out.
+- See the changelog table below and `CHANGELOG.md` for dated release-by-release detail.
+
 </details>
 
 ---
@@ -241,7 +232,7 @@ Every time you ask an AI to help with product management, you start from zero. G
 
 ### Key Features
 
-- ✅ **24 Production-Ready Skills** covering the complete product lifecycle
+- ✅ **25 Production-Ready Skills** covering the complete product lifecycle (24 phase skills + 1 foundation persona skill)
 - ✅ **Triple Diamond Framework** organizing Discover, Define, Develop, Deliver, Measure, and Iterate phases
 - ✅ **Workflow Bundles** for common PM workflows (Feature Kickoff, Lean Startup, Triple Diamond)
 - ✅ **Slash Commands** for Claude Code users-instant access to every skill
@@ -329,7 +320,7 @@ PM-Skills follows the **[Agent Skills Specification](https://agentskills.io/spec
 - You're using Claude Desktop, Cursor, or any MCP client
 - You want programmatic tool access without managing files
 
-Both approaches give you access to the same 24 production-ready PM skills.
+Both approaches give you access to the same 25 production-ready PM skills (24 phase skills + 1 foundation persona skill).
 
 See the [Ecosystem Overview](docs/reference/ecosystem.md) for a detailed comparison.
 
@@ -378,7 +369,7 @@ cd pm-skills
 /user-stories "Recurring tasks feature from PRD"
 ```
 
-All 24 skills are available as `/skill-name` commands. See [commands/](commands/) for the full list.
+All 25 skills are available as `/skill-name` commands. See [commands/](commands/) for the full list.
 
 Need `.claude/skills` for openskills or certain discovery flows? After cloning, run:
 
@@ -421,7 +412,7 @@ For [MCP-compatible clients](https://modelcontextprotocol.io), use [pm-skills-mc
 }
 ```
 
-All 24 skills become available as programmatic tools. See the [pm-skills-mcp README](https://github.com/product-on-purpose/pm-skills-mcp#getting-started) for client-specific setup.
+All 25 skills become available as programmatic tools. See the [pm-skills-mcp README](https://github.com/product-on-purpose/pm-skills-mcp#getting-started) for client-specific setup.
 
 </details>
 <!-- ========== END NEW ========== -->
@@ -453,7 +444,7 @@ Both IDEs auto-discover skills via `AGENTS.md`:
 git clone https://github.com/product-on-purpose/pm-skills.git
 ```
 
-Open the folder in Cursor or Windsurf. The AI assistant will automatically discover and can use all 24 skills.
+Open the folder in Cursor or Windsurf. The AI assistant will automatically discover and can use all 25 skills.
 
 </details>
 
@@ -491,9 +482,9 @@ The skill content provides all the context the LLM needs to produce professional
 All releases are available on the [GitHub Releases](https://github.com/product-on-purpose/pm-skills/releases) page:
 
 - **`pm-skills-vX.X.X.zip`** — Complete package with all skills, commands, bundles, and documentation
-- **Latest stable:** `v2.4.3` (release-metadata/tag-alignment patch)
-- **Latest release notes:** [`docs/releases/Release_v2.4.3.md`](docs/releases/Release_v2.4.3.md)
-- **Published tag:** [`v2.4.3`](https://github.com/product-on-purpose/pm-skills/releases/tag/v2.4.3)
+- **Latest stable:** `v2.5.0` (persona + foundation/utility + sample-library lane)
+- **Latest release notes:** [`docs/releases/Release_v2.5.0.md`](docs/releases/Release_v2.5.0.md)
+- **Published tag:** [`v2.5.0`](https://github.com/product-on-purpose/pm-skills/releases/tag/v2.5.0)
 
 Each release includes `QUICKSTART.md` with installation and usage instructions.
 Release notes are published in `docs/releases/` (for example, `docs/releases/Release_v2.2.md`).
@@ -549,9 +540,9 @@ skills/{phase-skill}/
 4. References `EXAMPLE.md` for quality benchmarks
 5. Outputs a complete, professional PRD
 
-### The 24 Skills
+### The Skills
 
-PM-Skills covers the complete product lifecycle using the **Triple Diamond** framework:
+PM-Skills covers the complete product lifecycle using the **Triple Diamond** framework (24 phase skills) plus one foundation capability:
 
 #### 🔍 Discover - *Find the right problem*
 
@@ -607,6 +598,12 @@ PM-Skills covers the complete product lifecycle using the **Triple Diamond** fra
 | **refinement-notes** | Capture backlog refinement outcomes      | `/refinement-notes` |
 | **pivot-decision**   | Evidence-based pivot/persevere framework | `/pivot-decision`   |
 
+#### 🧭 Foundation - *Cross-cutting capability*
+
+| Skill                | What it does                                                                 | Command      |
+| -------------------- | ---------------------------------------------------------------------------- | ------------ |
+| **persona**          | Generate product or marketing personas with evidence and confidence | `/persona`   |
+
 ### Quick Examples
 
 **Generate a comprehensive PRD:**
@@ -651,7 +648,7 @@ Each bundle provides a **sequence of skills** with handoff guidance between step
 | -------------------------------------------------- | ----------------- | ---------------------------------------------------------------------- |
 | **[Feature Kickoff](_bundles/feature-kickoff.md)** | New features      | problem-statement → hypothesis → prd → user-stories → launch-checklist |
 | **[Lean Startup](_bundles/lean-startup.md)**       | Rapid validation  | hypothesis → experiment-design → experiment-results → pivot-decision   |
-| **[Triple Diamond](_bundles/triple-diamond.md)**   | Major initiatives | All 24 skills across 6 phases                                          |
+| **[Triple Diamond](_bundles/triple-diamond.md)**   | Major initiatives | Full 24-skill phase flow across 6 phases                                |
 
 #### Workflow Examples
 
@@ -678,7 +675,7 @@ Build → Measure → Learn cycle with hypothesis, experiments, and pivot decisi
 **For major initiatives**, use the [Triple Diamond](_bundles/triple-diamond.md) workflow:
 
 ```
-Complete product development across all 6 phases and 24 skills
+Complete product development across all 6 phases and 24 phase skills
 ```
 
 For detailed skill documentation and examples, see the [skills/](skills/) directory.
@@ -693,8 +690,8 @@ For detailed skill documentation and examples, see the [skills/](skills/) direct
 
 ```
 pm-skills/
-├── skills/                     # 24 PM skills (flat: discover-*, define-*, develop-*, deliver-*, measure-*, iterate-*)
-├── commands/                   # Slash commands (25) mapping to skills/bundles
+├── skills/                     # 25 PM skills (24 phase + 1 foundation skill)
+├── commands/                   # Slash commands (26) mapping to skills/bundles
 ├── _bundles/                   # Workflow bundles: feature-kickoff, lean-startup, triple-diamond
 ├── scripts/                    # sync-claude.(sh|ps1), build-release.(sh|ps1), validate-commands.(sh|ps1)
 ├── .github/                    # CI workflows + automation scripts (validate-mcp-sync)
@@ -715,6 +712,7 @@ See [CHANGELOG.md](CHANGELOG.md) for full details.
 
 | Version   | Date       | Highlights                                                              |
 | --------- | ---------- | ----------------------------------------------------------------------- |
+| **2.5.0** | 2026-03-02 | Persona skill shipment (`F-02`) + foundation/utility taxonomy (`M-09`) + sample-library gate closure (`M-10`) |
 | **2.4.3** | 2026-02-16 | Patch release to include post-`v2.4.2` documentation/release-link updates |
 | **2.4.2** | 2026-02-16 | Governance/artifact-placement patch + v2.5 continuity kickoff docs |
 | **2.4.1** | 2026-02-16 | Docs/release-alignment patch follow-up (no contract behavior changes) |
@@ -726,10 +724,10 @@ See [CHANGELOG.md](CHANGELOG.md) for full details.
 | **1.2.0** | 2026-01-20 | Security policy, CodeQL scanning, Dependabot, issue/PR templates        |
 | **1.1.1** | 2026-01-20 | openskills#48 fix verified, CODE_OF_CONDUCT, open-skills submissions    |
 | **1.1.0** | 2026-01-16 | Documentation overhaul, README redesign, FAQ, collapsible TOC           |
-| **1.0.1** | 2026-01-15 | All 24 slash commands complete                                          |
-| **1.0.0** | 2026-01-14 | Full Triple Diamond coverage-all 24 skills, workflow bundles, AGENTS.md |
-| **0.3.0** | 2026-01-14 | P1 Skills (8 skills) + GitHub Actions workflows                         |
-| **0.2.0** | 2026-01-14 | P0 Core Skills (5 skills)                                               |
+| **1.0.1** | 2026-01-15 | Slash-command baseline completion for the initial shipped skill set     |
+| **1.0.0** | 2026-01-14 | First stable Triple Diamond baseline, workflow bundles, and AGENTS.md   |
+| **0.3.0** | 2026-01-14 | P1 skill-lane expansion and GitHub Actions workflow setup               |
+| **0.2.0** | 2026-01-14 | P0 core-skill baseline and early project structure                      |
 | **0.1.0** | 2026-01-14 | Initial project structure, foundation infrastructure                    |
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -825,7 +823,7 @@ Please try to create bug reports that are:
 ## FAQ
 
 <details>
-<summary><strong>Do I need to install all 24 skills?</strong></summary>
+<summary><strong>Do I need to install all 25 skills?</strong></summary>
 
 No! You can use individual skills as needed. Each skill is self-contained and works independently. If you only need PRDs, just reference the `skills/deliver-prd/` skill. The bundles are optional workflow guides, not requirements.
 
@@ -855,7 +853,7 @@ Fork the repository and modify the `SKILL.md`, `TEMPLATE.md`, or `EXAMPLE.md` fi
 <details>
 <summary><strong>Why doesn't PM-Skills work with openskills CLI?</strong></summary>
 
-The openskills CLI discovers skills in `.claude/skills/` directories. PM-Skills now ships flat `skills/{phase-skill}/` plus a sync helper that populates `.claude/skills/` locally. Clone the repo, run `./scripts/sync-claude.sh` (or `.ps1`), and openskills/Claude Code will discover all 24 skills.
+The openskills CLI discovers skills in `.claude/skills/` directories. PM-Skills now ships flat `skills/{phase-skill}/` plus foundation capabilities and a sync helper that populates `.claude/skills/` locally. Clone the repo, run `./scripts/sync-claude.sh` (or `.ps1`), and openskills/Claude Code will discover all shipped skills.
 
 </details>
 
@@ -877,7 +875,7 @@ Slash commands (like `/prd` or `/hypothesis`) are shortcuts that invoke the corr
 <details>
 <summary><strong>What's the difference between pm-skills and pm-skills-mcp?</strong></summary>
 
-**pm-skills** (this repo) is the source skill library with all 24 PM skills as markdown files. It's best for Claude Code slash commands, file browsing, and customization.
+**pm-skills** (this repo) is the source skill library with all 25 PM skills as markdown files. It's best for Claude Code slash commands, file browsing, and customization.
 
 **pm-skills-mcp** wraps these same skills in an MCP server for programmatic access. It's best for Claude Desktop, Cursor, and any MCP-compatible client.
 
