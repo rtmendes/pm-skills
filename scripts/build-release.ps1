@@ -31,11 +31,27 @@ New-Item -ItemType Directory -Force -Path $Stage | Out-Null
 # Stage contents
 $toCopy = @(
   "skills","commands","_bundles","scripts",
+  ".claude-plugin",
   ".claude/pm-skills-for-claude.md",
   "README.md","QUICKSTART.md","AGENTS.md","CHANGELOG.md","docs"
 )
 foreach ($item in $toCopy) {
   Copy-Item -Recurse -Force -Path (Join-Path $Root $item) -Destination $Stage
+}
+
+# Ensure plugin manifest exists and version matches release version in staged artifact.
+$PluginManifest = Join-Path $Stage ".claude-plugin/plugin.json"
+if (-not (Test-Path $PluginManifest)) {
+  throw "Missing required plugin manifest: $PluginManifest"
+}
+
+$plugin = Get-Content -Raw $PluginManifest | ConvertFrom-Json
+$plugin.version = $Version
+Set-Content -Path $PluginManifest -Value (($plugin | ConvertTo-Json -Depth 10) + "`n") -Encoding utf8
+
+$versionRegex = '"version"\s*:\s*"' + [Regex]::Escape($Version) + '"'
+if (-not ((Get-Content -Raw $PluginManifest) -match $versionRegex)) {
+  throw "Failed to set staged plugin manifest version to $Version"
 }
 
 # Ensure .claude discovery dirs are not shipped populated

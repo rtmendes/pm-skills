@@ -16,6 +16,19 @@ VERSION="${VERSION#v}"
 VERSION="${VERSION:-2.0.1}"
 ZIP="$OUT/pm-skills-v${VERSION}.zip"
 
+PYTHON_CMD=""
+for candidate in python3 python; do
+  if command -v "$candidate" >/dev/null 2>&1; then
+    PYTHON_CMD="$candidate"
+    break
+  fi
+done
+
+NODE_CMD=""
+if command -v node >/dev/null 2>&1; then
+  NODE_CMD="node"
+fi
+
 rm -rf "$OUT"
 mkdir -p "$STAGE"
 
@@ -27,6 +40,7 @@ if command -v rsync >/dev/null 2>&1; then
     "$ROOT/commands" \
     "$ROOT/_bundles" \
     "$ROOT/scripts" \
+    "$ROOT/.claude-plugin" \
     "$ROOT/.claude/pm-skills-for-claude.md" \
     "$ROOT/README.md" "$ROOT/QUICKSTART.md" "$ROOT/AGENTS.md" "$ROOT/CHANGELOG.md" "$ROOT/docs" \
     "$STAGE/"
@@ -37,18 +51,51 @@ else
     "$ROOT/commands" \
     "$ROOT/_bundles" \
     "$ROOT/scripts" \
+    "$ROOT/.claude-plugin" \
     "$ROOT/.claude/pm-skills-for-claude.md" \
     "$ROOT/README.md" "$ROOT/QUICKSTART.md" "$ROOT/AGENTS.md" "$ROOT/CHANGELOG.md" "$ROOT/docs" \
     "$STAGE/"
 fi
 
-PYTHON_CMD=""
-for candidate in python3 python; do
-  if command -v "$candidate" >/dev/null 2>&1; then
-    PYTHON_CMD="$candidate"
-    break
-  fi
-done
+# Ensure plugin manifest exists and version matches release version in staged artifact.
+STAGE_PLUGIN_MANIFEST="$STAGE/.claude-plugin/plugin.json"
+if [[ ! -f "$STAGE_PLUGIN_MANIFEST" ]]; then
+  echo "Missing required plugin manifest: $STAGE_PLUGIN_MANIFEST"
+  exit 1
+fi
+
+if [[ -n "$PYTHON_CMD" ]]; then
+  "$PYTHON_CMD" - "$STAGE_PLUGIN_MANIFEST" "$VERSION" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+manifest_path = Path(sys.argv[1])
+version = sys.argv[2]
+
+data = json.loads(manifest_path.read_text(encoding="utf-8"))
+data["version"] = version
+manifest_path.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
+PY
+elif [[ -n "$NODE_CMD" ]]; then
+  "$NODE_CMD" - "$STAGE_PLUGIN_MANIFEST" "$VERSION" <<'NODE'
+const fs = require("fs");
+
+const manifestPath = process.argv[2];
+const version = process.argv[3];
+const data = JSON.parse(fs.readFileSync(manifestPath, "utf8"));
+data.version = version;
+fs.writeFileSync(manifestPath, `${JSON.stringify(data, null, 2)}\n`, "utf8");
+NODE
+else
+  sed -i.bak -E "s/(\"version\"[[:space:]]*:[[:space:]]*\")[^\"]+(\")/\1$VERSION\2/" "$STAGE_PLUGIN_MANIFEST"
+  rm -f "$STAGE_PLUGIN_MANIFEST.bak"
+fi
+
+if ! grep -Eq "\"version\"[[:space:]]*:[[:space:]]*\"$VERSION\"" "$STAGE_PLUGIN_MANIFEST"; then
+  echo "Failed to set staged plugin manifest version to $VERSION"
+  exit 1
+fi
 
 # Ensure .claude discovery dirs are NOT shipped populated
 rm -rf "$STAGE/.claude/skills" "$STAGE/.claude/commands"
