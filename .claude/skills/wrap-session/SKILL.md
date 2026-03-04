@@ -34,7 +34,7 @@ If CHANGELOG.md doesn't exist, create it using `assets/CHANGELOG.template.md`.
 
 ### 4. Update Agent Context Files
 
-Create/update files in `AGENTS/<model>/` (e.g., `AGENTS/claude-opus-4.5/`):
+Create/update files in `AGENTS/<model>/` (e.g., `AGENTS/claude/`):
 
 | File           | Purpose               | When to Update          |
 | -------------- | --------------------- | ----------------------- |
@@ -46,7 +46,7 @@ Create/update files in `AGENTS/<model>/` (e.g., `AGENTS/claude-opus-4.5/`):
 
 ```
 AGENTS/
-└── claude-opus-4.5/
+└── claude/
     ├── CONTEXT.md
     ├── TODO.md
     ├── DECISIONS.md
@@ -114,7 +114,7 @@ project-root/
 ├── README.md
 ├── CHANGELOG.md
 └── AGENTS/
-    └── claude-opus-4.5/
+    └── claude/
         ├── CONTEXT.md
         ├── TODO.md
         ├── DECISIONS.md

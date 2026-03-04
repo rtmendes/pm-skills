@@ -61,7 +61,7 @@ Wait for confirmation.
 ├── _NOTES/
 │   └── .gitkeep
 └── AGENTS/
-    └── claude-opus-4.5/
+    └── claude/
         ├── CONTEXT.md
         ├── TODO.md
         ├── DECISIONS.md

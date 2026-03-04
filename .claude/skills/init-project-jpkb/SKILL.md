@@ -59,7 +59,7 @@ This allows safe re-runs on existing projects to add agentic structure.
 ├── _NOTES/
 │   └── .gitkeep
 └── AGENTS/
-    └── claude-opus-4.5/
+    └── claude/
         ├── CONTEXT.md
         ├── TODO.md
         ├── DECISIONS.md

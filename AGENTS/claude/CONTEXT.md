@@ -49,7 +49,7 @@ pm-skills/
 │   ├── release.yml       # Create releases on tag
 │   └── release-zips.yml  # Package ZIP artifacts
 ├── AGENTS/               # AI agent session continuity
-│   └── claude-opus-4.5/
+│   └── claude/
 │       ├── CONTEXT.md    # Project state (this file)
 │       ├── DECISIONS.md  # Technical decisions
 │       ├── SESSION-LOG/  # Session summaries
@@ -134,7 +134,7 @@ pm-skills/
 
 - **v2.0 Planning: Structure, Output, MCP Impact** (2026-01-21)
   - Analyzed Claude Code skill discovery requirements (flat `.claude/skills/` vs hierarchical `skills/{phase}/`)
-  - Created comprehensive planning documents in `AGENTS/claude-opus-4.5/PLANNING/`:
+  - Created comprehensive planning documents in `AGENTS/claude/PLANNING/`:
     - `plan_skill-structure-revamp.md` — 6 options for restructuring (keep current, flatten, phase prefix, numeric prefix, dual structure, flat+metadata)
     - `plan_skill-output.md` — Configurable file output (always file, always prompt, configurable default)
     - `plan_revamp-mcp.md` — Impact analysis for pm-skills-mcp (tool names, resource URIs, workflows, embed script)

@@ -213,7 +213,7 @@ Session continuity for AI coding assistants. Contains context, decisions, and se
 
 ```
 AGENTS/
-└── claude-opus-4.5/
+└── claude/
     ├── CONTEXT.md            # Current project state
     ├── DECISIONS.md          # Technical decisions (ADR format)
     ├── TODO.md               # Task tracking
