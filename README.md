@@ -85,6 +85,7 @@
   - [Works for...](#works-for)
   - [Comparison: `pm-skills` (this repo) vs. `pm-skills-mcp`](#comparison-pm-skills-this-repo-vs-pm-skills-mcp)
 - [Getting Started](#getting-started)
+  - [Install as Claude Code Plugin](#install-as-claude-code-plugin)
   - [Installation Options](#installation-options)
   - [Quick Start by Platform](#quick-start-by-platform)
   - [Releases](#releases)
@@ -119,6 +120,15 @@ git clone https://github.com/product-on-purpose/pm-skills.git && cd pm-skills
 ---
 
 **What's New (Recent Releases)**
+<details>
+<summary>v2.6.0 - Claude plugin packaging release</summary>
+
+- Added Claude plugin manifest support via `.claude-plugin/plugin.json`.
+- Release packaging now includes `.claude-plugin/` and enforces plugin-manifest version alignment with the release version.
+- Added plugin packaging validation workflow with manifest checks, policy lint, and tag/version parity checks.
+- Release note: `docs/releases/Release_v2.6.0.md`.
+
+</details>
 <details>
 <summary>v2.5.2 - Patch: public release-doc readability and hygiene</summary>
 
@@ -351,6 +361,22 @@ git clone https://github.com/product-on-purpose/pm-skills.git && cd pm-skills
 
 **Docs navigation:** Quickest: this README’s Quick Start or `QUICKSTART.md` in the repo/release ZIP. Detailed: `docs/getting-started.md` (long-form).
 
+### Install as Claude Code Plugin
+
+Use this option if your Claude client supports plugin-manifest install flows.
+
+1. Clone the repo or extract the release ZIP.
+2. During plugin setup, select the manifest at `.claude-plugin/plugin.json`.
+3. Complete install in your client and reload if prompted.
+
+Example local setup:
+
+```bash
+git clone https://github.com/product-on-purpose/pm-skills.git
+cd pm-skills
+# Then point your client to: .claude-plugin/plugin.json
+```
+
 ### Installation Options
 
 | Method                 | Best For                                  | Command / Action                              |
@@ -441,6 +467,28 @@ git submodule add https://github.com/product-on-purpose/pm-skills.git
 
 Copilot Chat will see the skills. Ask: "Use the prd skill to create requirements for user authentication"
 
+Setup checklist:
+1. Open a workspace that includes `pm-skills` (repo root or submodule).
+2. Use Copilot Chat in agent/workspace context.
+3. Invoke skills by name, for example: `Use the hypothesis skill for checkout abandonment`.
+
+</details>
+
+<details>
+<summary><strong>OpenCode</strong></summary>
+
+OpenCode can load PM-Skills directly from this repository:
+
+```bash
+git clone https://github.com/product-on-purpose/pm-skills.git
+cd pm-skills
+```
+
+Setup checklist:
+1. Configure OpenCode to use this folder as a skills source.
+2. If your OpenCode flow expects `.claude/skills/`, run `./scripts/sync-claude.sh` (or `.ps1`) once after clone.
+3. Invoke by skill name (example: `Use the prd skill for ...`).
+
 </details>
 
 <details>
@@ -491,9 +539,9 @@ The skill content provides all the context the LLM needs to produce professional
 All releases are available on the [GitHub Releases](https://github.com/product-on-purpose/pm-skills/releases) page:
 
 - **`pm-skills-vX.X.X.zip`** — Complete package with all skills, commands, bundles, and documentation
-- **Latest stable:** `v2.5.2` (public release-doc readability and hygiene patch)
-- **Latest release notes:** [`docs/releases/Release_v2.5.2.md`](docs/releases/Release_v2.5.2.md)
-- **Published tag:** [`v2.5.2`](https://github.com/product-on-purpose/pm-skills/releases/tag/v2.5.2)
+- **Latest stable:** `v2.6.0` (Claude plugin packaging release)
+- **Latest release notes:** [`docs/releases/Release_v2.6.0.md`](docs/releases/Release_v2.6.0.md)
+- **Published tag:** [`v2.6.0`](https://github.com/product-on-purpose/pm-skills/releases/tag/v2.6.0)
 
 Each release includes `QUICKSTART.md` with installation and usage instructions.
 Release notes are published in `docs/releases/` (for example, `docs/releases/Release_v2.2.md`).

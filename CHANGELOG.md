@@ -10,6 +10,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - No unreleased changes documented yet.
 
+## [2.6.0] - 2026-03-04
+
+### Added
+- Claude plugin manifest: `.claude-plugin/plugin.json`.
+- Plugin packaging validation workflow:
+  - `.github/workflows/validate-plugin.yml`
+- Release note artifact:
+  - `docs/releases/Release_v2.6.0.md`
+
+### Changed
+- Release packaging now includes `.claude-plugin/` in ZIP staging:
+  - `scripts/build-release.sh`
+  - `scripts/build-release.ps1`
+- Release packaging now enforces staged plugin-manifest version parity with the target release version.
+- GitHub release workflow notes now include plugin-manifest install guidance:
+  - `.github/workflows/release.yml`
+- README release/install guidance updated for plugin install plus explicit Copilot/OpenCode setup notes.
+
+### Release Notes
+- Minor release focused on Claude plugin packaging and release automation hardening.
+- No PM skill or slash-command behavior changes.
+- No `pm-skills-mcp` deploy is included in this release scope.
+
 ## [2.5.2] - 2026-03-04
 
 ### Changed

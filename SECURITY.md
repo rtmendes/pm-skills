@@ -2,32 +2,42 @@
 
 ## Supported Versions
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 1.x.x   | :white_check_mark: |
-| < 1.0   | :x:                |
+| Version | Supported |
+| ------- | --------- |
+| 2.x     | ✅        |
+| < 2.0   | ❌        |
 
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability in pm-skills, please report it responsibly.
+If you discover a security issue in `pm-skills`, report it privately first.
 
-**Do not report security vulnerabilities through public GitHub issues.**
+Preferred channel:
+1. Use GitHub Private Vulnerability Reporting:
+   - <https://github.com/product-on-purpose/pm-skills/security/advisories/new>
 
-Instead, please email [security contact] or use GitHub's private vulnerability reporting feature.
+Fallback channel:
+1. Open a GitHub issue requesting a private follow-up (do not include exploit details or secrets):
+   - <https://github.com/product-on-purpose/pm-skills/issues/new>
 
-We will:
-- Acknowledge receipt within 48 hours
-- Provide a detailed response within 72 hours
-- Keep you informed of progress toward resolution
+What to include:
+1. Affected file(s) or workflow(s)
+2. Reproduction steps
+3. Impact assessment
+4. Suggested remediation (if available)
+
+Response targets:
+1. Initial acknowledgement within 2 business days
+2. Ongoing status updates until resolution
 
 ## Scope
 
-This security policy applies to:
-- The pm-skills repository and its contents
-- Skills, templates, and workflow definitions
-- GitHub Actions workflows in this repository
+This policy covers:
+1. Repository content (`skills/`, `commands/`, `_bundles/`, docs, templates)
+2. Build/release tooling and GitHub Actions workflows
+3. Published release artifacts
 
-Since pm-skills consists primarily of markdown templates and YAML configurations (not executable code), the primary security concerns are:
-- Malicious content injection in templates
-- Supply chain risks in referenced tools/dependencies
-- Accidental secret exposure in examples
+## Out of Scope
+
+The following are generally out of scope for this repository:
+1. Vulnerabilities in third-party tools or clients not maintained here
+2. Security behavior of external AI platforms integrating these skills
