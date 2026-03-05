@@ -21,7 +21,7 @@
     <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat-square" alt="License">
   </a>
   <a href="https://github.com/product-on-purpose/pm-skills/releases">
-    <img src="https://img.shields.io/badge/version-2.5.2-blue.svg?style=flat-square" alt="Version">
+    <img src="https://img.shields.io/badge/version-2.6.1-blue.svg?style=flat-square" alt="Version">
   </a>
   <a href="#the-skills">
     <img src="https://img.shields.io/badge/skills-25-brightgreen.svg?style=flat-square" alt="Skills">
@@ -120,6 +120,15 @@ git clone https://github.com/product-on-purpose/pm-skills.git && cd pm-skills
 ---
 
 **What's New (Recent Releases)**
+<details>
+<summary>v2.6.1 - Sample library recovery and packaging inclusion</summary>
+
+- Restored and normalized the shipped sample-output corpus under `library/skill-output-samples/`.
+- Added sample-library staging to release packagers so ZIP artifacts include sample outputs.
+- Added/updated sample-library governance artifacts and standards references for deterministic release validation.
+- Release note: `docs/releases/Release_v2.6.1.md`.
+
+</details>
 <details>
 <summary>v2.6.0 - Claude plugin packaging release</summary>
 
@@ -539,9 +548,9 @@ The skill content provides all the context the LLM needs to produce professional
 All releases are available on the [GitHub Releases](https://github.com/product-on-purpose/pm-skills/releases) page:
 
 - **`pm-skills-vX.X.X.zip`** — Complete package with all skills, commands, bundles, and documentation
-- **Latest stable:** `v2.6.0` (Claude plugin packaging release)
-- **Latest release notes:** [`docs/releases/Release_v2.6.0.md`](docs/releases/Release_v2.6.0.md)
-- **Published tag:** [`v2.6.0`](https://github.com/product-on-purpose/pm-skills/releases/tag/v2.6.0)
+- **Latest stable:** `v2.6.1` (sample library recovery and packaging inclusion)
+- **Latest release notes:** [`docs/releases/Release_v2.6.1.md`](docs/releases/Release_v2.6.1.md)
+- **Published tag:** [`v2.6.1`](https://github.com/product-on-purpose/pm-skills/releases/tag/v2.6.1)
 
 Each release includes `QUICKSTART.md` with installation and usage instructions.
 Release notes are published in `docs/releases/` (for example, `docs/releases/Release_v2.2.md`).
@@ -750,6 +759,7 @@ pm-skills/
 ├── skills/                     # 25 PM skills (24 phase + 1 foundation skill)
 ├── commands/                   # Slash commands (26) mapping to skills/bundles
 ├── _bundles/                   # Workflow bundles: feature-kickoff, lean-startup, triple-diamond
+├── library/                    # Sample output library (skill-output-samples) and related corpus docs
 ├── scripts/                    # sync-claude.(sh|ps1), build-release.(sh|ps1), validate-commands.(sh|ps1)
 ├── .github/                    # CI workflows + automation scripts (validate-mcp-sync)
 ├── docs/                       # Documentation and guides
@@ -769,6 +779,8 @@ See [CHANGELOG.md](CHANGELOG.md) for full details.
 
 | Version   | Date       | Highlights                                                              |
 | --------- | ---------- | ----------------------------------------------------------------------- |
+| **2.6.1** | 2026-03-04 | Sample-library recovery, naming/path normalization, and release ZIP inclusion |
+| **2.6.0** | 2026-03-04 | Claude plugin packaging release with staged manifest version checks |
 | **2.5.2** | 2026-03-04 | Public release-doc readability and hygiene patch (user-first wording, no local-only path references) |
 | **2.5.1** | 2026-03-04 | Canonical `AGENTS/claude` workspace + clean-worktree cut/tag/publish runbook |
 | **2.5.0** | 2026-03-02 | Persona skill shipment + foundation/utility taxonomy + sample-library quality closure |

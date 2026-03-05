@@ -10,6 +10,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - No unreleased changes documented yet.
 
+## [2.6.1] - 2026-03-04
+
+### Added
+- Release note artifact:
+  - `docs/releases/Release_v2.6.1.md`
+
+### Changed
+- Sample output library moved and normalized to:
+  - `library/skill-output-samples/`
+- Sample creation standards filename standardized to:
+  - `library/skill-output-samples/SAMPLE_CREATION.md`
+- Sample coverage manifest moved to release-planning artifacts:
+  - `_NOTES/delivery-plan/releases/v2.6.1/artifacts/skill-output-samples_manifest.v2.6.1.json`
+- Release packaging now includes sample-library content:
+  - `scripts/build-release.sh`
+  - `scripts/build-release.ps1`
+- Release workflow-generated notes now list sample-library inclusion:
+  - `.github/workflows/release.yml`
+- README release metadata rolled forward to `v2.6.1`.
+
+### Release Notes
+- Patch release focused on sample-library recovery, naming/path normalization, and release-artifact inclusion.
+- No PM skill instruction or slash-command behavior changes.
+
 ## [2.6.0] - 2026-03-04
 
 ### Added

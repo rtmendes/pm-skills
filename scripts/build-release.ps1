@@ -3,7 +3,7 @@ param(
 )
 
 # pm-skills release packager (PowerShell)
-# Builds pm-skills-vX.Y.Z.zip with flat skills/commands and helper scripts.
+# Builds pm-skills-vX.Y.Z.zip with skills/commands, sample library, docs, and helper scripts.
 
 $ErrorActionPreference = "Stop"
 
@@ -31,12 +31,27 @@ New-Item -ItemType Directory -Force -Path $Stage | Out-Null
 # Stage contents
 $toCopy = @(
   "skills","commands","_bundles","scripts",
+  "library",
   ".claude-plugin",
   ".claude/pm-skills-for-claude.md",
   "README.md","QUICKSTART.md","AGENTS.md","CHANGELOG.md","docs"
 )
 foreach ($item in $toCopy) {
   Copy-Item -Recurse -Force -Path (Join-Path $Root $item) -Destination $Stage
+}
+
+# Ensure sample library is present in staged artifact.
+$SampleDir = Join-Path $Stage "library/skill-output-samples"
+if (-not (Test-Path $SampleDir)) {
+  throw "Missing required sample library directory: $SampleDir"
+}
+
+$sampleFiles = Get-ChildItem -Path $SampleDir -Recurse -File |
+  Where-Object {
+    $_.Name -cmatch '^sample_[a-z0-9-]+_[a-z0-9-]+_[a-z0-9-]+\.md$'
+  }
+if ($sampleFiles.Count -eq 0) {
+  throw "No sample files found in staged sample library: $SampleDir"
 }
 
 # Ensure plugin manifest exists and version matches release version in staged artifact.

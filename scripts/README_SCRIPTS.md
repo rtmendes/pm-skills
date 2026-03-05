@@ -16,7 +16,7 @@
 ---
 
 ## Overview
-The `scripts/` folder contains small utilities to keep the repo consistent, reproducible, and discoverable across AI tools. They are safe to run locally; only `build-release` writes to `dist/`.
+The `scripts/` folder contains small utilities to keep the repo consistent, reproducible, and discoverable across AI tools. They are safe to run locally; `build-release` writes to `dist/` and refreshes `.claude/` via `sync-claude`.
 
 CI-only automation scripts live in `.github/scripts/` (for example, `validate-mcp-sync.js`).
 
@@ -38,7 +38,7 @@ CI-only automation scripts live in `.github/scripts/` (for example, `validate-mc
 ### build-release.sh / build-release.ps1
 **Purpose:** Create `dist/pm-skills-vX.Y.Z.zip` with manifest + SHA256.
 
-**Why:** Reproducible packaging for releases; ensures populated `.claude/` is excluded.
+**Why:** Reproducible packaging for releases; ensures sample library content is included and populated `.claude/` is excluded.
 
 **Use when:** Cutting a release tag or testing the release bundle.
 

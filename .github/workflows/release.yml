@@ -34,6 +34,7 @@ jobs:
           ## What's Included
 
           - **PM skills library** (flat `skills/{phase-skill}/` + foundation capabilities)
+          - **Sample output library** (`library/skill-output-samples/` with README and canonical sample corpus)
           - **Slash commands** (`/prd`, `/hypothesis`, `/kickoff`, etc.)
           - **Workflow bundles** (Triple Diamond, Lean Startup, Feature Kickoff)
           - **Claude plugin manifest** (`.claude-plugin/plugin.json`)

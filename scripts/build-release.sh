@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # pm-skills release packager
-# Builds pm-skills-vX.Y.Z.zip with flat skills/commands and helper scripts.
+# Builds pm-skills-vX.Y.Z.zip with skills/commands, sample library, docs, and helper scripts.
 
 set -euo pipefail
 
@@ -39,6 +39,7 @@ if command -v rsync >/dev/null 2>&1; then
     "$ROOT/skills" \
     "$ROOT/commands" \
     "$ROOT/_bundles" \
+    "$ROOT/library" \
     "$ROOT/scripts" \
     "$ROOT/.claude-plugin" \
     "$ROOT/.claude/pm-skills-for-claude.md" \
@@ -50,11 +51,25 @@ else
     "$ROOT/skills" \
     "$ROOT/commands" \
     "$ROOT/_bundles" \
+    "$ROOT/library" \
     "$ROOT/scripts" \
     "$ROOT/.claude-plugin" \
     "$ROOT/.claude/pm-skills-for-claude.md" \
     "$ROOT/README.md" "$ROOT/QUICKSTART.md" "$ROOT/AGENTS.md" "$ROOT/CHANGELOG.md" "$ROOT/docs" \
     "$STAGE/"
+fi
+
+# Ensure sample library is present in staged artifact.
+STAGE_SAMPLE_DIR="$STAGE/library/skill-output-samples"
+if [[ ! -d "$STAGE_SAMPLE_DIR" ]]; then
+  echo "Missing required sample library directory: $STAGE_SAMPLE_DIR"
+  exit 1
+fi
+
+# Validate actual sample outputs (exclude root docs like SAMPLE_CREATION.md).
+if [[ -z "$(find "$STAGE_SAMPLE_DIR" -mindepth 2 -type f -name "sample_*.md" -print -quit)" ]]; then
+  echo "No sample files found in staged sample library: $STAGE_SAMPLE_DIR"
+  exit 1
 fi
 
 # Ensure plugin manifest exists and version matches release version in staged artifact.
