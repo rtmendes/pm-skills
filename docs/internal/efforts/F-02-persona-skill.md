@@ -1,7 +1,7 @@
 # [F-02] Persona Skill
 Status: Shipped
 Milestone: v2.5.0
-Issue: #TBD
+Issue: #108
 
 ## Scope
 

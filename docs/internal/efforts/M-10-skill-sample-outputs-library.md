@@ -1,7 +1,7 @@
 # [M-10] Skill Sample Outputs Library
 Status: Shipped
 Milestone: v2.6.1
-Issue: #TBD
+Issue: #110
 
 ## Scope
 

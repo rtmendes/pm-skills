@@ -1,7 +1,7 @@
 # [F-03] Persona Library Tier-0
 Status: Active
 Milestone: v2.7.0
-Issue: #TBD
+Issue: #109
 
 ## Scope
 
