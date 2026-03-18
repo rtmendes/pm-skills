@@ -3,7 +3,7 @@
 ## Current State
 
 **Status:** v2.6.1 shipped — sample library recovered, plugin manifest added
-**Last Updated:** 2026-03-11
+**Last Updated:** 2026-03-18
 **Release:** [v2.6.1](https://github.com/product-on-purpose/pm-skills/releases/tag/v2.6.1)
 **Next Step:** Execute baseline-hygiene plan, then v2.7.0 persona library Tier-0
 
@@ -333,7 +333,12 @@ pm-skills/
   - Verified VISION.md at `(internal-notes)/VISION.md`
   - GitHub issues #1-9 closed (plan review fixes)
 
-## Recent Infrastructure (2026-03-11)
+## Recent Infrastructure (2026-03-18)
+
+- **Context Currency Scripts (added 2026-03-18):**
+  - `scripts/check-context-currency.sh` — detects stale `AGENTS/*/CONTEXT.md` vs CHANGELOG; exit 1 on mismatch
+  - `scripts/check-context-currency.ps1` — PowerShell equivalent for Windows local use
+  - CI step pending (A-9): `validation.yml` will run `.sh` with `continue-on-error: true`
 
 - **Slash Commands (26 total):**
   - 25 skill commands (24 original + `/persona`)
@@ -362,11 +367,11 @@ pm-skills/
 
 ## Next Steps
 
-1. **Baseline Hygiene Execution (in progress):**
-   - Executing plan from `_NOTES/baseline-standards/plan_claude/execution_claude-opus-4.6.md`
-   - Quick fixes (A-1, A-2, A-3) and CONTEXT.md update (A-4) in first wave
-   - Systemic prevention (wrap-session check, CI advisory, scripts) in second wave
-   - Effort tracking setup (A-11) pending policy sign-off
+1. **Baseline Hygiene Execution (near complete):**
+   - A-1 through A-4, A-8, A-11 all landed
+   - `scripts/check-context-currency.sh/.ps1` added (A-8, 2026-03-18)
+   - Remaining: A-9 — add advisory CI step to `.github/workflows/validation.yml`
+   - A-5 (wrap-session context check) deferred to a later focused effort
 
 2. **v2.7.0 Persona Library Tier-0:**
    - Persona archetype library (deferred from v2.5.0)
