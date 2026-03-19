@@ -2,48 +2,68 @@
 
 Status: Active  
 Owner: Maintainers  
-Last updated: 2026-02-13
+Last updated: 2026-03-15
 
 ## Purpose
 
-Define which planning artifacts are durable (tracked in git) versus local/ephemeral (ignored), so collaborators share decision-critical context without bloating repo history.
+Define which planning artifacts are durable and tracked versus local working material, so collaborators share stable decision context without treating scratch space as repo truth.
 
-## Policy Summary
+## Durable Tracked Planning Artifacts
 
-### Tier 1: Required and durable (tracked)
+Track planning artifacts when future collaborators should be able to cite them without access to a local workspace.
+
 - `AGENTS/DECISIONS.md`
 - `AGENTS/*/CONTEXT.md`
 - `AGENTS/*/DECISIONS.md`
-- `docs/releases/*.md` (shipped release notes and post-ship reviews)
-- `docs/internal/release-planning/*.md` (forward execution plans and release checklists)
-- `docs/internal/delivery-plan/*.md` and `docs/internal/delivery-plan/**/*.md` (canonical blocker decisions and closure-path artifacts)
+- `docs/internal/efforts/**` for durable effort briefs and canonical issue/context links
+- `docs/internal/releases/**` for internal release governance, blocker decisions, and cut/publish notes
+- `docs/releases/*.md` for public release communication
 - `CHANGELOG.md`
 
-### Tier 2: Working-state local artifacts (ignored)
+## Local Working Artifacts
+
+Keep high-churn planning material local and non-canonical.
+
 - `AGENTS/*/SESSION-LOG/**`
 - `AGENTS/*/TODO.md`
 - `AGENTS/*/PLANNING/**`
-
-### Tier 3: Local notes and scratch (ignored)
 - `_NOTES/**`
-- `.claude/**` (except shared defaults already tracked)
+- `.claude/**` except intentionally shipped tracked artifacts
 - `.obsidian/**`
 
-## Promotion Rule
+## Backlog And Promotion Rules
 
-If a Tier 2 planning artifact contains a decision that affects release behavior, copy a concise summary into:
-1. `AGENTS/*/DECISIONS.md` (agent-local decision log), and
-2. `AGENTS/DECISIONS.md` (cross-agent decision index), when relevant.
+Backlog and lifecycle state live in GitHub issues, not in a tracked repo planning file.
 
-If `_NOTES/delivery-plan/**` content affects release behavior, compatibility, or contract truth, promote it to:
-1. `docs/internal/delivery-plan/` (canonical tracked blocker artifact), and
-2. release-planning docs that consume the decision (`docs/internal/release-planning/*.md`).
+Promote content out of local working space only when both are true:
 
-Do not promote raw working notes; promote only finalized decision outcomes.
+1. The content is stable enough that future collaborators should cite it later.
+2. Collaborators without your local workspace would still need it.
+
+Promote into one of these tracked homes:
+
+1. `docs/internal/efforts/**`
+2. `docs/internal/releases/**`
+3. `AGENTS/*/DECISIONS.md`
+4. `AGENTS/DECISIONS.md`
+
+Do not promote raw notes or transcripts. Promote only concise, stable outcomes.
+
+## Legacy Tracked Surfaces
+
+Older files under `docs/internal/release-planning/**` and `docs/internal/delivery-plan/**` may remain tracked as history or redirects during migration, but they are not the current canonical homes for new planning artifacts.
+
+## Hard Rules
+
+1. No tracked file should call `_NOTES/**` canonical.
+2. New durable effort context belongs in `docs/internal/efforts/**`.
+3. New internal release-governance artifacts belong in `docs/internal/releases/**`.
+4. Tracked docs should link to GitHub issues for backlog state instead of replacing them with a second canonical backlog file.
 
 ## Governance Checks
 
-Before release:
-1. Confirm decision-impacting items are in tracked decision files.
-2. Confirm `.gitignore` reflects Tier 2 and Tier 3 rules.
-3. Confirm release docs link to tracked decision records.
+Before release or handoff:
+
+1. Confirm decision-impacting items are summarized in tracked decision or effort files.
+2. Confirm canonical effort and release links point to `docs/internal/efforts/**` or `docs/internal/releases/**`.
+3. Confirm no active tracked doc treats `_NOTES/**` as the source of truth.

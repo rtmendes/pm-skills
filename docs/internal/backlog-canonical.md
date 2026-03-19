@@ -1,28 +1,19 @@
-# Canonical Backlog Record
+# Backlog And Effort Entry Points
 
 Status: Active  
 Owner: Maintainers  
-Last updated: 2026-02-16
+Last updated: 2026-03-16
 
-## Canonical Source
+GitHub issues are the canonical system for backlog and lifecycle state.
 
-Canonical backlog file:
-- `_NOTES/efforts/backlog/backlog_codex_2026-02-02_pm_skills_consolidated_backlog_roadmap_and_multi_branch_execution.md`
+## Tracked Entry Points
 
-Superseded backlog files:
-- `_NOTES/efforts/backlog/backlog_codex_2026-01-29.md`
-- `_NOTES/efforts/backlog/backlog_claude-code_2026-01-29.md`
+1. `docs/internal/efforts/README.md` for the durable effort-brief model
+2. `docs/internal/releases/README.md` for tracked release-governance artifacts
 
-## Operating Rule
+## Operating Rules
 
-When backlog items change:
-1. Update only the canonical backlog file.
-2. Keep superseded files read-only with redirect headers.
-3. Reflect forward release plans/checklists in `docs/internal/release-planning/*.md` and release-ready outcomes in `docs/releases/*.md` and `CHANGELOG.md`.
-
-## Release Cadence Anchors
-
-- `v2.2.0`: guardrails and governance (`B-02`, `B-07`, `B-08`)
-- `v2.3.0`: MCP alignment closure (`B-01`) and drift check enforcement (`B-02` block mode)
-- `v2.4.0`: output/config contract lock closed-aligned (`B-03`, `B-04`)
-- `v2.5.0`: foundation/persona decisions (`B-05`, `B-06`)
+1. Open, close, prioritize, and milestone work in GitHub issues.
+2. Capture durable scope and canonical links in `docs/internal/efforts/<effort-id>-<slug>.md`.
+3. Capture release-specific gating and closure artifacts in `docs/internal/releases/vX.Y.Z/**`.
+4. Keep `_NOTES/**` as local working material, not canonical backlog state.

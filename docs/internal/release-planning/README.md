@@ -1,32 +1,22 @@
-# Release Planning Conventions
+# Legacy Release-Planning Surface
 
-Status: Active
+Status: Legacy redirect
 Owner: Maintainers
-Last updated: 2026-02-16
+Last updated: 2026-03-16
 
-This directory stores tracked, forward-looking release planning controls.
+This directory remains tracked only as a legacy surface during the baseline cleanup.
 
-## Scope
+## Canonical Home
 
-- Execution plans for upcoming releases
-- Release checklists used before and during ship
-- Clean-worktree cut/tag/publish procedure:
-  - `docs/internal/release-planning/runbook_clean-worktree-cut-tag-publish.md`
+Use `docs/internal/releases/**` as the canonical tracked home for internal release-governance artifacts.
 
-## Allowed Checklist Status Values
+## Current Entry Points
 
-- `Planned`
-- `In progress`
-- `Shipped`
-- `Superseded`
+1. `docs/internal/releases/README.md`
+2. `docs/internal/releases/runbook_clean-worktree-cut-tag-publish.md`
+3. `docs/internal/releases/v2.5.0/README.md`
 
-## Lifecycle Rules
+## Usage Rule
 
-1. Keep forward-looking execution plans and checklists in `docs/internal/release-planning/`.
-2. Keep shipped release notes and post-ship reviews in `docs/releases/`.
-3. When a release ships:
-- Keep its checklist in this directory and set final status (`Shipped` or `Superseded`).
-- Publish release notes/reviews under `docs/releases/`.
-4. Do not place forward execution plans in `docs/releases/`.
-5. When kickoff starts for a planned release, move checklist status to `In progress` and link kickoff artifacts.
-6. Use `docs/internal/delivery-plan/` for canonical blocker decision/closure artifacts; keep `_NOTES/delivery-plan/` as local non-canonical working evidence.
+1. Do not add new canonical release-governance artifacts under `docs/internal/release-planning/**`.
+2. Leave older files in this directory as historical copies until a later cleanup removes or archives them.
