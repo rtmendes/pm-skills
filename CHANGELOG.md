@@ -7,8 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Changed
-- No unreleased changes documented yet.
+### Added
+- Internal milestone documentation for the March 2026 baseline cleanup under `docs/internal/milestones/2026-03-baseline-cleanup/`.
 
 ## [2.6.1] - 2026-03-04
 

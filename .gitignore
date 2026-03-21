@@ -41,6 +41,8 @@ _NOTES/
 .claude/skills/
 .claude/commands/
 dist/
+/_archived/
+docs/internal/milestones/**/_archived/
 
 # Agent working files
 # Planning persistence policy: docs/internal/planning-persistence-policy.md

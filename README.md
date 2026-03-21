@@ -98,6 +98,7 @@
 - [Project Status](#project-status)
   - [Project Structure](#project-structure)
   - [Changelog](#changelog)
+  - [Milestones](#milestones)
   - [Roadmap](#roadmap)
 - [Contributing](#contributing)
   - [How to Contribute](#how-to-contribute)
@@ -802,6 +803,12 @@ See [CHANGELOG.md](CHANGELOG.md) for full details.
 | **0.1.0** | 2026-01-14 | Initial project structure, foundation infrastructure                    |
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Milestones
+
+Maintenance milestone documentation:
+
+- [2026-03 baseline cleanup](docs/internal/milestones/2026-03-baseline-cleanup/README.md)
 
 ### Roadmap
 
