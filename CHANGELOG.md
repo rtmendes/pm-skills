@@ -5,27 +5,33 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [2.7.0] - 2026-03-22
 
 ### Added
-- Internal milestone documentation for the March 2026 baseline cleanup under `docs/internal/milestones/2026-03-baseline-cleanup/`.
+- **F-06: deliver-acceptance-criteria skill** (#114) — new Deliver phase skill for Given/When/Then acceptance criteria generation covering happy path, edge cases, error states, and non-functional criteria. Includes SKILL.md, TEMPLATE.md, EXAMPLE.md (e-commerce checkout scenario), `/acceptance-criteria` command, and AGENTS.md entry. Skill count: 25 → 26.
+- **F-05: utility-pm-skill-builder skill** (#113) — first utility-classified skill. Interactive builder that guides contributors from a PM skill idea to a complete Skill Implementation Packet with gap analysis, Why Gate, classification, exemplar-driven drafting, and staging-to-promotion workflow. Includes SKILL.md, TEMPLATE.md, EXAMPLE.md (change-communication scenario), `/pm-skill-builder` command, and AGENTS.md Utility Skills section. Skill count: 26 → 27.
 - **M-12: CI validation enhancement** (#112) — extended linter with description word count (20-100) and TEMPLATE.md header count (≥3) checks; new `validate-agents-md` script for AGENTS.md ↔ skill directory sync; new `check-mcp-impact` advisory script for MCP impact detection. All scripts follow `.sh + .ps1 + .md` convention.
-- **F-06: deliver-acceptance-criteria skill** (#114) — new Deliver phase skill for Given/When/Then acceptance criteria generation covering happy path, edge cases, error states, and non-functional criteria. Includes SKILL.md, TEMPLATE.md, EXAMPLE.md (e-commerce checkout scenario), `/acceptance-criteria` command, and AGENTS.md entry.
-- v2.7.0 release governance folder with README, gating criteria, and key decisions log.
-- Release governance folders for v2.2.0 and v2.3.0 (migrated from legacy locations).
-- 12 effort briefs in `docs/internal/efforts/` (M-12 through M-16, F-05 through F-11).
+- **M-16: exclude docs/internal from release ZIP** (#123) — release packagers (`build-release.sh` and `.ps1`) now strip `docs/internal/**` from staged artifacts. Internal governance docs stay tracked in-repo but no longer ship to end users.
+- **D-01: `docs/pm-skill-anatomy.md`** — practical guide to pm-skills skill structure covering directory layout, classification types, frontmatter, Triple Diamond phases, wiring layer, and CI validation. Complements the spec-level `docs/agent-skill-anatomy.md`.
+- `_staging/` added to `.gitignore` for pm-skill-builder draft artifacts.
 
 ### Changed
+- **D-02: public docs review for v2.7.0** — updated skill counts (27), command counts (28), M-12 script documentation, domain/foundation/utility classification model, skill template modernization, frontmatter schema with utility example, and `docs/agent-skill-anatomy.md` scope note. Post-F-05 reconciliation patched 3 stale references.
 - Fixed duplicate workflow steps in `validation.yml` (validate-agents-md and check-mcp-impact each ran twice).
-- Migrated `Releases_2.3-2.4_detailed-breakdown.md` to `docs/internal/releases/v2.4.0/` with updated path references.
+- AGENTS.md gains a `### Utility Skills` section and `/pm-skill-builder` in the Commands table.
 - `docs/internal/backlog-canonical.md` rewritten with Release, Status, and Agent columns.
-- `docs/internal/efforts/README.md` updated with agent assignment framework and guide.
-- `docs/internal/releases/README.md` updated with v2.2.0-v2.7.0 entry points and migration history.
+- Release governance folders created for v2.2.0, v2.3.0, and v2.7.0 (v2.2.0 and v2.3.0 migrated from legacy locations).
 
 ### Removed
-- `docs/internal/delivery-plan/` — legacy directory removed from tracking (archived to `_NOTES/_archived-internal/`).
-- `docs/internal/release-planning/` — legacy directory removed from tracking (archived to `_NOTES/_archived-internal/`).
-- `docs/internal/Releases_2.3-2.4_detailed-breakdown.md` — moved to `docs/internal/releases/v2.4.0/`.
+- `docs/internal/delivery-plan/` — legacy directory removed from tracking.
+- `docs/internal/release-planning/` — legacy directory removed from tracking.
+
+### Release Notes
+- First release with a **utility** skill classification — `pm-skill-builder` creates new PM skills interactively.
+- First release with enhanced CI: frontmatter linting, AGENTS.md sync validation, MCP impact detection.
+- Release ZIPs now exclude `docs/internal/**` while preserving all public documentation.
+- Repo now contains 27 skills (25 domain + 1 foundation + 1 utility), 28 command docs, and 3 workflow bundles.
+- **MCP note**: `pm-skills-mcp` will need a re-embed to pick up `deliver-acceptance-criteria`. The utility skill (`pm-skill-builder`) is a file-writing meta-skill and may not be suitable for MCP exposure.
 
 ## [2.6.1] - 2026-03-04
 

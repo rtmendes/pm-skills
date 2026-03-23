@@ -30,7 +30,7 @@ Infrastructure hardening (M-12) + release packaging hygiene (M-16) + first new s
 - [x] F-05 committed and local validators pass (`lint-skills-frontmatter`, `validate-commands`, `validate-agents-md`)
 - [x] D-01: `docs/pm-skill-anatomy.md` created
 - [x] D-02: Public-facing docs reviewed and updated for the post-`a67f144` repo state
-- [ ] CHANGELOG.md updated with v2.7.0 section
+- [x] CHANGELOG.md updated with v2.7.0 section
 - [x] Local enhanced validation passes for 27 skills, 28 command docs, and 27 `AGENTS.md` skill entries
 - [ ] Tag `v2.7.0` pushed → release.yml fires → ZIP published
 

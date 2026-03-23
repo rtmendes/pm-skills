@@ -5,7 +5,7 @@
   <br>
 </h1>
 
-<h4 align="center">A curated collection of 26 best-practice, plug-and-play product management “agent skills” (25 phase skills + 1 foundation persona skill) plus templates and workflow bundles for consistent, professional PM outputs.</h4>
+<h4 align=”center”>A curated collection of 27 best-practice, plug-and-play product management “agent skills” (25 phase skills + 1 foundation skill + 1 utility skill) plus templates and workflow bundles for consistent, professional PM outputs.</h4>
 
 <p align="center">
   <a href="https://github.com/product-on-purpose/pm-skills/issues/new?labels=bug">Report a Bug</a>
@@ -21,10 +21,10 @@
     <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat-square" alt="License">
   </a>
   <a href="https://github.com/product-on-purpose/pm-skills/releases">
-    <img src="https://img.shields.io/badge/version-2.6.1-blue.svg?style=flat-square" alt="Version">
+    <img src="https://img.shields.io/badge/version-2.7.0-blue.svg?style=flat-square" alt="Version">
   </a>
   <a href="#the-skills">
-    <img src="https://img.shields.io/badge/skills-26-brightgreen.svg?style=flat-square" alt="Skills">
+    <img src="https://img.shields.io/badge/skills-27-brightgreen.svg?style=flat-square" alt="Skills">
   </a>
   <a href="https://agentskills.io/specification">
     <img src="https://img.shields.io/badge/spec-agentskills.io-orange.svg?style=flat-square" alt="Agent Skills Spec">
@@ -121,6 +121,18 @@ git clone https://github.com/product-on-purpose/pm-skills.git && cd pm-skills
 ---
 
 **What's New (Recent Releases)**
+<details>
+<summary>v2.7.0 - Utility skills, enhanced CI, and release packaging hygiene</summary>
+
+- **New skill**: `deliver-acceptance-criteria` — Given/When/Then acceptance criteria for stories and features.
+- **New skill**: `utility-pm-skill-builder` — first utility-classified skill; interactive builder for creating new PM skills with gap analysis, classification, and draft file generation.
+- **Enhanced CI**: extended frontmatter linter, AGENTS.md sync validator, MCP impact detection.
+- **Release packaging**: `docs/internal/**` excluded from published ZIPs while staying tracked in-repo.
+- **Documentation**: new `docs/pm-skill-anatomy.md` guide, comprehensive public docs refresh.
+- Repo now ships 27 skills, 28 command docs, and 3 workflow bundles.
+- Release note: `docs/releases/Release_v2.7.0.md`.
+
+</details>
 <details>
 <summary>v2.6.1 - Sample library recovery and packaging inclusion</summary>
 
@@ -414,7 +426,7 @@ cd pm-skills
 /user-stories "Recurring tasks feature from PRD"
 ```
 
-All 25 skills are available as `/skill-name` commands. See [commands/](commands/) for the full list.
+All 27 skills are available as `/skill-name` commands. See [commands/](commands/) for the full list.
 
 Need `.claude/skills` for openskills or certain discovery flows? After cloning, run:
 
@@ -457,7 +469,7 @@ For [MCP-compatible clients](https://modelcontextprotocol.io), use [pm-skills-mc
 }
 ```
 
-All 25 skills become available as programmatic tools. See the [pm-skills-mcp README](https://github.com/product-on-purpose/pm-skills-mcp#getting-started) for client-specific setup.
+All 26 domain and foundation skills become available as programmatic tools (the utility skill is designed for Claude Code environments). See the [pm-skills-mcp README](https://github.com/product-on-purpose/pm-skills-mcp#getting-started) for client-specific setup.
 
 </details>
 <!-- ========== END NEW ========== -->
@@ -511,7 +523,7 @@ Both IDEs auto-discover skills via `AGENTS.md`:
 git clone https://github.com/product-on-purpose/pm-skills.git
 ```
 
-Open the folder in Cursor or Windsurf. The AI assistant will automatically discover and can use all 25 skills.
+Open the folder in Cursor or Windsurf. The AI assistant will automatically discover and can use all 27 skills.
 
 </details>
 
@@ -609,7 +621,7 @@ skills/{phase-skill}/
 
 ### The Skills
 
-PM-Skills covers the complete product lifecycle using the **Triple Diamond** framework (24 phase skills) plus one foundation capability:
+PM-Skills covers the complete product lifecycle using the **Triple Diamond** framework (25 phase skills) plus foundation and utility capabilities:
 
 #### 🔍 Discover - *Find the right problem*
 
@@ -641,11 +653,12 @@ PM-Skills covers the complete product lifecycle using the **Triple Diamond** fra
 
 | Skill                | What it does                                      | Command             |
 | -------------------- | ------------------------------------------------- | ------------------- |
-| **prd**              | Comprehensive product requirements                | `/prd`              |
-| **user-stories**     | INVEST-compliant stories with acceptance criteria | `/user-stories`     |
-| **edge-cases**       | Error states, boundaries, recovery paths          | `/edge-cases`       |
-| **launch-checklist** | Never miss a launch step again                    | `/launch-checklist` |
-| **release-notes**    | User-facing release communication                 | `/release-notes`    |
+| **prd**                  | Comprehensive product requirements                | `/prd`                  |
+| **user-stories**         | INVEST-compliant stories with acceptance criteria | `/user-stories`         |
+| **acceptance-criteria**  | Given/When/Then testable scenarios               | `/acceptance-criteria`  |
+| **edge-cases**           | Error states, boundaries, recovery paths          | `/edge-cases`           |
+| **launch-checklist**     | Never miss a launch step again                    | `/launch-checklist`     |
+| **release-notes**        | User-facing release communication                 | `/release-notes`        |
 
 #### 📊 Measure - *Validate with data*
 
@@ -670,6 +683,12 @@ PM-Skills covers the complete product lifecycle using the **Triple Diamond** fra
 | Skill                | What it does                                                                 | Command      |
 | -------------------- | ---------------------------------------------------------------------------- | ------------ |
 | **persona**          | Generate product or marketing personas with evidence and confidence | `/persona`   |
+
+#### 🔧 Utility - *Meta-tooling*
+
+| Skill                  | What it does                                                    | Command              |
+| ---------------------- | --------------------------------------------------------------- | -------------------- |
+| **pm-skill-builder**   | Create new PM skills with gap analysis and guided drafting      | `/pm-skill-builder`  |
 
 ### Quick Examples
 
@@ -715,7 +734,7 @@ Each bundle provides a **sequence of skills** with handoff guidance between step
 | -------------------------------------------------- | ----------------- | ---------------------------------------------------------------------- |
 | **[Feature Kickoff](_bundles/feature-kickoff.md)** | New features      | problem-statement → hypothesis → prd → user-stories → launch-checklist |
 | **[Lean Startup](_bundles/lean-startup.md)**       | Rapid validation  | hypothesis → experiment-design → experiment-results → pivot-decision   |
-| **[Triple Diamond](_bundles/triple-diamond.md)**   | Major initiatives | Full 24 phase-skill flow across 6 phases                                |
+| **[Triple Diamond](_bundles/triple-diamond.md)**   | Major initiatives | Full 25 phase-skill flow across 6 phases                                |
 
 #### Workflow Examples
 
@@ -742,7 +761,7 @@ Build → Measure → Learn cycle with hypothesis, experiments, and pivot decisi
 **For major initiatives**, use the [Triple Diamond](_bundles/triple-diamond.md) workflow:
 
 ```
-Complete product development across all 6 phases and 24 phase skills
+Complete product development across all 6 phases and 25 phase skills
 ```
 
 For detailed skill documentation and examples, see the [skills/](skills/) directory.
@@ -757,8 +776,8 @@ For detailed skill documentation and examples, see the [skills/](skills/) direct
 
 ```
 pm-skills/
-├── skills/                     # 25 PM skills (24 phase + 1 foundation skill)
-├── commands/                   # Slash commands (26) mapping to skills/bundles
+├── skills/                     # 27 PM skills (25 phase + 1 foundation + 1 utility)
+├── commands/                   # Slash commands (28) mapping to skills/bundles
 ├── _bundles/                   # Workflow bundles: feature-kickoff, lean-startup, triple-diamond
 ├── library/                    # Sample output library (skill-output-samples) and related corpus docs
 ├── scripts/                    # sync-claude.(sh|ps1), build-release.(sh|ps1), validate-commands.(sh|ps1)
@@ -780,6 +799,7 @@ See [CHANGELOG.md](CHANGELOG.md) for full details.
 
 | Version   | Date       | Highlights                                                              |
 | --------- | ---------- | ----------------------------------------------------------------------- |
+| **2.7.0** | 2026-03-22 | Utility skills (`pm-skill-builder`), `acceptance-criteria` skill, enhanced CI, release packaging hygiene, docs refresh |
 | **2.6.1** | 2026-03-04 | Sample-library recovery, naming/path normalization, and release ZIP inclusion |
 | **2.6.0** | 2026-03-04 | Claude plugin packaging release with staged manifest version checks |
 | **2.5.2** | 2026-03-04 | Public release-doc readability and hygiene patch (user-first wording, no local-only path references) |
@@ -899,7 +919,7 @@ Please try to create bug reports that are:
 ## FAQ
 
 <details>
-<summary><strong>Do I need to install all 25 skills?</strong></summary>
+<summary><strong>Do I need to install all 27 skills?</strong></summary>
 
 No! You can use individual skills as needed. Each skill is self-contained and works independently. If you only need PRDs, just reference the `skills/deliver-prd/` skill. The bundles are optional workflow guides, not requirements.
 
