@@ -2,6 +2,12 @@
 
 Purpose: cross-LLM decision log for pm-skills. Per-agent details remain in `AGENTS/<agent>/DECISIONS.md`; this file holds the canonical summary and pointers.
 
+## 2026-03-22: Internal docs stay tracked but do not ship in release ZIPs
+**Status:** Accepted  
+**Summary:** Keep maintainers' governance and planning artifacts under `docs/internal/**`, but exclude that subtree from published ZIP artifacts in the release packagers instead of moving the directory tree.  
+**Applies to:** Claude, Codex, release packaging, F-05 staging design, future internal docs work.  
+**Consequences:** End users get only public docs in release bundles; internal effort/release governance remains repo-tracked; future builder/staging decisions do not require a repo-wide path migration.
+
 ## 2026-02-13: Skill naming compliance for flat structure
 **Status:** Accepted  
 **Summary:** If skills are flattened, directory names must stay hyphen-only (agentskills spec), no underscores; commands may stay short aliases; MCP tool IDs should remain stable (no phase prefixes), with phase/ordering carried in metadata instead.  

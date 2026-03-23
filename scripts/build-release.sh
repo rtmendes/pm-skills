@@ -59,6 +59,9 @@ else
     "$STAGE/"
 fi
 
+# Keep tracked internal governance docs in-repo, but do not ship them.
+rm -rf "$STAGE/docs/internal"
+
 # Ensure sample library is present in staged artifact.
 STAGE_SAMPLE_DIR="$STAGE/library/skill-output-samples"
 if [[ ! -d "$STAGE_SAMPLE_DIR" ]]; then

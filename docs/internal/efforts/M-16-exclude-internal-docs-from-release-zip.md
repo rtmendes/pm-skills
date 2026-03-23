@@ -1,5 +1,5 @@
 # [M-16] Exclude docs/internal from Release ZIP
-Status: Planned
+Status: Implemented locally, verification passed
 Release: v2.7.0
 Issue: #123
 Agent: Codex 5.4
@@ -20,6 +20,12 @@ Adjust release packaging so published pm-skills ZIPs exclude `docs/internal/**` 
 - Updated `scripts/build-release.sh`
 - Updated `scripts/build-release.ps1`
 - Any matching release workflow or release-governance doc adjustments needed to reflect the public-doc packaging boundary
+
+## Verification
+
+- `bash scripts/build-release.sh 9.9.9-m16-green-bash`
+- `pwsh -File scripts/build-release.ps1 -Version 9.9.9-m16-green-ps1`
+- Verified staged artifacts and ZIP contents exclude `docs/internal/**` and retain public docs including `docs/releases/**`
 
 ## PRs
 

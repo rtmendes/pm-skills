@@ -1,8 +1,8 @@
 # Codex Agent Context
 
 ## Status
-- Active; last updated: 2026-03-18
-- Focus: baseline-cleanup execution in progress from the refreshed Codex worktree on post-`A-11` `main`; `C-1` through `C-3` are complete and Claude guardrail work remains unblocked
+- Active; last updated: 2026-03-22
+- Focus: `v2.7.0` execution/handoff after committed `M-12` + `F-06`, local `M-16` packaging implementation, and Codex review of the `F-05` implementation plan
 
 ## Purpose
 Track Codex sessions for pm-skills. Use this file for stable facts and current execution state; use `AGENTS/DECISIONS.md` for cross-agent commitments; use `AGENTS/codex/DECISIONS.md` for agent-local detail; use `AGENTS/codex/SESSION-LOG/` for session summaries.
@@ -10,10 +10,17 @@ Track Codex sessions for pm-skills. Use this file for stable facts and current e
 ## Project snapshot
 - Repo: pm-skills (Triple Diamond PM skills, commands, docs, bundles, and internal operating docs)
 - Latest published release baseline: `v2.6.1` (see `CHANGELOG.md`)
-- Shipped inventory baseline:
-  - `25` skills total
-  - `24` phase-classified skills
-  - `1` foundation-classified skill: `foundation-persona`
+- Current local `main` state:
+  - branch is `main`
+  - local branch is ahead of `origin/main` by `2` commits
+  - recent commits:
+    - `8d2a418` — `M-12` CI validation enhancement + `F-06` deliver-acceptance-criteria
+    - `882c9e1` — `v2.7.0` release planning / effort-brief integration / `F-05` design review docs
+- Current committed inventory on local `main`:
+  - `26` skills total
+  - `25` domain skills
+  - `1` foundation skill: `foundation-persona`
+  - `0` committed utility skills
 - Accepted baseline operating model:
   - GitHub issues own backlog and lifecycle state
   - `docs/internal/efforts/**` is the tracked home for durable effort briefs
@@ -24,19 +31,21 @@ Track Codex sessions for pm-skills. Use this file for stable facts and current e
 
 ## Current execution snapshot
 - Codex execution lane:
-  - `C-1` complete: tracked policy docs now point at `docs/internal/efforts/**` and `docs/internal/releases/**`
-  - `C-2` complete: canonical `docs/internal/releases/**` home exists; the tracked backlog and legacy release-entry docs now redirect to the accepted model
-  - `C-3` complete: Codex continuity and shared cross-agent decisions now reflect the `v2.6.1` baseline and the landed `A-11` effort-tracking state
-  - active continuation now runs from refreshed branch `codex-baseline-refresh`, created from current `main` after `A-11`; only the non-conflicting `C-1` through `C-3` tracked changes were re-ported
+  - `M-12` complete and committed in `8d2a418`
+  - `F-06` complete and committed in `8d2a418`
+  - `M-16` issue/effort/release planning surfaces created (`#123` plus tracked docs)
+  - `M-16` implemented locally in `scripts/build-release.sh` and `scripts/build-release.ps1`
+  - `M-16` verification completed on both bash and PowerShell packagers: staged artifacts and ZIPs exclude `docs/internal/**` while retaining public docs including `docs/releases/**`
+  - `F-05` design review completed earlier in this session sequence
+  - `F-05` implementation plan review completed; verdict: `Needs revision`
 - Claude execution lane:
-  - `A-1` through `A-4` complete
-  - `A-11` complete on 2026-03-17: effort tracking infrastructure landed (`docs/internal/efforts/README.md`, `F-02`, `F-03`, standardized `M-10`, issues `#108`, `#109`, `#110`, label `effort`, milestone `v2.7.0`)
-  - `A-8` and `A-9` are now unblocked after `C-3`
-  - `A-5` remains deferred for later wrap-session work
-- Integration note:
-  - the older worktree `codex-c1-baseline-policy` is retained only as a pre-refresh snapshot
-  - the active branch `codex-baseline-refresh` preserves Claude `A-11` as the source of truth for `docs/internal/efforts/README.md` and `docs/internal/efforts/M-10-skill-sample-outputs-library.md`
-  - later `C-6` work must re-read those effort docs before touching release/sample cross-links again
+  - Claude owns `F-05` implementation and is processing the Codex implementation-plan review
+  - next Claude session is expected to finalize `F-05` and start `v2.7.0` release orchestration
+- Known tracked/untracked state at handoff:
+  - local uncommitted tracked `M-16` changes remain in the worktree
+  - concurrent local edits also exist in `AGENTS/claude/CONTEXT.md`, `README.md`, and `CHANGELOG.md`
+  - `docs/internal/_working/**` contains uncommitted working-doc changes, including Codex `M-16` planning updates
+  - `docs/internal/backlog-canonical.md` still lags the more current `docs/internal/releases/v2.7.0/README.md` on some status rows and should be reconciled before tag time
 
 ## Operational playbook
 - Session hygiene: use `AGENTS/codex/WRAP-SESSION_TEMPLATE.md` and save logs under `AGENTS/codex/SESSION-LOG/`
@@ -46,11 +55,13 @@ Track Codex sessions for pm-skills. Use this file for stable facts and current e
 - Continuity rule: re-read tracked `docs/internal/efforts/**` and `docs/internal/releases/**` entry points after any cross-agent structural change before continuing dependent work
 
 ## Immediate next steps
-1. Hand off `C-3` completion so Claude can run `A-8` and `A-9`.
-2. Keep `A-5` deferred; do not pull wrap-session redesign into this lane.
-3. After the continuity/guardrail batch settles, resume `C-4`, `C-5`, and `C-6` in order.
+1. Claude finalizes the `F-05` implementation plan response, revises/executes `F-05`, and drives `v2.7.0` release orchestration.
+2. If asked, Codex should package and commit `M-16` next; the implementation is already verified locally.
+3. After `F-05` stabilizes, Codex remains the preferred owner for `D-02` public-doc review and any remaining release verification work.
 
 ## Reference
-- Latest baseline handoff: `AGENTS/codex/SESSION-LOG/2026-03-15_wrap-session_baseline-standards-finalization-prep.md`
-- Active Codex execution tracker: `_NOTES/baseline-standards/plan_codex/execution_codex-gpt-5.4.md`
-- Shared coordinator: `_NOTES/baseline-standards/execution_shared-claude-codex.md`
+- Latest Codex wrap-session handoff: `AGENTS/codex/SESSION-LOG/2026-03-22_wrap-session_v2.7.0-ci-packaging-f05-review-and-release-handoff.md`
+- Current release governance: `docs/internal/releases/v2.7.0/README.md`
+- Shared decisions: `AGENTS/DECISIONS.md`
+- Local technical decisions: `AGENTS/codex/DECISIONS.md`
+- Current F-05 implementation-plan review: `docs/internal/efforts/F-05-pm-skill-builder/implementation-plan_reviewed-by-codex.md`

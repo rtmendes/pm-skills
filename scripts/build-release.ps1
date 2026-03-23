@@ -40,6 +40,9 @@ foreach ($item in $toCopy) {
   Copy-Item -Recurse -Force -Path (Join-Path $Root $item) -Destination $Stage
 }
 
+# Keep tracked internal governance docs in-repo, but do not ship them.
+Remove-Item -Recurse -Force -ErrorAction SilentlyContinue (Join-Path $Stage "docs/internal")
+
 # Ensure sample library is present in staged artifact.
 $SampleDir = Join-Path $Stage "library/skill-output-samples"
 if (-not (Test-Path $SampleDir)) {

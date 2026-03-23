@@ -25,6 +25,21 @@ Create standard agent artifacts in `AGENTS/codex/`:
 
 *Add new decisions above this line*
 
+## 2026-03-22: Implement the internal-doc packaging boundary in the release packagers
+
+**Status:** Accepted
+
+**Context:**
+The F-05 staging review exposed a broader release bug: `scripts/build-release.sh` and `scripts/build-release.ps1` staged the entire `docs/` tree, which caused `docs/internal/**` governance material to ship in the published ZIP.
+
+**Decision:**
+Keep `docs/internal/**` tracked in-repo, but remove `stage/docs/internal` in both release packagers before zipping. Do not move the directory tree and do not broaden M-16 into a full public-doc allowlist redesign.
+
+**Consequences:**
+- M-16 remains an isolated packaging fix instead of a repo restructuring effort.
+- Published ZIPs preserve public docs such as `docs/releases/**` while excluding internal governance docs.
+- Any future release-packaging refactor should preserve this boundary unless the team intentionally adopts a stricter allowlist model.
+
 ## 2026-02-13: Move Codex workspace path to AGENTS/codex
 
 **Status:** Accepted
