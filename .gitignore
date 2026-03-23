@@ -35,6 +35,9 @@ temp/
 
 # Personal notes
 _NOTES/
+
+# Skill builder staging area
+_staging/
 .obsidian
 .claude/*
 .claude/settings.local.json
