@@ -2,10 +2,10 @@
 
 ## Current State
 
-**Status:** v2.7.0 in progress — M-12 + F-06 committed, M-16 implemented locally, F-05 implementation plan reviewed
+**Status:** v2.7.0 released and tagged — all efforts committed, MCP synced
 **Last Updated:** 2026-03-22
-**Release:** [v2.6.1](https://github.com/product-on-purpose/pm-skills/releases/tag/v2.6.1) (current), v2.7.0 (in progress)
-**Next Step:** Execute F-05 implementation plan, commit M-16, then D-01/D-02 documentation tasks
+**Release:** [v2.7.0](https://github.com/product-on-purpose/pm-skills/releases/tag/v2.7.0) (current)
+**Next Step:** Post-v2.7.0 backlog — M-13 (convention alignment), F-07-F-11 (new skills)
 
 ## Project Overview
 
@@ -31,9 +31,9 @@ pm-skills/
 │   ├── define-problem-statement/
 │   ├── deliver-prd/
 │   ├── deliver-user-stories/
-│   └── ...               # 24 skills total: {phase}-{skill}/
+│   └── ...               # 27 skills total: {phase/classification}-{skill}/
 ├── bundles/              # Workflow bundles (triple-diamond, lean-startup, feature-kickoff)
-├── commands/             # Claude Code slash commands (26 total)
+├── commands/             # Claude Code slash commands (28 total: 27 skill + 1 bundle)
 ├── docs/                 # Documentation
 │   ├── guides/           # How-to guides
 │   ├── reference/        # Technical specs
@@ -65,16 +65,18 @@ pm-skills/
 
 ## Recent Work
 
-- **v2.7.0 In Progress — CI + New Skill + Builder** (2026-03-22)
-  - **M-12 committed**: CI validation enhancement — extended linter, validate-agents-md, check-mcp-impact
-  - **F-06 committed**: deliver-acceptance-criteria skill (Given/When/Then, e-commerce checkout example)
-  - **M-16 implemented locally** (Codex): exclude `docs/internal/**` from release ZIP, awaiting commit
-  - **F-05 design reviewed** (Codex): PM Skill Builder — 8 review findings confirmed and fixed
-  - **F-05 implementation plan reviewed** (Codex): 8 findings confirmed, plan v2 written
-  - **Legacy dirs migrated**: delivery-plan + release-planning archived to `_NOTES/_archived-internal/`
-  - **Release governance**: v2.2.0-v2.7.0 folders in `docs/internal/releases/`, decisions log with 9 entries
-  - **12 effort briefs** created with agent assignments and GitHub issues (#112-#123)
-  - Key decisions: staging area discards PACKET.md, builder naming split, 3-skill lifecycle, docs release-scoped not effort-tracked
+- **v2.7.0 Released** (2026-03-22)
+  - **M-12**: CI validation enhancement — extended linter, validate-agents-md, check-mcp-impact (`8d2a418`)
+  - **F-06**: deliver-acceptance-criteria skill — Given/When/Then, e-commerce checkout example (`8d2a418`)
+  - **M-16**: exclude `docs/internal/**` from release ZIP (`0c2e637`)
+  - **F-05**: utility-pm-skill-builder — first utility skill, interactive builder with gap analysis, Why Gate, staging workflow (`3c50108`..`a67f144`). Codex design + implementation reviews both approved.
+  - **D-01**: `docs/pm-skill-anatomy.md` — practical guide to skill structure (`b478276`)
+  - **D-02**: 14 public docs updated for v2.7.0 accuracy, post-F-05 reconciliation (`12a30a9`)
+  - **MCP synced**: pm-skills-mcp v2.7.0 — `pm_acceptance_criteria` + `pm_pm_skill_builder`
+  - **MCP sync docs**: maintainer workflow added to `docs/guides/mcp-integration.md`
+  - **Release governance**: v2.2.0-v2.7.0 folders, decisions log, detailed release notes
+  - **Issues closed**: #112, #113, #114, #123
+  - Repo: 27 skills (25 domain + 1 foundation + 1 utility), 28 commands, 3 bundles
 
 - **v2.6.1 Shipped — Sample Library Recovery** (2026-03-04)
   - Sample output library moved and normalized to `library/skill-output-samples/`
@@ -353,12 +355,13 @@ pm-skills/
   - `scripts/check-context-currency.ps1` — PowerShell equivalent for Windows local use
   - CI step pending (A-9): `validation.yml` will run `.sh` with `continue-on-error: true`
 
-- **Slash Commands (27 total):**
-  - 26 skill commands (24 original + `/persona` + `/acceptance-criteria`)
+- **Slash Commands (28 total):**
+  - 27 skill commands (24 original + `/persona` + `/acceptance-criteria` + `/pm-skill-builder`)
   - 1 bundle command: `/kickoff`
-- **Skills (26 total):**
-  - 25 Triple Diamond skills (24 original + deliver-acceptance-criteria) + 1 foundation-persona skill
-  - foundation-persona uses `classification: foundation` and `version: 2.5.0`
+- **Skills (27 total):**
+  - 25 domain skills (24 original + deliver-acceptance-criteria)
+  - 1 foundation skill: foundation-persona (`classification: foundation`)
+  - 1 utility skill: utility-pm-skill-builder (`classification: utility`)
 - **Sample Output Library:**
   - `library/skill-output-samples/` — 95 sample outputs across 25 skills
   - `SAMPLE_CREATION.md` — standards for sample creation
@@ -378,22 +381,11 @@ pm-skills/
   - `.github/workflows/release.yml` — Create releases on tag
   - `.github/workflows/release-zips.yml` — Package ZIP artifacts
 
-## Next Steps (v2.7.0 Remaining Work)
+## Next Steps (Post-v2.7.0)
 
-See `docs/internal/releases/v2.7.0/README.md` for full gating criteria and `docs/internal/backlog-canonical.md` for the priority-ordered backlog.
+See `docs/internal/backlog-canonical.md` for the priority-ordered backlog.
 
-### v2.7.0 remaining tasks
-
-| Task | Agent | Status |
-|------|-------|--------|
-| M-16: Commit packaging fix | Codex | Implemented, awaiting commit |
-| F-05: Execute implementation plan (6 tasks) | Claude | Plan reviewed, ready to execute |
-| D-01: Create `docs/pm-skill-anatomy.md` | Claude | Planned |
-| D-02: Review/update public-facing docs | Codex | Planned |
-| CHANGELOG v2.7.0 section | Claude | At tag time |
-| Release tag | Human | After all gating criteria pass |
-
-### Post-v2.7.0 backlog
+### Backlog
 
 | ID | Effort | Issue |
 |----|--------|-------|
@@ -414,15 +406,21 @@ See `docs/internal/releases/v2.7.0/README.md` for full gating criteria and `docs
 - Primary Audience: Individual Product Managers using AI assistants
 - Cross-platform: Claude Code, Claude.ai, GitHub Copilot, Cursor, Windsurf, OpenCode
 - Implementation plan is in `(internal-notes)/v1-plan/plan-v1.md` with detailed issue-by-issue guidance
-- 26 skills total: 25 Triple Diamond + 1 foundation-persona
+- 27 skills total: 25 domain + 1 foundation + 1 utility
 
-## Skills Inventory (26 skills: 25 Triple Diamond + 1 Foundation)
+## Skills Inventory (27 skills)
 
 ### Foundation (1 skill)
 
 | Skill | Category | Classification | Status |
 |-------|----------|----------------|--------|
-| persona | persona | foundation | ✅ Complete (v2.5.0) |
+| persona | research | foundation | ✅ Complete (v2.5.0) |
+
+### Utility (1 skill)
+
+| Skill | Category | Classification | Status |
+|-------|----------|----------------|--------|
+| pm-skill-builder | coordination | utility | ✅ Complete (v2.7.0) |
 
 ### Discover Phase (3 skills)
 
