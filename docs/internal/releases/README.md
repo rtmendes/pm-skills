@@ -2,7 +2,7 @@
 
 Status: Active  
 Owner: Maintainers  
-Last updated: 2026-03-19
+Last updated: 2026-03-22
 
 This directory is the canonical tracked home for internal release-governance artifacts.
 
@@ -15,9 +15,12 @@ This directory is the canonical tracked home for internal release-governance art
 ## Current Entry Points
 
 1. `docs/internal/releases/runbook_clean-worktree-cut-tag-publish.md`
-2. `docs/internal/releases/v2.6.1/README.md`
-3. `docs/internal/releases/v2.5.0/README.md`
-4. `docs/internal/releases/v2.4.0/README.md`
+2. `docs/internal/releases/v2.7.0/README.md` (in progress)
+3. `docs/internal/releases/v2.6.1/README.md`
+4. `docs/internal/releases/v2.5.0/README.md`
+5. `docs/internal/releases/v2.4.0/README.md`
+6. `docs/internal/releases/v2.3.0/README.md`
+7. `docs/internal/releases/v2.2.0/README.md`
 
 ## Operating Rules
 
@@ -26,6 +29,6 @@ This directory is the canonical tracked home for internal release-governance art
 3. Keep durable effort briefs in `docs/internal/efforts/**` and link them from release docs instead of duplicating backlog state here.
 4. Keep `_NOTES/**` as local working material only.
 
-## Legacy Note
+## Migration History
 
-`docs/internal/release-planning/**` and `docs/internal/delivery-plan/**` remain tracked only as legacy surfaces during the baseline cleanup. New canonical release-governance artifacts should live under `docs/internal/releases/**`.
+Legacy directories `docs/internal/release-planning/` and `docs/internal/delivery-plan/` were fully migrated to this structure on 2026-03-22. All files were distributed into versioned release folders. Originals archived to `_NOTES/_archived-internal/` (gitignored).

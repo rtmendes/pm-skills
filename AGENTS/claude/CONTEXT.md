@@ -2,10 +2,10 @@
 
 ## Current State
 
-**Status:** v2.6.1 shipped — sample library recovered, plugin manifest added
-**Last Updated:** 2026-03-18
+**Status:** v2.6.1 shipped — strategic planning complete, backlog integrated, ready to execute
+**Last Updated:** 2026-03-22
 **Release:** [v2.6.1](https://github.com/product-on-purpose/pm-skills/releases/tag/v2.6.1)
-**Next Step:** Execute baseline-hygiene plan, then v2.7.0 persona library Tier-0
+**Next Step:** Effort 0 (marketplace submission) then M-12 (#112, CI enhancement)
 
 ## Project Overview
 
@@ -365,20 +365,24 @@ pm-skills/
   - `.github/workflows/release.yml` — Create releases on tag
   - `.github/workflows/release-zips.yml` — Package ZIP artifacts
 
-## Next Steps
+## Next Steps (Priority Backlog)
 
-1. **Baseline Hygiene Execution (complete):**
-   - All unblocked tasks landed: A-1 through A-4, A-8, A-9, A-11
-   - `scripts/check-context-currency.sh/.ps1` + advisory CI step in `validation.yml` (A-8/A-9, 2026-03-18)
-   - A-5 (wrap-session context check) deferred to a later focused effort — out of scope for this pass
+See `docs/internal/backlog-canonical.md` for the full priority-ordered table with issue links.
 
-2. **v2.7.0 Persona Library Tier-0:**
-   - Persona archetype library (deferred from v2.5.0)
-   - Full persona MCP exposure parity
+| Priority | ID | Effort | Issue |
+|----------|----|--------|-------|
+| 0 | — | Anthropic marketplace submission (human-only) | — |
+| 1 | M-12 | CI validation enhancement | #112 |
+| 2 | F-05 | PM Skill Builder (`/pm-skill-builder`) | #113 |
+| 3 | F-06 | `deliver-acceptance-criteria` | #114 |
+| 4 | M-13 | Convention alignment pass | #115 |
+| 5 | M-14 | Release automation enhancement | #116 |
+| 6 | M-15 | Community contribution setup | #117 |
+| 7 | F-07 | `discover-market-sizing` | #118 |
+| 8 | F-08 | `measure-survey-analysis` | #119 |
+| 9 | F-09 | Agent Skill Builder (`/agent-skill-builder`) | #120 |
 
-3. **Awesome-List PR Campaign:**
-   - Submit to curated awesome-lists (BehiSecc, e2b-dev, kyrolabs, dend/awesome-product-management)
-   - Adapt skills for Shubhamsaboo format as needed
+**Key scope change (2026-03-21):** Multi-project workspace, document evolution, hooks, output styles, and transcript processing moved to Knowledge OS — a separate Product on Purpose initiative. pm-skills focuses on being an excellent, community-ready skill library. M-01 through M-04 are no longer in pm-skills scope.
 
 ## Notes
 
