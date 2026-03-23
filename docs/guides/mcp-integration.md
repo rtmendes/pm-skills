@@ -341,7 +341,7 @@ If you're transitioning from file-based pm-skills to MCP, here's the mapping:
 | `/persona` | `pm_persona` |
 | `/kickoff` | `pm_workflow_feature_kickoff` |
 
-`/acceptance-criteria` and `/pm-skill-builder` are currently file-based only. Use the `pm-skills` repo directly for those until a future MCP pin refresh exposes them as tools.
+Starting with v2.7.0, `/acceptance-criteria` maps to `pm_acceptance_criteria` and `/pm-skill-builder` maps to `pm_pm_skill_builder`. Update your `pm-skills-mcp` install to v2.7.0+ to access these tools.
 
 **Usage difference:**
 
@@ -406,6 +406,75 @@ Point pm-skills-mcp to your own skill directory:
 | `PM_SKILLS_PATH` | (embedded) | Path to custom skills directory |
 | `PM_SKILLS_FORMAT` | `full` | Default output format |
 | `PM_SKILLS_EXAMPLES` | `false` | Include examples by default |
+
+---
+
+## Maintainer: MCP Sync Workflow
+
+This section documents how `pm-skills` releases flow to `pm-skills-mcp`. It is intended for maintainers, not end users.
+
+### Architecture
+
+`pm-skills-mcp` is **release-pinned** — it embeds a snapshot of skill files at build time and ships them in the npm package. It does not live-sync with the `pm-skills` repo.
+
+```
+pm-skills (tag v2.7.0)
+    │
+    ├── validate-mcp-sync.yml ── CI detects drift (blocking)
+    │
+    └── embed-skills.js ──────── copies skills/ into pm-skills-mcp
+                                      │
+                                pm-skills-mcp (tag v2.7.0)
+                                      │
+                                   npm publish
+```
+
+### When to Sync
+
+Sync after any `pm-skills` release that adds, removes, or renames skills. The `check-mcp-impact` script and `validate-mcp-sync.yml` CI workflow both detect when sync is needed.
+
+### How to Sync
+
+From the `pm-skills-mcp` repo root:
+
+```bash
+# 1. Embed skills from the pm-skills sibling directory (or specify path)
+node scripts/embed-skills.js ../pm-skills/skills
+
+# 2. Update the source pin
+#    Edit pm-skills-source.json: pmSkillsRef, pmSkillsVersion, updated
+
+# 3. Bump version in package.json and src/config.ts
+
+# 4. Update CHANGELOG.md
+
+# 5. Commit, tag, publish
+git add -A && git commit -m "chore(release): sync with pm-skills vX.Y.Z"
+git tag vX.Y.Z && git push origin main --tags
+npm publish
+```
+
+### Tool Naming Convention
+
+The `deriveToolName` function in `src/server.ts` strips the directory prefix and prepends `pm_`:
+
+| Skill directory | Stripped | MCP tool name |
+|----------------|---------|---------------|
+| `deliver-prd` | `prd` | `pm_prd` |
+| `foundation-persona` | `persona` | `pm_persona` |
+| `utility-pm-skill-builder` | `pm-skill-builder` | `pm_pm_skill_builder` |
+
+Prefixes stripped: `discover-`, `define-`, `develop-`, `deliver-`, `measure-`, `iterate-`, `foundation-`, `utility-`. Remaining hyphens become underscores.
+
+### CI Guardrails
+
+| Component | Location | Behavior |
+|-----------|----------|----------|
+| `validate-mcp-sync.yml` | `.github/workflows/` | Runs on PRs/pushes touching `skills/` or `commands/`. Checks out both repos, embeds, validates. **Blocks by default.** |
+| `check-mcp-impact.sh/.ps1` | `scripts/` | Local advisory. Non-blocking. |
+| `check-mcp-impact.md` | `scripts/` | Script documentation |
+
+**Expected CI behavior after a pm-skills release**: `validate-mcp-sync` will show a failure on `main` until `pm-skills-mcp` is updated. This is the guardrail working as designed — it creates visible pressure to complete the sync.
 
 ---
 
