@@ -1,0 +1,16 @@
+{
+  "name": "pm-skills-marketplace",
+  "description": "Product Management skills for AI agents",
+  "plugins": [
+    {
+      "name": "pm-skills",
+      "description": "27 PM skills covering the full product lifecycle with templates, examples, workflow bundles, and an interactive skill builder. Follows the agentskills.io specification.",
+      "version": "2.7.0",
+      "source": ".",
+      "author": "product-on-purpose",
+      "homepage": "https://github.com/product-on-purpose/pm-skills",
+      "license": "Apache-2.0",
+      "keywords": ["product-management", "pm", "prd", "user-stories", "agent-skills", "agentskills-io"]
+    }
+  ]
+}
