@@ -12,8 +12,8 @@ This directory is the tracked internal release-governance home for the `v2.7.0` 
 |--------|------|-------------|-------|--------|-------|
 | M-12 | Infrastructure | CI validation enhancement — extended linter, AGENTS.md sync validator, MCP impact check | Codex | **Committed** | [#112](https://github.com/product-on-purpose/pm-skills/issues/112) |
 | F-06 | New skill | `deliver-acceptance-criteria` — Given/When/Then acceptance criteria skill | Codex | **Committed** | [#114](https://github.com/product-on-purpose/pm-skills/issues/114) |
-| M-16 | Infrastructure | Exclude `docs/internal/**` from the published ZIP while keeping internal governance docs tracked in-repo | Codex | Implemented locally, awaiting commit | [#123](https://github.com/product-on-purpose/pm-skills/issues/123) |
-| F-05 | New skill | PM Skill Builder (`/pm-skill-builder`) — interactive utility skill for creating new PM skills | Claude | Implementation plan reviewed, ready to execute | [#113](https://github.com/product-on-purpose/pm-skills/issues/113) |
+| M-16 | Infrastructure | Exclude `docs/internal/**` from the published ZIP while keeping internal governance docs tracked in-repo | Codex | **Committed** | [#123](https://github.com/product-on-purpose/pm-skills/issues/123) |
+| F-05 | New skill | PM Skill Builder (`/pm-skill-builder`) — interactive utility skill for creating new PM skills | Claude | **Committed** | [#113](https://github.com/product-on-purpose/pm-skills/issues/113) |
 | D-01 | Documentation | Create `docs/pm-skill-anatomy.md` — architecture and anatomy of a pm-skills skill (extends agentskills.io spec) | Claude | Planned | — |
 | D-02 | Documentation | Review and update public-facing docs for v2.7.0 accuracy | Codex | Planned | — |
 
@@ -25,9 +25,9 @@ Infrastructure hardening (M-12) + release packaging hygiene (M-16) + first new s
 
 - [x] M-12 committed and CI green
 - [x] F-06 committed and CI green (must pass M-12's enhanced validation)
-- [ ] M-16 committed and release ZIP excludes `docs/internal/**` while preserving public docs
-- [ ] F-05 design approved and implemented
-- [ ] F-05 committed and CI green
+- [x] M-16 committed and release ZIP excludes `docs/internal/**` while preserving public docs
+- [x] F-05 design approved and implemented
+- [x] F-05 committed and CI green
 - [ ] D-01: `docs/skill-anatomy.md` created
 - [ ] D-02: Public-facing docs reviewed and updated for v2.7.0 accuracy
 - [ ] CHANGELOG.md updated with v2.7.0 section
@@ -37,8 +37,8 @@ Infrastructure hardening (M-12) + release packaging hygiene (M-16) + first new s
 ## Commit Order
 
 1. ~~M-12 + F-06 combined commit~~ **Done** (2026-03-22, `8d2a418`)
-2. M-16 packaging fix commit (Codex — implemented, awaiting commit)
-3. F-05 implementation commit(s) (after Codex review of implementation plan)
+2. ~~M-16 packaging fix commit~~ **Done** (2026-03-22, `0c2e637`)
+3. ~~F-05 implementation commits~~ **Done** (2026-03-22, `3c50108`..`a67f144`)
 4. D-01 + D-02 documentation commits
 5. Release prep commit (CHANGELOG, version bumps if needed)
 6. Tag and release

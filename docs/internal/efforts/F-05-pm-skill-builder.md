@@ -1,5 +1,5 @@
 # [F-05] PM Skill Builder
-Status: Design reviewed, implementation pending
+Status: Implemented, verification passed
 Release: v2.7.0
 Issue: #113
 Agent: Claude Opus 4.6
@@ -28,7 +28,7 @@ The builder uses 4-5 steps with a kill gate:
 3. **Scope Check** — Detects if the idea is too broad and should be split into multiple skills. Signals: multiple artifact types, cross-phase work, "and" in the description.
 4. **Classification + Repo-Fit** (combined) — Determines domain (which phase?) / foundation / utility. Branches naming and conventions accordingly. Identifies 1-2 exemplar skills to model the output on.
 5. **Generate Packet** — Produces full Skill Implementation Packet with all draft files, inline writing lens (Quality Forecast), and validation checklist.
-6. **Write to Staging** — Files written to `library/pm-skill-builder/{skill-name}/`.
+6. **Write to Staging** — Files written to `_staging/pm-skill-builder/{skill-name}/` (gitignored, discarded after promotion).
 7. **Promote** (on confirmation) — Files moved to canonical locations.
 
 ### Kill gate: Gap Analysis + Why Gate + Scope Splitting
@@ -70,16 +70,6 @@ After writing files, the builder provides:
 - Contribution workflow (GitHub issue → PR) if contributing to the repo
 - Iteration guidance if the skill needs refinement
 
-### Sample output library
-
-Three sample builder runs in `library/skill-output-samples/utility-pm-skill-builder/`:
-
-| Sample | Scenario | Demonstrates |
-|--------|----------|-------------|
-| Thread 1 | Simple domain skill — change management communications | Straightforward creation, no overlap, efficient flow |
-| Thread 2 | Complex utility skill — cross-functional meeting synthesis | Overlap detected, Why Gate triggered, ambiguity navigation |
-| Thread 3 | Kill gate fires — someone proposes "create product requirements" | Direct overlap with deliver-prd, builder redirects to revision |
-
 ### v1 scope boundaries
 
 **In scope (v1):**
@@ -87,7 +77,7 @@ Three sample builder runs in `library/skill-output-samples/utility-pm-skill-buil
 - All three classifications (domain, foundation, utility)
 - Staging area + promotion workflow
 - Skill Implementation Packet generation
-- 3 sample outputs
+- `references/EXAMPLE.md` demonstrates a realistic builder run
 
 **Out of scope (future skills, not modes):**
 - `utility-pm-skill-validate` — audit existing skills against conventions and quality (future effort)
@@ -97,7 +87,7 @@ Three sample builder runs in `library/skill-output-samples/utility-pm-skill-buil
 
 - Directory: `skills/utility-pm-skill-builder/`
 - Command: `/pm-skill-builder`
-- Staging output: `library/pm-skill-builder/{skill-name}/`
+- Staging output: `_staging/pm-skill-builder/{skill-name}/` (gitignored, discarded after promotion)
 - Distinguished from `/agent-skill-builder` (F-09) which creates skills for any context
 
 ## Artifacts Produced
@@ -106,8 +96,7 @@ Three sample builder runs in `library/skill-output-samples/utility-pm-skill-buil
 - `skills/utility-pm-skill-builder/references/TEMPLATE.md` (Skill Implementation Packet template)
 - `skills/utility-pm-skill-builder/references/EXAMPLE.md` (completed packet for a realistic skill)
 - `commands/pm-skill-builder.md`
-- `library/pm-skill-builder/` directory (staging area for builder output)
-- `library/skill-output-samples/utility-pm-skill-builder/` (3 sample runs)
+- `_staging/pm-skill-builder/` directory (gitignored staging area, discarded after promotion)
 - AGENTS.md entry
 
 ## Dependencies
