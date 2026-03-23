@@ -412,7 +412,7 @@ Bundles are pre-defined skill sequences for common workflows.
 |--------|----------|--------|
 | Feature Kickoff | Standard feature development | problem-statement → hypothesis → prd → user-stories → launch-checklist |
 | Lean Startup | Rapid validation | hypothesis → experiment-design → experiment-results → pivot-decision |
-| Triple Diamond | Comprehensive product dev | All 24 phase skills across 6 phases |
+| Triple Diamond | Comprehensive product dev | All 25 phase skills across 6 phases |
 
 ### Invoking a Bundle
 
@@ -855,7 +855,7 @@ This is our "Feature One-Pager" format.
 | **Discover** | interview-synthesis, competitive-analysis, stakeholder-summary | stakeholder → interview → competitive |
 | **Define** | problem-statement, hypothesis, opportunity-tree, jtbd-canvas | problem → hypothesis |
 | **Develop** | solution-brief, spike-summary, adr, design-rationale | spike → adr → solution |
-| **Deliver** | prd, user-stories, edge-cases, launch-checklist, release-notes | prd → stories → edge-cases → launch |
+| **Deliver** | prd, user-stories, acceptance-criteria, edge-cases, launch-checklist, release-notes | prd → stories → acceptance-criteria → edge-cases → launch |
 | **Measure** | experiment-design, instrumentation-spec, dashboard-requirements, experiment-results | design → instrument → results |
 | **Iterate** | retrospective, lessons-log, refinement-notes, pivot-decision | results → retro → lessons → pivot |
 
@@ -868,6 +868,7 @@ This is our "Feature One-Pager" format.
 | Pitch a solution | solution-brief | One-page solution overview |
 | Specify requirements | prd | Product Requirements Document |
 | Plan development | user-stories | User stories with acceptance criteria |
+| Define done conditions | acceptance-criteria | Given/When/Then acceptance criteria |
 | Handle edge cases | edge-cases | Edge case catalog |
 | Plan an experiment | experiment-design | A/B test plan |
 | Track events | instrumentation-spec | Analytics event specification |

@@ -1,10 +1,11 @@
+<!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
 ---
 name: <phase-or-classification-skill-name>
-description: <1-2 sentences, include trigger keywords, max 1024 chars>
+description: <single-line 20-100 word description; include trigger keywords and do not use folded YAML>
 phase: <discover|define|develop|deliver|measure|iterate>
-# classification: foundation   # For foundation/utility skills, use classification and omit phase
+# classification: <foundation|utility>   # For non-domain skills, use classification and omit phase
 version: "1.0.0"
-updated: 2026-03-19
+updated: <YYYY-MM-DD>
 license: Apache-2.0
 metadata:
   category: <one of: research, problem-framing, ideation, specification, validation, reflection, coordination>
@@ -22,6 +23,11 @@ metadata:
 - <Situation 2>
 - <Situation 3>
 
+## When NOT to Use (Optional)
+
+- <Common misuse to avoid>
+- <When another skill is a better fit>
+
 ## Instructions
 
 When asked to <create artifact>, follow these steps:
@@ -38,9 +44,13 @@ When asked to <create artifact>, follow these steps:
 4. **<Step 4 Title>**
    <What to do and why>
 
-## Output Format
+## Output Contract
 
-Use the template in `references/TEMPLATE.md` to structure the output.
+Use `references/TEMPLATE.md` as the output format. A complete response should:
+
+- <Required element 1>
+- <Required element 2>
+- <Required element 3>
 
 ## Quality Checklist
 

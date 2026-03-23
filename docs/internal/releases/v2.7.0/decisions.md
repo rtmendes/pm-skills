@@ -71,13 +71,13 @@ This document captures important design and architecture decisions made during v
 
 ## D-5: Exclude `docs/internal/**` from release ZIP (M-16)
 
-**Decision**: Modify `build-release.sh` to exclude `docs/internal/**` from the published ZIP artifact while keeping internal governance docs tracked in the repo.
+**Decision**: Modify both release packagers (`build-release.sh` and `build-release.ps1`) to exclude `docs/internal/**` from the published ZIP artifact while keeping internal governance docs tracked in the repo.
 
 **Why**: Internal release governance, effort briefs, and planning documents are maintainer-facing. Users downloading the ZIP should get skills, commands, bundles, and public docs — not internal planning artifacts.
 
 **Impact**: Reduces ZIP size. Internal docs remain in the repo for maintainers but don't ship to users. This also resolves any future concern about staging area content accidentally shipping.
 
-**Related**: M-16 effort brief, GitHub issue #123.
+**Related**: M-16 effort brief, GitHub issue #123, commit `0c2e637`.
 
 ---
 
@@ -115,18 +115,18 @@ This document captures important design and architecture decisions made during v
 
 ---
 
-## D-9: Remaining v2.7.0 task agent assignments
+## D-9: v2.7.0 task agent assignments
 
-**Decision**: Agent assignments for all remaining v2.7.0 work.
+**Decision**: Agent assignments for the v2.7.0 closing work. Status is updated here as tasks land.
 
-| Task | Agent | Rationale |
-|------|-------|-----------|
-| F-05 implementation | Claude | Creative content writing — SKILL.md instructions, EXAMPLE.md narrative, quality judgment on gap analysis language. This is the kind of work where design taste matters. |
-| D-01: skill anatomy doc | Claude | New explanatory document requiring architectural understanding and clear writing for contributors who are new to the project. Claude's strength. |
-| D-02: public docs review | Codex | Systematic comparison of existing docs against current repo state. Well-defined scope (8 files), concrete checks (skill counts, script names, command lists). Codex excels at verification against ground truth. |
-| M-16 commit | Codex | Already implemented by Codex, just needs commit. |
-| CHANGELOG v2.7.0 | Claude | Release notes require narrative judgment — what matters to users, how to frame changes. |
-| Release tag | Human | Manual decision point — confirm everything is ready, push the tag. |
+| Task | Agent | Status | Rationale |
+|------|-------|--------|-----------|
+| F-05 implementation | Claude | Done (`3c50108`, `df794a1`, `a67f144`) | Creative content writing — SKILL.md instructions, EXAMPLE.md narrative, quality judgment on gap analysis language. This is the kind of work where design taste matters. |
+| D-01: skill anatomy doc | Claude | Planned | New explanatory document requiring architectural understanding and clear writing for contributors who are new to the project. Claude's strength. |
+| D-02: public docs review | Codex | Follow-up needed | Systematic comparison of existing docs against current repo state. Well-defined scope, concrete checks (skill counts, script names, command lists, builder wiring). Codex excels at verification against ground truth. |
+| M-16 commit | Codex | Done (`0c2e637`) | Packaging/verification work was already implemented by Codex and then committed. |
+| CHANGELOG v2.7.0 | Claude | Pending | Release notes require narrative judgment — what matters to users, how to frame changes. |
+| Release tag | Human | Pending | Manual decision point — confirm everything is ready, push the tag. |
 
 **Pattern**: Claude gets writing/design tasks. Codex gets verification/implementation tasks. Human gets external-facing decisions.
 
@@ -135,5 +135,4 @@ This document captures important design and architecture decisions made during v
 ## Decisions to add later
 
 - Any breaking changes discovered during F-05 implementation
-- Release packaging changes from M-16 (once committed)
 - F-05 functional test results

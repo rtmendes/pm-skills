@@ -32,6 +32,8 @@ A comprehensive reference for understanding the structure, components, and stand
 
 ## Introduction
 
+> **Scope note:** This guide is the spec-level, cross-platform anatomy reference for agent skills. If a future `docs/pm-skill-anatomy.md` lands, keep that file focused on PM-Skills-specific authoring workflow and repo conventions so it complements this guide instead of duplicating it.
+
 ### What is an Agent Skill?
 
 An **agent skill** is a structured instruction set that teaches an AI assistant how to create a specific type of artifact. In the context of product management, skills enable AI agents to produce professional PM documents like PRDs, user stories, problem statements, and retrospectives with consistent quality and format.
@@ -145,9 +147,9 @@ When asked to create a problem statement, follow these steps:
 2. **Understand the Pain Points**
    Explore what friction...
 
-## Output Format                           # ← Reference to template
+## Output Format / Contract                # ← Reference to template
 
-Use the template in `references/TEMPLATE.md`...
+Use `references/TEMPLATE.md` as the output format.
 
 ## Quality Checklist                       # ← Validation criteria
 
@@ -804,17 +806,17 @@ When asked to create a problem statement, follow these steps:
 | `2. **<Step Title>**` | `2. **Understand the Pain Points**` |
 | `<What to do and why>` | `Explore what friction, frustration, or unmet need the user experiences.` |
 
-#### Section 5: Output Format (H2)
+#### Section 5: Output Format / Contract (H2)
 
 ```markdown
-## Output Format
+## Output Contract
 
-Use the template in `references/TEMPLATE.md` to structure the output.
+Use `references/TEMPLATE.md` as the output format.
 ```
 
 **Purpose**: Direct the AI to the template file for structural guidance.
 
-**Standard phrasing**: Always reference `references/TEMPLATE.md` exactly.
+**Standard phrasing**: Always reference `references/TEMPLATE.md` exactly. Legacy skills often title this section `Output Format`; newer builder-aligned skills prefer `Output Contract`.
 
 #### Section 6: Quality Checklist (H2)
 
@@ -886,9 +888,9 @@ See `references/EXAMPLE.md` for a completed example.
 │ 2. **Step Title**                       │
 │    What to do and why...                │
 ├─────────────────────────────────────────┤
-│ ## Output Format                        │
+│ ## Output Format / Contract             │
 │                                         │
-│ Use the template in references/...     │ ← Template ref
+│ Use references/TEMPLATE.md as output...│ ← Template ref
 ├─────────────────────────────────────────┤
 │ ## Quality Checklist                    │
 │                                         │
@@ -926,7 +928,7 @@ Discovery Phase                  Invocation Phase
      │                                │ - Example reference
      ▼                                ▼
 ┌──────────────────┐           ┌──────────────────┐
-│ AI sees 25 skills│           │ AI loads 1 skill │
+│ AI sees 27 skills│           │ AI loads 1 skill │
 │ (~6KB metadata)  │           │ (full content)   │
 └──────────────────┘           └──────────────────┘
                                        │
@@ -944,6 +946,8 @@ Discovery Phase                  Invocation Phase
 **What loads**: Only `name` and `description` from frontmatter
 
 **Where from**: `AGENTS.md` file at repository root or `SKILL.md` frontmatter during skill indexing
+
+**Current repo note**: `AGENTS.md` registers all 27 skills in `skills/`, including domain, foundation, and utility classifications.
 
 **Purpose**: Allow AI to scan all available skills quickly and select the appropriate one
 
@@ -979,7 +983,7 @@ AI scans AGENTS.md:
 
 **Purpose**: Provide complete instructions, quality criteria, and references
 
-**Benefit**: Context-appropriate loading—only the selected skill loads, not all 25
+**Benefit**: Context-appropriate loading—only the selected skill loads, not all 27 skills
 
 **What the AI reads**:
 
@@ -1007,8 +1011,8 @@ metadata:
 ## Instructions
 [All 6 steps with details]
 
-## Output Format
-Use the template in `references/TEMPLATE.md`...
+## Output Contract
+Use `references/TEMPLATE.md` as the output format...
 
 ## Quality Checklist
 [All criteria]
@@ -1040,9 +1044,9 @@ AI follows SKILL.md instructions
 ### Why This Matters
 
 **Context window efficiency**:
-- Discovery: ~6KB (25 skill names + descriptions)
+- Discovery: ~6KB (27 skill names + descriptions)
 - Invocation: ~15KB (1 full SKILL.md + template + example)
-- Without progressive loading: ~375KB (all 25 skills fully loaded)
+- Without progressive loading: ~400KB (all 27 skills fully loaded)
 
 **Faster agent response**:
 - Skill selection happens instantly (minimal data to parse)
@@ -1183,7 +1187,6 @@ metadata:
   frameworks: [triple-diamond, lean-startup, design-thinking]
                                            # ← Multiple frameworks
   author: product-on-purpose               # ← Consistent authorship
-  version: "1.0.0"                         # ← Quoted version
 ---
 
 # Problem Statement                        # ← H1 title
@@ -1237,9 +1240,9 @@ When asked to create a problem statement, follow these steps:
    Document what you don't know yet. What assumptions need validation? 
    What additional research is needed?
 
-## Output Format                           # ← Template reference
+## Output Contract                        # ← Template reference
 
-Use the template in `references/TEMPLATE.md` to structure the output.
+Use `references/TEMPLATE.md` as the output format.
 
 ## Quality Checklist                       # ← Validation criteria
 
@@ -1344,9 +1347,9 @@ When asked to create a PRD, follow these steps:
    Outline key phases and checkpoints. This helps stakeholders understand 
    the delivery plan without committing to specific dates prematurely.
 
-## Output Format
+## Output Contract
 
-Use the template in `references/TEMPLATE.md` to structure the output.
+Use `references/TEMPLATE.md` as the output format.
 
 ## Quality Checklist                       # ← Comprehensive validation
 
@@ -1426,10 +1429,10 @@ When asked to <create artifact>, follow these steps:
 
 [Continue with remaining steps]
 
-## Output Format
+## Output Contract
 
-Use the template in `references/TEMPLATE.md` to structure the output.
-                                           # ← Keep this exact wording
+Use `references/TEMPLATE.md` as the output format.
+                                           # ← Keep the template reference explicit
 
 ## Quality Checklist                       # ← Define 5-8 criteria
 
@@ -1526,7 +1529,7 @@ Quick reference for skill authors before submission. For complete guidance, see 
 
 ### Documentation
 
-- [ ] Entry added to `AGENTS.md` in the appropriate foundation or phase section
+- [ ] Entry added to `AGENTS.md` in the appropriate phase or non-phase section
 - [ ] Command added to `AGENTS.md` Commands table (if applicable)
 - [ ] No references to gitignored or private paths
 - [ ] All internal links use relative paths
@@ -1606,7 +1609,7 @@ Quick reference for skill authors before submission. For complete guidance, see 
 | 3 | Overview paragraph | Yes |
 | 4 | When to Use (H2) | Yes |
 | 5 | Instructions (H2) | Yes |
-| 6 | Output Format (H2) | Yes |
+| 6 | Output Format / Contract (H2) | Yes |
 | 7 | Quality Checklist (H2) | Yes |
 | 8 | Examples (H2) | Yes |
 

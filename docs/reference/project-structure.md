@@ -2,7 +2,7 @@
 
 ## Table of Contents
 - [Directory Overview](#directory-overview)
-- [/skills/ — Skills](#skills--the-25-pm-skills-flat)
+- [/skills/ — Skills](#skills--the-27-pm-skills-flat)
 - [/commands/ — Slash Commands](#commands--slash-commands)
 - [/bundles/ — Workflow Bundles](#bundles--workflow-bundles)
 - [/docs/ — Documentation](#docs--documentation)
@@ -19,8 +19,8 @@ This document provides a comprehensive overview of the PM-Skills repository stru
 
 ```
 pm-skills/
-├── skills/                     # Core PM skills (25 total, flat)
-├── commands/                   # Claude Code slash commands
+├── skills/                     # Core PM skills (27 total, flat)
+├── commands/                   # Slash command markdown files (27 total + .gitkeep)
 ├── _bundles/                   # Workflow bundles
 ├── docs/                       # Documentation (incl. templates)
 │   └── templates/              # Skill creation templates
@@ -31,22 +31,22 @@ pm-skills/
 
 ---
 
-## `/skills/` — The 25 PM Skills (flat)
+## `/skills/` — The 27 PM Skills (flat)
 
 Skills are the core of PM-Skills. Each skill teaches AI assistants how to produce a specific PM artifact with professional quality.
 
 ### Organization
 
-Flat directories named `{phase}-{skill}` for domain skills, plus classification-driven names such as `foundation-persona` for non-phase skills.
+Flat directories named `{phase}-{skill}` for domain skills, plus classification-driven names such as `foundation-persona` and `utility-pm-skill-builder` for non-phase skills.
 
-Examples: `discover-competitive-analysis`, `define-hypothesis`, `deliver-prd`, `foundation-persona`.
+Examples: `discover-competitive-analysis`, `define-hypothesis`, `deliver-prd`, `foundation-persona`, `utility-pm-skill-builder`.
 
 ### Skill Structure
 
 Each skill follows the [Agent Skills Specification](https://agentskills.io/specification):
 
 ```
-skills/{phase}-{skill-name}/
+skills/{skill-name}/
 ├── SKILL.md              # Instructions for AI (required)
 └── references/
     ├── TEMPLATE.md       # Output structure (required)
@@ -87,15 +87,23 @@ skills/{phase}-{skill-name}/
 | `develop-adr` | Architecture Decision Records (Nygard format) |
 | `develop-design-rationale` | Capture design choice reasoning |
 
-#### Deliver Phase (5 skills)
+#### Deliver Phase (6 skills)
 
 | Skill | Purpose |
 |-------|---------|
+| `deliver-acceptance-criteria` | Given/When/Then acceptance criteria for a story or feature slice |
 | `deliver-prd` | Comprehensive product requirements document |
 | `deliver-user-stories` | INVEST-compliant stories with acceptance criteria |
 | `deliver-edge-cases` | Error states, boundaries, recovery paths |
 | `deliver-launch-checklist` | Pre-launch verification checklist |
 | `deliver-release-notes` | User-facing release communication |
+
+#### Foundation / Utility (2 skills)
+
+| Skill | Purpose |
+|-------|---------|
+| `foundation-persona` | Evidence-calibrated product or marketing persona generation |
+| `utility-pm-skill-builder` | Guided creation of new pm-skills-compatible skills |
 
 #### Measure Phase (4 skills)
 
@@ -121,7 +129,7 @@ skills/{phase}-{skill-name}/
 
 Contains Claude Code slash command definitions. Each `.md` maps a `/command` to its skill (or bundle).
 
-**Commands (25 total)**
+**Commands (27 total: 26 skill commands + 1 workflow bundle)**
 | Command | Target skill/bundle |
 | --- | --- |
 | `/competitive-analysis` | discover-competitive-analysis |
@@ -135,6 +143,7 @@ Contains Claude Code slash command definitions. Each `.md` maps a `/command` to 
 | `/design-rationale` | develop-design-rationale |
 | `/solution-brief` | develop-solution-brief |
 | `/spike-summary` | develop-spike-summary |
+| `/acceptance-criteria` | deliver-acceptance-criteria |
 | `/prd` | deliver-prd |
 | `/user-stories` | deliver-user-stories |
 | `/edge-cases` | deliver-edge-cases |
@@ -151,6 +160,8 @@ Contains Claude Code slash command definitions. Each `.md` maps a `/command` to 
 | `/persona` | foundation-persona |
 | `/kickoff` | feature-kickoff bundle |
 
+`utility-pm-skill-builder` currently ships as a skill file only. There is no committed `/pm-skill-builder` command yet.
+
 ---
 
 ## `/_bundles/` — Workflow Bundles
@@ -161,7 +172,7 @@ Bundles chain multiple skills together into guided, end-to-end workflows.
 |--------|---------|-----------------|
 | `feature-kickoff.md` | New feature development | problem-statement → hypothesis → prd → user-stories → launch-checklist |
 | `lean-startup.md` | Rapid validation cycle | hypothesis → experiment-design → experiment-results → pivot-decision |
-| `triple-diamond.md` | Complete product development | All 24 phase skills across 6 phases |
+| `triple-diamond.md` | Complete product development | All 25 phase skills across 6 phases |
 
 ---
 

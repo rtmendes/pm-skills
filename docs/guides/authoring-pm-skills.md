@@ -57,17 +57,21 @@ commands/<skill-name>.md  # Slash command definition
 
 ### 1. Check If It Already Exists
 
-Review the [existing 25 skills](../../AGENTS.md) to ensure your idea isn't already covered:
+Review the existing repo catalog before opening a new skill proposal. The current repo contains 27 skills in `skills/` (25 phase skills, `foundation-persona`, and `utility-pm-skill-builder`), while `AGENTS.md` lists the currently registered/discoverable subset.
 
 | Category | Existing Skills |
 |----------|-----------------|
-| research | interview-synthesis, competitive-analysis, stakeholder-summary |
+| research | interview-synthesis, competitive-analysis, stakeholder-summary, persona |
 | problem-framing | problem-statement, opportunity-tree, jtbd-canvas |
 | ideation | hypothesis, solution-brief |
-| specification | prd, user-stories, edge-cases, adr, design-rationale |
+| specification | prd, user-stories, acceptance-criteria, edge-cases, adr, design-rationale |
 | validation | experiment-design, instrumentation-spec, dashboard-requirements |
 | reflection | experiment-results, retrospective, lessons-log, pivot-decision |
 | coordination | launch-checklist, release-notes, spike-summary, refinement-notes |
+
+Plus shipped non-phase skills:
+- `foundation-persona`
+- `utility-pm-skill-builder`
 
 ### 2. Validate the Need
 
@@ -93,8 +97,9 @@ If you answered "no" to any, reconsider whether this is the right skill.
 | `reflection` | Captures learnings, retrospectives, or pivot decisions |
 | `coordination` | Aligns teams, prepares launches, or communicates |
 
-Plus one non-phase foundation skill:
+Plus shipped non-phase skills:
 - `foundation-persona`
+- `utility-pm-skill-builder`
 
 ### 4. Choose Classification and Phase
 
@@ -256,7 +261,7 @@ When asked to create [artifact], follow these steps:
 
 [Continue with more steps]
 
-## Output Format
+## Output Contract
 
 Use the template in `references/TEMPLATE.md` to structure the output.
 
@@ -318,7 +323,7 @@ Options: `triple-diamond`, `lean-startup`, `design-thinking`, `scrum`, `kanban`,
 
 #### phase
 
-Use `phase` for domain skills. This is required for the 24 phase-classified PM skills.
+Use `phase` for domain skills. This is required for the 25 phase-classified PM skills.
 
 ```yaml
 phase: deliver
@@ -335,6 +340,15 @@ classification: foundation
 ```
 
 Valid values: `domain`, `foundation`, `utility`
+
+### Run Repo Validators
+
+Before you open a PR, run the repo validators that correspond to your change:
+
+- `./scripts/lint-skills-frontmatter.sh` or `.ps1` — skill frontmatter, description length, template structure
+- `./scripts/validate-commands.sh` or `.ps1` — command file path references
+- `./scripts/validate-agents-md.sh` or `.ps1` — `AGENTS.md` path sync for discoverable skills
+- `./scripts/check-mcp-impact.sh` or `.ps1` — advisory only, but useful when adding or renaming skills
 
 #### version
 

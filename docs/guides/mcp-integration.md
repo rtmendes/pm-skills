@@ -15,9 +15,9 @@ This guide helps you access PM-Skills through the Model Context Protocol (MCP) v
   - [VS Code (Cline/Continue)](#vs-code-clinecontinue)
   - [Other MCP Clients](#other-mcp-clients)
 - [Tool Inventory](#tool-inventory)
-  - [Skill Tools (24)](#skill-tools-24)
+  - [Skill Tools (25)](#skill-tools-25)
   - [Workflow Tools (5)](#workflow-tools-5)
-  - [Utility Tools (7)](#utility-tools-7)
+  - [Utility Tools (8)](#utility-tools-8)
 - [Slash Command to MCP Tool Mapping](#slash-command-to-mcp-tool-mapping)
 - [Customization](#customization)
 - [Troubleshooting](#troubleshooting)
@@ -27,7 +27,7 @@ This guide helps you access PM-Skills through the Model Context Protocol (MCP) v
 
 ## Overview
 
-**PM-Skills MCP** is an MCP server that exposes the 24 PM-Skills as programmatic tools. Instead of uploading files or using slash commands, your AI assistant invokes tools directly via the Model Context Protocol.
+**PM-Skills MCP** is an MCP server that exposes the current public `pm-skills-mcp` catalog as programmatic tools. In the current upstream repo state, that means 25 skill tools: 24 phase skills plus `pm_persona`. Instead of uploading files or using slash commands, your AI assistant invokes tools directly via the Model Context Protocol.
 
 ```
 ┌─────────────────┐                    ┌─────────────────┐
@@ -202,6 +202,8 @@ PM-Skills MCP exposes skill, workflow, and utility tools derived from the curren
 
 > **Note:** pm-skills-mcp now tracks pm-skills release versions directly (starting at v2.4.0). Resource URIs are flat (`pm-skills://skills/{skill}`) with phase available in metadata.
 
+> **Current catalog note:** The file-based `pm-skills` repo can move ahead of the public MCP snapshot. At the moment, `pm-skills-mcp` includes `pm_persona`, but not newer file-based additions such as `/acceptance-criteria` or the path-only `utility-pm-skill-builder` skill.
+
 ### Skill Tools
 
 Each skill becomes an MCP tool with standardized parameters:
@@ -267,6 +269,12 @@ Each skill becomes an MCP tool with standardized parameters:
 | `pm_refinement_notes` | Capture backlog refinement outcomes |
 | `pm_pivot_decision` | Evidence-based pivot/persevere framework |
 
+#### Foundation
+
+| Tool | Description |
+|------|-------------|
+| `pm_persona` | Generate product or marketing personas with explicit assumptions and evidence |
+
 ---
 
 ### Workflow Tools (5)
@@ -283,7 +291,7 @@ Workflow tools orchestrate multiple skills for common PM scenarios:
 
 ---
 
-### Utility Tools (7)
+### Utility Tools (8)
 
 Discovery and validation tools:
 
@@ -291,6 +299,7 @@ Discovery and validation tools:
 |------|-------------|
 | `pm_list_skills` | List all available PM skill tools |
 | `pm_list_resources` | List all MCP resources (skills, templates, examples) |
+| `pm_list_personas` | List persona library resources when available |
 | `pm_list_workflows` | List workflow bundles with their steps |
 | `pm_list_prompts` | List available MCP prompts |
 | `pm_validate` | Validate an artifact against a skill template |
@@ -329,7 +338,10 @@ If you're transitioning from file-based pm-skills to MCP, here's the mapping:
 | `/lessons-log` | `pm_lessons_log` |
 | `/refinement-notes` | `pm_refinement_notes` |
 | `/pivot-decision` | `pm_pivot_decision` |
+| `/persona` | `pm_persona` |
 | `/kickoff` | `pm_workflow_feature_kickoff` |
+
+`/acceptance-criteria` and `/pm-skill-builder` are currently file-based only. Use the `pm-skills` repo directly for those until a future MCP pin refresh exposes them as tools.
 
 **Usage difference:**
 

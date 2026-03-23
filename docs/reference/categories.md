@@ -30,6 +30,8 @@ Product management methodologies use different terminology for similar activitie
 
 Categories provide a **neutral abstraction layer** that lets skills work across methodologies without being tied to any specific framework's vocabulary.
 
+They are also **orthogonal to classification**. Domain, foundation, and utility skills can all use the same `metadata.category` taxonomy.
+
 ### How Categories Work
 
 ```
@@ -80,13 +82,14 @@ Each category has:
 - Customer discovery conversations
 - Usability research
 
-**Skills (3):**
+**Skills (4):**
 
 | Skill | Description |
 |-------|-------------|
 | `interview-synthesis` | Synthesizes user research interviews into actionable insights, patterns, and recommendations |
 | `competitive-analysis` | Creates structured competitive analysis comparing features, positioning, and strategy |
 | `stakeholder-summary` | Documents stakeholder needs, concerns, and influence for a project or initiative |
+| `persona` | Generates context-appropriate product or marketing personas with explicit assumptions and evidence trail |
 
 **When to use research skills:**
 - Starting a new initiative and need to understand the problem space
@@ -184,10 +187,11 @@ hypothesis → solution-brief
 - Edge case analysis
 - Design rationale documentation
 
-**Skills (5):**
+**Skills (6):**
 
 | Skill | Description |
 |-------|-------------|
+| `acceptance-criteria` | Generates structured Given/When/Then acceptance criteria for stories and feature slices |
 | `prd` | Creates a comprehensive Product Requirements Document for engineering handoff |
 | `user-stories` | Generates user stories with clear acceptance criteria from product requirements |
 | `edge-cases` | Documents edge cases, error states, boundary conditions, and recovery paths |
@@ -259,7 +263,7 @@ instrumentation-spec → experiment-design → dashboard-requirements
 - Pivot/persevere decisions
 - Knowledge capture
 
-**Skills (4):**
+**Skills (5):**
 
 | Skill | Description |
 |-------|-------------|
@@ -304,6 +308,7 @@ experiment-results → pivot-decision (if needed)
 | `release-notes` | Creates user-facing release notes that communicate changes in benefit-focused language |
 | `spike-summary` | Documents the results of a time-boxed technical or design exploration |
 | `refinement-notes` | Documents backlog refinement session outcomes including stories refined and decisions made |
+| `pm-skill-builder` | Guides contributors from a PM skill idea to a complete Skill Implementation Packet for the repo |
 
 **When to use coordination skills:**
 - Before significant launches (1-2 weeks out)
@@ -404,14 +409,14 @@ Summary of skills across categories:
 
 | Category | Skill Count | Skills |
 |----------|-------------|--------|
-| research | 3 | interview-synthesis, competitive-analysis, stakeholder-summary |
+| research | 4 | interview-synthesis, competitive-analysis, stakeholder-summary, persona |
 | problem-framing | 3 | problem-statement, opportunity-tree, jtbd-canvas |
 | ideation | 2 | hypothesis, solution-brief |
-| specification | 5 | prd, user-stories, edge-cases, adr, design-rationale |
+| specification | 6 | prd, user-stories, acceptance-criteria, edge-cases, adr, design-rationale |
 | validation | 3 | experiment-design, instrumentation-spec, dashboard-requirements |
 | reflection | 4 | experiment-results, retrospective, lessons-log, pivot-decision |
-| coordination | 4 | launch-checklist, release-notes, spike-summary, refinement-notes |
-| **Total** | **24** | |
+| coordination | 5 | launch-checklist, release-notes, spike-summary, refinement-notes, pm-skill-builder |
+| **Total** | **27** | |
 
 ---
 

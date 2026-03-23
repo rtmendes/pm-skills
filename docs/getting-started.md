@@ -36,7 +36,7 @@ Welcome to PM-Skills! This guide will help you understand what this repository o
 
 ## What is PM-Skills?
 
-**PM-Skills** is an open-source collection of 24 product management "skills" that teach AI assistants how to create professional PM documents. Think of it as a playbook that transforms generic AI responses into polished, consistent PM artifacts.
+**PM-Skills** is an open-source collection of 27 product management skills that teach AI assistants how to create professional PM documents. The current repo includes 25 phase skills, 1 foundation skill, and 1 utility skill. Think of it as a playbook that transforms generic AI responses into polished, consistent PM artifacts.
 
 ### The Problem It Solves
 
@@ -56,7 +56,7 @@ AI: *Produces a comprehensive PRD with problem statement, success metrics,
 
 ### What You Get
 
-- **25 skills** covering the full PM lifecycle (24 phase skills + 1 foundation persona skill)
+- **27 skills in `skills/`** covering the PM lifecycle (25 phase skills + 1 foundation skill + 1 utility skill)
 - **Professional templates** based on industry best practices
 - **Real-world examples** showing what good looks like
 - **Works with any AI assistant** (Claude, ChatGPT, Copilot, etc.)
@@ -91,7 +91,7 @@ skills/<skill-name>/
 ```
 
 The `SKILL.md` file contains:
-- YAML frontmatter with metadata (name, description, category)
+- YAML frontmatter with metadata (`name`, `description`, `version`, `updated`, `license`, and either `phase` or `classification`)
 - Structured instructions the AI follows
 - Guidance on information gathering and output formatting
 
@@ -202,7 +202,7 @@ That's it! Claude will create a full PRD using the skill.
 
 #### How It Works
 
-Claude Code automatically discovers skills via the `AGENTS.md` file and command definitions in `commands/`. No installation required—the repository structure is self-describing.
+Claude Code discovers the registered skill set via `AGENTS.md` and command definitions in `commands/`. The full repo catalog lives under `skills/`, including any path-only skills that have not been wired into `AGENTS.md` or slash commands yet.
 
 #### Setup
 
@@ -230,16 +230,18 @@ Claude Code automatically discovers skills via the `AGENTS.md` file and command 
 
 #### Available Commands
 
-All 25 skills have corresponding slash commands:
+The repo currently ships 28 command markdown files: 27 skill commands plus the `/kickoff` workflow bundle.
 
 | Phase | Commands |
 |-------|----------|
 | Discover | `/interview-synthesis`, `/competitive-analysis`, `/stakeholder-summary` |
 | Define | `/problem-statement`, `/hypothesis`, `/opportunity-tree`, `/jtbd-canvas` |
 | Develop | `/solution-brief`, `/spike-summary`, `/adr`, `/design-rationale` |
-| Deliver | `/prd`, `/user-stories`, `/edge-cases`, `/launch-checklist`, `/release-notes` |
+| Deliver | `/prd`, `/user-stories`, `/acceptance-criteria`, `/edge-cases`, `/launch-checklist`, `/release-notes` |
 | Measure | `/experiment-design`, `/instrumentation-spec`, `/dashboard-requirements`, `/experiment-results` |
 | Iterate | `/retrospective`, `/lessons-log`, `/refinement-notes`, `/pivot-decision` |
+| Foundation | `/persona` |
+| Utility | `/pm-skill-builder` |
 
 Plus workflow bundles: `/kickoff`
 
@@ -280,7 +282,7 @@ git submodule add https://github.com/product-on-purpose/pm-skills.git .pm-skills
 #### How It Works
 
 Modern AI coding assistants discover skills through the `AGENTS.md` file at the repository root. This file:
-- Lists all 25 skills with paths and descriptions
+- Lists all 27 registered skills with paths and descriptions
 - Provides workflow bundles
 - Documents available commands
 
@@ -634,7 +636,7 @@ Bundles are pre-defined sequences of skills for common workflows.
 
 **Use when:** Comprehensive product development
 
-**Skills included:** All 24 phase skills across 6 phases
+**Skills included:** All 25 phase skills across 6 phases
 
 See `_bundles/` directory for detailed bundle documentation.
 

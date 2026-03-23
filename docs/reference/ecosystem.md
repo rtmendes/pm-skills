@@ -24,7 +24,7 @@ This guide explains the PM-Skills ecosystem, which comprises two complementary p
 
 ## Overview
 
-The PM-Skills ecosystem provides **24 professional product management skills** through two distribution channels:
+The PM-Skills ecosystem provides a file-based PM skill library plus an MCP server companion. The current `pm-skills` repo ships 27 skill directories (25 phase skills, 1 foundation skill, 1 utility skill), while `pm-skills-mcp` exposes a release-pinned snapshot of that library.
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -35,7 +35,7 @@ The PM-Skills ecosystem provides **24 professional product management skills** t
 │   │     PM-Skills       │      │   PM-Skills MCP     │         │
 │   │   (Skill Library)   │      │   (MCP Server)      │         │
 │   │                     │      │                     │         │
-│   │  • 25 skill files   │ ───► │  • MCP tools        │         │
+│   │  • 27 skill files   │ ───► │  • MCP tools        │         │
 │   │  • Slash commands   │      │  • MCP resources    │         │
 │   │  • AGENTS.md        │      │  • MCP prompts      │         │
 │   │  • Workflow bundles │      │  • Workflow bundles │         │
@@ -71,23 +71,25 @@ PM-Skills is the **source skill library**—a collection of markdown files conta
 
 | Component | Count | Description |
 |-----------|-------|-------------|
-| Skills | 25 | Complete PM artifacts (24 phase skills + 1 foundation skill) |
-| Slash Commands | 26 | Claude Code shortcuts (`/prd`, `/hypothesis`, `/persona`, etc.) |
+| Skills | 27 | Complete PM artifacts (25 phase skills + 1 foundation skill + 1 utility skill) |
+| Slash Commands | 27 | Command markdown files (`26` skill commands + `/kickoff`) |
 | Workflow Bundles | 3 | Multi-skill workflows (Feature Kickoff, Lean Startup, Triple Diamond) |
 | Documentation | ~10 files | Guides, references, and framework explanations |
+
+Current discovery note: `AGENTS.md` currently exposes 26 registered skills. `utility-pm-skill-builder` exists in `skills/`, but it is not yet wired into `AGENTS.md` or a slash command.
 
 #### Directory Structure
 
 ```
 pm-skills/
-├── skills/               # The 25 shipped skills (flat, including foundation)
+├── skills/               # The 27 shipped skills (flat, including foundation + utility)
 │   ├── discover-competitive-analysis/
 │   ├── define-hypothesis/
 │   ├── develop-adr/
 │   ├── deliver-prd/
 │   ├── measure-experiment-design/
 │   └── iterate-retrospective/
-├── commands/             # 26 slash commands for Claude Code
+├── commands/             # 27 command markdown files for Claude Code
 ├── _bundles/             # Workflow bundles
 ├── docs/                 # Documentation
 └── AGENTS.md             # Universal agent discovery
@@ -187,7 +189,7 @@ Use this matrix to choose between the file-based skill library and the MCP serve
 |---------|-----------|---------------|
 | **Shipped PM-Skills catalog** | ✅ | ✅ |
 | **Workflow Bundles** | ✅ Manual | ✅ Tool-based |
-| **Slash Commands** | ✅ 26 commands | ❌ (use tools) |
+| **Slash Commands** | ✅ 27 command docs | ❌ (use tools) |
 | **MCP Tools** | ❌ | ✅ Release-specific tool set |
 | **MCP Resources** | ❌ | ✅ Release-specific resource set |
 | **MCP Prompts** | ❌ | ✅ Release-specific prompt set |

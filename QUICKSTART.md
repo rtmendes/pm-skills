@@ -2,8 +2,8 @@
 
 ## What's Included
 
-- **25 shipped PM skills** (24 phase skills across 6 phases plus 1 foundation persona skill)
-- **Slash commands** for instant skill invocation (`/prd`, `/hypothesis`, etc.)
+- **27 shipped PM skills in `skills/`** (25 phase skills across 6 phases, 1 foundation skill, 1 utility skill)
+- **28 slash-command docs in `commands/`** (27 skill commands plus the `/kickoff` workflow bundle)
 - **Workflow bundles** for multi-skill processes (Triple Diamond, Lean Startup, Feature Kickoff)
 - **MCP sync guardrail** via GitHub Actions (`validate-mcp-sync`, observe-first rollout)
 
@@ -27,7 +27,7 @@ Or download and extract the latest ZIP from [Releases](https://github.com/produc
 
 ### Other AI Agents
 
-Point your agent to `AGENTS.md` for skill discovery. Each skill is self-contained in `skills/{phase-skill}/SKILL.md` (e.g., `skills/deliver-prd/SKILL.md`).
+Point your agent to `AGENTS.md` for skill discovery. Each skill is self-contained in `skills/{skill-name}/SKILL.md` (e.g., `skills/deliver-prd/SKILL.md`).
 
 More detail: see `docs/getting-started.md` for the long-form guide.
 
@@ -38,6 +38,7 @@ More detail: see `docs/getting-started.md` for the long-form guide.
 ```
 /prd "Feature description"
 /hypothesis "Assumption to test"
+/acceptance-criteria "Story or feature slice"
 /user-stories "PRD or feature context"
 /competitive-analysis "Market or product area"
 ```
@@ -57,8 +58,8 @@ Bundle definitions are in `_bundles/`.
 ## File Structure
 
 ```
-skills/            # All 25 skill definitions (24 phase + 1 foundation, flat)
-commands/          # Slash command triggers
+skills/            # All 27 skill definitions (25 phase + 1 foundation + 1 utility, flat)
+commands/          # 27 command markdown files (+ .gitkeep)
 _bundles/          # Multi-skill workflows
 scripts/           # sync, validation, and release helpers
 .claude/pm-skills-for-claude.md  # instructions for Claude Code users
