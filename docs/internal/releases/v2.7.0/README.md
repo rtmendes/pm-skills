@@ -1,6 +1,6 @@
 # v2.7.0 Internal Release Governance
 
-Status: In progress - core implementation landed; docs/release prep remain
+Status: Ready for tag — all gating criteria met
 Owner: Maintainers
 Last updated: 2026-03-22
 
@@ -83,15 +83,21 @@ Review and update these files for v2.7.0 accuracy:
 ## Notes
 
 1. M-12 and F-06 were built by Codex 5.4, reviewed by Claude Opus 4.6.
-2. F-05 design was reviewed by Codex, fixes applied by Claude, and implementation landed across `3c50108`, `df794a1`, and `a67f144`.
+2. F-05 design was reviewed by Codex, fixes applied by Claude, and implementation landed across `3c50108`, `df794a1`, and `a67f144`. Codex implementation review approved with one minor fix (stale 26→27 count, fixed in `b5e0a92`).
 3. One workflow fix applied during review: duplicate steps removed from `validation.yml`.
 4. M-16 was created from the F-05 staging/release-packaging review and landed as `0c2e637`.
 5. Fresh local release verification on 2026-03-22 confirmed `docs/internal/**` is excluded from `dist/pm-skills-v2.7.0.zip` while public files like `QUICKSTART.md` remain included.
-6. D-02 public-doc edits were started before the `/pm-skill-builder` command and `AGENTS.md` entry landed in `a67f144`; a short follow-up pass is still needed so public docs reflect the final F-05 state.
-7. D-01 remains planned. `docs/agent-skill-anatomy.md` now carries a scope note so it can complement, not duplicate, the future `docs/pm-skill-anatomy.md`.
+6. D-02 completed in two passes: Codex first pass (`12a30a9`), then Claude post-F-05 reconciliation patching 3 stale pre-`a67f144` references.
+7. D-01 completed: `docs/pm-skill-anatomy.md` (`b478276`). Scoped to complement the spec-level `docs/agent-skill-anatomy.md`.
 
-## Review Requests
+## Post-Tag: MCP Update Required
 
-- Claude: review F-05 user experience and content quality for `utility-pm-skill-builder` before tag.
-- Codex: run the D-02 follow-up pass after F-05 wiring so public docs reflect `/pm-skill-builder`, 28 command docs, and 27 `AGENTS.md` entries.
-- Human: confirm D-01 still belongs in `v2.7.0`; if not, explicitly de-scope it before release prep.
+After tagging v2.7.0, `pm-skills-mcp` needs a corresponding update:
+
+| Action | Detail |
+|--------|--------|
+| Re-embed skills | Run `scripts/embed-skills.js` against the v2.7.0 tag |
+| Add F-06 tool | `deliver-acceptance-criteria` → `pm_acceptance_criteria` |
+| Add F-05 tool | `utility-pm-skill-builder` → `pm_skill_builder` (deduplicate `pm_` prefix) |
+| Update naming function | `embed-skills.js` should strip classification prefixes (`foundation-`, `utility-`) in addition to phase prefixes, then collapse any leading `pm_` redundancy |
+| Note | The builder produces packet content as text; file writing is client-dependent (works in Cursor/Claude Code, not Claude Desktop) |

@@ -31,7 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - First release with enhanced CI: frontmatter linting, AGENTS.md sync validation, MCP impact detection.
 - Release ZIPs now exclude `docs/internal/**` while preserving all public documentation.
 - Repo now contains 27 skills (25 domain + 1 foundation + 1 utility), 28 command docs, and 3 workflow bundles.
-- **MCP note**: `pm-skills-mcp` will need a re-embed to pick up `deliver-acceptance-criteria`. The utility skill (`pm-skill-builder`) is a file-writing meta-skill and may not be suitable for MCP exposure.
+- **MCP note**: `pm-skills-mcp` needs a re-embed to pick up both new skills. `deliver-acceptance-criteria` registers as `pm_acceptance_criteria`. `utility-pm-skill-builder` registers as `pm_skill_builder` (deduplicate `pm_` prefix). Update `embed-skills.js` naming to strip classification prefixes and collapse redundant `pm_`.
 
 ## [2.6.1] - 2026-03-04
 

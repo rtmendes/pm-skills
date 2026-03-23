@@ -108,10 +108,12 @@ None. All existing skills, commands, templates, and bundles are unchanged.
 
 The companion MCP server ([pm-skills-mcp](https://github.com/product-on-purpose/pm-skills-mcp)) is release-pinned and requires a re-embed to pick up v2.7.0 changes:
 
-- **`deliver-acceptance-criteria`** should be added to the MCP tool set as `pm_acceptance_criteria`
-- **`utility-pm-skill-builder`** is a file-writing meta-skill designed for Claude Code environments and may not be suitable for MCP exposure (it requires file system access that MCP tools cannot provide)
+- **`deliver-acceptance-criteria`** → add as `pm_acceptance_criteria` (standard domain skill)
+- **`utility-pm-skill-builder`** → add as `pm_skill_builder` (deduplicate the `pm_` prefix — stripping `utility-` leaves `pm-skill-builder`, and since `pm_` is already the MCP namespace, collapse the redundant prefix). The builder produces the Skill Implementation Packet as text content; file writing is client-dependent.
 
-A matching pm-skills-mcp release will follow separately.
+**MCP naming convention update**: the `embed-skills.js` naming function should strip classification prefixes (`foundation-`, `utility-`) in addition to phase prefixes, then deduplicate any leading `pm_` in the result.
+
+A matching pm-skills-mcp release should follow to pick up both new skills.
 
 ---
 
