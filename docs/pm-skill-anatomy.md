@@ -219,12 +219,28 @@ PowerShell equivalents: replace `bash scripts/` with `pwsh -File scripts/` and `
 
 Use `/pm-skill-builder` to create new skills interactively. The builder:
 
-1. Understands your skill idea
+1. Understands your skill idea (problem-first or skill-first entry)
 2. Runs gap analysis against all existing skills
 3. Validates through a Why Gate (if overlap found)
-4. Classifies by type and phase
-5. Generates draft files in a staging area
-6. Promotes to canonical locations on confirmation
+4. Classifies by type and phase, selects exemplar skills to model
+5. Generates a Skill Implementation Packet with draft files
+6. Writes drafts to `_staging/pm-skill-builder/{skill-name}/` (gitignored)
+7. On confirmation, promotes to canonical locations and validates
+
+### Staging and Promotion
+
+Draft files are written to a gitignored staging area before promotion:
+
+```
+_staging/pm-skill-builder/{skill-name}/
+├── SKILL.md               → skills/{dir-name}/SKILL.md
+├── references/
+│   ├── TEMPLATE.md        → skills/{dir-name}/references/TEMPLATE.md
+│   └── EXAMPLE.md         → skills/{dir-name}/references/EXAMPLE.md
+└── command.md             → commands/{command-name}.md
+```
+
+Promotion copies each file to its canonical location, appends the AGENTS.md entry, runs CI validators, and deletes the staging folder on success. If validation fails, staging is preserved for fixes.
 
 For manual creation, follow the structure in [skill template](./templates/skill-template/) and validate with the CI scripts above.
 

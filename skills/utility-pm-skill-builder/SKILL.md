@@ -167,15 +167,27 @@ Report what was written and where.
 Ask: "Review the packet above. When ready, I'll promote the files to
 their canonical locations. Proceed? [yes/no]"
 
-If yes, promote files to canonical locations:
-- `skills/{name}/SKILL.md`
-- `skills/{name}/references/TEMPLATE.md`
-- `skills/{name}/references/EXAMPLE.md`
-- `commands/{command-name}.md`
-- Append entry to `AGENTS.md`
+If yes, promote by copying each file from staging to its canonical path:
 
-After promotion, discard the staging folder. Design rationale lives in the
-GitHub issue, PR, or effort brief — not in a permanent packet file.
+| Staging file | Canonical location |
+|--------------|--------------------|
+| `_staging/pm-skill-builder/{skill-name}/SKILL.md` | `skills/{dir-name}/SKILL.md` |
+| `_staging/pm-skill-builder/{skill-name}/references/TEMPLATE.md` | `skills/{dir-name}/references/TEMPLATE.md` |
+| `_staging/pm-skill-builder/{skill-name}/references/EXAMPLE.md` | `skills/{dir-name}/references/EXAMPLE.md` |
+| `_staging/pm-skill-builder/{skill-name}/command.md` | `commands/{command-name}.md` |
+
+Where `{dir-name}` is the classification-prefixed directory (e.g., `deliver-change-communication`).
+
+Then:
+1. Create the target directory: `skills/{dir-name}/references/`
+2. Copy each file to its canonical location
+3. Append the AGENTS.md entry from the packet
+4. Run CI validation: `bash scripts/lint-skills-frontmatter.sh && bash scripts/validate-agents-md.sh && bash scripts/validate-commands.sh`
+5. If validation passes, delete the staging folder: `_staging/pm-skill-builder/{skill-name}/`
+6. If validation fails, report the error and keep staging intact for fixes
+
+Design rationale lives in the GitHub issue, PR, or effort brief — not
+in a permanent packet file.
 
 Provide post-promotion guidance:
 - "Run CI locally: `bash scripts/lint-skills-frontmatter.sh`"
