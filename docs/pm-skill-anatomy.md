@@ -128,25 +128,25 @@ For the full schema, see [frontmatter-schema.yaml](./reference/frontmatter-schem
 
 PM-skills organizes domain skills across 6 phases of the Triple Diamond framework:
 
-```
-    DISCOVER          DEFINE          DEVELOP
-   ╱        ╲       ╱      ╲       ╱        ╲
-  ╱ research  ╲    ╱ problem ╲    ╱ ideation  ╲
- ╱  & context  ╲  ╱  framing  ╲  ╱  & spec    ╲
-╱               ╲╱              ╲╱               ╲
-╲               ╱╲              ╱╲               ╱
- ╲  3 skills   ╱  ╲  4 skills ╱  ╲  4 skills  ╱
-  ╲           ╱    ╲         ╱    ╲           ╱
-   ╲         ╱      ╲       ╱      ╲         ╱
-    DELIVER          MEASURE          ITERATE
-   ╱        ╲       ╱      ╲       ╱        ╲
-  ╱ handoff & ╲    ╱ data & ╲    ╱ learning  ╲
- ╱  launch     ╲  ╱  testing ╲  ╱  & adapting ╲
-╱               ╲╱            ╲╱               ╲
-╲               ╱╲            ╱╲               ╱
- ╲  6 skills   ╱  ╲ 4 skills╱  ╲  4 skills  ╱
-  ╲           ╱    ╲       ╱    ╲           ╱
-   ╲         ╱      ╲     ╱      ╲         ╱
+```mermaid
+graph TD
+    subgraph Diamond1["Diamond 1 — Problem Space"]
+        DISCOVER["**DISCOVER**\n3 skills\nresearch & context"]
+        DEFINE["**DEFINE**\n4 skills\nproblem framing"]
+    end
+    subgraph Diamond2["Diamond 2 — Solution Space"]
+        DEVELOP["**DEVELOP**\n4 skills\nideation & spec"]
+        DELIVER["**DELIVER**\n6 skills\nhandoff & launch"]
+    end
+    subgraph Diamond3["Diamond 3 — Learning Space"]
+        MEASURE["**MEASURE**\n4 skills\ndata & testing"]
+        ITERATE["**ITERATE**\n4 skills\nlearning & adapting"]
+    end
+    DISCOVER --> DEFINE
+    DEFINE --> DEVELOP
+    DEVELOP --> DELIVER
+    DELIVER --> MEASURE
+    MEASURE --> ITERATE
 ```
 
 | Phase | Skills | Focus |

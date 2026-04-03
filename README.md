@@ -214,6 +214,15 @@ Every time you ask an AI to help with product management, you start from zero. G
 
 PM-Skills includes three utility skills that form a complete **Create → Validate → Iterate** lifecycle for managing skills themselves:
 
+```mermaid
+flowchart LR
+    Create["/pm-skill-builder\nCreate"] --> Validate["/pm-skill-validate\nValidate"]
+    Validate --> Decision{Findings?}
+    Decision -- "PASS" --> Ship["Ship"]
+    Decision -- "WARN / FAIL" --> Iterate["/pm-skill-iterate\nIterate"]
+    Iterate --> Validate
+```
+
 | Tool | Command | What it does |
 |------|---------|-------------|
 | **Builder** | `/pm-skill-builder` | Creates a new skill from an idea — runs gap analysis against all existing skills, classifies by type and phase, generates draft files to a staging area, and promotes on confirmation |

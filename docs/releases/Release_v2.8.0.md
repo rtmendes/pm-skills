@@ -89,10 +89,13 @@ Both run with `continue-on-error: true` — advisory for now, blocking once adop
 
 ## The Complete Lifecycle
 
-```
-/pm-skill-builder "idea"     →  Create a new skill
-/pm-skill-validate skill     →  Audit against conventions + quality
-/pm-skill-iterate skill      →  Apply improvements from report or feedback
+```mermaid
+flowchart LR
+    Create["/pm-skill-builder\nCreate"] --> Validate["/pm-skill-validate\nValidate"]
+    Validate --> Decision{Findings?}
+    Decision -- "PASS" --> Ship["Ship"]
+    Decision -- "WARN / FAIL" --> Iterate["/pm-skill-iterate\nIterate"]
+    Iterate --> Validate
 ```
 
 See `docs/pm-skill-lifecycle.md` for detailed workflow patterns.

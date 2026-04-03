@@ -8,14 +8,13 @@ A practical guide to creating, validating, and iterating PM skills. For how skil
 
 PM skills are managed through three utility skills that form a lifecycle:
 
-```
-Create ──→ Validate ──→ Iterate ──→ Validate ──→ Ship
-  │            │            │            │
-  │            │            └────────────┘
-  │            │            (repeat until passing)
-  │            │
-  └────────────┘
-  (validate after building)
+```mermaid
+flowchart LR
+    Create["/pm-skill-builder\nCreate"] --> Validate["/pm-skill-validate\nValidate"]
+    Validate --> Decision{Findings?}
+    Decision -- "PASS" --> Ship["Ship"]
+    Decision -- "WARN / FAIL" --> Iterate["/pm-skill-iterate\nIterate"]
+    Iterate --> Validate
 ```
 
 | Tool | Command | What it does |
@@ -178,12 +177,13 @@ The validator checks skills against two standards:
 
 This means **older skills may legitimately receive quality findings** when validated. That's expected — the library converges toward the higher standard over time through the lifecycle, not retroactively. Each iteration brings a skill closer to the current standard.
 
-```
-v2.0 skill ──validate──→ 3 WARNs, 1 INFO
-            ──iterate───→ fixes 2 WARNs     (now v2.0.1)
-            ──validate──→ 1 WARN, 1 INFO    (closer to standard)
-            ──iterate───→ fixes last WARN   (now v2.0.2)
-            ──validate──→ 1 INFO             (at standard, INFO is optional)
+```mermaid
+flowchart LR
+    A["v2.0 skill"] -->|validate| B["3 WARN, 1 INFO"]
+    B -->|iterate| C["v2.0.1\n(2 WARNs fixed)"]
+    C -->|validate| D["1 WARN, 1 INFO"]
+    D -->|iterate| E["v2.0.2\n(last WARN fixed)"]
+    E -->|validate| F["1 INFO\n✓ at standard"]
 ```
 
 ---

@@ -137,35 +137,16 @@ The `$ARGUMENTS` variable captures everything typed after the command name.
 
 ### How Skills and Commands Relate
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                        USER INPUT                               │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                 │
-│  Option A: Slash Command          Option B: Natural Language    │
-│  /prd "search feature"            "Use the prd skill for..."   │
-│         │                                   │                   │
-│         └───────────────┬───────────────────┘                   │
-│                         ▼                                       │
-│              ┌─────────────────────┐                            │
-│              │   SKILL.md file     │                            │
-│              │   (Instructions)    │                            │
-│              └──────────┬──────────┘                            │
-│                         │                                       │
-│         ┌───────────────┼───────────────┐                       │
-│         ▼               ▼               ▼                       │
-│   ┌──────────┐   ┌──────────┐   ┌──────────┐                    │
-│   │ TEMPLATE │   │ EXAMPLE  │   │  Your    │                    │
-│   │   .md    │   │   .md    │   │ Context  │                    │
-│   └────┬─────┘   └────┬─────┘   └────┬─────┘                    │
-│        └──────────────┼──────────────┘                          │
-│                       ▼                                         │
-│              ┌─────────────────────┐                            │
-│              │   AI-Generated      │                            │
-│              │   PM Artifact       │                            │
-│              └─────────────────────┘                            │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TD
+    A["/prd 'search feature'\nSlash Command"] --> C["SKILL.md\nInstructions"]
+    B["'Use the prd skill for...'\nNatural Language"] --> C
+    C --> D["TEMPLATE.md\nStructure"]
+    C --> E["EXAMPLE.md\nQuality Reference"]
+    C --> F["Your Context"]
+    D --> G["AI-Generated\nPM Artifact"]
+    E --> G
+    F --> G
 ```
 
 **Key insight:** Skills are the underlying content. Commands are just one way to invoke them.
@@ -514,22 +495,16 @@ openskills remove product-on-purpose/pm-skills
 
 ### Decision Tree
 
-```
-Are you using Claude Code?
-├─ Yes → Method 1 (Slash Commands)
-└─ No
-   │
-   Are you using Copilot, Cursor, or Windsurf?
-   ├─ Yes → Method 2 (Git Clone)
-   └─ No
-      │
-      Are you using Claude.ai or Claude Desktop?
-      ├─ Yes → Method 3 (ZIP Upload)
-      └─ No
-         │
-         Do you want a quick, one-time use?
-         ├─ Yes → Method 4 (Copy-Paste)
-         └─ No → Method 5 (openskills CLI)
+```mermaid
+flowchart TD
+    A{"Using Claude Code?"} -- Yes --> M1["Method 1\nSlash Commands"]
+    A -- No --> B{"Using Copilot,\nCursor, or Windsurf?"}
+    B -- Yes --> M2["Method 2\nGit Clone"]
+    B -- No --> C{"Using Claude.ai\nor Claude Desktop?"}
+    C -- Yes --> M3["Method 3\nZIP Upload"]
+    C -- No --> D{"Quick, one-time use?"}
+    D -- Yes --> M4["Method 4\nCopy-Paste"]
+    D -- No --> M5["Method 5\nopenskills CLI"]
 ```
 
 ### Comparison Matrix

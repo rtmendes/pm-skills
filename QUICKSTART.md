@@ -59,13 +59,13 @@ Bundle definitions are in `_bundles/`.
 
 Three utility skills manage the skill library itself:
 
+```mermaid
+flowchart LR
+    Create["/pm-skill-builder\nCreate"] --> Validate["/pm-skill-validate\nValidate"]
+    Validate -- "PASS" --> Ship["Ship"]
+    Validate -- "Findings" --> Iterate["/pm-skill-iterate\nIterate"]
+    Iterate --> Validate
 ```
-/pm-skill-builder "idea"     →  Create a new skill from scratch
-/pm-skill-validate skill     →  Audit a skill against conventions and quality
-/pm-skill-iterate skill      →  Apply improvements from feedback or a validation report
-```
-
-Workflow: **Create** a skill, **Validate** it meets standards, **Iterate** to fix findings. Repeat until passing, then ship.
 
 See `docs/pm-skill-lifecycle.md` for detailed workflow patterns.
 
