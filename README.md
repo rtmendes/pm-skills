@@ -5,7 +5,7 @@
   <br>
 </h1>
 
-<h4 align=”center”>A curated collection of 27 best-practice, plug-and-play product management “agent skills” (25 phase skills + 1 foundation skill + 1 utility skill) plus templates and workflow bundles for consistent, professional PM outputs.</h4>
+<h4 align=”center”>A curated collection of 29 best-practice, plug-and-play product management “agent skills” (25 phase skills + 1 foundation skill + 3 utility skills) plus templates and workflow bundles for consistent, professional PM outputs.</h4>
 
 <p align="center">
   <a href="https://github.com/product-on-purpose/pm-skills/issues/new?labels=bug">Report a Bug</a>
@@ -24,7 +24,7 @@
     <img src="https://img.shields.io/badge/version-2.7.0-blue.svg?style=flat-square" alt="Version">
   </a>
   <a href="#the-skills">
-    <img src="https://img.shields.io/badge/skills-27-brightgreen.svg?style=flat-square" alt="Skills">
+    <img src="https://img.shields.io/badge/skills-29-brightgreen.svg?style=flat-square" alt="Skills">
   </a>
   <a href="https://agentskills.io/specification">
     <img src="https://img.shields.io/badge/spec-agentskills.io-orange.svg?style=flat-square" alt="Agent Skills Spec">
@@ -129,7 +129,7 @@ git clone https://github.com/product-on-purpose/pm-skills.git && cd pm-skills
 - **Enhanced CI**: extended frontmatter linter, AGENTS.md sync validator, MCP impact detection.
 - **Release packaging**: `docs/internal/**` excluded from published ZIPs while staying tracked in-repo.
 - **Documentation**: new `docs/pm-skill-anatomy.md` guide, comprehensive public docs refresh.
-- Repo now ships 27 skills, 28 command docs, and 3 workflow bundles.
+- Repo now ships 29 skills, 30 command docs, and 3 workflow bundles.
 - Release note: [`docs/releases/Release_v2.7.0.md`](docs/releases/Release_v2.7.0.md).
 
 </details>
@@ -188,7 +188,7 @@ Every time you ask an AI to help with product management, you start from zero. G
 
 ### Key Features
 
-- ✅ **27 Production-Ready Skills** covering the complete product lifecycle (25 phase skills + 1 foundation skill + 1 utility skill)
+- ✅ **29 Production-Ready Skills** covering the complete product lifecycle (25 phase skills + 1 foundation skill + 3 utility skills)
 - ✅ **Triple Diamond Framework** organizing Discover, Define, Develop, Deliver, Measure, and Iterate phases
 - ✅ **Workflow Bundles** for common PM workflows (Feature Kickoff, Lean Startup, Triple Diamond)
 - ✅ **Slash Commands** for Claude Code users-instant access to every skill
@@ -276,7 +276,7 @@ PM-Skills follows the **[Agent Skills Specification](https://agentskills.io/spec
 - You're using Claude Desktop, Cursor, or any MCP client
 - You want programmatic tool access without managing files
 
-Both approaches give you access to the same 27 production-ready PM skills (25 phase skills + 1 foundation skill + 1 utility skill).
+Both approaches give you access to the same 29 production-ready PM skills (25 phase skills + 1 foundation skill + 3 utility skills).
 
 See the [Ecosystem Overview](docs/reference/ecosystem.md) for a detailed comparison.
 
@@ -341,7 +341,7 @@ cd pm-skills
 /user-stories "Recurring tasks feature from PRD"
 ```
 
-All 27 skills are available as `/skill-name` commands. See [commands/](commands/) for the full list.
+All 29 skills are available as `/skill-name` commands. See [commands/](commands/) for the full list.
 
 Need `.claude/skills` for openskills or certain discovery flows? After cloning, run:
 
@@ -438,7 +438,7 @@ Both IDEs auto-discover skills via `AGENTS.md`:
 git clone https://github.com/product-on-purpose/pm-skills.git
 ```
 
-Open the folder in Cursor or Windsurf. The AI assistant will automatically discover and can use all 27 skills.
+Open the folder in Cursor or Windsurf. The AI assistant will automatically discover and can use all 29 skills.
 
 </details>
 
@@ -691,8 +691,8 @@ For detailed skill documentation and examples, see the [skills/](skills/) direct
 
 ```
 pm-skills/
-├── skills/                     # 27 PM skills (25 phase + 1 foundation + 1 utility)
-├── commands/                   # Slash commands (28) mapping to skills/bundles
+├── skills/                     # 29 PM skills (25 phase + 1 foundation + 3 utility)
+├── commands/                   # Slash commands (30) mapping to skills/bundles
 ├── _bundles/                   # Workflow bundles: feature-kickoff, lean-startup, triple-diamond
 ├── library/                    # Sample output library (skill-output-samples) and related corpus docs
 ├── scripts/                    # sync-claude.(sh|ps1), build-release.(sh|ps1), validate-commands.(sh|ps1)
@@ -799,7 +799,7 @@ Maintenance milestone documentation:
 
 See the [open issues](https://github.com/product-on-purpose/pm-skills/issues) for a full list of proposed features and known issues.
 
-- [x] Launch with 27 shipped skills (25 phase skills + 1 foundation skill + 1 utility skill)
+- [x] Launch with 29 shipped skills (25 phase skills + 1 foundation skill + 3 utility skills)
 - [x] Add workflow bundles (Feature Kickoff, Lean Startup, Triple Diamond)
 - [x] GitHub Copilot, Cursor, and Windsurf integration via AGENTS.md
 - [x] Slash commands for Claude Code
@@ -884,7 +884,7 @@ Please try to create bug reports that are:
 ## FAQ
 
 <details>
-<summary><strong>Do I need to install all 27 skills?</strong></summary>
+<summary><strong>Do I need to install all 29 skills?</strong></summary>
 
 No! You can use individual skills as needed. Each skill is self-contained and works independently. If you only need PRDs, just reference the `skills/deliver-prd/` skill. The bundles are optional workflow guides, not requirements.
 

@@ -31,9 +31,9 @@ pm-skills/
 │   ├── define-problem-statement/
 │   ├── deliver-prd/
 │   ├── deliver-user-stories/
-│   └── ...               # 27 skills total: {phase/classification}-{skill}/
+│   └── ...               # 29 skills total: {phase/classification}-{skill}/
 ├── bundles/              # Workflow bundles (triple-diamond, lean-startup, feature-kickoff)
-├── commands/             # Claude Code slash commands (28 total: 27 skill + 1 bundle)
+├── commands/             # Claude Code slash commands (30 total: 29 skill + 1 bundle)
 ├── docs/                 # Documentation
 │   ├── guides/           # How-to guides
 │   ├── reference/        # Technical specs
@@ -76,7 +76,7 @@ pm-skills/
   - **MCP sync docs**: maintainer workflow added to `docs/guides/mcp-integration.md`
   - **Release governance**: v2.2.0-v2.7.0 folders, decisions log, detailed release notes
   - **Issues closed**: #112, #113, #114, #123
-  - Repo: 27 skills (25 domain + 1 foundation + 1 utility), 28 commands, 3 bundles
+  - Repo: 29 skills (25 domain + 1 foundation + 3 utility), 30 commands, 3 bundles
 
 - **v2.6.1 Shipped — Sample Library Recovery** (2026-03-04)
   - Sample output library moved and normalized to `library/skill-output-samples/`

@@ -9,6 +9,8 @@
   - [lint-skills-frontmatter.sh / lint-skills-frontmatter.ps1](#lint-skills-frontmattersh--lint-skills-frontmatterps1)
   - [validate-agents-md.sh / validate-agents-md.ps1](#validate-agents-mdsh--validate-agents-mdps1)
   - [check-mcp-impact.sh / check-mcp-impact.ps1](#check-mcp-impactsh--check-mcp-impactps1)
+  - [validate-skill-history.sh / validate-skill-history.ps1](#validate-skill-historysh--validate-skill-historyps1)
+  - [validate-skills-manifest.sh / validate-skills-manifest.ps1](#validate-skills-manifestsh--validate-skills-manifestps1)
 - [When to use what](#when-to-use-what)
 - [FAQ](#faq)
 - [Tips](#tips)
@@ -102,10 +104,36 @@ CI-only automation scripts live in `.github/scripts/` (for example, `validate-mc
 
 **Outputs:** Warning-only advisory for MCP-impacting skill additions or renames; always exits successfully.
 
+### validate-skill-history.sh / validate-skill-history.ps1
+**Purpose:** Validate that opt-in `HISTORY.md` files track the current `SKILL.md` version.
+
+**Why:** Ensures skill version history stays in sync with frontmatter as skills iterate through the lifecycle.
+
+**Use when:** After updating a skill's version or HISTORY.md; in CI (advisory).
+
+**Commands:**
+- Bash: `./scripts/validate-skill-history.sh`
+- PowerShell: `./scripts/validate-skill-history.ps1`
+
+**Outputs:** Pass/fail per HISTORY.md file; warns on missing version sections; exits 0 silently if no HISTORY.md files exist. Advisory (non-blocking in CI).
+
+### validate-skills-manifest.sh / validate-skills-manifest.ps1
+**Purpose:** Validate that `skills-manifest.yaml` entries in release folders match actual skill directories.
+
+**Why:** Ensures release manifests stay accurate — catches orphaned skill references and version mismatches.
+
+**Use when:** After editing release manifests or adding/removing skills; in CI (advisory).
+
+**Commands:**
+- Bash: `./scripts/validate-skills-manifest.sh`
+- PowerShell: `./scripts/validate-skills-manifest.ps1`
+
+**Outputs:** Pass/fail per manifest file; checks directory existence for non-removed entries; verifies version alignment for the latest release only. Advisory (non-blocking in CI).
+
 ## When to use what
 - Day-to-day: no scripts needed unless using openskills/Claude Code → run `sync-claude`.
-- Pre-release: `sync-claude` (sanity) → `validate-commands` → `lint-skills-frontmatter` → `validate-agents-md` → `check-mcp-impact` → `build-release`.
-- CI candidate: add `validate-commands`, `lint-skills-frontmatter`, `validate-agents-md`, and `check-mcp-impact` to validation jobs.
+- Pre-release: `sync-claude` (sanity) → `validate-commands` → `lint-skills-frontmatter` → `validate-agents-md` → `check-mcp-impact` → `validate-skill-history` → `validate-skills-manifest` → `build-release`.
+- CI candidate: add `validate-commands`, `lint-skills-frontmatter`, `validate-agents-md`, `check-mcp-impact`, `validate-skill-history`, and `validate-skills-manifest` to validation jobs.
 - Cross-repo drift guardrail: use `.github/workflows/validate-mcp-sync.yml` (observe first, block later).
 
 ## FAQ
@@ -145,3 +173,5 @@ Each script has a dedicated documentation file with full usage details, options,
 | `lint-skills-frontmatter.sh` / `.ps1` | [lint-skills-frontmatter.md](lint-skills-frontmatter.md) |
 | `validate-agents-md.sh` / `.ps1` | [validate-agents-md.md](validate-agents-md.md) |
 | `check-mcp-impact.sh` / `.ps1` | [check-mcp-impact.md](check-mcp-impact.md) |
+| `validate-skill-history.sh` / `.ps1` | [validate-skill-history.md](validate-skill-history.md) |
+| `validate-skills-manifest.sh` / `.ps1` | [validate-skills-manifest.md](validate-skills-manifest.md) |

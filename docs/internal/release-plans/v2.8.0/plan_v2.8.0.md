@@ -25,7 +25,7 @@ Secondary: lifecycle documentation, skill versioning governance, and CI to suppo
 | F-11 | New skill | `utility-pm-skill-iterate` — TEMPLATE.md + EXAMPLE.md + command | Claude | **Done** (included in SKILL.md commit) | [#122](https://github.com/product-on-purpose/pm-skills/issues/122) |
 | D-03 | Documentation | PM skill lifecycle guide — how Create, Validate, and Iterate work together | Claude | **Done** (`f678344`) | — |
 | M-18 | Infrastructure | CI: validate HISTORY.md consistency and `skills-manifest.yaml` | Codex | **Done** | — |
-| D-04 | Documentation | Public docs refresh for v2.8.0 — counts, lifecycle references | Codex | Planned | — |
+| D-04 | Documentation | Public docs refresh for v2.8.0 — counts, lifecycle references | Claude | **Done** | — |
 
 ## Dependency Chain and Execution Phases
 
@@ -74,7 +74,7 @@ The Claude track is the bottleneck. Codex track runs alongside without blocking.
 | 1 | F-10 SKILL.md (**done**) | M-18 CI scripts (**done**) | Phase 0 |
 | 2 | F-11 SKILL.md (**done**) | F-10 TEMPLATE+EXAMPLE (**done** — Claude wrote with SKILL.md) | Phase 1 |
 | 3 | D-03 lifecycle guide (**done**) | F-11 TEMPLATE+EXAMPLE (**done** — Claude wrote with SKILL.md) | Phase 2 |
-| 4 | — | D-04 docs refresh | Phase 3 |
+| 4 | — | D-04 docs refresh (**done** — Claude) | Phase 3 |
 | 5 | Release prep (CHANGELOG, skills-manifest, version bumps) | — | Phase 4 |
 
 ## Gating Criteria
@@ -84,7 +84,7 @@ The Claude track is the bottleneck. Codex track runs alongside without blocking.
 - [ ] F-10 and F-11 work end-to-end: builder creates → validator audits → iterator improves
 - [x] D-03: lifecycle guide created at `docs/pm-skill-lifecycle.md` (`f678344`)
 - [x] M-18: CI scripts created (`.sh` + `.ps1` + `.md` convention) and added to `validation.yml`
-- [ ] D-04: public docs refreshed (skill count, command count, lifecycle references)
+- [x] D-04: public docs refreshed (skill count 29, command count 30, lifecycle references, M-18 script docs)
 - [ ] MCP impact evaluated (see MCP Impact section below)
 - [ ] CHANGELOG.md updated with v2.8.0 section
 - [ ] `skills-manifest.yaml` finalized in this directory

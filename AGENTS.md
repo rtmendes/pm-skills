@@ -173,6 +173,20 @@ Guides contributors from a PM skill idea to a complete Skill Implementation Pack
 
 ---
 
+#### pm-skill-validate
+**Path:** `skills/utility-pm-skill-validate/SKILL.md`
+
+Audits an existing pm-skills skill against structural conventions and quality criteria. Produces a structured validation report with severity-graded findings and actionable recommendations. Use when checking whether a skill meets repo standards before shipping or after making changes.
+
+---
+
+#### pm-skill-iterate
+**Path:** `skills/utility-pm-skill-iterate/SKILL.md`
+
+Applies targeted improvements to an existing pm-skills skill based on feedback, validation reports, or convention changes. Previews proposed changes, writes on confirmation, and suggests a version bump. Use when improving a skill after validation or feedback.
+
+---
+
 ## Workflow Bundles
 
 | Bundle | Description |
