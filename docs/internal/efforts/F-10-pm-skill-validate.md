@@ -43,7 +43,7 @@ Errors: {n} | Warnings: {n} | Info: {n}
 
 ## Structural Checks
 - PASS | structural | name-match | frontmatter `name` matches directory
-- WARN | structural | description-length | description at 18 words (minimum is 20)
+- FAIL | structural | description-length | description at 18 words (minimum is 20)
 - FAIL | structural | example-exists | missing references/EXAMPLE.md
 
 ## Quality Checks
@@ -55,7 +55,7 @@ Errors: {n} | Warnings: {n} | Info: {n}
 ## Recommendations
 1. FAIL | example-exists | Target: skills/deliver-prd/references/EXAMPLE.md
    Action: Add a complete worked example (all template sections filled)
-2. WARN | description-length | Target: skills/deliver-prd/SKILL.md
+2. FAIL | description-length | Target: skills/deliver-prd/SKILL.md
    Action: Expand description to meet 20-word minimum
 3. WARN | output-contract-coverage | Target: skills/deliver-prd/SKILL.md
    Action: Add reference to template in Output Contract section
