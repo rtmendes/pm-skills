@@ -55,6 +55,20 @@ Run multi-skill workflows:
 
 Bundle definitions are in `_bundles/`.
 
+## Skill Lifecycle Tools
+
+Three utility skills manage the skill library itself:
+
+```
+/pm-skill-builder "idea"     →  Create a new skill from scratch
+/pm-skill-validate skill     →  Audit a skill against conventions and quality
+/pm-skill-iterate skill      →  Apply improvements from feedback or a validation report
+```
+
+Workflow: **Create** a skill, **Validate** it meets standards, **Iterate** to fix findings. Repeat until passing, then ship.
+
+See `docs/pm-skill-lifecycle.md` for detailed workflow patterns.
+
 ## File Structure
 
 ```

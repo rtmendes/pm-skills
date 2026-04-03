@@ -198,6 +198,32 @@ Every time you ask an AI to help with product management, you start from zero. G
 - ✅ **Comprehensive Documentation** with examples and references
 - ✅ **Apache 2.0 Licensed** for commercial and personal use
 
+### Skill Lifecycle Tools
+
+PM-Skills includes three utility skills that form a complete **Create → Validate → Iterate** lifecycle for managing skills themselves:
+
+| Tool | Command | What it does |
+|------|---------|-------------|
+| **Builder** | `/pm-skill-builder` | Creates a new skill from an idea — runs gap analysis against all existing skills, classifies by type and phase, generates draft files to a staging area, and promotes on confirmation |
+| **Validator** | `/pm-skill-validate` | Audits an existing skill against structural conventions and quality criteria — produces a report with severity-graded findings and actionable recommendations |
+| **Iterator** | `/pm-skill-iterate` | Applies targeted improvements to a skill based on feedback or a validation report — previews changes, writes on confirmation, suggests a version bump |
+
+**Why this matters:** Skills are living artifacts that evolve. The builder creates them, the validator catches drift and quality gaps, and the iterator applies fixes. Together they keep the library consistent as it grows.
+
+**Quick example:**
+```bash
+# Create a new skill
+/pm-skill-builder "A skill for writing stakeholder update emails"
+
+# Validate it meets conventions
+/pm-skill-validate stakeholder-update-email
+
+# Fix any findings
+/pm-skill-iterate stakeholder-update-email   # paste the validation report
+```
+
+See [PM-Skill Lifecycle](docs/pm-skill-lifecycle.md) for workflow patterns and detailed usage.
+
 ### Built with...
 
 <p align="left">
