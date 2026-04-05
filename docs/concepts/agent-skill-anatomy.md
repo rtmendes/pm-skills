@@ -1450,7 +1450,7 @@ See `references/EXAMPLE.md` for a completed example.
 
 ## Authoring Checklist
 
-Quick reference for skill authors before submission. For complete guidance, see [docs/../guides/authoring-pm-skills.md](../guides/authoring-pm-skills.md).
+Quick reference for skill authors before submission. For complete guidance, see [docs/../guides/creating-skills.md](../guides/creating-skills.md).
 
 ### Directory & Files
 
@@ -1530,7 +1530,7 @@ Quick reference for skill authors before submission. For complete guidance, see 
 
 - **[Getting Started Guide](../getting-started/index.md)** — Installation and first steps
 - **[Using Skills Guide](../guides/using-skills.md)** — From beginner to advanced usage
-- **[Authoring PM-Skills](../guides/authoring-pm-skills.md)** — Complete authoring guide
+- **[Authoring PM-Skills](../guides/creating-skills.md)** — Complete authoring guide
 - **[Frontmatter Schema](../reference/frontmatter-schema.yaml)** — Field-by-field validation reference
 - **[Category Taxonomy](../reference/categories.md)** — All 7 categories explained
 - **[Contributing Guidelines](../contributing/index.md)** — How to contribute to pm-skills

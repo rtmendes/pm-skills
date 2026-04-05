@@ -242,7 +242,7 @@ _staging/pm-skill-builder/{skill-name}/
 
 Promotion copies each file to its canonical location, appends the AGENTS.md entry, runs CI validators, and deletes the staging folder on success. If validation fails, staging is preserved for fixes.
 
-For manual creation, follow the structure in [skill template](./templates/skill-template/) and validate with the CI scripts above.
+For manual creation, follow the structure in [skill template](https://github.com/product-on-purpose/pm-skills/tree/main/docs/templates/skill-template) and validate with the CI scripts above.
 
 ---
 
@@ -251,5 +251,5 @@ For manual creation, follow the structure in [skill template](./templates/skill-
 - [Agent Skill Anatomy](agent-skill-anatomy.md) — Spec-level, cross-platform reference (agentskills.io)
 - [Frontmatter Schema](../reference/frontmatter-schema.yaml) — Complete field definitions and validation rules
 - [Category Taxonomy](../reference/categories.md) — Category definitions and framework mappings
-- [Authoring Guide](../guides/authoring-pm-skills.md) — Step-by-step authoring instructions
+- [Authoring Guide](../guides/creating-skills.md) — Step-by-step authoring instructions
 - [Getting Started](../getting-started/index.md) — Setup and usage guide

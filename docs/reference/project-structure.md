@@ -196,7 +196,7 @@ docs/
 |----------|----------|---------|
 | `getting-started.md` | New users | Installation and first steps |
 | `guides/using-skills.md` | All users | Beginner to advanced usage |
-| `guides/authoring-pm-skills.md` | Contributors | Skill creation guide |
+| `guides/creating-skills.md` | Contributors | Skill creation guide |
 | `reference/categories.md` | Contributors | Category taxonomy |
 | `reference/frontmatter-schema.yaml` | Contributors | Metadata validation rules |
 
@@ -214,7 +214,7 @@ docs/templates/
     └── EXAMPLE.md            # Example template
 ```
 
-Use these templates when contributing a new skill. See [authoring-pm-skills.md](../guides/authoring-pm-skills.md) for the full process.
+Use these templates when contributing a new skill. See [authoring-pm-skills.md](../guides/creating-skills.md) for the full process.
 
 ---
 
@@ -292,6 +292,6 @@ This directory helps AI assistants maintain context across sessions. Not require
 
 - [Getting Started Guide](../getting-started.md)
 - [Using Skills Guide](../guides/using-skills.md)
-- [Authoring PM Skills](../guides/authoring-pm-skills.md)
+- [Authoring PM Skills](../guides/creating-skills.md)
 - [Category Reference](categories.md)
 - [Frontmatter Schema](frontmatter-schema.yaml)

@@ -24,7 +24,7 @@ The optional companion package [pm-skills-mcp](https://github.com/product-on-pur
 
 ## License
 
-PM-Skills is licensed under [Apache 2.0](LICENSE). See the license file for full terms.
+PM-Skills is licensed under [Apache 2.0](https://github.com/product-on-purpose/pm-skills/blob/main/LICENSE). See the license file for full terms.
 
 ## Contact
 
