@@ -81,54 +81,59 @@ graph LR
 
 ## Skills by Phase
 
-Every skill mapped to its phase, with the command to invoke it:
+25 domain skills across 6 phases, plus foundation and utility:
 
 ```mermaid
-graph TD
-    subgraph "Discover"
-        S1["/competitive-analysis"]
-        S2["/interview-synthesis"]
-        S3["/stakeholder-summary"]
-    end
-    subgraph "Define"
-        S4["/problem-statement"]
-        S5["/hypothesis"]
-        S6["/opportunity-tree"]
-        S7["/jtbd-canvas"]
-    end
-    subgraph "Develop"
-        S8["/solution-brief"]
-        S9["/spike-summary"]
-        S10["/adr"]
-        S11["/design-rationale"]
-    end
-    subgraph "Deliver"
-        S12["/prd"]
-        S13["/user-stories"]
-        S14["/acceptance-criteria"]
-        S15["/edge-cases"]
-        S16["/launch-checklist"]
-        S17["/release-notes"]
-    end
-    subgraph "Measure"
-        S18["/experiment-design"]
-        S19["/instrumentation-spec"]
-        S20["/dashboard-requirements"]
-        S21["/experiment-results"]
-    end
-    subgraph "Iterate"
-        S22["/retrospective"]
-        S23["/lessons-log"]
-        S24["/refinement-notes"]
-        S25["/pivot-decision"]
+block-beta
+    columns 6
+
+    block:discover["Discover"]:1
+        d1["/competitive-analysis"]
+        d2["/interview-synthesis"]
+        d3["/stakeholder-summary"]
     end
 
-    S1 & S2 & S3 --> S4 & S5
-    S4 & S5 & S6 & S7 --> S8
-    S8 & S9 & S10 & S11 --> S12
-    S12 & S13 & S14 & S15 --> S18
-    S18 & S19 & S20 & S21 --> S22
+    block:define["Define"]:1
+        f1["/problem-statement"]
+        f2["/hypothesis"]
+        f3["/opportunity-tree"]
+        f4["/jtbd-canvas"]
+    end
+
+    block:develop["Develop"]:1
+        v1["/solution-brief"]
+        v2["/spike-summary"]
+        v3["/adr"]
+        v4["/design-rationale"]
+    end
+
+    block:deliver["Deliver"]:1
+        l1["/prd"]
+        l2["/user-stories"]
+        l3["/acceptance-criteria"]
+        l4["/edge-cases"]
+        l5["/launch-checklist"]
+        l6["/release-notes"]
+    end
+
+    block:measure["Measure"]:1
+        m1["/experiment-design"]
+        m2["/instrumentation-spec"]
+        m3["/dashboard-requirements"]
+        m4["/experiment-results"]
+    end
+
+    block:iterate["Iterate"]:1
+        i1["/retrospective"]
+        i2["/lessons-log"]
+        i3["/refinement-notes"]
+        i4["/pivot-decision"]
+    end
+
+    discover --> define --> develop --> deliver --> measure --> iterate
 ```
+
+**Plus:** `/persona` (Foundation — cross-cutting) · `/pm-skill-builder` `/pm-skill-validate` `/pm-skill-iterate` (Utility — skill lifecycle)
 
 ## The Skill Lifecycle
 
