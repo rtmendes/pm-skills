@@ -11,6 +11,9 @@ tags:
 !!! info "Quick facts"
     **Classification:** Foundation | **Version:** 2.5.0 | **Category:** research | **License:** Apache-2.0
 
+**Try it:** `/persona "Your context here"`
+{ .md-button }
+
 # Persona Builder
 
 This skill produces decision-usable personas from one canonical template pack.
@@ -671,6 +674,89 @@ Do not mix sections from both templates in one output.
     | C1 | Defensible flow is prioritized over fragile speed | U1, U2, L1, L2 | Medium | regulated review constraints are material |
     | C2 | Decision-quality signals are a core product lever | U1, L2, L3 | Medium | current approval model under-signals quality |
     | C3 | Hidden policy logic harms trust under pressure | U1, L1, L4 | Medium | teams depend on legible escalation paths |
+
+## Real-World Examples
+
+See this skill applied to three different product contexts:
+
+??? example "Storevine (B2B): Storevine Campaigns marketing persona for self-serve SMB merchant acquisition and competitive positioning against Shopify plus Klaviyo"
+    **Prompt:**
+
+    ```text
+    /persona marketing brief
+
+    Quick marketing persona for Storevine Campaigns SMB acquisition.
+
+    Context:
+    - We're targeting Shopify + Klaviyo merchants who might consolidate
+    - Win-loss: 6/14 wins cited "too many tools"; 4/9 losses said "Klaviyo is good enough" [fictional]
+    - Need this for competitive landing page and acquisition email sequence
+    - Self-serve purchase, no committee, individual merchant decision
+
+    Prior work:
+    - Competitive analysis (Feb 2026): Shopify Email is template-first, Klaviyo is automation-first
+    - Interview synthesis: merchants describe "tool juggling tax" as real operational cost
+
+    Keep it brief, focused on acquisition messaging and objection handling.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Persona Dossier: Priya Sharma, The Merchant Who Pays the Tool-Juggling Tax (Marketing, Brief)
+
+??? example "Brainshelf (Consumer): Brainshelf marketing persona for newsletter-creator acquisition and content-curation positioning"
+    **Prompt:**
+
+    ```text
+    /persona marketing brief
+
+    marketing persona for newsletter creator acquisition channel.
+
+    context: brainshelf users who share 3+ items/week have 3.4x retention
+    and 2.1 referral signups/quarter [fictional]. newsletter creators are
+    a natural fit because they already curate. want a persona for
+    acquisition messaging and potential "Curator" tier positioning.
+
+    competitors in this space: Readwise Reader, Raindrop, Pocket.
+    keep it brief but actionable for growth experiments.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Persona Dossier: Amara Osei, The Creator Who Curates Before She Writes (Marketing, Brief)
+
+??? example "Workbench (Enterprise): Workbench Blueprints marketing persona for enterprise champion sales playbook and pilot-to-expansion messaging"
+    **Prompt:**
+
+    ```text
+    /persona marketing brief
+
+    Sandra V. to PM Skills agent:
+
+    > I need a brief marketing persona for the Workbench Blueprints enterprise
+    > sales playbook. This should represent the internal champion who drives
+    > the purchasing conversation.
+    >
+    > Context:
+    > - 3 pilot customers have requested formal proposals after Blueprint trials
+    > - Common stall point: champion can't answer IT security and legal questions
+    >   without vendor-supplied materials
+    > - Need: concise persona for messaging alignment, objection prep, and
+    >   pilot-to-expansion proof points
+    > - Sales cycle: 60-90 day evaluations with 3-5 stakeholder sign-offs
+    >
+    > Keep it brief but decision-usable for the sales team.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Persona Dossier: Sandra Vo, The Champion Who Cannot Arm Her Committee (Marketing, Brief)
 
 ## Quality Checklist
 

@@ -11,6 +11,9 @@ tags:
 !!! info "Quick facts"
     **Classification:** Utility | **Version:** 1.0.0 | **Category:** coordination | **License:** Apache-2.0
 
+**Try it:** `/pm-skill-iterate "Your context here"`
+{ .md-button }
+
 This skill improves an existing pm-skills skill by applying targeted changes
 based on input you provide. It reads the current skill files, proposes
 changes as before/after previews grouped by file, and writes them on your

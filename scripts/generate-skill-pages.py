@@ -20,6 +20,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SKILLS_DIR = ROOT / "skills"
 COMMANDS_DIR = ROOT / "commands"
+SAMPLES_DIR = ROOT / "library" / "skill-output-samples"
 OUTPUT_DIR = ROOT / "docs" / "skills"
 
 # Phase/classification ordering
@@ -197,6 +198,80 @@ def indent_content(content: str, spaces: int = 4) -> str:
     return "\n".join(prefix + line if line.strip() else "" for line in content.split("\n"))
 
 
+def parse_sample_sections(filepath: Path) -> dict:
+    """Parse a sample file into scenario, prompt, and output sections."""
+    content = filepath.read_text(encoding="utf-8")
+    text = content.lstrip()
+    if text.startswith("<!--"):
+        end = text.find("-->")
+        if end != -1:
+            text = text[end + 3:].lstrip()
+    match = re.match(r"^---\s*\n(.*?)\n---\s*\n?(.*)", text, re.DOTALL)
+    if match:
+        fm_text = match.group(1)
+        body = match.group(2)
+    else:
+        fm_text = ""
+        body = text
+
+    context = ""
+    thread = ""
+    for line in fm_text.split("\n"):
+        if line.startswith("context:"):
+            context = line[len("context:"):].strip()
+        if line.startswith("thread:"):
+            thread = line[len("thread:"):].strip()
+
+    sections = {}
+    current = None
+    lines = []
+    for line in body.split("\n"):
+        m = re.match(r"^##\s+(.+)", line)
+        if m:
+            if current:
+                sections[current] = "\n".join(lines).strip()
+            current = m.group(1).strip()
+            lines = []
+        else:
+            lines.append(line)
+    if current:
+        sections[current] = "\n".join(lines).strip()
+
+    return {
+        "context": context,
+        "thread": thread,
+        "scenario": sections.get("Scenario", ""),
+        "prompt": sections.get("Prompt", ""),
+        "output": sections.get("Output", ""),
+    }
+
+
+THREAD_DISPLAY = {
+    "storevine": "Storevine (B2B)",
+    "brainshelf": "Brainshelf (Consumer)",
+    "workbench": "Workbench (Enterprise)",
+}
+
+
+def load_skill_samples(skill_name: str) -> list:
+    """Load all samples for a skill from the sample library."""
+    sample_dir = SAMPLES_DIR / skill_name
+    if not sample_dir.exists():
+        return []
+
+    results = []
+    for thread in ["storevine", "brainshelf", "workbench"]:
+        files = sorted(sample_dir.glob(f"sample_{skill_name}_{thread}_*.md"))
+        if files:
+            # Use first match per thread (skip persona variants for simplicity)
+            parsed = parse_sample_sections(files[0])
+            parsed["thread_display"] = THREAD_DISPLAY.get(thread, thread)
+            if parsed["output"]:
+                results.append(parsed)
+
+    return results
+
+
 def generate_skill_page(skill_dir: Path) -> dict | None:
     """Generate a merged skill page. Returns skill info dict or None."""
     dirname = skill_dir.name
@@ -247,6 +322,12 @@ def generate_skill_page(skill_dir: Path) -> dict | None:
     phase_label = f"**Phase:** {group_display}" if group in PHASE_ORDER[:6] else f"**Classification:** {group_display}"
     lines.append(f"    {phase_label} | **Version:** {version} | **Category:** {category} | **License:** Apache-2.0")
     lines.append("")
+
+    # Quick-try snippet (E-03)
+    if cmd:
+        lines.append(f"**Try it:** `/{cmd} \"Your context here\"`")
+        lines.append("{ .md-button }")
+        lines.append("")
 
     # Intro paragraph (skip the title line)
     intro_lines = sections.get("_intro", "").split("\n")
@@ -311,6 +392,22 @@ def generate_skill_page(skill_dir: Path) -> dict | None:
         lines.append(indent_content(example_body.strip()))
         lines.append("")
 
+    # Real-world samples from sample library (E-10)
+    samples = load_skill_samples(dirname)
+    if samples:
+        lines.append("## Real-World Examples")
+        lines.append("")
+        lines.append("See this skill applied to three different product contexts:")
+        lines.append("")
+        for sample in samples:
+            context_label = sample["context"] if sample["context"] else sample["thread_display"]
+            lines.append(f'??? example "{sample["thread_display"]}: {context_label}"')
+            if sample["prompt"]:
+                lines.append(indent_content(f"**Prompt:**\n\n{sample['prompt']}"))
+                lines.append("")
+            lines.append(indent_content(f"**Output:**\n\n{sample['output']}"))
+            lines.append("")
+
     # Quality Checklist
     for key in ["Quality Checklist", "Quality checklist"]:
         if key in sections:
@@ -347,6 +444,52 @@ def generate_skill_page(skill_dir: Path) -> dict | None:
     }
 
 
+# Phase flow diagrams (E-08)
+PHASE_FLOWS = {
+    "discover": """```mermaid
+flowchart LR
+    A["/competitive-analysis"] --> D["/problem-statement"]
+    B["/interview-synthesis"] --> D
+    C["/stakeholder-summary"] --> D
+```""",
+    "define": """```mermaid
+flowchart LR
+    A["/problem-statement"] --> B["/hypothesis"]
+    A --> C["/jtbd-canvas"]
+    C --> D["/opportunity-tree"]
+    D --> B
+```""",
+    "develop": """```mermaid
+flowchart LR
+    A["/solution-brief"] --> B["/spike-summary"]
+    B --> C["/adr"]
+    A --> D["/design-rationale"]
+    C --> E["/prd"]
+    D --> E
+```""",
+    "deliver": """```mermaid
+flowchart LR
+    A["/prd"] --> B["/user-stories"]
+    B --> C["/acceptance-criteria"]
+    A --> D["/edge-cases"]
+    C --> E["/launch-checklist"]
+    E --> F["/release-notes"]
+```""",
+    "measure": """```mermaid
+flowchart LR
+    A["/experiment-design"] --> B["/instrumentation-spec"]
+    B --> C["/dashboard-requirements"]
+    B --> D["/experiment-results"]
+```""",
+    "iterate": """```mermaid
+flowchart LR
+    A["/retrospective"] --> B["/lessons-log"]
+    B --> C["/refinement-notes"]
+    A --> D["/pivot-decision"]
+```""",
+}
+
+
 def generate_phase_index(group: str, skills: list) -> None:
     """Generate a phase/classification index page."""
     display = PHASE_DISPLAY.get(group, group.title())
@@ -357,9 +500,21 @@ def generate_phase_index(group: str, skills: list) -> None:
     lines.append("---")
     lines.append(f'title: "{display} Skills"')
     lines.append(f'description: "PM skills in the {display} phase."')
+    lines.append("tags:")
+    lines.append(f"  - {display}")
     lines.append("---")
     lines.append("")
     lines.append(f"# {display} Skills")
+    lines.append("")
+
+    # Phase flow diagram (E-08)
+    if group in PHASE_FLOWS:
+        lines.append("## How these skills connect")
+        lines.append("")
+        lines.append(PHASE_FLOWS[group])
+        lines.append("")
+
+    lines.append("## Skills in this phase")
     lines.append("")
     lines.append(f"| Skill | Description | Command |")
     lines.append(f"|-------|-------------|---------|")

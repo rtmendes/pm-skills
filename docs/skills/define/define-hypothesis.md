@@ -11,6 +11,9 @@ tags:
 !!! info "Quick facts"
     **Phase:** Define | **Version:** 2.0.0 | **Category:** ideation | **License:** Apache-2.0
 
+**Try it:** `/hypothesis "Your context here"`
+{ .md-button }
+
 # Hypothesis
 
 A hypothesis is a testable prediction about how a change will affect user behavior or business outcomes. It transforms assumptions into explicit statements that can be validated or invalidated through experimentation. Well-formed hypotheses prevent teams from building features based on untested beliefs and create shared understanding of what success looks like.
@@ -303,6 +306,104 @@ When asked to create a hypothesis, follow these steps:
     | Observation window | Feb 1-7, 2026 | 7 days |
     | Analysis | Feb 8-10, 2026 | 3 days |
     | Decision | Feb 11, 2026 | — |
+
+## Real-World Examples
+
+See this skill applied to three different product contexts:
+
+??? example "Storevine (B2B): Storevine B2B ecommerce platform — Campaigns v1 first-campaign guided flow hypothesis"
+    **Prompt:**
+
+    ```
+    /hypothesis
+
+    Project: Campaigns — native email marketing for Storevine merchants
+    Stage: Post-discovery, pre-PRD finalization
+
+    Hypothesis I want to define:
+    - Non-adopter merchants (no active external email tool, <250 customers)
+      are ~38% of our active base [fictional] and represented 3 of 8 merchant
+      interview participants (P3, P6, and P8)
+    - Core belief: setup complexity is the barrier — not awareness or price
+    - Specific hypothesis: a guided first-campaign flow with product-seeded
+      templates will drive first-send rate from ~12% [fictional] to ≥30%
+      [fictional] within 60 days of GA
+
+    Prior work to reference:
+    - Merchant interview synthesis (Jan 12–28, 2026): P3, P6, and P8 described
+      email as "too overwhelming to start" or perennially "on the list"
+    - Competitive analysis (Feb 2026): Shopify Email's template-first + free
+      tier activation is their primary new-merchant onboarding lever
+    - Problem statement: email-related churn estimated at 4.8 pp [fictional]
+      of overall 22% [fictional] annual merchant churn rate
+
+    Need: full hypothesis document with success metrics, validation approach,
+    pass/fail criteria, and risks. Will attach to PRD as primary testable belief.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Hypothesis: Pre-Populated Templates Drive First Campaign Sends for Non-Adopter Merchants
+
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — Resurface morning email digest hypothesis"
+    **Prompt:**
+
+    ```
+    /hypothesis
+
+    trying to figure out if a morning digest email will actually get people to re-read
+    their saved stuff. context: brainshelf pkm app, 22k MAU [fictional]. users save
+    ~47 items/month but only go back to read ~9% within 30 days [fictional]. classic
+    guilt pile problem from interviews.
+
+    want to run an A/B test on a morning email that surfaces 3-5 items from their
+    library based on what they've been reading lately. need a hypothesis doc to
+    align the team before we commit to building it.
+
+    primary metric: resurface item click rate. secondary: actual read completion.
+    guardrail: don't tank unsubscribe rate.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Hypothesis: Morning Resurface Email Increases Re-Read Rate
+
+??? example "Workbench (Enterprise): Workbench enterprise collaboration platform: required-section enforcement hypothesis"
+    **Prompt:**
+
+    ```
+    /hypothesis
+
+    Product: Workbench Blueprints (enterprise doc templates with required sections and approval gates)
+    Stage: Define phase, post-discovery interviews and problem statement
+
+    Hypothesis: Requiring all Blueprint sections to be completed before an author can submit for approval will reduce median time to first approved Blueprint.
+
+    Context:
+    - 38% of Blueprints in closed beta reach approval with ≥1 empty required section [fictional]
+    - Median time to first approval: 4.0 days [fictional]
+    - Most rejections are for missing content, not quality [fictional]
+    - Approvers (dept heads, compliance leads) are the bottleneck -- they reject and wait, or approve with risk
+    - Target: reduce median approval time to ≤1 day [fictional] (aspirational)
+    - MDE for experiment: 1.0 day reduction (to ≤3.0 days) [fictional]
+
+    Target users: Project leads and document authors at enterprise Workbench accounts
+    Validation: A/B test in closed beta (80 accounts, ~300 Blueprints/week [fictional])
+    Primary metric: median time-to-first-approval (days)
+    Guardrails: author abandonment, author NPS
+
+    Stakeholders: Sandra C. (Head of Product), Karen L. (Eng Lead), Leo M. (Data Analyst)
+    ```
+
+    ---
+
+    **Output:**
+
+    # Hypothesis: Required Blueprint Sections Reduce Time-to-Approval
 
 ## Quality Checklist
 

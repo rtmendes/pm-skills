@@ -11,6 +11,9 @@ tags:
 !!! info "Quick facts"
     **Phase:** Discover | **Version:** 2.0.0 | **Category:** research | **License:** Apache-2.0
 
+**Try it:** `/competitive-analysis "Your context here"`
+{ .md-button }
+
 # Competitive Analysis
 
 A competitive analysis provides structured insight into the competitive landscape, helping product teams understand where they stand relative to alternatives and identify opportunities for differentiation. Rather than exhaustively cataloging every competitor, an effective analysis focuses on actionable insights that inform product strategy.
@@ -490,6 +493,116 @@ When asked to create a competitive analysis, follow these steps:
     ---
 
     *Analysis valid as of January 2026. Competitive landscape changes frequently; recommend quarterly updates.*
+
+## Real-World Examples
+
+See this skill applied to three different product contexts:
+
+??? example "Storevine (B2B): Storevine B2B ecommerce platform — email marketing competitive landscape for Campaigns"
+    **Prompt:**
+
+    ```
+    /competitive-analysis
+
+    Scope: Email marketing tools available to ecommerce merchants — built-in vs.
+    third-party positioning. Informing Campaigns v1 scope and feature prioritization.
+
+    Our product: Storevine — B2B all-in-one ecommerce + web platform, Series A,
+    ~18k active merchants [fictional]. Building Campaigns: native email marketing
+    with audience segmentation and automations.
+
+    Competitors: Shopify Email (built-in), Klaviyo (third-party, most-used by
+    merchants), Mailchimp (third-party, SMB standard), Campaign Monitor
+    (third-party, mid-market)
+
+    Segment: Small-to-mid-size ecommerce merchants (Storevine core segment).
+    Buyer: merchant owner/operator.
+
+    Feature matrix dimensions needed:
+    - Drag-and-drop email editor
+    - Pre-built templates
+    - Audience segmentation (purchase-based)
+    - Abandoned cart automation
+    - Welcome series automation
+    - Analytics (open rate, click rate, revenue attribution)
+    - List import (CSV)
+    - CAN-SPAM/GDPR compliance tools
+    - SMS campaigns
+
+    Also need: pricing comparison, positioning map (Platform Integration vs.
+    Feature Depth), deep dives per competitor, gaps and opportunities, and
+    strategic recommendations.
+
+    Audience: Growth PM, Eng Lead, Head of Product.
+    References: problem-statement (Q4 discovery), exit survey analysis.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Competitive Analysis: Email Marketing for Ecommerce Merchants
+
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — competitive landscape for content resurfacing features"
+    **Prompt:**
+
+    ```
+    /competitive-analysis
+
+    pkm and read-later market, focusing on resurfacing and re-engagement
+    features. brainshelf is planning a resurface feature (morning email digest
+    with 3-5 saved items) and need to understand the competitive landscape.
+
+    context: brainshelf is a consumer pkm/save-for-later tool, ~85k registered
+    users, ~22k MAU [fictional]. core problem is users save tons of stuff but
+    never come back to read it — 47 items saved/month, <9% revisited within
+    30 days [fictional].
+
+    4 competitors to analyze: readwise, raindrop.io, pocket (mozilla),
+    instapaper. focus on resurfacing features, email digests, pricing,
+    and where the white space is for us.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Competitive Analysis: PKM / Read-Later Content Resurfacing
+
+??? example "Workbench (Enterprise): Workbench enterprise collaboration platform: Blueprints competitive landscape"
+    **Prompt:**
+
+    ```
+    /competitive-analysis
+
+    Scope: Enterprise documentation and knowledge management -- template governance and approval workflow capabilities. Informing Blueprints GA positioning.
+
+    Our product: Workbench -- enterprise collaboration platform, Series B, ~500 enterprise customers [fictional]. Blueprints: reusable doc templates with required sections, role-based approval gates, and version tracking.
+
+    Competitors: Atlassian Confluence, Notion, Coda, Monday.com
+
+    Segment: Enterprise (500–10,000 employees). Buyers: ops, compliance, and product team leads.
+
+    Feature matrix dimensions needed:
+    - Document templates
+    - Required/enforced section validation
+    - Native approval workflows
+    - Version control
+    - SSO/SAML
+    - Audit logs
+    - Real-time co-editing
+    - AI-assisted drafting
+
+    Also need: pricing comparison, positioning map (Governance Rigor vs. Ease of Adoption), deep dives per competitor, gaps and opportunities, and strategic recommendations.
+
+    Audience: Head of Product, Head of Marketing, Enterprise Sales Lead.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Competitive Analysis: Enterprise Documentation and Template Governance
 
 ## Quality Checklist
 

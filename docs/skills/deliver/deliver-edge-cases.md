@@ -11,6 +11,9 @@ tags:
 !!! info "Quick facts"
     **Phase:** Deliver | **Version:** 2.0.0 | **Category:** specification | **License:** Apache-2.0
 
+**Try it:** `/edge-cases "Your context here"`
+{ .md-button }
+
 # Edge Cases
 
 An edge cases document systematically catalogs the unusual, boundary, and error scenarios for a feature. While happy-path flows are typically well-specified, edge cases often get discovered in production — causing bugs, poor user experience, and support burden. Documenting edge cases upfront ensures engineering handles them intentionally and QA knows what to test.
@@ -316,6 +319,94 @@ When asked to document edge cases, follow these steps:
     - [ ] Upload when thumbnail service down — should succeed with generic icon
     - [ ] Two users upload same file simultaneously — both should succeed
     - [ ] Upload file with only extension (.pdf) — should fail
+
+## Real-World Examples
+
+See this skill applied to three different product contexts:
+
+??? example "Storevine (B2B): Storevine B2B ecommerce platform — Campaigns campaign send flow edge cases"
+    **Prompt:**
+
+    ```
+    /edge-cases
+
+    Feature: Campaigns — campaign creation and send flow
+    Sprint: Q2 2026 Campaigns build (GA Apr 28, 2026)
+
+    Key edge cases I want to cover:
+    - Input validation: subject line, email body, audience size, physical
+      sender address (CAN-SPAM requirement)
+    - Boundary conditions: free tier send volume limit, min/max audience size
+    - Error states: network failure during send, SendGrid API errors
+    - Concurrency: double-click send, merchant edits in two browser tabs
+    - Integration failures: SendGrid unavailable, attribution webhook down
+
+    Related docs:
+    - User story US-CAM-001 (guided first-campaign flow)
+    - Spike summary: SendGrid attribution webhook confirmed
+    - Edge cases will be used for QA test plan and engineering handoff
+
+    Need: full edge cases document with error messages, recovery paths, and
+    QA test scenarios (P1/P2/P3).
+    ```
+
+    ---
+
+    **Output:**
+
+    # Edge Cases: Campaigns Campaign Send Flow
+
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — Resurface digest edge cases and error states"
+    **Prompt:**
+
+    ```
+    /edge-cases
+
+    resurface edge cases for sprint 8. need to cover:
+    - what happens when the user's library is too small
+    - what happens when all items have been resurfaced recently
+    - timezone weirdness (DST, user changes timezone, half-hour offsets)
+    - text extraction failures
+    - resend api outages
+    - user clicks a link to a dead URL
+    - email bounces
+    - concurrent opt-in/unsubscribe race conditions
+
+    alex wants this documented so QA can build the test plan from it.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Edge Cases: Resurface Digest
+
+??? example "Workbench (Enterprise): Workbench enterprise collaboration platform - Blueprints edge-case analysis for approval workflows and co-editing"
+    **Prompt:**
+
+    ```
+    /edge-cases
+
+    I need a comprehensive edge-case analysis for Blueprints v1 covering the three highest-risk areas: required-section enforcement boundaries, approval-gate state transitions, and real-time co-editing conflicts.
+
+    **Context:**
+    - Required sections use a content-presence check (non-whitespace); submit is disabled until all required sections have content
+    - Approval gates support sequential and parallel chains; state stored in relational DB, not in the Yjs document
+    - Co-editing uses Yjs CRDTs with sub-document-level sync; offline edits cache locally and merge on reconnect
+    - 80 closed-beta accounts [fictional], target ~20 concurrent editors per Blueprint [fictional]
+
+    **What I need:**
+    - Edge cases organized by category
+    - Error messages for each failure state
+    - Recovery paths so QA and engineering know the expected behavior
+    - Prioritized test scenarios (P1 must-test, P2 should-test, P3 nice-to-test)
+
+    Please be thorough -- Karen's team will use this directly for test planning.
+    ```
+
+    **Output:**
+
+    # Edge Cases: Workbench Blueprints v1
 
 ## Quality Checklist
 

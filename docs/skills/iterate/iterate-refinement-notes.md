@@ -11,6 +11,9 @@ tags:
 !!! info "Quick facts"
     **Phase:** Iterate | **Version:** 2.0.0 | **Category:** coordination | **License:** Apache-2.0
 
+**Try it:** `/refinement-notes "Your context here"`
+{ .md-button }
+
 # Refinement Notes
 
 Refinement notes capture the outcomes of backlog refinement (grooming) sessions—what was discussed, what was estimated, and what decisions were made. They serve as a quick reference for team members who missed the session and a historical record of how stories evolved from idea to ready-for-sprint.
@@ -471,6 +474,132 @@ When asked to document refinement notes, follow these steps:
     ---
 
     *Notes captured by Maya Chen on January 14, 2026.*
+
+## Real-World Examples
+
+See this skill applied to three different product contexts:
+
+??? example "Storevine (B2B): Storevine B2B ecommerce platform — Campaigns v1.1 sprint refinement session"
+    **Prompt:**
+
+    ```
+    /refinement-notes
+
+    Session: Campaigns v1.1 refinement
+    Date: July 22, 2026, 10:00 AM, 60 minutes
+    Sprint preparing for: Sprint 12 — Campaigns v1.1
+    Facilitator: Growth PM
+
+    Stories on the agenda:
+    1. CAM-088: EU merchant GDPR consent data model
+    2. CAM-089: Per-campaign open rate and click rate analytics
+    3. CAM-090: Follow-on experiment — 3 vs. 5 products in guided template
+    4. CAM-091: Abandoned cart email trigger
+
+    Key constraints:
+    - Legal has not yet signed off on the EU consent model (CAM-088)
+    - Backend Engineer flagged ambiguity on the open rate denominator
+      (CAM-089): Amplitude delivered-event count vs. SendGrid recipient count
+    - CAM-091 may need to be split — scope spans 4 engineering domains
+
+    Need: full refinement notes for Sprint 12 planning.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Refinement Notes: July 22, 2026
+
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — Sprint 9 refinement for Resurface v2 improvements"
+    **Prompt:**
+
+    ```
+    /refinement-notes
+
+    sprint 9 refinement for resurface v2. session was april 15, 2026.
+    45 minutes. priya facilitated.
+
+    stories discussed:
+    1. RSF-010: embedding migration (tfidf → openai text-embedding-3-small)
+       — BLOCKED, waiting on openai api key + budget approval from marco
+    2. RSF-011: in-app resurfacing card on home screen — Ready, 5 pts [fictional]
+    3. RSF-012: cadence experiment (daily vs 3x/week, larger sample) —
+       Ready, 3 pts [fictional]
+    4. RSF-013: small-library handling (users with <20 items, shorter
+       exclusion window) — Needs Work, alex wants to see the data first
+
+    questions raised: should the in-app card show different items than
+    the email digest or the same items? what's the minimum library size
+    where tfidf actually produces useful results?
+
+    decision: in-app card shows different items (complementary, not
+    duplicate).
+    ```
+
+    ---
+
+    **Output:**
+
+    # Refinement Notes: April 15, 2026
+
+??? example "Workbench (Enterprise): Workbench enterprise collaboration platform: Blueprints v1.1 backlog refinement session"
+    **Prompt:**
+
+    ```
+    /refinement-notes
+
+    I just ran the v1.1 refinement session. Here are the details:
+
+    **Session info:**
+    - Date: May 26, 2026
+    - Duration: 60 minutes
+    - Attendees: Rachel V. (PM, facilitator), Karen L. (Eng Lead), Tomás G. (Design), Nate P. (Backend), Aisha K. (Frontend), Leo M. (Data)
+
+    **Stories refined (6):**
+
+    1. BLUE-201: Approval action bar redesign -- promote Reject and Request Changes to primary visibility
+       - Points: 3 (was 2 from retro; increased after discussion of animation transitions)
+       - Ready for sprint
+
+    2. BLUE-202: Audit trail export (CSV) -- compliance officer can export all Blueprint lifecycle events for a date range
+       - Points: 8
+       - Ready for sprint
+       - Note: Nate P. flagged that the current audit log stores events in an append-only format optimized for writes, not reads. The export query will need a read-optimized view or materialized table.
+
+    3. BLUE-203: Audit trail export (PDF) -- formatted PDF export for regulatory submissions
+       - Points: 5
+       - Blocked -- depends on BLUE-202 (CSV export provides the data layer); also needs legal review of the PDF format for FDA/SOX compliance
+
+    4. BLUE-204: Configurable wizard threshold -- template admins can set the section count at which the wizard auto-disables (default: 12)
+       - Points: 2
+       - Ready for sprint
+
+    5. BLUE-205: Approver-visible completeness score -- display per-section quality indicators in the approval review view
+       - Points: 8
+       - Ready for sprint (design review scheduled for May 28)
+       - Note: Tomás G. proposed a progress bar showing "% sections with 20+ words" plus yellow warning badges on sections below threshold. Karen L. asked whether the threshold should be configurable -- team decided to hardcode 20 words for v1.1 and make it configurable in v1.2 if needed.
+
+    6. BLUE-206: Compliance officer role -- new RBAC role with template-lock and audit-export permissions
+       - Points: 13
+       - Blocked -- depends on BLUE-202 (audit export) for the export permission; also needs Karen L. to design the RBAC extension architecture
+
+    **Questions raised:**
+    - Should the audit trail export include section-level edit history or just lifecycle events? (Decision: lifecycle events only for v1.1; section-level history deferred to version history feature)
+    - Should the completeness score be visible to authors during editing, or only to approvers? (Decision: approvers only for now; author-visible is a future consideration)
+    - What happens to in-flight Blueprints when a compliance officer locks a template? (Parked for BLUE-206 design)
+
+    **Decisions made:**
+    - Wizard threshold default stays at 12 (consistency with v1) but is now admin-configurable
+    - Completeness word-count threshold is hardcoded at 20 words for v1.1
+    - Audit trail export scope is lifecycle events only (not section edit history)
+
+    Please generate the full refinement notes.
+    ```
+
+    **Output:**
+
+    # Refinement Notes: May 26, 2026
 
 ## Quality Checklist
 

@@ -11,6 +11,9 @@ tags:
 !!! info "Quick facts"
     **Phase:** Measure | **Version:** 2.0.0 | **Category:** validation | **License:** Apache-2.0
 
+**Try it:** `/experiment-design "Your context here"`
+{ .md-button }
+
 # Experiment Design
 
 An experiment design document defines all parameters needed to run a rigorous A/B test or controlled experiment. It ensures the team aligns on what you're testing, how you'll measure success, and how long to run the test before drawing conclusions. Good experiment design prevents common pitfalls: underpowered tests, unclear success criteria, and decisions based on noise rather than signal.
@@ -418,6 +421,111 @@ When asked to design an experiment, follow these steps:
     - Design Mockups (Figma link)
     - Previous Experiment: Guest Checkout (results/guest-checkout-q3-2025.md) — 3% lift, informed this design
     - User Research: Checkout Friction Study (research PDF)
+
+## Real-World Examples
+
+See this skill applied to three different product contexts:
+
+??? example "Storevine (B2B): Storevine B2B ecommerce platform — Campaigns guided first-campaign flow A/B experiment design"
+    **Prompt:**
+
+    ```
+    /experiment-design
+
+    Project: Campaigns — Campaigns guided first-campaign flow
+    Experiment: Does the guided first-campaign flow increase first-send rate
+                for non-adopter merchants?
+
+    Hypothesis (from Define phase doc):
+    - We believe pre-populated templates for non-adopter merchants (<250
+      customers [fictional], no external email tool) will drive first-send
+      rate from 12% [fictional] to ≥30% [fictional] within 60 days of GA
+
+    Variants:
+    - Control: Standard Campaigns creation flow (blank template editor,
+      named segment library, no pre-population)
+    - Treatment: Guided first-campaign flow (product-seeded template,
+      audience defaulted to "Customers who purchased in the last 90 days")
+
+    Sample: ~6,800 eligible non-adopter merchants [fictional]; need enough
+      per variant to detect a 8 pp improvement with 80% power
+
+    Run period: April 28 – June 27, 2026 (60 days from GA)
+
+    Need: full experiment design with sample size calculation, success
+    criteria, risks, and implementation notes.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Experiment Design: Guided First-Campaign Flow for Non-Adopter Merchants
+
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — Resurface A/B test experiment design"
+    **Prompt:**
+
+    ```
+    /experiment-design
+
+    resurface a/b test. feature is shipped behind a flag. need the full
+    experiment design for chloe to set up in amplitude.
+
+    hypothesis: daily digest → higher 7-day return rate.
+
+    design: intent-to-treat. treatment gets the opt-in prompt + digest.
+    control gets nothing (current experience). measure 7-day return rate
+    for both groups.
+
+    secondary metric: email CTR (treatment only — control doesn't get
+    email). guardrail: unsub rate ≤2%/week.
+
+    sample: 400 per variant from the 9,800 eligible users [fictional].
+    duration: 4 weeks (mar 9 - apr 5). 50/50 split on enrollment cohort.
+
+    want to have the design doc locked before the setup week (mar 2-8).
+    ```
+
+    ---
+
+    **Output:**
+
+    # Experiment Design: Resurface Daily Digest A/B Test
+
+??? example "Workbench (Enterprise): Workbench enterprise collaboration platform: Blueprints required vs. optional sections A/B test"
+    **Prompt:**
+
+    ```
+    /experiment-design
+
+    Experiment: Required vs. optional Blueprint sections
+    Product: Workbench Blueprints (enterprise doc templates with approval gates)
+    Stage: Closed beta shipped; need to A/B test before expanding to full 500-customer base [fictional]
+
+    Context:
+    - Blueprints allows admins to create doc templates with sections
+    - Currently all sections are optional -- authors can submit incomplete Blueprints for approval
+    - Data: 38% of Blueprints reach approval with ≥1 empty section [fictional]; most rejections are for missing content, not quality
+    - Hypothesis from Define phase: making sections required (must complete before submitting) reduces time to first approval
+    - Baseline: median time to first approved Blueprint = 4.0 days [fictional]
+    - Goal: reduce to ≤2.5 days [fictional]
+
+    Treatment: Required sections -- authoring UI blocks submission if any required section is empty. Show inline validation message, highlight empty sections.
+    Control: Current optional sections -- authors can submit with empty sections as today.
+
+    Primary metric: median time-to-first-approval (days)
+    Secondary: approval rejection rate, Blueprint completion rate
+    Guardrail: don't tank author-side NPS or increase abandonment
+
+    Audience: Project leads at enterprise customers in closed beta (excludes IT admins and approvers).
+    Stakeholders: Head of Product, Data Science, Engineering Lead (Blueprints)
+    ```
+
+    ---
+
+    **Output:**
+
+    # Experiment Design: Blueprints Required vs. Optional Sections
 
 ## Quality Checklist
 

@@ -11,6 +11,9 @@ tags:
 !!! info "Quick facts"
     **Phase:** Iterate | **Version:** 2.0.0 | **Category:** reflection | **License:** Apache-2.0
 
+**Try it:** `/retrospective "Your context here"`
+{ .md-button }
+
 # Retrospective
 
 A retrospective is a structured reflection that helps teams learn from their experiences and continuously improve. By regularly examining what went well, what didn't, and what to change, teams build a culture of learning and adaptation. The value isn't just in the discussion—it's in the documented actions and follow-through.
@@ -461,6 +464,122 @@ When asked to facilitate or document a retrospective, follow these steps:
     ---
 
     *Retrospective documented by Maya Chen on January 14, 2026.*
+
+## Real-World Examples
+
+See this skill applied to three different product contexts:
+
+??? example "Storevine (B2B): Storevine B2B ecommerce platform — Campaigns v1.0 build sprint retrospective"
+    **Prompt:**
+
+    ```
+    /retrospective
+
+    Sprint: Campaigns v1.0 build sprint + GA week
+    Period: February 3 – May 5, 2026 [fictional]
+    Date held: May 7, 2026
+    Format: Start / Stop / Continue
+    Duration: 90 minutes [fictional]
+
+    Team: Growth PM, Engineering Lead, Backend Engineer,
+          Design Lead, Merchant Success Lead, QA Lead
+
+    What went well:
+    - Beta merchant FAQ (23 questions → 10 FAQ + 15 canned responses)
+      [fictional] — reduced GA-week ticket volume significantly
+    - Instrumentation spec process caught subscriber email PII gap
+      before GA
+    - Feature flag rollout (10%→100%) worked; zero rollback events
+
+    What to improve:
+    - Legal review started 3 weeks before GA instead of 6 weeks;
+      created compliance copy crunch that delayed marketing content
+    - DMARC/SPF/DKIM setup: estimated 1 day, took 5 business days
+      [fictional]; DNS propagation not in the timeline
+    - Klaviyo partner notice email sent 2 days late (no clear owner)
+
+    Previous retro actions to review (Sprint 7 retro):
+    - Add QA Lead to kickoff sessions — Complete
+    - Define escalation path for blocker tickets — In Progress
+    - Document infrastructure prerequisites for launches — Not Started
+
+    Need: full sprint retrospective with action items.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Retrospective: Campaigns v1.0 Build Sprint
+
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — Sprint 8 retrospective after Resurface launch"
+    **Prompt:**
+
+    ```
+    /retrospective
+
+    sprint 8 retro — resurface launch sprint. need to write this up.
+
+    what happened: we shipped resurface on time! first big feature in 6 months.
+    but we also had a timezone bug that sent the morning digest at 5am to UK/Europe
+    users (~340 people [fictional]). caught it 6 hours after launch, patched within 2
+    hours of catching it, but some users were not happy.
+
+    format: start/stop/continue. small team (7 people in the room).
+    2 wins, the timezone thing, and a few process issues that came up.
+
+    previous retro action items were: (1) set up staging environment email testing —
+    DONE, (2) add integration test for notification delivery — NOT DONE (this
+    contributed to the bug), (3) weekly eng/pm sync — IN PROGRESS.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Retrospective: Sprint 8 — Resurface Launch
+
+??? example "Workbench (Enterprise): Workbench enterprise collaboration platform: Blueprints v1 GA post-launch retrospective"
+    **Prompt:**
+
+    ```
+    /retrospective
+
+    I'm facilitating the Blueprints post-GA retrospective. Here's the context:
+
+    **Session details:**
+    - Date: May 12, 2026
+    - Duration: 90 minutes
+    - Format: Virtual (Zoom), structured facilitation
+
+    **Attendees:** Rachel V. (PM, facilitator), Karen L. (Eng Lead), Tomás G. (Design Lead), Nate P. (Backend Eng), Aisha K. (Frontend Eng), Leo M. (Data Analyst), Sandra C. (Head of Product, observer)
+
+    **Context:**
+    - Blueprints v1 GA launched April 28, progressive rollout completed May 5
+    - 320/500 accounts active on Blueprints [fictional]; remaining 180 in onboarding pipeline
+    - Time-to-approved holding at 2.4 days [fictional] (target: ≤2.5)
+    - 3 launch-week incidents: (1) approval UX confusion -- 23 support tickets from first-time approvers who couldn't find the reject button, (2) SSO incident day 2 -- misconfigured SAML attribute mapping blocked 12 accounts for 3 hours, (3) wizard threshold rigidity -- 8 enterprise templates with 15+ sections couldn't use the wizard at all
+
+    **What went well:**
+    - A/B test methodology was solid; ship decision was data-driven and confident
+    - Progressive rollout caught the SSO issue at 10% before it hit all accounts
+    - Yjs co-editing performance exceeded targets (32ms p95 merge latency vs. 50ms target [fictional])
+    - Cross-functional coordination between eng, design, and marketing was the best it's been
+
+    **What to improve:**
+    - Approval UX needed more usability testing before launch
+    - SSO configuration was manual and error-prone; need automated validation
+    - Wizard threshold should be configurable, not hardcoded
+    - Edge-case doc was excellent but QA didn't have time to test all P2 scenarios
+
+    **Action items I want to formalize:** 5 items for v1.1 sprint planning
+
+    Please generate the full retrospective document.
+    ```
+
+    **Output:**
+
+    # Retrospective: Blueprints v1 GA Launch
 
 ## Quality Checklist
 

@@ -11,6 +11,9 @@ tags:
 !!! info "Quick facts"
     **Phase:** Deliver | **Version:** 2.0.0 | **Category:** specification | **License:** Apache-2.0
 
+**Try it:** `/user-stories "Your context here"`
+{ .md-button }
+
 # User Stories
 
 User stories are concise descriptions of functionality from the user's perspective. They capture who needs something, what they need, and why — without prescribing how to build it. Good user stories enable teams to break large features into estimable, deliverable increments while maintaining focus on user value.
@@ -514,6 +517,98 @@ When asked to create user stories, follow these steps:
     | US-102 | Yes (depends on 101) | Yes | Yes | Yes | Yes | Yes |
     | US-103 | Yes (depends on 101) | Yes | Yes | Yes | Yes | Yes |
     | US-104 | Yes (depends on 101) | Yes | Yes | Yes | Yes | Yes |
+
+## Real-World Examples
+
+See this skill applied to three different product contexts:
+
+??? example "Storevine (B2B): Storevine B2B ecommerce platform — Campaigns guided first-campaign flow user story"
+    **Prompt:**
+
+    ```
+    /user-stories
+
+    Project: Campaigns — native email marketing for Storevine merchants
+    Sprint: Q2 2026 Campaigns build (kickoff Mar 3, GA Apr 28)
+
+    Story I need:
+      Guided first-campaign flow for non-adopter merchants
+
+    Who: Merchant with no active external email tool and no prior Storevine
+         email sends (non-adopter segment, ~38% of active base [fictional])
+    What: Send their first email campaign using a pre-populated template seeded
+          with their own products and a default audience
+    Why: Start driving repeat purchases without needing to figure out email
+         marketing from scratch
+
+    Prior work to reference:
+    - Hypothesis: first-send rate target 12% → 30% [fictional] in 60 days
+    - Spike summary: SendGrid attribution via unique_args confirmed feasible
+    - Design rationale: pre-built named segments as default audience selection
+    - PRD: Campaigns v1 scope locked
+
+    Need: full user story with acceptance criteria (Given/When/Then),
+    design notes, technical notes, and dependencies. P0 priority.
+    ```
+
+    ---
+
+    **Output:**
+
+    # User Story: Guided First-Campaign Flow for Non-Adopter Merchants
+
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — Resurface user stories for Sprint 8"
+    **Prompt:**
+
+    ```
+    /user-stories
+
+    resurface stories for sprint 8. need the full set with acceptance
+    criteria.
+
+    stories:
+    1. receive daily digest (P0) — the core email delivery
+    2. opt in to digest (P0) — home screen card + settings toggle
+    3. click item to read (P0) — one-click from email to article
+    4. change cadence (P1) — daily vs 3x/week
+    5. unsubscribe from digest (P0) — one-click from email footer
+
+    keep them tight. alex and jess need to estimate on monday.
+    ```
+
+    ---
+
+    **Output:**
+
+    # User Story: Receive Daily Resurface Digest
+
+??? example "Workbench (Enterprise): Workbench enterprise collaboration platform - Blueprints v1 sprint stories for required sections and approval gates"
+    **Prompt:**
+
+    ```
+    /user-stories
+
+    I need two user stories for the Blueprints v1 sprint backlog. These are the two highest-priority stories for the first sprint.
+
+    **Story 1 -- Required-section enforcement (author perspective):**
+    - Persona: Ops manager creating a Blueprint from a template with required sections
+    - Core need: Cannot submit an incomplete document for approval
+    - Key behaviors: Required sections show a visual indicator; submit button disabled until all required sections have content; if content is deleted, submit re-disables
+    - Context: Part of the hybrid wizard/canvas flow; applies to both wizard and canvas modes
+    - Relates to: A/B test hypothesis (required vs. optional sections, Mar 9 -- Apr 5)
+
+    **Story 2 -- Approval gate (approver perspective):**
+    - Persona: Department head reviewing a submitted Blueprint
+    - Core need: Review complete documents efficiently with clear approve/reject actions
+    - Key behaviors: Notification on submission; inline section review; approve, reject with required comment, or request changes; Blueprint marked approved when all required approvers complete
+    - Context: Sequential and parallel approval chains configured per template by admin
+
+    For each story, include full acceptance criteria, design notes, technical notes, dependencies, out of scope, and open questions.
+    ```
+
+    **Output:**
+
+    # User Story: Required-Section Enforcement for Blueprint Authors
 
 ## Quality Checklist
 

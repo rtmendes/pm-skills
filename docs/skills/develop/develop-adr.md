@@ -11,6 +11,9 @@ tags:
 !!! info "Quick facts"
     **Phase:** Develop | **Version:** 2.0.0 | **Category:** specification | **License:** Apache-2.0
 
+**Try it:** `/adr "Your context here"`
+{ .md-button }
+
 # Architecture Decision Record (ADR)
 
 An Architecture Decision Record documents a significant technical decision along with its context and consequences. ADRs capture the "why" behind architectural choices so future team members understand the reasoning — especially important when they question why something was done a particular way. This skill follows Michael Nygard's lightweight ADR format.
@@ -218,6 +221,107 @@ Be honest about trade-offs.
     - PostgreSQL 16 Release Notes (https://www.postgresql.org/docs/16/release-16.html)
     - ADR-003: Use AWS RDS for managed databases (establishes RDS as our database platform)
     - Order Service Capacity Planning Document (/docs/order-service/capacity-planning.md)
+
+## Real-World Examples
+
+See this skill applied to three different product contexts:
+
+??? example "Storevine (B2B): Storevine B2B ecommerce platform — email sending infrastructure for Campaigns"
+    **Prompt:**
+
+    ```
+    /adr
+
+    ADR for email sending infrastructure choice for Campaigns v1. We need to pick
+    the vendor before we start the backend build.
+
+    Context: Storevine currently sends transactional emails (order confirm, password
+    reset) through SendGrid on a shared IP. Campaigns will add broadcast marketing
+    email + 3 automated sequences (abandoned cart, welcome, re-engagement) at
+    projected volume of ~2M emails/month at launch [fictional], scaling to ~10M
+    at full merchant adoption [fictional].
+
+    Options we evaluated: SendGrid (upgrade to dedicated IP), AWS SES, Postmark,
+    Mailgun.
+
+    Key constraints:
+    - CAN-SPAM/GDPR compliance is a hard gate before launch
+    - Deliverability matters: one spam incident tanks merchant trust
+    - We have existing SendGrid integration (transactional)
+    - Cost matters but is secondary to deliverability reliability at this stage
+
+    Decision: SendGrid dedicated IP. Need this documented for the record.
+    Eng lead and growth PM are the deciders.
+    ```
+
+    ---
+
+    **Output:**
+
+    # ADR-007: Email Sending Infrastructure for Campaigns
+
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — email sending infrastructure decision for the Resurface digest"
+    **Prompt:**
+
+    ```
+    /adr
+
+    email sending infra for resurface. we don't have any email sending
+    today — everything is in-app or firebase push. need to pick a provider
+    for the daily digest.
+
+    options we looked at:
+    - sendgrid (twilio): mature, everyone uses it, but their free tier
+      shrank and the dashboard is confusing
+    - postmark: great deliverability reputation, simple api, but
+      transactional only — no batch/digest support without workarounds
+    - resend: new, developer-first, react email templates, free tier
+      covers our a/b test volume
+
+    alex ran a quick eval last week. we're leaning resend. need the ADR
+    written up before sprint 8 starts.
+    ```
+
+    ---
+
+    **Output:**
+
+    # ADR-007: Use Resend as the Email Sending Provider for the Resurface Digest
+
+??? example "Workbench (Enterprise): Workbench enterprise collaboration platform: ADR for Yjs CRDTs for Blueprint co-editing"
+    **Prompt:**
+
+    ```
+    /adr
+
+    ADR: Use Yjs CRDTs for Blueprints real-time co-editing
+    Product: Workbench Blueprints
+    Stage: Post-CRDT spike; recording architecture decision
+
+    Context:
+    - Blueprints requires real-time co-editing (20+ concurrent editors [fictional])
+    - ProseMirror-based editor; no current collaboration layer
+    - Enterprise requirements: offline-first, conflict resolution, per-user audit trail
+    - Spike evaluated Yjs, Automerge, ShareDB
+
+    Decision: Yjs
+    - 2-day integration via y-prosemirror; 45ms merge latency at 20 users [fictional]; +38KB gzipped [fictional]; offline-first
+    - Automerge rejected: no ProseMirror binding (3-4 week custom build [fictional]); +120KB [fictional]
+    - ShareDB rejected: no offline support (disqualified)
+
+    Consequences:
+    - Positive: fast integration, offline-first, active community, sub-document support
+    - Negative: WebSocket provider TBD, audit trail requires custom middleware, binary document format
+    - Neutral: bundle size acceptable for enterprise
+
+    Stakeholders: James W. (VP Engineering), Karen L. (Eng Lead), Nate P. (Backend Engineer)
+    ```
+
+    ---
+
+    **Output:**
+
+    # ADR-012: Use Yjs CRDTs for Blueprints Real-Time Co-Editing
 
 ## Quality Checklist
 

@@ -11,6 +11,9 @@ tags:
 !!! info "Quick facts"
     **Phase:** Iterate | **Version:** 2.0.0 | **Category:** reflection | **License:** Apache-2.0
 
+**Try it:** `/lessons-log "Your context here"`
+{ .md-button }
+
 # Lessons Log
 
 A lessons log entry captures significant learning from projects, incidents, or experiences in a format that's useful to future teams who weren't there. Unlike retrospectives (which focus on team improvement), lessons logs focus on organizational knowledge that transcends individual teams—patterns, anti-patterns, and hard-won wisdom.
@@ -490,6 +493,103 @@ When asked to create a lessons log entry, follow these steps:
     ---
 
     *This lesson was captured to help future teams avoid repeating our mistakes and build on our successes.*
+
+## Real-World Examples
+
+See this skill applied to three different product contexts:
+
+??? example "Storevine (B2B): Storevine B2B ecommerce platform — lesson learned from the Campaigns guided first-campaign flow A/B test"
+    **Prompt:**
+
+    ```
+    /lessons-log
+
+    Lesson from: Campaigns guided first-campaign flow A/B test
+    Experiment ran: April 28 – June 27, 2026 (60 days from GA)
+    Decision: Ship guided flow as default for all non-adopter merchants
+
+    Primary finding:
+    - Control: 34.2% opened flow, 39.2% of openers clicked Send [fictional]
+    - Treatment: 35.8% opened flow, 88.5% of openers clicked Send [fictional]
+    - Flow entry rate was nearly IDENTICAL between variants
+    - All of the treatment advantage was in completion rate, not flow entry
+
+    What surprised us: We expected the guided UX structure (progress
+    indicator, step sequencing, explicit prompts) to be the mechanism.
+    Funnel analysis shows the treatment advantage is concentrated at the
+    template and subject line step — content pre-population, not UX
+    scaffolding, is doing the work.
+
+    Lesson type: Success Pattern / Strategy
+    Need: structured lessons log entry for the team knowledge base.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Content Quality, Not UX Scaffolding, Is the Non-Adopter Activation Mechanism
+
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — timezone handling lesson from the Resurface Sprint 8 launch"
+    **Prompt:**
+
+    ```
+    /lessons-log
+
+    lesson from: timezone bug at resurface launch
+    what happened: ~340 UK/EU users got their digest at 7:30 UTC instead
+    of 7:30 local because the backend didn't recognize "Europe/Kyiv" and
+    silently fell back to UTC.
+
+    detected: feb 18, 2026 — alex noticed the send log timestamps were
+    wrong for EU users.
+    fixed: feb 18, same day — updated IANA database, added explicit
+    fallback logging, patched within 2 hours.
+
+    lesson type: failure pattern / technical
+    the real lesson isn't the specific bug — it's that we had ZERO
+    integration tests for timezone-dependent behavior. the unit tests
+    mocked the timezone, so they never caught the gap between the device
+    timezone string and the server's IANA database.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Mocked Timezones Hide Real-World Failures: Always Integration-Test Time-Dependent Features Against the Live IANA Database
+
+??? example "Workbench (Enterprise): Workbench enterprise collaboration platform: Blueprints skip-and-submit enforcement lesson"
+    **Prompt:**
+
+    ```
+    /lessons-log
+
+    I need to document a lesson learned from the Blueprints launch. Here's the context:
+
+    **Title:** Required-Section Enforcement Caused Skip-and-Submit Behavior
+
+    **What happened:**
+    - Required-section enforcement successfully reduced the empty-section submission rate from 37% to 7% [fictional]
+    - But post-launch analysis revealed that approximately 4% of submitted Blueprints contain placeholder text in required sections [fictional] -- authors typing "TBD," "See above," "Will update," or pasting Lorem Ipsum to clear the gate
+    - Combined, 11% of Blueprints reaching approval still have quality issues [fictional] (7% empty + 4% placeholder), vs. our 10% target
+    - This was flagged as a risk in the PRD (Risk row 1: "Required sections cause author frustration and workarounds") but we underestimated the speed of adoption
+    - The root cause: we enforced completeness at the wrong point. Blocking submit punishes the author but doesn't help the approver. Approvers still have to manually check for placeholder text.
+
+    **The lesson:**
+    - Enforce quality at the approval gate, not the authoring gate
+    - Shift from "block the author from submitting" to "give the approver a completeness score"
+    - The submit gate should remain (it catches genuine omissions) but add a visible completeness/quality signal to the approval view
+
+    **Team:** Rachel V., Karen L., Leo M.
+    **Timeline:** Identified May 10, 2026 (Leo M.'s 2-week post-launch analysis); documented May 14
+
+    Please generate the full lessons-log entry.
+    ```
+
+    **Output:**
+
+    # Required-Section Enforcement Caused Skip-and-Submit: Enforce at the Approval Gate, Not the Authoring Gate
 
 ## Quality Checklist
 

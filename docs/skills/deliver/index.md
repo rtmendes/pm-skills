@@ -1,9 +1,24 @@
 ---
 title: "Deliver Skills"
 description: "PM skills in the Deliver phase."
+tags:
+  - Deliver
 ---
 
 # Deliver Skills
+
+## How these skills connect
+
+```mermaid
+flowchart LR
+    A["/prd"] --> B["/user-stories"]
+    B --> C["/acceptance-criteria"]
+    A --> D["/edge-cases"]
+    C --> E["/launch-checklist"]
+    E --> F["/release-notes"]
+```
+
+## Skills in this phase
 
 | Skill | Description | Command |
 |-------|-------------|---------|

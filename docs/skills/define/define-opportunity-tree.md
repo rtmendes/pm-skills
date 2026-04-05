@@ -11,6 +11,9 @@ tags:
 !!! info "Quick facts"
     **Phase:** Define | **Version:** 2.0.0 | **Category:** problem-framing | **License:** Apache-2.0
 
+**Try it:** `/opportunity-tree "Your context here"`
+{ .md-button }
+
 # Opportunity Solution Tree
 
 An Opportunity Solution Tree (OST) is a visual framework for product discovery that connects business outcomes to customer opportunities and potential solutions. Developed by Teresa Torres, it prevents the common trap of jumping straight to solutions by ensuring every feature idea traces back to a customer need and measurable outcome.
@@ -436,6 +439,111 @@ When asked to create an opportunity solution tree, follow these steps:
     ---
 
     *This is a living document. Update as you learn from experiments and customer feedback.*
+
+## Real-World Examples
+
+See this skill applied to three different product contexts:
+
+??? example "Storevine (B2B): Storevine B2B ecommerce platform — churn reduction opportunity tree for Campaigns Q2 sprint planning"
+    **Prompt:**
+
+    ```
+    /opportunity-tree
+
+    Project: Campaigns — and broader platform churn reduction strategy
+    Stage: Pre-Q2 sprint planning — framing the opportunity space before
+    scope lock
+
+    Desired outcome: Reduce annual merchant churn from 22% [fictional] to
+    14% [fictional] by Q4 2026
+
+    Opportunities I've identified from discovery:
+    1. Merchants can't run email re-engagement without a separate external
+       tool (Q4 exit survey: 22% churn [fictional]; 8 merchant interviews)
+    2. Merchants can't see what's driving revenue across their store
+       (interview finding: "there's no way to see what's working" — P8)
+    3. Merchants are paying for Storevine + external tools and beginning to
+       question whether the platform subscription is worth it
+
+    Prior work:
+    - Competitive analysis (Feb 2026): email is the most-cited capability gap
+    - Interview synthesis (Jan 2026): non-adopter segment and Klaviyo lock-in
+    - Stakeholder summary: Campaigns PRD moving to engineering kickoff soon
+
+    Need: full opportunity-solution tree with visual, solution options per
+    branch, prioritization, and experiments backlog for Q2 planning.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Opportunity Solution Tree: Reduce Annual Merchant Churn
+
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — opportunity tree for saved content re-engagement"
+    **Prompt:**
+
+    ```
+    /opportunity-tree
+
+    outcome: increase 7-day return rate from 18% to 25% [fictional]
+    by end of Q2 2026.
+
+    three opportunities from interviews + data:
+    1. re-engagement trigger gap — users have no external prompt to return
+    2. content relevance decay — old saves lose timeliness, making the
+       library feel stale
+    3. library overwhelm — 400-item undifferentiated list creates avoidance
+
+    solutions I'm considering:
+    - opp 1: morning email digest (resurface), in-app notification card
+    - opp 2: freshness scoring, auto-archive stale items
+    - opp 3: intent tagging at save time, smart collections
+
+    want to prioritize opp 1 / email digest based on competitive analysis
+    (readwise is the only proof point for email resurfacing).
+    ```
+
+    ---
+
+    **Output:**
+
+    # Opportunity Solution Tree: Increase 7-Day Return Rate
+
+??? example "Workbench (Enterprise): Workbench enterprise collaboration platform: enterprise expansion via governance, SSO, and Confluence migration"
+    **Prompt:**
+
+    ```
+    /opportunity-tree
+
+    Product: Workbench Blueprints (enterprise doc templates with required sections and approval gates)
+    Stage: Define phase, post-discovery and problem statement
+
+    Desired outcome: Expand Workbench enterprise customer base from 500 to 650 accounts within 12 months [fictional]
+    Current state: 500 enterprise customers [fictional]; enterprise churn in compliance segments is 18% annual [fictional]; 8 pipeline deals ($1.8M ARR) stalled on governance gaps [fictional]
+    Timeframe: 12 months from GA launch
+    Owner: Sandra C. (Head of Product)
+
+    Opportunities identified from discovery research:
+    1. Documentation governance gap -- no enterprise doc tool enforces template completion; 38% of docs reach approval incomplete [fictional]; enterprise teams need "templates with teeth"
+    2. SSO and security parity gap -- enterprise IT blocks deployment of tools without SSO/SAML, audit logs, and SOC 2; this is a pre-qualification filter, not a differentiator, but it is a hard gate
+    3. Confluence migration friction -- 4 of 6 interview participants had Confluence experience; all described migration as expensive and risky; Blueprints must offer a capability Confluence cannot provide to justify the migration cost
+
+    Solutions to explore per opportunity:
+    - Governance: required-section enforcement, native approval gates, template admin controls
+    - SSO/security: SAML integration, audit log export, SOC 2 Type II, data residency options
+    - Migration: Confluence template import, guided manual migration, migration support program
+
+    Prioritization: Governance is highest impact and highest confidence. SSO is table stakes (must-have, not differentiator). Migration is medium confidence (we believe it drives adoption but have not tested).
+
+    Stakeholders: Sandra C. (Head of Product), Karen L. (Eng Lead), Mei-Lin T. (Enterprise Sales Lead)
+    ```
+
+    ---
+
+    **Output:**
+
+    # Opportunity Solution Tree: Enterprise Customer Expansion via Blueprints
 
 ## Quality Checklist
 

@@ -11,6 +11,9 @@ tags:
 !!! info "Quick facts"
     **Classification:** Utility | **Version:** 1.0.0 | **Category:** coordination | **License:** Apache-2.0
 
+**Try it:** `/pm-skill-validate "Your context here"`
+{ .md-button }
+
 This skill audits an existing pm-skills skill against the repo's structural
 conventions and quality criteria. It produces a validation report that a
 human can scan and that `/pm-skill-iterate` can consume as input.

@@ -11,6 +11,9 @@ tags:
 !!! info "Quick facts"
     **Phase:** Deliver | **Version:** 1.0.0 | **Category:** specification | **License:** Apache-2.0
 
+**Try it:** `/acceptance-criteria "Your context here"`
+{ .md-button }
+
 # Acceptance Criteria
 
 Acceptance criteria define the observable behavior that must be true for a story or feature to be considered done. This skill turns feature context into concise, testable Given/When/Then scenarios that engineers and QA can verify without guessing intent.

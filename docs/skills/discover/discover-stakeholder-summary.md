@@ -11,6 +11,9 @@ tags:
 !!! info "Quick facts"
     **Phase:** Discover | **Version:** 2.0.0 | **Category:** research | **License:** Apache-2.0
 
+**Try it:** `/stakeholder-summary "Your context here"`
+{ .md-button }
+
 # Stakeholder Summary
 
 A stakeholder summary documents the people and groups who have interest in or influence over a project, capturing their needs, concerns, and relationships. Effective stakeholder management often determines project success more than technical execution, making this document essential for navigating organizational complexity.
@@ -532,6 +535,105 @@ When asked to create a stakeholder summary, follow these steps:
     ---
 
     *Review and update this document when stakeholder dynamics change or at major project milestones.*
+
+## Real-World Examples
+
+See this skill applied to three different product contexts:
+
+??? example "Storevine (B2B): Storevine B2B ecommerce platform — Campaigns launch stakeholder map"
+    **Prompt:**
+
+    ```
+    /stakeholder-summary
+
+    Project: Campaigns — native email marketing for Storevine merchants
+    Stage: PRD complete, moving to engineering kickoff
+
+    Stakeholders I've identified:
+
+    Internal:
+    - Growth PM (me) — owner
+    - Eng Lead (Platform) — aligned, participated in PRD review
+    - Design — in progress on Figma specs
+    - Legal — needs to review CAN-SPAM + GDPR section; not started yet
+    - Merchant Success — launch comms owners; engaged in discovery
+    - Storevine Marketing — dog-food use case; interested in using
+      Campaigns for our own merchant communications
+
+    External:
+    - Power-user merchants (fashion/home segment) — 5-6 who joined
+      discovery interviews; have expectations about the feature
+    - Klaviyo integration partner team — active Storevine integration;
+      not sure how they'll react to a native competing feature
+
+    Need: influence/interest map, stakeholder profiles, communication
+    plan, and risk mitigation for Klaviyo and resistant stakeholders.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Stakeholder Summary: Campaigns — Native Email Marketing
+
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — internal stakeholder map for the Resurface feature"
+    **Prompt:**
+
+    ```
+    /stakeholder-summary
+
+    need to map the internal stakeholders for the resurface feature before
+    we kick off the build. brainshelf is a ~20 person startup so this is
+    small-team politics, not enterprise governance.
+
+    key people:
+    - marco (ceo/cofounder) — big advocate, sees this as the retention bet
+    - alex (eng lead) — supportive but worried about A/B test infrastructure
+    - jordan (growth) — wants resurface as the retention lever
+    - dan (designer) — concerned about the digest feeling spammy
+    - chloe (data) — needs instrumentation for the experiment
+
+    want a proper stakeholder map with communication plan.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Stakeholder Summary: Resurface Feature
+
+??? example "Workbench (Enterprise): Workbench enterprise collaboration platform: Blueprints launch stakeholder map"
+    **Prompt:**
+
+    ```
+    /stakeholder-summary
+
+    Project: Workbench Blueprints -- reusable document templates with required sections and role-based approval gates
+    Product: Workbench (enterprise collaboration platform, Series B, ~200 employees, ~500 enterprise customers [fictional])
+    Stage: Pre-development. Discovery interviews complete. About to enter Define phase.
+    PM: Rachel V. (Technical PM, Blueprints)
+
+    Stakeholders to map:
+
+    Internal:
+    1. Sandra C. -- Head of Product. Blueprints sponsor. Approves scope and timeline. Wants Blueprints to drive enterprise expansion and reduce churn in the compliance segment.
+    2. James W. -- VP Engineering. Owns engineering allocation. Concerned about CRDT complexity and timeline risk. Supportive but cautious.
+    3. Karen L. -- Engineering Lead, Blueprints squad. Day-to-day engineering owner. Excited about the technical challenge. Needs clear requirements early.
+    4. Derek H. -- Head of Marketing. Owns GA positioning and messaging. Needs competitive differentiation story for enterprise sales enablement.
+    5. Mei-Lin T. -- Enterprise Sales Lead. Manages the top 50 enterprise accounts. Wants Blueprints to close pipeline deals stalled on governance gaps. Resistant to phased rollout -- wants everything at once.
+
+    External:
+    6. IT Security leads at enterprise customer accounts. Gate SSO and data residency requirements. Will block deployment if security posture is insufficient.
+    7. Confluence-migrant accounts (estimated 15 of 80 closed-beta customers [fictional]). High-value, high-risk -- switching cost makes them sticky if onboarding goes well, churnable if it doesn't.
+
+    Format: Full stakeholder summary with influence/interest map, detailed profiles, communication plan, and risk mitigation.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Stakeholder Summary: Workbench Blueprints
 
 ## Quality Checklist
 

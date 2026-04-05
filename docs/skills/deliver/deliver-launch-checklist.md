@@ -11,6 +11,9 @@ tags:
 !!! info "Quick facts"
     **Phase:** Deliver | **Version:** 2.0.0 | **Category:** coordination | **License:** Apache-2.0
 
+**Try it:** `/launch-checklist "Your context here"`
+{ .md-button }
+
 # Launch Checklist
 
 A launch checklist is a comprehensive verification document that ensures all functions are ready before releasing a feature or product. It coordinates across engineering, QA, design, marketing, support, legal, and operations to prevent launch-day surprises. Good launch checklists surface blockers early and create shared accountability for launch readiness.
@@ -410,6 +413,107 @@ When asked to create a launch checklist, follow these steps:
     | 4 UAT stakeholders haven't responded | Sarah Chen | Following up | Risk - need sign-offs by Mar 5 |
     | Android 14 notification permission edge case | David Park | Investigating | Low - affects <1% users |
     | Marketing screenshots delayed | Design Team | In Progress | Risk - app store update may slip |
+
+## Real-World Examples
+
+See this skill applied to three different product contexts:
+
+??? example "Storevine (B2B): Storevine B2B ecommerce platform — Campaigns v1 GA launch checklist"
+    **Prompt:**
+
+    ```
+    /launch-checklist
+
+    Feature: Campaigns v1.0 — native email marketing for Storevine merchants
+    Launch date: April 28, 2026
+    Launch type: Major Release
+    Launch owner: Growth PM
+
+    Key compliance and infrastructure requirements:
+    - Legal sign-off on CAN-SPAM + GDPR required before any production send
+    - DMARC/SPF/DKIM sender authentication required for Gmail/Yahoo inbox
+      delivery (enforced by Google and Yahoo since 2024)
+    - SendGrid dedicated IP warm-up plan needed before full-volume sends
+    - Feature flag rollout: start at 10% of merchants [fictional], scale
+      to 100% over 2 weeks based on send failure rates
+
+    Stakeholders:
+    - Engineering Lead (Platform Squad)
+    - Merchant Success (launch comms + support)
+    - Legal (CAN-SPAM/GDPR review)
+    - Storevine Marketing (announcement + dog-food)
+
+    Key risks from stakeholder summary:
+    - Legal review not started; hard gate on compliance sign-off
+    - Klaviyo partner team needs 48-hour advance notice before GA announcement
+    - Power-user merchant beta cohort expectations may exceed v1 scope
+
+    Need: full pre-launch checklist with go/no-go criteria, rollback plan,
+    and check-in schedule.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Launch Checklist: Campaigns v1.0 GA
+
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — Resurface feature launch checklist for Sprint 8 ship"
+    **Prompt:**
+
+    ```
+    /launch-checklist
+
+    resurface launch checklist. shipping at end of sprint 8 (feb 14-16).
+    this is our first email feature so dns, deliverability, and compliance
+    are all new for us. need the full checklist.
+
+    key stakeholders: priya (pm/launch owner), alex (eng), jess (eng),
+    dan (design), sam (frontend), chloe (data), jordan (growth),
+    marco (ceo, go/no-go).
+
+    go/no-go meeting: feb 12. launch window: feb 14-16 behind feature flag.
+    opt-in enrollment starts mar 2. a/b test starts mar 9.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Launch Checklist: Resurface — Morning Email Digest
+
+??? example "Workbench (Enterprise): Workbench enterprise collaboration platform - Blueprints v1 GA launch readiness checklist"
+    **Prompt:**
+
+    ```
+    /launch-checklist
+
+    I need a comprehensive launch checklist for Blueprints v1 GA. Here's the context:
+
+    **Launch details:**
+    - Launch name: Blueprints GA
+    - Target date: April 28, 2026
+    - Rollout: From 80 closed-beta accounts to all ~500 enterprise customers [fictional]
+    - Ship decision confirmed by Sandra C. on April 14, 2026
+
+    **Key stakeholders:**
+    - Rachel V. (PM), Karen L. (Eng Lead), Tomás G. (Design Lead), Derek H. (Head of Marketing), Mei-Lin T. (Enterprise Sales Lead), James W. (VP Eng)
+
+    **Critical items I'm tracking:**
+    - SAML SSO certification -- must be complete before GA (enterprise blocker)
+    - IT admin provisioning guide -- enterprise security teams need this before they'll onboard
+    - Confluence migration communication plan -- many prospects are switching from Confluence
+    - A/B test code cleanup -- remove experiment flags, ship required-sections as default
+    - WebSocket provider scaling -- validated at 80 accounts, need to load test for 500
+
+    **Rollback concern:** If a critical bug surfaces in the first 48 hours, we need a clean rollback to the pre-Blueprints state without data loss for accounts that already created Blueprints during GA.
+
+    Please generate the full launch checklist with go/no-go criteria and a rollback plan.
+    ```
+
+    **Output:**
+
+    # Launch Checklist: Blueprints v1 GA
 
 ## Quality Checklist
 

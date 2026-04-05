@@ -11,6 +11,9 @@ tags:
 !!! info "Quick facts"
     **Phase:** Develop | **Version:** 2.0.0 | **Category:** specification | **License:** Apache-2.0
 
+**Try it:** `/design-rationale "Your context here"`
+{ .md-button }
+
 # Design Rationale
 
 A design rationale document captures the "why" behind design decisions—the context, constraints, alternatives considered, and reasoning that led to a particular solution. While designs themselves show what was built, rationale documents preserve institutional knowledge about why it was built that way.
@@ -501,6 +504,108 @@ When asked to document design rationale, follow these steps:
     ---
 
     *This rationale documents the reasoning at the time of decision. Context may change.*
+
+## Real-World Examples
+
+See this skill applied to three different product contexts:
+
+??? example "Storevine (B2B): Storevine B2B ecommerce platform — Campaigns audience selection UX design decision"
+    **Prompt:**
+
+    ```
+    /design-rationale
+
+    Project: Campaigns — native email marketing for Storevine merchants
+    Decision: Audience selection UX for the campaign creation flow
+    Stage: Pre-sprint design review — finalizing Figma specs before engineering
+
+    Decision I need to document:
+    - We debated 3 audience selection approaches before the design review:
+      A. Custom filter builder (SQL-like nested conditions, matches Klaviyo)
+      B. Pre-built named segments only (curated list, no customization)
+      C. Pre-built segments as default + custom filter as secondary option
+    - We chose Option C after design review with PM, design lead, and eng lead
+
+    Context:
+    - Primary target segment: non-adopter merchants (no current email tool)
+    - Interview data: 3 of 8 merchants cited setup complexity as the barrier
+    - Figma link: [internal — Campaigns audience selection v3 spec]
+
+    Need: full design rationale document for the engineering handoff package.
+    Decision makers: Design Lead, Growth PM, Engineering Lead.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Design Rationale: Campaigns Audience Selection UX
+
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — digest email layout design decision for the Resurface feature"
+    **Prompt:**
+
+    ```
+    /design-rationale
+
+    digest email layout for resurface. dan showed three options:
+
+    option A: rich cards — article thumbnail, title, excerpt, topic tag
+    for each item. looks great in figma but heavy on images and might
+    trigger promotions tab.
+
+    option B: structured text — article title (linked), source domain,
+    topic tag, estimated read time. no images. clean, editorial feel.
+    fast to scan.
+
+    option C: minimal plain text — just titles and links, no styling.
+    maximum deliverability but looks like a system notification, not a
+    product experience.
+
+    we did a quick preference test with 12 users. 9 preferred option B.
+    reasons: "fast," "doesn't look like spam," "I'd actually read this."
+
+    going with B. need the rationale written up.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Design Rationale: Resurface Digest Email Layout
+
+??? example "Workbench (Enterprise): Workbench enterprise collaboration platform: guided wizard vs. blank canvas for Blueprint creation flow"
+    **Prompt:**
+
+    ```
+    /design-rationale
+
+    Decision: Blueprint creation flow -- guided wizard vs. blank canvas
+    Product: Workbench Blueprints (enterprise doc templates with required sections and approval gates)
+    Stage: Develop phase, pre-PRD
+
+    Problem: How should a new Blueprint be created? Two options:
+    - Option A: Guided wizard -- step-by-step flow, one section per screen, progress indicator, validation per step
+    - Option B: Blank canvas -- full template opens in the editor, all sections visible, fill in any order (Confluence model)
+    - Option C (hybrid): Wizard for first-time creation, canvas for returning authors who have completed a Blueprint before
+
+    Context:
+    - Enterprise users are not power users of Workbench yet -- Blueprints is a new feature
+    - Required sections are the core differentiator; the creation flow must make enforcement feel helpful, not punitive
+    - Discovery interviews: middle managers act as "docs police"; the creation flow should reduce, not increase, that burden
+    - Closed-beta preference test (8 users [fictional]): 6 preferred wizard on first use, 5 preferred canvas after their second Blueprint
+    - Karen L. (Eng Lead): wizard adds 1 sprint of effort vs. canvas [fictional]
+    - Tomas G. (Design Lead): wizard produces cleaner first submissions but risks feeling patronizing for experienced authors
+
+    Evaluation criteria: first-submission completeness rate, author time-to-submit, author satisfaction (NPS), engineering effort, scalability to custom templates
+
+    Stakeholders: Sandra C. (Head of Product), Karen L. (Eng Lead), Tomas G. (Design Lead)
+    ```
+
+    ---
+
+    **Output:**
+
+    # Design Rationale: Blueprint Creation Flow
 
 ## Quality Checklist
 

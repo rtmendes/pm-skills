@@ -11,6 +11,9 @@ tags:
 !!! info "Quick facts"
     **Phase:** Deliver | **Version:** 2.0.0 | **Category:** specification | **License:** Apache-2.0
 
+**Try it:** `/prd "Your context here"`
+{ .md-button }
+
 # Product Requirements Document (PRD)
 
 A Product Requirements Document is the primary specification artifact that communicates what to build and why. It bridges the gap between problem understanding and engineering implementation by providing clear requirements, success criteria, and scope boundaries. A good PRD enables engineering to build the right thing while maintaining flexibility on implementation details.
@@ -435,6 +438,126 @@ See [link to detailed user stories] for full acceptance criteria.
     | 0.1 | Jan 10, 2026 | Sarah Chen | Initial draft |
     | 0.2 | Jan 12, 2026 | Sarah Chen | Added edge cases, updated scope |
     | 1.0 | Jan 14, 2026 | Sarah Chen | Final review, approved by stakeholders |
+
+## Real-World Examples
+
+See this skill applied to three different product contexts:
+
+??? example "Storevine (B2B): Storevine B2B ecommerce platform — Campaigns (built-in email marketing)"
+    **Prompt:**
+
+    ```
+    /prd
+
+    Feature: Campaigns — native email marketing for Storevine merchants
+
+    Context: Storevine all-in-one ecommerce + web builder, ~18k active merchants
+    [fictional]. See: competitive-analysis (filed last week), problem-statement
+    (Q4 discovery doc).
+
+    Discovery: Email marketing is a top-3 churn driver. Exit survey: 22% of churned
+    accounts in Q4 cited "had to use a separate email tool" as a primary reason
+    [fictional]. Power merchants patch with Klaviyo or Mailchimp; smaller merchants
+    skip email entirely because setup friction is too high.
+
+    Validated solution: Built-in Campaigns — broadcast email + basic audience
+    segmentation. Phase 1 email only, SMS deferred. Pre-built templates, audience
+    builder using order/tag data we already have. No custom HTML editor v1.
+
+    Success targets:
+    - 40% of active merchants send ≥1 campaign in first 90 days post-launch [fictional]
+    - Reduce email-churn contribution by 30% at 6 months [fictional]
+    - Campaigns becomes a net-new revenue line (paid tier above free send limit)
+
+    Scope locked with eng: v1 = broadcast email + 3 automations (abandoned cart,
+    welcome, re-engagement). No SMS, no A/B testing, no multi-step sequences.
+
+    Technical decisions already made:
+    - Sending via SendGrid (existing account)
+    - Audience builder queries existing customer/order tables — no new pipeline
+    - Legal review on CAN-SPAM + GDPR required before launch (not yet started)
+
+    Stakeholders: Growth PM (owner), Eng Lead (aligned), Design (in progress),
+    Legal (needs to review compliance section), Marketing (will dog-food).
+    ```
+
+    ---
+
+    **Output:**
+
+    # PRD: Storevine Campaigns
+
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — Resurface feature PRD for Sprint 8 build"
+    **Prompt:**
+
+    ```
+    /prd
+
+    resurface prd for sprint 8. pulling everything together: solution brief,
+    adr (resend), design rationale (text layout), spike (tfidf).
+
+    building the daily email digest that surfaces 3-5 saved items matched
+    to recent reading. opt-in required. 7:30 AM local time. tfidf for
+    topic matching. resend for email. text-only layout.
+
+    target users: active savers (10+ items, active in last 30 days) —
+    about 9,800 users [fictional].
+
+    metrics: 7-day return rate 18%→25% [fictional], email CTR ≥15% [fictional],
+    unsub ≤2%/week [fictional].
+
+    scope: digest email, topic matching, opt-in flow, cadence setting,
+    one-click read, analytics events. NOT doing: in-app resurfacing,
+    push notifications, smart collections.
+
+    timeline: sprint 8 build (feb 3-16), setup week (mar 2-8),
+    a/b test (mar 9 - apr 5), decision (apr 11).
+    ```
+
+    ---
+
+    **Output:**
+
+    # PRD: Resurface — Morning Email Digest
+
+??? example "Workbench (Enterprise): Workbench enterprise collaboration platform - Blueprints v1 PRD for required-section enforcement and approval gates"
+    **Prompt:**
+
+    ```
+    /prd
+
+    Here is the structured brief for the Blueprints v1 PRD.
+
+    **Product context:**
+    - Workbench collaboration platform, ~500 enterprise customers [fictional], Series B
+    - Blueprints = reusable document templates with required sections and approval gates
+    - Core problem: 38% of Blueprints reach approval with ≥1 empty section [fictional]; median time to first approval is 4.0 days [fictional]; 60% of enterprise projects lack an approved kickoff doc at handoff [fictional]
+
+    **Prior decisions to incorporate:**
+    - ADR-012: Yjs CRDTs selected for real-time co-editing (45ms merge latency at 20 concurrent editors [fictional], +38KB gzipped [fictional])
+    - Design rationale: Hybrid wizard/canvas -- guided wizard for first-time authors, blank canvas for returning authors
+    - Opportunity tree: Priority path is documentation governance gap → required-section enforcement
+    - Hypothesis: Required sections reduce time-to-approved from 4.0 days to ≤2.5 days [fictional]; validation via A/B test (Mar 9 -- Apr 5, 2026)
+
+    **Target users:** Enterprise ops managers (creators), department heads (approvers), IT security leads (admin/provisioning)
+
+    **Key features for v1:**
+    1. Required-section enforcement (submit button disabled until all required sections complete)
+    2. Native approval gates (role-based routing, sequential and parallel approval)
+    3. Yjs real-time co-editing (offline-first, sub-document-level sync)
+    4. Hybrid wizard/canvas creation flow
+    5. Enterprise security suite (SAML SSO, audit logs, role-based access)
+
+    **Timeline:** Closed beta running now with 80 accounts [fictional]; A/B test Mar 9 -- Apr 5; GA target April 2026
+
+    **Success metrics:** Time-to-approved ≤2.5 days [fictional], empty-section rate ≤10% [fictional], enterprise account growth from 500 to 650 in 12 months [fictional]
+
+    Please generate a complete PRD following the standard template.
+    ```
+
+    **Output:**
+
+    # PRD: Workbench Blueprints v1
 
 ## Quality Checklist
 

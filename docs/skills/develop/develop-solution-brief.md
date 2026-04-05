@@ -11,6 +11,9 @@ tags:
 !!! info "Quick facts"
     **Phase:** Develop | **Version:** 2.0.0 | **Category:** ideation | **License:** Apache-2.0
 
+**Try it:** `/solution-brief "Your context here"`
+{ .md-button }
+
 # Solution Brief
 
 A solution brief is a concise, one-page document that communicates the proposed solution to a problem. It serves as the bridge between problem understanding and detailed specification, providing enough context for stakeholders to align on the approach without getting lost in implementation details. The one-page constraint forces clarity and prioritization.
@@ -175,6 +178,126 @@ When asked to create a solution brief, follow these steps:
     3. Begin Apple Pay sandbox integration — iOS Engineer, Jan 25
     4. Plan A/B test framework and success criteria — PM + Data, Jan 27
     5. Draft user communication for checkout change — Marketing, Feb 1
+
+## Real-World Examples
+
+See this skill applied to three different product contexts:
+
+??? example "Storevine (B2B): Storevine B2B ecommerce platform — Campaigns one-page solution brief for head of product review"
+    **Prompt:**
+
+    ```
+    /solution-brief
+
+    Project: Campaigns — native email marketing for Storevine merchants
+
+    I need a one-page brief for a head of product review before engineering
+    kickoff. Full PRD already written and reviewed with engineering lead.
+    This brief is for executive context, not the build team.
+
+    Problem (3 sentences max):
+    - 68% of active merchants use external email tools [fictional]
+    - Built-in tools lack segmentation + attribution
+    - 22% churn cited email gaps as a top-3 reason [fictional]
+
+    Solution: native email within Storevine admin — no separate tool
+    subscription, no sync required
+
+    v1 features to include:
+    - Purchase-based audience segments (pre-built, seeded from Storevine data)
+    - Guided first-campaign flow (product-seeded templates)
+    - Revenue attribution (SendGrid webhook → order database)
+    - CAN-SPAM/GDPR compliance built in
+    - Abandoned cart automation
+
+    Success metrics, trade-offs (what we're NOT building), and top risks.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Solution Brief: Campaigns — Native Email Marketing for Storevine Merchants
+
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — Resurface feature solution brief for team alignment"
+    **Prompt:**
+
+    ```
+    /solution-brief
+
+    resurface one-pager for the team. need to get everyone on the same
+    page before sprint 8 starts. marco wants to see it too.
+
+    the solution: daily morning email digest that surfaces 3-5 saved items
+    matched to what the user has been reading recently. opt-in required.
+    7:30 AM local time. topic matching algorithm picks the items.
+
+    key features: email digest, topic matching, opt-in flow, one-click
+    read, cadence setting (daily default, can switch to 3x/week).
+
+    primary metric: 7-day return rate, 18% → 25% [fictional].
+    secondary: email CTR. guardrail: unsub rate ≤2%/week.
+
+    explicitly NOT doing: in-app resurfacing (deferred), push notifications
+    (too aggressive for first version), smart collections (too big),
+    annotation-based resurfacing (that's readwise's approach, we're
+    doing topic matching instead).
+    ```
+
+    ---
+
+    **Output:**
+
+    # Solution Brief: Resurface — Morning Email Digest
+
+??? example "Workbench (Enterprise): Workbench enterprise collaboration platform: Blueprints solution brief (one-pager)"
+    **Prompt:**
+
+    ```
+    /solution-brief
+
+    Product: Workbench Blueprints -- reusable document templates with required sections and role-based approval gates
+    Stage: Pre-PRD; consolidating decisions from discovery, define, and develop phases into a one-pager
+
+    Problem recap:
+    - 38% of enterprise documents reach approval with >=1 empty required section [fictional]
+    - Median time to first approval: 4.0 days [fictional]; most of that is rejection-revision cycles
+    - 60% of enterprise projects lack an approved kickoff doc at handoff [fictional]
+    - No doc-first competitor enforces template section completion
+
+    Proposed solution:
+    - Blueprint templates with required and optional sections, designated by template admins
+    - Required-section enforcement at submission (Submit button disabled until all required sections complete)
+    - Native role-based approval gates (single-stage approval in v1; multi-stage in v1.1)
+    - Real-time co-editing via Yjs CRDTs (offline-first, 20+ concurrent editors [fictional])
+    - Hybrid creation flow: guided wizard for first-time authors, blank canvas for returning authors
+    - SAML SSO, audit logs, and SCIM provisioning for enterprise deployment
+
+    Key features (5):
+    1. Required-section enforcement
+    2. Native approval gates
+    3. Yjs-powered co-editing
+    4. Hybrid wizard/canvas creation flow
+    5. Enterprise security (SAML, audit logs, SCIM)
+
+    Success metrics:
+    - Median time to first approval: 4.0 days -> <=2.5 days [fictional]
+    - Approval rejection rate: 38% -> <=15% [fictional]
+    - Enterprise accounts with active Blueprints: 200 of 500 within 6 months of GA [fictional]
+    - Enterprise churn (compliance segment): 18% -> <=12% within 12 months [fictional]
+
+    Trade-offs: No AI-assisted drafting in v1 (Partial per competitive analysis); no multi-stage approval in v1; no Confluence template import in v1 (guided manual migration only)
+
+    Risks: CRDT complexity (mitigated by spike); author abandonment from enforcement (mitigated by A/B test); Atlassian Rovo response (monitor)
+
+    Stakeholders: Sandra C. (Head of Product), Derek H. (Head of Marketing), Mei-Lin T. (Enterprise Sales Lead)
+    ```
+
+    ---
+
+    **Output:**
+
+    # Solution Brief: Workbench Blueprints
 
 ## Quality Checklist
 

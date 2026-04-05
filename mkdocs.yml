@@ -80,6 +80,9 @@ plugins:
       separator: '[\s\-\.]+'
   - privacy:
       enabled: !ENV [CI, true]
+  - social:
+      enabled: !ENV [CI, false]
+  - tags
 
 # Exclude files from site build that have copies in the MkDocs tree
 exclude_docs: |
@@ -151,6 +154,7 @@ nav:
   - Home:
     - index.md
     - Changelog: changelog.md
+    - Tags: tags.md
 
   - Getting Started:
     - getting-started/index.md
@@ -214,6 +218,9 @@ nav:
     - guides/index.md
     - Using Skills: guides/using-skills.md
     - Creating Skills: guides/creating-skills.md
+    - Skill Finder: guides/skill-finder.md
+    - Recipes: guides/recipes.md
+    - Prompt Gallery: guides/prompt-gallery.md
     - MCP Integration: guides/mcp-integration.md
     - MCP Sync Validation: guides/validate-mcp-sync.md
 
@@ -223,6 +230,13 @@ nav:
     - Agent Skill Anatomy: concepts/agent-skill-anatomy.md
     - Skill Lifecycle: concepts/skill-lifecycle.md
     - The Triple Diamond: concepts/triple-diamond.md
+    - Skill Comparisons: concepts/comparisons.md
+
+  - Showcase:
+    - showcase/index.md
+    - "Storevine (B2B)": showcase/storevine.md
+    - "Brainshelf (Consumer)": showcase/brainshelf.md
+    - "Workbench (Enterprise)": showcase/workbench.md
 
   - Reference:
     - Commands: reference/commands.md

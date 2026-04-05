@@ -11,6 +11,9 @@ tags:
 !!! info "Quick facts"
     **Phase:** Measure | **Version:** 2.0.0 | **Category:** validation | **License:** Apache-2.0
 
+**Try it:** `/dashboard-requirements "Your context here"`
+{ .md-button }
+
 # Dashboard Requirements
 
 A dashboard requirements document specifies what questions a dashboard should answer, what metrics it displays, and how data should be visualized. Clear requirements help data teams build dashboards that actually inform decisions rather than just displaying numbers.
@@ -702,6 +705,123 @@ When asked to specify dashboard requirements, follow these steps:
     ---
 
     *Requirements version 1.0. Update as needs evolve.*
+
+## Real-World Examples
+
+See this skill applied to three different product contexts:
+
+??? example "Storevine (B2B): Storevine B2B ecommerce platform — Campaigns adoption and revenue analytics dashboard requirements"
+    **Prompt:**
+
+    ```
+    /dashboard-requirements
+
+    Dashboard: Campaigns adoption and revenue — post-GA monitoring
+    Audience: Growth PM (daily), Merchant Success (weekly), Head of Product
+              (monthly board prep)
+
+    Key questions to answer:
+    1. Are non-adopter merchants sending their first campaign?
+       (primary hypothesis metric: first-send rate, 60-day window)
+    2. Is Campaigns driving measurable revenue for merchants?
+       (7-day attributed revenue per campaign send)
+    3. Is the email-related churn rate declining since GA?
+       (churn cohort analysis: merchants with and without Campaigns sends)
+
+    Metrics needed:
+    - First-send rate (60-day, non-adopter segment)
+    - Campaigns-attributed revenue (7-day window, rolling)
+    - Active Campaigns merchants (sent ≥1 campaign in last 30 days)
+    - Churn rate by Campaigns usage cohort
+    - Send failure rate and unsubscribe rate (guardrails)
+
+    Analytics platform: Amplitude (events) + Storevine order DB (revenue)
+
+    Need: full dashboard requirements doc with metric definitions,
+    visualizations, filters, data sources, and acceptance criteria.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Dashboard Requirements: Campaigns Adoption and Revenue
+
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — Resurface experiment dashboard requirements for Amplitude"
+    **Prompt:**
+
+    ```
+    /dashboard-requirements
+
+    resurface experiment dashboard for amplitude. need it ready before
+    the a/b test starts (mar 9).
+
+    two audiences:
+    1. product team (priya, chloe, alex, jordan) — daily monitoring
+       during the 4-week test
+    2. marco (ceo) — weekly exec check-in, needs a single-screen summary
+
+    questions the dashboard should answer:
+    - is the treatment group returning more than control?
+    - are users clicking items in the digest?
+    - is the unsubscribe rate within the guardrail?
+    - what's the opt-in funnel conversion rate?
+    - are there segment differences (library size, cadence)?
+
+    charts i want:
+    1. 7-day return rate trend (treatment vs control, weekly)
+    2. email CTR trend (daily)
+    3. opt-in funnel (card viewed → opted in)
+    4. unsubscribe rate trend (weekly, with guardrail line)
+    5. segment breakdown table (library size, cadence)
+
+    filters: date range, experiment variant, library size segment.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Dashboard Requirements: Resurface Experiment Dashboard
+
+??? example "Workbench (Enterprise): Workbench enterprise collaboration platform: Blueprints post-launch monitoring dashboard requirements"
+    **Prompt:**
+
+    ```
+    /dashboard-requirements
+
+    I need dashboard requirements for the Blueprints post-launch monitoring dashboard. Here's the context:
+
+    **Audiences:**
+    1. Rachel V. (PM) -- daily check: adoption trends, approval bottlenecks, template usage
+    2. Sandra C. (Head of Product) -- weekly review: executive summary, account growth, key health metrics
+    3. Karen L. (Engineering) -- real-time: system health, merge latency, error rates
+
+    **Key metrics from the PRD and experiment results:**
+    - Median time-to-approved (target: ≤2.5 days [fictional])
+    - Empty-section submission rate (target: ≤10% [fictional])
+    - Approval cycle count (target: ≤1.5 cycles [fictional])
+    - Blueprint adoption: monthly active Blueprint creators (target: 2,000 [fictional])
+    - Enterprise account growth (target: 500 → 650 in 12 months [fictional])
+
+    **Data sources:**
+    - Workbench analytics pipeline (event data from instrumentation spec)
+    - WebSocket provider telemetry (merge latency, connection count, error rate)
+    - CRM pipeline (account growth, enterprise tier)
+    - Support ticketing system (Blueprint-related ticket volume)
+
+    **Visualization preferences:**
+    - Time-to-approved: trend line over time (weekly median)
+    - Adoption: stacked area chart by department/template type
+    - Approval funnel: horizontal funnel chart
+    - System health: real-time gauges with alert thresholds
+
+    Please generate the full dashboard requirements including layout, filters, alerts, and acceptance criteria.
+    ```
+
+    **Output:**
+
+    # Dashboard Requirements: Blueprints Post-Launch Monitor
 
 ## Quality Checklist
 

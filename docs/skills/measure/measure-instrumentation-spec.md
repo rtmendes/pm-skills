@@ -11,6 +11,9 @@ tags:
 !!! info "Quick facts"
     **Phase:** Measure | **Version:** 2.0.0 | **Category:** validation | **License:** Apache-2.0
 
+**Try it:** `/instrumentation-spec "Your context here"`
+{ .md-button }
+
 # Instrumentation Spec
 
 An instrumentation spec defines what analytics events to track, when to fire them, and what properties to include. It serves as a contract between product and engineering, ensuring consistent data collection that enables accurate measurement. Good instrumentation specs prevent the "we can't answer that question because we didn't track it" problem.
@@ -430,6 +433,113 @@ When asked to create an instrumentation spec, follow these steps:
     - Access Amplitude debug panel: append `?amplitude_debug=true` to URL
     - View events in browser console: `amplitude.getInstance().logLevel = 'DEBUG'`
     - Validate in Amplitude: User Lookup > search by user_id > Event Stream
+
+## Real-World Examples
+
+See this skill applied to three different product contexts:
+
+??? example "Storevine (B2B): Storevine B2B ecommerce platform — Campaigns send flow and first-campaign flow analytics instrumentation"
+    **Prompt:**
+
+    ```
+    /instrumentation-spec
+
+    Feature: Campaigns — campaign send flow + guided first-campaign flow
+    Analytics platform: Amplitude
+
+    Events I need to instrument:
+    1. campaign_created — merchant saves a campaign draft
+    2. campaign_sent — merchant sends a campaign
+    3. first_send_completed — merchant sends their FIRST campaign ever
+       (milestone event for the non-adopter hypothesis)
+    4. attribution_recorded — a purchase is linked to a campaign click
+       within the 7-day attribution window
+
+    Prior work:
+    - Experiment design: A/B test using first_send_completed as primary metric
+    - Spike summary: SendGrid webhook attribution confirmed; unique_args
+      includes campaign_id, merchant_id, recipient_customer_id
+
+    PII note: Subscriber email addresses must NOT be sent to Amplitude.
+    Only customer_id (pseudonymous internal identifier).
+
+    Need: full instrumentation spec with event definitions, properties,
+    PII handling, implementation notes, and QA testing checklist.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Instrumentation Spec: Campaigns Send Flow and First-Campaign Flow
+
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — Resurface feature analytics instrumentation spec"
+    **Prompt:**
+
+    ```
+    /instrumentation-spec
+
+    resurface analytics events for amplitude. need the full spec before
+    sprint 8 starts so alex and jess can instrument during the build.
+
+    events:
+    1. resurface_opt_in — user enables the digest
+    2. resurface_digest_sent — server sends a digest email
+    3. resurface_digest_opened — user opens the email (caveat: apple MPP)
+    4. resurface_item_clicked — user clicks an item in the digest
+    5. resurface_unsubscribe — user unsubscribes
+    6. resurface_cadence_changed — user changes frequency
+    7. resurface_digest_skipped — server skips sending (no qualifying items,
+       exclusion window exhausted, etc.)
+
+    also need user properties: digest_enabled, digest_cadence, digest_timezone.
+
+    keep it tight. chloe wants to review before sprint planning on monday.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Instrumentation Spec: Resurface Digest
+
+??? example "Workbench (Enterprise): Workbench enterprise collaboration platform: Blueprints v1 GA instrumentation spec"
+    **Prompt:**
+
+    ```
+    /instrumentation-spec
+
+    I need the instrumentation spec for Blueprints v1 GA. Here are the events I've identified from the PRD and experiment results:
+
+    **Core lifecycle events:**
+    1. `blueprint_created` -- when an author creates a new Blueprint from a template
+    2. `section_completed` -- when a required section transitions from empty to non-empty
+    3. `section_cleared` -- when a required section transitions from non-empty to empty
+    4. `approval_requested` -- when an author submits a Blueprint for approval
+    5. `approval_granted` -- when an approver approves a Blueprint
+    6. `approval_rejected` -- when an approver rejects a Blueprint
+    7. `blueprint_published` -- when an approved Blueprint is published to the team workspace
+
+    **Key properties I need on each event:**
+    - Standard: account_id, user_id, blueprint_id, template_id, timestamp
+    - blueprint_created: creation_method (wizard/canvas), template_name, required_section_count, optional_section_count
+    - section_completed/cleared: section_id, section_name, is_required, word_count
+    - approval events: approval_chain_type (sequential/parallel), approver_position, approval_cycle_number
+    - blueprint_published: time_to_approved_hours, total_approval_cycles, co_editor_count
+
+    **PII concerns:**
+    - user_id is internal (UUID), not PII
+    - We must NOT capture section content in events -- only metadata
+    - Account names should not appear in event properties; use account_id only
+
+    **SDK:** Workbench Analytics SDK (server-side collector, JavaScript client)
+
+    Please generate the full instrumentation spec with testing checklist.
+    ```
+
+    **Output:**
+
+    # Instrumentation Spec: Workbench Blueprints v1
 
 ## Quality Checklist
 

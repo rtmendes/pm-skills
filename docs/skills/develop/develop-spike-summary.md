@@ -11,6 +11,9 @@ tags:
 !!! info "Quick facts"
     **Phase:** Develop | **Version:** 2.0.0 | **Category:** coordination | **License:** Apache-2.0
 
+**Try it:** `/spike-summary "Your context here"`
+{ .md-button }
+
 # Spike Summary
 
 A spike summary documents the results of a time-boxed exploration — a focused investigation to reduce uncertainty before committing to implementation. Spikes answer specific questions like "Can we integrate with this API?" or "Is this technology viable for our use case?" The summary captures findings so the team can make informed decisions without the spike participants needing to repeat explanations.
@@ -284,6 +287,112 @@ When asked to document a spike, follow these steps:
     | Set up Stripe Radar for fraud prevention | DevOps | Week of Jan 20 |
     | Document payment abstraction interface | Chen Wei | Feb 1 |
     | Schedule Adyen volume pricing call for Q3 | PM | Q3 2026 |
+
+## Real-World Examples
+
+See this skill applied to three different product contexts:
+
+??? example "Storevine (B2B): Storevine B2B ecommerce platform — revenue attribution feasibility spike for Campaigns v1"
+    **Prompt:**
+
+    ```
+    /spike-summary
+
+    Spike: Revenue attribution feasibility — can SendGrid open/click webhooks
+    be linked to Storevine purchase events within v1 timeline?
+
+    Context:
+    - Revenue attribution is a launch-gate requirement (confirmed in interview
+      synthesis and opportunity tree)
+    - Engineering ADR selected SendGrid for Campaigns email delivery
+    - Engineering Lead asked for a 1-week spike before sprint planning
+
+    What we investigated:
+    - SendGrid Event Webhook payload structure and custom data fields
+    - Whether Storevine's customer_id can survive the email→purchase journey
+    - POC: send a test campaign, receive webhook, match to staging order
+    - Attribution window design: real-time vs. deferred (7-day)
+
+    Need: full spike summary with findings, recommendation, and follow-up
+    items. Will share with PM and Engineering Lead to unblock sprint planning.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Spike Summary: Revenue Attribution via SendGrid Event Webhooks
+
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — topic-matching algorithm spike for the Resurface digest"
+    **Prompt:**
+
+    ```
+    /spike-summary
+
+    topic matching spike for resurface. alex spent 3 days on it last
+    week. question: can we build something that picks saved items relevant
+    to what the user has been reading recently, accurate enough to not
+    annoy people?
+
+    three approaches tested:
+    1. tag-based — use OG tags, domain, URL patterns. simplest, no ML.
+    2. tfidf — extract article text, vectorize, cosine similarity. no
+       external api. medium complexity.
+    3. openai embeddings — text-embedding-3-small. highest accuracy but
+       adds external dependency and per-call cost.
+
+    benchmark: 3 real user libraries (anonymized), 50 items each,
+    manually rated as "relevant" or "not relevant" to recent reading.
+
+    results: tags = ~55% [fictional], tfidf = ~72% [fictional],
+    embeddings = ~84% [fictional].
+
+    recommendation: go with tfidf for mvp. meets the 70% bar we set,
+    no external dependency. plan to migrate to embeddings later if the
+    feature sticks.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Spike Summary: Topic-Matching Algorithm for Resurface Digest
+
+??? example "Workbench (Enterprise): Workbench enterprise collaboration platform: CRDT library evaluation for Blueprint co-editing"
+    **Prompt:**
+
+    ```
+    /spike-summary
+
+    Spike: CRDT library evaluation for Blueprints real-time co-editing
+    Product: Workbench (enterprise collaboration platform)
+    Engineer: Nate P. (Backend Engineer)
+    Duration: 5 days (Dec 1-5, 2025)
+
+    Background:
+    - Blueprints requires real-time co-editing (20+ concurrent editors per document [fictional])
+    - Our editor is ProseMirror-based; no current collaboration layer
+    - Enterprise requirements: offline-first, conflict resolution, per-user audit trail
+    - Target: 20+ concurrent editors, <100ms merge latency [fictional]
+
+    Libraries evaluated:
+    1. Yjs (CRDT, MIT) -- y-prosemirror binding; offline-first; sub-document support
+    2. Automerge (CRDT, MIT) -- Rust/WASM; strong offline; no ProseMirror binding
+    3. ShareDB (OT, MIT) -- central server model; mature; no offline support
+
+    Findings from prototype:
+    - Yjs: integrated in 2 days; 45ms merge latency at 20 users [fictional]; +38KB gzipped [fictional]; offline works out of box
+    - Automerge: no ProseMirror binding (3-4 week custom build [fictional]); +120KB gzipped [fictional]; excellent offline
+    - ShareDB: integrated in 1.5 days; 62ms merge latency [fictional]; +22KB gzipped [fictional]; NO offline (disqualified)
+
+    Stakeholders: Karen L. (Eng Lead), James W. (VP Engineering)
+    ```
+
+    ---
+
+    **Output:**
+
+    # Spike Summary: CRDT Library Evaluation for Blueprints Co-Editing
 
 ## Quality Checklist
 

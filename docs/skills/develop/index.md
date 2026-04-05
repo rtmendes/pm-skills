@@ -1,9 +1,24 @@
 ---
 title: "Develop Skills"
 description: "PM skills in the Develop phase."
+tags:
+  - Develop
 ---
 
 # Develop Skills
+
+## How these skills connect
+
+```mermaid
+flowchart LR
+    A["/solution-brief"] --> B["/spike-summary"]
+    B --> C["/adr"]
+    A --> D["/design-rationale"]
+    C --> E["/prd"]
+    D --> E
+```
+
+## Skills in this phase
 
 | Skill | Description | Command |
 |-------|-------------|---------|

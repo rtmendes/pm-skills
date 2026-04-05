@@ -1,9 +1,23 @@
 ---
 title: "Define Skills"
 description: "PM skills in the Define phase."
+tags:
+  - Define
 ---
 
 # Define Skills
+
+## How these skills connect
+
+```mermaid
+flowchart LR
+    A["/problem-statement"] --> B["/hypothesis"]
+    A --> C["/jtbd-canvas"]
+    C --> D["/opportunity-tree"]
+    D --> B
+```
+
+## Skills in this phase
 
 | Skill | Description | Command |
 |-------|-------------|---------|

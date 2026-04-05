@@ -11,6 +11,9 @@ tags:
 !!! info "Quick facts"
     **Phase:** Iterate | **Version:** 2.0.0 | **Category:** reflection | **License:** Apache-2.0
 
+**Try it:** `/pivot-decision "Your context here"`
+{ .md-button }
+
 # Pivot Decision
 
 A pivot decision document captures the analysis and rationale behind a strategic direction change—or the decision to stay the course. Based on the Lean Startup concept of "pivot or persevere," this artifact ensures major strategic decisions are made with evidence, communicated clearly, and preserved for organizational learning.
@@ -708,6 +711,102 @@ Common pivot types (Lean Startup):
     ---
 
     *Decision documented on January 14, 2026. 30-day review scheduled for February 14, 2026.*
+
+## Real-World Examples
+
+See this skill applied to three different product contexts:
+
+??? example "Storevine (B2B): Storevine B2B ecommerce platform — Campaigns v2.0 persevere decision after guided flow validation"
+    **Prompt:**
+
+    ```
+    /pivot-decision
+
+    Product: Campaigns — post-GA persevere/pivot evaluation
+    Evaluation date: July 22, 2026 (12 weeks post-GA)
+
+    Situation: Campaigns GA succeeded. Guided flow A/B test: 31.7% vs.
+    13.4% first-send rate [fictional], shipped as default July 10.
+    BUT: Klaviyo-migrated merchants sending at 23% [fictional] monthly —
+    far below the ~60% [fictional] predicted from their Klaviyo history.
+    Three migrated merchants submitted tickets citing missing advanced
+    segmentation and scheduling. Migrator churn tracking at 18% [fictional].
+
+    Question: Should Campaigns v2.0 resources pivot to serve Klaviyo-
+    migrated merchants, or persevere on non-adopter activation?
+
+    Options I need evaluated:
+    1. Persevere — continue non-adopter activation (77% of segment
+       unconverted [fictional])
+    2. Customer Segment Pivot — redirect to Klaviyo-migrated merchants
+    3. Platform Pivot — open Campaigns as an API for third-party email
+       tool integration
+
+    Need: full pivot decision document with analysis and rationale.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Pivot Decision: Campaigns v2.0 Roadmap Direction
+
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — post-experiment persevere decision for Resurface"
+    **Prompt:**
+
+    ```
+    /pivot-decision
+
+    post-experiment pivot decision for resurface. a/b test showed +5.3pp
+    lift in 7-day return rate, p=0.008 [fictional]. all guardrails passed.
+
+    recommending: persevere — ship to all eligible users, invest in v2.
+
+    alternatives considered:
+    1. persevere: ship email digest, iterate on relevance and cadence
+    2. pivot to push notifications: replace email with mobile push as the
+       trigger mechanism
+    3. pivot to in-app resurfacing: replace email with in-app notification
+       card (deferred from the original opportunity tree as solution 1B)
+
+    need the formal decision doc for marco. decision date: april 11, 2026.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Pivot Decision: Resurface — Post-Experiment Evaluation
+
+??? example "Workbench (Enterprise): Workbench enterprise collaboration platform: Blueprints customer segment pivot decision"
+    **Prompt:**
+
+    ```
+    /pivot-decision
+
+    I need a formal pivot-decision document for the exec team. Here's the situation:
+
+    **Current state:**
+    - Blueprints GA launched April 28, 2026; 320/500 accounts active [fictional]
+    - Time-to-approved: 2.4 days [fictional] (on target)
+    - But adoption is uneven: 68% of active Blueprints come from ops/compliance teams [fictional]; 8% from engineering [fictional]; 24% from other departments [fictional]
+    - Sales pipeline: 6 of 8 stalled deals ($1.8M ARR [fictional]) are in regulated industries waiting for compliance-specific features (audit trail export, regulatory template library, compliance officer role)
+
+    **Options:**
+    1. Persevere: Continue horizontal strategy; invest equally across all department use cases
+    2. Customer segment pivot: Narrow focus to ops/compliance teams in regulated industries; defer engineering templates to v2
+    3. Hybrid: Ship the compliance features that unblock the $1.8M pipeline, but keep the horizontal template system
+
+    **My recommendation:** Option 2 (customer segment pivot). The data is clear that ops/compliance is where the product-market fit is strongest. Engineering teams need fundamentally different features (code review integration, CI/CD hooks, Jira-native workflow) that would take 6+ months to build. Narrowing focus now lets us win the compliance segment, hit the 650-account target [fictional], and return to engineering in v2 with dedicated investment.
+
+    **Key concern from Sandra C.:** She worries that narrowing the segment limits the TAM for Series C fundraising. Mei-Lin T. counters that regulated-industry compliance is a $4.2B TAM [fictional] and growing.
+
+    Please generate the full pivot-decision document.
+    ```
+
+    **Output:**
+
+    # Pivot Decision: Workbench Blueprints Customer Segment Focus
 
 ## Quality Checklist
 

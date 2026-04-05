@@ -11,6 +11,9 @@ tags:
 !!! info "Quick facts"
     **Phase:** Define | **Version:** 2.0.0 | **Category:** problem-framing | **License:** Apache-2.0
 
+**Try it:** `/jtbd-canvas "Your context here"`
+{ .md-button }
+
 # Jobs to be Done Canvas
 
 A Jobs to be Done (JTBD) canvas captures the complete picture of why customers "hire" products to make progress in their lives. Based on Clayton Christensen's framework, JTBD goes beyond features and demographics to understand the underlying motivations—functional, emotional, and social—that drive customer behavior.
@@ -522,6 +525,106 @@ When asked to create a JTBD canvas, follow these steps:
     ---
 
     *This canvas should be validated and updated as you learn more about customers.*
+
+## Real-World Examples
+
+See this skill applied to three different product contexts:
+
+??? example "Storevine (B2B): Storevine B2B ecommerce platform — merchant email and tool-stack job-to-be-done for Campaigns"
+    **Prompt:**
+
+    ```
+    /jtbd-canvas
+
+    Project: Campaigns — native email marketing for Storevine merchants
+    Stage: Pre-PRD, grounding feature scope in JTBD framework before
+    engineering handoff
+
+    Job I want to map:
+    - The core job: merchant owner-operators "hiring" their ecommerce platform
+      to run their business without managing a fragmented external tool stack
+    - Specific circumstance: merchant needs email re-engagement for existing
+      customers but every tool they find requires a separate account, API
+      setup, and data sync
+
+    Research basis:
+    - 8 merchant interviews (Jan 12–28, 2026) — direct quotes available
+    - Competitive analysis (Feb 2026): Klaviyo used by ~40% of active
+      merchants [fictional]; Mailchimp by ~20% [fictional]
+    - Q4 exit survey: 22% churn cited "had to use a separate email tool"
+      [fictional]
+
+    Need: full JTBD canvas with functional, emotional, and social job layers,
+    competing solutions, hiring criteria, and product implications. Will
+    inform v1 feature prioritization and GA messaging strategy.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Jobs to be Done Canvas: Run Email Marketing Without Leaving Storevine
+
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — JTBD canvas for saved content re-engagement"
+    **Prompt:**
+
+    ```
+    /jtbd-canvas
+
+    the core job for the resurface feature. users save stuff to brainshelf
+    with the intent to read it later, but the act of saving satisfies the
+    intent — they never actually come back. so the real job isn't "save to
+    read later" (that job is already done by the save action), the real job
+    is "rediscover the things I saved that are still worth my time."
+
+    based on 7 user interviews (jan 2026). guilt pile is the emotional
+    dimension. social dimension: people want to seem well-read but their
+    library proves they're not.
+
+    competing solutions: readwise (expensive), browser bookmarks (no resurface),
+    doing nothing (guilt pile grows), raindrop.io (organize but no resurface).
+    ```
+
+    ---
+
+    **Output:**
+
+    # Jobs to be Done Canvas: Rediscover Saved Content Worth My Time
+
+??? example "Workbench (Enterprise): Workbench enterprise collaboration platform: Blueprints JTBD for ops managers enforcing documentation standards"
+    **Prompt:**
+
+    ```
+    /jtbd-canvas
+
+    Product: Workbench Blueprints (enterprise doc templates with required sections and approval gates)
+    Stage: Define phase, post-discovery interviews
+
+    Job performer: Operations managers and team leads at enterprise companies (500-10,000 employees) who are responsible for ensuring documentation standards are followed across their teams. They are not the approvers (those are department heads) -- they are the middle layer who currently enforce standards manually.
+
+    Circumstance: When a new project kicks off, a compliance review is due, or a vendor onboarding begins, these managers need to ensure the team produces a complete, approved document before work proceeds. Currently they manually review documents for completeness -- a shadow approval role that takes ~3 hours/week [fictional].
+
+    Core job: Enforce documentation standards across the team without becoming the "docs police" -- without spending their time checking whether other people filled in every section.
+
+    Current solutions they "hire":
+    - Confluence templates (direct competitor) -- has templates but no enforcement; "docs graveyard" problem
+    - Notion (direct competitor) -- beautiful UX, zero governance; "flexibility over standards" philosophy
+    - SharePoint + email approval chains (indirect) -- separate tools stitched together; works but is slow and fragile
+    - Manual review by the manager themselves (non-consumption) -- the current workaround; reliable but time-consuming and resented
+
+    Key interview quotes to incorporate:
+    - P6: "I don't want to be the docs police. I want the tool to be the docs police." [fictional]
+    - P1: "Templates without enforcement are just suggestions with formatting." [fictional]
+    - P4: "If one tool did both -- the doc and the approval -- we'd move tomorrow." [fictional]
+
+    Stakeholders: Sandra C. (Head of Product), Tomás G. (Design Lead)
+    ```
+
+    ---
+
+    **Output:**
+
+    # Jobs to be Done Canvas: Enforce Documentation Standards Without Manual Policing
 
 ## Quality Checklist
 

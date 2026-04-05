@@ -11,6 +11,9 @@ tags:
 !!! info "Quick facts"
     **Classification:** Utility | **Version:** 1.0.0 | **Category:** coordination | **License:** Apache-2.0
 
+**Try it:** `/pm-skill-builder "Your context here"`
+{ .md-button }
+
 # PM Skill Builder
 
 This skill creates new PM skills for the pm-skills library. It produces a

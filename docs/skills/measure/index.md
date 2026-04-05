@@ -1,9 +1,22 @@
 ---
 title: "Measure Skills"
 description: "PM skills in the Measure phase."
+tags:
+  - Measure
 ---
 
 # Measure Skills
+
+## How these skills connect
+
+```mermaid
+flowchart LR
+    A["/experiment-design"] --> B["/instrumentation-spec"]
+    B --> C["/dashboard-requirements"]
+    B --> D["/experiment-results"]
+```
+
+## Skills in this phase
 
 | Skill | Description | Command |
 |-------|-------------|---------|

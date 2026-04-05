@@ -11,6 +11,9 @@ tags:
 !!! info "Quick facts"
     **Phase:** Measure | **Version:** 2.0.0 | **Category:** reflection | **License:** Apache-2.0
 
+**Try it:** `/experiment-results "Your context here"`
+{ .md-button }
+
 # Experiment Results
 
 An experiment results document captures what happened when you tested a hypothesis, including statistical outcomes, segment analysis, learnings, and clear recommendations. Good results documentation turns individual experiments into organizational knowledge that improves future decision-making.
@@ -489,6 +492,133 @@ When asked to document experiment results, follow these steps:
     ---
 
     *Results documented on January 14, 2026. Full rollout completed January 20, 2026.*
+
+## Real-World Examples
+
+See this skill applied to three different product contexts:
+
+??? example "Storevine (B2B): Storevine B2B ecommerce platform — Campaigns guided first-campaign flow A/B test results"
+    **Prompt:**
+
+    ```
+    /experiment-results
+
+    Experiment: Campaigns guided first-campaign flow A/B test
+    Ran: April 28 – June 27, 2026 (60 days from GA)
+
+    Results:
+    - Control (blank canvas): 13.4% first-send rate, N=1,204 merchants [fictional]
+    - Treatment (guided flow): 31.7% first-send rate, N=1,198 merchants [fictional]
+    - p < 0.001, statistically significant
+
+    Secondary metrics:
+    - Median time to first send: 43 min (control) vs. 12 min (treatment) [fictional]
+    - Second campaign rate (90 days): 9.1% control vs. 22.8% treatment [fictional]
+
+    Guardrail metrics all within acceptable range.
+
+    Segment finding: treatment effect strongest in fashion/home merchants
+    (38.2% vs. 14.6% control) [fictional]; weakest in specialty food (24.1%
+    vs. 11.8% control) [fictional]
+
+    Decision: ship the guided flow as default. Need full results document
+    for stakeholder review and decision record.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Experiment Results: Campaigns Guided First-Campaign Flow A/B Test
+
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — Resurface A/B test results and ship decision"
+    **Prompt:**
+
+    ```
+    /experiment-results
+
+    resurface a/b test results. test ran mar 9 - apr 5 (4 weeks).
+    800 users, 50/50 split [fictional].
+
+    headline: treatment won.
+
+    primary metric (7-day return rate):
+    - control: 18.1% [fictional]
+    - treatment: 23.4% [fictional]
+    - delta: +5.3pp, p = 0.008 [fictional]
+
+    secondary (email CTR, treatment only): 17.2% [fictional]
+    opt-in rate: 41% of treatment group (164/400) [fictional]
+
+    guardrails all passed:
+    - unsub: 1.3%/week [fictional] (under 2% threshold)
+    - app uninstall: no difference
+    - save rate: no difference
+
+    segments:
+    - heavy savers (100+ items): return rate lift = +7.1pp [fictional]
+    - light savers (10-50 items): return rate lift = +3.8pp [fictional]
+    - daily cadence users: CTR 18.6% [fictional]
+    - 3x/week users: CTR 14.1% [fictional]
+
+    surprising: opt-in rate was 41% [fictional], way above the 10% target.
+    also surprising: week 4 return rate was HIGHER than week 1 (not
+    novelty decay — habit formation).
+
+    recommendation: ship to all eligible users.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Experiment Results: Resurface Daily Digest A/B Test
+
+??? example "Workbench (Enterprise): Workbench enterprise collaboration platform: Blueprints required-section enforcement A/B test results"
+    **Prompt:**
+
+    ```
+    /experiment-results
+
+    Leo M. just finished the A/B test analysis. I need a full experiment-results document for the April 14 ship-decision meeting. Here are the results:
+
+    **Experiment details:**
+    - Name: Required-Section Enforcement A/B Test
+    - Duration: Mar 9 -- Apr 5, 2026 (28 days)
+    - Accounts: 80 closed-beta enterprise accounts [fictional]; 40 treatment, 40 control
+    - Randomization: Account-level (all users within an account see the same variant)
+    - Total Blueprints created during test: 612 (298 treatment, 314 control) [fictional]
+
+    **Primary metric:**
+    - Median time-to-approved: Treatment 2.4 days [fictional] vs. Control 4.0 days [fictional]
+    - Relative change: -40% [fictional]
+    - Mann-Whitney U test: p = 0.001
+    - 95% CI for median difference: 1.2 -- 2.0 days [fictional]
+
+    **Secondary metrics:**
+    - Empty-section submission rate: Treatment 6% [fictional] vs. Control 37% [fictional]
+    - Approval cycle count: Treatment 1.4 [fictional] vs. Control 2.3 [fictional]
+    - Blueprint completion rate (% of started Blueprints that reach approval): Treatment 78% [fictional] vs. Control 71% [fictional]
+
+    **Guardrail metrics:**
+    - Author satisfaction (in-app survey, 1-5 scale): Treatment 3.8 [fictional] vs. Control 3.9 [fictional] (not significant, p=0.42)
+    - Blueprint creation rate (Blueprints started per account per week): Treatment 3.7 [fictional] vs. Control 3.9 [fictional] (not significant, p=0.31)
+    - Average section word count: Treatment 142 words [fictional] vs. Control 128 words [fictional] (significant, p=0.03)
+
+    **Segment analysis:**
+    - By company size: Large (200+ employees): -44% time-to-approved [fictional]; Mid (50-199): -38% [fictional]; Small (10-49): -31% [fictional]
+    - By template type: Project kickoff templates: -45% [fictional]; Process documentation: -35% [fictional]; Meeting notes: -22% [fictional]
+
+    **Surprising finding:** Authors in the treatment group wrote 11% more words per section on average [fictional]. We think the required-section badges acted as a psychological prompt to write more thoroughly.
+
+    **Recommendation:** Ship. Required-section enforcement exceeded our MDE of 1.0 day with high confidence.
+
+    Please generate the full experiment-results document for the ship-decision meeting.
+    ```
+
+    **Output:**
+
+    # Experiment Results: Required-Section Enforcement A/B Test
 
 ## Quality Checklist
 

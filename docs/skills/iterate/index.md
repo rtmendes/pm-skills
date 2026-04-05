@@ -1,9 +1,22 @@
 ---
 title: "Iterate Skills"
 description: "PM skills in the Iterate phase."
+tags:
+  - Iterate
 ---
 
 # Iterate Skills
+
+## How these skills connect
+
+```mermaid
+flowchart LR
+    A["/retrospective"] --> B["/lessons-log"]
+    B --> C["/refinement-notes"]
+    A --> D["/pivot-decision"]
+```
+
+## Skills in this phase
 
 | Skill | Description | Command |
 |-------|-------------|---------|

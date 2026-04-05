@@ -11,6 +11,9 @@ tags:
 !!! info "Quick facts"
     **Phase:** Define | **Version:** 2.0.0 | **Category:** problem-framing | **License:** Apache-2.0
 
+**Try it:** `/problem-statement "Your context here"`
+{ .md-button }
+
 # Problem Statement
 
 A problem statement is a concise document that frames the problem you're solving, articulates the impact on users and the business, and defines clear success criteria. It serves as the foundation for all subsequent product work by ensuring alignment on *what* problem to solve before jumping to *how* to solve it.
@@ -200,6 +203,101 @@ When asked to create a problem statement, follow these steps:
     - [ ] What do competitors' mobile checkout flows look like?
     - [ ] Would users prefer saved payment methods vs. digital wallet integration?
     - [ ] Is shipping cost surprise a larger factor than form friction?
+
+## Real-World Examples
+
+See this skill applied to three different product contexts:
+
+??? example "Storevine (B2B): Storevine B2B ecommerce platform — Campaigns feature problem framing for engineering and design"
+    **Prompt:**
+
+    ```
+    /problem-statement
+
+    Project: Campaigns — native email marketing for Storevine merchants
+    Stage: Define — establishing shared problem framing before PRD draft
+
+    Problem I want to articulate:
+    - ~68% of active merchants use an external email tool [fictional]
+    - Storevine's built-in email lacks purchase-based segmentation and
+      revenue attribution — the two capabilities merchants cite most
+    - Q4 exit survey: 22% of churned merchants cited this as a primary
+      cancellation reason [fictional]
+    - Competitive analysis filed last week: Shopify Email has already
+      validated the built-in email model; Campaigns is behind
+
+    Prior work to integrate:
+    - Competitive analysis (Feb 2026): feature gap matrix vs. Shopify Email,
+      Klaviyo, and Mailchimp; confirmed attribution is the primary v1
+      differentiator opportunity
+    - Q4 exit survey data (internal): 22% churn cited email gaps [fictional]
+
+    Need: full problem statement with user impact, business context, success
+    criteria, constraints, and open questions. Audience: engineering lead,
+    design, legal, and head of product before PRD review.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Problem Statement: Merchants Require External Email Tools for Capabilities Storevine's Platform Should Provide
+
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — saved content re-engagement problem statement"
+    **Prompt:**
+
+    ```
+    /problem-statement
+
+    the guilt pile problem. users save a ton of stuff to brainshelf but
+    never come back to read it. interview data says 5/7 users described
+    their library negatively. behavioral data says <9% revisit rate within
+    30 days [fictional]. 7-day return rate is 18% [fictional], OKR target
+    is 25% [fictional] by end of Q2.
+
+    need a clean problem statement to align the team before we start
+    building the resurface hypothesis.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Problem Statement: Saved Content Re-Engagement Gap
+
+??? example "Workbench (Enterprise): Workbench enterprise collaboration platform: enterprise documentation completeness gap"
+    **Prompt:**
+
+    ```
+    /problem-statement
+
+    Product: Workbench (enterprise collaboration platform, Series B, ~500 enterprise customers [fictional])
+    Feature area: Document templates and approval workflows (Blueprints)
+
+    The problem: Enterprise teams create documents using templates but no tool enforces template completion before a document enters the approval workflow. Result: approvers receive incomplete documents, send them back, and the approval cycle inflates from what should be a same-day decision to a multi-day back-and-forth.
+
+    Who is affected: Primarily two personas -- (1) document authors (project leads, ops managers) who use templates but don't complete every section; (2) approvers (department heads, compliance leads) who receive incomplete documents and must either reject and wait or approve and accept compliance risk.
+
+    Scale:
+    - 38% of Blueprints in closed beta reach approval with ≥1 empty required section [fictional]
+    - 60% of enterprise projects in our customer base lack an approved kickoff document at the time of project handoff [fictional]
+    - Median time to first approval: 4.0 days [fictional]; estimated 3 of those days are queue time while the doc is bounced back for completion
+    - Approvers review ~15 docs/month on average; at least half are incomplete [fictional]
+
+    Strategic context:
+    - H1 2026 OKR: expand enterprise customer base from 500 to 650 [fictional]
+    - Enterprise churn in compliance-heavy segments (healthcare, financial services, government) is 18% annual [fictional]; governance tooling is the most-requested feature in churn exit surveys
+    - Series C fundraise planned for late 2026; enterprise traction is the anchor narrative
+    - Competitive gap: no doc-first tool (Confluence, Notion, Coda) enforces template section completion; Monday.com has approval workflows but is not a document tool
+
+    Stakeholders: Sandra C. (Head of Product), Mei-Lin T. (Enterprise Sales Lead)
+    ```
+
+    ---
+
+    **Output:**
+
+    # Problem Statement: Enterprise Document Approval Inefficiency Due to Incomplete Template Submissions
 
 ## Quality Checklist
 

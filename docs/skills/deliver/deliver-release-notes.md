@@ -11,6 +11,9 @@ tags:
 !!! info "Quick facts"
     **Phase:** Deliver | **Version:** 2.0.0 | **Category:** coordination | **License:** Apache-2.0
 
+**Try it:** `/release-notes "Your context here"`
+{ .md-button }
+
 # Release Notes
 
 Release notes communicate product changes to users in a way that highlights value and builds excitement. Unlike changelogs (which document what changed technically), release notes translate changes into user benefits. Good release notes help users discover new capabilities, understand improvements, and trust that issues are being addressed.
@@ -192,6 +195,121 @@ Have thoughts on this release? [Feedback channel or contact method]
     ## Feedback
 
     Love the new Gantt charts? Have ideas for making TaskFlow even better? We'd love to hear from you at feedback@taskflow.app or in the #product-feedback channel in our community.
+
+## Real-World Examples
+
+See this skill applied to three different product contexts:
+
+??? example "Storevine (B2B): Storevine B2B ecommerce platform — Campaigns v1.0 GA merchant-facing release notes"
+    **Prompt:**
+
+    ```
+    /release-notes
+
+    Product: Storevine
+    Release: Campaigns v1.0 — native email marketing, GA on Apr 28, 2026
+    Audience: All active Storevine merchants
+
+    What's new:
+    - Campaigns: native email marketing, built into the Storevine admin
+    - Purchase-based audience segments (pre-built, seeded from Storevine data)
+    - Guided first-campaign flow (product-seeded templates, no setup required)
+    - Revenue attribution (see which emails drove which purchases)
+    - Abandoned cart automation (pre-configured, activates in one click)
+    - CAN-SPAM/GDPR compliance automatic in every send
+
+    Known issues / limitations to document:
+    - A/B testing not in v1 (coming in v2)
+    - EU merchant access delayed (GDPR consent flow in v1.1)
+    - Klaviyo migration tooling not available (planned v2)
+
+    Tone: merchant-benefit-first; plain language; not feature-spec language.
+    Audience is small-business owners, not developers.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Storevine Campaigns v1.0
+
+    **Release Date:** April 28, 2026
+
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — Resurface feature release notes for users"
+    **Prompt:**
+
+    ```
+    /release-notes
+
+    resurface release notes. feature shipped feb 16 behind flag. opt-in
+    enrollment starts mar 2. writing for the in-app changelog and blog.
+
+    tone: friendly, plain language. not techy. our users are knowledge
+    workers who save articles — talk to them about reading, not about
+    algorithms.
+
+    highlights: daily email digest with your most relevant saved content,
+    delivered every morning. opt-in from home screen. one-click to read.
+    change frequency or unsubscribe anytime.
+
+    also: fixed the timezone bug from sprint 8 that sent early-morning
+    digests to UK/EU users. and improved text extraction for paywalled
+    articles (better fallback to article metadata).
+    ```
+
+    ---
+
+    **Output:**
+
+    # Brainshelf 2.8.0
+
+    **Release Date:** March 2, 2026
+
+??? example "Workbench (Enterprise): Workbench enterprise collaboration platform - Workbench 3.5 release notes for Blueprints GA"
+    **Prompt:**
+
+    ```
+    /release-notes
+
+    I need customer-facing release notes for Workbench 3.5, which ships Blueprints GA.
+
+    **Highlights (top 2 features to call out):**
+    1. Blueprints with required-section enforcement -- the headline feature; reduces incomplete document submissions
+    2. Real-time co-editing -- powered by Yjs CRDTs; multiple authors can work simultaneously, including offline
+
+    **New features to cover:**
+    - Required-section enforcement (submit gated on section completeness)
+    - Native approval gates (sequential and parallel chains, role-based routing)
+    - Real-time co-editing (offline-first, presence awareness)
+    - Hybrid wizard/canvas creation flow
+    - SAML SSO integration and audit logs
+
+    **Improvements:**
+    - Template gallery redesign (faster browsing, search)
+    - Notification system updated for approval events
+    - Document editor performance (15% faster load time [fictional] from bundle optimization)
+
+    **Bug fixes:**
+    - Fixed: document auto-save occasionally failed on slow connections
+    - Fixed: role assignment changes did not propagate until page refresh
+    - Fixed: exported PDFs missing footer page numbers
+
+    **Known issues:**
+    - Co-editing cursor labels may overlap when 10+ editors are in the same section
+    - Wizard auto-disable threshold (12 sections) is not configurable by admins in v1
+
+    **Coming soon (v1.1 preview):**
+    - Version history for Blueprints
+    - Approval delegation (OOO forwarding)
+    - Section-level commenting
+    - Jira two-way sync
+
+    Tone: professional, clear, no hype. Enterprise audience.
+    ```
+
+    **Output:**
+
+    # Workbench 3.5
 
 ## Quality Checklist
 

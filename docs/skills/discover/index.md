@@ -1,9 +1,22 @@
 ---
 title: "Discover Skills"
 description: "PM skills in the Discover phase."
+tags:
+  - Discover
 ---
 
 # Discover Skills
+
+## How these skills connect
+
+```mermaid
+flowchart LR
+    A["/competitive-analysis"] --> D["/problem-statement"]
+    B["/interview-synthesis"] --> D
+    C["/stakeholder-summary"] --> D
+```
+
+## Skills in this phase
 
 | Skill | Description | Command |
 |-------|-------------|---------|

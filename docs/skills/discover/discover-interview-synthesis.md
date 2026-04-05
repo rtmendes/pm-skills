@@ -11,6 +11,9 @@ tags:
 !!! info "Quick facts"
     **Phase:** Discover | **Version:** 2.0.0 | **Category:** research | **License:** Apache-2.0
 
+**Try it:** `/interview-synthesis "Your context here"`
+{ .md-button }
+
 # Interview Synthesis
 
 An interview synthesis transforms raw user research data into structured insights that drive product decisions. Rather than simply listing what participants said, a good synthesis identifies patterns across conversations, connects observations to underlying user needs, and translates findings into actionable recommendations.
@@ -343,6 +346,107 @@ When asked to synthesize interview findings, follow these steps:
     ### Raw Notes
 
     Detailed interview transcripts stored in Notion: [Research Repository / 2026-Q1 / Onboarding Study]
+
+## Real-World Examples
+
+See this skill applied to three different product contexts:
+
+??? example "Storevine (B2B): Storevine B2B ecommerce platform — merchant email marketing interviews for Campaigns discovery"
+    **Prompt:**
+
+    ```
+    /interview-synthesis
+
+    Research topic: Why do Storevine merchants use external email tools instead
+    of Storevine's built-in email features?
+
+    Context: Storevine all-in-one ecommerce + web platform, ~18k active merchants
+    [fictional]. Q4 exit survey: 22% of churned accounts cited "had to use a
+    separate email tool" [fictional]. Competitive analysis filed last week.
+
+    We interviewed 8 merchants. Mix of sizes, product categories, and email tool
+    usage. Interview format: 45-min video call, semi-structured.
+
+    Key topics: current email tool setup, how they chose it, what they use
+    Storevine's built-in tools for (if anything), what would need to be true
+    to switch, seasonal patterns.
+
+    Date range: Jan 12 – Jan 28, 2026
+    Interviewer: UX researcher + growth PM
+    ```
+
+    ---
+
+    **Output:**
+
+    # Interview Synthesis: Why Merchants Use External Email Tools
+
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — user interviews on saved content re-engagement"
+    **Prompt:**
+
+    ```
+    /interview-synthesis
+
+    ran 7 user interviews over the past 2 weeks about why people save stuff
+    to brainshelf but never go back to read it. need to synthesize the findings.
+
+    interviews were video calls, 30-45 min each. mix of heavy savers,
+    occasional users, and one churned user.
+
+    main findings:
+    - 5/7 described their library negatively ("guilt pile", "overwhelming", etc)
+    - nobody has a natural trigger to go back and read saved stuff
+    - there's a weird split between "saving to read later" and "saving to have"
+      that people don't realize until you ask them
+
+    some great quotes. need this formatted for the team before we start
+    building the hypothesis doc for resurface.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Interview Synthesis: Why Users Save but Don't Return
+
+??? example "Workbench (Enterprise): Workbench enterprise collaboration platform: Blueprints discovery interviews on documentation consistency and Confluence fatigue"
+    **Prompt:**
+
+    ```
+    /interview-synthesis
+
+    Research project: Blueprints discovery interviews -- documentation consistency and governance in enterprise teams
+    Product: Workbench (enterprise collaboration platform, Series B, ~500 enterprise customers [fictional])
+    Feature under exploration: Blueprints -- reusable document templates with required sections and role-based approval gates
+
+    Participants: 6 enterprise team leads interviewed over 3 weeks (Oct 6–24, 2025)
+    - P1: VP Ops, financial services, 8,000 employees, Confluence customer
+    - P2: Director of Compliance, healthcare SaaS, 2,200 employees, Confluence customer
+    - P3: Head of Product, logistics platform, 1,500 employees, Notion customer
+    - P4: Engineering Manager, insurance carrier, 4,000 employees, Confluence + SharePoint
+    - P5: Program Director, government contractor, 6,500 employees, SharePoint
+    - P6: Operations Lead, manufacturing SaaS, 900 employees, Coda customer
+
+    Format: 45-minute video calls, semi-structured
+    Interviewer: Rachel V. (Technical PM, Blueprints)
+    Observer: Tomás G. (Design Lead) on 4 of 6 sessions
+
+    Key areas explored:
+    1. How teams currently enforce documentation standards
+    2. What happens when docs reach approval incomplete
+    3. Pain points with current tools (Confluence, Notion, SharePoint, Coda)
+    4. Appetite for required-section enforcement vs. flexibility concerns
+    5. Who approves docs and how long it takes
+
+    Raw notes and recordings are in the Workbench research repository.
+    Stakeholders: Sandra C. (Head of Product), Derek H. (Head of Marketing), Mei-Lin T. (Enterprise Sales Lead)
+    ```
+
+    ---
+
+    **Output:**
+
+    # Interview Synthesis: Enterprise Documentation Consistency and Governance
 
 ## Quality Checklist
 
