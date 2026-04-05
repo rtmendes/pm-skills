@@ -1,0 +1,13 @@
+---
+title: "Develop Skills"
+description: "PM skills in the Develop phase."
+---
+
+# Develop Skills
+
+| Skill | Description | Command |
+|-------|-------------|---------|
+| [develop-adr](develop-adr.md) | Creates an Architecture Decision Record following the Nygard format to document ... | `/adr` |
+| [develop-design-rationale](develop-design-rationale.md) | Documents the reasoning behind design decisions including alternatives considere... | `/design-rationale` |
+| [develop-solution-brief](develop-solution-brief.md) | Creates a concise one-page solution overview that communicates the proposed appr... | `/solution-brief` |
+| [develop-spike-summary](develop-spike-summary.md) | Documents the results of a time-boxed technical or design exploration (spike). U... | `/spike-summary` |
