@@ -11,6 +11,17 @@ tags:
 
 PM Skills teaches AI assistants how to produce professional PM artifacts — PRDs, user stories, acceptance criteria, experiment designs, and more. One command, consistent output, every time.
 
+```mermaid
+flowchart LR
+    Create["/pm-skill-builder\nCreate"] --> Validate["/pm-skill-validate\nValidate"]
+    Validate --> Decision{Findings?}
+    Decision -- "PASS" --> Ship["Ship"]
+    Decision -- "WARN / FAIL" --> Iterate["/pm-skill-iterate\nIterate"]
+    Iterate --> Validate
+```
+
+## The Skills
+
 <div class="grid cards" markdown>
 
 - :material-magnify: **Discover** — 3 skills
@@ -55,20 +66,7 @@ PM Skills teaches AI assistants how to produce professional PM artifacts — PRD
 
 </div>
 
-## The Lifecycle
-
-Three utility skills form a self-reinforcing quality loop:
-
-```mermaid
-flowchart LR
-    Create["/pm-skill-builder\nCreate"] --> Validate["/pm-skill-validate\nValidate"]
-    Validate --> Decision{Findings?}
-    Decision -- "PASS" --> Ship["Ship"]
-    Decision -- "WARN / FAIL" --> Iterate["/pm-skill-iterate\nIterate"]
-    Iterate --> Validate
-```
-
-[Learn more about the lifecycle :octicons-arrow-right-24:](concepts/skill-lifecycle.md)
+[:octicons-arrow-right-24: Learn more about the lifecycle](concepts/skill-lifecycle.md)
 
 ## Quick Start
 
