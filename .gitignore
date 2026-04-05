@@ -1,3 +1,6 @@
+# MkDocs build output
+site/
+
 # OS generated files
 .DS_Store
 .DS_Store?
@@ -44,7 +47,7 @@ _staging/
 .claude/skills/
 .claude/commands/
 dist/
-/_archived/
+*/_archived/*
 docs/internal/milestones/**/_archived/
 
 # Agent working files
