@@ -524,7 +524,7 @@ All releases are available on the [GitHub Releases](https://github.com/product-o
 
 - **`pm-skills-vX.X.X.zip`** — Complete package with all skills, commands, bundles, and documentation
 - **Latest stable:** `v2.8.1` (Documentation site launch)
-- **Latest release notes:** [CHANGELOG.md](CHANGELOG.md#281---2026-04-04)
+- **Latest release notes:** [`docs/releases/Release_v2.8.1.md`](docs/releases/Release_v2.8.1.md)
 - **Published tag:** [`v2.8.1`](https://github.com/product-on-purpose/pm-skills/releases/tag/v2.8.1)
 - **Documentation site:** [product-on-purpose.github.io/pm-skills](https://product-on-purpose.github.io/pm-skills/)
 

@@ -221,6 +221,7 @@ nav:
     - Skill Finder: guides/skill-finder.md
     - Recipes: guides/recipes.md
     - Prompt Gallery: guides/prompt-gallery.md
+    - MCP Setup: guides/mcp-setup.md
     - MCP Integration: guides/mcp-integration.md
     - MCP Sync Validation: guides/validate-mcp-sync.md
 

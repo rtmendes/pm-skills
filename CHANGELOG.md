@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.8.1] - 2026-04-04
+## [2.8.1] - 2026-04-04 ([release notes](docs/releases/Release_v2.8.1.md))
 
 ### Added
 - **Documentation site** at [product-on-purpose.github.io/pm-skills](https://product-on-purpose.github.io/pm-skills/) — MkDocs Material with tab navigation, dark mode, search, and mermaid diagram rendering.
@@ -22,6 +22,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Generation scripts** — `scripts/generate-skill-pages.py` (29 skill pages + indexes + commands ref) and `scripts/generate-showcase.py` (3 showcase journeys from sample library).
 - **Deploy workflow** — `.github/workflows/deploy-docs.yml` auto-deploys on push to main.
 - **MkDocs config guide** — `docs/internal/mkdocs/mkdocs-config.md` for maintainers.
+- **MCP setup guide** — `docs/guides/mcp-setup.md` for users: install, configure, and use pm-skills-mcp across Claude Desktop, Cursor, Claude Code, and VS Code.
+
+### Changed
+- **MCP integration guide** — updated tool counts (25→29 skill tools, 42 total), added acceptance-criteria and utility skill tools, updated slash command mapping table, removed stale catalog note, updated version references to v2.8.0.
 
 ### Release Notes
 - Documentation-only release — no PM skill or slash-command behavior changes.

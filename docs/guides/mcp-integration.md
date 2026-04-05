@@ -15,7 +15,7 @@ This guide helps you access PM-Skills through the Model Context Protocol (MCP) v
   - [VS Code (Cline/Continue)](#vs-code-clinecontinue)
   - [Other MCP Clients](#other-mcp-clients)
 - [Tool Inventory](#tool-inventory)
-  - [Skill Tools (25)](#skill-tools-25)
+  - [Skill Tools (29)](#skill-tools-29)
   - [Workflow Tools (5)](#workflow-tools-5)
   - [Utility Tools (8)](#utility-tools-8)
 - [Slash Command to MCP Tool Mapping](#slash-command-to-mcp-tool-mapping)
@@ -27,7 +27,7 @@ This guide helps you access PM-Skills through the Model Context Protocol (MCP) v
 
 ## Overview
 
-**PM-Skills MCP** is an MCP server that exposes the pm-skills catalog as programmatic tools. As of v2.7.0, that means 27 skill tools: 25 phase skills, `pm_persona`, and `pm_pm_skill_builder`. Instead of uploading files or using slash commands, your AI assistant invokes tools directly via the Model Context Protocol.
+**PM-Skills MCP** is an MCP server that exposes the pm-skills catalog as programmatic tools. As of v2.8.0, that means 29 skill tools (25 phase skills + 1 foundation + 3 utility), plus 5 workflow tools and 8 utility tools (42 total). Instead of uploading files or using slash commands, your AI assistant invokes tools directly via the Model Context Protocol.
 
 ```
 ┌─────────────────┐                    ┌─────────────────┐
@@ -202,9 +202,7 @@ PM-Skills MCP exposes skill, workflow, and utility tools derived from the curren
 
 > **Note:** pm-skills-mcp now tracks pm-skills release versions directly (starting at v2.4.0). Resource URIs are flat (`pm-skills://skills/{skill}`) with phase available in metadata.
 
-> **Current catalog note:** The file-based `pm-skills` repo can move ahead of the public MCP snapshot. At the moment, `pm-skills-mcp` includes `pm_persona`, but not newer file-based additions such as `/acceptance-criteria` or the path-only `utility-pm-skill-builder` skill.
-
-### Skill Tools
+### Skill Tools (29)
 
 Each skill becomes an MCP tool with standardized parameters:
 
@@ -250,6 +248,7 @@ Each skill becomes an MCP tool with standardized parameters:
 | `pm_edge_cases` | Error states, boundaries, recovery paths |
 | `pm_launch_checklist` | Never miss a launch step again |
 | `pm_release_notes` | User-facing release communication |
+| `pm_acceptance_criteria` | Given/When/Then acceptance criteria |
 
 #### Measure Phase
 
@@ -274,6 +273,14 @@ Each skill becomes an MCP tool with standardized parameters:
 | Tool | Description |
 |------|-------------|
 | `pm_persona` | Generate product or marketing personas with explicit assumptions and evidence |
+
+#### Utility
+
+| Tool | Description |
+|------|-------------|
+| `pm_pm_skill_builder` | Interactive builder for creating new PM skills |
+| `pm_pm_skill_validate` | Audit a skill against structural conventions and quality criteria |
+| `pm_pm_skill_iterate` | Apply targeted improvements from feedback or validation reports |
 
 ---
 
@@ -339,9 +346,13 @@ If you're transitioning from file-based pm-skills to MCP, here's the mapping:
 | `/refinement-notes` | `pm_refinement_notes` |
 | `/pivot-decision` | `pm_pivot_decision` |
 | `/persona` | `pm_persona` |
+| `/acceptance-criteria` | `pm_acceptance_criteria` |
+| `/pm-skill-builder` | `pm_pm_skill_builder` |
+| `/pm-skill-validate` | `pm_pm_skill_validate` |
+| `/pm-skill-iterate` | `pm_pm_skill_iterate` |
 | `/kickoff` | `pm_workflow_feature_kickoff` |
 
-Starting with v2.7.0, `/acceptance-criteria` maps to `pm_acceptance_criteria` and `/pm-skill-builder` maps to `pm_pm_skill_builder`. Update your `pm-skills-mcp` install to v2.7.0+ to access these tools.
+Requires pm-skills-mcp v2.8.0+ for the full 29-skill tool inventory.
 
 **Usage difference:**
 
@@ -418,13 +429,13 @@ This section documents how `pm-skills` releases flow to `pm-skills-mcp`. It is i
 `pm-skills-mcp` is **release-pinned** — it embeds a snapshot of skill files at build time and ships them in the npm package. It does not live-sync with the `pm-skills` repo.
 
 ```
-pm-skills (tag v2.7.0)
+pm-skills (tag v2.8.0)
     │
     ├── validate-mcp-sync.yml ── CI detects drift (blocking)
     │
     └── embed-skills.js ──────── copies skills/ into pm-skills-mcp
                                       │
-                                pm-skills-mcp (tag v2.7.0)
+                                pm-skills-mcp (tag v2.8.0)
                                       │
                                    npm publish
 ```
