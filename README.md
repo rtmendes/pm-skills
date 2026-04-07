@@ -21,7 +21,7 @@
     <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat-square" alt="License">
   </a>
   <a href="https://github.com/product-on-purpose/pm-skills/releases">
-    <img src="https://img.shields.io/badge/version-2.8.2-blue.svg?style=flat-square" alt="Version">
+    <img src="https://img.shields.io/badge/version-2.9.0-blue.svg?style=flat-square" alt="Version">
   </a>
   <a href="#the-skills">
     <img src="https://img.shields.io/badge/skills-29-brightgreen.svg?style=flat-square" alt="Skills">
@@ -121,6 +121,20 @@ git clone https://github.com/product-on-purpose/pm-skills.git && cd pm-skills
 ---
 
 **What's New (Recent Releases)**
+<details open>
+<summary>v2.9.0 - Workflows: rename + expansion (3 → 9)</summary>
+
+- **BREAKING:** Renamed `_bundles/` → `_workflows/` and `docs/bundles/` → `docs/workflows/`
+- **BREAKING:** `/kickoff` command replaced by `/workflow-feature-kickoff`
+- **6 new workflows**: Customer Discovery, Sprint Planning, Product Strategy, Post-Launch Learning, Stakeholder Alignment, Technical Discovery
+- **7 `/workflow-*` slash commands** (1 renamed + 6 new)
+- **New script**: `scripts/generate-workflow-pages.py` — generates docs site pages from source workflows
+- **URL redirects** for old `/bundles/*` doc site paths via `mkdocs-redirects`
+- **Terminology guard**: `scripts/check-stale-bundle-refs.sh/.ps1` prevents regression
+- Repo now ships 29 skills, 36 command docs, and 9 workflows.
+- Release note: [`docs/releases/Release_v2.9.0.md`](docs/releases/Release_v2.9.0.md).
+
+</details>
 <details>
 <summary>v2.8.0 - PM skill lifecycle: Create, Validate, Iterate</summary>
 
@@ -129,7 +143,7 @@ git clone https://github.com/product-on-purpose/pm-skills.git && cd pm-skills
 - **New CI**: `validate-skill-history` and `validate-skills-manifest` advisory scripts for skill versioning governance.
 - **New guide**: `docs/pm-skill-lifecycle.md` — workflow patterns for the Create → Validate → Iterate lifecycle.
 - **Governance**: `docs/internal/skill-versioning.md` — SemVer rules, HISTORY.md contract, skills-manifest.yaml format.
-- Repo now ships 29 skills, 36 command docs, and 9 workflows.
+- Repo now ships 29 skills, 30 command docs, and 3 workflows.
 - Release note: [`docs/releases/Release_v2.8.0.md`](docs/releases/Release_v2.8.0.md).
 
 </details>
@@ -141,7 +155,7 @@ git clone https://github.com/product-on-purpose/pm-skills.git && cd pm-skills
 - **Enhanced CI**: extended frontmatter linter, AGENTS.md sync validator, MCP impact detection.
 - **Release packaging**: `docs/internal/**` excluded from published ZIPs while staying tracked in-repo.
 - **Documentation**: new `docs/pm-skill-anatomy.md` guide, comprehensive public docs refresh.
-- Repo now ships 27 skills, 28 command docs, and 3 workflows (now 9 as of v2.9.0).
+- Repo now ships 27 skills, 28 command docs, and 3 workflows.
 - Release note: [`docs/releases/Release_v2.7.0.md`](docs/releases/Release_v2.7.0.md).
 
 </details>
@@ -523,9 +537,9 @@ The skill content provides all the context the LLM needs to produce professional
 All releases are available on the [GitHub Releases](https://github.com/product-on-purpose/pm-skills/releases) page:
 
 - **`pm-skills-vX.X.X.zip`** — Complete package with all skills, commands, workflows, and documentation
-- **Latest stable:** `v2.8.2` (Docs site polish + versioning concepts)
-- **Latest release notes:** [CHANGELOG.md](CHANGELOG.md#282---2026-04-04)
-- **Published tag:** [`v2.8.2`](https://github.com/product-on-purpose/pm-skills/releases/tag/v2.8.2)
+- **Latest stable:** `v2.9.0` (Workflows: rename + expansion, 3 → 9)
+- **Latest release notes:** [CHANGELOG.md](CHANGELOG.md#290---2026-04-06)
+- **Published tag:** [`v2.9.0`](https://github.com/product-on-purpose/pm-skills/releases/tag/v2.9.0)
 - **Documentation site:** [product-on-purpose.github.io/pm-skills](https://product-on-purpose.github.io/pm-skills/)
 
 Each release includes `QUICKSTART.md` with installation and usage instructions.
@@ -820,6 +834,10 @@ See [CHANGELOG.md](CHANGELOG.md) for full details.
 
 | Version   | Date       | Highlights                                                              |
 | --------- | ---------- | ----------------------------------------------------------------------- |
+| **2.9.0** | 2026-04-06 | Workflows: rename bundles → workflows + expand 3 → 9, 7 `/workflow-*` commands, URL redirects |
+| **2.8.2** | 2026-04-04 | Docs site polish + versioning concepts page |
+| **2.8.1** | 2026-04-04 | MkDocs Material documentation site launch |
+| **2.8.0** | 2026-04-03 | PM skill lifecycle: `pm-skill-validate`, `pm-skill-iterate`, lifecycle guide, skill versioning |
 | **2.7.0** | 2026-03-22 | Utility skills (`pm-skill-builder`), `acceptance-criteria` skill, enhanced CI, release packaging hygiene, docs refresh |
 | **2.6.1** | 2026-03-04 | Sample-library recovery, naming/path normalization, and release ZIP inclusion |
 | **2.6.0** | 2026-03-04 | Claude plugin packaging release with staged manifest version checks |
