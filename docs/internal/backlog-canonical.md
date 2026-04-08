@@ -43,15 +43,20 @@ Marketplace submission (Effort 0) is a human-only action, not an effort ID.
 | 2 | M-20 | Docs count consistency CI | Infrastructure | Claude | Planned (v2.9.1) | [#132](https://github.com/product-on-purpose/pm-skills/issues/132) |
 | 3 | F-17 | Meeting Synthesis (`/meeting-synthesis`) | New skill | Claude | Backlog (v2.10.0) | TBD |
 | 4 | F-18 | Meeting Prep (`/meeting-prep`) | New skill | Claude | Backlog (v2.10.0) | TBD |
-| 5 | F-14 | Workflow Builder (`/workflow-builder`) | New skill | Claude | Backlog | [#133](https://github.com/product-on-purpose/pm-skills/issues/133) |
-| 6 | F-15 | Ad-hoc Skill Chaining (`/chain`) | New feature | Claude | Backlog | [#134](https://github.com/product-on-purpose/pm-skills/issues/134) |
-| 7 | F-12 | Skill quality convergence | Quality | Claude + Human | Draft | [#135](https://github.com/product-on-purpose/pm-skills/issues/135) |
-| 8 | M-21 | Explore release-please integration | Infrastructure | Claude or Codex | Backlog | [#136](https://github.com/product-on-purpose/pm-skills/issues/136) |
-| 9 | M-14 | Release automation enhancement | Infrastructure | Codex | Backlog | [#116](https://github.com/product-on-purpose/pm-skills/issues/116) |
-| 10 | M-15 | Community contribution setup | Ecosystem | Claude | Backlog | [#117](https://github.com/product-on-purpose/pm-skills/issues/117) |
-| 11 | F-07 | `discover-market-sizing` | New skill | Claude | Backlog | [#118](https://github.com/product-on-purpose/pm-skills/issues/118) |
-| 12 | F-08 | `measure-survey-analysis` | New skill | Claude | Backlog | [#119](https://github.com/product-on-purpose/pm-skills/issues/119) |
-| 13 | F-09 | Agent Skill Builder (`/agent-skill-builder`) | New skill | Claude | Backlog | [#120](https://github.com/product-on-purpose/pm-skills/issues/120) |
+| 5 | F-19 | Slideshow Creator (`/slideshow-creator`) | New skill | Claude | Backlog | TBD |
+| 6 | F-20 | Slideshow Themer (`/slideshow-themer`) | New skill | Claude | Backlog | TBD |
+| 7 | F-21 | Content Voice (`/content-voice`) | New skill | Claude | Backlog | TBD |
+| 8 | F-22 | Prototype Creator (`/prototype-creator`) | New skill | Claude | Backlog | TBD |
+| 9 | F-23 | Prototype Styler (`/prototype-styler`) | New skill | Claude | Backlog | TBD |
+| 10 | F-14 | Workflow Builder (`/workflow-builder`) | New skill | Claude | Backlog | [#133](https://github.com/product-on-purpose/pm-skills/issues/133) |
+| 11 | F-15 | Ad-hoc Skill Chaining (`/chain`) | New feature | Claude | Backlog | [#134](https://github.com/product-on-purpose/pm-skills/issues/134) |
+| 12 | F-12 | Skill quality convergence | Quality | Claude + Human | Draft | [#135](https://github.com/product-on-purpose/pm-skills/issues/135) |
+| 13 | M-21 | Explore release-please integration | Infrastructure | Claude or Codex | Backlog | [#136](https://github.com/product-on-purpose/pm-skills/issues/136) |
+| 14 | M-14 | Release automation enhancement | Infrastructure | Codex | Backlog | [#116](https://github.com/product-on-purpose/pm-skills/issues/116) |
+| 15 | M-15 | Community contribution setup | Ecosystem | Claude | Backlog | [#117](https://github.com/product-on-purpose/pm-skills/issues/117) |
+| 16 | F-07 | `discover-market-sizing` | New skill | Claude | Backlog | [#118](https://github.com/product-on-purpose/pm-skills/issues/118) |
+| 17 | F-08 | `measure-survey-analysis` | New skill | Claude | Backlog | [#119](https://github.com/product-on-purpose/pm-skills/issues/119) |
+| 18 | F-09 | Agent Skill Builder (`/agent-skill-builder`) | New skill | Claude | Backlog | [#120](https://github.com/product-on-purpose/pm-skills/issues/120) |
 
 See individual effort briefs at `docs/internal/efforts/{ID}-{slug}.md` for scope, decisions, and artifacts.
 
