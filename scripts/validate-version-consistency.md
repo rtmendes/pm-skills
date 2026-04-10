@@ -1,0 +1,60 @@
+# validate-version-consistency.sh / validate-version-consistency.ps1
+
+## Purpose
+
+Ensure `.claude-plugin/plugin.json` and `marketplace.json` report the same
+version. Prevents drift between version sources that would confuse the
+`/update-pm-skills` skill's version detection and mislead users about which
+version they have installed.
+
+## Usage
+
+```bash
+./scripts/validate-version-consistency.sh
+```
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\validate-version-consistency.ps1
+```
+
+## What It Does
+
+1. Reads the `version` field from `.claude-plugin/plugin.json`
+2. Reads the `plugins[0].version` field from `marketplace.json`
+3. Compares the two strings
+4. Reports pass (matching) or fail (mismatch) with both values
+
+## Exit Codes
+
+| Code | Meaning |
+|------|---------|
+| `0` | Versions match |
+| `1` | Version mismatch, or a required file is missing |
+
+## When to Use
+
+- In CI on every push/PR (hard-fail — mismatches should never merge)
+- Before tagging a release (version bump both files together)
+- After editing either `plugin.json` or `marketplace.json`
+
+## Example Output
+
+```
+PASS: Versions consistent (2.9.0)
+```
+
+```
+FAIL: Version mismatch
+  .claude-plugin/plugin.json:  2.9.0
+  marketplace.json: 2.8.2
+
+  Both files must report the same version.
+```
+
+## Prerequisites
+
+- Node.js available in PATH (used for JSON parsing)
+
+## Safety
+
+Read-only. Does not modify any files.

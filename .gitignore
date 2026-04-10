@@ -61,6 +61,9 @@ AGENTS/*/PLANNING/
 !AGENTS/DECISIONS.md
 .github/scripts/node_modules/
 
+# Local state (update reports, backups)
+_pm-skills/
+
 # Local convenience
 .favorites.json
 .cache/

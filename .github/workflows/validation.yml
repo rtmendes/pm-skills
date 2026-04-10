@@ -92,3 +92,31 @@ jobs:
         if: matrix.os == 'windows-latest'
         run: pwsh -File scripts/check-stale-bundle-refs.ps1
         continue-on-error: true
+
+      - name: Validate version consistency (bash)
+        if: matrix.os == 'ubuntu-latest'
+        run: bash scripts/validate-version-consistency.sh
+
+      - name: Validate version consistency (pwsh)
+        if: matrix.os == 'windows-latest'
+        run: pwsh -File scripts/validate-version-consistency.ps1
+
+      - name: Validate _pm-skills/ in .gitignore (bash)
+        if: matrix.os == 'ubuntu-latest'
+        run: bash scripts/validate-gitignore-pm-skills.sh
+        continue-on-error: true
+
+      - name: Validate _pm-skills/ in .gitignore (pwsh)
+        if: matrix.os == 'windows-latest'
+        run: pwsh -File scripts/validate-gitignore-pm-skills.ps1
+        continue-on-error: true
+
+      - name: Validate script documentation (bash)
+        if: matrix.os == 'ubuntu-latest'
+        run: bash scripts/validate-script-docs.sh
+        continue-on-error: true
+
+      - name: Validate script documentation (pwsh)
+        if: matrix.os == 'windows-latest'
+        run: pwsh -File scripts/validate-script-docs.ps1
+        continue-on-error: true
