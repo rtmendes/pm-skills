@@ -242,6 +242,7 @@ nav:
   - Guides:
     - guides/index.md
     - Using Skills: guides/using-skills.md
+    - Using Workflows: guides/using-workflows.md
     - Creating Skills: guides/creating-skills.md
     - Skill Finder: guides/skill-finder.md
     - Recipes: guides/recipes.md

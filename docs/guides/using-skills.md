@@ -404,73 +404,9 @@ Some skills have natural dependencies:
 
 ## Using Workflows
 
-Workflows are pre-defined skill sequences for common PM processes.
+Workflows are pre-defined skill sequences for common PM processes. There are 9 workflows covering feature development, research, strategy, experimentation, and more. Each can be invoked with a `/workflow-{name}` slash command (e.g., `/workflow-feature-kickoff "launch mobile app"`).
 
-### Available Workflows
-
-| Workflow | Use Case | Skills |
-|----------|----------|--------|
-| Feature Kickoff | Standard feature development | problem-statement → hypothesis → prd → user-stories → launch-checklist |
-| Lean Startup | Rapid validation | hypothesis → experiment-design → experiment-results → pivot-decision |
-| Triple Diamond | Comprehensive product dev | All 25 phase skills across 6 phases |
-| Customer Discovery | Research to problem framing | interview-synthesis → jtbd-canvas → opportunity-tree → problem-statement |
-| Sprint Planning | Sprint-ready stories | refinement-notes → user-stories → edge-cases |
-| Product Strategy | Strategic initiative framing | competitive-analysis → stakeholder-summary → opportunity-tree → solution-brief → adr |
-| Post-Launch Learning | Ship-to-learn feedback | instrumentation-spec → dashboard-requirements → experiment-results → retrospective → lessons-log |
-| Stakeholder Alignment | Leadership buy-in | stakeholder-summary → problem-statement → solution-brief → launch-checklist |
-| Technical Discovery | Feasibility + architecture | spike-summary → adr → design-rationale |
-
-### Invoking a Workflow
-
-**Claude Code:**
-```
-/workflow-feature-kickoff "Save for Later feature for shopping cart"
-```
-
-**Other platforms:**
-```
-Run the Feature Kickoff workflow for adding a
-"Save for Later" feature to our shopping cart.
-```
-
-### Workflow Execution
-
-The AI will work through each skill in sequence:
-
-```
-Starting Feature Kickoff workflow...
-
-Step 1/5: Problem Statement
-[Produces problem statement]
-
-Step 2/5: Hypothesis
-[Produces hypothesis based on problem statement]
-
-Step 3/5: PRD
-[Produces PRD based on hypothesis]
-
-...and so on
-```
-
-### Customizing Workflow Execution
-
-**Skip steps you don't need:**
-```
-Run the Feature Kickoff workflow, but skip the launch checklist—
-we have an existing template for that.
-```
-
-**Add extra steps:**
-```
-Run Feature Kickoff, and also include edge-cases
-after the user stories.
-```
-
-**Stop mid-workflow:**
-```
-Run Feature Kickoff through the PRD step,
-then stop for review before continuing.
-```
+For detailed guidance on choosing, invoking, customizing, and building workflows, see [Using Workflows](using-workflows.md).
 
 ---
 

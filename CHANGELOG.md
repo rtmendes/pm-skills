@@ -20,6 +20,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Comprehensive docs count sweep: 20+ files updated from 29/30→31 skills, 36/37→38 commands, 3/4→5 utility
 - Backlog updated: F-16 shipped, F-17–F-23 added at priorities 3-9
 
+## [2.9.1] — 2026-04-10
+
+### Added
+- **D-05: Workflows guide** — dedicated `docs/guides/using-workflows.md` with decision tree (mermaid), comparison matrix for all 9 workflows, invocation guide, and customization patterns. Replaces the brief workflow section previously in `using-skills.md`.
+- **M-20: Documentation count consistency CI** — 3 new validation script pairs:
+  - `check-workflow-coverage` — verifies every workflow has matching docs page, AGENTS.md entry, and mkdocs nav entry
+  - `check-count-consistency` — detects stale hardcoded skill/command/workflow counts in documentation
+  - `check-generated-freshness` — verifies generated workflow pages match sources
+- `validate-version-consistency` — hard-fail CI check ensuring `plugin.json` and `marketplace.json` versions match
+- `validate-gitignore-pm-skills` — advisory CI check for `_pm-skills/` in `.gitignore`
+- `validate-script-docs` — advisory CI check ensuring every script pair has companion `.md` documentation
+- Companion `.md` documentation for all new scripts and 2 previously undocumented scripts (`check-context-currency`, `check-stale-bundle-refs`)
+- `_pm-skills/` added to `.gitignore` (local state directory for update reports and backups)
+
+### Changed
+- `scripts/README_SCRIPTS.md` — expanded from 8 to 16 script entries with updated "When to use what" guide
+- `.github/workflows/validation.yml` — added 6 new CI checks (1 hard-fail, 5 advisory)
+- `docs/guides/using-skills.md` — trimmed workflow section to overview + link to new dedicated guide
+- `docs/workflows/index.md` — added link to workflows guide
+- `mkdocs.yml` — added "Using Workflows" nav entry under Guides
+- Fixed `marketplace.json` version 2.8.2 → 2.9.0 (was out of sync with `plugin.json`)
+
 ## [2.9.0] — 2026-04-06
 
 ### Added

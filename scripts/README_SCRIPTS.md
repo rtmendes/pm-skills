@@ -11,6 +11,14 @@
   - [check-mcp-impact.sh / check-mcp-impact.ps1](#check-mcp-impactsh--check-mcp-impactps1)
   - [validate-skill-history.sh / validate-skill-history.ps1](#validate-skill-historysh--validate-skill-historyps1)
   - [validate-skills-manifest.sh / validate-skills-manifest.ps1](#validate-skills-manifestsh--validate-skills-manifestps1)
+  - [validate-version-consistency.sh / validate-version-consistency.ps1](#validate-version-consistencysh--validate-version-consistencyps1)
+  - [validate-gitignore-pm-skills.sh / validate-gitignore-pm-skills.ps1](#validate-gitignore-pm-skillssh--validate-gitignore-pm-skillsps1)
+  - [validate-script-docs.sh / validate-script-docs.ps1](#validate-script-docssh--validate-script-docsps1)
+  - [check-workflow-coverage.sh / check-workflow-coverage.ps1](#check-workflow-coveragesh--check-workflow-coverageps1)
+  - [check-count-consistency.sh / check-count-consistency.ps1](#check-count-consistencysh--check-count-consistencyps1)
+  - [check-generated-freshness.sh / check-generated-freshness.ps1](#check-generated-freshnesssh--check-generated-freshnessps1)
+  - [check-context-currency.sh / check-context-currency.ps1](#check-context-currencysh--check-context-currencyps1)
+  - [check-stale-bundle-refs.sh / check-stale-bundle-refs.ps1](#check-stale-bundle-refssh--check-stale-bundle-refsps1)
 - [When to use what](#when-to-use-what)
 - [FAQ](#faq)
 - [Tips](#tips)
@@ -130,11 +138,119 @@ CI-only automation scripts live in `.github/scripts/` (for example, `validate-mc
 
 **Outputs:** Pass/fail per manifest file; checks directory existence for non-removed entries; verifies version alignment for the latest release only. Advisory (non-blocking in CI).
 
+### validate-version-consistency.sh / validate-version-consistency.ps1
+**Purpose:** Ensure `.claude-plugin/plugin.json` and `marketplace.json` report the same version.
+
+**Why:** Prevents version drift between the two sources. The `/update-pm-skills` skill reads version from these files — mismatches cause confusing version reports.
+
+**Use when:** After editing either version file; before release; in CI (hard-fail).
+
+**Commands:**
+- Bash: `./scripts/validate-version-consistency.sh`
+- PowerShell: `./scripts/validate-version-consistency.ps1`
+
+**Outputs:** Pass with version number, or fail with both mismatched values. Requires Node.js.
+
+### validate-gitignore-pm-skills.sh / validate-gitignore-pm-skills.ps1
+**Purpose:** Ensure `_pm-skills/` is listed in `.gitignore`.
+
+**Why:** The `_pm-skills/` directory holds local state (update reports, backups) that should never be committed.
+
+**Use when:** After editing `.gitignore`; in CI (advisory).
+
+**Commands:**
+- Bash: `./scripts/validate-gitignore-pm-skills.sh`
+- PowerShell: `./scripts/validate-gitignore-pm-skills.ps1`
+
+**Outputs:** Pass/fail for presence of `_pm-skills/` in `.gitignore`.
+
+### validate-script-docs.sh / validate-script-docs.ps1
+**Purpose:** Ensure every `.sh`/`.ps1` script pair has a companion `.md` documentation file.
+
+**Why:** Convention: every script ships with human-readable docs. This CI catches undocumented scripts before merge.
+
+**Use when:** After adding new scripts; before release; in CI (advisory).
+
+**Commands:**
+- Bash: `./scripts/validate-script-docs.sh`
+- PowerShell: `./scripts/validate-script-docs.ps1`
+
+**Outputs:** Pass with count of documented pairs, or fail listing each undocumented script.
+
+### check-workflow-coverage.sh / check-workflow-coverage.ps1
+**Purpose:** Verify every workflow file has matching entries across the repo (docs page, AGENTS.md, mkdocs nav).
+
+**Why:** When workflows are added, multiple files need cross-references. This catches missed entries.
+
+**Use when:** After adding or renaming workflows; in CI (advisory).
+
+**Commands:**
+- Bash: `./scripts/check-workflow-coverage.sh`
+- PowerShell: `./scripts/check-workflow-coverage.ps1`
+
+**Outputs:** Pass/fail per workflow; lists specific missing entries.
+
+### check-count-consistency.sh / check-count-consistency.ps1
+**Purpose:** Detect stale hardcoded skill/command/workflow counts in documentation.
+
+**Why:** Docs pages reference counts like "31 skills" which go stale when skills are added. This detects mismatches automatically.
+
+**Use when:** After adding skills, commands, or workflows; before release; in CI (advisory).
+
+**Commands:**
+- Bash: `./scripts/check-count-consistency.sh`
+- PowerShell: `./scripts/check-count-consistency.ps1`
+
+**Outputs:** Pass if all counts match, or fail with file path, line number, and expected vs. found count. Excludes CHANGELOG and release notes (historical counts are correct for their time).
+
+### check-generated-freshness.sh / check-generated-freshness.ps1
+**Purpose:** Verify generated workflow pages in `docs/workflows/` match their sources in `_workflows/`.
+
+**Why:** Generated pages can drift if workflows are edited but the generator isn't re-run.
+
+**Use when:** After editing `_workflows/` files; before release; in CI (advisory).
+
+**Commands:**
+- Bash: `./scripts/check-generated-freshness.sh`
+- PowerShell: `./scripts/check-generated-freshness.ps1`
+
+**Outputs:** Pass if all pages are fresh, or fail listing stale pages.
+
+### check-context-currency.sh / check-context-currency.ps1
+**Purpose:** Verify `AGENTS/*/CONTEXT.md` files reference the current CHANGELOG release version.
+
+**Why:** Agent context files should reflect the latest release so agents have accurate repo context.
+
+**Use when:** After tagging a release; in CI (advisory).
+
+**Commands:**
+- Bash: `./scripts/check-context-currency.sh`
+- PowerShell: `./scripts/check-context-currency.ps1`
+
+**Outputs:** Pass/fail per CONTEXT.md file with version comparison.
+
+### check-stale-bundle-refs.sh / check-stale-bundle-refs.ps1
+**Purpose:** Terminology guard for the bundles → workflows rename (v2.9.0).
+
+**Why:** Catches stale "bundle" references that should now say "workflow" after the v2.9.0 rename.
+
+**Use when:** After editing docs; in CI (advisory, `--strict` for hard-fail).
+
+**Commands:**
+- Bash: `./scripts/check-stale-bundle-refs.sh` (advisory) or `--strict` (hard-fail)
+- PowerShell: `./scripts/check-stale-bundle-refs.ps1` or `-Strict`
+
+**Outputs:** Warning-only in default mode; hard-fail in strict mode.
+
 ## When to use what
-- Day-to-day: no scripts needed unless using openskills/Claude Code → run `sync-claude`.
-- Pre-release: `sync-claude` (sanity) → `validate-commands` → `lint-skills-frontmatter` → `validate-agents-md` → `check-mcp-impact` → `validate-skill-history` → `validate-skills-manifest` → `build-release`.
-- CI candidate: add `validate-commands`, `lint-skills-frontmatter`, `validate-agents-md`, `check-mcp-impact`, `validate-skill-history`, and `validate-skills-manifest` to validation jobs.
-- Cross-repo drift guardrail: use `.github/workflows/validate-mcp-sync.yml` (observe first, block later).
+- **Day-to-day:** No scripts needed unless using openskills/Claude Code → run `sync-claude`.
+- **After adding a skill:** `validate-commands` → `lint-skills-frontmatter` → `validate-agents-md` → `check-mcp-impact` → `check-count-consistency`.
+- **After adding a workflow:** `check-workflow-coverage` → `check-count-consistency` → `check-generated-freshness`.
+- **After adding a script:** `validate-script-docs` (ensure companion `.md` exists).
+- **Pre-release:** All validation scripts → `validate-version-consistency` → `check-count-consistency` → `build-release`.
+- **CI (hard-fail):** `validate-commands`, `lint-skills-frontmatter`, `validate-agents-md`, `validate-version-consistency`.
+- **CI (advisory):** `check-mcp-impact`, `validate-skill-history`, `validate-skills-manifest`, `validate-gitignore-pm-skills`, `validate-script-docs`, `check-workflow-coverage`, `check-count-consistency`, `check-generated-freshness`, `check-context-currency`, `check-stale-bundle-refs`.
+- **Cross-repo drift:** `.github/workflows/validate-mcp-sync.yml` (observe first, block later).
 
 ## FAQ
 **Q: Do I need `.claude/` populated?**  
@@ -175,3 +291,11 @@ Each script has a dedicated documentation file with full usage details, options,
 | `check-mcp-impact.sh` / `.ps1` | [check-mcp-impact.md](check-mcp-impact.md) |
 | `validate-skill-history.sh` / `.ps1` | [validate-skill-history.md](validate-skill-history.md) |
 | `validate-skills-manifest.sh` / `.ps1` | [validate-skills-manifest.md](validate-skills-manifest.md) |
+| `validate-version-consistency.sh` / `.ps1` | [validate-version-consistency.md](validate-version-consistency.md) |
+| `validate-gitignore-pm-skills.sh` / `.ps1` | [validate-gitignore-pm-skills.md](validate-gitignore-pm-skills.md) |
+| `validate-script-docs.sh` / `.ps1` | [validate-script-docs.md](validate-script-docs.md) |
+| `check-workflow-coverage.sh` / `.ps1` | [check-workflow-coverage.md](check-workflow-coverage.md) |
+| `check-count-consistency.sh` / `.ps1` | [check-count-consistency.md](check-count-consistency.md) |
+| `check-generated-freshness.sh` / `.ps1` | [check-generated-freshness.md](check-generated-freshness.md) |
+| `check-context-currency.sh` / `.ps1` | [check-context-currency.md](check-context-currency.md) |
+| `check-stale-bundle-refs.sh` / `.ps1` | [check-stale-bundle-refs.md](check-stale-bundle-refs.md) |

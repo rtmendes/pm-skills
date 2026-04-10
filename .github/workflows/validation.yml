@@ -120,3 +120,33 @@ jobs:
         if: matrix.os == 'windows-latest'
         run: pwsh -File scripts/validate-script-docs.ps1
         continue-on-error: true
+
+      - name: Check workflow coverage (bash)
+        if: matrix.os == 'ubuntu-latest'
+        run: bash scripts/check-workflow-coverage.sh
+        continue-on-error: true
+
+      - name: Check workflow coverage (pwsh)
+        if: matrix.os == 'windows-latest'
+        run: pwsh -File scripts/check-workflow-coverage.ps1
+        continue-on-error: true
+
+      - name: Check count consistency (bash)
+        if: matrix.os == 'ubuntu-latest'
+        run: bash scripts/check-count-consistency.sh
+        continue-on-error: true
+
+      - name: Check count consistency (pwsh)
+        if: matrix.os == 'windows-latest'
+        run: pwsh -File scripts/check-count-consistency.ps1
+        continue-on-error: true
+
+      - name: Check generated freshness (bash)
+        if: matrix.os == 'ubuntu-latest'
+        run: bash scripts/check-generated-freshness.sh
+        continue-on-error: true
+
+      - name: Check generated freshness (pwsh)
+        if: matrix.os == 'windows-latest'
+        run: pwsh -File scripts/check-generated-freshness.ps1
+        continue-on-error: true
