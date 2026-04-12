@@ -5,20 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased] — v2.10.0
+## [2.10.0] — 2026-04-11
+
+> **Note:** F-16 (mermaid-diagrams) and F-19 (slideshow-creator) content has
+> been available since v2.9.1 but is formally released and documented with
+> v2.10.0 as the utility skill expansion release.
 
 ### Added
 - **F-16: `utility-mermaid-diagrams`** — new utility skill teaching PMs to create syntactically valid mermaid diagrams. 15 diagram types with dual-lens navigation (type catalog + PM use-case guide), dedicated syntax validity reference, planning worksheet, and worked examples. 2,656 lines across 7 files.
 - **F-19: `utility-slideshow-creator`** — new utility skill for generating professional presentations from JSON deck specifications. 18 slide types with dark/light variants, content-to-layout decision logic, calibrated character limits, Google Slides compatibility. Ships with a generic professional theme. 766 lines across 7 files.
+- **F-24: `utility-update-pm-skills`** — new utility skill for checking, previewing, and applying pm-skills updates. Three modes: `--status` (quick version check), `--report-only` (preview without writing files), default (full update with confirmation). Includes validated-before-copy safety, optional backup, value-delta reports, post-update smoke test, 13-item quality checklist, FAQ, and degraded mode for no-network environments.
 - `/mermaid-diagrams` slash command
 - `/slideshow-creator` slash command
-- Effort briefs: F-17 (meeting-synthesis), F-18 (meeting-prep), F-20 (slideshow-themer), F-21 (content-voice), F-22 (prototype-creator), F-23 (prototype-styler)
-- v2.10.0 release plan with MCP alignment steps
+- `/update-pm-skills` slash command with `--status` and `--report-only` flags
+- `docs/guides/updating-pm-skills.md` — user-facing guide for the update skill
+- `_pm-skills/` local state directory convention (gitignored) for update reports and backups
 
 ### Changed
-- Repo now ships 31 skills (25 phase + 1 foundation + 5 utility), 38 command docs, and 9 workflows
-- Comprehensive docs count sweep: 20+ files updated from 29/30→31 skills, 36/37→38 commands, 3/4→5 utility
-- Backlog updated: F-16 shipped, F-17–F-23 added at priorities 3-9
+- Repo now ships 32 skills (25 phase + 1 foundation + 6 utility), 39 command docs, and 10 workflows
+- Comprehensive docs count sweep across 20+ files
+- MCP server decoupled from pm-skills release cycle (M-22) — frozen, no longer a release prerequisite
+- Codex cross-LLM review completed for release plan and F-24 feature design (1 Blocker, 12 Major, 11 Minor resolved)
 
 ## [2.9.1] — 2026-04-10
 

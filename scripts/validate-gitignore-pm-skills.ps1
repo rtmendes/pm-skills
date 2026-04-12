@@ -9,9 +9,10 @@ if (-not (Test-Path ".gitignore")) {
     exit 1
 }
 
-$content = Get-Content ".gitignore" -Raw
+# Read line-by-line to avoid CRLF regex issues with -Raw
+$lines = Get-Content ".gitignore"
 
-if ($content -match '(?m)^_pm-skills(/?)$') {
+if ($lines | Where-Object { $_ -match '^_pm-skills(/?)$' }) {
     Write-Host "PASS: _pm-skills/ is in .gitignore"
     exit 0
 } else {

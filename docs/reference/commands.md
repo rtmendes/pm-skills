@@ -5,7 +5,7 @@ description: "All slash commands available in PM Skills."
 
 # Commands Reference
 
-PM Skills ships 38 slash commands: 31 skill commands plus 7 workflow commands.
+PM Skills ships 39 slash commands: 32 skill commands plus 7 workflow commands.
 
 | Command | Skill | Phase | Description |
 |---------|-------|-------|-------------|
@@ -39,6 +39,7 @@ PM Skills ships 38 slash commands: 31 skill commands plus 7 workflow commands.
 | `/solution-brief` | [develop-solution-brief](../skills/develop/develop-solution-brief.md) | Develop | Creates a concise one-page solution overview that communicat... |
 | `/spike-summary` | [develop-spike-summary](../skills/develop/develop-spike-summary.md) | Develop | Documents the results of a time-boxed technical or design ex... |
 | `/stakeholder-summary` | [discover-stakeholder-summary](../skills/discover/discover-stakeholder-summary.md) | Discover | Documents stakeholder needs, concerns, and influence for a p... |
+| `/update-pm-skills` | [utility-update-pm-skills](../skills/utility/utility-update-pm-skills.md) | Utility | Checks for updates and updates local pm-skills installation... |
 | `/user-stories` | [deliver-user-stories](../skills/deliver/deliver-user-stories.md) | Deliver | Generates user stories with clear acceptance criteria from p... |
 | `/workflow-customer-discovery` | [Customer Discovery](../workflows/customer-discovery.md) | Workflow | Run the Customer Discovery workflow |
 | `/workflow-feature-kickoff` | [Feature Kickoff](../workflows/feature-kickoff.md) | Workflow | Run the Feature Kickoff workflow |

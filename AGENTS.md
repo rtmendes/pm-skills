@@ -201,6 +201,13 @@ Generates professional presentations from a JSON deck specification using 18 sli
 
 ---
 
+#### update-pm-skills
+**Path:** `skills/utility-update-pm-skills/SKILL.md`
+
+Checks for newer pm-skills releases, compares local vs. latest version, previews what would change, and updates local files after user confirmation. Generates a structured update report documenting changed files, new capabilities, and the value delta between versions. Use when you want to bring a local pm-skills installation up to date.
+
+---
+
 ## Workflows
 
 | Workflow | Description |
@@ -257,6 +264,7 @@ Workflow links are repo-relative within this repository.
 | `/release-notes` | Create user-facing release notes |
 | `/retrospective` | Facilitate and document a team retrospective |
 | `/slideshow-creator` | Generate professional presentations from JSON deck specs |
+| `/update-pm-skills` | Check for updates and update local pm-skills installation |
 | `/solution-brief` | Create a one-page solution overview |
 | `/spike-summary` | Document the results of a technical or design spike |
 | `/stakeholder-summary` | Document stakeholder needs and influence |

@@ -74,7 +74,7 @@ pm-skills/
   - **Max-effort audit**: 9 review agents + 4 audit agents caught 24+ stale count references, mermaid syntax issues, anchor mismatches
   - **MCP alignment documented**: 3-skill gap, embed + build steps in release plan
   - **Release plan**: `docs/internal/release-plans/v2.10.0/plan_v2.10.0.md`
-  - Repo at v2.10.0-dev: 31 skills, 38 commands, 9 workflows
+  - Repo at v2.10.0-dev: 32 skills, 39 commands, 10 workflows
 
 - **v2.9.0 Planning Complete** (2026-04-06)
   - **Theme**: Rename "bundles" to "workflows" + expand from 3 to 9 guided multi-skill workflows
@@ -399,12 +399,12 @@ pm-skills/
   - CI step pending (A-9): `validation.yml` will run `.sh` with `continue-on-error: true`
 
 - **Slash Commands (38 total):**
-  - 31 skill commands (24 original + `/persona` + `/acceptance-criteria` + `/pm-skill-builder` + `/pm-skill-validate` + `/pm-skill-iterate` + `/mermaid-diagrams` + `/slideshow-creator`)
+  - 32 skill commands (24 original + `/persona` + `/acceptance-criteria` + `/pm-skill-builder` + `/pm-skill-validate` + `/pm-skill-iterate` + `/mermaid-diagrams` + `/slideshow-creator` + `/update-pm-skills`)
   - 7 workflow commands: `/workflow-feature-kickoff`, `/workflow-customer-discovery`, `/workflow-sprint-planning`, `/workflow-product-strategy`, `/workflow-post-launch-learning`, `/workflow-stakeholder-alignment`, `/workflow-technical-discovery`
 - **Skills (30 total):**
   - 25 domain skills (24 original + deliver-acceptance-criteria)
   - 1 foundation skill: foundation-persona (`classification: foundation`)
-  - 5 utility skills: utility-pm-skill-builder, utility-pm-skill-validate, utility-pm-skill-iterate, utility-mermaid-diagrams, utility-slideshow-creator (`classification: utility`)
+  - 6 utility skills: utility-pm-skill-builder, utility-pm-skill-validate, utility-pm-skill-iterate, utility-mermaid-diagrams, utility-slideshow-creator, utility-update-pm-skills (`classification: utility`)
 - **Sample Output Library:**
   - `library/skill-output-samples/` — 95 sample outputs across 25 skills
   - `SAMPLE_CREATION.md` — standards for sample creation
@@ -460,10 +460,10 @@ See `docs/internal/backlog-canonical.md` for the priority-ordered backlog.
 - Follows [Agent Skills Specification](https://agentskills.io/specification)
 - Primary Audience: Individual Product Managers using AI assistants
 - Cross-platform: Claude Code, Claude.ai, GitHub Copilot, Cursor, Windsurf, OpenCode
-- 31 skills total: 25 domain + 1 foundation + 5 utility (v2.10.0+)
+- 32 skills total: 25 domain + 1 foundation + 6 utility (v2.10.0+)
 - 9 workflows (expanded from 3 in v2.9.0)
 
-## Skills Inventory (31 skills)
+## Skills Inventory (32 skills)
 
 ### Foundation (1 skill)
 
@@ -471,7 +471,7 @@ See `docs/internal/backlog-canonical.md` for the priority-ordered backlog.
 |-------|----------|----------------|--------|
 | persona | research | foundation | ✅ Complete (v2.5.0) |
 
-### Utility (5 skills)
+### Utility (6 skills)
 
 | Skill | Category | Classification | Status |
 |-------|----------|----------------|--------|
@@ -480,6 +480,7 @@ See `docs/internal/backlog-canonical.md` for the priority-ordered backlog.
 | pm-skill-iterate | coordination | utility | ✅ Complete (v2.8.0) |
 | mermaid-diagrams | documentation | utility | ✅ Complete (v2.10.0) |
 | slideshow-creator | documentation | utility | ✅ Complete (v2.10.0) |
+| update-pm-skills | coordination | utility | ✅ Complete (v2.10.0) |
 
 ### Discover Phase (3 skills)
 
