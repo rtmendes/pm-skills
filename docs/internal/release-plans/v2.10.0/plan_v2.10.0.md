@@ -19,8 +19,9 @@ Triple Diamond phases, 1 foundation skill, and 5 utility skills). v2.10.0
 adds new skills and capabilities, including the library's first meta-skill
 (self-updater).
 
-v2.9.1 (D-05 workflows guide + M-20 docs count CI) ships first as a patch.
-v2.10.0 follows as the next minor release with new user-facing skill content.
+v2.9.1 shipped 2026-04-10 (D-05 workflows guide + M-20 docs count CI).
+v2.10.0 scope: F-16 (shipped) + F-19 (shipped) + F-24 (ready for implementation).
+F-17 (Meeting Synthesis) and F-18 (Meeting Prep) deferred to v2.11.0.
 
 ---
 
@@ -31,9 +32,6 @@ v2.10.0 follows as the next minor release with new user-facing skill content.
 | **F-16** | [Mermaid Diagrams Utility Skill](../../efforts/F-16-mermaid-diagrams/F-16-mermaid-diagrams.md) | Feature | [execution-plan.md](../../efforts/F-16-mermaid-diagrams/execution-plan.md) | **Merged to main** (2026-04-07) |
 | **F-19** | [Slideshow Creator](../../efforts/F-19-slideshow-creator/F-19-slideshow-creator.md) | Feature | [specification.md](../../efforts/F-19-slideshow-creator/specification.md) | **Merged to main** (2026-04-08) |
 | **F-24** | [PM Skills Self-Updater](../../efforts/F-24-update-pm-skills.md) | Feature | [plan](../../efforts/F-24-update-pm-skills/plan_update-pm-skills.md), [spec](../../efforts/F-24-update-pm-skills/specification.md) | Ready for Implementation |
-| **F-17** | [Meeting Synthesis](../../efforts/F-17-meeting-synthesis.md) | Feature | TBD | Backlog |
-| **F-18** | [Meeting Prep](../../efforts/F-18-meeting-prep.md) | Feature | TBD | Backlog |
-| TBD | *(additional efforts possible)* | — | — | — |
 
 ---
 
@@ -42,13 +40,13 @@ v2.10.0 follows as the next minor release with new user-facing skill content.
 | Decision | Answer | Rationale |
 |----------|--------|-----------|
 | **Version** | **v2.10.0** (minor) | New user-facing skills = new capability. Follows SemVer convention. |
-| **Dependency on v2.9.1** | **Yes — v2.9.1 ships first** | D-05 (workflows guide) and M-20 (docs count CI) must land before v2.10.0. The new CI from M-20 will validate skill counts in this release. |
+| **Dependency on v2.9.1** | **Satisfied** — v2.9.1 shipped 2026-04-10 | D-05 (workflows guide) and M-20 (docs count CI) are in place. Count consistency CI now validates this release. |
 | **F-16 skill classification** | **utility** (no phase) | Mermaid diagrams are cross-cutting — PMs use them at every phase. Not tied to a specific Triple Diamond stage. |
 | **F-24 skill classification** | **utility** (no phase) | Self-update is cross-cutting infrastructure, not tied to a Triple Diamond stage. |
 | **F-24 local state directory** | **`_pm-skills/`** (underscore prefix) | Visible on macOS/Windows (unlike dot-prefix). Consistent with `_workflows/`, `_NOTES/` conventions. Added to `.gitignore`. |
-| **Skill count after all efforts** | **32+ skills** | F-16 (shipped) + F-19 (shipped) + F-24 (ready) = 32 minimum. F-17/F-18 would bring to 34 if they ship. |
+| **Skill count after all efforts** | **32 skills** | F-16 (shipped) + F-19 (shipped) + F-24 (ready) = 32. |
 | **MCP parity** | **TBD** | Determine whether pm-skills-mcp needs corresponding tools for new skills. Note: F-24 (update skill) may not be suitable for MCP (requires network + file writes). |
-| **Additional efforts** | **TBD** | F-17, F-18 are candidates. Release scope may expand further. |
+| **F-17/F-18 deferred** | **Moved to v2.11.0** | Meeting Synthesis and Meeting Prep deferred to keep v2.10.0 scope tight. |
 
 ---
 
@@ -208,7 +206,7 @@ Drafts at: `docs/internal/efforts/F-24-update-pm-skills/drafts/`
 ## Implementation Approach
 
 ### Prerequisites
-- [ ] v2.9.1 tagged and pushed (D-05 + M-20)
+- [x] v2.9.1 tagged and pushed (2026-04-10)
 - [x] F-16 merged to main (2026-04-07)
 - [x] F-19 merged to main (2026-04-08)
 - [ ] F-24 prerequisites (P1 version mismatch fix, P2 gitignore)
@@ -280,7 +278,7 @@ scripts/validate-gitignore-pm-skills.ps1  # _pm-skills/ in .gitignore (new)
 
 ## Open Questions
 
-1. **Additional efforts for v2.10.0** — Should F-17 (Meeting Synthesis) or F-18 (Meeting Prep) be pulled in, or defer to v2.11.0?
+1. ~~Additional efforts~~ — **Resolved**: F-17/F-18 deferred to v2.11.0. v2.10.0 scope is F-16 + F-19 + F-24.
 2. **MCP for F-24** — Does `pm_update_pm_skills` make sense as an MCP tool? Requires network + file writes which MCP may not support. May need to be excluded from embed.
 3. **User-facing guide** — Should `docs/guides/updating-pm-skills.md` ship with the skill or be deferred?
 4. **Final skill count** — Depends on which additional efforts land.

@@ -1,6 +1,6 @@
 # [F-17] Meeting Synthesis Skill
 Status: Backlog
-Milestone: v2.10.0
+Milestone: v2.11.0
 Issue: TBD
 Agent: Claude Opus 4.6
 

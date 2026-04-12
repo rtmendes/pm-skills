@@ -39,11 +39,11 @@ Marketplace submission (Effort 0) is a human-only action, not an effort ID.
 
 | Priority | ID | Effort | Type | Agent | Status | Issue |
 |----------|----|--------|------|-------|--------|-------|
-| 1 | D-05 | Dedicated workflows guide | Documentation | Claude | Planned (v2.9.1) | [#131](https://github.com/product-on-purpose/pm-skills/issues/131) |
-| 2 | M-20 | Docs count consistency CI | Infrastructure | Claude | Planned (v2.9.1) | [#132](https://github.com/product-on-purpose/pm-skills/issues/132) |
-| 3 | F-17 | Meeting Synthesis (`/meeting-synthesis`) | New skill | Claude | Backlog (v2.10.0) | TBD |
-| 4 | F-18 | Meeting Prep (`/meeting-prep`) | New skill | Claude | Backlog (v2.10.0) | TBD |
-| 5 | F-19 | Slideshow Creator (`/slideshow-creator`) | New skill | Claude | Backlog | TBD |
+| 1 | D-05 | Dedicated workflows guide | Documentation | Claude | **Shipped (v2.9.1)** | [#131](https://github.com/product-on-purpose/pm-skills/issues/131) |
+| 2 | M-20 | Docs count consistency CI | Infrastructure | Claude | **Shipped (v2.9.1)** | [#132](https://github.com/product-on-purpose/pm-skills/issues/132) |
+| 3 | F-17 | Meeting Synthesis (`/meeting-synthesis`) | New skill | Claude | Backlog (v2.11.0) | TBD |
+| 4 | F-18 | Meeting Prep (`/meeting-prep`) | New skill | Claude | Backlog (v2.11.0) | TBD |
+| 5 | F-19 | Slideshow Creator (`/slideshow-creator`) | New skill | Claude | **Merged to main** | TBD |
 | 6 | F-20 | Slideshow Themer (`/slideshow-themer`) | New skill | Claude | Backlog | TBD |
 | 7 | F-21 | Content Voice (`/content-voice`) | New skill | Claude | Backlog | TBD |
 | 8 | F-22 | Prototype Creator (`/prototype-creator`) | New skill | Claude | Backlog | TBD |
