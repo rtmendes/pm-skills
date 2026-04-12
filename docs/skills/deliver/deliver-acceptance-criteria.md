@@ -219,6 +219,33 @@ When asked to create acceptance criteria, follow these steps:
     - Payment processor and inventory service availability are external dependencies.
     - Fraud review and manual review flows are out of scope for this example.
 
+## Real-World Examples
+
+See this skill applied to three different product contexts:
+
+??? example "Storevine (B2B): Storevine B2B ecommerce platform — acceptance criteria for the Campaigns email template builder"
+    **Prompt:**
+
+    ```
+    /acceptance-criteria
+
+    Feature: Campaigns — email template builder
+    The template builder lets merchants drag-and-drop content blocks (text, image, button, divider, product card) onto a canvas, customize styling, preview on desktop and mobile, and save templates for reuse across campaigns. Templates are stored per-merchant and can be duplicated.
+    ```
+
+    ---
+
+    **Output:**
+
+    ---
+    artifact: acceptance-criteria
+    version: "1.0"
+    created: 2026-04-11
+    status: draft
+    ---
+
+    # Acceptance Criteria: Campaigns Email Template Builder
+
 ## Quality Checklist
 
 Before finalizing, verify:

@@ -390,6 +390,25 @@ If both boxes are not checked, use a list or table instead.
     - **Diagram type selection is a design decision.** Each example considered alternatives and chose the type that best matched the communication need, not the one the PM was most familiar with.
     - **Context around the diagram matters.** The mermaid code block alone is not enough -- the "What this communicates" framing helps the audience know what to look for in the diagram.
 
+## Real-World Examples
+
+See this skill applied to three different product contexts:
+
+??? example "Storevine (B2B): Storevine B2B ecommerce platform — mermaid flowchart for Campaigns email send approval workflow"
+    **Prompt:**
+
+    ```
+    /mermaid-diagrams
+
+    I need a flowchart showing the Campaigns email send approval workflow. When a merchant clicks "Schedule Send," the campaign goes through content validation, compliance checks (CAN-SPAM), optional manager approval (for merchants on the Enterprise plan), and then queues for send. If any check fails, the merchant gets sent back to the editor with specific errors. I want to show this in the Campaigns PRD.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Mermaid Diagram Planning Worksheet
+
 ## Quality Checklist
 
 - [ ] Diagram renders without error in target environment

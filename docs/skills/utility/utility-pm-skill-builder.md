@@ -722,6 +722,29 @@ Context from user: $ARGUMENTS
        skill-proposal template, then open a PR with the promoted files.
     5. **Iterate**: Use the pm-skill iteration utility (when available) to refine based on testing feedback.
 
+## Real-World Examples
+
+See this skill applied to three different product contexts:
+
+??? example "Storevine (B2B): Storevine B2B ecommerce platform — using the skill builder to create a campaign-analytics skill"
+    **Prompt:**
+
+    ```
+    /pm-skill-builder
+
+    Idea: A skill for defining email campaign measurement frameworks -- funnel metrics (sent > delivered > opened > clicked > converted), cohort comparison, and revenue attribution. Existing measure skills handle dashboards and event tracking but not campaign-specific analytics frameworks.
+    ```
+
+    ---
+
+    **Output:**
+
+    # Skill Implementation Packet: campaign-analytics
+
+    > **Created**: 2026-04-11
+    > **Builder version**: 1.0.0
+    > **Status**: Draft
+
 ## Quality Checklist
 
 Before finalizing the packet, verify all items in both tiers:

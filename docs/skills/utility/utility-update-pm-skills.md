@@ -553,6 +553,27 @@ No backup was created (user opted out).
     - Run `/update-pm-skills` to apply this update
     - Review the release notes: [v2.10.0](https://github.com/product-on-purpose/pm-skills/releases/tag/v2.10.0)
 
+## Real-World Examples
+
+See this skill applied to three different product contexts:
+
+??? example "Storevine (B2B): Storevine PM running /update-pm-skills to update from v2.9.1 to v2.10.0"
+    **Prompt:**
+
+    ```
+    /update-pm-skills
+    ```
+
+    ---
+
+    **Output:**
+
+    # PM Skills Update Report
+
+    > **Update complete.** pm-skills has been updated to v2.10.0.
+
+    ---
+
 ## Quality Checklist
 
 Before marking the update complete, verify:

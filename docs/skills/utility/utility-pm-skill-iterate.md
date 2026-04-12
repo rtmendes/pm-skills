@@ -479,6 +479,30 @@ New version: {new-version | unchanged}
     - **The iteration did NOT modify TEMPLATE.md or EXAMPLE.md**: the change
       was confined to SKILL.md's Output Format section
 
+## Real-World Examples
+
+See this skill applied to three different product contexts:
+
+??? example "Storevine (B2B): Storevine B2B ecommerce platform — iterating on campaign-analytics skill after validation findings"
+    **Prompt:**
+
+    ```
+    /pm-skill-iterate
+
+    Skill: campaign-analytics
+    Path: skills/measure-campaign-analytics/
+
+    Apply fixes from validation report:
+    1. Q-01: Expand EXAMPLE.md Attribution Model section to reach 150+ lines
+    2. Q-04: Add "When NOT to Use" section to SKILL.md
+    ```
+
+    ---
+
+    **Output:**
+
+    # Iteration Change Summary: campaign-analytics
+
 ## Quality Checklist
 
 Before completing the iteration, verify:

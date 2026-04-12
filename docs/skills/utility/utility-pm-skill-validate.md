@@ -257,6 +257,31 @@ the check ID, target file path, and a specific action.}
     - Recommendations include target file paths and specific actions for each finding
     - The overall Result is WARN (worst severity found), not FAIL
 
+## Real-World Examples
+
+See this skill applied to three different product contexts:
+
+??? example "Storevine (B2B): Storevine B2B ecommerce platform — validating the campaign-analytics skill from skill builder output"
+    **Prompt:**
+
+    ```
+    /pm-skill-validate
+
+    Skill: campaign-analytics
+    Path: skills/measure-campaign-analytics/
+    ```
+
+    ---
+
+    **Output:**
+
+    # Validation Report: campaign-analytics
+    Date: 2026-04-11
+    Skill version: 1.0.0
+    Validator version: 1.0.0
+    Report schema: v1
+    Result: WARN
+
 ## Quality Checklist
 
 Before delivering the report, verify:
