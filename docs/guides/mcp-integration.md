@@ -15,7 +15,7 @@ This guide helps you access PM-Skills through the Model Context Protocol (MCP) v
   - [VS Code (Cline/Continue)](#vs-code-clinecontinue)
   - [Other MCP Clients](#other-mcp-clients)
 - [Tool Inventory](#tool-inventory)
-  - [Skill Tools (31)](#skill-tools-31)
+  - [Skill Tools (32)](#skill-tools-32)
   - [Workflow Tools (5)](#workflow-tools-5)
   - [Utility Tools (8)](#utility-tools-8)
 - [Slash Command to MCP Tool Mapping](#slash-command-to-mcp-tool-mapping)

@@ -1016,7 +1016,7 @@ Slash commands (like `/prd` or `/hypothesis`) are shortcuts that invoke the corr
 <details>
 <summary><strong>What's the difference between pm-skills and pm-skills-mcp?</strong></summary>
 
-**pm-skills** (this repo) is the source skill library with all 25 PM skills as markdown files. It's best for Claude Code slash commands, file browsing, and customization.
+**pm-skills** (this repo) is the source skill library with all 32 PM skills as markdown files. It's best for Claude Code slash commands, file browsing, and customization.
 
 **pm-skills-mcp** wraps these same skills in an MCP server for programmatic access. It's best for Claude Desktop, Cursor, and any MCP-compatible client.
 

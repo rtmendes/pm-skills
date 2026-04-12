@@ -82,7 +82,7 @@ All 32 skills are registered in `AGENTS.md` with corresponding slash commands in
 
 ```
 pm-skills/
-├── skills/               # The 31 shipped skills (flat, including foundation + utility)
+├── skills/               # The 32 shipped skills (flat, including foundation + utility)
 │   ├── discover-competitive-analysis/
 │   ├── define-hypothesis/
 │   ├── develop-adr/
@@ -189,7 +189,7 @@ Use this matrix to choose between the file-based skill library and the MCP serve
 |---------|-----------|---------------|
 | **Shipped PM-Skills catalog** | ✅ | ✅ |
 | **Workflows** | ✅ Manual | ✅ Tool-based |
-| **Slash Commands** | ✅ 38 command docs | ❌ (use tools) |
+| **Slash Commands** | ✅ 39 command docs | ❌ (use tools) |
 | **MCP Tools** | ❌ | ✅ Release-specific tool set |
 | **MCP Resources** | ❌ | ✅ Release-specific resource set |
 | **MCP Prompts** | ❌ | ✅ Release-specific prompt set |

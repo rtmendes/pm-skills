@@ -32,9 +32,9 @@ pm-skills/
 │   ├── define-problem-statement/
 │   ├── deliver-prd/
 │   ├── deliver-user-stories/
-│   └── ...               # 31 skills total: {phase/classification}-{skill}/
+│   └── ...               # 32 skills total: {phase/classification}-{skill}/
 ├── _workflows/           # 9 Workflows (triple-diamond, lean-startup, feature-kickoff, and 6 more)
-├── commands/             # Claude Code slash commands (38 total: 31 skill + 7 workflow)
+├── commands/             # Claude Code slash commands (39 total: 32 skill + 7 workflow)
 ├── docs/                 # Documentation
 │   ├── guides/           # How-to guides
 │   ├── reference/        # Technical specs
@@ -398,10 +398,10 @@ pm-skills/
   - `scripts/check-context-currency.ps1` — PowerShell equivalent for Windows local use
   - CI step pending (A-9): `validation.yml` will run `.sh` with `continue-on-error: true`
 
-- **Slash Commands (38 total):**
+- **Slash Commands (39 total):**
   - 32 skill commands (24 original + `/persona` + `/acceptance-criteria` + `/pm-skill-builder` + `/pm-skill-validate` + `/pm-skill-iterate` + `/mermaid-diagrams` + `/slideshow-creator` + `/update-pm-skills`)
   - 7 workflow commands: `/workflow-feature-kickoff`, `/workflow-customer-discovery`, `/workflow-sprint-planning`, `/workflow-product-strategy`, `/workflow-post-launch-learning`, `/workflow-stakeholder-alignment`, `/workflow-technical-discovery`
-- **Skills (30 total):**
+- **Skills (32 total):**
   - 25 domain skills (24 original + deliver-acceptance-criteria)
   - 1 foundation skill: foundation-persona (`classification: foundation`)
   - 6 utility skills: utility-pm-skill-builder, utility-pm-skill-validate, utility-pm-skill-iterate, utility-mermaid-diagrams, utility-slideshow-creator, utility-update-pm-skills (`classification: utility`)
