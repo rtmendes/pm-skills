@@ -20,6 +20,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `/update-pm-skills` slash command with `--status` and `--report-only` flags
 - `docs/guides/updating-pm-skills.md` — user-facing guide for the update skill
 - `_pm-skills/` local state directory convention (gitignored) for update reports and backups
+- 7 new sample outputs in `library/skill-output-samples/` for deliver-acceptance-criteria and all 6 utility skills (storevine thread). Sample library: 84 → 91, now covering all 32 skills.
+- Generated `docs/skills/` pages for all 3 new utility skills
 
 ### Changed
 - Repo now ships 32 skills (25 phase + 1 foundation + 6 utility), 39 command docs, and 10 workflows

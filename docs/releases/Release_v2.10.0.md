@@ -63,6 +63,24 @@ Key features:
 - MCP server decoupled from release cycle (M-22) — pm-skills-mcp is
   frozen and no longer a release prerequisite
 
+## Sample Library
+
+7 new sample outputs added for skills that were missing from the sample
+library. All use the storevine thread (Campaigns feature):
+
+- **deliver-acceptance-criteria** — Given/When/Then ACs for the email template builder
+- **utility-mermaid-diagrams** — flowchart planning worksheet for campaign send approval
+- **utility-slideshow-creator** — JSON deck spec for a campaigns launch presentation
+- **utility-pm-skill-builder** — skill implementation packet for a fictional campaign-analytics skill
+- **utility-pm-skill-validate** — validation report with 2 findings
+- **utility-pm-skill-iterate** — iteration applying the validation findings
+- **utility-update-pm-skills** — update completion report (v2.9.1 → v2.10.0)
+
+Sample library: **84 → 91 samples**, now covering all 32 skills.
+
+Generated `docs/skills/` pages for all 3 new utility skills (mermaid-diagrams,
+slideshow-creator, update-pm-skills).
+
 ## Infrastructure
 
 - Codex cross-LLM review completed: 1 Blocker, 12 Major, 11 Minor
