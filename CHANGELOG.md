@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.10.1] — 2026-04-13
+
+Documentation and tooling polish following v2.10.0. No skill behavior changes.
+
+### Added
+- Specifications for 10 backlog skills (draft effort briefs)
+- Generated `docs/skills/` pages for F-16, F-19, F-24
+
+### Changed
+- `scripts/generate-skill-pages.py` — skill/command/workflow counts now computed dynamically instead of hardcoded, preventing the stale-count drift that previously required manual sweeps
+- Backlog updated to reflect v2.10.0 shipped state
+
+### Removed
+- F-25 effort brief (scope moved to a separate agent-config-toolkit initiative)
+
 ## [2.10.0] — 2026-04-11
 
 > **Note:** F-16 (mermaid-diagrams) and F-19 (slideshow-creator) content has
