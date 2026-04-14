@@ -2,11 +2,11 @@
 
 ## Current State
 
-**Status:** v2.9.0 released — v2.10.0 in progress (F-16 + F-19 shipped, F-17–F-23 planned)
-**Last Updated:** 2026-04-09
-**Release:** v2.9.0 (tagged 2026-04-06, pushed), v2.10.0 in progress
-**MCP:** pm-skills-mcp v2.8.0 — 3 skills behind (needs embed of F-16, F-19, and deliver-acceptance-criteria)
-**Next Step:** Build additional v2.10.0 skills (F-17–F-23), align MCP, ship v2.9.1 (D-05 + M-20) as prerequisite
+**Status:** v2.10.1 released (tagged and pushed). Docs site cleaned up and rendering correctly.
+**Last Updated:** 2026-04-13
+**Release:** v2.10.1 (tagged 2026-04-13, pushed). v2.10.0 shipped F-16, F-19, F-24. v2.9.1 shipped D-05 and M-20.
+**MCP:** pm-skills-mcp still 4 skills behind (28 embedded vs 32 in repo). M-22 "MCP Decoupling" queued as v2.11.0 priority 3.
+**Next Step:** F-17 (meeting-synthesis) as the kickoff skill for v2.11.0, paired with F-18 (meeting-prep). Then M-22 as v2.11.1 infrastructure.
 
 ## Project Overview
 
