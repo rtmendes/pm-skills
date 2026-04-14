@@ -37,45 +37,69 @@ graph LR
 
 <div class="grid cards" markdown>
 
-- :material-magnify: **Discover** - 3 skills
-  ---
-  Research, competitive analysis, stakeholder mapping
-  [:octicons-arrow-right-24: Browse](skills/discover/)
+-   :material-magnify: **Discover** - 3 skills
 
-- :material-target: **Define** - 4 skills
-  ---
-  Problem framing, hypotheses, opportunity trees, JTBD
-  [:octicons-arrow-right-24: Browse](skills/define/)
+    ---
 
-- :material-wrench: **Develop** - 4 skills
-  ---
-  Solution briefs, ADRs, design rationale, spikes
-  [:octicons-arrow-right-24: Browse](skills/develop/)
+    Research, competitive analysis, stakeholder mapping
 
-- :material-rocket-launch: **Deliver** - 6 skills
-  ---
-  PRDs, user stories, acceptance criteria, edge cases, launch, release notes
-  [:octicons-arrow-right-24: Browse](skills/deliver/)
+    [:octicons-arrow-right-24: Browse](skills/discover/)
 
-- :material-chart-line: **Measure** - 4 skills
-  ---
-  Experiments, instrumentation, dashboards, results
-  [:octicons-arrow-right-24: Browse](skills/measure/)
+-   :material-target: **Define** - 4 skills
 
-- :material-refresh: **Iterate** - 4 skills
-  ---
-  Retrospectives, lessons, refinement, pivot decisions
-  [:octicons-arrow-right-24: Browse](skills/iterate/)
+    ---
 
-- :material-layers-triple: **Foundation** - 1 skill
-  ---
-  Cross-cutting persona generation
-  [:octicons-arrow-right-24: Browse](skills/foundation/)
+    Problem framing, hypotheses, opportunity trees, JTBD
 
-- :material-tools: **Utility** - 6 skills
-  ---
-  Create, validate, iterate skills, generate diagrams and presentations, and update the library
-  [:octicons-arrow-right-24: Browse](skills/utility/)
+    [:octicons-arrow-right-24: Browse](skills/define/)
+
+-   :material-wrench: **Develop** - 4 skills
+
+    ---
+
+    Solution briefs, ADRs, design rationale, spikes
+
+    [:octicons-arrow-right-24: Browse](skills/develop/)
+
+-   :material-rocket-launch: **Deliver** - 6 skills
+
+    ---
+
+    PRDs, user stories, acceptance criteria, edge cases, launch, release notes
+
+    [:octicons-arrow-right-24: Browse](skills/deliver/)
+
+-   :material-chart-line: **Measure** - 4 skills
+
+    ---
+
+    Experiments, instrumentation, dashboards, results
+
+    [:octicons-arrow-right-24: Browse](skills/measure/)
+
+-   :material-refresh: **Iterate** - 4 skills
+
+    ---
+
+    Retrospectives, lessons, refinement, pivot decisions
+
+    [:octicons-arrow-right-24: Browse](skills/iterate/)
+
+-   :material-layers-triple: **Foundation** - 1 skill
+
+    ---
+
+    Cross-cutting persona generation
+
+    [:octicons-arrow-right-24: Browse](skills/foundation/)
+
+-   :material-tools: **Utility** - 6 skills
+
+    ---
+
+    Create, validate, iterate skills, generate diagrams and presentations, and update the library
+
+    [:octicons-arrow-right-24: Browse](skills/utility/)
 
 </div>
 
@@ -177,20 +201,29 @@ Follow three fictional companies through the complete product lifecycle - from d
 
 <div class="grid cards" markdown>
 
-- :material-store: **Storevine** - B2B Ecommerce
-  ---
-  Building email marketing for 15K merchants. Organized prompts.
-  [:octicons-arrow-right-24: Follow the journey](showcase/storevine.md)
+-   :material-store: **Storevine** - B2B Ecommerce
 
-- :material-bookshelf: **Brainshelf** - Consumer PKM
-  ---
-  Building a morning digest for 22K users. Casual prompts.
-  [:octicons-arrow-right-24: Follow the journey](showcase/brainshelf.md)
+    ---
 
-- :material-office-building: **Workbench** - Enterprise Collaboration
-  ---
-  Building document templates for 500 enterprises. Structured prompts.
-  [:octicons-arrow-right-24: Follow the journey](showcase/workbench.md)
+    Building email marketing for 15K merchants. Organized prompts.
+
+    [:octicons-arrow-right-24: Follow the journey](showcase/storevine.md)
+
+-   :material-bookshelf: **Brainshelf** - Consumer PKM
+
+    ---
+
+    Building a morning digest for 22K users. Casual prompts.
+
+    [:octicons-arrow-right-24: Follow the journey](showcase/brainshelf.md)
+
+-   :material-office-building: **Workbench** - Enterprise Collaboration
+
+    ---
+
+    Building document templates for 500 enterprises. Structured prompts.
+
+    [:octicons-arrow-right-24: Follow the journey](showcase/workbench.md)
 
 </div>
 
