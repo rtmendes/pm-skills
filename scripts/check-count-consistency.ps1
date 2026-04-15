@@ -1,7 +1,7 @@
 # check-count-consistency.ps1 — Detect stale hardcoded counts in docs.
 #
-# Counts actual skills, commands, and workflows, then scans tracked .md files
-# for hardcoded numbers that no longer match.
+# Counts actual skills, commands, and workflows, then scans tracked .md and
+# .json files for hardcoded numbers that no longer match.
 #
 # Exit codes:
 #   0 — All counts are consistent
@@ -35,7 +35,7 @@ Write-Host ""
 
 # --- Scan tracked .md files for hardcoded counts ---
 
-$trackedFiles = git -C $Root ls-files "*.md" | Where-Object { $_ -ne '' }
+$trackedFiles = git -C $Root ls-files "*.md" "*.json" | Where-Object { $_ -ne '' }
 
 # Exclusion patterns — files where counts are historical or structural
 $excludePatterns = @(
@@ -45,6 +45,8 @@ $excludePatterns = @(
     '^docs/changelog\.md$',
     '^\.github/issues-archive/',
     '^\.github/issues-drafts/',
+    '^\.github/\.created-issues\.json$',
+    '^\.github/scripts/',
     '^AGENTS/claude/CONTEXT\.md$',
     '^AGENTS/claude/SESSION-LOG/',
     '^library/',
@@ -63,7 +65,8 @@ $filesToCheck = $trackedFiles | Where-Object {
     -not $excluded
 }
 
-# Minimum threshold — counts at or below this are likely per-phase/per-category
+# Minimum threshold — counts below this are likely per-phase/per-category.
+# Comparison uses -ge so values equal to the threshold are still checked.
 $MinThreshold = 10
 
 $mismatches = @()
@@ -93,7 +96,7 @@ foreach ($file in $filesToCheck) {
             $matches = [regex]::Matches($line, $check.Pattern, 'IgnoreCase')
             foreach ($m in $matches) {
                 $num = [int]$m.Groups[1].Value
-                if ($num -ne $check.Count -and $num -gt $MinThreshold) {
+                if ($num -ne $check.Count -and $num -ge $MinThreshold) {
                     $mismatches += "  ${file}:${lineNum}: found '$num $($check.Name)' (actual: $($check.Count))"
                     $Fail = $true
                 }
@@ -103,7 +106,7 @@ foreach ($file in $filesToCheck) {
 }
 
 if (-not $Fail) {
-    Write-Host "PASS: No stale counts found in tracked .md files."
+    Write-Host "PASS: No stale counts found in tracked .md or .json files."
     exit 0
 } else {
     Write-Host "Stale counts found:"

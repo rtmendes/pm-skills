@@ -21,7 +21,7 @@
     <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat-square" alt="License">
   </a>
   <a href="https://github.com/product-on-purpose/pm-skills/releases">
-    <img src="https://img.shields.io/badge/version-2.10.1-blue.svg?style=flat-square" alt="Version">
+    <img src="https://img.shields.io/badge/version-2.10.2-blue.svg?style=flat-square" alt="Version">
   </a>
   <a href="#the-skills">
     <img src="https://img.shields.io/badge/skills-32-brightgreen.svg?style=flat-square" alt="Skills">
@@ -129,8 +129,9 @@ git clone https://github.com/product-on-purpose/pm-skills.git && cd pm-skills
 - **New skill**: `utility-update-pm-skills` (`/update-pm-skills`) — checks for newer releases, previews changes with `--report-only`, and applies updates with confirmation. Includes backup, value-delta report, and post-update smoke test.
 - **Sample library**: 84 → 91 outputs, now covering all 32 skills.
 - **Tooling**: `generate-skill-pages.py` now computes skill/command/workflow counts dynamically, eliminating stale-count drift.
-- Repo now ships 32 skills, 39 command docs, and 10 workflows.
+- Repo now ships 32 skills, 39 command docs, and 9 workflows.
 - v2.10.1 patch: backlog spec drafts for 10 upcoming skills, generated docs/skills/ pages, F-25 scope moved to agent-config-toolkit.
+- v2.10.2 patch: corrected plugin / marketplace manifest skill counts (29 → 32) to match repo state; extended `check-count-consistency` CI to scan JSON manifests and closed an off-by-one in its threshold comparison; fixed README "10 workflows" to "9 workflows".
 
 </details>
 <details>
@@ -549,9 +550,9 @@ The skill content provides all the context the LLM needs to produce professional
 All releases are available on the [GitHub Releases](https://github.com/product-on-purpose/pm-skills/releases) page:
 
 - **`pm-skills-vX.X.X.zip`** — Complete package with all skills, commands, workflows, and documentation
-- **Latest stable:** `v2.10.1` (Utility skill expansion: mermaid diagrams, slideshows, self-updating)
-- **Latest release notes:** [CHANGELOG.md](CHANGELOG.md#2101---2026-04-13)
-- **Published tag:** [`v2.10.1`](https://github.com/product-on-purpose/pm-skills/releases/tag/v2.10.1)
+- **Latest stable:** `v2.10.2` (Plugin manifest drift fix and count-consistency CI hardening)
+- **Latest release notes:** [CHANGELOG.md](CHANGELOG.md#2102---2026-04-14)
+- **Published tag:** [`v2.10.2`](https://github.com/product-on-purpose/pm-skills/releases/tag/v2.10.2)
 - **Documentation site:** [product-on-purpose.github.io/pm-skills](https://product-on-purpose.github.io/pm-skills/)
 
 Each release includes `QUICKSTART.md` with installation and usage instructions.

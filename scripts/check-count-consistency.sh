@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # check-count-consistency.sh — Detect stale hardcoded counts in docs.
 #
-# Counts actual skills, commands, and workflows, then scans tracked .md files
-# for hardcoded numbers that no longer match.
+# Counts actual skills, commands, and workflows, then scans tracked .md and
+# .json files for hardcoded numbers that no longer match.
 #
 # Exit codes:
 #   0 — All counts are consistent
@@ -41,6 +41,8 @@ EXCLUDES=(
   ':!docs/changelog.md'
   ':!.github/issues-archive/'
   ':!.github/issues-drafts/'
+  ':!.github/.created-issues.json'
+  ':!.github/scripts/'
   ':!AGENTS/claude/CONTEXT.md'
   ':!AGENTS/claude/SESSION-LOG/'
   ':!library/'
@@ -49,8 +51,9 @@ EXCLUDES=(
   ':!scripts/check-count-consistency.md'
 )
 
-# Minimum threshold — counts at or below this are likely per-phase/per-category,
-# not total counts. Set to half the smallest actual count to avoid false positives.
+# Minimum threshold — counts below this are likely per-phase/per-category,
+# not total counts. Comparison uses >= so values equal to the threshold are
+# still checked, which matters as resource counts cross round-number boundaries.
 MIN_THRESHOLD=10
 
 check_resource() {
@@ -58,7 +61,7 @@ check_resource() {
   local resource_name="$2"
   local actual_count="$3"
 
-  git -C "$ROOT" grep -inE "$grep_pattern" -- '*.md' "${EXCLUDES[@]}" 2>/dev/null | \
+  git -C "$ROOT" grep -inE "$grep_pattern" -- '*.md' '*.json' "${EXCLUDES[@]}" 2>/dev/null | \
     awk -F: -v actual="$actual_count" -v rname="$resource_name" -v min_t="$MIN_THRESHOLD" '
     {
       file = $1
@@ -81,7 +84,7 @@ check_resource() {
         if (rname == "skills" && rest ~ /^[ ]+(pm[ ]+|product[ ]+management[ ]+)?skills/) matched = 1
         if (rname == "commands" && rest ~ /^[ ]+commands/) matched = 1
         if (rname == "workflows" && rest ~ /^[ ]+workflows/) matched = 1
-        if (matched && num != actual && num > min_t) {
+        if (matched && num != actual && num >= min_t) {
           printf "  %s:%s: found \x27%d %s\x27 (actual: %d)\n", file, linenum, num, rname, actual
         }
         line = rest
@@ -95,7 +98,7 @@ MISMATCHES+=$(check_resource '[0-9]+ commands' "commands" "$COMMAND_COUNT")
 MISMATCHES+=$(check_resource '[0-9]+ workflows' "workflows" "$WORKFLOW_COUNT")
 
 if [[ -z "$MISMATCHES" ]]; then
-  echo "PASS: No stale counts found in tracked .md files."
+  echo "PASS: No stale counts found in tracked .md or .json files."
   exit 0
 else
   echo "Stale counts found:"

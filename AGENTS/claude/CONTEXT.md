@@ -2,11 +2,11 @@
 
 ## Current State
 
-**Status:** v2.10.1 released (tagged and pushed). Docs site cleaned up and rendering correctly.
-**Last Updated:** 2026-04-13
-**Release:** v2.10.1 (tagged 2026-04-13, pushed). v2.10.0 shipped F-16, F-19, F-24. v2.9.1 shipped D-05 and M-20.
+**Status:** v2.10.2 prepared on main, ready for tag + push. Patch contains the plugin-manifest drift fix (29 → 32 skills) and a count-consistency CI extension to cover JSON.
+**Last Updated:** 2026-04-14
+**Release:** v2.10.2 (prepared 2026-04-14, awaiting tag + push). v2.10.1 shipped 2026-04-13 (docs / tooling polish). v2.10.0 shipped F-16, F-19, F-24. v2.9.1 shipped D-05 and M-20.
 **MCP:** pm-skills-mcp still 4 skills behind (28 embedded vs 32 in repo). M-22 "MCP Decoupling" queued as v2.11.0 priority 3.
-**Next Step:** F-17 (meeting-synthesis) as the kickoff skill for v2.11.0, paired with F-18 (meeting-prep). Then M-22 as v2.11.1 infrastructure.
+**Next Step:** Commit the v2.10.2 changes, tag `v2.10.2`, push, then open F-17 (meeting-synthesis) paired with F-18 (meeting-prep) as the v2.11.0 kickoff. M-22 follows as v2.11.1 infrastructure.
 
 ## Project Overview
 
@@ -66,6 +66,13 @@ pm-skills/
 
 ## Recent Work
 
+- **Post-v2.10.1 maintenance** (2026-04-14, uncommitted on main)
+  - **Plugin manifest drift fixed**: `.claude-plugin/plugin.json` and `marketplace.json` descriptions corrected from "29 skills" to "32 skills" (both had lagged since v2.10.0 utility expansion).
+  - **CI extended**: `check-count-consistency.sh` / `.ps1` / `.md` now scans `.json` files too (previously `.md` only). `plugin.json` and `marketplace.json` are now covered. Added narrow exclusions for `.github/.created-issues.json` and `.github/scripts/` (npm lock + manifest).
+  - **Off-by-one fix**: threshold comparison in the CI changed from `>` to `>=`. Caught a live mismatch immediately: README.md:132 claimed "10 workflows" when actual is 9. Fixed in the same session.
+  - **Memory refresh**: MEMORY.md updated — current version v2.9.0→v2.10.1, skills 31→32, utility 5→6, workflows count reconciled to 9.
+  - **Known gap left open**: historical "N skills" references in README "What's New" blocks (27/29/31) and CLAUDE.md:31 (24 skills) still trip the CI because the `v[0-9]+\.` line-level heuristic doesn't see the `<summary>v2.X.Y</summary>` on the enclosing `<details>` element. Tracked as a future CI hardening task.
+
 - **v2.10.0 In Progress** (2026-04-07–09)
   - **F-16 shipped**: `utility-mermaid-diagrams` — 15 diagram types, dual-lens navigation (catalog + PM use-cases), syntax validity reference, 2,656 lines
   - **F-19 shipped**: `utility-slideshow-creator` — 18 slide types, JSON deck specs, zero design decisions at generation time, generic professional theme, 766 lines
@@ -74,7 +81,7 @@ pm-skills/
   - **Max-effort audit**: 9 review agents + 4 audit agents caught 24+ stale count references, mermaid syntax issues, anchor mismatches
   - **MCP alignment documented**: 3-skill gap, embed + build steps in release plan
   - **Release plan**: `docs/internal/release-plans/v2.10.0/plan_v2.10.0.md`
-  - Repo at v2.10.0-dev: 32 skills, 39 commands, 10 workflows
+  - Repo at v2.10.0-dev: 32 skills, 39 commands, 9 workflows
 
 - **v2.9.0 Planning Complete** (2026-04-06)
   - **Theme**: Rename "bundles" to "workflows" + expand from 3 to 9 guided multi-skill workflows

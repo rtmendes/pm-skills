@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.10.2] — 2026-04-14
+
+Maintenance patch: corrects plugin manifest drift and extends the count-consistency CI to prevent it from recurring. No skill behavior changes.
+
+### Changed
+- `.claude-plugin/plugin.json` and `marketplace.json` — skill count in description corrected from 29 to 32 (reconciled with the 32-skill repo state shipped in v2.10.0)
+- `scripts/check-count-consistency.sh` / `.ps1` / `.md` — extended to scan tracked `.json` files (previously `.md` only), so drift in `plugin.json` and `marketplace.json` is now caught by the same CI that covers markdown. Threshold comparison changed from `>` to `>=` to catch round-number boundary drift. Added exclusions for `.github/.created-issues.json` (tooling state) and `.github/scripts/` (npm manifests).
+- `README.md` — v2.10.x What's New entry corrected from "10 workflows" to "9 workflows" (no new workflow shipped in v2.10.x; the repo has been at 9 workflows since v2.9.0)
+
 ## [2.10.1] — 2026-04-13
 
 Documentation and tooling polish following v2.10.0. No skill behavior changes.

@@ -22,7 +22,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\check-count-consistency.ps1
    - Skills: directories in `skills/`
    - Commands: `.md` files in `commands/`
    - Workflows: `.md` files in `_workflows/` (excluding `README.md`)
-2. Scans all tracked `.md` files for patterns like `{N} skills`, `{N} commands`, `{N} workflows` (also `{N} PM skills`, `{N} product management skills`)
+2. Scans all tracked `.md` and `.json` files (including `plugin.json` and `marketplace.json`) for patterns like `{N} skills`, `{N} commands`, `{N} workflows` (also `{N} PM skills`, `{N} product management skills`)
 3. Compares found numbers against actual counts
 4. Reports mismatches with file path and line number
 
@@ -30,6 +30,7 @@ Exclusions (not flagged as stale):
 - `CHANGELOG.md` — historical entries are correct for their time
 - `docs/releases/` — same reason
 - `docs/internal/` — planning docs may reference future counts
+- `.github/.created-issues.json` and `.github/scripts/` — tooling state and npm manifests, not docs
 - Lines containing version references like `v2.` — likely historical context
 
 ## Exit Codes

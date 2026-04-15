@@ -4,8 +4,8 @@
   "plugins": [
     {
       "name": "pm-skills",
-      "description": "29 PM skills covering the full product lifecycle with templates, examples, workflows, and lifecycle tools for creating, validating, and iterating skills. Follows the agentskills.io specification.",
-      "version": "2.10.1",
+      "description": "32 PM skills covering the full product lifecycle with templates, examples, workflows, and lifecycle tools for creating, validating, and iterating skills. Follows the agentskills.io specification.",
+      "version": "2.10.2",
       "source": ".",
       "author": "product-on-purpose",
       "homepage": "https://github.com/product-on-purpose/pm-skills",
