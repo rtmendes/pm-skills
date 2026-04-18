@@ -18,6 +18,33 @@ Generate a one-page lean canvas across nine interlocking blocks (problem, custom
 
 Generates a context-appropriate persona for product or marketing workflows with explicit assumptions, confidence, and evidence trail. Use when shaping artifact perspective, stress-testing decisions, or framing PM/GTM decisions.
 
+#### meeting-agenda
+**Path:** `skills/foundation-meeting-agenda/SKILL.md`
+
+Produces an attendee-facing agenda with time-boxed topics, type tags (Discussion / Decision / Information / Working), owners, and attendee prep. Supports ten meeting-type variants (standup, planning, review, decision-making, brainstorm, 1-on-1, stakeholder-review, project-kickoff, working-session, exec-briefing). Member of the Meeting Skills Family.
+
+#### meeting-brief
+**Path:** `skills/foundation-meeting-brief/SKILL.md`
+
+Produces a private strategic prep document with stakes, stakeholder reads, ranked desired outcomes, key messages, anticipated Q&A, risks, and specific asks. Member of the Meeting Skills Family. Distinct from meeting-agenda because the brief is private by default, not shared with attendees.
+
+#### meeting-recap
+**Path:** `skills/foundation-meeting-recap/SKILL.md`
+
+Produces a topic-segmented post-meeting summary with decisions bold-flagged inline and actions captured per topic (plus consolidated action view). Auto-populates topic skeleton from a sibling meeting-agenda when available. Accepts transcripts from any tool. Member of the Meeting Skills Family.
+
+#### meeting-synthesize
+**Path:** `skills/foundation-meeting-synthesize/SKILL.md`
+
+Cross-meeting archaeology skill. Consumes multiple meeting recaps over a period and surfaces patterns invisible in any single meeting: decision evolution, stakeholder position shifts, stalled threads, contradictions. Produces plain-text timeline, themes, prioritized follow-ups. Member of the Meeting Skills Family.
+
+#### stakeholder-update
+**Path:** `skills/foundation-stakeholder-update/SKILL.md`
+
+Produces async communication to stakeholders from a meeting recap. Supports five channel variants (slack, teams, email, notion, exec-memo) and five audience variants (engineering, design, leadership, customer-facing, mixed). Surfaces primary CTA up front, logs technical-to-business translations, detects thread continuation. Member of the Meeting Skills Family.
+
+> Meeting skills share a contract at `docs/reference/skill-families/meeting-skills-contract.md` governing frontmatter, file naming, go-mode behavior, and universal output requirements. Enforced by `scripts/validate-meeting-skills-family.sh`.
+
 ---
 
 ### Discover Phase

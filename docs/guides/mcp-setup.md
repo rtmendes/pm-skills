@@ -8,13 +8,13 @@ tags:
 
 # MCP Server Setup
 
-The [pm-skills-mcp](https://github.com/product-on-purpose/pm-skills-mcp) server gives you instant access to all 32 PM skills via the Model Context Protocol. No file management, no cloning — just configure your AI client and start using skills.
+The [pm-skills-mcp](https://github.com/product-on-purpose/pm-skills-mcp) server gives you instant access to all 38 PM skills via the Model Context Protocol. (Note: MCP server is frozen as of v2.11.0 per M-22; may lag the main repo until adoption criteria are met.) No file management, no cloning — just configure your AI client and start using skills.
 
 ## What You Get
 
 | Feature | Detail |
 |---------|--------|
-| **32 skill tools** | Every PM skill as a callable MCP tool |
+| **38 skill tools** | Every PM skill as a callable MCP tool |
 | **5 workflow tools** | Multi-skill workflows (Feature Kickoff, Lean Startup, etc.) |
 | **8 utility tools** | Search, list, validate, and cache management |
 | **87 resources** | Skill templates and examples accessible via URI |

@@ -219,7 +219,12 @@ nav:
     - Foundation:
       - skills/foundation/index.md
       - skills/foundation/foundation-lean-canvas.md
+      - skills/foundation/foundation-meeting-agenda.md
+      - skills/foundation/foundation-meeting-brief.md
+      - skills/foundation/foundation-meeting-recap.md
+      - skills/foundation/foundation-meeting-synthesize.md
       - skills/foundation/foundation-persona.md
+      - skills/foundation/foundation-stakeholder-update.md
     - Utility:
       - skills/utility/index.md
       - skills/utility/utility-mermaid-diagrams.md
@@ -269,11 +274,17 @@ nav:
     - "Brainshelf (Consumer)": showcase/brainshelf.md
     - "Workbench (Enterprise)": showcase/workbench.md
 
+  - Guides:
+    - Using the Meeting Skills Family: guides/using-meeting-skills.md
+
   - Reference:
     - Commands: reference/commands.md
     - Categories: reference/categories.md
     - Ecosystem: reference/ecosystem.md
     - Project Structure: reference/project-structure.md
+    - Skill Families:
+      - reference/skill-families/index.md
+      - Meeting Skills Contract: reference/skill-families/meeting-skills-contract.md
 
   - Contributing:
     - contributing/index.md

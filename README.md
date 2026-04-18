@@ -5,7 +5,7 @@
   <br>
 </h1>
 
-<h4 align=”center”>A curated collection of 32 best-practice, plug-and-play product management “agent skills” (25 phase skills + 1 foundation skill + 6 utility skills) plus templates and workflows for consistent, professional PM outputs.</h4>
+<h4 align=”center”>A curated collection of 38 best-practice, plug-and-play product management “agent skills” (25 phase skills + 7 foundation skills + 6 utility skills) plus templates and workflows for consistent, professional PM outputs.</h4>
 
 <p align="center">
   <a href="https://github.com/product-on-purpose/pm-skills/issues/new?labels=bug">Report a Bug</a>
@@ -21,10 +21,10 @@
     <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat-square" alt="License">
   </a>
   <a href="https://github.com/product-on-purpose/pm-skills/releases">
-    <img src="https://img.shields.io/badge/version-2.10.2-blue.svg?style=flat-square" alt="Version">
+    <img src="https://img.shields.io/badge/version-2.11.0-blue.svg?style=flat-square" alt="Version">
   </a>
   <a href="#the-skills">
-    <img src="https://img.shields.io/badge/skills-32-brightgreen.svg?style=flat-square" alt="Skills">
+    <img src="https://img.shields.io/badge/skills-38-brightgreen.svg?style=flat-square" alt="Skills">
   </a>
   <a href="https://agentskills.io/specification">
     <img src="https://img.shields.io/badge/spec-agentskills.io-orange.svg?style=flat-square" alt="Agent Skills Spec">
@@ -122,6 +122,25 @@ git clone https://github.com/product-on-purpose/pm-skills.git && cd pm-skills
 
 **What's New (Recent Releases)**
 <details open>
+<summary>v2.11.0 - Meeting Skills Family + Lean Canvas: first cross-cutting skill-family contract</summary>
+
+- **New foundation skill**: `foundation-lean-canvas` (`/lean-canvas`) — one-page business thesis across nine interlocking blocks (problem, customer, UVP, solution, channels, revenue, cost, metrics, unfair advantage). Two modes: `content` (structured markdown) and `visual` (self-contained HTML with A3 landscape print styling).
+- **New foundation family — the 5-skill Meeting Skills Family**, governed by a canonical contract ([`docs/reference/skill-families/meeting-skills-contract.md`](docs/reference/skill-families/meeting-skills-contract.md)) with enforcing CI:
+  - `foundation-meeting-agenda` (`/meeting-agenda`) — attendee-facing structural agenda with time-boxed topics, type tags, owners, prep; 10 meeting-type variants
+  - `foundation-meeting-brief` (`/meeting-brief`) — private strategic prep with stakeholder reads, ranked outcomes, anticipated Q&A
+  - `foundation-meeting-recap` (`/meeting-recap`) — topic-segmented post-meeting summary with decisions bold-flagged and actions inline; auto-discovers sibling agenda
+  - `foundation-meeting-synthesize` (`/meeting-synthesize`) — cross-meeting archaeology surfacing patterns, trajectories, contradictions
+  - `foundation-stakeholder-update` (`/stakeholder-update`) — async outward comms with 5 channel × 5 audience variants
+- **New pattern**: `docs/reference/skill-families/` — canonical home for cross-cutting skill-family contracts. Meeting Skills Contract is the first entry; future families (research, delivery) can add entries.
+- **New CI**: `validate-meeting-skills-family.sh/.ps1` — enforcing validation of contract conformance, filename convention, and shareable-boundary structure.
+- **New end-user guide**: [Using the Meeting Skills Family](docs/guides/using-meeting-skills.md) with mermaid diagrams covering skill chain, go-mode flow, and family lifecycle.
+- **Sample library**: 94 → 120 outputs; 15 thread-aligned samples (3 per meeting skill × storevine/brainshelf/workbench) added.
+- **Process improvement**: Pre-release checklist now requires a Phase 0 Adversarial Review Loop (Codex adversarial review → resolution → re-run until findings stabilize below IMPORTANT). Codified from v2.11.0 experience where Round 2 of review surfaced 6 additional IMPORTANT issues in the Round 1 resolution pass itself.
+- Repo now ships 38 skills (25 phase + 7 foundation + 6 utility), 45 command docs, and 9 workflows.
+- Release note: [`docs/releases/Release_v2.11.0.md`](docs/releases/Release_v2.11.0.md).
+
+</details>
+<details>
 <summary>v2.10.x - Utility skill expansion: mermaid diagrams, slideshows, self-updating</summary>
 
 - **New skill**: `utility-mermaid-diagrams` (`/mermaid-diagrams`) — 15 diagram types with dual-lens navigation (type catalog + PM use-case guide), dedicated syntax validity reference, and worked examples.
@@ -415,7 +434,7 @@ cd pm-skills
 /user-stories "Recurring tasks feature from PRD"
 ```
 
-All 32 skills are available as `/skill-name` commands. See [commands/](commands/) for the full list.
+All 38 skills are available as `/skill-name` commands. See [commands/](commands/) for the full list.
 
 Need `.claude/skills` for openskills or certain discovery flows? After cloning, run:
 
@@ -512,7 +531,7 @@ Both IDEs auto-discover skills via `AGENTS.md`:
 git clone https://github.com/product-on-purpose/pm-skills.git
 ```
 
-Open the folder in Cursor or Windsurf. The AI assistant will automatically discover and can use all 32 skills.
+Open the folder in Cursor or Windsurf. The AI assistant will automatically discover and can use all 38 skills.
 
 </details>
 
@@ -777,8 +796,8 @@ For detailed skill documentation and examples, see the [skills/](skills/) direct
 
 ```
 pm-skills/
-├── skills/                     # 32 PM skills (25 phase + 1 foundation + 6 utility)
-├── commands/                   # Slash commands (39) mapping to skills/workflows
+├── skills/                     # 38 PM skills (25 phase + 7 foundation + 6 utility)
+├── commands/                   # Slash commands (45) mapping to skills/workflows
 ├── _workflows/                 # 9 workflows: feature-kickoff, lean-startup, triple-diamond, and 6 more
 ├── library/                    # Sample output library (skill-output-samples) and related corpus docs
 ├── scripts/                    # sync-claude.(sh|ps1), build-release.(sh|ps1), validate-commands.(sh|ps1)
@@ -977,7 +996,7 @@ Please try to create bug reports that are:
 ## FAQ
 
 <details>
-<summary><strong>Do I need to install all 32 skills?</strong></summary>
+<summary><strong>Do I need to install all 38 skills?</strong></summary>
 
 No! You can use individual skills as needed. Each skill is self-contained and works independently. If you only need PRDs, just reference the `skills/deliver-prd/` skill. The workflows are optional guides, not requirements.
 
@@ -1029,7 +1048,7 @@ Slash commands (like `/prd` or `/hypothesis`) are shortcuts that invoke the corr
 <details>
 <summary><strong>What's the difference between pm-skills and pm-skills-mcp?</strong></summary>
 
-**pm-skills** (this repo) is the source skill library with all 32 PM skills as markdown files. It's best for Claude Code slash commands, file browsing, and customization.
+**pm-skills** (this repo) is the source skill library with all 38 PM skills as markdown files. It's best for Claude Code slash commands, file browsing, and customization.
 
 **pm-skills-mcp** wraps these same skills in an MCP server for programmatic access. It's best for Claude Desktop, Cursor, and any MCP-compatible client.
 

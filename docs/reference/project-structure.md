@@ -19,8 +19,8 @@ This document provides a comprehensive overview of the PM-Skills repository stru
 
 ```
 pm-skills/
-├── skills/                     # Core PM skills (32 total, flat)
-├── commands/                   # Slash command markdown files (39 total + .gitkeep)
+├── skills/                     # Core PM skills (38 total, flat)
+├── commands/                   # Slash command markdown files (45 total + .gitkeep)
 ├── _workflows/                 # Workflows
 ├── docs/                       # Documentation (incl. templates)
 │   └── templates/              # Skill creation templates
@@ -31,7 +31,7 @@ pm-skills/
 
 ---
 
-## `/skills/` — The 32 PM Skills (flat)
+## `/skills/` — The 38 PM Skills (flat)
 
 Skills are the core of PM-Skills. Each skill teaches AI assistants how to produce a specific PM artifact with professional quality.
 

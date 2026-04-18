@@ -36,7 +36,7 @@ Welcome to PM-Skills! This guide will help you understand what this repository o
 
 ## What is PM-Skills?
 
-**PM-Skills** is an open-source collection of 32 product management skills that teach AI assistants how to create professional PM documents. The current repo includes 25 phase skills, 1 foundation skill, and 6 utility skills. Think of it as a playbook that transforms generic AI responses into polished, consistent PM artifacts.
+**PM-Skills** is an open-source collection of 38 product management skills that teach AI assistants how to create professional PM documents. The current repo includes 25 phase skills, 7 foundation skills, and 6 utility skills. Think of it as a playbook that transforms generic AI responses into polished, consistent PM artifacts.
 
 ### The Problem It Solves
 
@@ -56,7 +56,7 @@ AI: *Produces a comprehensive PRD with problem statement, success metrics,
 
 ### What You Get
 
-- **32 skills in `skills/`** covering the PM lifecycle (25 phase skills + 1 foundation skill + 6 utility skills)
+- **38 skills in `skills/`** covering the PM lifecycle (25 phase skills + 7 foundation skills + 6 utility skills)
 - **Professional templates** based on industry best practices
 - **Real-world examples** showing what good looks like
 - **Works with any AI assistant** (Claude, ChatGPT, Copilot, etc.)

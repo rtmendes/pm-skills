@@ -28,7 +28,7 @@ When referencing files in documentation:
 
 ## Project Context
 
-- **24 PM skills** across 6 Triple Diamond phases
+- **38 PM skills**: 25 phase skills (across 6 Triple Diamond phases) + 7 foundation skills + 6 utility skills
 - Follows [agentskills.io specification](https://agentskills.io/specification)
 - Apache 2.0 licensed
 - See `AGENTS.md` for skill discovery

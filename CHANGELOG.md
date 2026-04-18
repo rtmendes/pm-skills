@@ -7,13 +7,64 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-Target: v2.11.0. Accumulating per-skill additions; tag will be cut when the slate is complete. Release plan: `docs/internal/release-plans/v2.11.0/plan_v2.11.0.md`.
+No changes accumulating yet — v2.12.0 planning opened at `docs/internal/release-plans/v2.12.0/plan_v2.12.0.md`.
+
+## [2.11.0] — 2026-04-18
+
+Foundation-phase expansion release. Ships 6 new foundation skills (lean canvas + 5-skill meeting lifecycle family), a canonical skill-family contract pattern enforced by CI, 15 thread-aligned library samples, and end-user documentation. First pm-skills release with a cross-cutting skill-family contract. Two rounds of Codex adversarial review before tag.
 
 ### Added
 
-- **F-26: `foundation-lean-canvas`** - new foundation skill that produces the canonical Ash Maurya 9-block lean canvas as a one-page integrated business thesis. Two modes: `content` (structured markdown) and `visual` (writes a self-contained attractive HTML file with CSS Grid Maurya layout, per-column color accents, confidence badges per block, accessibility attributes, and A3 landscape print styling). Ships with `references/TEMPLATE.md`, a RestoreAI Customer Success Copilot `references/EXAMPLE.md`, a 324-line `references/html-template.html` scaffold, a `/lean-canvas` slash command, and 3 thread samples (Storevine Campaigns, Brainshelf Resurface, Workbench Blueprints).
-- `docs/internal/efforts/F-26-lean-canvas.md` and `F-26-lean-canvas/specification.md` - effort stub and shipped-state specification for F-26.
-- `docs/internal/release-plans/v2.11.0/plan_v2.11.0.md` - release plan opened for v2.11.0 with F-26 as the first effort, scope boundary, decisions table, and release cutting checklist.
+**6 new foundation skills**:
+- **F-26: `foundation-lean-canvas`** (`/lean-canvas`) — one-page business thesis across 9 interlocking blocks with optional HTML visual rendering (content + visual modes; Ash Maurya nine-block layout; 3 thread samples)
+- **F-18: `foundation-meeting-agenda`** (`/meeting-agenda`) — attendee-facing agenda with time-boxed topics, type tags, owners, prep; 10 meeting-type variants; anti-meeting check with synchronous-value requirement
+- **F-25: `foundation-meeting-brief`** (`/meeting-brief`) — user's private strategic prep with stakeholder reads, ranked outcomes, anticipated Q&A; `visibility: private` default
+- **F-27: `foundation-meeting-recap`** (`/meeting-recap`) — topic-segmented post-meeting summary with decisions bold-flagged and actions inline; auto-discovers sibling agenda; ownership reconciliation threshold at 30% unassigned
+- **F-17: `foundation-meeting-synthesize`** (`/meeting-synthesize`) — cross-meeting archaeology surfacing patterns, trajectories, contradictions; format hints (board-prep, onboarding, retro-input, exec-brief)
+- **F-28: `foundation-stakeholder-update`** (`/stakeholder-update`) — async outward comms with 5 channel × 5 audience variants; explicit Shareable update boundary
+
+**Meeting Skills Family Contract v1.1.0** at `docs/reference/skill-families/meeting-skills-contract.md` — canonical, CI-enforced, shipped after two rounds of adversarial review with errata-within-version.
+
+**New directory pattern** `docs/reference/skill-families/` with landing-page index for future cross-cutting skill-family contracts.
+
+**Enforcing CI validator** `scripts/validate-meeting-skills-family.sh` + `.ps1` + `.md`, wired into `.github/workflows/validation.yml`. Checks contract-reference, zero-friction-execution section, shareable-summary/shareable-update section, sources-and-references structure, artifact_type enum values, and filename convention conformance across EXAMPLE.md + library samples.
+
+**15 new library samples** (3 per meeting skill × storevine/brainshelf/workbench threads) conforming to `SAMPLE_CREATION.md` with 8-key top-level frontmatter + Scenario/Prompt/Output structure + fictional-marker discipline. Total library grew 94 → 120 (legacy/orbit samples accurately accounted for).
+
+**End-user guide** `docs/guides/using-meeting-skills.md` with 3 mermaid diagrams (family skills graph, go-mode decision flow, chain sequence).
+
+**Release-plan companion docs**:
+- `plan_v2.11.0.md` — release plan with decisions table and deliverables
+- `plan_v2.11_codex-review.md` — Round 1 + Round 2 findings tracker (26 findings total)
+- `plan_v2.11_ci-coverage-analysis.md` — CI gaps and follow-up scripts
+- `plan_v2.11_pre-release-checklist.md` — pre-release quality checklist (Phase 0 Adversarial Review Loop added from v2.11.0 learnings)
+- `plan_v2.11_review-journal.md` — comprehensive narrative of all reviews, findings, resolutions, pattern analysis
+
+**v2.12.0 backlog** — 7 efforts created for sample-automation loop (F-31–F-35) + meeting-skills ecosystem continuation (F-29, F-30). Stub at `docs/internal/release-plans/v2.12.0/plan_v2.12.0.md`.
+
+### Changed
+
+- **Skill count 32 → 38** (+6: F-26 + 5 meeting skills)
+- **Foundation classification 1 → 7** (adds lean-canvas + 5 meeting skills to persona)
+- **Slash commands 39 → 45** (+6)
+- Current-state count references updated across `README.md`, `CLAUDE.md`, `plugin.json`, `marketplace.json`, `docs/getting-started.md`, `docs/reference/commands.md`, `docs/skills/index.md`, `docs/reference/ecosystem.md`, `docs/reference/project-structure.md`, `docs/guides/mcp-setup.md`, `QUICKSTART.md`, `docs/index.md`, `docs/concepts/agent-skill-anatomy.md`
+- `library/skill-output-samples/README_SAMPLES.md` — count 94 → 120 with 6-category breakdown (canonical, legacy/orbit, persona, lean-canvas, utility-single-thread, meeting-family)
+- `AGENTS.md` — 5 new foundation-meeting-* entries with family-contract note
+- `mkdocs.yml` — Foundation nav expanded to 7 skills + new Reference → Skill Families section + Guides section
+- `.github/workflows/validation.yml` — 2 new enforcing steps for `validate-meeting-skills-family` (bash + powershell)
+- `docs/internal/efforts/F-17-meeting-synthesis.md` and `F-18-meeting-prep.md` — archived to `_NOTES/archived-efforts/` and rewritten with expanded family-aware scope
+
+### Infrastructure / process
+
+- Two rounds of Codex adversarial review (`codex:codex-rescue` subagent) documented in review journal; 26 findings total, 24 resolved same-session
+- Pre-release checklist now starts with Phase 0 Adversarial Review Loop — re-run Codex after each resolution pass until findings stabilize below IMPORTANT severity
+- First post-v1.0.0 contract version bump with errata-within-version documented in change log
+
+### Not shipped in v2.11.0 (deferred)
+
+- R1-I8 IMPORTANT: utility-pm-skill-validate per-skill field enforcement — scoped into F-31 for v2.12.0
+- Retroactive sample generation for existing skills that lack them — post-v2.12.0 candidate
+- MCP server unfreeze criteria (frozen per M-22)
 
 ## [2.10.2] — 2026-04-14
 

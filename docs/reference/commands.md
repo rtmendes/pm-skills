@@ -5,7 +5,7 @@ description: "All slash commands available in PM Skills."
 
 # Commands Reference
 
-PM Skills ships 40 slash commands: 33 skill commands plus 7 workflow commands.
+PM Skills ships 45 slash commands: 38 skill commands plus 7 workflow commands.
 
 | Command | Skill | Phase | Description |
 |---------|-------|-------|-------------|
@@ -24,6 +24,10 @@ PM Skills ships 40 slash commands: 33 skill commands plus 7 workflow commands.
 | `/launch-checklist` | [deliver-launch-checklist](../skills/deliver/deliver-launch-checklist.md) | Deliver | Creates a comprehensive pre-launch checklist covering engine... |
 | `/lean-canvas` | [foundation-lean-canvas](../skills/foundation/foundation-lean-canvas.md) | Foundation | Produces a one-page lean canvas across nine interlocking blo... |
 | `/lessons-log` | [iterate-lessons-log](../skills/iterate/iterate-lessons-log.md) | Iterate | Creates a structured lessons learned entry for organizationa... |
+| `/meeting-agenda` | [foundation-meeting-agenda](../skills/foundation/foundation-meeting-agenda.md) | Foundation | Produces an attendee-facing agenda with time-boxed topics, type tags, owners, and attendee prep. Ten meeting-type variants. |
+| `/meeting-brief` | [foundation-meeting-brief](../skills/foundation/foundation-meeting-brief.md) | Foundation | Produces a private strategic prep document with stakeholder reads, ranked outcomes, key messages, anticipated Q&A, and risks. |
+| `/meeting-recap` | [foundation-meeting-recap](../skills/foundation/foundation-meeting-recap.md) | Foundation | Produces a topic-segmented post-meeting summary with decisions highlighted and actions inline per topic. |
+| `/meeting-synthesize` | [foundation-meeting-synthesize](../skills/foundation/foundation-meeting-synthesize.md) | Foundation | Cross-meeting archaeology: surfaces patterns, evolution, contradictions across multiple meeting recaps. |
 | `/mermaid-diagrams` | [utility-mermaid-diagrams](../skills/utility/utility-mermaid-diagrams.md) | Utility | Teaches PMs to create syntactically valid mermaid diagrams b... |
 | `/opportunity-tree` | [define-opportunity-tree](../skills/define/define-opportunity-tree.md) | Define | Creates an opportunity solution tree mapping desired outcome... |
 | `/persona` | [foundation-persona](../skills/foundation/foundation-persona.md) | Foundation | Generates an evidence-calibrated product or marketing person... |
@@ -40,6 +44,7 @@ PM Skills ships 40 slash commands: 33 skill commands plus 7 workflow commands.
 | `/solution-brief` | [develop-solution-brief](../skills/develop/develop-solution-brief.md) | Develop | Creates a concise one-page solution overview that communicat... |
 | `/spike-summary` | [develop-spike-summary](../skills/develop/develop-spike-summary.md) | Develop | Documents the results of a time-boxed technical or design ex... |
 | `/stakeholder-summary` | [discover-stakeholder-summary](../skills/discover/discover-stakeholder-summary.md) | Discover | Documents stakeholder needs, concerns, and influence for a p... |
+| `/stakeholder-update` | [foundation-stakeholder-update](../skills/foundation/foundation-stakeholder-update.md) | Foundation | Produces async stakeholder communication from a meeting recap. 5 channel variants x 5 audience variants; auto-detects thread continuation. |
 | `/update-pm-skills` | [utility-update-pm-skills](../skills/utility/utility-update-pm-skills.md) | Utility | Checks for newer pm-skills releases, compares local vs. late... |
 | `/user-stories` | [deliver-user-stories](../skills/deliver/deliver-user-stories.md) | Deliver | Generates user stories with clear acceptance criteria from p... |
 | `/workflow-customer-discovery` | [Customer Discovery](../workflows/customer-discovery.md) | Workflow | Run the Customer Discovery workflow |
