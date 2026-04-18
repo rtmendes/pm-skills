@@ -2,11 +2,14 @@
 
 ## Current State
 
-**Status:** v2.10.2 prepared on main, ready for tag + push. Patch contains the plugin-manifest drift fix (29 → 32 skills) and a count-consistency CI extension to cover JSON.
-**Last Updated:** 2026-04-14
-**Release:** v2.10.2 (prepared 2026-04-14, awaiting tag + push). v2.10.1 shipped 2026-04-13 (docs / tooling polish). v2.10.0 shipped F-16, F-19, F-24. v2.9.1 shipped D-05 and M-20.
-**MCP:** pm-skills-mcp still 4 skills behind (28 embedded vs 32 in repo). M-22 "MCP Decoupling" queued as v2.11.0 priority 3.
-**Next Step:** Commit the v2.10.2 changes, tag `v2.10.2`, push, then open F-17 (meeting-synthesis) paired with F-18 (meeting-prep) as the v2.11.0 kickoff. M-22 follows as v2.11.1 infrastructure.
+**Status:** v2.11.0 SHIPPED 2026-04-18. First pm-skills release with a canonical cross-cutting skill-family contract pattern. 6 new foundation skills (lean-canvas + 5-skill meeting-lifecycle family) governed by Meeting Skills Family Contract v1.1.0 with enforcing CI. 15 thread-aligned library samples. End-user guide. Two rounds of Codex adversarial review before tag.
+**Last Updated:** 2026-04-18
+**Release:** v2.11.0 (tag `v2.11.0`, commit `1144e03`, post-release docs commit `233d85e`; both pushed to origin). Previous: v2.10.2 prepared 2026-04-14 (never tagged), v2.10.1 shipped 2026-04-13, v2.10.0 shipped F-16/F-19/F-24, v2.9.1 shipped D-05/M-20.
+**Skill count:** 38 (25 phase + 7 foundation + 6 utility). +6 since v2.10.x: foundation-lean-canvas (F-26) + foundation-meeting-agenda (F-18) + foundation-meeting-brief (F-25) + foundation-meeting-recap (F-27) + foundation-meeting-synthesize (F-17) + foundation-stakeholder-update (F-28).
+**MCP:** pm-skills-mcp frozen per M-22 (v2.11.0 decision). 10 skills behind now (28 embedded vs 38 in repo). Revisit when team adoption creates demand.
+**v2.12.0 backlog:** 8 efforts queued. Sample-automation loop: F-31 (pm-skill-validate family+sample aware), F-32 (pm-skill-builder sample gen), F-33 (check-sample-standards CI), F-34 (THREAD_PROFILES.md), F-35 (pm-skill-iterate sample regen), F-36 (generic family-registration validator). Meeting-skills ecosystem: F-29 (lifecycle workflow), F-30 (adoption guide). Stub: `docs/internal/release-plans/v2.12.0/plan_v2.12.0.md`.
+**Next Step:** Verify GitHub Actions green on 1144e03 and 233d85e. Create GitHub Release from v2.11.0 tag using `docs/releases/Release_v2.11.0.md` as notes file. Verify MkDocs deploy rendered new pages. Then wait 2-4 weeks for meeting-skills usage signals before locking F-29/F-30 designs. Consider starting F-34 (THREAD_PROFILES.md) as critical-path blocker.
+**Process improvement shipped in v2.11.0:** Pre-release checklist now requires Phase 0 Adversarial Review Loop (Codex review → resolution → re-run until findings stabilize below IMPORTANT severity). Canonical template at `docs/internal/release-plans/v2.11.0/plan_v2.11_pre-release-checklist.md`.
 
 ## Project Overview
 
