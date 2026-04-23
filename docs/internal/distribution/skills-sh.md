@@ -116,6 +116,58 @@ Per-repo pages show the aggregate of all skills in the repo plus the same owner/
 
 ---
 
+## Discoverability layer: find-skills
+
+Being **listed** on skills.sh is one thing. Being **recommended** to end users is a separate layer governed by a specific skill called `find-skills`.
+
+### What find-skills is
+
+`find-skills` is a skill published on skills.sh at [`https://skills.sh/vercel-labs/skills/find-skills`](https://skills.sh/vercel-labs/skills/find-skills). It is authored by Vercel Labs (same authors as the CLI) and has the highest install count on the directory (1.2M+ weekly installs).
+
+It is a **meta-skill**: a skill whose purpose is to help agents discover other skills. When a user with find-skills loaded asks their agent "how do I do X?" or "find a skill for X", find-skills parses the intent, runs `npx skills find [query]` against skills.sh, ranks results, and recommends the top matches.
+
+Because most agents using the skills ecosystem have find-skills installed by default, it sits in the critical path between "user expresses a need" and "user installs a skill." If find-skills does not surface pm-skills for PM-relevant queries, PMs do not discover us organically through their agents.
+
+### How find-skills ranks and filters
+
+Based on inspection of its SKILL.md content:
+
+1. **Install-count thresholds**: prefers skills with 1K+ installs; treats skills under 100 installs skeptically
+2. **Source reputation**: explicitly trusts `vercel-labs`, `anthropic`, `microsoft` as default-trusted authors
+3. **GitHub stars**: prefers 100+ stars as a quality signal
+4. **Hardcoded category keywords**: includes Web Development (react, nextjs, typescript, css, tailwind), Testing (jest, playwright, e2e), DevOps (docker, kubernetes, ci-cd), Documentation (readme, changelog, api-docs), Code Quality (review, lint, refactor), Design (ui, ux, accessibility), and Productivity (workflow, automation, git). **No "Product Management" category** is present.
+5. **Delegated search**: for queries outside the hardcoded categories, it runs `npx skills find [query]` which likely greps SKILL.md `name` + `description` fields across the directory
+
+### How pm-skills stacks up against find-skills' signals
+
+| Signal | pm-skills status | Gap |
+|--------|-----------------|-----|
+| Install count 1K+ | ✅ 1.2K today | Met |
+| Install count 100+ "not skeptical" threshold | ✅ | Met |
+| Source reputation (trusted authors list) | ❌ Not on list | No realistic parity path; lobbying unlikely |
+| GitHub stars 100+ | ❓ Not verified this session | Worth checking |
+| Keyword match against hardcoded categories | ❌ No PM category | find-skills won't match category-bucketed queries to us |
+| SKILL.md description contains query-intent keywords | ⚠️ Partial; never audited for this | Real opportunity |
+
+### Practical implication
+
+Being on skills.sh is the prerequisite; being recommendable by find-skills is the next layer. pm-skills meets some of find-skills' trust thresholds (install count) but has not been optimized for its query-matching layer (description keyword density for PM-intent queries).
+
+Two efforts are queued for this optimization:
+
+- [F-39 find-skills empirical discoverability test](../efforts/F-39-find-skills-empirical-test.md): run a battery of common PM queries through an agent with find-skills loaded; measure which pm-skills surface for which queries; produce a baseline
+- [F-40 skill description discoverability audit](../efforts/F-40-skill-description-discoverability-audit.md): audit all 38 SKILL.md descriptions against identified query-intent keywords; improve descriptions that fail to surface for their topic's common queries
+
+These are sequential: F-39 establishes baseline, F-40 remediates, then F-39 re-runs to measure lift.
+
+### What does NOT move the needle
+
+- Lobbying Vercel Labs to add a Product Management category to find-skills' hardcoded list. Possible but unreliable; low leverage without relationship.
+- Artificially inflating install count to approach trusted-author parity. We are 3 orders of magnitude off; not a realistic target.
+- Rebranding as a vendor repo. pm-skills is and should remain a community repo.
+
+---
+
 ## Requirements to be listed
 
 ### Hard requirements (must-have)
