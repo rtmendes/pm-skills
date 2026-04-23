@@ -25,12 +25,12 @@ skills.sh CLI compatibility patch. Unblocks `npx skills add product-on-purpose/p
 - **New lint rules** in `scripts/lint-skills-frontmatter.sh/.ps1/.md`:
   - First line of every SKILL.md must be the `---` YAML delimiter (no preamble, comments, or attribution headers above it).
   - Unquoted `description` field must not contain inline `": "` patterns. If a colon is required, wrap the full description value in double quotes.
-- **Distribution plan** at `docs/internal/distribution/2026-04-22_skills-sh.md` documenting the six-phase submission approach (Phase 0–3 complete as of this release; Phase 4 optional; Phase 5 is a post-release soft-launch workstream).
+- **Distribution plan** at `docs/internal/distribution/2026-04-22_skills-sh.md` documenting the six-phase submission approach (Phase 0 through 3 complete as of this release; Phase 4 optional; Phase 5 is a post-release soft-launch workstream).
 
 ### Changed
 
 - **Em-dash sweep completion**: 376 tracked files swept, 5,805 em-dash characters replaced with `.` per the 2026-04-13 standing style rule. Zero behavioral change. Brings total em-dashes in tracked files to 0 (previous partial sweep had reduced a subset; this completes it across the full repo).
-- **Stale count reconciliation**: 5 current-state skill-count references updated from `27 skills` or `31 skills` to `38 skills` in `docs/agent-skill-anatomy.md` (4 instances), `docs/skills/utility/utility-pm-skill-builder.md`, `scripts/README_SCRIPTS.md`, `skills/utility-pm-skill-builder/SKILL.md`, and `skills/utility-pm-skill-builder/references/EXAMPLE.md`. Historical per-release count snapshots in README "What's New" sections intentionally left untouched as accurate records of past release states.
+- **Stale count reconciliation**: 8 current-state skill-count references across 5 files updated from `27 skills` or `31 skills` to `38 skills` (`docs/agent-skill-anatomy.md` had 4 instances; one each in `docs/skills/utility/utility-pm-skill-builder.md`, `scripts/README_SCRIPTS.md`, `skills/utility-pm-skill-builder/SKILL.md`, and `skills/utility-pm-skill-builder/references/EXAMPLE.md`). Historical per-release count snapshots in README "What's New" sections intentionally left untouched as accurate records of past release states.
 - **`README.md` version badge** bumped from 2.11.0 to 2.11.1.
 
 ### Infrastructure / process

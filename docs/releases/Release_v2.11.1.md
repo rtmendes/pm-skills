@@ -92,7 +92,7 @@ graph TD
 ### Changed
 
 - **Em-dash sweep completion**: 376 tracked files had 5,805 em-dash characters replaced with `.` per the 2026-04-13 standing style rule. Completes a previously partial sweep across the full repo. Zero behavioral change. Bundled into this patch to keep the main branch clean.
-- **Stale skill-count reconciliation**: 5 current-state references to `27 skills` or `31 skills` updated to `38 skills` in `docs/agent-skill-anatomy.md`, `docs/skills/utility/utility-pm-skill-builder.md`, `scripts/README_SCRIPTS.md`, `skills/utility-pm-skill-builder/SKILL.md`, and its `references/EXAMPLE.md`. Historical per-release count snapshots in the README "What's New" sections are intentionally preserved as accurate records of past release states.
+- **Stale skill-count reconciliation**: 8 current-state references across 5 files updated to `38 skills` (`docs/agent-skill-anatomy.md` had 4 instances of `27 skills`; one instance each in `docs/skills/utility/utility-pm-skill-builder.md`, `scripts/README_SCRIPTS.md`, `skills/utility-pm-skill-builder/SKILL.md`, and its `references/EXAMPLE.md`). Historical per-release count snapshots in the README "What's New" sections are intentionally preserved as accurate records of past release states.
 
 - **README version badge** bumped from 2.11.0 to 2.11.1.
 

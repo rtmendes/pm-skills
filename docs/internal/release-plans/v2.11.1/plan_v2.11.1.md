@@ -96,12 +96,12 @@ The 2026-04-13 standing style rule prohibits em-dash characters in generated out
 
 ### Stale count reconciliation
 
-5 current-state skill-count references updated to match the actual 38-skill repo state:
+8 current-state skill-count references across 5 files updated to match the actual 38-skill repo state:
 - `docs/agent-skill-anatomy.md` (4 instances referencing `27 skills` in progressive-loading diagrams and prose)
-- `docs/skills/utility/utility-pm-skill-builder.md` (example output text)
-- `scripts/README_SCRIPTS.md` (description of what `check-count-consistency` catches)
-- `skills/utility-pm-skill-builder/SKILL.md` (library reference table intro)
-- `skills/utility-pm-skill-builder/references/EXAMPLE.md` (example gap-analysis output)
+- `docs/skills/utility/utility-pm-skill-builder.md` (1 instance in example gap-analysis output)
+- `scripts/README_SCRIPTS.md` (1 instance in the description of what `check-count-consistency` catches)
+- `skills/utility-pm-skill-builder/SKILL.md` (1 instance in library reference table intro)
+- `skills/utility-pm-skill-builder/references/EXAMPLE.md` (1 instance in example gap-analysis output)
 
 The 5 remaining stale-count flags surfaced by `check-count-consistency` are all in the README's "What's New" historical sections (v2.10.0, v2.9.0, v2.8.0, v2.7.0 entries). These are intentional per-release snapshots that correctly document the repo state AT THAT RELEASE. Not touched. The CI script flags them because it cannot distinguish historical from current; script limitation.
 

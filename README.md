@@ -125,6 +125,22 @@ git clone https://github.com/product-on-purpose/pm-skills.git && cd pm-skills
 
 **What's New (Recent Releases)**
 <details open>
+<summary>v2.11.1 - skills.sh CLI Compatibility Patch</summary>
+
+- **Install in one command**: `npx skills add product-on-purpose/pm-skills` now installs all 38 skills through the open [`skills` CLI](https://github.com/vercel-labs/skills) and the [skills.sh directory](https://skills.sh). Previously broken for 6 foundation skills due to a YAML-frontmatter quirk.
+- **6 foundation SKILL.md files fixed**: leading HTML attribution comment removed (it was breaking strict YAML parsers). Attribution preserved via the identical comment right after the frontmatter.
+- **`foundation-meeting-synthesize`**: description reworded to remove inline `: ` that was truncating it under strict YAML; version 1.0.0 to 1.0.1.
+- **25 stale tracked files removed** from `.claude/skills/` (pre-v1 personal-setup relics that were shipping as phantom bonus skills on install).
+- **Two new lint rules** in `scripts/lint-skills-frontmatter.sh/.ps1`: first line of every SKILL.md must be `---`; unquoted descriptions must not contain inline `: `. Closes the gap between our validator and the real CLI consumer.
+- **README install surface**: new `npx skills add` one-liner at the top of Getting Started + skills.sh badge + Installation Options table row.
+- **Distribution plan**: six-phase skills.sh submission approach documented at [`docs/internal/distribution/2026-04-22_skills-sh.md`](docs/internal/distribution/2026-04-22_skills-sh.md). Phases 0 through 3 complete with this release; Phase 5 (soft-launch for install telemetry) is a post-release workstream.
+- **Em-dash sweep completion**: 376 tracked files, 5,805 em-dash characters replaced per the 2026-04-13 standing style rule.
+- **Stale skill-count reconciliation**: 8 current-state references to `27 skills` or `31 skills` updated to `38 skills` across 5 files. Historical per-release snapshots in this section preserved as accurate records.
+- No behavioral changes to any skill. Safe patch upgrade.
+- Release note: [`docs/releases/Release_v2.11.1.md`](docs/releases/Release_v2.11.1.md).
+
+</details>
+<details>
 <summary>v2.11.0 - Meeting Skills Family + Lean Canvas: first cross-cutting skill-family contract</summary>
 
 - **New foundation skill**: `foundation-lean-canvas` (`/lean-canvas`) . one-page business thesis across nine interlocking blocks (problem, customer, UVP, solution, channels, revenue, cost, metrics, unfair advantage). Two modes: `content` (structured markdown) and `visual` (self-contained HTML with A3 landscape print styling).
