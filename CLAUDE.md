@@ -4,7 +4,7 @@
 
 ### Public vs Private Files
 
-- Internal notes are gitignored — external readers cannot access those paths
+- Internal notes are gitignored . external readers cannot access those paths
 - Never reference gitignored internal notes in public-facing files:
   - README.md
   - CHANGELOG.md

@@ -14,8 +14,8 @@ Track Codex sessions for pm-skills. Use this file for stable facts and current e
   - branch is `main`
   - local branch is ahead of `origin/main` by `2` commits
   - recent commits:
-    - `8d2a418` — `M-12` CI validation enhancement + `F-06` deliver-acceptance-criteria
-    - `882c9e1` — `v2.7.0` release planning / effort-brief integration / `F-05` design review docs
+    - `8d2a418` . `M-12` CI validation enhancement + `F-06` deliver-acceptance-criteria
+    - `882c9e1` . `v2.7.0` release planning / effort-brief integration / `F-05` design review docs
 - Current committed inventory on local `main`:
   - `26` skills total
   - `25` domain skills

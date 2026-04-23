@@ -39,25 +39,25 @@ context: B2B SaaS company launching its first native mobile app after years as w
 ### Quadrant Placement
 
 **Manage Closely (High Influence, High Interest):**
-- Miguel Torres, CTO — Technical authority, owns build-vs-buy and platform decisions
-- Rachel Goldstein, VP Product — Product strategy, defines what "v1" means, owns go/no-go
-- Tanya Okonkwo, Mobile Engineering Lead — Hands-on technical execution, team capacity owner
-- Kevin Walsh, Head of Design — Mobile UX quality bar, app design direction
-- David Park, VP Sales — Primary customer advocate, his reps are the target users
+- Miguel Torres, CTO . Technical authority, owns build-vs-buy and platform decisions
+- Rachel Goldstein, VP Product . Product strategy, defines what "v1" means, owns go/no-go
+- Tanya Okonkwo, Mobile Engineering Lead . Hands-on technical execution, team capacity owner
+- Kevin Walsh, Head of Design . Mobile UX quality bar, app design direction
+- David Park, VP Sales . Primary customer advocate, his reps are the target users
 
 **Keep Satisfied (High Influence, Low Interest):**
-- Avery Thompson, CEO — Board-level commitment to mobile, but delegates to CTO/VP Product
-- CFO — Budget approved, monitors spend against forecast, no operational involvement
+- Avery Thompson, CEO . Board-level commitment to mobile, but delegates to CTO/VP Product
+- CFO . Budget approved, monitors spend against forecast, no operational involvement
 
 **Keep Informed (Low Influence, High Interest):**
-- Priya Mehta, VP Marketing — App Store presence, launch campaign, competitive messaging
-- Fiona O'Brien, VP Customer Success — Customer rollout, training, support readiness
-- Leo Hernandez, Solutions Engineering Lead — Demo capability, technical customer questions
-- Sam Reeves, Web Platform PM — Feature parity decisions, shared API dependencies
+- Priya Mehta, VP Marketing . App Store presence, launch campaign, competitive messaging
+- Fiona O'Brien, VP Customer Success . Customer rollout, training, support readiness
+- Leo Hernandez, Solutions Engineering Lead . Demo capability, technical customer questions
+- Sam Reeves, Web Platform PM . Feature parity decisions, shared API dependencies
 
 **Monitor (Low Influence, Low Interest):**
-- HR / Recruiting — Mobile engineer hiring pipeline
-- Legal — App Store terms, data privacy for mobile-specific features (location, camera)
+- HR / Recruiting . Mobile engineer hiring pipeline
+- Legal . App Store terms, data privacy for mobile-specific features (location, camera)
 
 ## Stakeholder Profiles
 
@@ -75,8 +75,8 @@ context: B2B SaaS company launching its first native mobile app after years as w
 ### Miguel Torres, CTO
 
 **Role:** Chief Technology Officer, 90-person engineering organization
-**Influence Level:** High — Owns technology decisions including platform choices, architecture, and team structure
-**Interest Level:** High — Mobile is a new technical platform with long-term architectural implications
+**Influence Level:** High . Owns technology decisions including platform choices, architecture, and team structure
+**Interest Level:** High . Mobile is a new technical platform with long-term architectural implications
 **Current Alignment:** Supportive
 
 **Needs:**
@@ -106,12 +106,12 @@ context: B2B SaaS company launching its first native mobile app after years as w
 ### Rachel Goldstein, VP Product
 
 **Role:** VP Product, owns product strategy and roadmap across web and (now) mobile
-**Influence Level:** High — Defines v1 scope, owns launch go/no-go decision
-**Interest Level:** High — Mobile launch is a company-level strategic initiative on her OKRs
+**Influence Level:** High . Defines v1 scope, owns launch go/no-go decision
+**Interest Level:** High . Mobile launch is a company-level strategic initiative on her OKRs
 **Current Alignment:** Supportive
 
 **Needs:**
-- Disciplined v1 scope that ships in Q2 — not a feature-crammed v1 that slips to Q4
+- Disciplined v1 scope that ships in Q2 . not a feature-crammed v1 that slips to Q4
 - Clear success metrics defined before launch (adoption, engagement, feature usage)
 - Customer validation of mobile use cases before committing to feature set
 - Coordinated launch across product, marketing, sales, and customer success
@@ -124,7 +124,7 @@ context: B2B SaaS company launching its first native mobile app after years as w
 
 **What Motivates Them:**
 - Delivering products that customers love and that move business metrics
-- Strategic clarity — mobile should serve a specific user need, not be "web on a phone"
+- Strategic clarity . mobile should serve a specific user need, not be "web on a phone"
 - Cross-functional execution excellence on high-visibility launches
 
 **Preferred Communication:**
@@ -137,13 +137,13 @@ context: B2B SaaS company launching its first native mobile app after years as w
 ### Tanya Okonkwo, Mobile Engineering Lead
 
 **Role:** Lead Mobile Engineer, managing 4-person mobile team (2 iOS, 2 Android)
-**Influence Level:** High — Technical feasibility and timeline depend entirely on her team
-**Interest Level:** High — This is her team's defining project
+**Influence Level:** High . Technical feasibility and timeline depend entirely on her team
+**Interest Level:** High . This is her team's defining project
 **Current Alignment:** Cautiously Supportive
 
 **Needs:**
 - Realistic scope matched to 4-person team capacity over one quarter
-- Early API stability from the web platform team — can't build mobile on shifting foundations
+- Early API stability from the web platform team . can't build mobile on shifting foundations
 - Testing infrastructure (device lab, CI/CD for mobile, beta distribution)
 - Design specs delivered 2+ sprints ahead of engineering to avoid blocking
 
@@ -156,20 +156,20 @@ context: B2B SaaS company launching its first native mobile app after years as w
 **What Motivates Them:**
 - Building a mobile app she's proud to put on her resume and in the App Store
 - Growing the mobile team and establishing mobile as a respected engineering discipline
-- Technical craft — clean architecture, comprehensive testing, smooth CI/CD
+- Technical craft . clean architecture, comprehensive testing, smooth CI/CD
 
 **Preferred Communication:**
 - Channel: Daily standup (team), weekly 1:1 with Jordan, Slack #mobile-eng
 - Frequency: Daily for team coordination, weekly for roadmap alignment
-- Style: Specific and concrete — user stories with acceptance criteria, not vague feature descriptions
+- Style: Specific and concrete . user stories with acceptance criteria, not vague feature descriptions
 
 ---
 
 ### David Park, VP Sales
 
 **Role:** VP Sales, 45-person sales org including 20 field reps
-**Influence Level:** High — Sales revenue justifies mobile investment; his team's adoption determines success
-**Interest Level:** High — Field reps have been requesting mobile access for 2+ years
+**Influence Level:** High . Sales revenue justifies mobile investment; his team's adoption determines success
+**Interest Level:** High . Field reps have been requesting mobile access for 2+ years
 **Current Alignment:** Strongly Supportive
 
 **Needs:**
@@ -180,12 +180,12 @@ context: B2B SaaS company launching its first native mobile app after years as w
 
 **Concerns:**
 - v1 being too limited to be useful ("if my reps can't log a call from the app, they won't use it")
-- Launch delayed past Q2 — he's already promised customers mobile access in sales cycles
+- Launch delayed past Q2 . he's already promised customers mobile access in sales cycles
 - App UX so different from web that reps need extensive retraining
 - No offline mode making the app useless in exactly the situations where mobile matters most
 
 **What Motivates Them:**
-- Sales productivity — anything that helps reps close deals faster
+- Sales productivity . anything that helps reps close deals faster
 - Competitive wins against vendors who already have mobile apps
 - Happy sales team with modern tools (retention and recruiting advantage)
 
@@ -199,8 +199,8 @@ context: B2B SaaS company launching its first native mobile app after years as w
 ### Kevin Walsh, Head of Design
 
 **Role:** Head of Design, 10-person design team, first time designing a native mobile product
-**Influence Level:** High — Mobile UX quality is make-or-break for app perception and adoption
-**Interest Level:** High — Sees mobile as opportunity to establish world-class design practice
+**Influence Level:** High . Mobile UX quality is make-or-break for app perception and adoption
+**Interest Level:** High . Sees mobile as opportunity to establish world-class design practice
 **Current Alignment:** Enthusiastic
 
 **Needs:**
@@ -212,7 +212,7 @@ context: B2B SaaS company launching its first native mobile app after years as w
 **Concerns:**
 - Being asked to "just make the web design smaller" instead of designing for mobile context
 - Engineering implementing designs without design review under time pressure
-- No mobile design experience on the team — learning curve risk
+- No mobile design experience on the team . learning curve risk
 - Design system being skipped in v1 "to save time" and creating inconsistency debt
 
 **What Motivates Them:**
@@ -223,15 +223,15 @@ context: B2B SaaS company launching its first native mobile app after years as w
 **Preferred Communication:**
 - Channel: Design critiques (bi-weekly), Figma for async, Slack for daily
 - Frequency: Bi-weekly design review, continuous async in Figma
-- Style: Visual — prototypes, user flow diagrams, before/after comparisons
+- Style: Visual . prototypes, user flow diagrams, before/after comparisons
 
 ---
 
 ### Sam Reeves, Web Platform PM
 
 **Role:** Product Manager for Web Platform, owns the APIs that mobile will depend on
-**Influence Level:** Low — Doesn't control mobile decisions, but controls a critical dependency
-**Interest Level:** Medium — Directly impacted by mobile API requirements but not leading the initiative
+**Influence Level:** Low . Doesn't control mobile decisions, but controls a critical dependency
+**Interest Level:** Medium . Directly impacted by mobile API requirements but not leading the initiative
 **Current Alignment:** Concerned
 
 **Needs:**
@@ -270,17 +270,17 @@ context: B2B SaaS company launching its first native mobile app after years as w
 
 ### Alliances
 - **Executive sponsorship:** Miguel and Rachel are aligned on mobile as strategic investment. Miguel can influence technical decisions, Rachel can protect scope. Their alignment is the project's foundation
-- **Customer validation:** David and Kevin are natural collaborators — David provides access to field reps for user research, Kevin uses research to drive design decisions. Connecting them early ensures designs serve real users
-- **Technical partnership:** Tanya and Sam need a strong working relationship — mobile's success depends on API stability. Early joint planning prevents adversarial dynamics later
+- **Customer validation:** David and Kevin are natural collaborators . David provides access to field reps for user research, Kevin uses research to drive design decisions. Connecting them early ensures designs serve real users
+- **Technical partnership:** Tanya and Sam need a strong working relationship . mobile's success depends on API stability. Early joint planning prevents adversarial dynamics later
 - **Launch coordination:** Priya, Fiona, and Leo form the go-to-market triad. Coordinating their efforts through a shared launch plan prevents fragmented customer communication
 
 ### Potential Conflicts
 | Parties | Conflict Area | Risk Level |
 |---------|---------------|------------|
-| David (Sales) vs. Rachel (Product) | v1 scope — David wants comprehensive feature set, Rachel wants focused MVP | High |
-| Kevin (Design) vs. Tanya (Engineering) | Timeline — Kevin wants research time, Tanya needs specs early, both constrained by Q2 deadline | High |
-| Tanya (Mobile) vs. Sam (Web Platform) | API priority — mobile needs API changes, web platform has its own roadmap | Medium |
-| Kevin (Design) vs. David (Sales) | Mobile UX approach — Kevin wants mobile-native innovation, David wants web-familiar patterns for easier rep adoption | Medium |
+| David (Sales) vs. Rachel (Product) | v1 scope . David wants comprehensive feature set, Rachel wants focused MVP | High |
+| Kevin (Design) vs. Tanya (Engineering) | Timeline . Kevin wants research time, Tanya needs specs early, both constrained by Q2 deadline | High |
+| Tanya (Mobile) vs. Sam (Web Platform) | API priority . mobile needs API changes, web platform has its own roadmap | Medium |
+| Kevin (Design) vs. David (Sales) | Mobile UX approach . Kevin wants mobile-native innovation, David wants web-familiar patterns for easier rep adoption | Medium |
 
 ## Communication Plan
 
@@ -318,7 +318,7 @@ context: B2B SaaS company launching its first native mobile app after years as w
 
 - [ ] Schedule field study with 5 of David's reps to observe mobile CRM usage in natural context (Jordan + Kevin, this week)
 - [ ] Facilitate architecture decision meeting between Miguel, Tanya, and Sam on cross-platform approach and API strategy (Jordan, next week)
-- [ ] Co-create v1 feature prioritization framework with Rachel and David — must-have, should-have, could-have, won't-have (Jordan, this week)
+- [ ] Co-create v1 feature prioritization framework with Rachel and David . must-have, should-have, could-have, won't-have (Jordan, this week)
 - [ ] Set up mobile CI/CD pipeline and beta distribution with Tanya's team (Tanya, first two weeks)
 - [ ] Draft shared API contract with Sam's team covering v1 mobile data requirements (Tanya + Sam, by end of month)
 - [ ] Submit skeleton app to App Store for initial review to surface any account/process issues early (Tanya, next two weeks)

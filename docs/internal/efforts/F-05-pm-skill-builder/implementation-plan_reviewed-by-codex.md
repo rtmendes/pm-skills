@@ -66,12 +66,12 @@ After the guided checks above: what problems, gaps, or improvements exist that t
 
 Structure your review as:
 
-1. **Task-by-task assessment** — for each of the 8 tasks
-2. **Cross-task consistency** — any misalignment between tasks
-3. **Executability assessment** — could this be built as-is?
-4. **Recommended changes** — prioritized list
-5. **What we missed** — anything the prompt didn't anticipate
-6. **Overall verdict** — approve / approve with changes / needs revision
+1. **Task-by-task assessment** . for each of the 8 tasks
+2. **Cross-task consistency** . any misalignment between tasks
+3. **Executability assessment** . could this be built as-is?
+4. **Recommended changes** . prioritized list
+5. **What we missed** . anything the prompt didn't anticipate
+6. **Overall verdict** . approve / approve with changes / needs revision
 
 ---
 
@@ -300,13 +300,13 @@ Codex's review is accurate and well-grounded. The "Needs revision" verdict is co
 
 ### Finding-by-Finding Response
 
-#### 1. Validation sequencing — CONFIRMED, BLOCKING
+#### 1. Validation sequencing . CONFIRMED, BLOCKING
 
 **Verification**: Read `scripts/lint-skills-frontmatter.sh`. The linter iterates over `skills/*/SKILL.md` and checks for `references/TEMPLATE.md` existence and `##` header count. Running it before TEMPLATE.md and EXAMPLE.md exist will fail.
 
 **Action**: Combine Tasks 2-4 into a single task that creates all three files, then validate once. This also aligns with Codex's commit strategy recommendation (#8).
 
-#### 2. Design doc != shipped content — CONFIRMED, BLOCKING
+#### 2. Design doc != shipped content . CONFIRMED, BLOCKING
 
 **Verification**: Checked design doc lines 68-69, 271, 313-314, 227-229. All contain design-time references that don't belong in shipped SKILL.md:
 - `/pm-skill-validate`, `/pm-skill-iterate`, `/agent-skill-builder` → commands don't exist
@@ -316,39 +316,39 @@ Codex's review is accurate and well-grounded. The "Needs revision" verdict is co
 
 **Action**: Plan now says "adapt for shipped artifact" with explicit list of changes to make during transcription. Future-command references in "When NOT to Use" will use descriptive text ("future utility skill") instead of command names.
 
-#### 3. Skill counts — CONFIRMED, BLOCKING
+#### 3. Skill counts . CONFIRMED, BLOCKING
 
 **Verification**: `ls skills/ | wc -l` returns 26 directories. After F-05: 27.
 
 **Action**: Fixed Task 6 (28 → 27). Fixed review scaffold ground-truth note. All count references now consistent.
 
-#### 4. EXAMPLE.md ambiguity — CONFIRMED, NON-BLOCKING
+#### 4. EXAMPLE.md ambiguity . CONFIRMED, NON-BLOCKING
 
 **Action**: Locked example specifics:
 - Command filename: `change-communication.md`
 - Command name: `/change-communication`
 - AGENTS heading: `#### change-communication`
-- Embedded drafts: representative excerpts (not full files — the example demonstrates the packet structure, not a second complete skill)
+- Embedded drafts: representative excerpts (not full files . the example demonstrates the packet structure, not a second complete skill)
 
-#### 5. Task 5 (command file) — CONFIRMED CORRECT
+#### 5. Task 5 (command file) . CONFIRMED CORRECT
 
 No changes needed.
 
-#### 6. Task 6 count — CONFIRMED (subset of #3)
+#### 6. Task 6 count . CONFIRMED (subset of #3)
 
 Fixed: 28 → 27.
 
-#### 7. Task 7 cross-platform — CONFIRMED, NON-BLOCKING
+#### 7. Task 7 cross-platform . CONFIRMED, NON-BLOCKING
 
 **Action**: Added PowerShell validators alongside bash. Softened MCP advisory expectation to allow "no diff base available" output.
 
-#### 8. Task 8 brief reconciliation — CONFIRMED, BLOCKING
+#### 8. Task 8 brief reconciliation . CONFIRMED, BLOCKING
 
 **Verification**: Read `F-05-pm-skill-builder.md`. Lines 31-32 still say `library/pm-skill-builder/`. Lines 73-110 still list sample output library as in-scope. Thread 2 description is stale.
 
 **Action**: Task 8 now includes brief reconciliation:
 - Remove `library/pm-skill-builder/` references → `_staging/` (gitignored, discarded)
-- Remove sample-output-library from scope (decision: not shipping sample outputs for the builder itself — the EXAMPLE.md in the skill references directory serves that purpose)
+- Remove sample-output-library from scope (decision: not shipping sample outputs for the builder itself . the EXAMPLE.md in the skill references directory serves that purpose)
 - Update Thread 2 to match revised validator-oriented scenario
 - Status wording: "Implemented locally, verification passed" (not "CI passing")
 
@@ -358,7 +358,7 @@ Fixed: 28 → 27.
 
 #### On end-to-end functional test (What we missed #1)
 
-**Action**: Added Task 6 (new numbering) — a manual functional test of `/pm-skill-builder` with a realistic idea after all files are in place. This validates that the instructions actually work, not just that CI passes.
+**Action**: Added Task 6 (new numbering) . a manual functional test of `/pm-skill-builder` with a realistic idea after all files are in place. This validates that the instructions actually work, not just that CI passes.
 
 #### On commit strategy (#8)
 
@@ -377,7 +377,7 @@ Fixed: 28 → 27.
 | 2 | Stale design-doc content | "Adapt for shipped artifact" with explicit change list | Yes |
 | 3 | Skill counts | 28 → 27 everywhere | Yes |
 | 4 | EXAMPLE.md ambiguity | Lock command name, AGENTS heading, excerpt vs full | No |
-| 5 | Command file | No change needed | — |
+| 5 | Command file | No change needed | . |
 | 6 | Count in Task 6 | Fixed (subset of #3) | Yes |
 | 7 | Cross-platform validation | Add PowerShell, soften MCP expectation | No |
 | 8 | Brief reconciliation | Expand Task 8 to include stale content cleanup | Yes |

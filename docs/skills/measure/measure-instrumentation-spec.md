@@ -56,7 +56,7 @@ When asked to create an instrumentation spec, follow these steps:
    Identify persistent user-level attributes that should be associated with all events (e.g., subscription tier, account creation date). These enable segmentation in analysis.
 
 6. **Address PII and Privacy**
-   Flag any properties that contain personally identifiable information. Document how PII should be handled — hashing, encryption, or exclusion.
+   Flag any properties that contain personally identifiable information. Document how PII should be handled . hashing, encryption, or exclusion.
 
 7. **Create Testing Checklist**
    Define how QA should verify that tracking is implemented correctly. Include steps to validate events fire at the right times with correct properties.
@@ -438,21 +438,21 @@ When asked to create an instrumentation spec, follow these steps:
 
 See this skill applied to three different product contexts:
 
-??? example "Storevine (B2B): Storevine B2B ecommerce platform — Campaigns send flow and first-campaign flow analytics instrumentation"
+??? example "Storevine (B2B): Storevine B2B ecommerce platform . Campaigns send flow and first-campaign flow analytics instrumentation"
     **Prompt:**
 
     ```
     /instrumentation-spec
 
-    Feature: Campaigns — campaign send flow + guided first-campaign flow
+    Feature: Campaigns . campaign send flow + guided first-campaign flow
     Analytics platform: Amplitude
 
     Events I need to instrument:
-    1. campaign_created — merchant saves a campaign draft
-    2. campaign_sent — merchant sends a campaign
-    3. first_send_completed — merchant sends their FIRST campaign ever
+    1. campaign_created . merchant saves a campaign draft
+    2. campaign_sent . merchant sends a campaign
+    3. first_send_completed . merchant sends their FIRST campaign ever
        (milestone event for the non-adopter hypothesis)
-    4. attribution_recorded — a purchase is linked to a campaign click
+    4. attribution_recorded . a purchase is linked to a campaign click
        within the 7-day attribution window
 
     Prior work:
@@ -473,7 +473,7 @@ See this skill applied to three different product contexts:
 
     # Instrumentation Spec: Campaigns Send Flow and First-Campaign Flow
 
-??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — Resurface feature analytics instrumentation spec"
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app . Resurface feature analytics instrumentation spec"
     **Prompt:**
 
     ```
@@ -483,13 +483,13 @@ See this skill applied to three different product contexts:
     sprint 8 starts so alex and jess can instrument during the build.
 
     events:
-    1. resurface_opt_in — user enables the digest
-    2. resurface_digest_sent — server sends a digest email
-    3. resurface_digest_opened — user opens the email (caveat: apple MPP)
-    4. resurface_item_clicked — user clicks an item in the digest
-    5. resurface_unsubscribe — user unsubscribes
-    6. resurface_cadence_changed — user changes frequency
-    7. resurface_digest_skipped — server skips sending (no qualifying items,
+    1. resurface_opt_in . user enables the digest
+    2. resurface_digest_sent . server sends a digest email
+    3. resurface_digest_opened . user opens the email (caveat: apple MPP)
+    4. resurface_item_clicked . user clicks an item in the digest
+    5. resurface_unsubscribe . user unsubscribes
+    6. resurface_cadence_changed . user changes frequency
+    7. resurface_digest_skipped . server skips sending (no qualifying items,
        exclusion window exhausted, etc.)
 
     also need user properties: digest_enabled, digest_cadence, digest_timezone.

@@ -7,17 +7,17 @@ skill_version: "2.0.0"
 created: 2026-02-20
 status: sample
 thread: brainshelf
-context: Brainshelf consumer PKM app — Resurface morning email digest hypothesis
+context: Brainshelf consumer PKM app . Resurface morning email digest hypothesis
 ---
 
 ## Scenario
 
-Brainshelf has ~85,000 registered users and ~22,000 MAU [fictional]. User interviews and behavioral data revealed that users save an average of 47 items per month but revisit fewer than 9% of them within 30 days [fictional] — a pattern users described as a "guilt pile." The PM wants to test whether a morning resurface email digest, which surfaces 3–5 saved items based on recent reading patterns, increases the re-read rate before committing engineering resources to a full Resurface feature build.
+Brainshelf has ~85,000 registered users and ~22,000 MAU [fictional]. User interviews and behavioral data revealed that users save an average of 47 items per month but revisit fewer than 9% of them within 30 days [fictional] . a pattern users described as a "guilt pile." The PM wants to test whether a morning resurface email digest, which surfaces 3–5 saved items based on recent reading patterns, increases the re-read rate before committing engineering resources to a full Resurface feature build.
 
 **Source Notes:**
 
 - Lenny Rachitsky's consumer app retention benchmarks (Lenny's Newsletter, 2023) place typical 30-day retention for consumer utility apps at 25–35%, with re-engagement email as one of the highest-ROI levers for apps below median retention.
-- Research published in the Journal of Consumer Psychology (Soman, 2001, "The Mental Accounting of Sunk Cost") supports the behavioral observation that accumulated, unread items increase guilt and reduce engagement — consistent with what Brainshelf users described in interviews.
+- Research published in the Journal of Consumer Psychology (Soman, 2001, "The Mental Accounting of Sunk Cost") supports the behavioral observation that accumulated, unread items increase guilt and reduce engagement . consistent with what Brainshelf users described in interviews.
 
 ---
 
@@ -59,18 +59,18 @@ guardrail: don't tank unsubscribe rate.
 
 ### Problem Context
 
-Brainshelf users consistently save content they intend to return to, but behavioral data shows that the vast majority of saved items are never revisited. Exit interviews and NPS comment analysis identify this as the app's core value destruction point — users feel guilt about the growing backlog rather than satisfaction from the tool. The library becomes a liability rather than an asset. See Problem Statement: Resurface (Q1 2026) for the full framing.
+Brainshelf users consistently save content they intend to return to, but behavioral data shows that the vast majority of saved items are never revisited. Exit interviews and NPS comment analysis identify this as the app's core value destruction point . users feel guilt about the growing backlog rather than satisfaction from the tool. The library becomes a liability rather than an asset. See Problem Statement: Resurface (Q1 2026) for the full framing.
 
 ### Supporting Evidence
 
 - Behavioral data: users save an average of 47 items/month but revisit fewer than 9% within 30 days [fictional]. The revisit rate has been flat for three cohorts despite feature additions to the saving experience.
-- User interview synthesis (n=7): 5 of 7 users described their saved library in negative terms ("overwhelming," "guilt pile," "I forget it exists"). No user described a natural trigger for returning to saved content — revisiting was entirely self-initiated and rare.
+- User interview synthesis (n=7): 5 of 7 users described their saved library in negative terms ("overwhelming," "guilt pile," "I forget it exists"). No user described a natural trigger for returning to saved content . revisiting was entirely self-initiated and rare.
 - Re-engagement email benchmarks from Lenny's Newsletter (2023) indicate that re-engagement email is one of the highest-ROI retention levers for consumer apps below median 30-day retention, with click rates in successful implementations ranging from 8–22%.
-- Readwise's core product loop — daily email highlighting previously saved highlights — demonstrates that a scheduled email resurface mechanic can drive habitual re-engagement in PKM tools.
+- Readwise's core product loop . daily email highlighting previously saved highlights . demonstrates that a scheduled email resurface mechanic can drive habitual re-engagement in PKM tools.
 
 ### Alternative Hypotheses Considered
 
-- **In-app notification card (push or in-app surface):** Could achieve higher reach among users with push enabled, but Brainshelf's notification opt-in rate is low [fictional] and in-app cards require the user to open the app first — defeating the purpose of re-engagement. Deferred to test in Phase 2.
+- **In-app notification card (push or in-app surface):** Could achieve higher reach among users with push enabled, but Brainshelf's notification opt-in rate is low [fictional] and in-app cards require the user to open the app first . defeating the purpose of re-engagement. Deferred to test in Phase 2.
 - **Weekly digest instead of daily:** Lower frequency might reduce unsubscribe risk but reduces surface area for habit formation. Daily is the Readwise model; daily frequency is what this hypothesis tests. Weekly is a fallback variant.
 - **Algorithmic library sorting (no email):** Resurfaces content inside the app without an outbound touchpoint. Requires the user to actively open the app, which is the behavior we're trying to change. This is a longer-term UX change; email is a faster test.
 
@@ -86,7 +86,7 @@ Approximately 9,800 users meet this definition as of last 30-day cohort [fiction
 
 ### Current Behavior
 
-These users continue saving content (median 4 saves/week in this segment [fictional]) but do not return to read. Their reading consumption happens entirely on source sites at the time of saving; Brainshelf serves as a write-only library. They do not organically open the app to read — they open it to save.
+These users continue saving content (median 4 saves/week in this segment [fictional]) but do not return to read. Their reading consumption happens entirely on source sites at the time of saving; Brainshelf serves as a write-only library. They do not organically open the app to read . they open it to save.
 
 ## Success Metrics
 
@@ -96,7 +96,7 @@ These users continue saving content (median 4 saves/week in this segment [fictio
 |--------|-----------------|--------|--------------------------|
 | Resurface email click-through rate (clicks / delivered digests, 24h window) | 0% (feature absent) | 15% [fictional] | 8 percentage points absolute |
 
-*Baseline is 0% because the feature does not yet exist. The MDE of 8pp reflects a conservative threshold — below this level the engagement signal is too weak to justify the engineering investment in a full Resurface build.*
+*Baseline is 0% because the feature does not yet exist. The MDE of 8pp reflects a conservative threshold . below this level the engagement signal is too weak to justify the engineering investment in a full Resurface build.*
 
 ### Secondary Metrics
 
@@ -110,7 +110,7 @@ These users continue saving content (median 4 saves/week in this segment [fictio
 
 | Metric | Current Value | Acceptable Range |
 |--------|--------------|------------------|
-| Email unsubscribe rate (among digest recipients) | — (email opt-in required) | Must stay below 2% per week |
+| Email unsubscribe rate (among digest recipients) | . (email opt-in required) | Must stay below 2% per week |
 | App session abandonment rate | 34% [fictional] | Must not increase by more than 5pp |
 
 ## Validation Approach
@@ -127,7 +127,7 @@ Randomized A/B test. Users meeting the segment criteria who opt in to the Resurf
 - Duration: 4 weeks
 - Traffic allocation: 50/50 between control and treatment within the opted-in cohort
 
-*Power calculation: alpha 0.05, power 0.80, MDE 8pp absolute against a plausible 0% baseline assumes a two-proportion z-test. At current segment size (~9,800 eligible users [fictional]) and expected opt-in rate of ~20% [fictional], we anticipate ~1,960 opt-ins over 4 weeks — well above the 800 required. Four weeks is recommended to capture weekly behavioral variation (weekend saving vs. weekday reading patterns).*
+*Power calculation: alpha 0.05, power 0.80, MDE 8pp absolute against a plausible 0% baseline assumes a two-proportion z-test. At current segment size (~9,800 eligible users [fictional]) and expected opt-in rate of ~20% [fictional], we anticipate ~1,960 opt-ins over 4 weeks . well above the 800 required. Four weeks is recommended to capture weekly behavioral variation (weekend saving vs. weekday reading patterns).*
 
 ### Pass/Fail Criteria
 
@@ -154,7 +154,7 @@ Randomized A/B test. Users meeting the segment criteria who opt in to the Resurf
 | Phase | Dates | Duration |
 |-------|-------|----------|
 | Setup & instrumentation | Mar 2 – Mar 8, 2026 | 1 week |
-| Opt-in prompt live; enrollment begins | Mar 9, 2026 | — |
+| Opt-in prompt live; enrollment begins | Mar 9, 2026 | . |
 | Test running | Mar 9 – Apr 5, 2026 | 4 weeks |
 | Analysis | Apr 6 – Apr 10, 2026 | 1 week |
-| Decision | Apr 11, 2026 | — |
+| Decision | Apr 11, 2026 | . |

@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-# check-workflow-coverage.sh — Verify every workflow file has matching entries
+# check-workflow-coverage.sh . Verify every workflow file has matching entries
 # across the repo (docs page, AGENTS.md, mkdocs.yml).
 #
 # Exit codes:
-#   0 — All workflows are fully covered
-#   1 — One or more workflows are missing entries
+#   0 . All workflows are fully covered
+#   1 . One or more workflows are missing entries
 #
 # Usage:
 #   ./scripts/check-workflow-coverage.sh
@@ -78,7 +78,7 @@ for slug in "${SLUGS[@]}"; do
   if [[ -f "$cmd_file" ]]; then
     echo "  ✓ commands/workflow-${slug}.md"
   else
-    echo "  · commands/workflow-${slug}.md (not found — optional)"
+    echo "  · commands/workflow-${slug}.md (not found . optional)"
   fi
 done
 

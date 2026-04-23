@@ -7,21 +7,21 @@ Create a reproducible release ZIP (`dist/pm-skills-vX.Y.Z.zip`) containing all d
 ## Usage
 
 ```bash
-# Bash — explicit version
+# Bash . explicit version
 ./scripts/build-release.sh 2.6.1
 
-# Bash — version from environment
+# Bash . version from environment
 VERSION=2.6.1 ./scripts/build-release.sh
 
-# Bash — version from latest git tag (default)
+# Bash . version from latest git tag (default)
 ./scripts/build-release.sh
 ```
 
 ```powershell
-# PowerShell — explicit version
+# PowerShell . explicit version
 powershell -ExecutionPolicy Bypass -File .\scripts\build-release.ps1 -Version 2.6.1
 
-# PowerShell — version from latest git tag (default)
+# PowerShell . version from latest git tag (default)
 powershell -ExecutionPolicy Bypass -File .\scripts\build-release.ps1
 ```
 
@@ -46,7 +46,7 @@ The `v` prefix is stripped automatically (`v2.6.0` becomes `2.6.0`).
 3. **Validates staged sample library content**:
    - Asserts `library/skill-output-samples/` exists in stage.
    - Asserts canonical sample output files are present (not only root docs).
-4. **Syncs plugin manifest version** — sets `.claude-plugin/plugin.json` version to match the release version.
+4. **Syncs plugin manifest version** . sets `.claude-plugin/plugin.json` version to match the release version.
    - Bash: tries python, then node, then sed as fallbacks.
    - PowerShell: uses `ConvertFrom-Json` / `ConvertTo-Json`.
    - Verifies the version was written correctly (fails on mismatch).

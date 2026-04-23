@@ -9,7 +9,7 @@ thread: storevine
 context: campaigns-exec-briefing
 ---
 
-# Sample: foundation-meeting-brief — Storevine Campaigns Exec Briefing Prep
+# Sample: foundation-meeting-brief. Storevine Campaigns Exec Briefing Prep
 
 ## Scenario
 
@@ -94,7 +94,7 @@ status: draft
 ### Background
 
 - Q1 Campaigns research overran by 18% [fictional] due to a user-research round triggered by unexpected customer interview findings
-- Priya-ceo was vocal in Q1 exec review (2026-03-20 recap) that "we need capacity discipline" — her phrase
+- Priya-ceo was vocal in Q1 exec review (2026-03-20 recap) that "we need capacity discipline". her phrase
 - Q1 overrun absorbed without slipping Q1 deliverables; but the overrun is the lens priya will view Q2 through
 - Rachel-vp aligned with campaigns Q2 in 1:1 yesterday (2026-04-15); she'll speak if asked, won't co-present
 
@@ -102,7 +102,7 @@ status: draft
 
 **priya-ceo** (CEO)
 
-- **Position on topic**: cost-sensitive; wants capacity discipline; skeptical of Q2 overrun risk [confidence: high — direct Q1 exec-review statements]
+- **Position on topic**: cost-sensitive; wants capacity discipline; skeptical of Q2 overrun risk [confidence: high. direct Q1 exec-review statements]
 - **Stakes**: capacity-discipline messaging is one of her 2026 priorities; a visible capacity-failure undermines it
 - **Likely concerns**: "how do we prevent another overrun?"; "what's the cost of cutting scope instead?"; "why Q2, not Q3 after we've settled capacity?"
 - **Relationship state**: neutral; direct, data-driven, impatient with hedging
@@ -110,9 +110,9 @@ status: draft
 
 **rachel-vp** (VP Product)
 
-- **Position on topic**: private supporter; wants Q2 [confidence: high — 1:1 confirmation yesterday]
+- **Position on topic**: private supporter; wants Q2 [confidence: high. 1:1 confirmation yesterday]
 - **Relationship state**: strong
-- **Tactical notes**: she's in supporting role; if priya asks for her view, she'll reinforce. Don't ask her to co-present — keeps the dynamic clean.
+- **Tactical notes**: she's in supporting role; if priya asks for her view, she'll reinforce. Don't ask her to co-present. keeps the dynamic clean.
 
 ### Desired outcomes (ranked)
 
@@ -136,8 +136,8 @@ status: draft
 
 ### Risks and tensions
 
-- **Priya uses Q1 overrun to cap Q2 capacity, forcing scope cuts**: Mitigation — scope-cut map makes cost visible; don't let "just cut scope" be costless.
-- **Meeting drifts to broader capacity-policy discussion**: Mitigation — upfront ask: "I have one specific ask today; happy to schedule a separate capacity-policy conversation."
+- **Priya uses Q1 overrun to cap Q2 capacity, forcing scope cuts**: Mitigation. scope-cut map makes cost visible; don't let "just cut scope" be costless.
+- **Meeting drifts to broader capacity-policy discussion**: Mitigation. upfront ask: "I have one specific ask today; happy to schedule a separate capacity-policy conversation."
 
 ### Asks
 
@@ -173,9 +173,9 @@ status: draft
 
 - **Generated**: 2026-04-16T17:00:00Z
 - **Skill version**: 1.0.0
-- **Input quality**: high — user provided context, history, stakeholder-1-position confirmed
-- **Overall confidence**: medium — priya's position high-confidence; anticipated questions inferred from typical CEO patterns
+- **Input quality**: high. user provided context, history, stakeholder-1-position confirmed
+- **Overall confidence**: medium. priya's position high-confidence; anticipated questions inferred from typical CEO patterns
 - **Known gaps**: Numeric Q2 success target still aspirational
 - **Inferences applied**: priya's likely concerns inferred from prior exec-review comments [confidence: high]; rachel's supporting-role positioning inferred from 1:1 signal [confidence: high]
-- **Anti-meeting check**: Ran — synchronous value: relationship-building (exec trust) + conflict-resolution (capacity concern); sync format essential
+- **Anti-meeting check**: Ran. synchronous value: relationship-building (exec trust) + conflict-resolution (capacity concern); sync format essential
 ```

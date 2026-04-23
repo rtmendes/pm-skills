@@ -21,13 +21,16 @@
     <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat-square" alt="License">
   </a>
   <a href="https://github.com/product-on-purpose/pm-skills/releases">
-    <img src="https://img.shields.io/badge/version-2.11.0-blue.svg?style=flat-square" alt="Version">
+    <img src="https://img.shields.io/badge/version-2.11.1-blue.svg?style=flat-square" alt="Version">
   </a>
   <a href="#the-skills">
     <img src="https://img.shields.io/badge/skills-38-brightgreen.svg?style=flat-square" alt="Skills">
   </a>
   <a href="https://agentskills.io/specification">
     <img src="https://img.shields.io/badge/spec-agentskills.io-orange.svg?style=flat-square" alt="Agent Skills Spec">
+  </a>
+  <a href="https://skills.sh/product-on-purpose/pm-skills">
+    <img src="https://img.shields.io/badge/skills.sh-install-6f42c1.svg?style=flat-square" alt="Install via skills.sh">
   </a>
   <a href="CONTRIBUTING.md">
     <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome">
@@ -124,15 +127,15 @@ git clone https://github.com/product-on-purpose/pm-skills.git && cd pm-skills
 <details open>
 <summary>v2.11.0 - Meeting Skills Family + Lean Canvas: first cross-cutting skill-family contract</summary>
 
-- **New foundation skill**: `foundation-lean-canvas` (`/lean-canvas`) — one-page business thesis across nine interlocking blocks (problem, customer, UVP, solution, channels, revenue, cost, metrics, unfair advantage). Two modes: `content` (structured markdown) and `visual` (self-contained HTML with A3 landscape print styling).
-- **New foundation family — the 5-skill Meeting Skills Family**, governed by a canonical contract ([`docs/reference/skill-families/meeting-skills-contract.md`](docs/reference/skill-families/meeting-skills-contract.md)) with enforcing CI:
-  - `foundation-meeting-agenda` (`/meeting-agenda`) — attendee-facing structural agenda with time-boxed topics, type tags, owners, prep; 10 meeting-type variants
-  - `foundation-meeting-brief` (`/meeting-brief`) — private strategic prep with stakeholder reads, ranked outcomes, anticipated Q&A
-  - `foundation-meeting-recap` (`/meeting-recap`) — topic-segmented post-meeting summary with decisions bold-flagged and actions inline; auto-discovers sibling agenda
-  - `foundation-meeting-synthesize` (`/meeting-synthesize`) — cross-meeting archaeology surfacing patterns, trajectories, contradictions
-  - `foundation-stakeholder-update` (`/stakeholder-update`) — async outward comms with 5 channel × 5 audience variants
-- **New pattern**: `docs/reference/skill-families/` — canonical home for cross-cutting skill-family contracts. Meeting Skills Contract is the first entry; future families (research, delivery) can add entries.
-- **New CI**: `validate-meeting-skills-family.sh/.ps1` — enforcing validation of contract conformance, filename convention, and shareable-boundary structure.
+- **New foundation skill**: `foundation-lean-canvas` (`/lean-canvas`) . one-page business thesis across nine interlocking blocks (problem, customer, UVP, solution, channels, revenue, cost, metrics, unfair advantage). Two modes: `content` (structured markdown) and `visual` (self-contained HTML with A3 landscape print styling).
+- **New foundation family . the 5-skill Meeting Skills Family**, governed by a canonical contract ([`docs/reference/skill-families/meeting-skills-contract.md`](docs/reference/skill-families/meeting-skills-contract.md)) with enforcing CI:
+  - `foundation-meeting-agenda` (`/meeting-agenda`) . attendee-facing structural agenda with time-boxed topics, type tags, owners, prep; 10 meeting-type variants
+  - `foundation-meeting-brief` (`/meeting-brief`) . private strategic prep with stakeholder reads, ranked outcomes, anticipated Q&A
+  - `foundation-meeting-recap` (`/meeting-recap`) . topic-segmented post-meeting summary with decisions bold-flagged and actions inline; auto-discovers sibling agenda
+  - `foundation-meeting-synthesize` (`/meeting-synthesize`) . cross-meeting archaeology surfacing patterns, trajectories, contradictions
+  - `foundation-stakeholder-update` (`/stakeholder-update`) . async outward comms with 5 channel × 5 audience variants
+- **New pattern**: `docs/reference/skill-families/` . canonical home for cross-cutting skill-family contracts. Meeting Skills Contract is the first entry; future families (research, delivery) can add entries.
+- **New CI**: `validate-meeting-skills-family.sh/.ps1` . enforcing validation of contract conformance, filename convention, and shareable-boundary structure.
 - **New end-user guide**: [Using the Meeting Skills Family](docs/guides/using-meeting-skills.md) with mermaid diagrams covering skill chain, go-mode flow, and family lifecycle.
 - **Sample library**: 94 → 120 outputs; 15 thread-aligned samples (3 per meeting skill × storevine/brainshelf/workbench) added.
 - **Process improvement**: Pre-release checklist now requires a Phase 0 Adversarial Review Loop (Codex adversarial review → resolution → re-run until findings stabilize below IMPORTANT). Codified from v2.11.0 experience where Round 2 of review surfaced 6 additional IMPORTANT issues in the Round 1 resolution pass itself.
@@ -143,9 +146,9 @@ git clone https://github.com/product-on-purpose/pm-skills.git && cd pm-skills
 <details>
 <summary>v2.10.x - Utility skill expansion: mermaid diagrams, slideshows, self-updating</summary>
 
-- **New skill**: `utility-mermaid-diagrams` (`/mermaid-diagrams`) — 15 diagram types with dual-lens navigation (type catalog + PM use-case guide), dedicated syntax validity reference, and worked examples.
-- **New skill**: `utility-slideshow-creator` (`/slideshow-creator`) — generates professional presentations from JSON deck specs; 18 slide types with dark/light variants and Google Slides compatibility.
-- **New skill**: `utility-update-pm-skills` (`/update-pm-skills`) — checks for newer releases, previews changes with `--report-only`, and applies updates with confirmation. Includes backup, value-delta report, and post-update smoke test.
+- **New skill**: `utility-mermaid-diagrams` (`/mermaid-diagrams`) . 15 diagram types with dual-lens navigation (type catalog + PM use-case guide), dedicated syntax validity reference, and worked examples.
+- **New skill**: `utility-slideshow-creator` (`/slideshow-creator`) . generates professional presentations from JSON deck specs; 18 slide types with dark/light variants and Google Slides compatibility.
+- **New skill**: `utility-update-pm-skills` (`/update-pm-skills`) . checks for newer releases, previews changes with `--report-only`, and applies updates with confirmation. Includes backup, value-delta report, and post-update smoke test.
 - **Sample library**: 84 → 91 outputs, now covering all 32 skills.
 - **Tooling**: `generate-skill-pages.py` now computes skill/command/workflow counts dynamically, eliminating stale-count drift.
 - Repo now ships 32 skills, 39 command docs, and 9 workflows.
@@ -160,7 +163,7 @@ git clone https://github.com/product-on-purpose/pm-skills.git && cd pm-skills
 - **BREAKING:** `/kickoff` command replaced by `/workflow-feature-kickoff`
 - **6 new workflows**: Customer Discovery, Sprint Planning, Product Strategy, Post-Launch Learning, Stakeholder Alignment, Technical Discovery
 - **7 `/workflow-*` slash commands** (1 renamed + 6 new)
-- **New script**: `scripts/generate-workflow-pages.py` — generates docs site pages from source workflows
+- **New script**: `scripts/generate-workflow-pages.py` . generates docs site pages from source workflows
 - **URL redirects** for old `/bundles/*` doc site paths via `mkdocs-redirects`
 - **Terminology guard**: `scripts/check-stale-bundle-refs.sh/.ps1` prevents regression
 - Repo now ships 31 skills, 38 command docs, and 9 workflows.
@@ -170,11 +173,11 @@ git clone https://github.com/product-on-purpose/pm-skills.git && cd pm-skills
 <details>
 <summary>v2.8.0 - PM skill lifecycle: Create, Validate, Iterate</summary>
 
-- **New skill**: `utility-pm-skill-validate` (`/pm-skill-validate`) — audits a skill against structural conventions and quality criteria, producing a severity-graded validation report.
-- **New skill**: `utility-pm-skill-iterate` (`/pm-skill-iterate`) — applies targeted improvements based on feedback or validation reports, with before/after previews and version bump suggestions.
+- **New skill**: `utility-pm-skill-validate` (`/pm-skill-validate`) . audits a skill against structural conventions and quality criteria, producing a severity-graded validation report.
+- **New skill**: `utility-pm-skill-iterate` (`/pm-skill-iterate`) . applies targeted improvements based on feedback or validation reports, with before/after previews and version bump suggestions.
 - **New CI**: `validate-skill-history` and `validate-skills-manifest` advisory scripts for skill versioning governance.
-- **New guide**: `docs/pm-skill-lifecycle.md` — workflow patterns for the Create → Validate → Iterate lifecycle.
-- **Governance**: `docs/internal/skill-versioning.md` — SemVer rules, HISTORY.md contract, skills-manifest.yaml format.
+- **New guide**: `docs/pm-skill-lifecycle.md` . workflow patterns for the Create → Validate → Iterate lifecycle.
+- **Governance**: `docs/internal/skill-versioning.md` . SemVer rules, HISTORY.md contract, skills-manifest.yaml format.
 - Repo now ships 29 skills, 30 command docs, and 3 workflows.
 - Release note: [`docs/releases/Release_v2.8.0.md`](docs/releases/Release_v2.8.0.md).
 
@@ -182,8 +185,8 @@ git clone https://github.com/product-on-purpose/pm-skills.git && cd pm-skills
 <details>
 <summary>v2.7.0 - Utility skills, enhanced CI, and release packaging hygiene</summary>
 
-- **New skill**: `deliver-acceptance-criteria` — Given/When/Then acceptance criteria for stories and features.
-- **New skill**: `utility-pm-skill-builder` — first utility-classified skill; interactive builder for creating new PM skills with gap analysis, classification, and draft file generation.
+- **New skill**: `deliver-acceptance-criteria` . Given/When/Then acceptance criteria for stories and features.
+- **New skill**: `utility-pm-skill-builder` . first utility-classified skill; interactive builder for creating new PM skills with gap analysis, classification, and draft file generation.
 - **Enhanced CI**: extended frontmatter linter, AGENTS.md sync validator, MCP impact detection.
 - **Release packaging**: `docs/internal/**` excluded from published ZIPs while staying tracked in-repo.
 - **Documentation**: new `docs/pm-skill-anatomy.md` guide, comprehensive public docs refresh.
@@ -194,12 +197,12 @@ git clone https://github.com/product-on-purpose/pm-skills.git && cd pm-skills
 <details>
 <summary>v2.6.x - Claude plugin packaging + sample library recovery</summary>
 
-**v2.6.1** — Sample library recovery and packaging inclusion:
+**v2.6.1** . Sample library recovery and packaging inclusion:
 - Restored and normalized the shipped sample-output corpus under `library/skill-output-samples/`.
 - Added sample-library staging to release packagers so ZIP artifacts include sample outputs.
 - Release note: `docs/releases/Release_v2.6.1.md`.
 
-**v2.6.0** — Claude plugin packaging release:
+**v2.6.0** . Claude plugin packaging release:
 - Added Claude plugin manifest support via `.claude-plugin/plugin.json`.
 - Release packaging now includes `.claude-plugin/` and enforces plugin-manifest version alignment with the release version.
 - Release note: `docs/releases/Release_v2.6.0.md`.
@@ -271,9 +274,9 @@ flowchart LR
 
 | Tool | Command | What it does |
 |------|---------|-------------|
-| **Builder** | `/pm-skill-builder` | Creates a new skill from an idea — runs gap analysis against all existing skills, classifies by type and phase, generates draft files to a staging area, and promotes on confirmation |
-| **Validator** | `/pm-skill-validate` | Audits an existing skill against structural conventions and quality criteria — produces a report with severity-graded findings and actionable recommendations |
-| **Iterator** | `/pm-skill-iterate` | Applies targeted improvements to a skill based on feedback or a validation report — previews changes, writes on confirmation, suggests a version bump |
+| **Builder** | `/pm-skill-builder` | Creates a new skill from an idea . runs gap analysis against all existing skills, classifies by type and phase, generates draft files to a staging area, and promotes on confirmation |
+| **Validator** | `/pm-skill-validate` | Audits an existing skill against structural conventions and quality criteria . produces a report with severity-graded findings and actionable recommendations |
+| **Iterator** | `/pm-skill-iterate` | Applies targeted improvements to a skill based on feedback or a validation report . previews changes, writes on confirmation, suggests a version bump |
 
 **Why this matters:** Skills are living artifacts that evolve. The builder creates them, the validator catches drift and quality gaps, and the iterator applies fixes. Together they keep the library consistent as it grows.
 
@@ -379,7 +382,15 @@ See the [Ecosystem Overview](docs/reference/ecosystem.md) for a detailed compari
 
 ## Getting Started
 
-**Quick start:** Clone and go.
+**Fastest path:** Install all 38 skills into your agent with one command, using the open [`skills` CLI](https://github.com/vercel-labs/skills):
+
+```bash
+npx skills add product-on-purpose/pm-skills
+```
+
+Works with Claude Code, Cursor, GitHub Copilot, Cline, and any agent supported by the `skills` CLI. Skills land in your agent's default skills directory and are ready to use immediately.
+
+**Prefer a manual clone?** The classic path still works:
 
 ```bash
 git clone https://github.com/product-on-purpose/pm-skills.git && cd pm-skills
@@ -411,6 +422,7 @@ cd pm-skills
 
 | Method                 | Best For                                  | Command / Action                              |
 | ---------------------- | ----------------------------------------- | --------------------------------------------- |
+| **`skills` CLI**       | Any agent supported by the open skills ecosystem (Claude Code, Cursor, Copilot, Cline) | `npx skills add product-on-purpose/pm-skills` |
 | **Git Clone**          | Claude Code, Copilot, Cursor, Windsurf    | `git clone https://github.com/product-on-purpose/pm-skills.git` |
 | **ZIP Download**       | Claude.ai, Claude Desktop                 | [Download Latest Release](https://github.com/product-on-purpose/pm-skills/releases/latest) |
 | **MCP Server**         | Programmatic tool access                  | `npx pm-skills-mcp` ([pm-skills-mcp](https://github.com/product-on-purpose/pm-skills-mcp)) |
@@ -568,7 +580,7 @@ The skill content provides all the context the LLM needs to produce professional
 
 All releases are available on the [GitHub Releases](https://github.com/product-on-purpose/pm-skills/releases) page:
 
-- **`pm-skills-vX.X.X.zip`** — Complete package with all skills, commands, workflows, and documentation
+- **`pm-skills-vX.X.X.zip`** . Complete package with all skills, commands, workflows, and documentation
 - **Latest stable:** `v2.10.2` (Plugin manifest drift fix and count-consistency CI hardening)
 - **Latest release notes:** [CHANGELOG.md](CHANGELOG.md#2102---2026-04-14)
 - **Published tag:** [`v2.10.2`](https://github.com/product-on-purpose/pm-skills/releases/tag/v2.10.2)
@@ -821,16 +833,16 @@ See [docs/reference/project-structure.md](docs/reference/project-structure.md) f
 <details>
 <summary>v2.5.x - Persona skill + foundation/utility taxonomy</summary>
 
-**v2.5.2** — Public release-doc readability and hygiene:
+**v2.5.2** . Public release-doc readability and hygiene:
 - Public release docs rewritten in user-first language.
 - No skill, command, template, or workflow behavior changes.
 - Release note: `docs/releases/Release_v2.5.2.md`.
 
-**v2.5.1** — Agent workspace canonicalization:
+**v2.5.1** . Agent workspace canonicalization:
 - Canonical `AGENTS/claude` workspace + clean-worktree cut/tag/publish runbook.
 - Release note: see `CHANGELOG.md`.
 
-**v2.5.0** — Persona + foundation/utility + sample library:
+**v2.5.0** . Persona + foundation/utility + sample library:
 - Persona skill shipment + foundation/utility taxonomy + sample output library.
 - Content-alignment checks for the sample library complete and documented.
 - Release note: `docs/releases/Release_v2.5.0.md`.
@@ -839,27 +851,27 @@ See [docs/reference/project-structure.md](docs/reference/project-structure.md) f
 <details>
 <summary>v2.4.x - Contract lock closure + governance</summary>
 
-**v2.4.3** — Release metadata/link alignment patch.
-**v2.4.2** — Governance and tracked-vs-local artifact hygiene.
-**v2.4.1** — Docs/release alignment follow-up.
-**v2.4.0** — Output and configuration contract lock closure.
+**v2.4.3** . Release metadata/link alignment patch.
+**v2.4.2** . Governance and tracked-vs-local artifact hygiene.
+**v2.4.1** . Docs/release alignment follow-up.
+**v2.4.0** . Output and configuration contract lock closure.
 - Release notes: `docs/releases/Release_v2.4.md` through `Release_v2.4.3.md`.
 
 </details>
 <details>
 <summary>v2.2.0–v2.3.0 - MCP sync guardrails + governance baseline</summary>
 
-**v2.3.0** — MCP sync guardrail defaults to blocking mode.
-**v2.2.0** — Cross-repo sync checker (observe mode), planning/backlog governance.
+**v2.3.0** . MCP sync guardrail defaults to blocking mode.
+**v2.2.0** . Cross-repo sync checker (observe mode), planning/backlog governance.
 - Release notes: `docs/releases/Release_v2.2.md`, `Release_v2.3.md`.
 
 </details>
 <details>
 <summary>v2.0.x and earlier</summary>
 
-**v2.0.x** — Flat skill layout (`skills/{phase-skill}/`), sync helpers, build scripts, docs refresh.
-**v1.x** — Security hardening, CI governance, documentation baseline, slash-command completion.
-**v0.x** — Initial repository scaffolding and early phased skill build-out.
+**v2.0.x** . Flat skill layout (`skills/{phase-skill}/`), sync helpers, build scripts, docs refresh.
+**v1.x** . Security hardening, CI governance, documentation baseline, slash-command completion.
+**v0.x** . Initial repository scaffolding and early phased skill build-out.
 - See `CHANGELOG.md` for dated release-by-release detail.
 
 </details>
@@ -1052,7 +1064,7 @@ Slash commands (like `/prd` or `/hypothesis`) are shortcuts that invoke the corr
 
 **pm-skills-mcp** wraps these same skills in an MCP server for programmatic access. It's best for Claude Desktop, Cursor, and any MCP-compatible client.
 
-Both give you access to identical skills—choose based on your preferred client and workflow. See the [Ecosystem Overview](docs/reference/ecosystem.md) for a detailed comparison.
+Both give you access to identical skills.choose based on your preferred client and workflow. See the [Ecosystem Overview](docs/reference/ecosystem.md) for a detailed comparison.
 
 </details>
 <!-- ========== END NEW ========== -->

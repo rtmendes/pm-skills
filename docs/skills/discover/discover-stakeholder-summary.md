@@ -42,7 +42,7 @@ Or reference the skill file directly: `skills/discover-stakeholder-summary/SKILL
 When asked to create a stakeholder summary, follow these steps:
 
 1. **Identify All Stakeholders**
-   List everyone with a stake in the project: sponsors, approvers, contributors, consumers of the output, and those affected by changes. Cast a wide net initially—you can prioritize later. Include both individuals and groups.
+   List everyone with a stake in the project: sponsors, approvers, contributors, consumers of the output, and those affected by changes. Cast a wide net initially.you can prioritize later. Include both individuals and groups.
 
 2. **Assess Influence and Interest**
    For each stakeholder, evaluate their influence (power to affect the project) and interest (how much they care about outcomes). This determines how much attention each requires.
@@ -124,8 +124,8 @@ When asked to create a stakeholder summary, follow these steps:
 ### [Stakeholder Name 1]
 
 **Role:** [Title and function]
-**Influence Level:** [High/Medium/Low] — [Why]
-**Interest Level:** [High/Medium/Low] — [Why]
+**Influence Level:** [High/Medium/Low] . [Why]
+**Interest Level:** [High/Medium/Low] . [Why]
 **Current Alignment:** [Supportive/Neutral/Resistant]
 
 **Needs:**
@@ -149,8 +149,8 @@ When asked to create a stakeholder summary, follow these steps:
 ### [Stakeholder Name 2]
 
 **Role:** [Title and function]
-**Influence Level:** [High/Medium/Low] — [Why]
-**Interest Level:** [High/Medium/Low] — [Why]
+**Influence Level:** [High/Medium/Low] . [Why]
+**Interest Level:** [High/Medium/Low] . [Why]
 **Current Alignment:** [Supportive/Neutral/Resistant]
 
 **Needs:**
@@ -174,8 +174,8 @@ When asked to create a stakeholder summary, follow these steps:
 ### [Stakeholder Name 3]
 
 **Role:** [Title and function]
-**Influence Level:** [High/Medium/Low] — [Why]
-**Interest Level:** [High/Medium/Low] — [Why]
+**Influence Level:** [High/Medium/Low] . [Why]
+**Interest Level:** [High/Medium/Low] . [Why]
 **Current Alignment:** [Supportive/Neutral/Resistant]
 
 **Needs:**
@@ -292,23 +292,23 @@ When asked to create a stakeholder summary, follow these steps:
     ### Quadrant Placement
 
     **Manage Closely (High Influence, High Interest):**
-    - Marcus Wong, CTO — Executive sponsor, budget authority
-    - Diana Reyes, VP Engineering — Technical decision maker, team impact
-    - James Liu, IT Director — Infrastructure owner, operations impact
-    - Priya Sharma, Security Lead — Compliance gatekeeper
+    - Marcus Wong, CTO . Executive sponsor, budget authority
+    - Diana Reyes, VP Engineering . Technical decision maker, team impact
+    - James Liu, IT Director . Infrastructure owner, operations impact
+    - Priya Sharma, Security Lead . Compliance gatekeeper
 
     **Keep Satisfied (High Influence, Low Interest):**
-    - Michael Torres, CFO — Budget approval, cost concerns
-    - Jennifer Adams, Legal Counsel — Contract and compliance review
+    - Michael Torres, CFO . Budget approval, cost concerns
+    - Jennifer Adams, Legal Counsel . Contract and compliance review
 
     **Keep Informed (Low Influence, High Interest):**
-    - Engineering Team Leads — Affected by changes, need to plan
-    - Customer Success Team — Potential customer-facing impact
-    - Sales Team — Need confidence to reassure customers
+    - Engineering Team Leads . Affected by changes, need to plan
+    - Customer Success Team . Potential customer-facing impact
+    - Sales Team . Need confidence to reassure customers
 
     **Monitor (Low Influence, Low Interest):**
-    - HR Department — Minor process updates needed
-    - Marketing Team — Minimal direct impact
+    - HR Department . Minor process updates needed
+    - Marketing Team . Minimal direct impact
 
     ## Stakeholder Profiles
 
@@ -326,8 +326,8 @@ When asked to create a stakeholder summary, follow these steps:
     ### Marcus Wong, CTO
 
     **Role:** Chief Technology Officer, Executive Sponsor
-    **Influence Level:** High — Budget authority, final technical decisions
-    **Interest Level:** High — Strategic initiative tied to his objectives
+    **Influence Level:** High . Budget authority, final technical decisions
+    **Interest Level:** High . Strategic initiative tied to his objectives
     **Current Alignment:** Supportive
 
     **Needs:**
@@ -355,8 +355,8 @@ When asked to create a stakeholder summary, follow these steps:
     ### Diana Reyes, VP Engineering
 
     **Role:** VP Engineering, 60 engineers across 8 teams
-    **Influence Level:** High — Controls engineering resources and priorities
-    **Interest Level:** High — Her teams are directly affected
+    **Influence Level:** High . Controls engineering resources and priorities
+    **Interest Level:** High . Her teams are directly affected
     **Current Alignment:** Supportive
 
     **Needs:**
@@ -384,8 +384,8 @@ When asked to create a stakeholder summary, follow these steps:
     ### James Liu, IT Director
 
     **Role:** IT Director, manages infrastructure and operations team of 12
-    **Influence Level:** High — Owns current infrastructure, critical for transition
-    **Interest Level:** High — Directly affects his team's role and processes
+    **Influence Level:** High . Owns current infrastructure, critical for transition
+    **Interest Level:** High . Directly affects his team's role and processes
     **Current Alignment:** Neutral (previously resistant)
 
     **Needs:**
@@ -413,8 +413,8 @@ When asked to create a stakeholder summary, follow these steps:
     ### Priya Sharma, Security Lead
 
     **Role:** Head of Information Security, compliance owner
-    **Influence Level:** High — Can block migration with security concerns
-    **Interest Level:** High — Major changes to security perimeter
+    **Influence Level:** High . Can block migration with security concerns
+    **Interest Level:** High . Major changes to security perimeter
     **Current Alignment:** Resistant
 
     **Needs:**
@@ -442,8 +442,8 @@ When asked to create a stakeholder summary, follow these steps:
     ### Michael Torres, CFO
 
     **Role:** Chief Financial Officer, budget authority
-    **Influence Level:** High — Controls funding approval
-    **Interest Level:** Medium — Cares about cost, not technical details
+    **Influence Level:** High . Controls funding approval
+    **Interest Level:** Medium . Cares about cost, not technical details
     **Current Alignment:** Neutral
 
     **Needs:**
@@ -540,30 +540,30 @@ When asked to create a stakeholder summary, follow these steps:
 
 See this skill applied to three different product contexts:
 
-??? example "Storevine (B2B): Storevine B2B ecommerce platform — Campaigns launch stakeholder map"
+??? example "Storevine (B2B): Storevine B2B ecommerce platform . Campaigns launch stakeholder map"
     **Prompt:**
 
     ```
     /stakeholder-summary
 
-    Project: Campaigns — native email marketing for Storevine merchants
+    Project: Campaigns . native email marketing for Storevine merchants
     Stage: PRD complete, moving to engineering kickoff
 
     Stakeholders I've identified:
 
     Internal:
-    - Growth PM (me) — owner
-    - Eng Lead (Platform) — aligned, participated in PRD review
-    - Design — in progress on Figma specs
-    - Legal — needs to review CAN-SPAM + GDPR section; not started yet
-    - Merchant Success — launch comms owners; engaged in discovery
-    - Storevine Marketing — dog-food use case; interested in using
+    - Growth PM (me) . owner
+    - Eng Lead (Platform) . aligned, participated in PRD review
+    - Design . in progress on Figma specs
+    - Legal . needs to review CAN-SPAM + GDPR section; not started yet
+    - Merchant Success . launch comms owners; engaged in discovery
+    - Storevine Marketing . dog-food use case; interested in using
       Campaigns for our own merchant communications
 
     External:
-    - Power-user merchants (fashion/home segment) — 5-6 who joined
+    - Power-user merchants (fashion/home segment) . 5-6 who joined
       discovery interviews; have expectations about the feature
-    - Klaviyo integration partner team — active Storevine integration;
+    - Klaviyo integration partner team . active Storevine integration;
       not sure how they'll react to a native competing feature
 
     Need: influence/interest map, stakeholder profiles, communication
@@ -574,9 +574,9 @@ See this skill applied to three different product contexts:
 
     **Output:**
 
-    # Stakeholder Summary: Campaigns — Native Email Marketing
+    # Stakeholder Summary: Campaigns . Native Email Marketing
 
-??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — internal stakeholder map for the Resurface feature"
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app . internal stakeholder map for the Resurface feature"
     **Prompt:**
 
     ```
@@ -587,11 +587,11 @@ See this skill applied to three different product contexts:
     small-team politics, not enterprise governance.
 
     key people:
-    - marco (ceo/cofounder) — big advocate, sees this as the retention bet
-    - alex (eng lead) — supportive but worried about A/B test infrastructure
-    - jordan (growth) — wants resurface as the retention lever
-    - dan (designer) — concerned about the digest feeling spammy
-    - chloe (data) — needs instrumentation for the experiment
+    - marco (ceo/cofounder) . big advocate, sees this as the retention bet
+    - alex (eng lead) . supportive but worried about A/B test infrastructure
+    - jordan (growth) . wants resurface as the retention lever
+    - dan (designer) . concerned about the digest feeling spammy
+    - chloe (data) . needs instrumentation for the experiment
 
     want a proper stakeholder map with communication plan.
     ```

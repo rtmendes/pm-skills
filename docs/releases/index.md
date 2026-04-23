@@ -9,6 +9,7 @@ All PM Skills releases with detailed notes on what changed and why.
 
 | Version | Date | Highlights |
 |---------|------|-----------|
+| [v2.11.1](Release_v2.11.1.md) | 2026-04-22 | skills.sh CLI compatibility patch; unblocks `npx skills add product-on-purpose/pm-skills`; lint hardening; em-dash sweep |
 | [v2.11.0](Release_v2.11.0.md) | 2026-04-18 | Meeting Skills Family (5 foundation skills + contract + enforcing CI) + lean-canvas; first cross-cutting skill-family pattern; 32→38 skills |
 | [v2.10.0](Release_v2.10.0.md) | 2026-04-11 | 3 utility skills: mermaid diagrams, slideshow creator, self-updater |
 | [v2.9.1](Release_v2.9.1.md) | 2026-04-10 | Workflows guide, count consistency CI, script docs enforcement |

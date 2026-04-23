@@ -7,7 +7,7 @@ skill_version: "2.0.0"
 created: 2026-02-20
 status: sample
 thread: brainshelf
-context: Brainshelf consumer PKM app — Sprint 9 refinement for Resurface v2 improvements
+context: Brainshelf consumer PKM app . Sprint 9 refinement for Resurface v2 improvements
 ---
 
 ## Scenario
@@ -16,9 +16,9 @@ With the Resurface A/B test validated and the ship decision approved, Priya M. f
 
 **Source Notes:**
 
-- Mike Cohn, "Agile Estimating and Planning" (mountaingoatsoftware.com/books/agile-estimating-and-planning) — the story point estimation methodology used in the refinement session; Cohn's modified Fibonacci scale (1, 2, 3, 5, 8, 13) and the team's practice of estimating by relative comparison to previously completed stories informed the point assignments.
-- Jeff Patton, "User Story Mapping" (jpattonassociates.com/user-story-mapping/) — the story mapping approach used to sequence v2 stories by user impact; Patton's principle of organizing stories into a narrative backbone shaped the sprint priority order.
-- Roman Pichler, "Strategize" (romanpichler.com/books/strategize/) — the product strategy framework that connects the v2 stories to the broader Brainshelf retention roadmap; Pichler's guidance on ensuring each sprint increment delivers measurable user value informed the story-level success criteria.
+- Mike Cohn, "Agile Estimating and Planning" (mountaingoatsoftware.com/books/agile-estimating-and-planning) . the story point estimation methodology used in the refinement session; Cohn's modified Fibonacci scale (1, 2, 3, 5, 8, 13) and the team's practice of estimating by relative comparison to previously completed stories informed the point assignments.
+- Jeff Patton, "User Story Mapping" (jpattonassociates.com/user-story-mapping/) . the story mapping approach used to sequence v2 stories by user impact; Patton's principle of organizing stories into a narrative backbone shaped the sprint priority order.
+- Roman Pichler, "Strategize" (romanpichler.com/books/strategize/) . the product strategy framework that connects the v2 stories to the broader Brainshelf retention roadmap; Pichler's guidance on ensuring each sprint increment delivers measurable user value informed the story-level success criteria.
 
 ---
 
@@ -32,12 +32,12 @@ sprint 9 refinement for resurface v2. session was april 15, 2026.
 
 stories discussed:
 1. RSF-010: embedding migration (tfidf → openai text-embedding-3-small)
-   — BLOCKED, waiting on openai api key + budget approval from marco
-2. RSF-011: in-app resurfacing card on home screen — Ready, 5 pts [fictional]
-3. RSF-012: cadence experiment (daily vs 3x/week, larger sample) —
+   . BLOCKED, waiting on openai api key + budget approval from marco
+2. RSF-011: in-app resurfacing card on home screen . Ready, 5 pts [fictional]
+3. RSF-012: cadence experiment (daily vs 3x/week, larger sample) .
    Ready, 3 pts [fictional]
 4. RSF-013: small-library handling (users with <20 items, shorter
-   exclusion window) — Needs Work, alex wants to see the data first
+   exclusion window) . Needs Work, alex wants to see the data first
 
 questions raised: should the in-app card show different items than
 the email digest or the same items? what's the minimum library size
@@ -70,7 +70,7 @@ duplicate).
 - [x] Sam W., Frontend Engineer
 - [x] Dan K., Designer
 - [x] Chloe B., Data Analyst
-- [ ] Jordan L., Growth PM *(absent — at a conference)*
+- [ ] Jordan L., Growth PM *(absent . at a conference)*
 
 ---
 
@@ -96,7 +96,7 @@ duplicate).
 
 **Discussion Notes:**
 - Alex presented the migration plan: replace the TF-IDF vectorization pipeline with OpenAI `text-embedding-3-small` embeddings for saved item similarity scoring. The spike showed embeddings achieve ~84% precision vs. ~72% for TF-IDF [fictional], which would address the "irrelevant items" feedback from the post-test survey.
-- The migration is a backend change only — no frontend or email template changes required. Existing TF-IDF vectors would be replaced with 1536-dimensional embedding vectors stored in the same PostgreSQL JSONB column.
+- The migration is a backend change only . no frontend or email template changes required. Existing TF-IDF vectors would be replaced with 1536-dimensional embedding vectors stored in the same PostgreSQL JSONB column.
 - The batch re-embedding of all ~460K existing saved items [fictional] is estimated at $15–25 one-time cost [fictional] plus ~$2–5/month ongoing for new saves [fictional]. Alex needs an OpenAI API key and budget approval from Marco before starting.
 - Jess raised a concern about API latency: if OpenAI's embedding endpoint is slow or down, the digest generation cron job could be delayed. Alex proposed a fallback to TF-IDF if the embedding call fails, which adds complexity but ensures reliability.
 
@@ -122,10 +122,10 @@ duplicate).
 | **Assignee** | Sam W. (frontend), Jess T. (backend API) |
 
 **Discussion Notes:**
-- The in-app card displays 3 topic-matched saved items at the top of the home screen for users who are opted in to the digest. The card is a complement to the email — it extends resurfacing into the app for moments when the user opens Brainshelf outside of the email trigger.
+- The in-app card displays 3 topic-matched saved items at the top of the home screen for users who are opted in to the digest. The card is a complement to the email . it extends resurfacing into the app for moments when the user opens Brainshelf outside of the email trigger.
 - Key design question resolved: the card shows different items than the email digest, not the same items. This avoids the user seeing duplicate recommendations and increases the total surface area of resurfaced content. The card draws from the same candidate pool but excludes items already included in the day's email digest.
 - Dan K. presented the card design: a collapsible "Continue reading" section at the top of the home screen feed. The card is shown only to opted-in users; non-opted-in users see the opt-in card instead.
-- Chloe asked whether the in-app card should have its own analytics events. Decision: yes — `resurface_card_viewed` and `resurface_card_item_clicked` (separate from the email click events) to measure in-app engagement independently.
+- Chloe asked whether the in-app card should have its own analytics events. Decision: yes . `resurface_card_viewed` and `resurface_card_item_clicked` (separate from the email click events) to measure in-app engagement independently.
 
 **Scope Changes:**
 - Added: card items must exclude items already in today's email digest
@@ -149,13 +149,13 @@ duplicate).
 | **Assignee** | Chloe B. (experiment design), Priya M. (experiment owner) |
 
 **Discussion Notes:**
-- The original A/B test showed daily cadence users had higher CTR (18.6% [fictional]) and higher return rate (26.1% [fictional]) than 3x/week users (14.1% CTR, 19.8% return rate [fictional]), but the 3x/week sample was only 33 users [fictional] — too small for conclusive comparison.
+- The original A/B test showed daily cadence users had higher CTR (18.6% [fictional]) and higher return rate (26.1% [fictional]) than 3x/week users (14.1% CTR, 19.8% return rate [fictional]), but the 3x/week sample was only 33 users [fictional] . too small for conclusive comparison.
 - This follow-up experiment will randomly assign new opt-in users to daily (default) or 3x/week cadence and measure the impact on CTR and return rate over 4 weeks. The primary question: is 3x/week meaningfully worse than daily, or is the original difference just noise?
 - Chloe estimated 200 users per variant for 80% power to detect a 5pp CTR difference [fictional]. At the current opt-in rate (~15 new opt-ins per day at full rollout [fictional]), the experiment would reach sample in ~27 days.
 - Alex confirmed no code changes are needed: cadence assignment is a server-side configuration; the cron job already supports both cadences.
 
 **Scope Changes:**
-- None — experiment design only, no code changes
+- None . experiment design only, no code changes
 
 **Acceptance Criteria Confirmed:**
 - [x] Experiment design document complete with sample size, duration, and success criteria
@@ -168,7 +168,7 @@ duplicate).
 
 | Attribute | Value |
 |-----------|-------|
-| **Points** | — (not estimated) |
+| **Points** | . (not estimated) |
 | **Status** | Needs Work |
 | **Assignee** | Chloe B. (data analysis) |
 
@@ -178,7 +178,7 @@ duplicate).
 - The team discussed whether to reduce the digest item count for small libraries (e.g., 2 items instead of 3–5) but decided to defer that decision until after seeing Chloe's data.
 
 **Scope Changes:**
-- Story not yet scoped — waiting on data analysis
+- Story not yet scoped . waiting on data analysis
 
 **Acceptance Criteria Confirmed:**
 - [ ] Needs data analysis from Chloe before criteria can be set
@@ -192,7 +192,7 @@ duplicate).
 | RSF-010 | Embedding migration (TF-IDF → OpenAI) | 8 [fictional] | Blocked | Waiting on API key + budget approval |
 | RSF-011 | In-app resurfacing card | 5 [fictional] | Ready | Card shows different items than email; 2 new events |
 | RSF-012 | Cadence follow-up experiment | 3 [fictional] | Ready | Experiment design only; no code changes |
-| RSF-013 | Small-library handling | — | Needs Work | Waiting on Chloe's data analysis |
+| RSF-013 | Small-library handling | . | Needs Work | Waiting on Chloe's data analysis |
 
 ---
 

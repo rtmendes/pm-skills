@@ -53,7 +53,7 @@ When asked to create release notes, follow these steps:
    Group remaining changes into clear categories: New Features, Improvements, and Bug Fixes. Within each category, order by impact (most valuable first).
 
 5. **Write Scannable Descriptions**
-   Each item should be 1-2 sentences. Lead with the benefit, optionally followed by the "how." Users scan release notes — make each line valuable.
+   Each item should be 1-2 sentences. Lead with the benefit, optionally followed by the "how." Users scan release notes . make each line valuable.
 
 6. **Acknowledge Known Issues**
    If there are known limitations or issues, be transparent. Users appreciate honesty, and it reduces support burden.
@@ -150,11 +150,11 @@ Have thoughts on this release? [Feedback channel or contact method]
 
     ## New Features
 
-    - **Export to PDF:** Share professional project reports with stakeholders who don't use TaskFlow. Export any project view — including Gantt charts — as a formatted PDF with your company logo.
+    - **Export to PDF:** Share professional project reports with stakeholders who don't use TaskFlow. Export any project view . including Gantt charts . as a formatted PDF with your company logo.
 
     - **Keyboard Shortcuts:** Power users, rejoice. Navigate TaskFlow without touching your mouse. Press `?` anywhere to see the full shortcut list, or use `Cmd+K` (Mac) / `Ctrl+K` (Windows) to open the command palette.
 
-    - **Recurring Task Templates:** Set up tasks that repeat on a schedule — daily standups, weekly reviews, monthly reports. Create once, and TaskFlow handles the rest.
+    - **Recurring Task Templates:** Set up tasks that repeat on a schedule . daily standups, weekly reviews, monthly reports. Create once, and TaskFlow handles the rest.
 
     ## Improvements
 
@@ -188,7 +188,7 @@ Have thoughts on this release? [Feedback channel or contact method]
 
     ## Coming Soon
 
-    We're putting the finishing touches on **AI-powered task suggestions** — TaskFlow will learn from your completed projects and suggest task breakdowns for new projects. Plus, **time tracking** is in beta testing and launching next month.
+    We're putting the finishing touches on **AI-powered task suggestions** . TaskFlow will learn from your completed projects and suggest task breakdowns for new projects. Plus, **time tracking** is in beta testing and launching next month.
 
     ---
 
@@ -200,14 +200,14 @@ Have thoughts on this release? [Feedback channel or contact method]
 
 See this skill applied to three different product contexts:
 
-??? example "Storevine (B2B): Storevine B2B ecommerce platform — Campaigns v1.0 GA merchant-facing release notes"
+??? example "Storevine (B2B): Storevine B2B ecommerce platform . Campaigns v1.0 GA merchant-facing release notes"
     **Prompt:**
 
     ```
     /release-notes
 
     Product: Storevine
-    Release: Campaigns v1.0 — native email marketing, GA on Apr 28, 2026
+    Release: Campaigns v1.0 . native email marketing, GA on Apr 28, 2026
     Audience: All active Storevine merchants
 
     What's new:
@@ -235,7 +235,7 @@ See this skill applied to three different product contexts:
 
     **Release Date:** April 28, 2026
 
-??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — Resurface feature release notes for users"
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app . Resurface feature release notes for users"
     **Prompt:**
 
     ```
@@ -245,7 +245,7 @@ See this skill applied to three different product contexts:
     enrollment starts mar 2. writing for the in-app changelog and blog.
 
     tone: friendly, plain language. not techy. our users are knowledge
-    workers who save articles — talk to them about reading, not about
+    workers who save articles . talk to them about reading, not about
     algorithms.
 
     highlights: daily email digest with your most relevant saved content,

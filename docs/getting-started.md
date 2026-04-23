@@ -50,7 +50,7 @@ With PM-Skills:
 ```
 You: "Write me a PRD"
 AI: *Produces a comprehensive PRD with problem statement, success metrics,
-    user stories, scope boundaries, technical considerations—all in a
+    user stories, scope boundaries, technical considerations.all in a
     professional, consistent format*
 ```
 
@@ -362,7 +362,7 @@ Claude: *Reads the skill files and produces a structured PRD*
 
 ### For Non-Technical Users
 
-This method works with any AI—no setup required.
+This method works with any AI.no setup required.
 
 1. **Find the skill you need:**
    - Go to [github.com/product-on-purpose/pm-skills](https://github.com/product-on-purpose/pm-skills)
@@ -682,9 +682,9 @@ See `_workflows/` directory for detailed workflow documentation.
 
 ### Learn More
 
-- [Categories Reference](./reference/categories.md) — Understand skill organization
-- [Frontmatter Schema](./reference/frontmatter-schema.yaml) — Technical skill structure
-- [Triple Diamond Framework](./frameworks/triple-diamond-delivery-process.md) — The organizing methodology
+- [Categories Reference](./reference/categories.md) . Understand skill organization
+- [Frontmatter Schema](./reference/frontmatter-schema.yaml) . Technical skill structure
+- [Triple Diamond Framework](./frameworks/triple-diamond-delivery-process.md) . The organizing methodology
 
 ### Explore Skills
 

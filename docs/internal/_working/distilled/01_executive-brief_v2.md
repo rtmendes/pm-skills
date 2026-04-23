@@ -10,18 +10,18 @@
 
 | Section | Change | Why |
 |---------|--------|-----|
-| §1 Multi-Project Structure | **Removed from pm-skills scope** | Now Knowledge OS — separate repo, separate initiative |
-| §2 Holistic Platform Value | **Narrowed** — hooks, output styles, transcript processing removed | All serve the workspace layer, not the skill library |
+| §1 Multi-Project Structure | **Removed from pm-skills scope** | Now Knowledge OS . separate repo, separate initiative |
+| §2 Holistic Platform Value | **Narrowed** . hooks, output styles, transcript processing removed | All serve the workspace layer, not the skill library |
 | §3 PM Skill Builder | Minor wording cleanup | Scope unchanged |
 | §4 Roadmap | **Rewritten** to match `04_next-efforts.md` | 40% scope reduction; 9 efforts, not 10 |
 | Critical Path | **Simplified** | Fewer moving parts after separation |
-| Open Decisions | **Reduced** — workspace/hook decisions removed | No longer pm-skills decisions |
+| Open Decisions | **Reduced** . workspace/hook decisions removed | No longer pm-skills decisions |
 
 ---
 
 ## The One-Line Summary
 
-pm-skills has the best PM skill content in the AI agent ecosystem — now it needs extended CI, a clean public release boundary, a skill-builder, and marketplace presence to become community-ready.
+pm-skills has the best PM skill content in the AI agent ecosystem . now it needs extended CI, a clean public release boundary, a skill-builder, and marketplace presence to become community-ready.
 
 ---
 
@@ -39,30 +39,30 @@ pm-skills has the best PM skill content in the AI agent ecosystem — now it nee
 
 ### Decision: Ship the skill library, not a workspace
 
-pm-skills uses 2 of 8 available Claude Code component types (skills + commands). The near-term focus is making those two excellent, visible, and community-ready — not expanding to hooks, agents, and output styles.
+pm-skills uses 2 of 8 available Claude Code component types (skills + commands). The near-term focus is making those two excellent, visible, and community-ready . not expanding to hooks, agents, and output styles.
 
 **Three layers** (unchanged framing, but pm-skills focuses on Core):
 
 | Layer | Components | Works On | pm-skills Focus |
 |-------|-----------|----------|-----------------|
-| **Core** | 25+ skills, 26+ commands, 3+ workflows | All 26+ platforms (agentskills.io) | **Yes — this is the product** |
+| **Core** | 25+ skills, 26+ commands, 3+ workflows | All 26+ platforms (agentskills.io) | **Yes . this is the product** |
 | **Claude Code** | Hooks, agents, output styles | Claude Code CLI only | Deferred to Knowledge OS |
 | **MCP** | pm-skills-mcp server | MCP-enabled platforms | Maintain, auto-sync via release automation |
 
 **Near-term platform investments**:
-1. **Anthropic marketplace submission** — puts pm-skills in front of every Claude Code user browsing the directory
-2. **CI validation pipeline** — enables community contributions at quality
-3. **Release ZIP boundary fix (M-16)** — stop shipping `docs/internal/**` to end users while keeping internal governance docs tracked in-repo
-4. **Release automation** — reduces maintainer toil, keeps MCP in sync
-5. **Community contribution infrastructure** — issue templates, PR templates, CONTRIBUTING.md
+1. **Anthropic marketplace submission** . puts pm-skills in front of every Claude Code user browsing the directory
+2. **CI validation pipeline** . enables community contributions at quality
+3. **Release ZIP boundary fix (M-16)** . stop shipping `docs/internal/**` to end users while keeping internal governance docs tracked in-repo
+4. **Release automation** . reduces maintainer toil, keeps MCP in sync
+5. **Community contribution infrastructure** . issue templates, PR templates, CONTRIBUTING.md
 
 **Platform comparison finding**: pm-skills works on 26+ platforms via agentskills.io. No competitor combines PM domain expertise + cross-platform portability + open source. The strategic moat is content quality, not platform lock-in.
 
 **What NOT to build (in pm-skills)**:
-- Hooks (SessionStart, PostToolUse) — these serve the workspace, not the skill library → Knowledge OS
-- Output styles — nice polish but not core skill library value → Knowledge OS
-- Transcript processing agent — artifact processing is Layer 2 → Knowledge OS
-- Agent Teams — cool but rarely needed at current scale
+- Hooks (SessionStart, PostToolUse) . these serve the workspace, not the skill library → Knowledge OS
+- Output styles . nice polish but not core skill library value → Knowledge OS
+- Transcript processing agent . artifact processing is Layer 2 → Knowledge OS
+- Agent Teams . cool but rarely needed at current scale
 
 ---
 
@@ -82,9 +82,9 @@ Two independent value streams that are often conflated:
 - Workflow: gap analysis → Why Gate → repo-fit assessment → classification → implementation packet
 - Output: concrete draft files (SKILL.md, TEMPLATE.md, EXAMPLE.md, command) ready for PR
 
-**Naming decided — two distinct utility skills, both in pm-skills**:
-- `/pm-skill-builder` — repo-specific, creates Skill Implementation Packets aligned with pm-skills architecture (6 phases, 3-file pattern, frontmatter conventions)
-- `/agent-skill-builder` — teaches PMs to create agent skills for any context (team tools, product workflows, any platform), following agentskills.io spec without pm-skills-specific conventions
+**Naming decided . two distinct utility skills, both in pm-skills**:
+- `/pm-skill-builder` . repo-specific, creates Skill Implementation Packets aligned with pm-skills architecture (6 phases, 3-file pattern, frontmatter conventions)
+- `/agent-skill-builder` . teaches PMs to create agent skills for any context (team tools, product workflows, any platform), following agentskills.io spec without pm-skills-specific conventions
 
 **Web/Codex feasibility**: Claude Code CLI handles the full lifecycle. Claude Code web handles scaffold + author. Codex can autonomously generate skill files from a completed spec. CI handles validation regardless of authoring platform.
 
@@ -98,7 +98,7 @@ Two independent value streams that are often conflated:
 
 ### Decision: Utility infrastructure before new domain skills
 
-**The biggest gap isn't missing PM skills — it's missing infrastructure.** The 6 domain phases are 70-90% covered. Foundation and utility skills are 0% covered. Building infrastructure multiplies the value of every existing skill.
+**The biggest gap isn't missing PM skills . it's missing infrastructure.** The 6 domain phases are 70-90% covered. Foundation and utility skills are 0% covered. Building infrastructure multiplies the value of every existing skill.
 
 **Priority-ordered backlog** (aligned with `04_next-efforts.md`):
 

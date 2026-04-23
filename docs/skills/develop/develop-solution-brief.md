@@ -41,13 +41,13 @@ Or reference the skill file directly: `skills/develop-solution-brief/SKILL.md`
 When asked to create a solution brief, follow these steps:
 
 1. **Recap the Problem**
-   Summarize the problem in 2-3 sentences maximum. Don't re-explain the full problem statement — reference it if needed. The reader should immediately understand what pain point this solution addresses.
+   Summarize the problem in 2-3 sentences maximum. Don't re-explain the full problem statement . reference it if needed. The reader should immediately understand what pain point this solution addresses.
 
 2. **Describe the Proposed Solution**
-   Explain what you're building in clear, non-technical language. Focus on the user experience and core value proposition. Avoid implementation details — this is about *what*, not *how*.
+   Explain what you're building in clear, non-technical language. Focus on the user experience and core value proposition. Avoid implementation details . this is about *what*, not *how*.
 
 3. **List Key Features**
-   Identify 3-5 essential features that comprise the solution. These should be the minimum set needed to solve the problem. Resist the urge to include nice-to-haves — the one-page constraint demands focus.
+   Identify 3-5 essential features that comprise the solution. These should be the minimum set needed to solve the problem. Resist the urge to include nice-to-haves . the one-page constraint demands focus.
 
 4. **Define Success Metrics**
    Connect the solution to measurable outcomes. How will you know if this works? Reference metrics from the problem statement and set targets.
@@ -117,9 +117,9 @@ When asked to create a solution brief, follow these steps:
 
 <!-- 3-5 immediate actions. Be specific about who does what. -->
 
-1. [Action] — [Owner], [Timeline]
-2. [Action] — [Owner], [Timeline]
-3. [Action] — [Owner], [Timeline]
+1. [Action] . [Owner], [Timeline]
+2. [Action] . [Owner], [Timeline]
+3. [Action] . [Owner], [Timeline]
 
 ## Example Output
 
@@ -173,23 +173,23 @@ When asked to create a solution brief, follow these steps:
 
     ## Next Steps
 
-    1. Finalize UI mockups and get stakeholder approval — Design Lead, Jan 20
-    2. Scope technical requirements with engineering — PM + Tech Lead, Jan 22
-    3. Begin Apple Pay sandbox integration — iOS Engineer, Jan 25
-    4. Plan A/B test framework and success criteria — PM + Data, Jan 27
-    5. Draft user communication for checkout change — Marketing, Feb 1
+    1. Finalize UI mockups and get stakeholder approval . Design Lead, Jan 20
+    2. Scope technical requirements with engineering . PM + Tech Lead, Jan 22
+    3. Begin Apple Pay sandbox integration . iOS Engineer, Jan 25
+    4. Plan A/B test framework and success criteria . PM + Data, Jan 27
+    5. Draft user communication for checkout change . Marketing, Feb 1
 
 ## Real-World Examples
 
 See this skill applied to three different product contexts:
 
-??? example "Storevine (B2B): Storevine B2B ecommerce platform — Campaigns one-page solution brief for head of product review"
+??? example "Storevine (B2B): Storevine B2B ecommerce platform . Campaigns one-page solution brief for head of product review"
     **Prompt:**
 
     ```
     /solution-brief
 
-    Project: Campaigns — native email marketing for Storevine merchants
+    Project: Campaigns . native email marketing for Storevine merchants
 
     I need a one-page brief for a head of product review before engineering
     kickoff. Full PRD already written and reviewed with engineering lead.
@@ -200,7 +200,7 @@ See this skill applied to three different product contexts:
     - Built-in tools lack segmentation + attribution
     - 22% churn cited email gaps as a top-3 reason [fictional]
 
-    Solution: native email within Storevine admin — no separate tool
+    Solution: native email within Storevine admin . no separate tool
     subscription, no sync required
 
     v1 features to include:
@@ -217,9 +217,9 @@ See this skill applied to three different product contexts:
 
     **Output:**
 
-    # Solution Brief: Campaigns — Native Email Marketing for Storevine Merchants
+    # Solution Brief: Campaigns . Native Email Marketing for Storevine Merchants
 
-??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — Resurface feature solution brief for team alignment"
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app . Resurface feature solution brief for team alignment"
     **Prompt:**
 
     ```
@@ -248,7 +248,7 @@ See this skill applied to three different product contexts:
 
     **Output:**
 
-    # Solution Brief: Resurface — Morning Email Digest
+    # Solution Brief: Resurface . Morning Email Digest
 
 ??? example "Workbench (Enterprise): Workbench enterprise collaboration platform: Blueprints solution brief (one-pager)"
     **Prompt:**

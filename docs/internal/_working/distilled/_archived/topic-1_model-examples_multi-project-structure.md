@@ -1,8 +1,8 @@
-# Topic 1 — Model Examples: Multi-Project Workspace Specifications
+# Topic 1 . Model Examples: Multi-Project Workspace Specifications
 
 > **Date**: 2026-03-21
 > **Author**: Claude Opus 4.6
-> **Status**: Draft — GSD-compatible and open-spec-compatible examples
+> **Status**: Draft . GSD-compatible and open-spec-compatible examples
 > **Companion**: `topic-1_spec_multi-project-structure.md`
 
 ---
@@ -75,7 +75,7 @@ updated: 2026-03-21T14:30:00Z
 3. Stripe remains payment provider (2026-03-15)
 
 ## Blockers
-1. Design review pending — Sarah Chen OOO until 2026-03-25
+1. Design review pending . Sarah Chen OOO until 2026-03-25
 
 ## Current Position
 - Phase: Develop (PRD v1 complete, user stories in progress)
@@ -111,12 +111,12 @@ updated: 2026-03-21
 
 ## Milestones
 
-- [x] Discovery complete — stakeholder alignment achieved (2026-03-01)
-- [x] Problem validated — 4/4 interviews confirm checkout pain (2026-03-08)
-- [x] Hypothesis formed — single-page checkout for returning users (2026-03-10)
-- [ ] PRD approved — engineering review sign-off
-- [ ] Stories groomed — sprint-ready backlog
-- [ ] Launch — v1 shipped to 10% traffic
+- [x] Discovery complete . stakeholder alignment achieved (2026-03-01)
+- [x] Problem validated . 4/4 interviews confirm checkout pain (2026-03-08)
+- [x] Hypothesis formed . single-page checkout for returning users (2026-03-10)
+- [ ] PRD approved . engineering review sign-off
+- [ ] Stories groomed . sprint-ready backlog
+- [ ] Launch . v1 shipped to 10% traffic
 ```
 
 ---
@@ -271,8 +271,8 @@ After any action, suggest relevant follow-up:
 
 \`\`\`markdown
 ---
-name: [Project Name — human-readable]
-slug: [project-name — kebab-case, matches directory]
+name: [Project Name . human-readable]
+slug: [project-name . kebab-case, matches directory]
 phase: [discover | define | develop | deliver | measure | iterate]
 created: [YYYY-MM-DD]
 updated: [YYYY-MM-DD]
@@ -408,9 +408,9 @@ artifacts/
 ├── deliver/
 │   └── user-stories.md              (2026-03-21, in progress)
 ├── measure/
-│   └── (empty — not yet started)
+│   └── (empty . not yet started)
 └── iterate/
-    └── (empty — post-launch)
+    └── (empty . post-launch)
 ```
 
 ---
@@ -448,7 +448,7 @@ Stale Alerts:
 ### Scenario: PM Managing Three Projects
 
 ```
-Session 1 — Monday Morning
+Session 1 . Monday Morning
 
 PM: /project list
 
@@ -466,7 +466,7 @@ Last active: 5 days ago
 
 PM: /project context
 
-# Beta Mobile App — Project Context
+# Beta Mobile App . Project Context
 
 ## Objective
 Build a companion mobile app for existing desktop users to enable
@@ -533,12 +533,12 @@ Manage your PM project workspace.
 
 ## Usage
 
-- `/project new <name>` — Create a new project with guided setup
-- `/project switch <name>` — Switch active project context
-- `/project list` — Show all projects with status
-- `/project status` — Detailed view of active project
-- `/project context` — Output project context for use with other skills
-- `/project archive <name>` — Archive a completed or cancelled project
+- `/project new <name>` . Create a new project with guided setup
+- `/project switch <name>` . Switch active project context
+- `/project list` . Show all projects with status
+- `/project status` . Detailed view of active project
+- `/project context` . Output project context for use with other skills
+- `/project archive <name>` . Archive a completed or cancelled project
 
 ## Behavior
 
@@ -586,9 +586,9 @@ its structure and creating a version history.
 
 ## Usage
 
-- `/update-doc prd` — Update the PRD with information from conversation
-- `/update-doc problem-statement --with inputs/interview-2026-03-20.md` — Update based on transcript
-- `/update-doc hypothesis --with artifacts/discover/experiment-results.md` — Update based on results
+- `/update-doc prd` . Update the PRD with information from conversation
+- `/update-doc problem-statement --with inputs/interview-2026-03-20.md` . Update based on transcript
+- `/update-doc hypothesis --with artifacts/discover/experiment-results.md` . Update based on results
 
 ## Behavior
 
@@ -691,7 +691,7 @@ insights_extracted: 6
 artifacts_affected: 3
 ---
 
-# Insight Report: User Interview #4 — Returning Customer (Maria, 34)
+# Insight Report: User Interview #4 . Returning Customer (Maria, 34)
 
 ## Summary
 Maria is a frequent shopper (2-3x/month) who primarily uses mobile. She
@@ -710,7 +710,7 @@ and payment info every time despite being logged in.
 ### Insight 2: Trust Barrier with Saved Payment
 > "I saved my card once but I wasn't sure it was actually saved. The page
 > looked the same as for new customers."
-- **Relevance**: New finding — UX signal for saved state is unclear
+- **Relevance**: New finding . UX signal for saved state is unclear
 - **Affects**: develop/prd_v1.md (Section: Requirements)
 - **Suggested update**: Add requirement "Clear visual indicator for saved payment methods"
 

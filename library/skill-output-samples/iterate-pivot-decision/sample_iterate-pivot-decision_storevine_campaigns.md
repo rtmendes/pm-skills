@@ -7,18 +7,18 @@ skill_version: "2.0.0"
 created: 2026-02-20
 status: sample
 thread: storevine
-context: Storevine B2B ecommerce platform — Campaigns v2.0 persevere decision after guided flow validation
+context: Storevine B2B ecommerce platform . Campaigns v2.0 persevere decision after guided flow validation
 ---
 
 ## Scenario
 
-Three weeks after the Campaigns A/B test concluded and the guided first-campaign flow shipped as default, Storevine's head of product and growth PM held a formal persevere/pivot evaluation for Campaigns v2.0. Post-GA usage data had revealed that Klaviyo-migrated merchants were sending campaigns at only 23% of accounts per month [fictional] against a predicted ~60% rate based on their Klaviyo send history [fictional] — a finding that raised the question of whether v2.0 resources should redirect toward serving the migrated segment's needs rather than continuing to optimize non-adopter activation. The team evaluated three options and decided to persevere on non-adopter activation, with a committed parallel track to investigate migrated merchant barriers.
+Three weeks after the Campaigns A/B test concluded and the guided first-campaign flow shipped as default, Storevine's head of product and growth PM held a formal persevere/pivot evaluation for Campaigns v2.0. Post-GA usage data had revealed that Klaviyo-migrated merchants were sending campaigns at only 23% of accounts per month [fictional] against a predicted ~60% rate based on their Klaviyo send history [fictional] . a finding that raised the question of whether v2.0 resources should redirect toward serving the migrated segment's needs rather than continuing to optimize non-adopter activation. The team evaluated three options and decided to persevere on non-adopter activation, with a committed parallel track to investigate migrated merchant barriers.
 
 **Source Notes:**
 
-- Ben Yoskovitz and Alistair Croll, "Lean Analytics" (leananalyticsbook.com) — the persevere/pivot evaluation framework applied in this document; establishes that a pivot is warranted when validated data shows the core hypothesis is wrong or the market opportunity is smaller than assumed, not merely when a secondary segment underperforms relative to prediction.
-- Eric Ries, "The Lean Startup" (theleanstartup.com) — the taxonomy of pivot types (Customer Segment Pivot, Customer Need Pivot, Platform Pivot, and others) used to classify the options considered in this evaluation; provides the conceptual basis for distinguishing a pivot from an optimization within the current direction.
-- Recurly Research (recurly.com/resources/research) — B2B SaaS churn benchmarks that document median SMB annual churn at 10–15%; affirms the urgency of the churn OKR (22% → 14% [fictional]) that makes persevering on the validated non-adopter activation track the lower-risk strategic choice for the remainder of 2026.
+- Ben Yoskovitz and Alistair Croll, "Lean Analytics" (leananalyticsbook.com) . the persevere/pivot evaluation framework applied in this document; establishes that a pivot is warranted when validated data shows the core hypothesis is wrong or the market opportunity is smaller than assumed, not merely when a secondary segment underperforms relative to prediction.
+- Eric Ries, "The Lean Startup" (theleanstartup.com) . the taxonomy of pivot types (Customer Segment Pivot, Customer Need Pivot, Platform Pivot, and others) used to classify the options considered in this evaluation; provides the conceptual basis for distinguishing a pivot from an optimization within the current direction.
+- Recurly Research (recurly.com/resources/research) . B2B SaaS churn benchmarks that document median SMB annual churn at 10–15%; affirms the urgency of the churn OKR (22% → 14% [fictional]) that makes persevering on the validated non-adopter activation track the lower-risk strategic choice for the remainder of 2026.
 
 ---
 
@@ -27,12 +27,12 @@ Three weeks after the Campaigns A/B test concluded and the guided first-campaign
 ```
 /pivot-decision
 
-Product: Campaigns — post-GA persevere/pivot evaluation
+Product: Campaigns . post-GA persevere/pivot evaluation
 Evaluation date: July 22, 2026 (12 weeks post-GA)
 
 Situation: Campaigns GA succeeded. Guided flow A/B test: 31.7% vs.
 13.4% first-send rate [fictional], shipped as default July 10.
-BUT: Klaviyo-migrated merchants sending at 23% [fictional] monthly —
+BUT: Klaviyo-migrated merchants sending at 23% [fictional] monthly .
 far below the ~60% [fictional] predicted from their Klaviyo history.
 Three migrated merchants submitted tickets citing missing advanced
 segmentation and scheduling. Migrator churn tracking at 18% [fictional].
@@ -41,10 +41,10 @@ Question: Should Campaigns v2.0 resources pivot to serve Klaviyo-
 migrated merchants, or persevere on non-adopter activation?
 
 Options I need evaluated:
-1. Persevere — continue non-adopter activation (77% of segment
+1. Persevere . continue non-adopter activation (77% of segment
    unconverted [fictional])
-2. Customer Segment Pivot — redirect to Klaviyo-migrated merchants
-3. Platform Pivot — open Campaigns as an API for third-party email
+2. Customer Segment Pivot . redirect to Klaviyo-migrated merchants
+3. Platform Pivot . open Campaigns as an API for third-party email
    tool integration
 
 Need: full pivot decision document with analysis and rationale.
@@ -62,7 +62,7 @@ Need: full pivot decision document with analysis and rationale.
 |-----------|-------|
 | **Decision Date** | July 22, 2026 |
 | **Decision Maker(s)** | Head of Product, Growth PM |
-| **Product/Initiative** | Campaigns — v2.0 roadmap direction |
+| **Product/Initiative** | Campaigns . v2.0 roadmap direction |
 | **Time in Market** | 12 weeks since GA (April 28, 2026) |
 | **Investment to Date** | 8 months × 4 Platform Squad engineers + 1 design + 1 growth PM [fictional] |
 
@@ -70,9 +70,9 @@ Need: full pivot decision document with analysis and rationale.
 
 ## Executive Summary
 
-**Decision:** Persevere — continue non-adopter activation as the primary Campaigns v2.0 focus.
+**Decision:** Persevere . continue non-adopter activation as the primary Campaigns v2.0 focus.
 
-With 77% [fictional] of the addressable non-adopter segment yet to send a first campaign and the annual churn OKR (22% → 14% [fictional]) requiring continued activation momentum, redirecting resources to the Klaviyo-migrated segment would interrupt a validated strategy before it has reached sufficient scale to affect the churn rate. The Klaviyo-migrated merchant underperformance is real and warrants investigation, but it is structurally a different product problem that requires different capabilities — an investigation track will run in parallel without disrupting the primary roadmap.
+With 77% [fictional] of the addressable non-adopter segment yet to send a first campaign and the annual churn OKR (22% → 14% [fictional]) requiring continued activation momentum, redirecting resources to the Klaviyo-migrated segment would interrupt a validated strategy before it has reached sufficient scale to affect the churn rate. The Klaviyo-migrated merchant underperformance is real and warrants investigation, but it is structurally a different product problem that requires different capabilities . an investigation track will run in parallel without disrupting the primary roadmap.
 
 ---
 
@@ -80,7 +80,7 @@ With 77% [fictional] of the addressable non-adopter segment yet to send a first 
 
 ### What We're Doing Now
 
-Campaigns v1.0 is live for all active Storevine merchants. The guided first-campaign flow — pre-populated product templates and defaulted audience segment — is now the default experience for all merchants with no prior sends. The A/B experiment validated the approach and the feature flag was removed on July 10, 2026. The Platform Squad is scoping Campaigns v1.1 stories, including EU merchant access, per-campaign analytics, and the follow-on template depth experiment.
+Campaigns v1.0 is live for all active Storevine merchants. The guided first-campaign flow . pre-populated product templates and defaulted audience segment . is now the default experience for all merchants with no prior sends. The A/B experiment validated the approach and the feature flag was removed on July 10, 2026. The Platform Squad is scoping Campaigns v1.1 stories, including EU merchant access, per-campaign analytics, and the follow-on template depth experiment.
 
 ### Key Metrics
 
@@ -117,20 +117,20 @@ Campaigns v1.0 is live for all active Storevine merchants. The guided first-camp
 
 ### Data That Triggered This Evaluation
 
-1. Klaviyo-migrated merchants sending ≥1 campaign per month: 23% [fictional] vs. ~60% [fictional] predicted from pre-migration Klaviyo send history — a 37-percentage-point gap that appeared within the first 60 days of GA.
-2. Three migrated merchants filed Merchant Success support tickets within 30 days of GA citing the absence of bulk-send scheduling and advanced audience segmentation — features Klaviyo offered that Campaigns v1 does not.
-3. Churn rate for Campaigns-inactive migrated merchants is tracking at 18% [fictional] annually, compared to the platform average of 22% [fictional] and the Campaigns-active cohort at 11.4% [fictional] — suggesting migrated merchants who are not sending are churning at a notably elevated rate relative to what their migration decision implied about their intent to stay.
+1. Klaviyo-migrated merchants sending ≥1 campaign per month: 23% [fictional] vs. ~60% [fictional] predicted from pre-migration Klaviyo send history . a 37-percentage-point gap that appeared within the first 60 days of GA.
+2. Three migrated merchants filed Merchant Success support tickets within 30 days of GA citing the absence of bulk-send scheduling and advanced audience segmentation . features Klaviyo offered that Campaigns v1 does not.
+3. Churn rate for Campaigns-inactive migrated merchants is tracking at 18% [fictional] annually, compared to the platform average of 22% [fictional] and the Campaigns-active cohort at 11.4% [fictional] . suggesting migrated merchants who are not sending are churning at a notably elevated rate relative to what their migration decision implied about their intent to stay.
 
 ### Customer/User Feedback
 
 **What Users Are Saying:**
-- "We moved our list over but we can't set up the automations we had in Klaviyo. It's not the same thing." — Klaviyo-migrated merchant, support ticket [fictional]
-- "For our non-adopter merchants, this is game-changing. Simplest email tool I've ever recommended." — Merchant Success team member, internal Slack [fictional]
-- "I wanted to send a campaign to everyone who bought in the last 60 days — I could only find the last 90 days preset. Close, but not right." — Klaviyo-migrated merchant, support ticket [fictional]
+- "We moved our list over but we can't set up the automations we had in Klaviyo. It's not the same thing." . Klaviyo-migrated merchant, support ticket [fictional]
+- "For our non-adopter merchants, this is game-changing. Simplest email tool I've ever recommended." . Merchant Success team member, internal Slack [fictional]
+- "I wanted to send a campaign to everyone who bought in the last 60 days . I could only find the last 90 days preset. Close, but not right." . Klaviyo-migrated merchant, support ticket [fictional]
 
 **User Behavior Patterns:**
-- Non-adopter merchants who completed the guided flow are returning for second campaigns at 22.8% [fictional] at 90 days — a signal of earned habit formation
-- Klaviyo-migrated merchants are opening Campaigns in the admin but not completing sends — high exploration, low conversion to sends
+- Non-adopter merchants who completed the guided flow are returning for second campaigns at 22.8% [fictional] at 90 days . a signal of earned habit formation
+- Klaviyo-migrated merchants are opening Campaigns in the admin but not completing sends . high exploration, low conversion to sends
 
 ### Market Signals
 
@@ -140,7 +140,7 @@ Campaigns v1.0 is live for all active Storevine merchants. The guided first-camp
 ### Internal Learnings
 
 - The mechanism that works for non-adopters (content pre-population, simplicity, guided completion) is structurally different from what migrated merchants need (control, automation, advanced segmentation, scheduling)
-- Building both well from the same feature surface would require a UI architecture decision — potentially a power-user mode — that does not exist in Campaigns v1 and would require significant design investment before any engineering work
+- Building both well from the same feature surface would require a UI architecture decision . potentially a power-user mode . that does not exist in Campaigns v1 and would require significant design investment before any engineering work
 
 ---
 
@@ -166,7 +166,7 @@ Campaigns v1.0 is live for all active Storevine merchants. The guided first-camp
 
 ### Option 1: Persevere (Stay the Course)
 
-**Description:** Continue Campaigns v2.0 with non-adopter activation as the primary focus — refine the guided flow (template depth experiment, category-specific content), add EU merchant access, and build per-campaign analytics. Address migrated merchant barriers through a parallel lightweight investigation track, not a resource redirect.
+**Description:** Continue Campaigns v2.0 with non-adopter activation as the primary focus . refine the guided flow (template depth experiment, category-specific content), add EU merchant access, and build per-campaign analytics. Address migrated merchant barriers through a parallel lightweight investigation track, not a resource redirect.
 
 **What Changes:** Campaigns v1.1 scope proceeds as scoped; a qualitative research track (5 migrated merchant interviews) runs in parallel to understand barriers before any product investment is committed.
 
@@ -182,7 +182,7 @@ Campaigns v1.0 is live for all active Storevine merchants. The guided first-camp
 
 ---
 
-### Option 2: Customer Segment Pivot — Shift to Klaviyo-Migrated Merchants
+### Option 2: Customer Segment Pivot . Shift to Klaviyo-Migrated Merchants
 
 **Description:** Redirect Campaigns v2.0 engineering resources toward the feature set that migrated merchants need: advanced segmentation (custom date-range filters, multi-condition audience builder), bulk-send scheduling, and campaign automation sequences. Pause further optimization of the non-adopter guided flow after shipping the current v1.1 scope.
 
@@ -204,7 +204,7 @@ Campaigns v1.0 is live for all active Storevine merchants. The guided first-camp
 
 ---
 
-### Option 3: Platform Pivot — Open Campaigns as an API
+### Option 3: Platform Pivot . Open Campaigns as an API
 
 **Description:** Build a Campaigns API so that Klaviyo and Mailchimp users can access Storevine's purchase-data-powered audience segmentation and revenue attribution without migrating away from their existing email tool. Monetize the attribution and segmentation layer as a standalone feature rather than requiring merchants to use Campaigns as their primary send tool.
 
@@ -242,11 +242,11 @@ Campaigns v1.0 is live for all active Storevine merchants. The guided first-camp
 
 | Criterion | Persevere | Customer Segment Pivot | Platform Pivot |
 |-----------|-----------|----------------------|----------------|
-| Market Opportunity | High — 77% of non-adopter segment unconverted [fictional] | Medium — migrators are 28% of accounts [fictional] but have high churn risk | Low — API market unvalidated; partner agreements uncertain |
-| Competitive Advantage | High — guided flow + content seeding is proven and proprietary | Medium — advanced segmentation is table stakes for Klaviyo; unclear differentiation | Low — API-layer competition with established integrations (Klaviyo Flows API) |
-| Team Capability | High — current team has just completed this work and has deep context | Medium — advanced segmentation UI is a meaningful design and engineering skill expansion | Low — API platform requires backend expertise and partner management not currently on team |
-| Resource Requirements | Low — no new resources; parallel research track is within existing capacity | Medium — Platform Squad redeployment plus design capacity | High — additional engineers, legal, partner agreements, 12+ months |
-| Risk Level | Low — validated strategy with clear OKR line; migrator investigation runs in parallel | High — interrupts validated strategy before OKR-scale impact | Very High — unvalidated market, uncertain partner dynamics, long timeline |
+| Market Opportunity | High . 77% of non-adopter segment unconverted [fictional] | Medium . migrators are 28% of accounts [fictional] but have high churn risk | Low . API market unvalidated; partner agreements uncertain |
+| Competitive Advantage | High . guided flow + content seeding is proven and proprietary | Medium . advanced segmentation is table stakes for Klaviyo; unclear differentiation | Low . API-layer competition with established integrations (Klaviyo Flows API) |
+| Team Capability | High . current team has just completed this work and has deep context | Medium . advanced segmentation UI is a meaningful design and engineering skill expansion | Low . API platform requires backend expertise and partner management not currently on team |
+| Resource Requirements | Low . no new resources; parallel research track is within existing capacity | Medium . Platform Squad redeployment plus design capacity | High . additional engineers, legal, partner agreements, 12+ months |
+| Risk Level | Low . validated strategy with clear OKR line; migrator investigation runs in parallel | High . interrupts validated strategy before OKR-scale impact | Very High . unvalidated market, uncertain partner dynamics, long timeline |
 | **Overall** | **Strong** | **Moderate** | **Weak** |
 
 ---
@@ -260,7 +260,7 @@ Campaigns v2.0 will continue its primary focus on non-adopter merchant activatio
 
 ### Rationale
 
-The non-adopter activation strategy is validated, delivering on its primary metric (31.7% [fictional] first-send rate vs. 30% target), and directly addressing the primary OKR (churn reduction). With 77% [fictional] of eligible non-adopters still unconverted, the segment has significant remaining scale. The Klaviyo-migrated merchant problem is real and growing, but it is structurally a different product problem requiring different capabilities — advanced segmentation, scheduling, automation — that cannot be built without a significant design and engineering investment that would disrupt the current validated roadmap. The right response to the migrator finding is to investigate barriers through qualitative research before committing product investment, not to redirect the team from a working strategy before it achieves OKR-scale impact.
+The non-adopter activation strategy is validated, delivering on its primary metric (31.7% [fictional] first-send rate vs. 30% target), and directly addressing the primary OKR (churn reduction). With 77% [fictional] of eligible non-adopters still unconverted, the segment has significant remaining scale. The Klaviyo-migrated merchant problem is real and growing, but it is structurally a different product problem requiring different capabilities . advanced segmentation, scheduling, automation . that cannot be built without a significant design and engineering investment that would disrupt the current validated roadmap. The right response to the migrator finding is to investigate barriers through qualitative research before committing product investment, not to redirect the team from a working strategy before it achieves OKR-scale impact.
 
 ### Trade-offs Accepted
 
@@ -271,7 +271,7 @@ The non-adopter activation strategy is validated, delivering on its primary metr
 
 ### Dissenting Views
 
-Engineering Lead raised that the Klaviyo-migrated merchant churn risk compounds over time — if migrators are churning at 18% [fictional] now, the compounding effect over four quarters will materially offset the non-adopter activation gains and potentially stall the churn OKR. He proposed adding 0.5 FTE to begin migrator-specific research this quarter and setting a decision gate at the Q3 review: if migrator churn has not improved, the v2.0 roadmap gets a partial redirect. Head of Product accepted the concern and committed to tracking migrated merchant churn as a named metric on the Campaigns adoption dashboard, with a formal review at the September 2026 quarterly planning session [fictional].
+Engineering Lead raised that the Klaviyo-migrated merchant churn risk compounds over time . if migrators are churning at 18% [fictional] now, the compounding effect over four quarters will materially offset the non-adopter activation gains and potentially stall the churn OKR. He proposed adding 0.5 FTE to begin migrator-specific research this quarter and setting a decision gate at the Q3 review: if migrator churn has not improved, the v2.0 roadmap gets a partial redirect. Head of Product accepted the concern and committed to tracking migrated merchant churn as a named metric on the Campaigns adoption dashboard, with a formal review at the September 2026 quarterly planning session [fictional].
 
 ---
 
@@ -290,8 +290,8 @@ Engineering Lead raised that the Klaviyo-migrated merchant churn risk compounds 
 
 | Resource | Current | Needed | Gap |
 |----------|---------|--------|-----|
-| Budget | ~$60K/month [fictional] | ~$60K/month [fictional] | None — no new budget required |
-| Headcount | 4 engineers + 1 design + 1 PM | Same | None — no new headcount |
+| Budget | ~$60K/month [fictional] | ~$60K/month [fictional] | None . no new budget required |
+| Headcount | 4 engineers + 1 design + 1 PM | Same | None . no new headcount |
 | Technology | Amplitude + Storevine order DB | Same | Migrator churn cohort added to existing tracking |
 
 ### Success Criteria
@@ -338,7 +338,7 @@ Engineering Lead raised that the Klaviyo-migrated merchant churn risk compounds 
 
 - Experiment results: Campaigns Guided First-Campaign Flow A/B Test (EXP-001)
 - Campaigns adoption dashboard: first-send rate, churn cohort, migrated merchant send rate
-- Lessons log: LL-2026-001 — Content Quality, Not UX Scaffolding, Is the Non-Adopter Activation Mechanism
+- Lessons log: LL-2026-001 . Content Quality, Not UX Scaffolding, Is the Non-Adopter Activation Mechanism
 
 ### Pivot Type Reference
 

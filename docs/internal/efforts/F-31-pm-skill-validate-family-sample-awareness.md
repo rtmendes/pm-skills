@@ -9,8 +9,8 @@ Agent: Claude Opus 4.7
 
 Update `utility-pm-skill-validate` (currently v1.0.0) to add two new dimensions of awareness:
 
-1. **Family-awareness** — when a skill belongs to a skill family (detected via `metadata.frameworks` frontmatter marker), run the family's validator script as part of the audit and report family-contract conformance alongside per-skill checks
-2. **Sample-awareness** — verify that each skill has the expected number of samples in `library/skill-output-samples/` conforming to SAMPLE_CREATION.md, and detect drift when a skill's TEMPLATE.md changes but its samples do not
+1. **Family-awareness**. when a skill belongs to a skill family (detected via `metadata.frameworks` frontmatter marker), run the family's validator script as part of the audit and report family-contract conformance alongside per-skill checks
+2. **Sample-awareness**. verify that each skill has the expected number of samples in `library/skill-output-samples/` conforming to SAMPLE_CREATION.md, and detect drift when a skill's TEMPLATE.md changes but its samples do not
 
 Bumps pm-skill-validate to v1.1.0 with HISTORY.md creation (first post-v1.0.0 bump).
 
@@ -59,17 +59,17 @@ Extend the existing validation report with:
 
 ## Exemplars
 
-- Current `utility-pm-skill-validate` v1.0.0 — Tier 1 / Tier 2 pattern to extend
-- `scripts/validate-meeting-skills-family.sh` — pattern for family-validator integration
-- `library/skill-output-samples/SAMPLE_CREATION.md` — the standards the validator enforces
+- Current `utility-pm-skill-validate` v1.0.0. Tier 1 / Tier 2 pattern to extend
+- `scripts/validate-meeting-skills-family.sh`. pattern for family-validator integration
+- `library/skill-output-samples/SAMPLE_CREATION.md`. the standards the validator enforces
 
 ## Deliverables
 
-- `skills/utility-pm-skill-validate/SKILL.md` — updated with family and sample checks
-- `skills/utility-pm-skill-validate/references/TEMPLATE.md` — updated report template
-- `skills/utility-pm-skill-validate/references/EXAMPLE.md` — updated worked example showing family-aware and sample-aware output
-- `skills/utility-pm-skill-validate/HISTORY.md` — NEW, first HISTORY.md for this skill documenting v1.0.0 → v1.1.0 bump
-- `docs/skills/utility/utility-pm-skill-validate.md` — public doc refresh
+- `skills/utility-pm-skill-validate/SKILL.md`. updated with family and sample checks
+- `skills/utility-pm-skill-validate/references/TEMPLATE.md`. updated report template
+- `skills/utility-pm-skill-validate/references/EXAMPLE.md`. updated worked example showing family-aware and sample-aware output
+- `skills/utility-pm-skill-validate/HISTORY.md`. NEW, first HISTORY.md for this skill documenting v1.0.0 → v1.1.0 bump
+- `docs/skills/utility/utility-pm-skill-validate.md`. public doc refresh
 - Updated skills-manifest entry for v2.12.0 release
 
 ## Validation
@@ -82,14 +82,14 @@ Extend the existing validation report with:
 
 - How does the validator discover the family validator script? Convention-based path (`scripts/validate-{family-marker}.sh`) or explicit frontmatter pointer?
 - Should sample drift be ERROR or WARNING? Proposal: WARNING by default (skills evolve faster than samples), ERROR if samples are more than 2 versions behind.
-- Expected sample count — is 3 (per SAMPLE_CREATION.md thread convention) the universal default, or does it vary by classification (utility: 1 storevine sample only; foundation: 3 threads; phase: 3 threads)?
+- Expected sample count. is 3 (per SAMPLE_CREATION.md thread convention) the universal default, or does it vary by classification (utility: 1 storevine sample only; foundation: 3 threads; phase: 3 threads)?
 
 ## Status Transitions
 
 - **Backlog** (current)
-- **In Progress** — when pm-skill-validate refactor begins
-- **Shipped** — on v2.12.0 tag + push
+- **In Progress**. when pm-skill-validate refactor begins
+- **Shipped**. on v2.12.0 tag + push
 
 ## Detailed specification
 
-Deferred — produced during refactor pass.
+Deferred. produced during refactor pass.

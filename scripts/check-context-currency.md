@@ -33,7 +33,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\check-context-currency.ps1
 
 ## When to Use
 
-- In CI on push/PR (advisory — context files may lag intentionally)
+- In CI on push/PR (advisory . context files may lag intentionally)
 - After tagging a release (verify agent context was updated)
 - When updating agent documentation
 

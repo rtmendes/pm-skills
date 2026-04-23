@@ -16,7 +16,7 @@ tags:
 
 # Design Rationale
 
-A design rationale document captures the "why" behind design decisions—the context, constraints, alternatives considered, and reasoning that led to a particular solution. While designs themselves show what was built, rationale documents preserve institutional knowledge about why it was built that way.
+A design rationale document captures the "why" behind design decisions.the context, constraints, alternatives considered, and reasoning that led to a particular solution. While designs themselves show what was built, rationale documents preserve institutional knowledge about why it was built that way.
 
 ## When to Use
 
@@ -48,13 +48,13 @@ When asked to document design rationale, follow these steps:
    Explain the situation that prompted this decision. What problem were you solving? What constraints existed? What user needs informed the direction? Include relevant research findings.
 
 3. **List Options Considered**
-   Document at least 2-3 alternatives that were evaluated. For each option, describe what it would look like and its key characteristics. Be fair to all options—avoid strawmen.
+   Document at least 2-3 alternatives that were evaluated. For each option, describe what it would look like and its key characteristics. Be fair to all options.avoid strawmen.
 
 4. **Define Evaluation Criteria**
    Specify how options were assessed: usability heuristics, technical feasibility, brand alignment, user research findings, business requirements, or design principles.
 
 5. **Explain the Reasoning**
-   Walk through why the chosen option best meets the criteria. Be explicit about trade-offs—what you gained and what you sacrificed. Acknowledge where the decision is reversible vs. irreversible.
+   Walk through why the chosen option best meets the criteria. Be explicit about trade-offs.what you gained and what you sacrificed. Acknowledge where the decision is reversible vs. irreversible.
 
 6. **Document Trade-offs Accepted**
    Every design decision involves trade-offs. Name what you gave up and why it was acceptable. This honesty helps future teams understand constraints.
@@ -324,7 +324,7 @@ When asked to document design rationale, follow these steps:
     **Description:** Keep the hamburger menu but reorganize features into clear categories with icons. Add a "Favorites" section users can customize.
 
     **Pros:**
-    - Minimal development effort—iterates on existing pattern
+    - Minimal development effort.iterates on existing pattern
     - Preserves screen real estate for content
     - Familiar pattern for existing users
     - Scales to unlimited features
@@ -342,7 +342,7 @@ When asked to document design rationale, follow these steps:
     **Description:** A prominent FAB in the bottom-right that expands to show 6 primary actions in a radial/fan pattern. Secondary features remain in a hamburger menu.
 
     **Pros:**
-    - Highly discoverable—the FAB draws attention
+    - Highly discoverable.the FAB draws attention
     - Quick access to primary actions (single tap to reveal)
     - Visually distinctive and modern
     - Works well for task-oriented apps
@@ -360,9 +360,9 @@ When asked to document design rationale, follow these steps:
     **Description:** A persistent 5-item bottom tab bar showing the most-used features. The 5th tab is "More" which opens a organized list of all other features.
 
     **Pros:**
-    - Most accessible pattern—large tap targets, always visible
+    - Most accessible pattern.large tap targets, always visible
     - Industry standard across both iOS and Android
-    - Highly discoverable—users instantly see what app does
+    - Highly discoverable.users instantly see what app does
     - Research shows 5 items is optimal for quick scanning
     - "More" menu can be organized and searchable
 
@@ -411,7 +411,7 @@ When asked to document design rationale, follow these steps:
 
     ### Why Option C?
 
-    The bottom tab bar provides the best balance of discoverability, accessibility, and task efficiency—our three highest-weighted criteria. While it sacrifices some screen real estate and limits direct access to 4 features, user research strongly validates that our users primarily need quick access to a small set of features.
+    The bottom tab bar provides the best balance of discoverability, accessibility, and task efficiency.our three highest-weighted criteria. While it sacrifices some screen real estate and limits direct access to 4 features, user research strongly validates that our users primarily need quick access to a small set of features.
 
     The hamburger menu (Option A) fails to solve our core problem: users still have to remember where features are. The FAB approach (Option B) has significant accessibility concerns and would require iOS users to learn an Android-centric pattern.
 
@@ -452,7 +452,7 @@ When asked to document design rationale, follow these steps:
 
     **Is this decision reversible?** Yes, with effort
 
-    **Cost to reverse:** Significant—requires navigation rewrite and user re-education. Estimate 4-6 weeks engineering work plus user communication.
+    **Cost to reverse:** Significant.requires navigation rewrite and user re-education. Estimate 4-6 weeks engineering work plus user communication.
 
     **Conditions that would warrant reverting:**
     - Task completion rates don't improve after 3 months
@@ -509,15 +509,15 @@ When asked to document design rationale, follow these steps:
 
 See this skill applied to three different product contexts:
 
-??? example "Storevine (B2B): Storevine B2B ecommerce platform — Campaigns audience selection UX design decision"
+??? example "Storevine (B2B): Storevine B2B ecommerce platform . Campaigns audience selection UX design decision"
     **Prompt:**
 
     ```
     /design-rationale
 
-    Project: Campaigns — native email marketing for Storevine merchants
+    Project: Campaigns . native email marketing for Storevine merchants
     Decision: Audience selection UX for the campaign creation flow
-    Stage: Pre-sprint design review — finalizing Figma specs before engineering
+    Stage: Pre-sprint design review . finalizing Figma specs before engineering
 
     Decision I need to document:
     - We debated 3 audience selection approaches before the design review:
@@ -529,7 +529,7 @@ See this skill applied to three different product contexts:
     Context:
     - Primary target segment: non-adopter merchants (no current email tool)
     - Interview data: 3 of 8 merchants cited setup complexity as the barrier
-    - Figma link: [internal — Campaigns audience selection v3 spec]
+    - Figma link: [internal . Campaigns audience selection v3 spec]
 
     Need: full design rationale document for the engineering handoff package.
     Decision makers: Design Lead, Growth PM, Engineering Lead.
@@ -541,7 +541,7 @@ See this skill applied to three different product contexts:
 
     # Design Rationale: Campaigns Audience Selection UX
 
-??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — digest email layout design decision for the Resurface feature"
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app . digest email layout design decision for the Resurface feature"
     **Prompt:**
 
     ```
@@ -549,15 +549,15 @@ See this skill applied to three different product contexts:
 
     digest email layout for resurface. dan showed three options:
 
-    option A: rich cards — article thumbnail, title, excerpt, topic tag
+    option A: rich cards . article thumbnail, title, excerpt, topic tag
     for each item. looks great in figma but heavy on images and might
     trigger promotions tab.
 
-    option B: structured text — article title (linked), source domain,
+    option B: structured text . article title (linked), source domain,
     topic tag, estimated read time. no images. clean, editorial feel.
     fast to scan.
 
-    option C: minimal plain text — just titles and links, no styling.
+    option C: minimal plain text . just titles and links, no styling.
     maximum deliverability but looks like a system notification, not a
     product experience.
 

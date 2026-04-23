@@ -35,12 +35,12 @@ The repo-level CI workflow `.github/workflows/validation.yml` runs these checks 
 
 | Check | Coverage for utility skills |
 |-------|----------------------------|
-| `lint-skills-frontmatter` | Yes — frontmatter structure validated |
-| `validate-commands` | Yes — slash commands point to valid skill paths |
-| `validate-agents-md` | Yes — all skills registered in AGENTS.md |
-| `check-count-consistency` | Yes — but advisory only |
-| `validate-skills-manifest` | Yes — release-specific manifest checks |
-| `validate-skill-history` | Yes — but only validates HISTORY.md when present |
+| `lint-skills-frontmatter` | Yes. frontmatter structure validated |
+| `validate-commands` | Yes. slash commands point to valid skill paths |
+| `validate-agents-md` | Yes. all skills registered in AGENTS.md |
+| `check-count-consistency` | Yes. but advisory only |
+| `validate-skills-manifest` | Yes. release-specific manifest checks |
+| `validate-skill-history` | Yes. but only validates HISTORY.md when present |
 
 **Gap**: the utility-pm-skill-builder skill embeds knowledge of the repo structure (skill counts, classification rules, category examples) in its SKILL.md and EXAMPLE.md. When new skills ship, that embedded knowledge goes stale silently. The CI catches frontmatter drift but not content drift.
 
@@ -66,7 +66,7 @@ The repo-level CI workflow `.github/workflows/validation.yml` runs these checks 
 
 ## Q4: Should new scripts/ or CI documentation be created?
 
-**Yes — 3 candidates, in priority order**:
+**Yes. 3 candidates, in priority order**:
 
 ### Priority 1: `scripts/check-utility-skill-currency.sh` + `.ps1` + `.md`
 
@@ -104,8 +104,8 @@ Validates that family contract version matches what the family's validator expec
 | Question | Answer | Follow-up? |
 |----------|--------|-----------|
 | Update pm-skill-validate for family-awareness? | Yes | F-31 effort, medium priority, non-blocking |
-| CI coverage for utility-skill compliance? | Partial — universal checks apply; content drift is not caught | P1 script `check-utility-skill-currency` |
+| CI coverage for utility-skill compliance? | Partial. universal checks apply; content drift is not caught | P1 script `check-utility-skill-currency` |
 | Change logs for utility skills? | None exist; all at v1.0.0 (policy-conformant) | Minor skill-versioning policy addition for content-refresh PATCH bumps |
-| New scripts needed? | Yes — 3 P1/P2 scripts recommended; 1 P3 deferred | Track as separate efforts |
+| New scripts needed? | Yes. 3 P1/P2 scripts recommended; 1 P3 deferred | Track as separate efforts |
 
 **Nothing blocks v2.11.0 release.** All recommendations are follow-up work for v2.12.0+ or post-release hardening. The meeting-skills-family already has its own validator; the broader gaps are repo-wide concerns, not family-specific ones.

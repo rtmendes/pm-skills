@@ -25,7 +25,7 @@ context: SaaS company implementing comprehensive data privacy program to achieve
            Committee      |     - CISO (Marcus)
          - External       |     - VP Engineering (Priya)
            Auditors       |     - VP Product (Alex)
-                          |     - DPO (Lena — also PM)
+                          |     - DPO (Lena . also PM)
 [Low Influence] ----------+---------- [High Influence]
                           |
         MONITOR           |    KEEP INFORMED
@@ -39,25 +39,25 @@ context: SaaS company implementing comprehensive data privacy program to achieve
 ### Quadrant Placement
 
 **Manage Closely (High Influence, High Interest):**
-- Diane Okafor, General Counsel — Legal authority, regulatory risk owner, contract implications
-- Marcus Chen, CISO — Security architecture, data protection technical controls
-- Priya Sharma, VP Engineering — Technical implementation across all systems
-- Alex Dubois, VP Product — Product changes affecting customer-facing flows (consent, data export, deletion)
-- Lena Hoffmann, DPO / Director of Product, Privacy — Program owner, regulatory point of contact
+- Diane Okafor, General Counsel . Legal authority, regulatory risk owner, contract implications
+- Marcus Chen, CISO . Security architecture, data protection technical controls
+- Priya Sharma, VP Engineering . Technical implementation across all systems
+- Alex Dubois, VP Product . Product changes affecting customer-facing flows (consent, data export, deletion)
+- Lena Hoffmann, DPO / Director of Product, Privacy . Program owner, regulatory point of contact
 
 **Keep Satisfied (High Influence, Low Interest):**
-- Board Audit Committee — Regulatory risk oversight, quarterly compliance reporting
-- External Auditors (Deloitte) — Annual SOC 2 + GDPR audit, need documentation and evidence
+- Board Audit Committee . Regulatory risk oversight, quarterly compliance reporting
+- External Auditors (Deloitte) . Annual SOC 2 + GDPR audit, need documentation and evidence
 
 **Keep Informed (Low Influence, High Interest):**
-- James Whitfield, VP Sales — Customer data handling questions in deals, DPA negotiations
-- Sarah Kim, VP Marketing — Consent management, cookie compliance, email marketing impact
-- Kenji Tanaka, VP Customer Success — Customer data requests (access, deletion), support workflows
-- Yara Mansour, Data Science Lead — ML model training data, anonymization requirements
+- James Whitfield, VP Sales . Customer data handling questions in deals, DPA negotiations
+- Sarah Kim, VP Marketing . Consent management, cookie compliance, email marketing impact
+- Kenji Tanaka, VP Customer Success . Customer data requests (access, deletion), support workflows
+- Yara Mansour, Data Science Lead . ML model training data, anonymization requirements
 
 **Monitor (Low Influence, Low Interest):**
-- Office Management — Physical security compliance (minor)
-- Recruiting — Candidate data handling updates (minor scope)
+- Office Management . Physical security compliance (minor)
+- Recruiting . Candidate data handling updates (minor scope)
 
 ## Stakeholder Profiles
 
@@ -76,9 +76,9 @@ context: SaaS company implementing comprehensive data privacy program to achieve
 ### Diane Okafor, General Counsel
 
 **Role:** General Counsel, 8-person legal team including 2 privacy specialists
-**Influence Level:** High — Can mandate compliance requirements, advises CEO and board on regulatory risk
-**Interest Level:** High — Regulatory exposure is a personal professional risk
-**Current Alignment:** Strongly Supportive — initiated the compliance program
+**Influence Level:** High . Can mandate compliance requirements, advises CEO and board on regulatory risk
+**Interest Level:** High . Regulatory exposure is a personal professional risk
+**Current Alignment:** Strongly Supportive . initiated the compliance program
 
 **Needs:**
 - Defensible compliance posture that withstands regulatory scrutiny
@@ -107,8 +107,8 @@ context: SaaS company implementing comprehensive data privacy program to achieve
 ### Marcus Chen, CISO
 
 **Role:** Chief Information Security Officer, owns security architecture and incident response
-**Influence Level:** High — Controls security tooling, encryption standards, access controls
-**Interest Level:** High — Privacy and security are deeply intertwined; gaps in either are his problem
+**Influence Level:** High . Controls security tooling, encryption standards, access controls
+**Interest Level:** High . Privacy and security are deeply intertwined; gaps in either are his problem
 **Current Alignment:** Supportive
 
 **Needs:**
@@ -138,18 +138,18 @@ context: SaaS company implementing comprehensive data privacy program to achieve
 ### Priya Sharma, VP Engineering
 
 **Role:** VP Engineering, 85 engineers across platform, product, and infrastructure teams
-**Influence Level:** High — All technical implementation flows through her teams
-**Interest Level:** High — Significant engineering investment required across every system
+**Influence Level:** High . All technical implementation flows through her teams
+**Interest Level:** High . Significant engineering investment required across every system
 **Current Alignment:** Cautious
 
 **Needs:**
-- Specific, prioritized technical requirements — not vague "be compliant" mandates
+- Specific, prioritized technical requirements . not vague "be compliant" mandates
 - Privacy middleware/library that handles common patterns (consent checking, data redaction, audit logging) so individual teams don't reinvent solutions
 - Phased migration plan that doesn't require stopping feature development
 - Automated compliance testing in CI/CD pipeline to prevent regressions
 
 **Concerns:**
-- Scope creep — privacy requirements expanding as legal discovers new obligations
+- Scope creep . privacy requirements expanding as legal discovers new obligations
 - Every system needing modification simultaneously with limited platform team capacity
 - Data deletion requirements conflicting with data integrity constraints (foreign keys, audit trails)
 - Performance impact of encryption, consent checks, and audit logging on critical paths
@@ -157,7 +157,7 @@ context: SaaS company implementing comprehensive data privacy program to achieve
 **What Motivates Them:**
 - Clean technical architecture and engineering productivity
 - Building infrastructure that solves problems once, not repeatedly per-team
-- Team morale — engineers want to build features, not compliance plumbing
+- Team morale . engineers want to build features, not compliance plumbing
 
 **Preferred Communication:**
 - Channel: Architecture review meetings, Slack #privacy-engineering channel
@@ -169,8 +169,8 @@ context: SaaS company implementing comprehensive data privacy program to achieve
 ### Alex Dubois, VP Product
 
 **Role:** VP Product, owns product strategy across 3 product lines
-**Influence Level:** High — Controls product roadmap and customer-facing experience
-**Interest Level:** High — Consent flows, data portability, and deletion features all affect UX
+**Influence Level:** High . Controls product roadmap and customer-facing experience
+**Interest Level:** High . Consent flows, data portability, and deletion features all affect UX
 **Current Alignment:** Resistant
 
 **Needs:**
@@ -200,8 +200,8 @@ context: SaaS company implementing comprehensive data privacy program to achieve
 ### Sarah Kim, VP Marketing
 
 **Role:** VP Marketing, owns demand generation, content, and marketing technology stack
-**Influence Level:** Low — Implements marketing-specific compliance but doesn't control broader program
-**Interest Level:** High — Cookie consent, email opt-in, tracking pixels, and ad targeting all directly affected
+**Influence Level:** Low . Implements marketing-specific compliance but doesn't control broader program
+**Interest Level:** High . Cookie consent, email opt-in, tracking pixels, and ad targeting all directly affected
 **Current Alignment:** Concerned
 
 **Needs:**
@@ -239,17 +239,17 @@ context: SaaS company implementing comprehensive data privacy program to achieve
 | Yara (Data Science) | Diane (Legal) + Marcus (CISO) | Approval for data usage in ML training, anonymization standards |
 
 ### Alliances
-- **Compliance core:** Diane and Marcus are natural allies — both see privacy as risk management and have historically collaborated on security certifications. Their joint support provides strong executive backing
+- **Compliance core:** Diane and Marcus are natural allies . both see privacy as risk management and have historically collaborated on security certifications. Their joint support provides strong executive backing
 - **Product resistance:** Alex and Sarah share concerns about business impact. Addressing Alex's UX concerns helps Sarah's marketing worries, as both stem from consent friction. If Alex sees privacy UX that works, Sarah's resistance reduces
 - **Engineering-security partnership:** Priya and Marcus have a strong working relationship from SOC 2 certification. Marcus advocating for privacy engineering investment helps Priya justify the work to her teams
 
 ### Potential Conflicts
 | Parties | Conflict Area | Risk Level |
 |---------|---------------|------------|
-| Alex (Product) vs. Diane (Legal) | Consent flow design — legal wants maximum disclosure, product wants minimal friction | High |
-| Priya (Engineering) vs. Diane (Legal) | Scope and pace — legal discovers new requirements continuously, engineering needs fixed scope | High |
-| Yara (Data Science) vs. Marcus (CISO) | ML training data access — data science needs broad data access, security wants strict controls | Medium |
-| Sarah (Marketing) vs. Diane (Legal) | Marketing tracking and email practices — marketing wants to preserve capabilities, legal sees risk | Medium |
+| Alex (Product) vs. Diane (Legal) | Consent flow design . legal wants maximum disclosure, product wants minimal friction | High |
+| Priya (Engineering) vs. Diane (Legal) | Scope and pace . legal discovers new requirements continuously, engineering needs fixed scope | High |
+| Yara (Data Science) vs. Marcus (CISO) | ML training data access . data science needs broad data access, security wants strict controls | Medium |
+| Sarah (Marketing) vs. Diane (Legal) | Marketing tracking and email practices . marketing wants to preserve capabilities, legal sees risk | Medium |
 
 ## Communication Plan
 
@@ -286,11 +286,11 @@ context: SaaS company implementing comprehensive data privacy program to achieve
 
 - [ ] Schedule consent UX design sprint with Alex's design team and Diane's privacy specialist to co-create flows (Lena, this week)
 - [ ] Complete data inventory across all systems with Marcus's security team (Lena + Tech Lead, by end of month)
-- [ ] Draft phased technical requirements document for Priya's review — Phase 1: consent + data inventory; Phase 2: DSR automation; Phase 3: cross-border data flows (Lena, next two weeks)
+- [ ] Draft phased technical requirements document for Priya's review . Phase 1: consent + data inventory; Phase 2: DSR automation; Phase 3: cross-border data flows (Lena, next two weeks)
 - [ ] Create marketing impact analysis with Sarah showing actual vs. worst-case capability changes (Lena + Sarah, next two weeks)
 - [ ] Prepare board-ready compliance roadmap for Diane to present at next Audit Committee meeting (Lena + Diane, by Feb 15)
 - [ ] Identify 3 enterprise customers at renewal risk due to privacy requirements and create account-specific compliance plans with James (Lena + James, this month)
-- [ ] Establish "Privacy Champions" network — one representative from each product and engineering team for decentralized coordination (Lena, by end of month)
+- [ ] Establish "Privacy Champions" network . one representative from each product and engineering team for decentralized coordination (Lena, by end of month)
 
 ## Document History
 

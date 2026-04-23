@@ -16,7 +16,7 @@ tags:
 
 # Spike Summary
 
-A spike summary documents the results of a time-boxed exploration — a focused investigation to reduce uncertainty before committing to implementation. Spikes answer specific questions like "Can we integrate with this API?" or "Is this technology viable for our use case?" The summary captures findings so the team can make informed decisions without the spike participants needing to repeat explanations.
+A spike summary documents the results of a time-boxed exploration . a focused investigation to reduce uncertainty before committing to implementation. Spikes answer specific questions like "Can we integrate with this API?" or "Is this technology viable for our use case?" The summary captures findings so the team can make informed decisions without the spike participants needing to repeat explanations.
 
 ## When to Use
 
@@ -50,10 +50,10 @@ When asked to document a spike, follow these steps:
    Explain what was tried, in what order, and why. This helps future readers understand the methodology and whether alternative approaches were considered.
 
 4. **Present Findings with Evidence**
-   Document what was learned, supported by concrete evidence — code samples, performance benchmarks, screenshots, or API responses. Distinguish between verified findings and hypotheses that need more testing.
+   Document what was learned, supported by concrete evidence . code samples, performance benchmarks, screenshots, or API responses. Distinguish between verified findings and hypotheses that need more testing.
 
 5. **Make a Clear Recommendation**
-   Answer the original question directly: proceed, do not proceed, or proceed with conditions. Avoid hedging — the team needs actionable guidance.
+   Answer the original question directly: proceed, do not proceed, or proceed with conditions. Avoid hedging . the team needs actionable guidance.
 
 6. **Document Artifacts**
    Link to any code, prototypes, diagrams, or documentation created during the spike. These artifacts often have ongoing value beyond the summary.
@@ -209,7 +209,7 @@ When asked to document a spike, follow these steps:
 
     ### Finding 1: Stripe has significantly better developer experience
 
-    Stripe's documentation is more comprehensive and includes more working examples. The sandbox environment required no setup — we were processing test payments within 15 minutes. Adyen required account manager approval and took 2 days to get sandbox access.
+    Stripe's documentation is more comprehensive and includes more working examples. The sandbox environment required no setup . we were processing test payments within 15 minutes. Adyen required account manager approval and took 2 days to get sandbox access.
 
     **Evidence:**
     - Time to first successful test payment: Stripe (15 min), Adyen (2 days including access wait)
@@ -292,13 +292,13 @@ When asked to document a spike, follow these steps:
 
 See this skill applied to three different product contexts:
 
-??? example "Storevine (B2B): Storevine B2B ecommerce platform — revenue attribution feasibility spike for Campaigns v1"
+??? example "Storevine (B2B): Storevine B2B ecommerce platform . revenue attribution feasibility spike for Campaigns v1"
     **Prompt:**
 
     ```
     /spike-summary
 
-    Spike: Revenue attribution feasibility — can SendGrid open/click webhooks
+    Spike: Revenue attribution feasibility . can SendGrid open/click webhooks
     be linked to Storevine purchase events within v1 timeline?
 
     Context:
@@ -323,7 +323,7 @@ See this skill applied to three different product contexts:
 
     # Spike Summary: Revenue Attribution via SendGrid Event Webhooks
 
-??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — topic-matching algorithm spike for the Resurface digest"
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app . topic-matching algorithm spike for the Resurface digest"
     **Prompt:**
 
     ```
@@ -335,10 +335,10 @@ See this skill applied to three different product contexts:
     annoy people?
 
     three approaches tested:
-    1. tag-based — use OG tags, domain, URL patterns. simplest, no ML.
-    2. tfidf — extract article text, vectorize, cosine similarity. no
+    1. tag-based . use OG tags, domain, URL patterns. simplest, no ML.
+    2. tfidf . extract article text, vectorize, cosine similarity. no
        external api. medium complexity.
-    3. openai embeddings — text-embedding-3-small. highest accuracy but
+    3. openai embeddings . text-embedding-3-small. highest accuracy but
        adds external dependency and per-call cost.
 
     benchmark: 3 real user libraries (anonymized), 50 items each,

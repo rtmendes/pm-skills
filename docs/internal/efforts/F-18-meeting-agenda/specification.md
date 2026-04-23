@@ -9,7 +9,7 @@ This is the detailed technical specification for `foundation-meeting-agenda`. Re
 
 | Input | Required? | Accepted forms | Default |
 |-------|-----------|----------------|---------|
-| Meeting topic / purpose | Yes | String (short) or free-form context doc | — |
+| Meeting topic / purpose | Yes | String (short) or free-form context doc |. |
 | Meeting duration | No | Integer (minutes) via `--duration=N` or inline phrasing | **30** (per family contract) |
 | Meeting date + start time | No | ISO 8601 or natural language ("tomorrow 2pm EST") | Today + next whole hour |
 | Attendees | No | List (comma, newline, or @-file reference) | Infer from topic context if possible; flag as gap otherwise |
@@ -33,18 +33,18 @@ This is the detailed technical specification for `foundation-meeting-agenda`. Re
    - Prompt: "This looks like it could be handled async (written update, doc review, Slack poll). Does it need to be a meeting?"
    - Trigger conditions: single-owner decision with no tradeoffs, pure information broadcast, status-only sync with >5 people
    - User response: `yes` → proceed to step 2; `no` → produce a brief async-alternative framing (1-page "how to handle this async" suggestion) and exit
-2. **Parse and load inputs** — read all `@file` references; extract context
-3. **Infer missing values** — apply inference rules; compute confidence per field
+2. **Parse and load inputs**. read all `@file` references; extract context
+3. **Infer missing values**. apply inference rules; compute confidence per field
 4. **Present go-mode inference summary** (per contract)
-5. **User confirms `go` or corrects** — on correction, re-run steps 3-4
+5. **User confirms `go` or corrects**. on correction, re-run steps 3-4
 6. **Design time-boxed topic list**:
    - Sum of topic times must equal meeting duration (flag overflow)
    - Each topic: type tag, owner, goal, pre-read link (if any), estimated discussion duration
    - Add fixed sections: intro/context (2-5 min), decisions recap (2-3 min), actions/next steps (3-5 min)
-7. **Write attendee prep section** — required prep with links + estimated prep time; recommended context; "come ready to" expectations
+7. **Write attendee prep section**. required prep with links + estimated prep time; recommended context; "come ready to" expectations
 8. **Add parking lot and logistics placeholders**
 9. **Render TEMPLATE.md** with filled values
-10. **Validate output** — frontmatter shape, required sections present, time math checks
+10. **Validate output**. frontmatter shape, required sections present, time math checks
 
 ## Meeting-type variant behavior
 
@@ -101,10 +101,10 @@ desired_outcomes:
 
 ## Design decisions
 
-1. **Anti-meeting check is a flow step, not a frontmatter field** — it gates producing the full artifact at all, not a property of the artifact. Keeping it out of frontmatter avoids suggesting the check is retrospective.
-2. **Time math validation is enforcing, not advisory** — if the user requests a 30-min meeting but the topic list sums to 45 min, the skill flags the overflow and asks for reconciliation. Silent acceptance produces unusable agendas.
-3. **Pre-read estimated prep time is required** — attendees who do not know how long prep takes skip it. "5 min read" is a signal that materially changes prep completion.
-4. **Meeting-type variants live inside one TEMPLATE.md with conditional sections, not separate sub-templates** — simpler to maintain; variant behavior happens in process step 6, not template structure.
+1. **Anti-meeting check is a flow step, not a frontmatter field**. it gates producing the full artifact at all, not a property of the artifact. Keeping it out of frontmatter avoids suggesting the check is retrospective.
+2. **Time math validation is enforcing, not advisory**. if the user requests a 30-min meeting but the topic list sums to 45 min, the skill flags the overflow and asks for reconciliation. Silent acceptance produces unusable agendas.
+3. **Pre-read estimated prep time is required**. attendees who do not know how long prep takes skip it. "5 min read" is a signal that materially changes prep completion.
+4. **Meeting-type variants live inside one TEMPLATE.md with conditional sections, not separate sub-templates**. simpler to maintain; variant behavior happens in process step 6, not template structure.
 
 ## Validation checkpoints
 

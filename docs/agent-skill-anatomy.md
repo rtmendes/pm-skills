@@ -8,9 +8,9 @@ A comprehensive reference for understanding the structure, components, and stand
 
 - [Introduction](#introduction)
 - [The Three-Layer Model](#the-three-layer-model)
-  - [Layer 1: SKILL.md — The Instructions](#layer-1-skillmd--the-instructions)
-  - [Layer 2: TEMPLATE.md — The Structure](#layer-2-templatemd--the-structure)
-  - [Layer 3: EXAMPLE.md — The Quality Benchmark](#layer-3-examplemd--the-quality-benchmark)
+  - [Layer 1: SKILL.md . The Instructions](#layer-1-skillmd--the-instructions)
+  - [Layer 2: TEMPLATE.md . The Structure](#layer-2-templatemd--the-structure)
+  - [Layer 3: EXAMPLE.md . The Quality Benchmark](#layer-3-examplemd--the-quality-benchmark)
   - [How the Three Layers Work Together](#how-the-three-layers-work-together)
 - [File System Anatomy](#file-system-anatomy)
   - [Directory Structure](#directory-structure)
@@ -80,7 +80,7 @@ flowchart TD
     Context --> Output
 ```
 
-### Layer 1: SKILL.md — The Instructions
+### Layer 1: SKILL.md . The Instructions
 
 **Purpose**: Provides step-by-step instructions for the AI to follow when creating the artifact.
 
@@ -143,7 +143,7 @@ Use `references/TEMPLATE.md` as the output format.
 See `references/EXAMPLE.md` for a completed example.
 ````
 
-### Layer 2: TEMPLATE.md — The Structure
+### Layer 2: TEMPLATE.md . The Structure
 
 **Purpose**: Defines the exact output structure and format the AI should produce.
 
@@ -191,7 +191,7 @@ status: draft                             # ← Initial status
 - Hierarchical headings show information architecture
 - Frontmatter enables artifact tracking and versioning
 
-### Layer 3: EXAMPLE.md — The Quality Benchmark
+### Layer 3: EXAMPLE.md . The Quality Benchmark
 
 **Purpose**: Demonstrates what a completed, high-quality output looks like in practice.
 
@@ -565,12 +565,12 @@ metadata:
 **Purpose**: List of PM methodologies this skill supports
 
 **Standard identifiers**:
-- `triple-diamond` — 6-phase delivery process (Discover→Iterate)
-- `lean-startup` — Build-Measure-Learn cycle
-- `design-thinking` — Empathize-Define-Ideate-Prototype-Test
-- `scrum` — Sprint-based agile
-- `kanban` — Flow-based agile
-- `safe` — Scaled Agile Framework
+- `triple-diamond` . 6-phase delivery process (Discover→Iterate)
+- `lean-startup` . Build-Measure-Learn cycle
+- `design-thinking` . Empathize-Define-Ideate-Prototype-Test
+- `scrum` . Sprint-based agile
+- `kanban` . Flow-based agile
+- `safe` . Scaled Agile Framework
 
 **Best practice**: Include all applicable frameworks, not just the primary one.
 
@@ -753,7 +753,7 @@ When asked to create a problem statement, follow these steps:
 
 1. **Identify the User Segment**
    Ask who is experiencing this problem. Get specific about the user persona, 
-   role, or segment. Avoid vague descriptions like "users" — instead target 
+   role, or segment. Avoid vague descriptions like "users" . instead target 
    "mobile shoppers completing checkout" or "enterprise admins managing 50+ users."
 
 2. **Understand the Pain Points**
@@ -910,7 +910,7 @@ Discovery Phase                  Invocation Phase
      │                                │ - Example reference
      ▼                                ▼
 ┌──────────────────┐           ┌──────────────────┐
-│ AI sees 27 skills│           │ AI loads 1 skill │
+│ AI sees 38 skills│           │ AI loads 1 skill │
 │ (~6KB metadata)  │           │ (full content)   │
 └──────────────────┘           └──────────────────┘
                                        │
@@ -929,7 +929,7 @@ Discovery Phase                  Invocation Phase
 
 **Where from**: `AGENTS.md` file at repository root or `SKILL.md` frontmatter during skill indexing
 
-**Current repo note**: `AGENTS.md` registers all 27 skills in `skills/`, including domain, foundation, and utility classifications.
+**Current repo note**: `AGENTS.md` registers all 38 skills in `skills/`, including domain, foundation, and utility classifications.
 
 **Purpose**: Allow AI to scan all available skills quickly and select the appropriate one
 
@@ -965,7 +965,7 @@ AI scans AGENTS.md:
 
 **Purpose**: Provide complete instructions, quality criteria, and references
 
-**Benefit**: Context-appropriate loading—only the selected skill loads, not all 27 skills
+**Benefit**: Context-appropriate loading.only the selected skill loads, not all 38 skills
 
 **What the AI reads**:
 
@@ -1011,7 +1011,7 @@ See `references/EXAMPLE.md`...
 
 **Purpose**: Provide structure and quality benchmarks
 
-**Benefit**: Further context optimization—template/example only load if AI needs them
+**Benefit**: Further context optimization.template/example only load if AI needs them
 
 **Loading pattern**:
 
@@ -1028,7 +1028,7 @@ AI follows SKILL.md instructions
 **Context window efficiency**:
 - Discovery: ~6KB (27 skill names + descriptions)
 - Invocation: ~15KB (1 full SKILL.md + template + example)
-- Without progressive loading: ~400KB (all 27 skills fully loaded)
+- Without progressive loading: ~400KB (all 38 skills fully loaded)
 
 **Faster agent response**:
 - Skill selection happens instantly (minimal data to parse)
@@ -1066,10 +1066,10 @@ Skills written to the agentskills.io specification work across multiple AI platf
 
 The agentskills.io specification defines:
 
-1. **Standard file structure** — All platforms know where to find SKILL.md, TEMPLATE.md, EXAMPLE.md
-2. **Standard metadata** — Frontmatter schema is universal across platforms
-3. **Standard discovery** — AGENTS.md file format is consistent
-4. **Markdown format** — Platform-agnostic, human-readable
+1. **Standard file structure** . All platforms know where to find SKILL.md, TEMPLATE.md, EXAMPLE.md
+2. **Standard metadata** . Frontmatter schema is universal across platforms
+3. **Standard discovery** . AGENTS.md file format is consistent
+4. **Markdown format** . Platform-agnostic, human-readable
 
 **Example**: The same `prd` skill works identically on:
 
@@ -1195,7 +1195,7 @@ When asked to create a problem statement, follow these steps:
 
 1. **Identify the User Segment**          # ← Actionable step title
    Ask who is experiencing this problem. Get specific about the user persona, 
-   role, or segment. Avoid vague descriptions like "users" — instead target 
+   role, or segment. Avoid vague descriptions like "users" . instead target 
    "mobile shoppers completing checkout" or "enterprise admins managing 50+ users."
                                            # ← Detailed guidance
 
@@ -1309,7 +1309,7 @@ When asked to create a PRD, follow these steps:
 
 4. **Detail Functional Requirements**     # ← Core specification work
    Break down what the system must do. Use user stories or requirement 
-   statements. Each requirement should be testable — someone should be able 
+   statements. Each requirement should be testable . someone should be able 
    to verify if it's met.
 
 5. **Define Scope Boundaries**            # ← Critical for project management
@@ -1523,35 +1523,35 @@ Quick reference for skill authors before submission. For complete guidance, see 
 
 ### Official Specifications
 
-- **[agentskills.io Specification](https://agentskills.io/specification)** — Canonical standard for agent skills
-- **[agentskills/agentskills on GitHub](https://github.com/agentskills/agentskills)** — Reference implementation and examples
+- **[agentskills.io Specification](https://agentskills.io/specification)** . Canonical standard for agent skills
+- **[agentskills/agentskills on GitHub](https://github.com/agentskills/agentskills)** . Reference implementation and examples
 
 ### PM-Skills Documentation
 
-- **[Getting Started Guide](getting-started.md)** — Installation and first steps
-- **[Using Skills Guide](guides/using-skills.md)** — From beginner to advanced usage
-- **[Authoring PM-Skills](guides/authoring-pm-skills.md)** — Complete authoring guide
-- **[Frontmatter Schema](reference/frontmatter-schema.yaml)** — Field-by-field validation reference
-- **[Category Taxonomy](reference/categories.md)** — All 7 categories explained
-- **[Contributing Guidelines](../CONTRIBUTING.md)** — How to contribute to pm-skills
+- **[Getting Started Guide](getting-started.md)** . Installation and first steps
+- **[Using Skills Guide](guides/using-skills.md)** . From beginner to advanced usage
+- **[Authoring PM-Skills](guides/authoring-pm-skills.md)** . Complete authoring guide
+- **[Frontmatter Schema](reference/frontmatter-schema.yaml)** . Field-by-field validation reference
+- **[Category Taxonomy](reference/categories.md)** . All 7 categories explained
+- **[Contributing Guidelines](../CONTRIBUTING.md)** . How to contribute to pm-skills
 
 ### Community & Ecosystem
 
-- **[PM-Skills Repository](https://github.com/product-on-purpose/pm-skills)** — Main repository
-- **[Skill Template](../templates/skill-template/SKILL.md)** — Starting point for new skills
-- **[Triple Diamond Framework](frameworks/triple-diamond-delivery-process.md)** — The organizing methodology
+- **[PM-Skills Repository](https://github.com/product-on-purpose/pm-skills)** . Main repository
+- **[Skill Template](../templates/skill-template/SKILL.md)** . Starting point for new skills
+- **[Triple Diamond Framework](frameworks/triple-diamond-delivery-process.md)** . The organizing methodology
 
 ### Platform Documentation
 
-- **[VS Code Agent Skills](https://code.visualstudio.com/docs/copilot/customization/agent-skills)** — Using skills in VS Code Copilot
-- **[Cursor Agent Skills](https://cursor.com/docs/context/skills)** — Using skills in Cursor
+- **[VS Code Agent Skills](https://code.visualstudio.com/docs/copilot/customization/agent-skills)** . Using skills in VS Code Copilot
+- **[Cursor Agent Skills](https://cursor.com/docs/context/skills)** . Using skills in Cursor
 
 ### Standards & References
 
-- **[Semantic Versioning](https://semver.org/)** — Version numbering standard
-- **[SPDX Licenses](https://spdx.org/licenses/)** — License identifier list
-- **[Markdown Guide](https://www.markdownguide.org/)** — Markdown syntax reference
-- **[YAML Specification](https://yaml.org/spec/)** — YAML format details
+- **[Semantic Versioning](https://semver.org/)** . Version numbering standard
+- **[SPDX Licenses](https://spdx.org/licenses/)** . License identifier list
+- **[Markdown Guide](https://www.markdownguide.org/)** . Markdown syntax reference
+- **[YAML Specification](https://yaml.org/spec/)** . YAML format details
 
 ---
 
@@ -1607,6 +1607,6 @@ Quick reference for skill authors before submission. For complete guidance, see 
 
 ---
 
-*Part of [PM-Skills](../README.md) — Open source Product Management skills for AI agents*
+*Part of [PM-Skills](../README.md) . Open source Product Management skills for AI agents*
 
 *Built by [Product on Purpose](https://github.com/product-on-purpose) for PMs who ship.*

@@ -40,6 +40,13 @@ Get-ChildItem -Path (Join-Path $Root "skills") -Directory | ForEach-Object {
     }
 
     $lines = Get-Content $skillPath
+
+    if ($lines.Count -eq 0 -or $lines[0].Trim() -ne '---') {
+        Write-Host "[FAIL] $rel : first line must be '---' (skills.sh CLI requires YAML frontmatter delimiter at line 1; no preamble, comments, or attribution headers allowed)"
+        $Fail = $true
+        $skillFail = $true
+    }
+
     $start = -1
     $end = -1
     for ($i = 0; $i -lt $lines.Count; $i++) {
@@ -76,10 +83,17 @@ Get-ChildItem -Path (Join-Path $Root "skills") -Directory | ForEach-Object {
         $skillFail = $true
     }
     else {
-        $descriptionValue = $descriptionValue.Trim().Trim('"').Trim("'")
+        $rawDescription = $descriptionValue.Trim()
+        $isQuoted = ($rawDescription.StartsWith('"') -and $rawDescription.EndsWith('"')) -or ($rawDescription.StartsWith("'") -and $rawDescription.EndsWith("'"))
+        $descriptionValue = $rawDescription.Trim('"').Trim("'")
         $descriptionWords = Get-WordCount -Text $descriptionValue
         if ($descriptionWords -lt 20 -or $descriptionWords -gt 100) {
             Write-Host "[FAIL] $rel : description must be 20-100 words (found $descriptionWords)"
+            $Fail = $true
+            $skillFail = $true
+        }
+        if (-not $isQuoted -and $descriptionValue -match ': ') {
+            Write-Host "[FAIL] $rel : description contains inline ': ' which breaks strict YAML parsing (skills.sh CLI). Reword to remove the colon, or wrap the whole description in double quotes."
             $Fail = $true
             $skillFail = $true
         }

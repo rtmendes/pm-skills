@@ -16,7 +16,7 @@ tags:
 
 # Jobs to be Done Canvas
 
-A Jobs to be Done (JTBD) canvas captures the complete picture of why customers "hire" products to make progress in their lives. Based on Clayton Christensen's framework, JTBD goes beyond features and demographics to understand the underlying motivations—functional, emotional, and social—that drive customer behavior.
+A Jobs to be Done (JTBD) canvas captures the complete picture of why customers "hire" products to make progress in their lives. Based on Clayton Christensen's framework, JTBD goes beyond features and demographics to understand the underlying motivations.functional, emotional, and social.that drive customer behavior.
 
 ## When to Use
 
@@ -267,11 +267,11 @@ When asked to create a JTBD canvas, follow these steps:
 
 <!-- Verbatim quotes from research that illustrate the job -->
 
-> "[Quote 1]" — [Source]
+> "[Quote 1]" . [Source]
 
-> "[Quote 2]" — [Source]
+> "[Quote 2]" . [Source]
 
-> "[Quote 3]" — [Source]
+> "[Quote 3]" . [Source]
 
 ---
 
@@ -333,7 +333,7 @@ When asked to create a JTBD canvas, follow these steps:
 
     **Urgency:**
 
-    High urgency—there's a hard deadline (hungry family) and the window to decide narrows as time passes. By 5pm, options become limited.
+    High urgency.there's a hard deadline (hungry family) and the window to decide narrows as time passes. By 5pm, options become limited.
 
     ---
 
@@ -382,7 +382,7 @@ When asked to create a JTBD canvas, follow these steps:
 
     | Desired Feeling | Why It Matters |
     |-----------------|----------------|
-    | Confident | Know the meal will work out—no anxiety about failure |
+    | Confident | Know the meal will work out.no anxiety about failure |
     | Calm | Peaceful transition from work to home, not frantic |
     | In control | Having a plan reduces chaos of the "witching hour" |
     | Proud | Providing good food for family feels like caregiving |
@@ -492,7 +492,7 @@ When asked to create a JTBD canvas, follow these steps:
 
     ## Insights and Implications
 
-    **Key Insight 1:** The hardest part isn't cooking—it's deciding. By 5pm, mental energy is depleted and any decision feels hard. Solutions that require browsing and choosing from options fail at the moment of need.
+    **Key Insight 1:** The hardest part isn't cooking.it's deciding. By 5pm, mental energy is depleted and any decision feels hard. Solutions that require browsing and choosing from options fail at the moment of need.
     - Product Implication: Make one strong recommendation rather than presenting options. "Here's what you should make tonight" beats "Here are 12 recipes you might like."
 
     **Key Insight 2:** "What's in my kitchen" is the real constraint, not "what sounds good." Parents are willing to make almost anything if they know they have the ingredients and it's fast.
@@ -505,13 +505,13 @@ When asked to create a JTBD canvas, follow these steps:
 
     ## Supporting Quotes
 
-    > "By 5pm, I literally cannot make another decision. I've made 400 decisions at work. Don't show me 50 recipes—just tell me what to make." — P4, working mom of 2
+    > "By 5pm, I literally cannot make another decision. I've made 400 decisions at work. Don't show me 50 recipes.just tell me what to make." . P4, working mom of 2
 
-    > "I'll open the meal planning app on Sunday with great intentions. By Tuesday, everything's gone off-script and I'm back to 'what's for dinner?'" — P7, dad of 3
+    > "I'll open the meal planning app on Sunday with great intentions. By Tuesday, everything's gone off-script and I'm back to 'what's for dinner?'" . P7, dad of 3
 
-    > "I know I should meal plan, but when I actually look at those apps, I just feel worse about myself. Like I can't even do this basic adult thing." — P11, working mom of 1
+    > "I know I should meal plan, but when I actually look at those apps, I just feel worse about myself. Like I can't even do this basic adult thing." . P11, working mom of 1
 
-    > "The best nights are when I don't have to think. Someone just says 'we're having this' and I make it." — P2, stay-at-home dad of 2
+    > "The best nights are when I don't have to think. Someone just says 'we're having this' and I make it." . P2, stay-at-home dad of 2
 
     ---
 
@@ -530,13 +530,13 @@ When asked to create a JTBD canvas, follow these steps:
 
 See this skill applied to three different product contexts:
 
-??? example "Storevine (B2B): Storevine B2B ecommerce platform — merchant email and tool-stack job-to-be-done for Campaigns"
+??? example "Storevine (B2B): Storevine B2B ecommerce platform . merchant email and tool-stack job-to-be-done for Campaigns"
     **Prompt:**
 
     ```
     /jtbd-canvas
 
-    Project: Campaigns — native email marketing for Storevine merchants
+    Project: Campaigns . native email marketing for Storevine merchants
     Stage: Pre-PRD, grounding feature scope in JTBD framework before
     engineering handoff
 
@@ -548,7 +548,7 @@ See this skill applied to three different product contexts:
       setup, and data sync
 
     Research basis:
-    - 8 merchant interviews (Jan 12–28, 2026) — direct quotes available
+    - 8 merchant interviews (Jan 12–28, 2026) . direct quotes available
     - Competitive analysis (Feb 2026): Klaviyo used by ~40% of active
       merchants [fictional]; Mailchimp by ~20% [fictional]
     - Q4 exit survey: 22% churn cited "had to use a separate email tool"
@@ -565,7 +565,7 @@ See this skill applied to three different product contexts:
 
     # Jobs to be Done Canvas: Run Email Marketing Without Leaving Storevine
 
-??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — JTBD canvas for saved content re-engagement"
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app . JTBD canvas for saved content re-engagement"
     **Prompt:**
 
     ```
@@ -573,7 +573,7 @@ See this skill applied to three different product contexts:
 
     the core job for the resurface feature. users save stuff to brainshelf
     with the intent to read it later, but the act of saving satisfies the
-    intent — they never actually come back. so the real job isn't "save to
+    intent . they never actually come back. so the real job isn't "save to
     read later" (that job is already done by the save action), the real job
     is "rediscover the things I saved that are still worth my time."
 

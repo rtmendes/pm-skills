@@ -7,19 +7,19 @@ Agent: Claude Opus 4.7
 
 ## Scope
 
-Create `foundation-meeting-recap`, a post-meeting skill that produces a topic-segmented summary for attendees with decisions highlighted and actions captured inline per topic (plus a consolidated action view at the end). Absorbs what would otherwise be a separate "meeting-actions" skill — actions live alongside their context, not in a sibling artifact. Conforms to the [Meeting Skills Family Contract](../reference/skill-families/meeting-skills-contract.md).
+Create `foundation-meeting-recap`, a post-meeting skill that produces a topic-segmented summary for attendees with decisions highlighted and actions captured inline per topic (plus a consolidated action view at the end). Absorbs what would otherwise be a separate "meeting-actions" skill. actions live alongside their context, not in a sibling artifact. Conforms to the [Meeting Skills Family Contract](../reference/skill-families/meeting-skills-contract.md).
 
 ## Problem
 
 After a multi-topic internal meeting, the standard post-hoc note-passing fails in predictable ways:
 
-1. Decisions are buried in prose — readers cannot tell a decision from a discussion item at a glance
+1. Decisions are buried in prose. readers cannot tell a decision from a discussion item at a glance
 2. Actions lack owners or due dates, so they decay
 3. The recap is chronologically ordered (as the meeting flowed), which mirrors the meeting but not how readers consume it
 4. If an agenda existed, nothing reconciles what was planned vs. what actually happened
 5. Separate "action items" artifacts lose the context that makes actions make sense
 
-PMs producing recaps manually work around all of this by topic-segmenting, highlighting decisions, and chasing owners/dates — which takes 20-30 minutes. The skill produces a conforming recap in one invocation from notes, transcript, or both, auto-populating the topic skeleton from a sibling `meeting-agenda` artifact when one exists.
+PMs producing recaps manually work around all of this by topic-segmenting, highlighting decisions, and chasing owners/dates. which takes 20-30 minutes. The skill produces a conforming recap in one invocation from notes, transcript, or both, auto-populating the topic skeleton from a sibling `meeting-agenda` artifact when one exists.
 
 ## How It Works
 
@@ -32,18 +32,18 @@ PMs producing recaps manually work around all of this by topic-segmenting, highl
 
 ### Process
 
-1. **Load agenda if discoverable** — filename prefix match on meeting date + time + title; if found, use topic skeleton as scaffold and use `desired_outcomes` for quality-signals reconciliation
-2. **Present go-mode inference summary** — per family contract
-3. **Topic-segment** — organize content by topic (agenda topics + any emergent), not chronology
+1. **Load agenda if discoverable**. filename prefix match on meeting date + time + title; if found, use topic skeleton as scaffold and use `desired_outcomes` for quality-signals reconciliation
+2. **Present go-mode inference summary**. per family contract
+3. **Topic-segment**. organize content by topic (agenda topics + any emergent), not chronology
 4. **Per topic segment**:
    - Summarize discussion
    - **Highlight decisions** with visual emphasis (decisions are the most-referenced post-hoc information)
    - Extract actions with owner + due date + dependencies (flag missing owners/dates explicitly rather than inventing them)
    - Capture open questions
-5. **Reconcile agenda** (if agenda was loaded) — planned vs. hit vs. skipped vs. emerged
-6. **Consolidate action view** — regroup by owner for scannability
-7. **Assess meeting quality signals** — outcomes achieved, time management, key attendees present (lightweight markers supporting downstream retrospective use)
-8. **Surface next steps** — when we reconvene, what needs to happen first
+5. **Reconcile agenda** (if agenda was loaded). planned vs. hit vs. skipped vs. emerged
+6. **Consolidate action view**. regroup by owner for scannability
+7. **Assess meeting quality signals**. outcomes achieved, time management, key attendees present (lightweight markers supporting downstream retrospective use)
+8. **Surface next steps**. when we reconvene, what needs to happen first
 9. **Produce artifact** conforming to TEMPLATE.md
 
 ### Output
@@ -85,16 +85,16 @@ Topic-segmented post-meeting summary. Shareable summary block at top (meeting na
 
 ## Open Questions
 
-- Attendee vs. non-attendee variant toggle — same content, different framing for non-attendees (adds context, removes insider shorthand). Default mode or opt-in? Or leave non-attendee communication to `stakeholder-update`? Recommend: leave to stakeholder-update to preserve skill boundaries.
-- Conflict/dissent capture — dedicated space for where consensus was not reached? Default section or opt-in? Consider during spec writing.
-- Downstream skill chaining — should the recap output offer "generate stakeholder-update from this recap" as a suggested next step? Low-cost ergonomic win; consider during skill authoring.
-- Version awareness — diff from prior version if the recap is regenerated after post-meeting updates arrive? Deferred; not in v1.0.0.
+- Attendee vs. non-attendee variant toggle. same content, different framing for non-attendees (adds context, removes insider shorthand). Default mode or opt-in? Or leave non-attendee communication to `stakeholder-update`? Recommend: leave to stakeholder-update to preserve skill boundaries.
+- Conflict/dissent capture. dedicated space for where consensus was not reached? Default section or opt-in? Consider during spec writing.
+- Downstream skill chaining. should the recap output offer "generate stakeholder-update from this recap" as a suggested next step? Low-cost ergonomic win; consider during skill authoring.
+- Version awareness. diff from prior version if the recap is regenerated after post-meeting updates arrive? Deferred; not in v1.0.0.
 
 ## Status Transitions
 
 - **Backlog** (current)
-- **In Progress** — when per-skill authoring begins
-- **Shipped** — on v2.11.0 tag + push
+- **In Progress**. when per-skill authoring begins
+- **Shipped**. on v2.11.0 tag + push
 
 ## Detailed specification
 

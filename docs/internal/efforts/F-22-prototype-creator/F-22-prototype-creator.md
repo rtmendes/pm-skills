@@ -6,7 +6,7 @@ Agent: Claude Opus 4.6
 
 ## Scope
 
-Create a `utility-prototype-creator` skill that helps PMs produce self-contained HTML prototypes for communicating product concepts, user flows, and interaction patterns. The prototypes are single-file, dependency-free HTML documents that open in any browser — no server, no build step, no framework installation. Designed for the agentic workflow: Claude generates the complete HTML file from a structured brief.
+Create a `utility-prototype-creator` skill that helps PMs produce self-contained HTML prototypes for communicating product concepts, user flows, and interaction patterns. The prototypes are single-file, dependency-free HTML documents that open in any browser . no server, no build step, no framework installation. Designed for the agentic workflow: Claude generates the complete HTML file from a structured brief.
 
 ## Problem
 
@@ -17,7 +17,7 @@ PMs need prototypes to communicate product ideas but face barriers:
 4. Prototypes built ad-hoc by AI assistants have inconsistent structure, styling, and interaction patterns
 5. No reusable system exists for consistent, professional-looking HTML prototypes that PMs can generate on demand
 
-The key insight: PMs don't need production code — they need *communication artifacts* that demonstrate concepts clearly. A self-contained HTML file with consistent styling and basic interactivity serves this purpose better than a wireframe or a full app.
+The key insight: PMs don't need production code . they need *communication artifacts* that demonstrate concepts clearly. A self-contained HTML file with consistent styling and basic interactivity serves this purpose better than a wireframe or a full app.
 
 ## How It Would Work
 
@@ -28,11 +28,11 @@ The key insight: PMs don't need production code — they need *communication art
 - Optional: style reference from prototype-styler (F-23)
 
 ### Process
-1. **Scope the prototype** — What screens/states are needed? What interactions matter? What can be faked vs. needs to work?
-2. **Define structure** — Page layout, navigation pattern, component inventory
-3. **Select interaction patterns** — Tab switching, modal dialogs, form flows, state changes, data filtering
-4. **Generate HTML** — Single self-contained file with inline CSS and JavaScript. No external dependencies.
-5. **Validate** — Opens in browser, interactions work, responsive basics, accessible markup
+1. **Scope the prototype** . What screens/states are needed? What interactions matter? What can be faked vs. needs to work?
+2. **Define structure** . Page layout, navigation pattern, component inventory
+3. **Select interaction patterns** . Tab switching, modal dialogs, form flows, state changes, data filtering
+4. **Generate HTML** . Single self-contained file with inline CSS and JavaScript. No external dependencies.
+5. **Validate** . Opens in browser, interactions work, responsive basics, accessible markup
 
 ### Output
 A single self-contained HTML file that:
@@ -50,8 +50,8 @@ A single self-contained HTML file that:
 | **Single-file constraint** | Required | Self-contained = shareable without setup. This is the core value proposition. |
 | **Framework** | Vanilla HTML/CSS/JS only | No React, no Tailwind CDN, no dependencies. Maximizes portability and minimizes AI generation errors. |
 | **Responsive** | Basic (desktop + mobile viewport) | Full responsive design is out of scope; basic viewport handling is sufficient for communication artifacts |
-| **Dependency on F-23** | Soft — ships with a default style system | Can use without F-23; F-23 enables custom component styling |
-| **Interaction complexity** | Cap at "clickable prototype" level | Not a production app. Tab switching, modals, form states, filtering — yes. API calls, real auth, databases — no. |
+| **Dependency on F-23** | Soft . ships with a default style system | Can use without F-23; F-23 enables custom component styling |
+| **Interaction complexity** | Cap at "clickable prototype" level | Not a production app. Tab switching, modals, form states, filtering . yes. API calls, real auth, databases . no. |
 
 ## Quality Forecast
 
@@ -60,13 +60,13 @@ A single self-contained HTML file that:
 | Process | 40 | Structured workflow from brief to scoping to generation to validation |
 | Constraint | 30 | Single-file, no dependencies, accessibility basics, inline documentation |
 | Knowledge | 20 | HTML/CSS/JS patterns, interaction patterns, component structures |
-| Wisdom | 10 | Scoping decisions — what to prototype vs what to describe |
+| Wisdom | 10 | Scoping decisions . what to prototype vs what to describe |
 
 ## Dependencies
 
 - None required
-- **F-23 (prototype-styler)** — optional, for custom component styling and design standards
-- **F-21 (content-voice)** — optional, for consistent copy in prototypes
+- **F-23 (prototype-styler)** . optional, for custom component styling and design standards
+- **F-21 (content-voice)** . optional, for consistent copy in prototypes
 
 ## Artifacts Produced
 
@@ -77,7 +77,7 @@ A single self-contained HTML file that:
 
 ## Estimated Complexity
 
-Medium-High — the skill itself is straightforward but producing consistently good HTML prototypes requires encoding many interaction patterns, layout conventions, and accessibility standards.
+Medium-High . the skill itself is straightforward but producing consistently good HTML prototypes requires encoding many interaction patterns, layout conventions, and accessibility standards.
 
 ## PRs
 

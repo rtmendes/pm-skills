@@ -128,7 +128,7 @@ CI-only automation scripts live in `.github/scripts/` (for example, `validate-mc
 ### validate-skills-manifest.sh / validate-skills-manifest.ps1
 **Purpose:** Validate that `skills-manifest.yaml` entries in release folders match actual skill directories.
 
-**Why:** Ensures release manifests stay accurate — catches orphaned skill references and version mismatches.
+**Why:** Ensures release manifests stay accurate . catches orphaned skill references and version mismatches.
 
 **Use when:** After editing release manifests or adding/removing skills; in CI (advisory).
 
@@ -141,7 +141,7 @@ CI-only automation scripts live in `.github/scripts/` (for example, `validate-mc
 ### validate-version-consistency.sh / validate-version-consistency.ps1
 **Purpose:** Ensure `.claude-plugin/plugin.json` and `marketplace.json` report the same version.
 
-**Why:** Prevents version drift between the two sources. The `/update-pm-skills` skill reads version from these files — mismatches cause confusing version reports.
+**Why:** Prevents version drift between the two sources. The `/update-pm-skills` skill reads version from these files . mismatches cause confusing version reports.
 
 **Use when:** After editing either version file; before release; in CI (hard-fail).
 
@@ -193,7 +193,7 @@ CI-only automation scripts live in `.github/scripts/` (for example, `validate-mc
 ### check-count-consistency.sh / check-count-consistency.ps1
 **Purpose:** Detect stale hardcoded skill/command/workflow counts in documentation.
 
-**Why:** Docs pages reference counts like "31 skills" which go stale when skills are added. This detects mismatches automatically.
+**Why:** Docs pages reference counts like "38 skills" which go stale when skills are added. This detects mismatches automatically.
 
 **Use when:** After adding skills, commands, or workflows; before release; in CI (advisory).
 

@@ -7,18 +7,18 @@ skill_version: "2.0.0"
 created: 2026-02-20
 status: sample
 thread: brainshelf
-context: Brainshelf consumer PKM app — Resurface A/B test experiment design
+context: Brainshelf consumer PKM app . Resurface A/B test experiment design
 ---
 
 ## Scenario
 
-With the Resurface feature shipped behind a feature flag, Priya M. and Chloe B. designed the A/B experiment to validate the Resurface hypothesis before a full rollout. The experiment uses an intent-to-treat design: eligible users are randomly assigned to treatment (sees opt-in prompt, receives digest if opted in) or control (no prompt, no digest), and the primary metric — 7-day return rate — is measured for both groups regardless of opt-in status. This design avoids selection bias from comparing only opted-in users against all control users.
+With the Resurface feature shipped behind a feature flag, Priya M. and Chloe B. designed the A/B experiment to validate the Resurface hypothesis before a full rollout. The experiment uses an intent-to-treat design: eligible users are randomly assigned to treatment (sees opt-in prompt, receives digest if opted in) or control (no prompt, no digest), and the primary metric . 7-day return rate . is measured for both groups regardless of opt-in status. This design avoids selection bias from comparing only opted-in users against all control users.
 
 **Source Notes:**
 
-- Ron Kohavi, Diane Tang, and Ya Xu, "Trustworthy Online Controlled Experiments: A Practical Guide to A/B Testing" (Cambridge University Press, 2020) — the definitive reference for online experiment design; the intent-to-treat methodology, sample size calculation, and guardrail metric framework used in this document are drawn directly from Kohavi et al.'s guidance on avoiding common experimentation pitfalls.
-- Evan Miller, "Sample Size Calculator" (evanmiller.org/ab-testing/sample-size.html) — the tool used to compute the minimum sample size per variant; the calculator uses the Wald method for two-proportion z-tests and was configured with the baseline, MDE, alpha, and power values specified in this document.
-- Amplitude, "Experiment Documentation" (amplitude.com/docs/experiment) — the experimentation platform used for variant assignment, event tracking, and results analysis; Amplitude's feature flag SDK handles randomization and consistent variant assignment.
+- Ron Kohavi, Diane Tang, and Ya Xu, "Trustworthy Online Controlled Experiments: A Practical Guide to A/B Testing" (Cambridge University Press, 2020) . the definitive reference for online experiment design; the intent-to-treat methodology, sample size calculation, and guardrail metric framework used in this document are drawn directly from Kohavi et al.'s guidance on avoiding common experimentation pitfalls.
+- Evan Miller, "Sample Size Calculator" (evanmiller.org/ab-testing/sample-size.html) . the tool used to compute the minimum sample size per variant; the calculator uses the Wald method for two-proportion z-tests and was configured with the baseline, MDE, alpha, and power values specified in this document.
+- Amplitude, "Experiment Documentation" (amplitude.com/docs/experiment) . the experimentation platform used for variant assignment, event tracking, and results analysis; Amplitude's feature flag SDK handles randomization and consistent variant assignment.
 
 ---
 
@@ -36,7 +36,7 @@ design: intent-to-treat. treatment gets the opt-in prompt + digest.
 control gets nothing (current experience). measure 7-day return rate
 for both groups.
 
-secondary metric: email CTR (treatment only — control doesn't get
+secondary metric: email CTR (treatment only . control doesn't get
 email). guardrail: unsub rate ≤2%/week.
 
 sample: 400 per variant from the 9,800 eligible users [fictional].
@@ -100,7 +100,7 @@ Brainshelf's 7-day return rate is 18% [fictional], below the 25–35% median for
 - One-click unsubscribe from email footer
 - Feature flag: `resurface_enabled = true`
 
-**Screenshot/Mockup:** Figma — Resurface Home Screen Card + Digest Email v1
+**Screenshot/Mockup:** Figma . Resurface Home Screen Card + Digest Email v1
 
 ## Metrics
 
@@ -108,7 +108,7 @@ Brainshelf's 7-day return rate is 18% [fictional], below the 25–35% median for
 
 | Metric | Definition | Current Baseline | Minimum Detectable Effect |
 |--------|------------|------------------|---------------------------|
-| 7-day return rate | % of users who had at least one session in week N and return for at least one session in week N+1 | 18% [fictional] | 5 percentage points (absolute) — from 18% to 23%+ [fictional] |
+| 7-day return rate | % of users who had at least one session in week N and return for at least one session in week N+1 | 18% [fictional] | 5 percentage points (absolute) . from 18% to 23%+ [fictional] |
 
 ### Secondary Metrics
 
@@ -148,7 +148,7 @@ Brainshelf's 7-day return rate is 18% [fictional], below the 25–35% median for
 | **Traffic allocation** | ~8% of eligible users (800 of 9,800) [fictional] |
 | **Users per day in experiment** | Enrollment is front-loaded: all 800 users assigned at experiment start (batch randomization) |
 | **Minimum duration** | 4 weeks (to capture 4 full weekly return cycles) |
-| **Recommended duration** | 4 weeks — the minimum for weekly return rate; extending to 6 weeks would capture a second retention cycle but delays the Q2 OKR decision |
+| **Recommended duration** | 4 weeks . the minimum for weekly return rate; extending to 6 weeks would capture a second retention cycle but delays the Q2 OKR decision |
 
 ## Audience Targeting
 
@@ -175,7 +175,7 @@ Brainshelf's 7-day return rate is 18% [fictional], below the 25–35% median for
 
 ### Win (Ship Treatment)
 
-The treatment is considered a win if the 7-day return rate in the treatment group is at least 5 percentage points higher than control with p < 0.05 (two-tailed), AND no guardrail metric exceeds its threshold. If the return rate lift is statistically significant but below 5pp, the result is a partial win — the team will evaluate whether to ship as-is or iterate on the digest to increase the effect size.
+The treatment is considered a win if the 7-day return rate in the treatment group is at least 5 percentage points higher than control with p < 0.05 (two-tailed), AND no guardrail metric exceeds its threshold. If the return rate lift is statistically significant but below 5pp, the result is a partial win . the team will evaluate whether to ship as-is or iterate on the digest to increase the effect size.
 
 ### Loss (Keep Control)
 
@@ -189,9 +189,9 @@ The result is considered inconclusive if the treatment shows a positive trend (2
 
 | Risk | Likelihood | Impact | Mitigation |
 |------|------------|--------|------------|
-| Opt-in rate below 10% — dilutes the intent-to-treat effect | Medium | High | Monitor opt-in daily in week 1; if below 5% at day 7, revise opt-in prompt copy and extend enrollment |
-| Novelty effect — treatment users return more in week 1 but the effect fades | Medium | Medium | Analyze weekly return rate trends; compare week 1 vs. week 4 retention to detect decay |
-| Selection bias — only highly engaged users opt in, inflating treatment metrics | Medium | Medium | Intent-to-treat analysis includes all treatment users regardless of opt-in; also report per-protocol analysis (opted-in users only) separately for comparison |
+| Opt-in rate below 10% . dilutes the intent-to-treat effect | Medium | High | Monitor opt-in daily in week 1; if below 5% at day 7, revise opt-in prompt copy and extend enrollment |
+| Novelty effect . treatment users return more in week 1 but the effect fades | Medium | Medium | Analyze weekly return rate trends; compare week 1 vs. week 4 retention to detect decay |
+| Selection bias . only highly engaged users opt in, inflating treatment metrics | Medium | Medium | Intent-to-treat analysis includes all treatment users regardless of opt-in; also report per-protocol analysis (opted-in users only) separately for comparison |
 | Gmail promotions tab classification reduces effective email delivery | Medium | High | Text-only email layout; monitor inbox placement via Resend dashboard; seed list test in setup week |
 | Resend API outage during test window | Low | High | Monitor daily; if >2 consecutive days of send failures, pause the experiment clock and extend duration accordingly |
 

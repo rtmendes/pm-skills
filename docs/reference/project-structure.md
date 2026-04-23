@@ -2,13 +2,13 @@
 
 ## Table of Contents
 - [Directory Overview](#directory-overview)
-- [/skills/ — Skills](#skills--the-32-pm-skills-flat)
-- [/commands/ — Slash Commands](#commands--slash-commands)
-- [/workflows/ — Workflows](#workflows--workflows)
-- [/docs/ — Documentation](#docs--documentation)
-- [/templates/ — Skill Templates](#templates--skill-templates)
-- [/AGENTS/ — AI Agent Context](#agents--ai-agent-context)
-- [/.github/ — GitHub Configuration](#github--github-configuration)
+- [/skills/ . Skills](#skills--the-32-pm-skills-flat)
+- [/commands/ . Slash Commands](#commands--slash-commands)
+- [/workflows/ . Workflows](#workflows--workflows)
+- [/docs/ . Documentation](#docs--documentation)
+- [/templates/ . Skill Templates](#templates--skill-templates)
+- [/AGENTS/ . AI Agent Context](#agents--ai-agent-context)
+- [/.github/ . GitHub Configuration](#github--github-configuration)
 - [Root Files](#root-files)
 - [File Naming Conventions](#file-naming-conventions)
 - [Related Documentation](#related-documentation)
@@ -31,7 +31,7 @@ pm-skills/
 
 ---
 
-## `/skills/` — The 38 PM Skills (flat)
+## `/skills/` . The 38 PM Skills (flat)
 
 Skills are the core of PM-Skills. Each skill teaches AI assistants how to produce a specific PM artifact with professional quality.
 
@@ -135,7 +135,7 @@ skills/{skill-name}/
 
 ---
 
-## `/commands/` — Slash Commands
+## `/commands/` . Slash Commands
 
 Contains Claude Code slash command definitions. Each `.md` maps a `/command` to its skill (or workflow).
 
@@ -184,7 +184,7 @@ Contains Claude Code slash command definitions. Each `.md` maps a `/command` to 
 
 ---
 
-## `/_workflows/` — Workflows
+## `/_workflows/` . Workflows
 
 Workflows chain multiple skills together into guided, end-to-end sequences.
 
@@ -202,7 +202,7 @@ Workflows chain multiple skills together into guided, end-to-end sequences.
 
 ---
 
-## `/docs/` — Documentation
+## `/docs/` . Documentation
 
 ```
 docs/
@@ -228,7 +228,7 @@ docs/
 
 ---
 
-## `/docs/templates/` — Skill Templates
+## `/docs/templates/` . Skill Templates
 
 Starter templates for creating new skills.
 
@@ -244,7 +244,7 @@ Use these templates when contributing a new skill. See [authoring-pm-skills.md](
 
 ---
 
-## `/AGENTS/` — AI Agent Context
+## `/AGENTS/` . AI Agent Context
 
 Session continuity for AI coding assistants. Contains context, decisions, and session logs.
 
@@ -268,7 +268,7 @@ This directory helps AI assistants maintain context across sessions. Not require
 
 ---
 
-## `/.github/` — GitHub Configuration
+## `/.github/` . GitHub Configuration
 
 ```
 .github/

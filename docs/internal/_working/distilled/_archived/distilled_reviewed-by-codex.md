@@ -291,18 +291,18 @@ As it stands, it is a very good packet with one major source-of-truth defect.
 
 ### Overall Assessment
 
-This is a strong review. The diagnosis is correct, the recommendations are actionable, and the priority ordering is right. The "supersession problem" framing is exactly the right way to describe what happened — it's not that the earlier docs are *wrong*, it's that they were written before a scope-altering decision and never updated.
+This is a strong review. The diagnosis is correct, the recommendations are actionable, and the priority ordering is right. The "supersession problem" framing is exactly the right way to describe what happened . it's not that the earlier docs are *wrong*, it's that they were written before a scope-altering decision and never updated.
 
 ### What the Review Gets Right
 
 **1. The primary diagnosis is accurate and well-prioritized.**
-The supersession problem IS the #1 issue. The review correctly identifies that `04_next-efforts.md` implicitly supersedes `01` and `02` without declaring itself canonical. This is the single most dangerous state for a planning packet — ambiguity about which document is authoritative.
+The supersession problem IS the #1 issue. The review correctly identifies that `04_next-efforts.md` implicitly supersedes `01` and `02` without declaring itself canonical. This is the single most dangerous state for a planning packet . ambiguity about which document is authoritative.
 
 **2. The file-by-file assessment is fair.**
-Each file's strengths and weaknesses are accurately characterized. The verdict on `04_next-efforts.md` as "strongest document for immediate execution" is correct — it was written last, with the benefit of the scope separation decision.
+Each file's strengths and weaknesses are accurately characterized. The verdict on `04_next-efforts.md` as "strongest document for immediate execution" is correct . it was written last, with the benefit of the scope separation decision.
 
 **3. The "keep it, but mark it" recommendation for 01 is practical.**
-The review doesn't recommend deleting the pre-separation docs. That's the right call — they contain valuable strategic reasoning that informed the separation. The reasoning about *why* multi-project workspace was considered is itself informative context.
+The review doesn't recommend deleting the pre-separation docs. That's the right call . they contain valuable strategic reasoning that informed the separation. The reasoning about *why* multi-project workspace was considered is itself informative context.
 
 **4. The observation about 03 being a catalog, not a distillation, is precise.**
 The folder mixes decision artifacts (01, 02, 04) with a reference catalog (03). The review correctly identifies this as a packaging issue rather than a quality issue.
@@ -310,12 +310,12 @@ The folder mixes decision artifacts (01, 02, 04) with a reference catalog (03). 
 ### What the Review Misses or Underweights
 
 **1. No evaluation of whether the strategic decisions themselves are sound.**
-The review is focused on document-state management (which docs are current, how they relate) rather than strategic substance. It doesn't assess whether the CI-first priority is correct, whether the two-skill-builder approach is justified, or whether the marketplace submission timing is right. This is understandable — the review was scoped to the *documents*, not the *strategy* — but a note acknowledging this boundary would help the reader know what the review doesn't cover.
+The review is focused on document-state management (which docs are current, how they relate) rather than strategic substance. It doesn't assess whether the CI-first priority is correct, whether the two-skill-builder approach is justified, or whether the marketplace submission timing is right. This is understandable . the review was scoped to the *documents*, not the *strategy* . but a note acknowledging this boundary would help the reader know what the review doesn't cover.
 
 **2. The review doesn't examine whether `04_next-efforts.md` itself has issues.**
 It calls 04 the "strongest document" but doesn't audit it the way it audits 01-03. Some things worth noting about 04:
 - The execution timeline (Week 1-4) is aspirational and doesn't account for the fact that this is a side project with variable time allocation
-- The Knowledge OS "parallel track" section at the end slightly contradicts the separation — if Knowledge OS is truly separate, it shouldn't appear in pm-skills planning docs at all
+- The Knowledge OS "parallel track" section at the end slightly contradicts the separation . if Knowledge OS is truly separate, it shouldn't appear in pm-skills planning docs at all
 - Some effort estimates may be optimistic (e.g., "Convention alignment: 1-2 days" when touching 25 skills)
 
 **3. The naming stabilization recommendation lacks a suggested resolution.**
@@ -331,13 +331,13 @@ Creating a `00_README.md` that declares canonical status solves the supersession
 
 | Codex Recommendation | Status in v2 |
 |---------------------|--------------|
-| Priority 1: Fix canonical status | **Done** — 01_v2 and 02_v2 rewritten to reflect separation. Each opens with "Supersedes" header and "What Changed" table. |
-| Priority 2: Add folder index | **Not done** — worth creating as `00_README.md` |
-| Priority 3: Resolve naming | **Partially addressed** — v2 files use consistent naming but still mark it as a human decision |
-| Priority 4: Separate synthesis from appendix | **Addressed in 03_v2** — added "Top References" prioritization and scope annotations, plus a note on §10 being Knowledge OS material |
+| Priority 1: Fix canonical status | **Done** . 01_v2 and 02_v2 rewritten to reflect separation. Each opens with "Supersedes" header and "What Changed" table. |
+| Priority 2: Add folder index | **Not done** . worth creating as `00_README.md` |
+| Priority 3: Resolve naming | **Partially addressed** . v2 files use consistent naming but still mark it as a human decision |
+| Priority 4: Separate synthesis from appendix | **Addressed in 03_v2** . added "Top References" prioritization and scope annotations, plus a note on §10 being Knowledge OS material |
 
 ### Suggested Next Steps
 
-1. **Create `00_README.md`** — 10 lines declaring: purpose, canonical doc, read order, which files are historical. This remains the quickest way to make the folder safe for new readers.
-2. **Have Codex review the v2 files** — the v2 revisions are the response to this review's recommendations. A follow-up review would close the loop and verify the supersession problem is actually resolved.
-3. **Archive or clearly label the v1 files** — once v2 is reviewed, the v1 files should be either moved to a `_v1/` subfolder or given a clear "SUPERSEDED" header. Two versions of the same filename in the same folder is its own source-of-truth risk.
+1. **Create `00_README.md`** . 10 lines declaring: purpose, canonical doc, read order, which files are historical. This remains the quickest way to make the folder safe for new readers.
+2. **Have Codex review the v2 files** . the v2 revisions are the response to this review's recommendations. A follow-up review would close the loop and verify the supersession problem is actually resolved.
+3. **Archive or clearly label the v1 files** . once v2 is reviewed, the v1 files should be either moved to a `_v1/` subfolder or given a clear "SUPERSEDED" header. Two versions of the same filename in the same folder is its own source-of-truth risk.

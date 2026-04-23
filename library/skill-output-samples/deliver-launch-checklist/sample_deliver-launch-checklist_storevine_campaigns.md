@@ -7,18 +7,18 @@ skill_version: "2.0.0"
 created: 2026-02-20
 status: sample
 thread: storevine
-context: Storevine B2B ecommerce platform — Campaigns v1 GA launch checklist
+context: Storevine B2B ecommerce platform . Campaigns v1 GA launch checklist
 ---
 
 ## Scenario
 
-Four weeks before the Campaigns GA date of April 28, 2026, Storevine's growth PM compiled the launch checklist to coordinate readiness across engineering, design, legal, merchant success, and marketing. The checklist reflects the unusual compliance complexity of a production email send feature — where legal sign-off is a hard blocker and DMARC/SPF/DKIM sender authentication is a technical prerequisite for inbox delivery, not a nice-to-have.
+Four weeks before the Campaigns GA date of April 28, 2026, Storevine's growth PM compiled the launch checklist to coordinate readiness across engineering, design, legal, merchant success, and marketing. The checklist reflects the unusual compliance complexity of a production email send feature . where legal sign-off is a hard blocker and DMARC/SPF/DKIM sender authentication is a technical prerequisite for inbox delivery, not a nice-to-have.
 
 **Source Notes:**
 
-- CAN-SPAM Act (FTC, ftc.gov) and GDPR Article 6 (gdpr.eu) — the legal requirements that make the Legal & Compliance section items non-negotiable blockers rather than optional pre-launch review steps; any production email send without Legal sign-off creates direct regulatory exposure.
-- Google, "Email Sender Guidelines" (support.google.com/mail/answer/81126) and Yahoo's sender requirements (help.yahoo.com/kb/SLN27791) — the 2024 enforcement of DKIM, SPF, and DMARC authentication as prerequisites for inbox delivery to Gmail and Yahoo accounts, which represent the majority of merchant customer inboxes, making sender authentication a launch-gate infrastructure item.
-- SendGrid, "IP Warm-Up Overview" (sendgrid.com/blog/warming-up-your-ip-address/) — documents the required gradual volume ramp for new dedicated sending IPs to establish sender reputation with inbox providers before full-volume merchant sends are enabled at GA.
+- CAN-SPAM Act (FTC, ftc.gov) and GDPR Article 6 (gdpr.eu) . the legal requirements that make the Legal & Compliance section items non-negotiable blockers rather than optional pre-launch review steps; any production email send without Legal sign-off creates direct regulatory exposure.
+- Google, "Email Sender Guidelines" (support.google.com/mail/answer/81126) and Yahoo's sender requirements (help.yahoo.com/kb/SLN27791) . the 2024 enforcement of DKIM, SPF, and DMARC authentication as prerequisites for inbox delivery to Gmail and Yahoo accounts, which represent the majority of merchant customer inboxes, making sender authentication a launch-gate infrastructure item.
+- SendGrid, "IP Warm-Up Overview" (sendgrid.com/blog/warming-up-your-ip-address/) . documents the required gradual volume ramp for new dedicated sending IPs to establish sender reputation with inbox providers before full-volume merchant sends are enabled at GA.
 
 ---
 
@@ -27,7 +27,7 @@ Four weeks before the Campaigns GA date of April 28, 2026, Storevine's growth PM
 ```
 /launch-checklist
 
-Feature: Campaigns v1.0 — native email marketing for Storevine merchants
+Feature: Campaigns v1.0 . native email marketing for Storevine merchants
 Launch date: April 28, 2026
 Launch type: Major Release
 Launch owner: Growth PM
@@ -65,7 +65,7 @@ and check-in schedule.
 
 | Field | Value |
 |-------|-------|
-| What | Campaigns v1.0 — native email marketing built into the Storevine admin |
+| What | Campaigns v1.0 . native email marketing built into the Storevine admin |
 | Launch Date | April 28, 2026 |
 | Launch Type | Major Release |
 | Launch Owner | Growth PM |
@@ -99,9 +99,9 @@ and check-in schedule.
 | [ ] Test plan executed (all P1 and P2 edge cases) | QA Lead | Apr 25 | | Edge cases document used as the QA test plan; all P1 scenarios required |
 | [ ] Regression tests pass (Klaviyo integration unaffected, legacy email features intact) | QA Lead | Apr 25 | | Klaviyo API sync must remain functional; legacy email tool access unchanged |
 | [ ] UAT complete with beta merchant cohort (5 discovery merchants [fictional]) | Merchant Success | Apr 24 | | Beta access provided T-4 weeks; no blocker-level feedback before go/no-go |
-| [ ] Cross-browser testing (Chrome, Safari, Firefox — desktop) | QA Lead | Apr 24 | | Campaigns editor and send flow tested in all three |
-| [ ] Mobile testing (iOS Safari, Android Chrome — Storevine admin responsive) | QA Lead | Apr 24 | | Admin is responsive; verify guided flow and audience selection on mobile viewports |
-| [ ] Accessibility testing (WCAG 2.1 AA — keyboard navigation, screen reader) | Design Lead | Apr 24 | | Campaigns flow must meet AA; keyboard-navigable send flow required |
+| [ ] Cross-browser testing (Chrome, Safari, Firefox . desktop) | QA Lead | Apr 24 | | Campaigns editor and send flow tested in all three |
+| [ ] Mobile testing (iOS Safari, Android Chrome . Storevine admin responsive) | QA Lead | Apr 24 | | Admin is responsive; verify guided flow and audience selection on mobile viewports |
+| [ ] Accessibility testing (WCAG 2.1 AA . keyboard navigation, screen reader) | Design Lead | Apr 24 | | Campaigns flow must meet AA; keyboard-navigable send flow required |
 | [ ] Load testing complete (1,000 concurrent sends [fictional]) | Platform Squad | Apr 25 | | Stress test at 2× expected GA-day peak volume |
 | [ ] Security review complete (unsubscribe token handling, GDPR consent data) | Engineering Lead | Apr 21 | | Unsubscribe token must be signed and single-use; consent data must be encrypted at rest |
 
@@ -121,8 +121,8 @@ and check-in schedule.
 | Item | Owner | Due | Status | Notes |
 |------|-------|-----|--------|-------|
 | [ ] Launch announcement drafted and approved (in-app banner + merchant email) | Storevine Marketing | Apr 25 | | Merchant email sends on GA day to all active merchants |
-| [ ] Blog post ready (Storevine Campaigns — your store's built-in email tool) | Storevine Marketing | Apr 25 | | Published at GA; no embargo leak before Apr 28 announcement |
-| [ ] Social media content prepared (LinkedIn, X — merchant testimonial from beta) | Storevine Marketing | Apr 26 | | At least one beta merchant testimonial confirmed and approved for use |
+| [ ] Blog post ready (Storevine Campaigns . your store's built-in email tool) | Storevine Marketing | Apr 25 | | Published at GA; no embargo leak before Apr 28 announcement |
+| [ ] Social media content prepared (LinkedIn, X . merchant testimonial from beta) | Storevine Marketing | Apr 26 | | At least one beta merchant testimonial confirmed and approved for use |
 | [ ] Email campaign to all active merchants scheduled (GA day, morning send) | Storevine Marketing | Apr 26 | | Reviewed and approved by Growth PM; uses the legacy Storevine email tool (ironic, noted) |
 | [ ] Website landing page updated (Campaigns feature page live at GA) | Storevine Marketing | Apr 25 | | Page live in staging; DNS switch to prod on GA day |
 | [ ] Demo video of guided first-campaign flow created | Storevine Marketing | Apr 22 | | 90-second screen recording showing new-merchant first-send experience |
@@ -142,7 +142,7 @@ and check-in schedule.
 
 | Item | Owner | Due | Status | Notes |
 |------|-------|-----|--------|-------|
-| [ ] CAN-SPAM compliance architecture sign-off | Legal | Apr 14 | | **Hard blocker:** one-click unsubscribe, physical address, honest subject line enforcement — all must be confirmed by Legal before any production send capability is enabled |
+| [ ] CAN-SPAM compliance architecture sign-off | Legal | Apr 14 | | **Hard blocker:** one-click unsubscribe, physical address, honest subject line enforcement . all must be confirmed by Legal before any production send capability is enabled |
 | [ ] GDPR compliance reviewed (EU merchant access scoped to v1.1) | Legal | Apr 14 | | v1 GA is US merchants only; EU access requires separate Legal sign-off on consent data model (v1.1) |
 | [ ] Terms of service updated (email marketing section, subscriber data handling) | Legal | Apr 14 | | Updated ToS must be live before GA; existing merchants are notified via in-app |
 | [ ] Privacy policy updated (subscriber data collection, 7-day attribution window retention language) | Legal | Apr 14 | | Privacy policy must reflect the new attribution events data collected for each send |
@@ -174,7 +174,7 @@ and check-in schedule.
 
 ### Must Have (Blockers)
 
-- [ ] Legal sign-off on CAN-SPAM compliance architecture — no production email send capability enabled without this
+- [ ] Legal sign-off on CAN-SPAM compliance architecture . no production email send capability enabled without this
 - [ ] DMARC, SPF, and DKIM configured and verified for the Campaigns sending domain
 - [ ] All P1 edge cases passing in QA (per edge cases document)
 - [ ] Merchant Success training complete and canned responses approved
@@ -203,15 +203,15 @@ and check-in schedule.
 
 ### Rollback Steps
 
-1. Set the Campaigns feature flag to 0% — disables the Campaigns admin entry point for all merchants within 2 minutes of the flag change; in-flight sends already submitted to SendGrid are not recalled
-2. Post a Storevine status page update: "Campaigns is temporarily unavailable — we're addressing an issue and will restore access shortly"
+1. Set the Campaigns feature flag to 0% . disables the Campaigns admin entry point for all merchants within 2 minutes of the flag change; in-flight sends already submitted to SendGrid are not recalled
+2. Post a Storevine status page update: "Campaigns is temporarily unavailable . we're addressing an issue and will restore access shortly"
 3. Verify that no campaigns remain queued in the SendGrid pipeline that have not yet been submitted; drain the queue or cancel pending sends as appropriate
 4. Page the Engineering Lead and Platform Squad on-call for root cause analysis
 5. Do not re-enable the feature flag until root cause is identified and resolved; do not set flag above 0% without Head of Product approval
 
 ### Rollback Owner
 
-Engineering Lead — reachable via on-call PagerDuty [fictional]
+Engineering Lead . reachable via on-call PagerDuty [fictional]
 
 ### Rollback Time Estimate
 
@@ -231,5 +231,5 @@ Under 5 minutes (feature flag toggle to 0% takes effect within 2 minutes of chan
 | Issue | Owner | Status | Impact |
 |-------|-------|--------|--------|
 | EU merchant GDPR consent data model | Legal | In progress | Risk: if Legal review is not complete by Apr 14, EU merchant access is confirmed as v1.1; not a blocker for US GA |
-| Klaviyo partner notice email | Growth PM | Scheduled for Apr 26 | Risk: if not sent 48 hours before GA announcement, Klaviyo partnership team learns about Campaigns from a press release — medium partnership friction risk |
+| Klaviyo partner notice email | Growth PM | Scheduled for Apr 26 | Risk: if not sent 48 hours before GA announcement, Klaviyo partnership team learns about Campaigns from a press release . medium partnership friction risk |
 | Power-user merchant beta expectations | Merchant Success | Managed | Risk: discovery cohort participants have expectations from Jan interviews; Merchant Success will brief them on v1 scope at beta access (T-4 weeks) before GA |

@@ -1,8 +1,8 @@
-# Topic 2 — Deep Dive: Anatomy of Powerful AI Agent Skills
+# Topic 2 . Deep Dive: Anatomy of Powerful AI Agent Skills
 
 > **Date**: 2026-03-21
 > **Author**: Claude Opus 4.6
-> **Status**: Draft — general learning document (not pm-skills-specific)
+> **Status**: Draft . general learning document (not pm-skills-specific)
 > **Audience**: Anyone building or evaluating AI agent skills across platforms
 
 ---
@@ -28,7 +28,7 @@ Agent skills are the defining primitive of the post-MCP AI tooling era. Where MC
 
 As of March 2026, the agentskills.io standard has been adopted by 26+ platforms including Claude Code, OpenAI Codex, Gemini CLI, GitHub Copilot, Cursor, and VS Code. This means a single well-built skill can work across the entire AI coding ecosystem.
 
-But "works across platforms" and "works *well* across platforms" are different. This document is a comprehensive guide to every component that makes skills powerful — not just the minimum viable SKILL.md, but the full stack of hooks, agents, output styles, memory, and orchestration that separate a great skill from a mediocre one.
+But "works across platforms" and "works *well* across platforms" are different. This document is a comprehensive guide to every component that makes skills powerful . not just the minimum viable SKILL.md, but the full stack of hooks, agents, output styles, memory, and orchestration that separate a great skill from a mediocre one.
 
 ---
 
@@ -43,7 +43,7 @@ my-skill/
 └── SKILL.md         # Instructions with YAML frontmatter
 ```
 
-That's it. A folder with a SKILL.md. The spec is intentionally tiny — any AI platform can support this.
+That's it. A folder with a SKILL.md. The spec is intentionally tiny . any AI platform can support this.
 
 ### 2.2 The Full Skill Stack
 
@@ -108,7 +108,7 @@ Each layer solves a specific problem:
 
 ## 3. Component Deep-Dives
 
-### 3.1 SKILL.md — The Core Instructions
+### 3.1 SKILL.md . The Core Instructions
 
 **Purpose**: Tell the AI agent *how* to perform a specific task, *what* output to produce, and *when* to use this skill.
 
@@ -117,7 +117,7 @@ Each layer solves a specific problem:
 | Section | Purpose | Impact on Quality |
 |---------|---------|------------------|
 | **Frontmatter** | Machine-readable metadata (name, description, version) | Determines when skill activates |
-| **Description** (in frontmatter) | The trigger — when should this skill load? | Most important field for skill relevance |
+| **Description** (in frontmatter) | The trigger . when should this skill load? | Most important field for skill relevance |
 | **Purpose** | Human explanation of why this skill exists | Helps agent understand intent |
 | **When to Use / Not Use** | Boundaries of applicability | Prevents misuse and over-triggering |
 | **Instructions** | Step-by-step workflow | Determines output quality |
@@ -152,12 +152,12 @@ Before finalizing, check:
 ```
 
 **What makes instructions great**:
-1. **Steps with verification** — don't just list steps, include what to check after each
-2. **Decision points** — "If the user has X, do Y; otherwise do Z"
-3. **Anti-patterns** — "Do NOT do X because Y"
-4. **Concrete examples inline** — "A good metric looks like 'Reduce checkout abandonment from 73% to 55%', not 'Improve checkout'"
+1. **Steps with verification** . don't just list steps, include what to check after each
+2. **Decision points** . "If the user has X, do Y; otherwise do Z"
+3. **Anti-patterns** . "Do NOT do X because Y"
+4. **Concrete examples inline** . "A good metric looks like 'Reduce checkout abandonment from 73% to 55%', not 'Improve checkout'"
 
-### 3.2 TEMPLATE.md — The Output Contract
+### 3.2 TEMPLATE.md . The Output Contract
 
 **Purpose**: Define the exact structure of the skill's output. The template is both a contract (what sections must exist) and a guide (what goes in each section).
 
@@ -167,11 +167,11 @@ Before finalizing, check:
 
 2. **Placeholder content that shows format**: Instead of `[enter text]`, use realistic placeholder text that demonstrates the expected level of detail.
 
-3. **Conditional sections**: Mark sections as optional with clear triggers — "Include this section if the feature involves API changes."
+3. **Conditional sections**: Mark sections as optional with clear triggers . "Include this section if the feature involves API changes."
 
 4. **Cross-references**: "Refer to the Problem Statement (if available) for user impact data."
 
-### 3.3 EXAMPLE.md — The Worked Example
+### 3.3 EXAMPLE.md . The Worked Example
 
 **Purpose**: Show a complete, realistic skill output that the agent can use as a quality reference.
 
@@ -182,7 +182,7 @@ Before finalizing, check:
 3. **Annotated**: Comments explaining why certain choices were made
 4. **Varied**: If possible, multiple examples showing different contexts
 
-### 3.4 Commands — User Invocation
+### 3.4 Commands . User Invocation
 
 **Purpose**: Provide a slash command shortcut so users can invoke skills explicitly.
 
@@ -204,7 +204,7 @@ arguments:
 - **Rich description**: Help text that explains what the command produces
 - **Cross-references**: "See also: /hypothesis, /user-stories"
 
-### 3.5 Hooks — Event-Driven Automation
+### 3.5 Hooks . Event-Driven Automation
 
 **Purpose**: Run scripts automatically at specific lifecycle events without requiring user invocation.
 
@@ -224,12 +224,12 @@ arguments:
 
 **Hook design principles**:
 1. **Idempotent**: Running the hook twice should produce the same result
-2. **Fast**: Hooks block the main agent — keep execution under 1 second
+2. **Fast**: Hooks block the main agent . keep execution under 1 second
 3. **Safe**: Never delete or overwrite user files without confirmation
 4. **Silent**: Don't spam the user with notifications unless there's an action needed
 5. **Configurable**: Allow users to disable individual hooks
 
-### 3.6 Sub-Agents — Autonomous Task Workers
+### 3.6 Sub-Agents . Autonomous Task Workers
 
 **Purpose**: Spawn a fresh Claude instance with a clean context window to handle a specific task, then return results.
 
@@ -262,7 +262,7 @@ tools: [Read, Glob, Grep]  # Limit available tools
 4. **Tool restrictions**: Only give agents the tools they need
 5. **Timeout awareness**: Set expectations for how long agents take
 
-### 3.7 Output Styles — Custom Rendering
+### 3.7 Output Styles . Custom Rendering
 
 **Purpose**: Change how Claude formats its output for different audiences or contexts.
 
@@ -287,7 +287,7 @@ When this style is active:
 - The same skill produces different levels of detail
 - Professional polish is needed for external-facing documents
 
-### 3.8 MCP Servers — Programmatic Access
+### 3.8 MCP Servers . Programmatic Access
 
 **Purpose**: Expose skill capabilities as typed tools and resources via the Model Context Protocol.
 
@@ -319,7 +319,7 @@ When this style is active:
 
 **Maximize portability**: Keep critical content in SKILL.md + references/. These work everywhere.
 
-**Enhance where possible**: Add commands, hooks, agents, and styles for Claude Code. These are additive — their absence doesn't break the skill.
+**Enhance where possible**: Add commands, hooks, agents, and styles for Claude Code. These are additive . their absence doesn't break the skill.
 
 **Never depend on non-portable features for core functionality**: A skill should produce good output even without hooks or agents. These should improve the experience, not enable it.
 
@@ -329,7 +329,7 @@ When this style is active:
 
 ### 5.1 Pattern: Progressive Disclosure
 
-Load information lazily — SKILL.md provides the workflow, references/ provide detail when needed.
+Load information lazily . SKILL.md provides the workflow, references/ provide detail when needed.
 
 ```markdown
 ## Instructions
@@ -380,7 +380,7 @@ Support different invocation modes within a single skill:
 Full guided workflow with all steps.
 
 ### Quick Mode (/prd --quick)
-Abbreviated workflow — skip discovery questions, use defaults.
+Abbreviated workflow . skip discovery questions, use defaults.
 
 ### Revision Mode (/prd --revise)
 Update an existing PRD with new information.
@@ -412,7 +412,7 @@ Adjust your approach accordingly.
 
 ### 6.1 The "Kitchen Sink" Skill
 
-**Problem**: A skill that tries to do everything — analyze, plan, execute, verify, and reflect — all in one SKILL.md.
+**Problem**: A skill that tries to do everything . analyze, plan, execute, verify, and reflect . all in one SKILL.md.
 
 **Why it fails**: Token bloat, lost focus, poor output quality. The agent tries to address all instructions simultaneously and produces shallow output across all areas.
 
@@ -424,11 +424,11 @@ Adjust your approach accordingly.
 
 **Why it fails**: Triggers on everything remotely PM-related, consuming context unnecessarily. Or worse, doesn't trigger when it should because the description doesn't match the user's specific intent.
 
-**Fix**: Be precise — `description: "Create a Product Requirements Document with functional requirements, success metrics, and scope boundaries for a specific product feature"`.
+**Fix**: Be precise . `description: "Create a Product Requirements Document with functional requirements, success metrics, and scope boundaries for a specific product feature"`.
 
 ### 6.3 The "Wall of Text" Instruction
 
-**Problem**: Instructions that read like a textbook — paragraphs of theory before any actionable steps.
+**Problem**: Instructions that read like a textbook . paragraphs of theory before any actionable steps.
 
 **Why it fails**: Agents process instructions sequentially. If the first 2000 tokens are theory, the agent front-loads theory into its output instead of executing the workflow.
 
@@ -488,11 +488,11 @@ On demand:      Reference files (when specific step needs them)      ~500-2000 e
 
 ### 7.3 Token-Saving Techniques
 
-1. **Use references/ liberally** — move detail out of SKILL.md
-2. **Keep SKILL.md lean** — workflow steps, not theory
-3. **Compress examples** — use annotated snippets, not full documents
-4. **Avoid repetition** — say it once, in the right place
-5. **Use structured data** — tables are more token-efficient than paragraphs for comparisons
+1. **Use references/ liberally** . move detail out of SKILL.md
+2. **Keep SKILL.md lean** . workflow steps, not theory
+3. **Compress examples** . use annotated snippets, not full documents
+4. **Avoid repetition** . say it once, in the right place
+5. **Use structured data** . tables are more token-efficient than paragraphs for comparisons
 
 ---
 
@@ -597,15 +597,15 @@ Skills designed from the ground up for multi-agent execution:
 
 ## Sources
 
-- [agentskills.io Specification](https://agentskills.io/specification) — The open standard
-- [Claude Code Plugins Documentation](https://code.claude.com/docs/en/plugins) — Full component reference
-- [Claude Code Plugin Reference](https://code.claude.com/docs/en/plugins-reference) — Manifest schema
-- [Anthropic Agent Skills Standard](https://venturebeat.com/technology/anthropic-launches-enterprise-agent-skills-and-opens-the-standard) — Enterprise context
-- [Claude Code Extensions Explained](https://muneebsa.medium.com/claude-code-extensions-explained-skills-mcp-hooks-subagents-agent-teams-plugins-9294907e84ff) — Component overview
-- [GSD Framework](https://github.com/gsd-build/get-shit-done) — Spec-driven development reference
-- [Agent Skills in VS Code](https://code.visualstudio.com/docs/copilot/customization/agent-skills) — Copilot skills
-- [Gemini CLI Agent Skills](https://geminicli.com/docs/cli/skills/) — Gemini integration
-- [Cursor Agent Skills](https://cursor.com/docs/context/skills) — Cursor skills
-- [GitHub Copilot Agent Skills](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills) — Copilot reference
-- [OpenAI Codex CLI](https://developers.openai.com/codex/cli) — Codex capabilities
-- [AI Agent Skills Guide 2026](https://serenitiesai.com/articles/agent-skills-guide-2026) — Cross-platform guide
+- [agentskills.io Specification](https://agentskills.io/specification) . The open standard
+- [Claude Code Plugins Documentation](https://code.claude.com/docs/en/plugins) . Full component reference
+- [Claude Code Plugin Reference](https://code.claude.com/docs/en/plugins-reference) . Manifest schema
+- [Anthropic Agent Skills Standard](https://venturebeat.com/technology/anthropic-launches-enterprise-agent-skills-and-opens-the-standard) . Enterprise context
+- [Claude Code Extensions Explained](https://muneebsa.medium.com/claude-code-extensions-explained-skills-mcp-hooks-subagents-agent-teams-plugins-9294907e84ff) . Component overview
+- [GSD Framework](https://github.com/gsd-build/get-shit-done) . Spec-driven development reference
+- [Agent Skills in VS Code](https://code.visualstudio.com/docs/copilot/customization/agent-skills) . Copilot skills
+- [Gemini CLI Agent Skills](https://geminicli.com/docs/cli/skills/) . Gemini integration
+- [Cursor Agent Skills](https://cursor.com/docs/context/skills) . Cursor skills
+- [GitHub Copilot Agent Skills](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills) . Copilot reference
+- [OpenAI Codex CLI](https://developers.openai.com/codex/cli) . Codex capabilities
+- [AI Agent Skills Guide 2026](https://serenitiesai.com/articles/agent-skills-guide-2026) . Cross-platform guide

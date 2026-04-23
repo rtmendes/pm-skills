@@ -2,35 +2,36 @@
 
 ## Current State
 
-**Status:** v2.11.0 SHIPPED 2026-04-18. First pm-skills release with a canonical cross-cutting skill-family contract pattern. 6 new foundation skills (lean-canvas + 5-skill meeting-lifecycle family) governed by Meeting Skills Family Contract v1.1.0 with enforcing CI. 15 thread-aligned library samples. End-user guide. Two rounds of Codex adversarial review before tag.
-**Last Updated:** 2026-04-18
-**Release:** v2.11.0 (tag `v2.11.0`, commit `1144e03`, post-release docs commit `233d85e`; both pushed to origin). Previous: v2.10.2 prepared 2026-04-14 (never tagged), v2.10.1 shipped 2026-04-13, v2.10.0 shipped F-16/F-19/F-24, v2.9.1 shipped D-05/M-20.
+**Status:** v2.11.0 SHIPPED 2026-04-18. First pm-skills release with a canonical cross-cutting skill-family contract pattern. 6 new foundation skills (lean-canvas + 5-skill meeting-lifecycle family) governed by Meeting Skills Family Contract v1.1.0 with enforcing CI. 15 thread-aligned library samples. End-user guide. Two rounds of Codex adversarial review before tag. Post-tag: CONTEXT refreshed (73b399e), agent-component-usage design doc authored (7efff1b), GitHub repo description updated to reflect 38 skills + CI-enforced contracts. Em-dash standing-rule sweep applied in-session (73 files, 0 em-dashes remaining, commit pending).
+**Last Updated:** 2026-04-18 late
+**Release:** v2.11.0 (tag `v2.11.0`, commit `1144e03`, post-release docs commit `233d85e`, context-refresh commit `73b399e`, agent-component-usage doc commit `7efff1b`. all four pushed to origin). Previous: v2.10.2 prepared 2026-04-14 (never tagged), v2.10.1 shipped 2026-04-13, v2.10.0 shipped F-16/F-19/F-24, v2.9.1 shipped D-05/M-20.
 **Skill count:** 38 (25 phase + 7 foundation + 6 utility). +6 since v2.10.x: foundation-lean-canvas (F-26) + foundation-meeting-agenda (F-18) + foundation-meeting-brief (F-25) + foundation-meeting-recap (F-27) + foundation-meeting-synthesize (F-17) + foundation-stakeholder-update (F-28).
 **MCP:** pm-skills-mcp frozen per M-22 (v2.11.0 decision). 10 skills behind now (28 embedded vs 38 in repo). Revisit when team adoption creates demand.
-**v2.12.0 backlog:** 8 efforts queued. Sample-automation loop: F-31 (pm-skill-validate family+sample aware), F-32 (pm-skill-builder sample gen), F-33 (check-sample-standards CI), F-34 (THREAD_PROFILES.md), F-35 (pm-skill-iterate sample regen), F-36 (generic family-registration validator). Meeting-skills ecosystem: F-29 (lifecycle workflow), F-30 (adoption guide). Stub: `docs/internal/release-plans/v2.12.0/plan_v2.12.0.md`.
-**Next Step:** Verify GitHub Actions green on 1144e03 and 233d85e. Create GitHub Release from v2.11.0 tag using `docs/releases/Release_v2.11.0.md` as notes file. Verify MkDocs deploy rendered new pages. Then wait 2-4 weeks for meeting-skills usage signals before locking F-29/F-30 designs. Consider starting F-34 (THREAD_PROFILES.md) as critical-path blocker.
-**Process improvement shipped in v2.11.0:** Pre-release checklist now requires Phase 0 Adversarial Review Loop (Codex review → resolution → re-run until findings stabilize below IMPORTANT severity). Canonical template at `docs/internal/release-plans/v2.11.0/plan_v2.11_pre-release-checklist.md`.
+**v2.12.0 backlog:** 8 efforts queued. Sample-automation loop: F-31 (pm-skill-validate family+sample aware), F-32 (pm-skill-builder sample gen), F-33 (check-sample-standards CI), F-34 (THREAD_PROFILES.md), F-35 (pm-skill-iterate sample regen), F-36 (generic family-registration validator). Meeting-skills ecosystem: F-29 (lifecycle workflow), F-30 (adoption guide). Stub: `docs/internal/release-plans/v2.12.0/plan_v2.12.0.md`. v2.12.0+ design input: `docs/internal/agent-component-usage_2026-04-18.md` (11 runtime-leverage proposals with Codex compatibility assessment).
+**Uncommitted in working tree:** 73 files from em-dash standing-rule sweep. 0 em-dashes remaining in target set (1,088 swept across 78 v2.11.0-cycle files). Commit pending user review. Standing-rule memory: `memory/feedback_no-em-dashes.md` (dated 2026-04-13).
+**Next Step:** (1) Review and commit em-dash sweep. (2) Verify GitHub Actions green on `1144e03`, `233d85e`, `73b399e`, `7efff1b`. (3) Create GitHub Release from v2.11.0 tag using `docs/releases/Release_v2.11.0.md` as notes file. (4) Verify MkDocs deploy rendered new pages. Then wait 2-4 weeks for meeting-skills usage signals before locking F-29/F-30 designs. Consider starting F-34 (THREAD_PROFILES.md) as critical-path blocker. Long-term: evaluate SessionStart hook for auto-loading standing-rules memory (prevents em-dash-style cycle-scale violations).
+**Process improvement shipped in v2.11.0:** Pre-release checklist now requires Phase 0 Adversarial Review Loop (Codex review then resolution then re-run until findings stabilize below IMPORTANT severity). Canonical template at `docs/internal/release-plans/v2.11.0/plan_v2.11_pre-release-checklist.md`.
 
 ## Project Overview
 
-PM-Skills is an open source collection of Product Management skills for AI agents. Skills are reusable instruction sets that help AI assistants produce high-quality PM artifacts—PRDs, problem statements, user stories, experiment designs, and more.
+PM-Skills is an open source collection of Product Management skills for AI agents. Skills are reusable instruction sets that help AI assistants produce high-quality PM artifacts.PRDs, problem statements, user stories, experiment designs, and more.
 
 **V1 Scope:** Complete Triple Diamond framework coverage (24 skills across 6 phases) ✅
 
 ## Key Files
 
-- `README.md` — Comprehensive project overview with badges, skills inventory, quick start guides
-- `CHANGELOG.md` — Version history (Keep a Changelog format)
-- `LICENSE` — Apache 2.0 license
-- `CONTRIBUTING.md` — Contribution guidelines with curated model
-- `(internal-notes)/VISION.md` — Detailed vision document with full roadmap
-- `(internal-notes)/v1-plan/plan-v1.md` — Implementation plan with 35 issues
+- `README.md` . Comprehensive project overview with badges, skills inventory, quick start guides
+- `CHANGELOG.md` . Version history (Keep a Changelog format)
+- `LICENSE` . Apache 2.0 license
+- `CONTRIBUTING.md` . Contribution guidelines with curated model
+- `(internal-notes)/VISION.md` . Detailed vision document with full roadmap
+- `(internal-notes)/v1-plan/plan-v1.md` . Implementation plan with 35 issues
 
 ## Architecture (v2.0+ Flat Structure)
 
 ```
 pm-skills/
-├── skills/               # PM skills — FLAT structure (v2.0+)
+├── skills/               # PM skills . FLAT structure (v2.0+)
 │   ├── define-hypothesis/
 │   ├── define-problem-statement/
 │   ├── deliver-prd/
@@ -73,12 +74,12 @@ pm-skills/
   - **Plugin manifest drift fixed**: `.claude-plugin/plugin.json` and `marketplace.json` descriptions corrected from "29 skills" to "32 skills" (both had lagged since v2.10.0 utility expansion).
   - **CI extended**: `check-count-consistency.sh` / `.ps1` / `.md` now scans `.json` files too (previously `.md` only). `plugin.json` and `marketplace.json` are now covered. Added narrow exclusions for `.github/.created-issues.json` and `.github/scripts/` (npm lock + manifest).
   - **Off-by-one fix**: threshold comparison in the CI changed from `>` to `>=`. Caught a live mismatch immediately: README.md:132 claimed "10 workflows" when actual is 9. Fixed in the same session.
-  - **Memory refresh**: MEMORY.md updated — current version v2.9.0→v2.10.1, skills 31→32, utility 5→6, workflows count reconciled to 9.
+  - **Memory refresh**: MEMORY.md updated . current version v2.9.0→v2.10.1, skills 31→32, utility 5→6, workflows count reconciled to 9.
   - **Known gap left open**: historical "N skills" references in README "What's New" blocks (27/29/31) and CLAUDE.md:31 (24 skills) still trip the CI because the `v[0-9]+\.` line-level heuristic doesn't see the `<summary>v2.X.Y</summary>` on the enclosing `<details>` element. Tracked as a future CI hardening task.
 
 - **v2.10.0 In Progress** (2026-04-07–09)
-  - **F-16 shipped**: `utility-mermaid-diagrams` — 15 diagram types, dual-lens navigation (catalog + PM use-cases), syntax validity reference, 2,656 lines
-  - **F-19 shipped**: `utility-slideshow-creator` — 18 slide types, JSON deck specs, zero design decisions at generation time, generic professional theme, 766 lines
+  - **F-16 shipped**: `utility-mermaid-diagrams` . 15 diagram types, dual-lens navigation (catalog + PM use-cases), syntax validity reference, 2,656 lines
+  - **F-19 shipped**: `utility-slideshow-creator` . 18 slide types, JSON deck specs, zero design decisions at generation time, generic professional theme, 766 lines
   - **Effort briefs created**: F-17 (meeting-synthesis), F-18 (meeting-prep), F-20 (slideshow-themer), F-21 (content-voice), F-22 (prototype-creator), F-23 (prototype-styler)
   - **Comprehensive docs hygiene sweep**: 20+ files updated across two count sweeps (30→31 skills)
   - **Max-effort audit**: 9 review agents + 4 audit agents caught 24+ stale count references, mermaid syntax issues, anchor mismatches
@@ -106,58 +107,58 @@ pm-skills/
   - Documentation-only release
 
 - **v2.8.0 Released** (2026-04-03)
-  - **Theme**: Complete the PM skill lifecycle — Create → Validate → Iterate
-  - **F-10**: `utility-pm-skill-validate` — audits skills against structural conventions and quality criteria, pipe-delimited report format (`Report schema: v1`), two-tier assessment rebaselined against shipped library (`1398835`)
-  - **F-11**: `utility-pm-skill-iterate` — applies targeted improvements from feedback or validation reports, before/after preview with stale-preview guard, version bump suggestion, HISTORY.md creation at trigger point (`2f6577e`)
-  - **M-18**: CI validation scripts — `validate-skill-history` + `validate-skills-manifest` (advisory, Codex implementation) (`c099efa`)
-  - **D-03**: `docs/pm-skill-lifecycle.md` — public lifecycle guide with 4 workflow patterns (`f678344`)
-  - **D-04**: Public docs refresh — counts (29 skills, 30 commands), Skill Lifecycle Tools sections in README/QUICKSTART, mermaid diagrams across 7 files, command files, AGENTS.md entries
-  - **Governance**: `docs/internal/skill-versioning.md` — SemVer rules, HISTORY.md contract, skills-manifest.yaml format, tie-breaker rule
+  - **Theme**: Complete the PM skill lifecycle . Create → Validate → Iterate
+  - **F-10**: `utility-pm-skill-validate` . audits skills against structural conventions and quality criteria, pipe-delimited report format (`Report schema: v1`), two-tier assessment rebaselined against shipped library (`1398835`)
+  - **F-11**: `utility-pm-skill-iterate` . applies targeted improvements from feedback or validation reports, before/after preview with stale-preview guard, version bump suggestion, HISTORY.md creation at trigger point (`2f6577e`)
+  - **M-18**: CI validation scripts . `validate-skill-history` + `validate-skills-manifest` (advisory, Codex implementation) (`c099efa`)
+  - **D-03**: `docs/pm-skill-lifecycle.md` . public lifecycle guide with 4 workflow patterns (`f678344`)
+  - **D-04**: Public docs refresh . counts (29 skills, 30 commands), Skill Lifecycle Tools sections in README/QUICKSTART, mermaid diagrams across 7 files, command files, AGENTS.md entries
+  - **Governance**: `docs/internal/skill-versioning.md` . SemVer rules, HISTORY.md contract, skills-manifest.yaml format, tie-breaker rule
   - **Infrastructure**: `docs/internal/releases/` renamed to `docs/internal/release-plans/`
   - **Codex review**: Full design review with 20 findings (3 blockers resolved), pre-release consistency review with 8 findings (all fixed)
-  - **MCP synced**: pm-skills-mcp v2.8.0 — `pm_pm_skill_validate` + `pm_pm_skill_iterate`, 42 tools (29 skills + 5 workflows + 8 utilities)
+  - **MCP synced**: pm-skills-mcp v2.8.0 . `pm_pm_skill_validate` + `pm_pm_skill_iterate`, 42 tools (29 skills + 5 workflows + 8 utilities)
   - Repo: 31 skills (25 domain + 1 foundation + 5 utility), 38 commands, 9 workflows
 
 - **v2.7.0 Released** (2026-03-22)
-  - **M-12**: CI validation enhancement — extended linter, validate-agents-md, check-mcp-impact (`8d2a418`)
-  - **F-06**: deliver-acceptance-criteria skill — Given/When/Then, e-commerce checkout example (`8d2a418`)
+  - **M-12**: CI validation enhancement . extended linter, validate-agents-md, check-mcp-impact (`8d2a418`)
+  - **F-06**: deliver-acceptance-criteria skill . Given/When/Then, e-commerce checkout example (`8d2a418`)
   - **M-16**: exclude `docs/internal/**` from release ZIP (`0c2e637`)
-  - **F-05**: utility-pm-skill-builder — first utility skill, interactive builder with gap analysis, Why Gate, staging workflow (`3c50108`..`a67f144`). Codex design + implementation reviews both approved.
-  - **D-01**: `docs/pm-skill-anatomy.md` — practical guide to skill structure (`b478276`)
+  - **F-05**: utility-pm-skill-builder . first utility skill, interactive builder with gap analysis, Why Gate, staging workflow (`3c50108`..`a67f144`). Codex design + implementation reviews both approved.
+  - **D-01**: `docs/pm-skill-anatomy.md` . practical guide to skill structure (`b478276`)
   - **D-02**: 14 public docs updated for v2.7.0 accuracy, post-F-05 reconciliation (`12a30a9`)
-  - **MCP synced**: pm-skills-mcp v2.7.0 — `pm_acceptance_criteria` + `pm_pm_skill_builder`
+  - **MCP synced**: pm-skills-mcp v2.7.0 . `pm_acceptance_criteria` + `pm_pm_skill_builder`
   - **MCP sync docs**: maintainer workflow added to `docs/guides/mcp-integration.md`
   - **Release governance**: v2.2.0-v2.7.0 folders, decisions log, detailed release notes
   - **Issues closed**: #112, #113, #114, #123
   - Repo: 27 skills (25 domain + 1 foundation + 1 utility), 28 commands, 3 workflows
 
-- **v2.6.1 Shipped — Sample Library Recovery** (2026-03-04)
+- **v2.6.1 Shipped . Sample Library Recovery** (2026-03-04)
   - Sample output library moved and normalized to `library/skill-output-samples/`
   - 95 sample outputs across 25 skills, with `SAMPLE_CREATION.md` standards
   - Release packaging (`build-release.sh`/`.ps1`) now includes sample-library content
   - Release note: `docs/releases/Release_v2.6.1.md`
 
-- **v2.6.0 Shipped — Claude Plugin Manifest** (2026-03-04)
+- **v2.6.0 Shipped . Claude Plugin Manifest** (2026-03-04)
   - Added `.claude-plugin/plugin.json` for Claude plugin packaging
   - Plugin packaging validation workflow: `.github/workflows/validate-plugin.yml`
   - Release packaging enforces plugin-manifest version parity
   - Release note: `docs/releases/Release_v2.6.0.md`
 
-- **v2.5.2 Shipped — Public Doc Hygiene** (2026-03-04)
+- **v2.5.2 Shipped . Public Doc Hygiene** (2026-03-04)
   - Rewrote release-facing docs for clearer user-first language
   - Removed internal decision-ID references from public release artifacts
 
-- **v2.5.1 Shipped — Agent Workspace Canonicalization** (2026-03-04)
+- **v2.5.1 Shipped . Agent Workspace Canonicalization** (2026-03-04)
   - Canonicalized Claude agent workspace to `AGENTS/claude/` (retired `AGENTS/claude-opus*` paths)
   - Added clean-worktree release runbook: `docs/internal/release-plans/runbook_clean-worktree-cut-tag-publish.md`
 
-- **v2.5.0 Shipped — Foundation Persona Skill** (2026-03-02)
+- **v2.5.0 Shipped . Foundation Persona Skill** (2026-03-02)
   - New `skills/foundation-persona/` skill + references
   - New `/persona` command at `commands/persona.md`
   - AGENTS discovery updated for foundation classification
   - Persona archetype library and MCP exposure deferred to v2.7.0
 
-- **v2.4.x Series — Contract Lock & Governance** (2026-02-16)
+- **v2.4.x Series . Contract Lock & Governance** (2026-02-16)
   - v2.4.0: Output behavior contract and config/schema lock closed as aligned
   - v2.4.1: Release-doc consistency finalization
   - v2.4.2: Canonical delivery-plan policy and v2.5 continuity kickoff; legacy internal docs archived
@@ -165,16 +166,16 @@ pm-skills/
   - Expanded `validate-mcp-sync` with pin metadata and contract-version parity checks
   - Canonical backlog and delivery-plan governance established at `docs/internal/`
 
-- **v2.3.0 Shipped — MCP Sync Blocking Mode** (2026-02-14)
+- **v2.3.0 Shipped . MCP Sync Blocking Mode** (2026-02-14)
   - Switched `.github/workflows/validate-mcp-sync.yml` to blocking-default mode
   - Release note: `docs/releases/Release_v2.3.md`
 
-- **v2.2.0 Shipped — Guardrails & Governance** (2026-02-13)
+- **v2.2.0 Shipped . Guardrails & Governance** (2026-02-13)
   - MCP drift checker script and observe-only workflow
   - Planning persistence policy and canonical backlog governance
   - Release execution artifacts and checklists for v2.2–v2.5
 
-- **v2.1.0 Released — MCP Alignment Complete** (2026-01-28)
+- **v2.1.0 Released . MCP Alignment Complete** (2026-01-28)
   - Executed full v2.1 plan for both pm-skills and pm-skills-mcp
   - **pm-skills-mcp v2.1.0:**
     - Updated `embed-skills.js` for flat source layout
@@ -197,7 +198,7 @@ pm-skills/
   - Key decisions: flat URIs, stable tool names, frontmatter-based phase
 
 - **v2.0.2 Released** (2026-01-27)
-  - Validation workflow added (`validation.yml`) — runs on Ubuntu and Windows
+  - Validation workflow added (`validation.yml`) . runs on Ubuntu and Windows
   - Front-matter lint scripts created (`lint-skills-frontmatter.sh/ps1`)
   - Metadata cleanup: removed nested `metadata.version` from all 24 skills
   - Build scripts parameterized for versioned artifacts
@@ -226,9 +227,9 @@ pm-skills/
 - **v2.0 Planning: Structure, Output, MCP Impact** (2026-01-21)
   - Analyzed Claude Code skill discovery requirements (flat `.claude/skills/` vs hierarchical `skills/{phase}/`)
   - Created comprehensive planning documents in `AGENTS/claude/PLANNING/`:
-    - `plan_skill-structure-revamp.md` — 6 options for restructuring (keep current, flatten, phase prefix, numeric prefix, dual structure, flat+metadata)
-    - `plan_skill-output.md` — Configurable file output (always file, always prompt, configurable default)
-    - `plan_revamp-mcp.md` — Impact analysis for pm-skills-mcp (tool names, resource URIs, workflows, embed script)
+    - `plan_skill-structure-revamp.md` . 6 options for restructuring (keep current, flatten, phase prefix, numeric prefix, dual structure, flat+metadata)
+    - `plan_skill-output.md` . Configurable file output (always file, always prompt, configurable default)
+    - `plan_revamp-mcp.md` . Impact analysis for pm-skills-mcp (tool names, resource URIs, workflows, embed script)
   - Key findings:
     - Current hierarchical structure is agentskills.io compliant but NOT Claude Code auto-discoverable
     - Current `commands/` workaround enables slash commands but not skill discovery
@@ -246,13 +247,13 @@ pm-skills/
   - Part of cross-linking initiative to clarify ecosystem relationship
 
 - **Ecosystem & MCP Integration Documentation** (2026-01-21)
-  - Created `docs/reference/ecosystem.md` — comprehensive ecosystem overview ([#94](https://github.com/product-on-purpose/pm-skills/issues/94))
+  - Created `docs/reference/ecosystem.md` . comprehensive ecosystem overview ([#94](https://github.com/product-on-purpose/pm-skills/issues/94))
     - Explains pm-skills vs pm-skills-mcp relationship
     - Decision matrix for choosing between approaches
     - Feature comparison table
     - Integration patterns (file-based, MCP-based, hybrid)
     - Customization workflow and version compatibility
-  - Created `docs/guides/mcp-integration.md` — MCP integration guide ([#95](https://github.com/product-on-purpose/pm-skills/issues/95))
+  - Created `docs/guides/mcp-integration.md` . MCP integration guide ([#95](https://github.com/product-on-purpose/pm-skills/issues/95))
     - Quick start for Claude Desktop, Claude Code, Cursor, VS Code
     - Complete tool inventory (24 skill + 5 workflow + 6 utility tools)
     - Slash command to MCP tool mapping table
@@ -279,7 +280,7 @@ pm-skills/
   - Updated FAQ: clarified openskills CLI question (bug resolved, structural limitation remains)
   - Updated pm-skills-mcp README.md to mirror same structure
 
-- **v1.2.0 Released — Security & Community Infrastructure** (2026-01-20)
+- **v1.2.0 Released . Security & Community Infrastructure** (2026-01-20)
   - Added SECURITY.md with vulnerability reporting guidelines
   - Added CodeQL code scanning workflow (`.github/workflows/codeql.yml`)
   - Added Dependabot configuration for GitHub Actions and npm updates
@@ -311,17 +312,17 @@ pm-skills/
   - Ready for awesome-claude-skills PR submission
 
 - **Documentation Expansion** (2026-01-16)
-  - Verified accuracy of `docs/reference/categories.md` and `frontmatter-schema.yaml` — all 24 skills validated
+  - Verified accuracy of `docs/reference/categories.md` and `frontmatter-schema.yaml` . all 24 skills validated
   - Reorganized `/docs` with new taxonomy: `reference/`, `guides/`, `frameworks/`
   - Expanded `categories.md` from 54 → 420+ lines with diagrams, workflows, framework mappings
   - Expanded `frontmatter-schema.yaml` from 91 → 600 lines with validation rules, examples, best practices
-  - Created `docs/reference/getting-started.md` — comprehensive setup guide for 5 methods (~600 lines)
-  - Created `docs/guides/using-skills.md` — beginner to advanced usage guide (~750 lines)
-  - Created `docs/guides/authoring-pm-skills.md` — skill creation and submission guide (~850 lines)
+  - Created `docs/reference/getting-started.md` . comprehensive setup guide for 5 methods (~600 lines)
+  - Created `docs/guides/using-skills.md` . beginner to advanced usage guide (~750 lines)
+  - Created `docs/guides/authoring-pm-skills.md` . skill creation and submission guide (~850 lines)
   - Verified all framework claims in README are accurate (Teresa Torres, Christensen, Nygard)
 
 - **v1.0.2 Release & Cleanup** (2026-01-15)
-  - Created v1.0.2 tag — release workflow ran successfully
+  - Created v1.0.2 tag . release workflow ran successfully
   - Both ZIP artifacts created: pm-skills-v1.0.2.zip, pm-skills-claude-v1.0.2.zip
   - Renamed `_docs/` → `docs/` and `_templates/` → `templates/` for standard conventions
   - Created CLAUDE.md with documentation rules (never reference `(internal-notes)/` in public docs)
@@ -331,7 +332,7 @@ pm-skills/
 
 - **Open-Skills Ecosystem Integration** (2026-01-15)
   - Created detailed execution plan for publishing to open-skills ecosystem
-  - Tested openskills CLI — discovered bug with nested directories ([#48](https://github.com/numman-ali/openskills/issues/48))
+  - Tested openskills CLI . discovered bug with nested directories ([#48](https://github.com/numman-ali/openskills/issues/48))
   - Verified bug affects Anthropic's official `anthropics/skills` repo too
   - Updated README.md with accurate installation instructions (Git clone recommended)
   - Added "See It In Action" section to README.md
@@ -354,41 +355,41 @@ pm-skills/
 
 - **Phase 3 P2 Skills COMPLETE** (2026-01-14)
   - Created 11 P2 Skills with SKILL.md, TEMPLATE.md, EXAMPLE.md each:
-    - `skills/-/` — [GitHub #26](https://github.com/product-on-purpose/pm-skills/issues/26)
-    - `skills/-/` — [GitHub #27](https://github.com/product-on-purpose/pm-skills/issues/27)
-    - `skills/-/` — [GitHub #28](https://github.com/product-on-purpose/pm-skills/issues/28)
-    - `skills/-/` — [GitHub #29](https://github.com/product-on-purpose/pm-skills/issues/29)
-    - `skills/-/` — [GitHub #30](https://github.com/product-on-purpose/pm-skills/issues/30)
-    - `skills/-/` — [GitHub #31](https://github.com/product-on-purpose/pm-skills/issues/31)
-    - `skills/-/` — [GitHub #32](https://github.com/product-on-purpose/pm-skills/issues/32)
-    - `skills/-/` — [GitHub #33](https://github.com/product-on-purpose/pm-skills/issues/33)
-    - `skills/-/` — [GitHub #34](https://github.com/product-on-purpose/pm-skills/issues/34)
-    - `skills/-/` — [GitHub #35](https://github.com/product-on-purpose/pm-skills/issues/35)
-    - `skills/-/` — [GitHub #36](https://github.com/product-on-purpose/pm-skills/issues/36)
+    - `skills/-/` . [GitHub #26](https://github.com/product-on-purpose/pm-skills/issues/26)
+    - `skills/-/` . [GitHub #27](https://github.com/product-on-purpose/pm-skills/issues/27)
+    - `skills/-/` . [GitHub #28](https://github.com/product-on-purpose/pm-skills/issues/28)
+    - `skills/-/` . [GitHub #29](https://github.com/product-on-purpose/pm-skills/issues/29)
+    - `skills/-/` . [GitHub #30](https://github.com/product-on-purpose/pm-skills/issues/30)
+    - `skills/-/` . [GitHub #31](https://github.com/product-on-purpose/pm-skills/issues/31)
+    - `skills/-/` . [GitHub #32](https://github.com/product-on-purpose/pm-skills/issues/32)
+    - `skills/-/` . [GitHub #33](https://github.com/product-on-purpose/pm-skills/issues/33)
+    - `skills/-/` . [GitHub #34](https://github.com/product-on-purpose/pm-skills/issues/34)
+    - `skills/-/` . [GitHub #35](https://github.com/product-on-purpose/pm-skills/issues/35)
+    - `skills/-/` . [GitHub #36](https://github.com/product-on-purpose/pm-skills/issues/36)
   - Created GitHub labels: `phase-3`, `P2`
   - All 11 issues closed
 
 - **Phase 2 COMPLETE** (2026-01-14)
   - Created 8 P1 Skills with SKILL.md, TEMPLATE.md, EXAMPLE.md each:
-    - `skills/-/` — [GitHub #18](https://github.com/product-on-purpose/pm-skills/issues/18)
-    - `skills/-/` — [GitHub #19](https://github.com/product-on-purpose/pm-skills/issues/19)
-    - `skills/-/` — [GitHub #20](https://github.com/product-on-purpose/pm-skills/issues/20)
-    - `skills/-/` — [GitHub #21](https://github.com/product-on-purpose/pm-skills/issues/21)
-    - `skills/-/` — [GitHub #22](https://github.com/product-on-purpose/pm-skills/issues/22)
-    - `skills/-/` — [GitHub #23](https://github.com/product-on-purpose/pm-skills/issues/23)
-    - `skills/-/` — [GitHub #24](https://github.com/product-on-purpose/pm-skills/issues/24)
-    - `skills/-/` — [GitHub #25](https://github.com/product-on-purpose/pm-skills/issues/25)
+    - `skills/-/` . [GitHub #18](https://github.com/product-on-purpose/pm-skills/issues/18)
+    - `skills/-/` . [GitHub #19](https://github.com/product-on-purpose/pm-skills/issues/19)
+    - `skills/-/` . [GitHub #20](https://github.com/product-on-purpose/pm-skills/issues/20)
+    - `skills/-/` . [GitHub #21](https://github.com/product-on-purpose/pm-skills/issues/21)
+    - `skills/-/` . [GitHub #22](https://github.com/product-on-purpose/pm-skills/issues/22)
+    - `skills/-/` . [GitHub #23](https://github.com/product-on-purpose/pm-skills/issues/23)
+    - `skills/-/` . [GitHub #24](https://github.com/product-on-purpose/pm-skills/issues/24)
+    - `skills/-/` . [GitHub #25](https://github.com/product-on-purpose/pm-skills/issues/25)
   - Created GitHub labels: `phase-2`, `P1`
   - Created GitHub milestone: v0.3.0 - P1 Skills
   - All 8 issues closed
 
 - **Phase 1 COMPLETE** (2026-01-14)
   - Created 5 P0 Core Skills with SKILL.md, TEMPLATE.md, EXAMPLE.md each:
-    - `skills/-/` — [GitHub #10](https://github.com/product-on-purpose/pm-skills/issues/10)
-    - `skills/-/` — [GitHub #11](https://github.com/product-on-purpose/pm-skills/issues/11)
-    - `skills/-/` — [GitHub #12](https://github.com/product-on-purpose/pm-skills/issues/12)
-    - `skills/-/` — [GitHub #13](https://github.com/product-on-purpose/pm-skills/issues/13)
-    - `skills/-/` — [GitHub #14](https://github.com/product-on-purpose/pm-skills/issues/14)
+    - `skills/-/` . [GitHub #10](https://github.com/product-on-purpose/pm-skills/issues/10)
+    - `skills/-/` . [GitHub #11](https://github.com/product-on-purpose/pm-skills/issues/11)
+    - `skills/-/` . [GitHub #12](https://github.com/product-on-purpose/pm-skills/issues/12)
+    - `skills/-/` . [GitHub #13](https://github.com/product-on-purpose/pm-skills/issues/13)
+    - `skills/-/` . [GitHub #14](https://github.com/product-on-purpose/pm-skills/issues/14)
   - Created GitHub labels: `skill`, `phase-1`, `P0`
   - Created GitHub milestone: v0.2.0 - P0 Core Skills
 
@@ -404,8 +405,8 @@ pm-skills/
 ## Recent Infrastructure (2026-03-18)
 
 - **Context Currency Scripts (added 2026-03-18):**
-  - `scripts/check-context-currency.sh` — detects stale `AGENTS/*/CONTEXT.md` vs CHANGELOG; exit 1 on mismatch
-  - `scripts/check-context-currency.ps1` — PowerShell equivalent for Windows local use
+  - `scripts/check-context-currency.sh` . detects stale `AGENTS/*/CONTEXT.md` vs CHANGELOG; exit 1 on mismatch
+  - `scripts/check-context-currency.ps1` . PowerShell equivalent for Windows local use
   - CI step pending (A-9): `validation.yml` will run `.sh` with `continue-on-error: true`
 
 - **Slash Commands (39 total):**
@@ -416,29 +417,29 @@ pm-skills/
   - 1 foundation skill: foundation-persona (`classification: foundation`)
   - 6 utility skills: utility-pm-skill-builder, utility-pm-skill-validate, utility-pm-skill-iterate, utility-mermaid-diagrams, utility-slideshow-creator, utility-update-pm-skills (`classification: utility`)
 - **Sample Output Library:**
-  - `library/skill-output-samples/` — 95 sample outputs across 25 skills
-  - `SAMPLE_CREATION.md` — standards for sample creation
+  - `library/skill-output-samples/` . 95 sample outputs across 25 skills
+  - `SAMPLE_CREATION.md` . standards for sample creation
 - **Plugin Manifest:**
-  - `.claude-plugin/plugin.json` — Claude plugin packaging (added v2.6.0)
-  - `.github/workflows/validate-plugin.yml` — plugin validation CI
+  - `.claude-plugin/plugin.json` . Claude plugin packaging (added v2.6.0)
+  - `.github/workflows/validate-plugin.yml` . plugin validation CI
 - **Workflows (9 total):**
-  - `_workflows/triple-diamond.md` — Complete product development cycle
-  - `_workflows/lean-startup.md` — Build-Measure-Learn rapid iteration
-  - `_workflows/feature-kickoff.md` — Quick-start workflow for features
-  - `_workflows/customer-discovery.md` — Transform raw research into a validated problem
-  - `_workflows/sprint-planning.md` — Prepare sprint-ready stories from a backlog
-  - `_workflows/product-strategy.md` — Frame a major strategic initiative
-  - `_workflows/post-launch-learning.md` — Measure results and capture learnings after launch
-  - `_workflows/stakeholder-alignment.md` — Build a case for leadership buy-in
-  - `_workflows/technical-discovery.md` — Evaluate technical feasibility and architecture
+  - `_workflows/triple-diamond.md` . Complete product development cycle
+  - `_workflows/lean-startup.md` . Build-Measure-Learn rapid iteration
+  - `_workflows/feature-kickoff.md` . Quick-start workflow for features
+  - `_workflows/customer-discovery.md` . Transform raw research into a validated problem
+  - `_workflows/sprint-planning.md` . Prepare sprint-ready stories from a backlog
+  - `_workflows/product-strategy.md` . Frame a major strategic initiative
+  - `_workflows/post-launch-learning.md` . Measure results and capture learnings after launch
+  - `_workflows/stakeholder-alignment.md` . Build a case for leadership buy-in
+  - `_workflows/technical-discovery.md` . Evaluate technical feasibility and architecture
 - **Agent Discovery:**
-  - `AGENTS.md` — Universal agent discovery file with all commands listed
+  - `AGENTS.md` . Universal agent discovery file with all commands listed
 - **GitHub Actions:**
-  - `.github/workflows/validation.yml` — Runs on Ubuntu + Windows
-  - `.github/workflows/validate-mcp-sync.yml` — MCP drift check (blocking mode)
-  - `.github/workflows/validate-plugin.yml` — Plugin manifest validation
-  - `.github/workflows/release.yml` — Create releases on tag
-  - `.github/workflows/release-zips.yml` — Package ZIP artifacts
+  - `.github/workflows/validation.yml` . Runs on Ubuntu + Windows
+  - `.github/workflows/validate-mcp-sync.yml` . MCP drift check (blocking mode)
+  - `.github/workflows/validate-plugin.yml` . Plugin manifest validation
+  - `.github/workflows/release.yml` . Create releases on tag
+  - `.github/workflows/release-zips.yml` . Package ZIP artifacts
 
 ## Next Steps
 

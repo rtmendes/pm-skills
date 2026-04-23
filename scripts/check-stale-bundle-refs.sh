@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
-# check-stale-bundle-refs.sh — Terminology guard for bundles→workflows rename
+# check-stale-bundle-refs.sh . Terminology guard for bundles→workflows rename
 #
 # Scans tracked files for stale "bundle" references that should now be "workflow".
 # Excludes known exceptions (historical docs, archives, samples, drafts).
 #
 # Exit codes:
-#   0 — No stale references found (or only excluded matches)
-#   1 — Stale references detected (advisory during v2.9.0 transition)
+#   0 . No stale references found (or only excluded matches)
+#   1 . Stale references detected (advisory during v2.9.0 transition)
 #
 # Usage:
 #   ./scripts/check-stale-bundle-refs.sh          # Run from repo root

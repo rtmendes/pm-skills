@@ -55,7 +55,7 @@ The PM-Skills ecosystem provides a file-based PM skill library plus an MCP serve
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-Both products provide access to the same shipped PM-Skills library—they differ in **how** you access it.
+Both products provide access to the same shipped PM-Skills library.they differ in **how** you access it.
 
 ---
 
@@ -65,7 +65,7 @@ Both products provide access to the same shipped PM-Skills library—they differ
 
 **Repository:** [github.com/product-on-purpose/pm-skills](https://github.com/product-on-purpose/pm-skills)
 
-PM-Skills is the **source skill library**—a collection of markdown files containing professional PM frameworks, templates, and examples.
+PM-Skills is the **source skill library**.a collection of markdown files containing professional PM frameworks, templates, and examples.
 
 #### What It Provides
 
@@ -97,10 +97,10 @@ pm-skills/
 
 #### Access Methods
 
-1. **Git Clone** — Full access to all files
-2. **ZIP Download** — Upload to Claude.ai, Claude Desktop, etc.
-3. **Slash Commands** — Direct invocation in Claude Code (`/prd`)
-4. **AGENTS.md Discovery** — Auto-discovery in Copilot, Cursor, Windsurf
+1. **Git Clone** . Full access to all files
+2. **ZIP Download** . Upload to Claude.ai, Claude Desktop, etc.
+3. **Slash Commands** . Direct invocation in Claude Code (`/prd`)
+4. **AGENTS.md Discovery** . Auto-discovery in Copilot, Cursor, Windsurf
 
 #### Best For
 
@@ -129,11 +129,11 @@ PM-Skills MCP is an **MCP server** that wraps the skill library, exposing skills
 
 #### Key Capabilities
 
-- **Programmatic Access** — AI invokes tools directly via MCP protocol
-- **Zero Configuration** — Skills are embedded; just install and run
-- **Universal** — Works with any MCP-compatible client
-- **Parameterized** — Tools accept `topic`, `context`, `format`, and `includeExample`
-- **Discoverable** — `pm_list_skills`, `pm_search_skills` for skill exploration
+- **Programmatic Access** . AI invokes tools directly via MCP protocol
+- **Zero Configuration** . Skills are embedded; just install and run
+- **Universal** . Works with any MCP-compatible client
+- **Parameterized** . Tools accept `topic`, `context`, `format`, and `includeExample`
+- **Discoverable** . `pm_list_skills`, `pm_search_skills` for skill exploration
 
 #### Installation
 
@@ -309,7 +309,7 @@ code skills/deliver-prd/references/TEMPLATE.md
 
 ### 3. Use Custom Skills in Claude Code
 
-Your cloned repo works immediately—Claude Code reads from AGENTS.md.
+Your cloned repo works immediately.Claude Code reads from AGENTS.md.
 
 ### 4. Use Custom Skills in MCP
 
@@ -346,9 +346,9 @@ git merge upstream/main
 
 | PM-Skills Version | PM-Skills MCP Version | Compatibility |
 |-------------------|----------------------|---------------|
-| v2.4.x | v2.4.x | **Direct version tracking** — release versions align 1:1 across repos |
-| v2.1.x to v2.3.x | v2.1.x to v2.3.x | **Full alignment** — flat structure, frontmatter-based phase |
-| v2.0.x | v1.1.0 | Partial — nested MCP, flat pm-skills |
+| v2.4.x | v2.4.x | **Direct version tracking** . release versions align 1:1 across repos |
+| v2.1.x to v2.3.x | v2.1.x to v2.3.x | **Full alignment** . flat structure, frontmatter-based phase |
+| v2.0.x | v1.1.0 | Partial . nested MCP, flat pm-skills |
 | v1.2.x | v1.0.x | Legacy stable |
 | v1.1.x | v1.0.x | Legacy compatible |
 | v1.0.x | v1.0.x | Legacy compatible |

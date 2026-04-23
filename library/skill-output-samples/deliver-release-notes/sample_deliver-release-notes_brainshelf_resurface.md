@@ -7,7 +7,7 @@ skill_version: "2.0.0"
 created: 2026-02-20
 status: sample
 thread: brainshelf
-context: Brainshelf consumer PKM app — Resurface feature release notes for users
+context: Brainshelf consumer PKM app . Resurface feature release notes for users
 ---
 
 ## Scenario
@@ -16,9 +16,9 @@ When the Resurface feature shipped behind a feature flag on February 16, 2026, J
 
 **Source Notes:**
 
-- Intercom, "How to Write Release Notes Your Users Will Actually Read" (intercom.com/blog/how-to-write-release-notes-your-users-will-actually-read/) — the release notes writing guidelines applied in this document; Intercom's emphasis on leading with the benefit (not the feature name) and writing in the user's language shaped the tone and structure.
-- Stripe, "Stripe Changelog" (stripe.com/docs/changelog) — the changelog format referenced as a model for concise, benefit-first release communication; Stripe's practice of separating highlights from detailed changes informed the document structure.
-- Apple, "App Store Connect: Writing Great Release Notes" (developer.apple.com/help/app-store-connect/manage-app-information/write-great-release-notes/) — Apple's guidance on focusing release notes on what users can do now that they couldn't before, not on technical implementation details.
+- Intercom, "How to Write Release Notes Your Users Will Actually Read" (intercom.com/blog/how-to-write-release-notes-your-users-will-actually-read/) . the release notes writing guidelines applied in this document; Intercom's emphasis on leading with the benefit (not the feature name) and writing in the user's language shaped the tone and structure.
+- Stripe, "Stripe Changelog" (stripe.com/docs/changelog) . the changelog format referenced as a model for concise, benefit-first release communication; Stripe's practice of separating highlights from detailed changes informed the document structure.
+- Apple, "App Store Connect: Writing Great Release Notes" (developer.apple.com/help/app-store-connect/manage-app-information/write-great-release-notes/) . Apple's guidance on focusing release notes on what users can do now that they couldn't before, not on technical implementation details.
 
 ---
 
@@ -31,7 +31,7 @@ resurface release notes. feature shipped feb 16 behind flag. opt-in
 enrollment starts mar 2. writing for the in-app changelog and blog.
 
 tone: friendly, plain language. not techy. our users are knowledge
-workers who save articles — talk to them about reading, not about
+workers who save articles . talk to them about reading, not about
 algorithms.
 
 highlights: daily email digest with your most relevant saved content,
@@ -55,11 +55,11 @@ articles (better fallback to article metadata).
 
 ### Resurface: Your Morning Reading Digest
 
-You save great content to Brainshelf every week — now Brainshelf brings the best of it back to you. Resurface is a daily morning email that delivers 3–5 of your most relevant saved items, matched to what you've been reading recently. It arrives at 7:30 AM your time, ready for your morning coffee or commute. No more guilt pile — just the articles that are actually worth your time, resurfaced when you're ready to read them.
+You save great content to Brainshelf every week . now Brainshelf brings the best of it back to you. Resurface is a daily morning email that delivers 3–5 of your most relevant saved items, matched to what you've been reading recently. It arrives at 7:30 AM your time, ready for your morning coffee or commute. No more guilt pile . just the articles that are actually worth your time, resurfaced when you're ready to read them.
 
 ### One-Click Reading, Zero Effort
 
-Every item in the digest links directly to the original article. Tap it, and you're reading — no app to open, no library to browse. If daily is too much, switch to three times a week from the email itself. And if you change your mind, unsubscribe with a single click.
+Every item in the digest links directly to the original article. Tap it, and you're reading . no app to open, no library to browse. If daily is too much, switch to three times a week from the email itself. And if you change your mind, unsubscribe with a single click.
 
 ---
 
@@ -71,7 +71,7 @@ Every item in the digest links directly to the original article. Tap it, and you
 
 - **Cadence setting:** Choose between daily delivery (the default) or three times per week (Monday, Wednesday, Friday). Change anytime from the email footer or from Settings.
 
-- **One-click unsubscribe:** Every digest email includes an unsubscribe link in the footer. One tap and you're done — no account settings to navigate, no confirmation hoops.
+- **One-click unsubscribe:** Every digest email includes an unsubscribe link in the footer. One tap and you're done . no account settings to navigate, no confirmation hoops.
 
 ## Improvements
 
@@ -93,7 +93,7 @@ Every item in the digest links directly to the original article. Tap it, and you
 
 ## Coming Soon
 
-We're exploring ways to bring resurfacing into the Brainshelf app itself — not just email — so you can rediscover saved content wherever you prefer. We're also looking at smarter ways to organize your library so the guilt pile feels a little less guilty. Stay tuned.
+We're exploring ways to bring resurfacing into the Brainshelf app itself . not just email . so you can rediscover saved content wherever you prefer. We're also looking at smarter ways to organize your library so the guilt pile feels a little less guilty. Stay tuned.
 
 ---
 

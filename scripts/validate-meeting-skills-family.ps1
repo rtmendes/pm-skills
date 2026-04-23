@@ -129,7 +129,7 @@ foreach ($skill in $FamilySkills) {
         }
     }
 
-    # Check 5: TEMPLATE.md has Shareable summary section (except stakeholder-update which requires Shareable update instead — v1.1.0)
+    # Check 5: TEMPLATE.md has Shareable summary section (except stakeholder-update which requires Shareable update instead . v1.1.0)
     if ($NoShareableSummary -contains $skill) {
         if ($TemplateContent -notmatch '(?im)^\s*#{1,6}\s+Shareable update') {
             FailSkill $skill "TEMPLATE.md missing '## Shareable update' section (required by family contract v1.1.0 for stakeholder-update)"

@@ -38,7 +38,7 @@ Understand why developers report spending 15-25% of their time on CI/CD-related 
 
 **Prevalence:** 6 of 6 participants
 
-**Summary:** Every participant described CI/CD configuration files (typically YAML) as the single biggest source of friction. Pipelines are configured through hundreds of lines of YAML that is difficult to debug, impossible to test locally, and requires push-and-pray iteration. Developers estimate they spend 30-60 minutes per pipeline change just waiting for CI runs to validate YAML syntax and logic. The configuration language is powerful but unforgiving — a single indentation error can break a pipeline, and the error messages are cryptic.
+**Summary:** Every participant described CI/CD configuration files (typically YAML) as the single biggest source of friction. Pipelines are configured through hundreds of lines of YAML that is difficult to debug, impossible to test locally, and requires push-and-pray iteration. Developers estimate they spend 30-60 minutes per pipeline change just waiting for CI runs to validate YAML syntax and logic. The configuration language is powerful but unforgiving . a single indentation error can break a pipeline, and the error messages are cryptic.
 
 **Evidence:**
 - P1: "I've spent entire afternoons debugging YAML indentation. You change one line, push, wait 8 minutes for the pipeline to start, it fails with some cryptic error, and you do it again. It's like programming with a 10-minute compile time."
@@ -49,7 +49,7 @@ Understand why developers report spending 15-25% of their time on CI/CD-related 
 
 **Prevalence:** 6 of 6 participants
 
-**Summary:** When pipelines fail, developers struggle to understand why. Log output is voluminous (thousands of lines), error messages point to infrastructure issues rather than code problems, and there's no clear distinction between "your code broke something" and "the pipeline environment had an issue." Developers described a pattern of re-running failed pipelines hoping the issue is transient (flaky tests, network timeouts) before investigating — suggesting they don't trust the signal.
+**Summary:** When pipelines fail, developers struggle to understand why. Log output is voluminous (thousands of lines), error messages point to infrastructure issues rather than code problems, and there's no clear distinction between "your code broke something" and "the pipeline environment had an issue." Developers described a pattern of re-running failed pipelines hoping the issue is transient (flaky tests, network timeouts) before investigating . suggesting they don't trust the signal.
 
 **Evidence:**
 - P2: "My first instinct when a pipeline fails is to just hit retry. Half the time it works. That tells you something about how reliable these things are."
@@ -81,40 +81,40 @@ Understand why developers report spending 15-25% of their time on CI/CD-related 
 ## Notable Quotes
 
 > "I've spent entire afternoons debugging YAML indentation. It's like programming with a 10-minute compile time."
-> — P1, Senior Backend Engineer, platform team
+> . P1, Senior Backend Engineer, platform team
 
 > "My first instinct when a pipeline fails is to just hit retry. Half the time it works."
-> — P2, Frontend Developer, on pipeline reliability
+> . P2, Frontend Developer, on pipeline reliability
 
 > "Our main pipeline YAML is 1,200 lines. Nobody fully understands it."
-> — P3, DevOps Engineer, on configuration complexity
+> . P3, DevOps Engineer, on configuration complexity
 
 > "I have a 200-line bash script called 'pretend-to-be-ci.sh' that I run before every push because I don't trust that local passing means CI will pass."
-> — P1, on local-remote environment drift
+> . P1, on local-remote environment drift
 
 > "We lost our DevOps engineer six months ago. We've been afraid to change the pipeline since."
-> — P5, Engineering Manager, on tribal knowledge
+> . P5, Engineering Manager, on tribal knowledge
 
 > "I was told to 'just add a step to the pipeline.' I spent two days on it."
-> — P6, Junior Developer, on onboarding difficulty
+> . P6, Junior Developer, on onboarding difficulty
 
 ## Insights
 
-### Insight 1: CI/CD has a "inner loop" problem — the feedback loop is too slow
+### Insight 1: CI/CD has a "inner loop" problem . the feedback loop is too slow
 
-The fundamental issue with YAML-based CI/CD configuration is that developers can't get fast feedback. Every change requires a commit, push, and full pipeline execution to validate. This 5-15 minute feedback loop makes CI/CD configuration feel like writing code in the 1990s before instant compilation. Developers have invented workarounds (local simulation scripts, YAML linters, dry-run modes) that partially address this, but the core problem is that pipeline logic isn't locally executable. The industry solved this for application code decades ago with local dev servers and hot reload — CI/CD configuration hasn't caught up.
+The fundamental issue with YAML-based CI/CD configuration is that developers can't get fast feedback. Every change requires a commit, push, and full pipeline execution to validate. This 5-15 minute feedback loop makes CI/CD configuration feel like writing code in the 1990s before instant compilation. Developers have invented workarounds (local simulation scripts, YAML linters, dry-run modes) that partially address this, but the core problem is that pipeline logic isn't locally executable. The industry solved this for application code decades ago with local dev servers and hot reload . CI/CD configuration hasn't caught up.
 
-**Implication:** Build a local pipeline execution environment that runs the same pipeline logic on a developer's machine in seconds, not minutes. This is the highest-leverage feature we can offer — it transforms CI/CD from a "push and pray" workflow to an interactive development experience.
+**Implication:** Build a local pipeline execution environment that runs the same pipeline logic on a developer's machine in seconds, not minutes. This is the highest-leverage feature we can offer . it transforms CI/CD from a "push and pray" workflow to an interactive development experience.
 
 ### Insight 2: Pipeline failures need triage, not just logs
 
-Developers don't need more log output — they need someone (or something) to tell them what went wrong and whether it's their fault. The current experience dumps thousands of lines of raw output and expects the developer to find the needle in the haystack. The first question every developer asks when a pipeline fails is: "Is this my code or is CI being flaky?" An intelligent triage layer that categorizes failures (code error, flaky test, infrastructure issue, configuration problem) and highlights the relevant lines would eliminate the most wasteful part of the CI/CD experience.
+Developers don't need more log output . they need someone (or something) to tell them what went wrong and whether it's their fault. The current experience dumps thousands of lines of raw output and expects the developer to find the needle in the haystack. The first question every developer asks when a pipeline fails is: "Is this my code or is CI being flaky?" An intelligent triage layer that categorizes failures (code error, flaky test, infrastructure issue, configuration problem) and highlights the relevant lines would eliminate the most wasteful part of the CI/CD experience.
 
 **Implication:** Build AI-powered failure triage that classifies pipeline failures into categories, highlights the relevant error lines, and provides actionable next steps. Surface flaky test patterns and infrastructure reliability metrics so developers can trust the signal.
 
 ### Insight 3: CI/CD needs to be a product, not a configuration file
 
-Pipeline configuration has become a programming discipline unto itself — but without any of the tooling that makes programming productive (IDE support, type checking, testing frameworks, debugging tools, documentation generators). The fact that teams maintain 1,200-line YAML files with tribal knowledge and no tests is a product failure, not a user failure. The path forward isn't a better YAML editor — it's abstracting away YAML entirely for common patterns while providing a real programming interface for advanced use cases.
+Pipeline configuration has become a programming discipline unto itself . but without any of the tooling that makes programming productive (IDE support, type checking, testing frameworks, debugging tools, documentation generators). The fact that teams maintain 1,200-line YAML files with tribal knowledge and no tests is a product failure, not a user failure. The path forward isn't a better YAML editor . it's abstracting away YAML entirely for common patterns while providing a real programming interface for advanced use cases.
 
 **Implication:** Offer opinionated pipeline templates that cover 80% of use cases with zero YAML (detect framework, auto-configure). For the 20% that need customization, provide a typed SDK (TypeScript/Python) with IDE autocomplete, local execution, and unit testing for pipeline logic.
 
@@ -150,10 +150,10 @@ Participants were recruited from our existing customer base and developer commun
 
 ### Limitations
 
-- All participants use our platform or a direct competitor — non-users of CI/CD platforms (e.g., manual deployment teams) were not included
-- Skewed toward web/SaaS development — mobile, embedded, and ML pipeline workflows may differ significantly
+- All participants use our platform or a direct competitor . non-users of CI/CD platforms (e.g., manual deployment teams) were not included
+- Skewed toward web/SaaS development . mobile, embedded, and ML pipeline workflows may differ significantly
 - Observation sessions were retrospective (recalling a recent debugging session) rather than live, introducing recall bias
-- No participants from enterprises with dedicated platform engineering teams (50+ engineers) — their experience may be substantially different
+- No participants from enterprises with dedicated platform engineering teams (50+ engineers) . their experience may be substantially different
 - Self-reported time estimates (15-25% of time on CI/CD) were not validated with time-tracking data
 
 ### Raw Notes

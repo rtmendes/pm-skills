@@ -9,7 +9,7 @@ Also prints a nav YAML snippet for mkdocs.yml.
 Usage:
     python scripts/generate-skill-pages.py
 
-No external dependencies — uses only the Python standard library.
+No external dependencies . uses only the Python standard library.
 """
 
 import os
@@ -520,7 +520,7 @@ def generate_phase_index(group: str, skills: list) -> None:
     lines.append(f"|-------|-------------|---------|")
 
     for s in sorted(skills, key=lambda x: x["name"]):
-        cmd_str = f"`/{s['command']}`" if s["command"] else "—"
+        cmd_str = f"`/{s['command']}`" if s["command"] else "."
         desc = s["description"][:80] + "..." if len(s["description"]) > 80 else s["description"]
         lines.append(f"| [{s['name']}]({s['name']}.md) | {desc} | {cmd_str} |")
 

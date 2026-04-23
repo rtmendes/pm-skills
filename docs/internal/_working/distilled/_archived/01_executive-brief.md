@@ -7,7 +7,7 @@
 
 ## The One-Line Summary
 
-pm-skills has the best PM skill content in the AI agent ecosystem — now it needs the infrastructure to become a workspace, not just a library.
+pm-skills has the best PM skill content in the AI agent ecosystem . now it needs the infrastructure to become a workspace, not just a library.
 
 ---
 
@@ -15,7 +15,7 @@ pm-skills has the best PM skill content in the AI agent ecosystem — now it nee
 
 ### Decision: Plugin-integrated project workspace
 
-PMs work on 3-8 projects simultaneously. pm-skills creates artifacts in isolation — no project grouping, no context persistence, no document relationships. This is the #1 gap.
+PMs work on 3-8 projects simultaneously. pm-skills creates artifacts in isolation . no project grouping, no context persistence, no document relationships. This is the #1 gap.
 
 **What to build**: A `/project` command + workspace directory structure, integrated into the existing pm-skills plugin. Not a separate repo.
 
@@ -37,15 +37,15 @@ PMs work on 3-8 projects simultaneously. pm-skills creates artifacts in isolatio
 
 **Why not GSD's model?** GSD is single-project-per-repo. PMs need multi-project. But GSD's state management patterns (STATE.md, ROADMAP.md, milestone archiving) should be borrowed.
 
-**Key risk**: Hook-based auto-save of skill output is platform-specific (Claude Code only). Design the workspace so it works without hooks — automation is a convenience layer, not a requirement.
+**Key risk**: Hook-based auto-save of skill output is platform-specific (Claude Code only). Design the workspace so it works without hooks . automation is a convenience layer, not a requirement.
 
 ---
 
 ## 2. Holistic Platform Value
 
-### Decision: Layered architecture — cross-platform core + Claude Code extensions
+### Decision: Layered architecture . cross-platform core + Claude Code extensions
 
-pm-skills uses 2 of 8 available Claude Code component types (skills + commands). The expansion should add hooks, agents, and output styles — but only as an enhancement layer, not as a dependency.
+pm-skills uses 2 of 8 available Claude Code component types (skills + commands). The expansion should add hooks, agents, and output styles . but only as an enhancement layer, not as a dependency.
 
 **Three layers**:
 
@@ -56,14 +56,14 @@ pm-skills uses 2 of 8 available Claude Code component types (skills + commands).
 | **MCP** | pm-skills-mcp server | MCP-enabled platforms |
 
 **Highest-value Claude Code extensions**:
-1. **SessionStart hook** — auto-load active project context (eliminates "re-explain everything")
-2. **PostToolUse hook** — auto-save artifacts to project directory (eliminates "where did my PRD go?")
-3. **`pm-executive` output style** — concise, decision-focused formatting for stakeholder-facing artifacts
-4. **Transcript processing agent** — sub-agent that extracts insights from meeting notes and maps them to project artifacts
+1. **SessionStart hook** . auto-load active project context (eliminates "re-explain everything")
+2. **PostToolUse hook** . auto-save artifacts to project directory (eliminates "where did my PRD go?")
+3. **`pm-executive` output style** . concise, decision-focused formatting for stakeholder-facing artifacts
+4. **Transcript processing agent** . sub-agent that extracts insights from meeting notes and maps them to project artifacts
 
 **Platform comparison finding**: pm-skills works on 26+ platforms via agentskills.io. No competitor combines PM domain expertise + cross-platform portability + open source. The strategic moat is content quality, not platform lock-in.
 
-**What NOT to build**: Agent Teams (multi-agent coordination) — cool but rarely needed. Full PM delivery framework — let the model emerge from usage. Enterprise features — premature at current community scale.
+**What NOT to build**: Agent Teams (multi-agent coordination) . cool but rarely needed. Full PM delivery framework . let the model emerge from usage. Enterprise features . premature at current community scale.
 
 ---
 
@@ -84,8 +84,8 @@ Two independent value streams that are often conflated:
 - Output: concrete draft files (SKILL.md, TEMPLATE.md, EXAMPLE.md, command) ready for PR
 
 **Two skills confirmed** (from prior Opus/GPT-5.4 convergence):
-- `/pm-skill-builder` (utility) — repo-specific, ships first
-- `/skill-builder` (foundation) — PM-oriented skill design for any context, ships second
+- `/pm-skill-builder` (utility) . repo-specific, ships first
+- `/skill-builder` (foundation) . PM-oriented skill design for any context, ships second
 
 **Web/Codex feasibility**: Claude Code CLI handles the full lifecycle. Claude Code web handles scaffold + author. Codex can autonomously generate skill files from a completed spec. CI handles validation regardless of authoring platform.
 
@@ -97,7 +97,7 @@ Two independent value streams that are often conflated:
 
 ### Decision: Utility infrastructure before new domain skills
 
-**The biggest gap isn't missing PM skills — it's missing infrastructure.** The 6 domain phases are 70-90% covered. Foundation and utility skills are 0% covered. Building infrastructure multiplies the value of every existing skill.
+**The biggest gap isn't missing PM skills . it's missing infrastructure.** The 6 domain phases are 70-90% covered. Foundation and utility skills are 0% covered. Building infrastructure multiplies the value of every existing skill.
 
 **Priority-ordered backlog**:
 

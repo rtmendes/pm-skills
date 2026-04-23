@@ -2,7 +2,7 @@
 
 > **Purpose**: Round-trip review document. Claude Opus wrote the prompt → Codex reviews → Claude responds.
 > **Date started**: 2026-03-22
-> **Current state**: Complete — all 3 parts filled. 9 action items identified (5 blocking).
+> **Current state**: Complete . all 3 parts filled. 9 action items identified (5 blocking).
 
 ---
 
@@ -10,7 +10,7 @@
 
 **What is pm-skills?** A library of 25 open-source PM skills for AI agents, following the [agentskills.io](https://agentskills.io/specification) specification. 26 slash commands, 3 workflows, cross-platform (26+ platforms). Apache 2.0 licensed.
 
-**What is Knowledge OS?** A separate Product on Purpose initiative for Layer 2 artifact management — project workspace, document linking, context persistence. It was separated from pm-skills on 2026-03-21 when the maintainer recognized workspace features are universal, not PM-specific. Exploration docs live at `docs/internal/_working/knowledge/`.
+**What is Knowledge OS?** A separate Product on Purpose initiative for Layer 2 artifact management . project workspace, document linking, context persistence. It was separated from pm-skills on 2026-03-21 when the maintainer recognized workspace features are universal, not PM-specific. Exploration docs live at `docs/internal/_working/knowledge/`.
 
 **What happened before this review?**
 1. A prior session (2026-03-21) created 4 distilled planning documents from 11 exploration docs
@@ -33,8 +33,8 @@
 | `04_next-efforts.md` | Canonical backlog | Revised: CI reframed, .sh/.ps1 convention, effort-day timeline, plugin.json path fixed |
 
 **Archived reference** (for context, not review):
-- `_archived/distilled_reviewed-by-codex.md` — prior review that identified the supersession problem
-- `_archived/01_executive-brief.md`, `02_action-plan.md`, `03_notable-repos-and-tools.md` — superseded v1 files
+- `_archived/distilled_reviewed-by-codex.md` . prior review that identified the supersession problem
+- `_archived/01_executive-brief.md`, `02_action-plan.md`, `03_notable-repos-and-tools.md` . superseded v1 files
 
 ### Review Goal 1: Verify the supersession problem is resolved
 
@@ -91,7 +91,7 @@ After working through the guided checks above: **what problems exist that this p
 4. **Cross-document consistency**
 5. **Structural recommendations**
 6. **Anything we missed**
-7. **Overall verdict** — is the folder execution-safe?
+7. **Overall verdict** . is the folder execution-safe?
 
 ### Ground Truth References
 
@@ -102,7 +102,7 @@ After working through the guided checks above: **what problems exist that this p
 | "3 workflows" | 3 files in `_workflows/` |
 | plugin.json location | `.claude-plugin/plugin.json` (NOT repo root) |
 | Existing CI | `validation.yml` + `lint-skills-frontmatter.sh/.ps1` + `validate-commands.sh/.ps1` |
-| Script convention | `.sh + .ps1 + .md` — no `.js` scripts exist |
+| Script convention | `.sh + .ps1 + .md` . no `.js` scripts exist |
 | Existing linter checks | frontmatter, name, version, updated, license, phase, classification, TEMPLATE.md, EXAMPLE.md |
 
 ---
@@ -371,14 +371,14 @@ After that, yes, the folder should be execution-safe.
 
 ### Overall Assessment
 
-This is a strong, thorough review. Codex found 3 things I missed entirely (release automation is also partially existing, the `check-context-currency.sh` script omission, `.gitkeep` count ambiguity) and correctly identified that Fix #2 was incomplete. The naming collision finding was the most consequential — and has since been resolved by a human decision (see update below).
+This is a strong, thorough review. Codex found 3 things I missed entirely (release automation is also partially existing, the `check-context-currency.sh` script omission, `.gitkeep` count ambiguity) and correctly identified that Fix #2 was incomplete. The naming collision finding was the most consequential . and has since been resolved by a human decision (see update below).
 
 ### Post-Review Update: Builder Naming Resolved
 
 After Codex's review, the maintainer made the naming decision that resolves Codex's "single biggest blocker":
 
-- **`utility-pm-skill-builder`** / `/pm-skill-builder` — repo-specific builder for creating skills aligned with pm-skills architecture (6 phases, 3-file pattern, conventions). Ships in Phase 1.
-- **`utility-agent-skill-builder`** / `/agent-skill-builder` — general PM capability for creating agent skills in any context, following agentskills.io spec. Ships in Phase 3. Also in pm-skills, because creating agent skills is a modern PM activity.
+- **`utility-pm-skill-builder`** / `/pm-skill-builder` . repo-specific builder for creating skills aligned with pm-skills architecture (6 phases, 3-file pattern, conventions). Ships in Phase 1.
+- **`utility-agent-skill-builder`** / `/agent-skill-builder` . general PM capability for creating agent skills in any context, following agentskills.io spec. Ships in Phase 3. Also in pm-skills, because creating agent skills is a modern PM activity.
 
 This resolves Codex findings in §1 (supersession verdict), §4 (naming consistency), and §7 (blocker #2). All four documents have been updated to reflect this decision.
 
@@ -391,49 +391,49 @@ Additionally, all other blocking items from the original action table have been 
 
 ### Finding-by-Finding Response
 
-#### 1. Supersession verdict — "Mostly resolved"
+#### 1. Supersession verdict . "Mostly resolved"
 
-**Agree.** The naming collision Codex identified was real. **Now resolved** — `/pm-skill-builder` and `/agent-skill-builder` are distinct names for distinct scopes.
+**Agree.** The naming collision Codex identified was real. **Now resolved** . `/pm-skill-builder` and `/agent-skill-builder` are distinct names for distinct scopes.
 
 #### 2. 04_next-efforts.md audit
 
-**Effort 1 inventory incomplete** — **Agree, fixed.** Added `check-context-currency.sh/.ps1` to the inventory.
+**Effort 1 inventory incomplete** . **Agree, fixed.** Added `check-context-currency.sh/.ps1` to the inventory.
 
-**Effort 5 also has the greenfield problem** — **Agree, fixed.** Reframed as "Release Automation Enhancement" with "What already exists" inventory, same pattern as Effort 1.
+**Effort 5 also has the greenfield problem** . **Agree, fixed.** Reframed as "Release Automation Enhancement" with "What already exists" inventory, same pattern as Effort 1.
 
-**Effort 5 estimate "2+ days"** — **Agree, fixed.** Updated to "2+ days" in status table.
+**Effort 5 estimate "2+ days"** . **Agree, fixed.** Updated to "2+ days" in status table.
 
-**Marketplace URL** — **Agree.** Should note the canonical in-app paths alongside the shortlink. Not yet done — non-blocking.
+**Marketplace URL** . **Agree.** Should note the canonical in-app paths alongside the shortlink. Not yet done . non-blocking.
 
 #### 3. Contradiction fix verification
 
-**Fix 2 "not fully fixed"** — **Agree, now fixed.** The header table has been rewritten to say "replaced foundation skill builder with `utility-agent-skill-builder`" instead of "removed."
+**Fix 2 "not fully fixed"** . **Agree, now fixed.** The header table has been rewritten to say "replaced foundation skill builder with `utility-agent-skill-builder`" instead of "removed."
 
 #### 4. Cross-document consistency
 
-**Release automation `.js` vs `.sh` drift in 02** — **Agree, fixed.** Section rewritten with enhancement framing and `.sh/.ps1/.md` convention.
+**Release automation `.js` vs `.sh` drift in 02** . **Agree, fixed.** Section rewritten with enhancement framing and `.sh/.ps1/.md` convention.
 
-**Execution order drift (acceptance-criteria placement)** — **Agree.** Minor, not yet addressed. 04 is canonical.
+**Execution order drift (acceptance-criteria placement)** . **Agree.** Minor, not yet addressed. 04 is canonical.
 
-**Release Please vs manual tag in 03 vs 04** — **Agree.** Not yet reconciled — non-blocking.
+**Release Please vs manual tag in 03 vs 04** . **Agree.** Not yet reconciled . non-blocking.
 
-**Naming inconsistency** — **Resolved.** See Post-Review Update above.
+**Naming inconsistency** . **Resolved.** See Post-Review Update above.
 
 #### 5. Structural recommendations
 
-**02 should become sequencing-only** — **Agree.** Not yet acted on. This is the one remaining structural improvement.
+**02 should become sequencing-only** . **Agree.** Not yet acted on. This is the one remaining structural improvement.
 
-**03 should move to references** — **Agree in principle, defer.**
+**03 should move to references** . **Agree in principle, defer.**
 
-**00_README.md** — **Agree.** Recommended three times. Should just create it.
+**00_README.md** . **Agree.** Recommended three times. Should just create it.
 
 #### 6. Anything we missed
 
-**`.gitkeep` count ambiguity** — **Noted.** Minor.
+**`.gitkeep` count ambiguity** . **Noted.** Minor.
 
-**Release automation reframing** — **Fixed.**
+**Release automation reframing** . **Fixed.**
 
-**Builder naming blocker** — **Resolved.**
+**Builder naming blocker** . **Resolved.**
 
 ### Updated Action Status
 
@@ -443,10 +443,10 @@ Additionally, all other blocking items from the original action table have been 
 | 2 | Fix 02_v2 release automation section | **Done** |
 | 3 | Reframe Effort 5 in 04 | **Done** |
 | 4 | Add `check-context-currency.sh` to CI inventory | **Done** |
-| 5 | Resolve builder naming across all docs | **Done** — human decided, all docs updated |
-| 6 | Reconcile 03_v2 Release Please annotation | Not done — non-blocking |
-| 7 | Add marketplace in-app URLs in 04 | Not done — non-blocking |
-| 8 | Create `00_README.md` folder index | Not done — non-blocking |
-| 9 | Strip 02_v2 to sequencing-only | Not done — non-blocking |
+| 5 | Resolve builder naming across all docs | **Done** . human decided, all docs updated |
+| 6 | Reconcile 03_v2 Release Please annotation | Not done . non-blocking |
+| 7 | Add marketplace in-app URLs in 04 | Not done . non-blocking |
+| 8 | Create `00_README.md` folder index | Not done . non-blocking |
+| 9 | Strip 02_v2 to sequencing-only | Not done . non-blocking |
 
 **All 5 blocking items are resolved.** Items 6-9 are polish that can happen anytime.

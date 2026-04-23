@@ -2,7 +2,7 @@
 
 ## Overview
 
-A utility skill that helps PMs produce self-contained HTML prototypes for communicating product concepts, user flows, and interaction patterns. Every prototype is a single-file, dependency-free HTML document that opens in any browser — no server, no build step, no framework. Designed for the agentic workflow: Claude generates the complete HTML file from a structured brief. The prototypes are communication artifacts, not production code.
+A utility skill that helps PMs produce self-contained HTML prototypes for communicating product concepts, user flows, and interaction patterns. Every prototype is a single-file, dependency-free HTML document that opens in any browser . no server, no build step, no framework. Designed for the agentic workflow: Claude generates the complete HTML file from a structured brief. The prototypes are communication artifacts, not production code.
 
 ## Skill Identity
 
@@ -30,7 +30,7 @@ The skill's greatest value is helping PMs scope what to prototype. Most prototyp
 Prototypes exist on a spectrum: static mockup, clickable flow, interactive demo. The skill defines three tiers with clear boundaries so PMs choose the right complexity level. Over-engineering a prototype wastes time; under-engineering one fails to communicate.
 
 ### 5. Accessible by Default
-Even disposable prototypes should demonstrate accessible patterns — semantic HTML, keyboard navigation, focus indicators, contrast. This sets expectations for the real implementation and avoids communicating inaccessible patterns to engineering.
+Even disposable prototypes should demonstrate accessible patterns . semantic HTML, keyboard navigation, focus indicators, contrast. This sets expectations for the real implementation and avoids communicating inaccessible patterns to engineering.
 
 ---
 
@@ -55,7 +55,7 @@ name: utility-prototype-creator
 description: >-
   Generates self-contained, single-file HTML prototypes from structured briefs
   for communicating product concepts, user flows, and interaction patterns.
-  No server, no build, no framework — opens in any browser. Supports three
+  No server, no build, no framework . opens in any browser. Supports three
   interaction tiers (static, clickable, interactive) with accessible markup
   and optional custom styling via utility-prototype-styler.
 version: "1.0.0"
@@ -84,35 +84,35 @@ metadata:
    - Usability testing that requires realistic performance or data volume
 
 3. **Interaction Tiers** (~25 lines)
-   - **Tier 1 — Static Mockup**: Visual layout only. No JavaScript. Use for: early concept communication, layout exploration, stakeholder alignment on visual direction.
-   - **Tier 2 — Clickable Flow**: Navigation between states via tabs, modals, or view switching. Minimal JavaScript. Use for: user flow demonstration, screen-to-screen transitions, happy path walkthrough.
-   - **Tier 3 — Interactive Demo**: Form interactions, data filtering, state changes, animations. Moderate JavaScript. Use for: interaction pattern demonstration, input/output flows, dynamic content behavior.
+   - **Tier 1 . Static Mockup**: Visual layout only. No JavaScript. Use for: early concept communication, layout exploration, stakeholder alignment on visual direction.
+   - **Tier 2 . Clickable Flow**: Navigation between states via tabs, modals, or view switching. Minimal JavaScript. Use for: user flow demonstration, screen-to-screen transitions, happy path walkthrough.
+   - **Tier 3 . Interactive Demo**: Form interactions, data filtering, state changes, animations. Moderate JavaScript. Use for: interaction pattern demonstration, input/output flows, dynamic content behavior.
    - Decision guide: "If you're deciding, start with Tier 2. Drop to Tier 1 if layout is the question. Escalate to Tier 3 only if the interaction IS the thing you're communicating."
 
 4. **Prototype Scoping** (~20 lines)
-   - **Must Demonstrate** — The core concept or interaction that motivated the prototype
-   - **Can Describe in Comments** — Secondary features noted as HTML comments ("<!-- In production, this would filter by date range -->")
-   - **Out of Scope** — Explicitly excluded to prevent scope creep
+   - **Must Demonstrate** . The core concept or interaction that motivated the prototype
+   - **Can Describe in Comments** . Secondary features noted as HTML comments ("<!-- In production, this would filter by date range -->")
+   - **Out of Scope** . Explicitly excluded to prevent scope creep
    - Scoping worksheet included (part of TEMPLATE.md)
 
 5. **Instructions** (~40 lines, numbered steps)
-   1. Define the communication goal — what should the viewer understand after seeing this?
-   2. Identify the audience — engineers (show interaction detail), stakeholders (show concept), users (show value)
-   3. Select interaction tier — Tier 1, 2, or 3 based on what needs demonstrating
-   4. Complete the scoping worksheet — must demonstrate / can describe / out of scope
-   5. Inventory screens and states — list every view, modal, and state transition
-   6. Define the component inventory — buttons, forms, cards, tables, navigation, modals needed
-   7. Apply styling — use default embedded styles or reference a prototype-styler theme (F-23)
-   8. Generate the HTML file — single file, all CSS in `<style>`, all JS in `<script>`, inline comments
-   9. Validate — opens in browser, interactions work, keyboard-navigable, no console errors
-   10. Share — attach the .html file directly; no setup instructions needed
+   1. Define the communication goal . what should the viewer understand after seeing this?
+   2. Identify the audience . engineers (show interaction detail), stakeholders (show concept), users (show value)
+   3. Select interaction tier . Tier 1, 2, or 3 based on what needs demonstrating
+   4. Complete the scoping worksheet . must demonstrate / can describe / out of scope
+   5. Inventory screens and states . list every view, modal, and state transition
+   6. Define the component inventory . buttons, forms, cards, tables, navigation, modals needed
+   7. Apply styling . use default embedded styles or reference a prototype-styler theme (F-23)
+   8. Generate the HTML file . single file, all CSS in `<style>`, all JS in `<script>`, inline comments
+   9. Validate . opens in browser, interactions work, keyboard-navigable, no console errors
+   10. Share . attach the .html file directly; no setup instructions needed
 
 6. **HTML Structure Convention** (~20 lines)
    - Document structure: `<!DOCTYPE html>` > `<html lang="en">` > `<head>` (meta, title, style) > `<body>` (content, script)
    - CSS placement: single `<style>` block in `<head>`
    - JS placement: single `<script>` block before `</body>`
    - Comment convention: `<!-- SECTION: name -->` for major sections, `<!-- NOTE: explanation -->` for production intent, `<!-- TODO: future feature -->` for known gaps
-   - Semantic HTML: `<nav>`, `<main>`, `<section>`, `<article>`, `<button>`, `<dialog>` — not `<div>` for everything
+   - Semantic HTML: `<nav>`, `<main>`, `<section>`, `<article>`, `<button>`, `<dialog>` . not `<div>` for everything
 
 7. **Interaction Pattern Library** (~25 lines)
    - Tab switching (view state management)
@@ -134,19 +134,19 @@ metadata:
    - [ ] Single file, no external dependencies (no CDN links, no imports)
    - [ ] Opens in browser by double-clicking the file
    - [ ] Communication goal is clear within 5 seconds of viewing
-   - [ ] Interaction tier appropriate — not over-engineered, not under-communicating
-   - [ ] Scoping worksheet completed — out-of-scope items noted as HTML comments
+   - [ ] Interaction tier appropriate . not over-engineered, not under-communicating
+   - [ ] Scoping worksheet completed . out-of-scope items noted as HTML comments
    - [ ] Semantic HTML used (nav, main, section, button, dialog)
-   - [ ] Keyboard-navigable — Tab key reaches all interactive elements
+   - [ ] Keyboard-navigable . Tab key reaches all interactive elements
    - [ ] Focus indicators visible on interactive elements
    - [ ] Color contrast meets WCAG AA (4.5:1 body text)
    - [ ] Inline comments explain non-obvious structure and production intent
    - [ ] File size under 200KB
 
 10. **Companion Skills** (~5 lines)
-    - `utility-prototype-styler` (F-23) — optional, for custom component styling
-    - `foundation-content-voice` (F-21) — optional, for consistent copy in prototype text
-    - `deliver-prd` — prototypes can accompany PRDs as visual references
+    - `utility-prototype-styler` (F-23) . optional, for custom component styling
+    - `foundation-content-voice` (F-21) . optional, for consistent copy in prototype text
+    - `deliver-prd` . prototypes can accompany PRDs as visual references
 
 ---
 
@@ -154,17 +154,17 @@ metadata:
 
 A structured prototype brief template. Sections:
 
-1. **Communication Goal** — One sentence: what should the viewer understand after seeing this prototype?
-2. **Target Audience** — Who will view this and what do they need from it? (Engineers: interaction detail. Stakeholders: concept/value. Users: experience.)
-3. **Interaction Tier** — Tier 1 (static) / Tier 2 (clickable) / Tier 3 (interactive) with rationale for choice
+1. **Communication Goal** . One sentence: what should the viewer understand after seeing this prototype?
+2. **Target Audience** . Who will view this and what do they need from it? (Engineers: interaction detail. Stakeholders: concept/value. Users: experience.)
+3. **Interaction Tier** . Tier 1 (static) / Tier 2 (clickable) / Tier 3 (interactive) with rationale for choice
 4. **Scoping Worksheet**
    - Must Demonstrate: [list core interactions/concepts]
    - Can Describe in Comments: [list secondary features to note but not build]
    - Out of Scope: [list explicitly excluded items]
-5. **Screen & State Inventory** — Table: screen name / description / states (default, active, error, empty) / transitions to/from
-6. **Component Inventory** — Table: component type / count / interaction behavior / accessibility notes
-7. **Style Reference** — Default embedded styles OR reference to a prototype-styler theme file
-8. **Validation Criteria** — What "done" looks like for this specific prototype
+5. **Screen & State Inventory** . Table: screen name / description / states (default, active, error, empty) / transitions to/from
+6. **Component Inventory** . Table: component type / count / interaction behavior / accessibility notes
+7. **Style Reference** . Default embedded styles OR reference to a prototype-styler theme file
+8. **Validation Criteria** . What "done" looks like for this specific prototype
 
 ---
 
@@ -174,22 +174,22 @@ A worked example: **PM creating a task management dashboard prototype to communi
 
 Demonstrates the full TEMPLATE workflow:
 
-1. **Communication Goal** — "Engineering should understand the proposed task filtering and grouping interaction pattern for the new dashboard view"
-2. **Audience** — Engineering team (need interaction detail, not just layout)
-3. **Interaction Tier** — Tier 3 (interactive) — the filtering interaction IS the concept being communicated
+1. **Communication Goal** . "Engineering should understand the proposed task filtering and grouping interaction pattern for the new dashboard view"
+2. **Audience** . Engineering team (need interaction detail, not just layout)
+3. **Interaction Tier** . Tier 3 (interactive) . the filtering interaction IS the concept being communicated
 4. **Scoping Worksheet**
    - Must Demonstrate: task list with filter dropdown, group-by toggle (status/assignee/priority), card expand/collapse
    - Can Describe: real-time updates, drag-and-drop reordering, search
    - Out of Scope: authentication, settings, notifications, data persistence
-5. **Screen Inventory** — Main dashboard (default state, filtered state, grouped-by-status, grouped-by-assignee, empty state)
-6. **Component Inventory** — Navigation bar, filter dropdown, group-by toggle, task cards (5 sample items), expand/collapse detail panel, empty state message
-7. **The Prototype** — Complete HTML file (~150 lines) with:
+5. **Screen Inventory** . Main dashboard (default state, filtered state, grouped-by-status, grouped-by-assignee, empty state)
+6. **Component Inventory** . Navigation bar, filter dropdown, group-by toggle, task cards (5 sample items), expand/collapse detail panel, empty state message
+7. **The Prototype** . Complete HTML file (~150 lines) with:
    - Inline CSS using CSS custom properties for theming
    - Semantic HTML (nav, main, section, button)
    - JavaScript for filter and group-by interactions
    - HTML comments explaining production intent
    - Accessible: keyboard-navigable, focus indicators, ARIA labels
-8. **Validation** — Walkthrough showing the prototype passes all quality checklist items
+8. **Validation** . Walkthrough showing the prototype passes all quality checklist items
 
 ---
 
@@ -209,7 +209,7 @@ Body: brief instruction to invoke the skill with the product concept and target 
 
 ## Companion Skill Dependencies
 
-- **F-23 (utility-prototype-styler)**: Soft dependency. The creator ships with a default embedded style system. When a prototype-styler theme is provided, the creator uses it instead. The style integration is a CSS custom properties swap — the creator expects a defined set of variable names.
+- **F-23 (utility-prototype-styler)**: Soft dependency. The creator ships with a default embedded style system. When a prototype-styler theme is provided, the creator uses it instead. The style integration is a CSS custom properties swap . the creator expects a defined set of variable names.
 - **F-21 (foundation-content-voice)**: Soft dependency. Copy in prototypes can optionally follow a content voice guide.
 
 ## Acceptance Criteria

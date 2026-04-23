@@ -17,7 +17,7 @@ tags:
 # PM Skill Builder
 
 This skill creates new PM skills for the pm-skills library. It produces a
-Skill Implementation Packet — a complete design document with draft files —
+Skill Implementation Packet . a complete design document with draft files .
 in a staging area for review before promotion to canonical locations.
 
 ## When to Use
@@ -56,7 +56,7 @@ Accept the idea in either form:
   does it produce? What PM activity does it support?"
 
 Both entry points produce the same downstream flow. If the user provides
-one form, do not ask for the other — extract what you need and proceed.
+one form, do not ask for the other . extract what you need and proceed.
 
 If the idea is vague, ask ONE follow-up question to clarify the artifact
 type and target audience before proceeding.
@@ -127,7 +127,7 @@ Identify 1-2 existing skills that are the closest structural match:
 - Same phase > same category > similar artifact type
 - Read their SKILL.md to understand section structure, instruction style,
   output contract format, and quality checklist pattern
-- Name the exemplars explicitly: "Modeled after [skill] — same phase,
+- Name the exemplars explicitly: "Modeled after [skill] . same phase,
   [category] category"
 
 Present the classification and exemplar selection for user confirmation.
@@ -137,25 +137,25 @@ Present the classification and exemplar selection for user confirmation.
 Produce the complete packet using `references/TEMPLATE.md` as the format.
 The packet includes:
 
-1. **Decision** — recommendation + Why Gate evidence (if applicable)
-2. **Classification** — type, phase (if domain), category, directory name
-3. **Overlap Analysis** — what was found, why this skill is still needed
-4. **Quality Forecast** — K/P/C/W zone distribution + writing guidance:
+1. **Decision** . recommendation + Why Gate evidence (if applicable)
+2. **Classification** . type, phase (if domain), category, directory name
+3. **Overlap Analysis** . what was found, why this skill is still needed
+4. **Quality Forecast** . K/P/C/W zone distribution + writing guidance:
    - Knowledge-heavy (≥35% K): reference frameworks, include When to Use
    - Process-heavy (≥35% P): numbered steps, prescriptive, clear I/O per step
    - Constraint-heavy (≥35% C): MUST/SHOULD/MUST NOT rules, separate section
    - Wisdom-heavy (≥25% W): reflective questions, guide thinking
-5. **Exemplar Skills** — which existing skills modeled, why
-6. **Draft Frontmatter** — complete, valid YAML block
-7. **Draft SKILL.md** — full content (not an outline), mirroring exemplar structure
-8. **Draft TEMPLATE.md** — section headers with guidance comments
-9. **Draft EXAMPLE.md** — complete, realistic example (150-300 lines) with a
+5. **Exemplar Skills** . which existing skills modeled, why
+6. **Draft Frontmatter** . complete, valid YAML block
+7. **Draft SKILL.md** . full content (not an outline), mirroring exemplar structure
+8. **Draft TEMPLATE.md** . section headers with guidance comments
+9. **Draft EXAMPLE.md** . complete, realistic example (150-300 lines) with a
    specific PM scenario, every section filled, optional sections demonstrated
    both filled and skipped
-10. **Draft Command** — command frontmatter
-11. **AGENTS.md Entry** — exact text to add
-12. **Validation Checklist** — all CI rules checked against the draft
-13. **Next Steps** — local CI, testing, contribution workflow
+10. **Draft Command** . command frontmatter
+11. **AGENTS.md Entry** . exact text to add
+12. **Validation Checklist** . all CI rules checked against the draft
+13. **Next Steps** . local CI, testing, contribution workflow
 
 ### Step 6: Write to Staging Area
 
@@ -170,7 +170,7 @@ _staging/pm-skill-builder/{skill-name}/
 └── command.md             ← draft command
 ```
 
-> **Note**: `_staging/` is gitignored — draft artifacts never ship in releases.
+> **Note**: `_staging/` is gitignored . draft artifacts never ship in releases.
 > The staging folder is discarded after promotion.
 
 Report what was written and where.
@@ -199,7 +199,7 @@ Then:
 5. If validation passes, delete the staging folder: `_staging/pm-skill-builder/{skill-name}/`
 6. If validation fails, report the error and keep staging intact for fixes
 
-Design rationale lives in the GitHub issue, PR, or effort brief — not
+Design rationale lives in the GitHub issue, PR, or effort brief . not
 in a permanent packet file.
 
 Provide post-promotion guidance:
@@ -222,7 +222,7 @@ Provide post-promotion guidance:
 
 {Recommendation: create / revise existing / workflow / command / docs-only}
 
-{Why Gate evidence if applicable — the 2-3 specific prompts or scenarios
+{Why Gate evidence if applicable . the 2-3 specific prompts or scenarios
 where existing skills fail}
 
 ---
@@ -247,7 +247,7 @@ where existing skills fail}
 
 ### Findings
 
-{What was found — specific overlap and differentiation}
+{What was found . specific overlap and differentiation}
 
 ### Why this skill is still needed
 
@@ -273,7 +273,7 @@ where existing skills fail}
 
 ### Writing Guidance
 
-{Zone-specific guidance based on the dominant zone — see Quality Forecast
+{Zone-specific guidance based on the dominant zone . see Quality Forecast
 Guide in SKILL.md for the mapping}
 
 ---
@@ -293,9 +293,9 @@ Guide in SKILL.md for the mapping}
 <!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
 ---
 name: {skill-name}
-description: {20-100 word description on a single line — linter reads first line only}
-phase: {phase}          # for domain skills only — omit for foundation/utility
-classification: {type}  # for foundation/utility only — omit for domain
+description: {20-100 word description on a single line . linter reads first line only}
+phase: {phase}          # for domain skills only . omit for foundation/utility
+classification: {type}  # for foundation/utility only . omit for domain
 version: "1.0.0"
 updated: {date}
 license: Apache-2.0
@@ -314,7 +314,7 @@ metadata:
 
 ## Draft SKILL.md
 
-{Full draft content — not an outline. Includes:
+{Full draft content . not an outline. Includes:
 - Title and introductory paragraph
 - When to Use section
 - When NOT to Use section (if applicable)
@@ -339,7 +339,7 @@ Each section has:
 
 ## Draft EXAMPLE.md
 
-{A complete, realistic example — 150-300 lines.
+{A complete, realistic example . 150-300 lines.
 - Picks a specific PM scenario appropriate to the skill's domain
 - Fills every TEMPLATE.md section with concrete content
 - Demonstrates optional sections both filled and skipped
@@ -388,7 +388,7 @@ Context from user: $ARGUMENTS
 
 ## Validation Checklist
 
-### CI Validation (must pass — enforced by linter + validators)
+### CI Validation (must pass . enforced by linter + validators)
 
 - [ ] `name` matches directory name
 - [ ] `description` is 20-100 words (single-line, no `>-`)
@@ -400,7 +400,7 @@ Context from user: $ARGUMENTS
 - [ ] Command file references correct skill path (`validate-commands.sh`)
 - [ ] AGENTS.md entry uses `#### {name}` + `**Path:**` format (`validate-agents-md.sh`)
 
-### Quality Checks (should pass — builder-enforced, not CI-gated)
+### Quality Checks (should pass . builder-enforced, not CI-gated)
 
 - [ ] `references/EXAMPLE.md` is a complete artifact (150-300 lines), not an outline
 - [ ] Output contract present in SKILL.md
@@ -460,12 +460,12 @@ Context from user: $ARGUMENTS
 
     ### Existing skills checked
 
-    All 27 skills reviewed. Closest matches:
+    All 38 skills reviewed. Closest matches:
 
-    - `deliver-release-notes` — produces external-facing release announcements
-    - `deliver-launch-checklist` — tracks cross-functional launch readiness
-    - `deliver-user-stories` — defines implementation requirements
-    - `discover-stakeholder-summary` — maps stakeholder needs and influence
+    - `deliver-release-notes` . produces external-facing release announcements
+    - `deliver-launch-checklist` . tracks cross-functional launch readiness
+    - `deliver-user-stories` . defines implementation requirements
+    - `discover-stakeholder-summary` . maps stakeholder needs and influence
 
     ### Findings
 
@@ -480,7 +480,7 @@ Context from user: $ARGUMENTS
 
     ### Why this skill is still needed
 
-    No existing skill produces the actual communication artifact — the email, Slack
+    No existing skill produces the actual communication artifact . the email, Slack
     message, or internal knowledge-base update that tells affected users what
     changed, what they need to do differently, and where to get help. This is a
     distinct coordination artifact in the Deliver phase.
@@ -513,8 +513,8 @@ Context from user: $ARGUMENTS
 
     | Skill | Why selected |
     |-------|-------------|
-    | deliver-release-notes | Same phase (deliver), same category (coordination), closest artifact type — both produce written communications about product changes |
-    | deliver-launch-checklist | Same phase (deliver), different category — shows how to structure a multi-audience coordination artifact with checkpoints |
+    | deliver-release-notes | Same phase (deliver), same category (coordination), closest artifact type . both produce written communications about product changes |
+    | deliver-launch-checklist | Same phase (deliver), different category . shows how to structure a multi-audience coordination artifact with checkpoints |
 
     ---
 
@@ -648,7 +648,7 @@ Context from user: $ARGUMENTS
     ## Draft EXAMPLE.md
 
     A complete example would demonstrate a change communication package for a
-    realistic SaaS scenario — such as migrating a dashboard reporting interface
+    realistic SaaS scenario . such as migrating a dashboard reporting interface
     from a legacy layout to a new design system. It would fill every template
     section with concrete content: three audience segments (power users, casual
     viewers, account administrators), before/after workflow descriptions, drafted
@@ -693,7 +693,7 @@ Context from user: $ARGUMENTS
     ### CI Validation
 
     - [x] `name` matches directory name (`deliver-change-communication`)
-    - [x] `description` is 20-100 words (single-line) — 33 words
+    - [x] `description` is 20-100 words (single-line) . 33 words
     - [x] `version` present (`"1.0.0"`)
     - [x] `updated` present (`2026-03-22`)
     - [x] `license` present (`Apache-2.0`)
@@ -709,7 +709,7 @@ Context from user: $ARGUMENTS
     - [x] Quality checklist present in draft SKILL.md
     - [x] Quality Forecast identifies Process (40%) as dominant zone with writing guidance
     - [x] Gap analysis checked all 27 existing skills
-    - [x] Why Gate not triggered (no high overlap — release-notes and launch-checklist serve different purposes)
+    - [x] Why Gate not triggered (no high overlap . release-notes and launch-checklist serve different purposes)
 
     ---
 
@@ -726,7 +726,7 @@ Context from user: $ARGUMENTS
 
 See this skill applied to three different product contexts:
 
-??? example "Storevine (B2B): Storevine B2B ecommerce platform — using the skill builder to create a campaign-analytics skill"
+??? example "Storevine (B2B): Storevine B2B ecommerce platform . using the skill builder to create a campaign-analytics skill"
     **Prompt:**
 
     ```
@@ -770,10 +770,10 @@ Before finalizing the packet, verify all items in both tiers:
 ## Output Contract
 
 The builder MUST produce draft files for the new skill:
-- `SKILL.md` — full skill instructions
-- `references/TEMPLATE.md` — output template with guidance comments
-- `references/EXAMPLE.md` — complete worked example (150-300 lines)
-- `command.md` — slash command file
+- `SKILL.md` . full skill instructions
+- `references/TEMPLATE.md` . output template with guidance comments
+- `references/EXAMPLE.md` . complete worked example (150-300 lines)
+- `command.md` . slash command file
 
 All drafts are written to `_staging/pm-skill-builder/{skill-name}/` (gitignored).
 

@@ -44,7 +44,7 @@ Per-skill execution plan. Reads together with effort brief ([`../F-17-meeting-sy
 1. **Scaffold directory**: `skills/foundation-meeting-synthesize/` with `references/`
 2. **Write SKILL.md**:
    - Frontmatter (foundation phase, v1.0.0)
-   - Purpose: cross-meeting archaeology — patterns, trajectories, contradictions
+   - Purpose: cross-meeting archaeology. patterns, trajectories, contradictions
    - When to use: board prep, onboarding, project retro, quarterly review, investigating stalled initiatives
    - Positioning vs. `discover-interview-synthesis` (org meetings vs. user research)
    - **Zero-friction execution section**
@@ -59,7 +59,7 @@ Per-skill execution plan. Reads together with effort brief ([`../F-17-meeting-sy
    - Shareable summary (scope + headline + themes + open items + follow-ups)
    - Full synthesis: scope, plain-text timeline, themes with confidence, stakeholder position tracking, consolidated decision list, contradiction flags, open items/stalled threads, narrative summary, prioritized follow-ups
    - Sources & References listing source meetings with input quality per source
-4. **Write EXAMPLE.md** — Q1 search-feature quarterly synthesis across 5-8 meetings
+4. **Write EXAMPLE.md**. Q1 search-feature quarterly synthesis across 5-8 meetings
 5. **Write slash command** `commands/meeting-synthesize.md`
 6. **Write 3 library samples** per deliverables
 7. **Generate/write public skill doc**
@@ -74,11 +74,11 @@ Per-skill execution plan. Reads together with effort brief ([`../F-17-meeting-sy
 
 ## Estimated effort
 
-High. Expect 75-90 minutes. The skill has the most structural depth: timeline rendering, theme clustering, stakeholder evolution tracking, contradiction detection all need clear extraction patterns. Sample quality is critical because this is the least-intuitive skill for users to invoke — good samples anchor expectations.
+High. Expect 75-90 minutes. The skill has the most structural depth: timeline rendering, theme clustering, stakeholder evolution tracking, contradiction detection all need clear extraction patterns. Sample quality is critical because this is the least-intuitive skill for users to invoke. good samples anchor expectations.
 
 ## Notes
 
-- **Timeline is plain-text markdown only** — no binary images. Renders in chat, email, print.
+- **Timeline is plain-text markdown only**. no binary images. Renders in chat, email, print.
 - **Contradiction flags are a first-class section**: not an afterthought, not buried. Core value-add.
 - Format hint shapes output ordering and truncation; one process generates the full data, hint controls presentation
 - `source_meetings` is required; at least 1 source must be referenced

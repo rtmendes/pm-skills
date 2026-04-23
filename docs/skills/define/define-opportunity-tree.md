@@ -45,7 +45,7 @@ When asked to create an opportunity solution tree, follow these steps:
    Start at the top with a clear, measurable business or product outcome. This should be something you can influence through product changes. Express it quantitatively when possible (e.g., "Increase 30-day retention from 40% to 55%").
 
 2. **Identify Opportunity Areas**
-   Branch out to 3-5 opportunity areas—places where customer needs or pain points could be addressed. Opportunities are not solutions; they're customer problems, needs, or desires. Phrase them from the customer's perspective.
+   Branch out to 3-5 opportunity areas.places where customer needs or pain points could be addressed. Opportunities are not solutions; they're customer problems, needs, or desires. Phrase them from the customer's perspective.
 
 3. **Add Supporting Evidence**
    For each opportunity, note the evidence that supports it: user research quotes, behavioral data, support tickets, or market trends. Strong opportunities have multiple evidence sources.
@@ -57,7 +57,7 @@ When asked to create an opportunity solution tree, follow these steps:
    For each promising solution, identify the riskiest assumption and design a lightweight experiment to test it. Good tests validate whether the solution will actually address the opportunity.
 
 6. **Prioritize the Tree**
-   Not all branches are equal. Mark which opportunity and solution you'll pursue first based on potential impact, confidence, and effort. The tree is a living document—you'll iterate as you learn.
+   Not all branches are equal. Mark which opportunity and solution you'll pursue first based on potential impact, confidence, and effort. The tree is a living document.you'll iterate as you learn.
 
 7. **Visualize the Structure**
    Create a tree diagram showing the hierarchy: outcome at top, opportunities below, solutions beneath each opportunity, and experiments at the leaves.
@@ -296,7 +296,7 @@ When asked to create an opportunity solution tree, follow these steps:
     #### Solutions
 
     **Solution 1A: Interactive Onboarding Wizard**
-    - Description: A 3-step guided wizard that walks users through creating their first project, adding a task, and seeing the dashboard—guaranteeing they experience core value
+    - Description: A 3-step guided wizard that walks users through creating their first project, adding a task, and seeing the dashboard.guaranteeing they experience core value
     - Effort: M
     - Riskiest Assumption: Users will complete a multi-step wizard rather than skipping it
     - Assumption Test: Prototype test with 5 users measuring completion rate and time-to-value
@@ -339,7 +339,7 @@ When asked to create an opportunity solution tree, follow these steps:
     - Description: A chatbot-style assistant that users can ask "how do I..." questions and get guided help
     - Effort: XL
     - Riskiest Assumption: Users will engage with a chatbot for navigation
-    - Assumption Test: Wizard of Oz test with 10 users—manually respond to chat queries and measure satisfaction
+    - Assumption Test: Wizard of Oz test with 10 users.manually respond to chat queries and measure satisfaction
 
     **Solution 2C: Contextual Feature Tips**
     - Description: Surface relevant features based on what the user is doing (e.g., if editing a task, suggest time tracking)
@@ -349,7 +349,7 @@ When asked to create an opportunity solution tree, follow these steps:
 
     ---
 
-    ### Opportunity 3: Users forget to come back—nothing prompts their return
+    ### Opportunity 3: Users forget to come back.nothing prompts their return
 
     **Description:** Users have initial intent but without habits formed or external triggers, they simply forget the product exists until they need it again (if ever).
     **Impact Potential:** High
@@ -444,14 +444,14 @@ When asked to create an opportunity solution tree, follow these steps:
 
 See this skill applied to three different product contexts:
 
-??? example "Storevine (B2B): Storevine B2B ecommerce platform — churn reduction opportunity tree for Campaigns Q2 sprint planning"
+??? example "Storevine (B2B): Storevine B2B ecommerce platform . churn reduction opportunity tree for Campaigns Q2 sprint planning"
     **Prompt:**
 
     ```
     /opportunity-tree
 
-    Project: Campaigns — and broader platform churn reduction strategy
-    Stage: Pre-Q2 sprint planning — framing the opportunity space before
+    Project: Campaigns . and broader platform churn reduction strategy
+    Stage: Pre-Q2 sprint planning . framing the opportunity space before
     scope lock
 
     Desired outcome: Reduce annual merchant churn from 22% [fictional] to
@@ -461,7 +461,7 @@ See this skill applied to three different product contexts:
     1. Merchants can't run email re-engagement without a separate external
        tool (Q4 exit survey: 22% churn [fictional]; 8 merchant interviews)
     2. Merchants can't see what's driving revenue across their store
-       (interview finding: "there's no way to see what's working" — P8)
+       (interview finding: "there's no way to see what's working" . P8)
     3. Merchants are paying for Storevine + external tools and beginning to
        question whether the platform subscription is worth it
 
@@ -480,7 +480,7 @@ See this skill applied to three different product contexts:
 
     # Opportunity Solution Tree: Reduce Annual Merchant Churn
 
-??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — opportunity tree for saved content re-engagement"
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app . opportunity tree for saved content re-engagement"
     **Prompt:**
 
     ```
@@ -490,10 +490,10 @@ See this skill applied to three different product contexts:
     by end of Q2 2026.
 
     three opportunities from interviews + data:
-    1. re-engagement trigger gap — users have no external prompt to return
-    2. content relevance decay — old saves lose timeliness, making the
+    1. re-engagement trigger gap . users have no external prompt to return
+    2. content relevance decay . old saves lose timeliness, making the
        library feel stale
-    3. library overwhelm — 400-item undifferentiated list creates avoidance
+    3. library overwhelm . 400-item undifferentiated list creates avoidance
 
     solutions I'm considering:
     - opp 1: morning email digest (resurface), in-app notification card

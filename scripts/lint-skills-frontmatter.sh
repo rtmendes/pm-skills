@@ -28,6 +28,13 @@ for dir in "$ROOT"/skills/*; do
     continue
   fi
 
+  first_line=$(head -1 "$skill" | tr -d '\r')
+  if [[ "$first_line" != "---" ]]; then
+    echo "✗ $rel : first line must be '---' (skills.sh CLI requires YAML frontmatter delimiter at line 1; no preamble, comments, or attribution headers allowed)"
+    FAIL=1
+    skill_fail=1
+  fi
+
   frontmatter=$(awk '
     { sub(/\r$/, ""); }
     /^---[ \t]*$/ { delimiter_count++; next; }
@@ -59,10 +66,19 @@ for dir in "$ROOT"/skills/*; do
     FAIL=1
     skill_fail=1
   else
+    is_quoted=0
+    if [[ "$description_field" =~ ^\".*\"$ ]] || [[ "$description_field" =~ ^\'.*\'$ ]]; then
+      is_quoted=1
+    fi
     description_field="$(printf '%s' "$description_field" | sed -E 's/^["'"'"']//; s/["'"'"']$//')"
     description_words=$(word_count "$description_field")
     if (( description_words < 20 || description_words > 100 )); then
       echo "✗ $rel : description must be 20-100 words (found $description_words)"
+      FAIL=1
+      skill_fail=1
+    fi
+    if [[ $is_quoted -eq 0 ]] && printf '%s' "$description_field" | grep -qE ': '; then
+      echo "✗ $rel : description contains inline ': ' which breaks strict YAML parsing (skills.sh CLI). Reword to remove the colon, or wrap the whole description in double quotes."
       FAIL=1
       skill_fail=1
     fi

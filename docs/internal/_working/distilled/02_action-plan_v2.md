@@ -55,7 +55,7 @@ This document owns **sequencing, phasing, and dependencies**. For detailed execu
 |---|------|--------|------------|-------------|
 | 3.1 | `discover-market-sizing` | 2-3 days | Nothing | Effort 7 |
 | 3.2 | `measure-survey-analysis` | 2-3 days | Nothing | Effort 8 |
-| 3.3 | `utility-agent-skill-builder` + `/agent-skill-builder` | 3-5 days | 1.2 | (new — not yet in 04) |
+| 3.3 | `utility-agent-skill-builder` + `/agent-skill-builder` | 3-5 days | 1.2 | (new . not yet in 04) |
 
 **Why this grouping**: Domain skills are independent and can be built in any order or in parallel. The agent skill builder depends on the pm-skill-builder proving the pattern first.
 
@@ -90,9 +90,9 @@ Tracks A-C are independent. Within each track, items are sequential.
 ## Decision Checklist
 
 ### Resolved
-- [x] Builder naming — `/pm-skill-builder` (repo-specific, Phase 1) + `/agent-skill-builder` (general PM capability, Phase 3)
-- [x] Script convention — `.sh + .ps1 + .md` (extend existing pattern)
-- [x] Knowledge OS separation — workspace features are a separate initiative
+- [x] Builder naming . `/pm-skill-builder` (repo-specific, Phase 1) + `/agent-skill-builder` (general PM capability, Phase 3)
+- [x] Script convention . `.sh + .ps1 + .md` (extend existing pattern)
+- [x] Knowledge OS separation . workspace features are a separate initiative
 
 ### Before Phase 2
 - [ ] MCP sync: automated dispatch (needs PAT secret) or manual?

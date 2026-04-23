@@ -11,8 +11,8 @@ New project initialized with agentic coding structure.
 Initialize with standard project structure including README, CHANGELOG, LICENSE, and AGENTS context files.
 
 **Alternatives Considered:**
-- Minimal structure (README only) — Rejected, insufficient for AI continuity
-- Full open-source structure (with CONTRIBUTING, CODE_OF_CONDUCT) — Deferred until needed
+- Minimal structure (README only) . Rejected, insufficient for AI continuity
+- Full open-source structure (with CONTRIBUTING, CODE_OF_CONDUCT) . Deferred until needed
 
 **Consequences:**
 - Consistent structure across all projects
@@ -32,8 +32,8 @@ Need to select an open source license for the pm-skills repository.
 Use Apache License 2.0 for the project.
 
 **Alternatives Considered:**
-- MIT License — Simpler but lacks patent grant
-- Apache 2.0 — Includes explicit patent grant, aligns with agent skills ecosystem
+- MIT License . Simpler but lacks patent grant
+- Apache 2.0 . Includes explicit patent grant, aligns with agent skills ecosystem
 
 **Consequences:**
 - Explicit patent protection for contributors and users
@@ -53,9 +53,9 @@ Need a location for collaboration artifacts like plan reviews, drafts, and analy
 Add `PLANNING/` folder to `AGENTS/claude/` structure for storing collaboration artifacts.
 
 **Alternatives Considered:**
-- Put in `(internal-notes)/` alongside source docs — Mixes working artifacts with reference docs
-- Put alongside source (e.g., `plan-v1-review.md` next to `plan-v1.md`) — Clutters source folders
-- Put in `AGENTS/claude/PLANNING/` — Keeps session artifacts together
+- Put in `(internal-notes)/` alongside source docs . Mixes working artifacts with reference docs
+- Put alongside source (e.g., `plan-v1-review.md` next to `plan-v1.md`) . Clutters source folders
+- Put in `AGENTS/claude/PLANNING/` . Keeps session artifacts together
 
 **Consequences:**
 - Clear separation of working documents from source documents
@@ -75,8 +75,8 @@ The pm-skills-mcp repository had personal Claude Code settings and skills tracke
 Add `.claude/` to .gitignore and remove from tracking. Only `.claude/settings.local.json` was previously ignored; now the entire directory is excluded.
 
 **Alternatives Considered:**
-- Keep tracking `.claude/settings.json` as project config — Rejected, it's personal
-- Track `.claude/` but add to `.npmignore` — Rejected, doesn't belong in git history either
+- Keep tracking `.claude/settings.json` as project config . Rejected, it's personal
+- Track `.claude/` but add to `.npmignore` . Rejected, doesn't belong in git history either
 
 **Consequences:**
 - Personal Claude Code settings no longer pollute the npm package
@@ -85,7 +85,7 @@ Add `.claude/` to .gitignore and remove from tracking. Only `.claude/settings.lo
 
 ---
 
-## 2026-01-29: MCP Sync Automation — Validation-Only Approach
+## 2026-01-29: MCP Sync Automation . Validation-Only Approach
 
 **Status:** Accepted
 
@@ -101,7 +101,7 @@ Implement Validation-Only approach: CI validates sync status and fails with acti
   - Fragile README table parsing
   - High maintenance burden
   - Infrequent skill additions don't justify complexity
-- **No Automation:** Rely on memory. Rejected — drift risk too high.
+- **No Automation:** Rely on memory. Rejected . drift risk too high.
 
 **Consequences:**
 - ~2 hours implementation, ~75 lines of code
@@ -125,7 +125,7 @@ B-01 required end-to-end verification that pm-skills and pm-skills-mcp were alig
 Record B-01 as `closed-aligned` based on pinned evidence artifacts and command validation results in local delivery docs.
 
 **Alternatives Considered:**
-- Close with gaps (`closed-with-gaps`) — Rejected because no remaining alignment failures were found on pinned refs.
+- Close with gaps (`closed-with-gaps`) . Rejected because no remaining alignment failures were found on pinned refs.
 
 **Consequences:**
 - Baseline assumptions for B-02/B-03/B-05 are now valid.
@@ -144,8 +144,8 @@ Observe-mode validation detected drift risk but still allowed merges. After B-01
 Set `.github/workflows/validate-mcp-sync.yml` to use `block` mode by default while retaining manual override via `workflow_dispatch`.
 
 **Alternatives Considered:**
-- Keep observe as default indefinitely — Rejected due to silent drift risk.
-- Hard-remove observe mode entirely — Rejected to preserve debugging flexibility.
+- Keep observe as default indefinitely . Rejected due to silent drift risk.
+- Hard-remove observe mode entirely . Rejected to preserve debugging flexibility.
 
 **Consequences:**
 - Pull requests can be blocked when pm-skills and pm-skills-mcp diverge.

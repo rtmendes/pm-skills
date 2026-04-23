@@ -9,7 +9,7 @@ thread: storevine
 context: q1-campaigns-retro
 ---
 
-# Sample: foundation-meeting-synthesize — Storevine Q1 Campaigns Retrospective Input
+# Sample: foundation-meeting-synthesize. Storevine Q1 Campaigns Retrospective Input
 
 ## Scenario
 
@@ -118,15 +118,15 @@ Q1 Campaigns work completed scope, capacity, and launch decisions on schedule bu
 
 ### Themes (retro-input format leads with these)
 
-#### What worked: scope narrowed decisively [confidence: high — 1/5 meetings resolved]
+#### What worked: scope narrowed decisively [confidence: high. 1/5 meetings resolved]
 
 Scope workshop on Feb 25 converged in one meeting, not the typical three. Pattern to replicate: pre-work (research synthesis) was done before the meeting, attendees came prepared with positions, and a forcing function (SMS-feasibility question) drove a clear in/out choice.
 
-#### What did not work: research round overran [confidence: high — explicit in Feb 4 and Mar 25 recaps]
+#### What did not work: research round overran [confidence: high. explicit in Feb 4 and Mar 25 recaps]
 
 User interview debrief surfaced an unexpected signal (SMS-specific concerns) that led to 6 additional interviews beyond the scoped 12. Overrun was [fictional] ~18% on budget. The pattern: no research-scope discipline mechanism to decide whether to add scope or park the signal for later.
 
-#### What we did not see coming: mid-cycle CEO concern [confidence: medium — 1/5 meetings]
+#### What we did not see coming: mid-cycle CEO concern [confidence: medium. 1/5 meetings]
 
 Mar 11 capacity review saw CEO priya raise capacity concerns even though the team was on track. Retrospective question: could we have pre-empted by signaling capacity status at end of Feb?
 
@@ -175,7 +175,7 @@ No live unresolved contradictions as of 2026-03-31.
 
 ### Narrative summary
 
-Q1 Campaigns work delivered on its deliverables (research, scope, capacity commitment) but surfaced three operational patterns worth bringing to retrospective. The scope workshop on Feb 25 was a template for how pre-work + forcing function produces fast decisions; worth replicating. The research overrun on SMS follow-ups highlighted the absence of a research-budget-discipline mechanism — a candidate for a team process change in Q2. The CEO's mid-cycle capacity concern raises a communication question: even when on track, lack of mid-cycle signaling creates anxiety upstream.
+Q1 Campaigns work delivered on its deliverables (research, scope, capacity commitment) but surfaced three operational patterns worth bringing to retrospective. The scope workshop on Feb 25 was a template for how pre-work + forcing function produces fast decisions; worth replicating. The research overrun on SMS follow-ups highlighted the absence of a research-budget-discipline mechanism. a candidate for a team process change in Q2. The CEO's mid-cycle capacity concern raises a communication question: even when on track, lack of mid-cycle signaling creates anxiety upstream.
 
 Going into Q2, the team has a strong foundation (scope, capacity, customer evidence). The retrospective should focus on what to replicate from the scope-workshop pattern and what to improve from the research-overrun and CEO-signaling patterns.
 
@@ -200,11 +200,11 @@ Going into Q2, the team has a strong foundation (scope, capacity, customer evide
 
 ### Primary inputs (source meetings)
 
-- 2026-01-14_14-00EST_campaigns-research-kickoff_recap.md — input quality: high
-- 2026-02-04_14-00EST_campaigns-user-interview-debrief_recap.md — input quality: high
-- 2026-02-25_14-00EST_campaigns-scope-workshop_recap.md — input quality: high
-- 2026-03-11_14-00EST_campaigns-capacity-review_recap.md — input quality: medium (partial notes)
-- 2026-03-25_14-00EST_campaigns-q1-close-out_recap.md — input quality: high
+- 2026-01-14_14-00EST_campaigns-research-kickoff_recap.md. input quality: high
+- 2026-02-04_14-00EST_campaigns-user-interview-debrief_recap.md. input quality: high
+- 2026-02-25_14-00EST_campaigns-scope-workshop_recap.md. input quality: high
+- 2026-03-11_14-00EST_campaigns-capacity-review_recap.md. input quality: medium (partial notes)
+- 2026-03-25_14-00EST_campaigns-q1-close-out_recap.md. input quality: high
 
 ### Referenced artifacts
 
@@ -218,9 +218,9 @@ Going into Q2, the team has a strong foundation (scope, capacity, customer evide
 
 - **Generated**: 2026-04-01T10:00:00Z
 - **Skill version**: 1.0.0
-- **Input quality**: high — 4 of 5 sources high-quality, 1 medium
-- **Overall confidence**: high — themes well-attested across multiple recaps
+- **Input quality**: high. 4 of 5 sources high-quality, 1 medium
+- **Overall confidence**: high. themes well-attested across multiple recaps
 - **Known gaps**: Mar 11 capacity review partial-notes limit certainty on CEO-concern specifics
 - **Scope filter**: project=campaigns
-- **Format hint**: retro-input — leads with what-worked / what-did-not / what-did-not-see-coming; stakeholder tracking present for retro discussion
+- **Format hint**: retro-input. leads with what-worked / what-did-not / what-did-not-see-coming; stakeholder tracking present for retro discussion
 ```

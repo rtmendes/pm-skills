@@ -50,7 +50,7 @@ When asked to create a PRD, follow these steps:
    Describe the proposed solution at a high level. Focus on user-facing functionality and key capabilities. Include enough detail for stakeholders to evaluate the approach without over-specifying implementation.
 
 4. **Detail Functional Requirements**
-   Break down what the system must do. Use user stories or requirement statements. Each requirement should be testable — someone should be able to verify if it's met.
+   Break down what the system must do. Use user stories or requirement statements. Each requirement should be testable . someone should be able to verify if it's met.
 
 5. **Define Scope Boundaries**
    Explicitly state what's in scope, out of scope, and deferred to future iterations. Clear scope prevents scope creep and sets realistic expectations.
@@ -137,8 +137,8 @@ See [link to detailed user stories] for full acceptance criteria.
 ### Future Considerations
 <!-- Items deferred to future iterations -->
 
-- [Future item 1] — [Rationale for deferral]
-- [Future item 2] — [Rationale for deferral]
+- [Future item 1] . [Rationale for deferral]
+- [Future item 2] . [Rationale for deferral]
 
 ## Solution Design
 
@@ -214,16 +214,16 @@ See [link to detailed user stories] for full acceptance criteria.
 
 <!-- Unresolved questions that need answers before or during development -->
 
-- [ ] [Question 1] — Owner: [Name]
-- [ ] [Question 2] — Owner: [Name]
+- [ ] [Question 1] . Owner: [Name]
+- [ ] [Question 2] . Owner: [Name]
 
 ## Appendix
 
 ### Related Documents
-- Problem Statement — add link or path
-- User Research — add link or path
-- Design Specs — add link or path
-- Technical Design — add link or path
+- Problem Statement . add link or path
+- User Research . add link or path
+- Design Specs . add link or path
+- Technical Design . add link or path
 
 ### Revision History
 
@@ -301,17 +301,17 @@ See [link to detailed user stories] for full acceptance criteria.
 
     ### Out of Scope
 
-    - Custom recurrence patterns (e.g., "every 3rd Tuesday") — v2
-    - Calendar sync (Google Calendar, Outlook) — v2
-    - Task assignment rotation — future consideration
-    - Recurring subtasks — future consideration
+    - Custom recurrence patterns (e.g., "every 3rd Tuesday") . v2
+    - Calendar sync (Google Calendar, Outlook) . v2
+    - Task assignment rotation . future consideration
+    - Recurring subtasks . future consideration
     - Bulk operations on multiple recurring series
 
     ### Future Considerations
 
-    - **Custom patterns (v2):** Complex scheduling like "first Monday of each month" or "every 2 weeks" — deferred due to UI complexity; standard patterns cover 85% of use cases
-    - **Calendar sync (v2):** Two-way sync with external calendars — deferred due to integration complexity and scope
-    - **Assignment rotation:** Auto-rotate assignee for team tasks — requires additional UX research to understand use cases
+    - **Custom patterns (v2):** Complex scheduling like "first Monday of each month" or "every 2 weeks" . deferred due to UI complexity; standard patterns cover 85% of use cases
+    - **Calendar sync (v2):** Two-way sync with external calendars . deferred due to integration complexity and scope
+    - **Assignment rotation:** Auto-rotate assignee for team tasks . requires additional UX research to understand use cases
 
     ## Solution Design
 
@@ -417,10 +417,10 @@ See [link to detailed user stories] for full acceptance criteria.
 
     ## Open Questions
 
-    - [x] Should we support "business days only" recurrence? — **Decision: No, defer to v2**
-    - [ ] How do we handle recurring tasks when user loses access to project? — Owner: Product
-    - [ ] Should paused series auto-resume after X time? — Owner: Product
-    - [ ] What's the right default reminder time for recurring tasks? — Owner: Design
+    - [x] Should we support "business days only" recurrence? . **Decision: No, defer to v2**
+    - [ ] How do we handle recurring tasks when user loses access to project? . Owner: Product
+    - [ ] Should paused series auto-resume after X time? . Owner: Product
+    - [ ] What's the right default reminder time for recurring tasks? . Owner: Design
 
     ## Appendix
 
@@ -443,13 +443,13 @@ See [link to detailed user stories] for full acceptance criteria.
 
 See this skill applied to three different product contexts:
 
-??? example "Storevine (B2B): Storevine B2B ecommerce platform — Campaigns (built-in email marketing)"
+??? example "Storevine (B2B): Storevine B2B ecommerce platform . Campaigns (built-in email marketing)"
     **Prompt:**
 
     ```
     /prd
 
-    Feature: Campaigns — native email marketing for Storevine merchants
+    Feature: Campaigns . native email marketing for Storevine merchants
 
     Context: Storevine all-in-one ecommerce + web builder, ~18k active merchants
     [fictional]. See: competitive-analysis (filed last week), problem-statement
@@ -460,7 +460,7 @@ See this skill applied to three different product contexts:
     [fictional]. Power merchants patch with Klaviyo or Mailchimp; smaller merchants
     skip email entirely because setup friction is too high.
 
-    Validated solution: Built-in Campaigns — broadcast email + basic audience
+    Validated solution: Built-in Campaigns . broadcast email + basic audience
     segmentation. Phase 1 email only, SMS deferred. Pre-built templates, audience
     builder using order/tag data we already have. No custom HTML editor v1.
 
@@ -474,7 +474,7 @@ See this skill applied to three different product contexts:
 
     Technical decisions already made:
     - Sending via SendGrid (existing account)
-    - Audience builder queries existing customer/order tables — no new pipeline
+    - Audience builder queries existing customer/order tables . no new pipeline
     - Legal review on CAN-SPAM + GDPR required before launch (not yet started)
 
     Stakeholders: Growth PM (owner), Eng Lead (aligned), Design (in progress),
@@ -487,7 +487,7 @@ See this skill applied to three different product contexts:
 
     # PRD: Storevine Campaigns
 
-??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — Resurface feature PRD for Sprint 8 build"
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app . Resurface feature PRD for Sprint 8 build"
     **Prompt:**
 
     ```
@@ -500,7 +500,7 @@ See this skill applied to three different product contexts:
     to recent reading. opt-in required. 7:30 AM local time. tfidf for
     topic matching. resend for email. text-only layout.
 
-    target users: active savers (10+ items, active in last 30 days) —
+    target users: active savers (10+ items, active in last 30 days) .
     about 9,800 users [fictional].
 
     metrics: 7-day return rate 18%→25% [fictional], email CTR ≥15% [fictional],
@@ -518,7 +518,7 @@ See this skill applied to three different product contexts:
 
     **Output:**
 
-    # PRD: Resurface — Morning Email Digest
+    # PRD: Resurface . Morning Email Digest
 
 ??? example "Workbench (Enterprise): Workbench enterprise collaboration platform - Blueprints v1 PRD for required-section enforcement and approval gates"
     **Prompt:**

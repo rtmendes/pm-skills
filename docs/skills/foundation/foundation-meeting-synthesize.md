@@ -66,5 +66,5 @@ Full instructions in `skills/foundation-meeting-synthesize/SKILL.md`. See also:
 
 ## Related skills
 
-- [`/meeting-recap`](foundation-meeting-recap.md) — upstream: primary input source
-- [`/discover-interview-synthesis`](../discover/discover-interview-synthesis.md) — sibling pattern for user research (different domain)
+- [`/meeting-recap`](foundation-meeting-recap.md). upstream: primary input source
+- [`/discover-interview-synthesis`](../discover/discover-interview-synthesis.md). sibling pattern for user research (different domain)

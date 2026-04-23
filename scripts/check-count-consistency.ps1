@@ -1,11 +1,11 @@
-# check-count-consistency.ps1 — Detect stale hardcoded counts in docs.
+# check-count-consistency.ps1 . Detect stale hardcoded counts in docs.
 #
 # Counts actual skills, commands, and workflows, then scans tracked .md and
 # .json files for hardcoded numbers that no longer match.
 #
 # Exit codes:
-#   0 — All counts are consistent
-#   1 — Stale counts detected
+#   0 . All counts are consistent
+#   1 . Stale counts detected
 #
 # Usage:
 #   .\scripts\check-count-consistency.ps1
@@ -37,7 +37,7 @@ Write-Host ""
 
 $trackedFiles = git -C $Root ls-files "*.md" "*.json" | Where-Object { $_ -ne '' }
 
-# Exclusion patterns — files where counts are historical or structural
+# Exclusion patterns . files where counts are historical or structural
 $excludePatterns = @(
     '^CHANGELOG\.md$',
     '^docs/releases/',
@@ -65,7 +65,7 @@ $filesToCheck = $trackedFiles | Where-Object {
     -not $excluded
 }
 
-# Minimum threshold — counts below this are likely per-phase/per-category.
+# Minimum threshold . counts below this are likely per-phase/per-category.
 # Comparison uses -ge so values equal to the threshold are still checked.
 $MinThreshold = 10
 

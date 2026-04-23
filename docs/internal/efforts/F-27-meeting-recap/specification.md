@@ -9,7 +9,7 @@ Reads together with:
 
 | Input | Required? | Accepted forms | Default |
 |-------|-----------|----------------|---------|
-| Meeting content | Yes | Transcript (Zoom/Meet/Otter/Fireflies/Krisp/manual), notes, hybrid | — |
+| Meeting content | Yes | Transcript (Zoom/Meet/Otter/Fireflies/Krisp/manual), notes, hybrid |. |
 | Meeting metadata | No | Title, date, attendees in YAML-ish or prose | Infer from content |
 | Related agenda filename | No | `@filename.md` reference | Auto-discover via filename prefix match |
 | Related brief filename | No | `@filename.md` reference | Auto-discover |
@@ -27,16 +27,16 @@ Reads together with:
 
 ## Process (detailed)
 
-1. **Parse inputs** — detect content type (transcript vs. notes); note input quality upfront
-2. **Auto-discover related artifacts** — scan same directory for matching filename prefix; load agenda for topic skeleton and desired-outcomes reconciliation
-3. **Present go-mode inference summary** — per contract; includes detected meeting date/title, inferred attendees (if not provided), input quality assessment
-4. **Topic-segment** — if agenda available, use its topic list as scaffold; else identify topics from content discourse
+1. **Parse inputs**. detect content type (transcript vs. notes); note input quality upfront
+2. **Auto-discover related artifacts**. scan same directory for matching filename prefix; load agenda for topic skeleton and desired-outcomes reconciliation
+3. **Present go-mode inference summary**. per contract; includes detected meeting date/title, inferred attendees (if not provided), input quality assessment
+4. **Topic-segment**. if agenda available, use its topic list as scaffold; else identify topics from content discourse
 5. **Per topic segment**:
    - Summarize discussion
-   - Extract and **bold-flag decisions** — never fabricate; if uncertain, flag as "appears to have decided X [confidence: medium]"
-   - Extract actions — each with owner + due date + dependencies; flag missing owner or date as `[owner: unassigned, needs confirmation]` rather than inventing
+   - Extract and **bold-flag decisions**. never fabricate; if uncertain, flag as "appears to have decided X [confidence: medium]"
+   - Extract actions. each with owner + due date + dependencies; flag missing owner or date as `[owner: unassigned, needs confirmation]` rather than inventing
    - Capture open questions
-6. **Consolidate actions view** — regroup all actions by owner
+6. **Consolidate actions view**. regroup all actions by owner
 7. **Reconcile agenda** (if loaded):
    - `topics_planned` = agenda topic list
    - `topics_hit` = topics actually discussed
@@ -47,7 +47,7 @@ Reads together with:
    - `started_on_time`: from timestamps or "meeting started late" cues
    - `ended_on_time`: same
    - `key_attendees_present`: flag if decision-makers absent
-9. **Surface next steps** — when reconvene, critical path
+9. **Surface next steps**. when reconvene, critical path
 10. **Render TEMPLATE.md**
 
 ## Output contract
@@ -79,7 +79,7 @@ meeting_quality:
    - All actions (consolidated by owner)
    - Meeting quality signals (outcomes achieved, time management, key attendee presence)
    - Next steps (when reconvene, critical path)
-4. `## Sources & References` — listing transcript source, agenda consumed, brief consulted, prior recaps on topic
+4. `## Sources & References`. listing transcript source, agenda consumed, brief consulted, prior recaps on topic
 
 ## Sample inventory
 
@@ -91,11 +91,11 @@ meeting_quality:
 
 ## Design decisions
 
-1. **Decisions are bold-formatted, not separately listed** — decisions in context with their discussion are more useful than decisions pulled into a separate artifact. Readers can scan bolded items within topic segments.
-2. **Actions absorbed into recap, not split into sibling artifact** — earlier family discussion considered a separate "meeting-actions" skill. Rejected because actions without context decay faster than actions in context. Consolidated view at the end handles scannability.
-3. **Never fabricate owners or dates** — if a transcript says "someone should look into this", the action is captured as `[owner: unassigned]` not guessed. Trust decay from fabrication is worse than the mild friction of flagging.
-4. **Agenda reconciliation is frontmatter + prose, not just prose** — makes the data machine-readable for future agenda/recap cross-validation CI.
-5. **No attendee-vs-nonattendee variant toggle in v1.0.0** — non-attendee communication belongs to `foundation-stakeholder-update`. Preserves skill boundaries.
+1. **Decisions are bold-formatted, not separately listed**. decisions in context with their discussion are more useful than decisions pulled into a separate artifact. Readers can scan bolded items within topic segments.
+2. **Actions absorbed into recap, not split into sibling artifact**. earlier family discussion considered a separate "meeting-actions" skill. Rejected because actions without context decay faster than actions in context. Consolidated view at the end handles scannability.
+3. **Never fabricate owners or dates**. if a transcript says "someone should look into this", the action is captured as `[owner: unassigned]` not guessed. Trust decay from fabrication is worse than the mild friction of flagging.
+4. **Agenda reconciliation is frontmatter + prose, not just prose**. makes the data machine-readable for future agenda/recap cross-validation CI.
+5. **No attendee-vs-nonattendee variant toggle in v1.0.0**. non-attendee communication belongs to `foundation-stakeholder-update`. Preserves skill boundaries.
 
 ## Validation checkpoints
 

@@ -27,11 +27,11 @@ powershell -ExecutionPolicy Bypass -File .\scripts\check-count-consistency.ps1
 4. Reports mismatches with file path and line number
 
 Exclusions (not flagged as stale):
-- `CHANGELOG.md` — historical entries are correct for their time
-- `docs/releases/` — same reason
-- `docs/internal/` — planning docs may reference future counts
-- `.github/.created-issues.json` and `.github/scripts/` — tooling state and npm manifests, not docs
-- Lines containing version references like `v2.` — likely historical context
+- `CHANGELOG.md` . historical entries are correct for their time
+- `docs/releases/` . same reason
+- `docs/internal/` . planning docs may reference future counts
+- `.github/.created-issues.json` and `.github/scripts/` . tooling state and npm manifests, not docs
+- Lines containing version references like `v2.` . likely historical context
 
 ## Exit Codes
 

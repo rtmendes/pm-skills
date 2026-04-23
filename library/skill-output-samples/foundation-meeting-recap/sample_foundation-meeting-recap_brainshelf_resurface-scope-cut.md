@@ -9,7 +9,7 @@ thread: brainshelf
 context: resurface-scope-cut
 ---
 
-# Sample: foundation-meeting-recap — Brainshelf Resurface Scope Cut
+# Sample: foundation-meeting-recap. Brainshelf Resurface Scope Cut
 
 ## Scenario
 
@@ -117,8 +117,8 @@ Elena walked through the capacity math: [fictional] ~3 eng-days for topic-cluste
 
 **Decisions made**
 
-- **Cut topic-clustered algorithm from this sprint; move to next sprint** — rationale: capacity math doesn't fit; design for topic-clustered needs one more pass anyway
-- **Hold recency-weighted for this sprint; ship as planned** — rationale: design complete, capacity fits
+- **Cut topic-clustered algorithm from this sprint; move to next sprint**. rationale: capacity math doesn't fit; design for topic-clustered needs one more pass anyway
+- **Hold recency-weighted for this sprint; ship as planned**. rationale: design complete, capacity fits
 
 **Actions**
 
@@ -199,8 +199,8 @@ Quick confirmation that remaining scope (recency-weighted + related UI) is on tr
 
 - **Generated**: 2026-04-15T14:45:00Z
 - **Skill version**: 1.0.0
-- **Input quality**: medium — bullet notes only; no transcript; attribution required inference
-- **Overall confidence**: medium — decisions clearly stated in notes; topic segmentation inferred from discussion order
+- **Input quality**: medium. bullet notes only; no transcript; attribution required inference
+- **Overall confidence**: medium. decisions clearly stated in notes; topic segmentation inferred from discussion order
 - **Known gaps**: exact meeting duration not recorded; start/end-on-time signals not available
 - **Inferences applied**: meeting type inferred as decision-making [confidence: medium, scope-cut framing cue]; topic structure inferred from notes order
 - **Fabrication check**: all action owners (elena-algo, mia-design, priya-pm) in attendees list; 0 unassigned actions

@@ -1,11 +1,11 @@
-# check-stale-bundle-refs.ps1 — Terminology guard for bundles→workflows rename
+# check-stale-bundle-refs.ps1 . Terminology guard for bundles→workflows rename
 #
 # Scans tracked files for stale "bundle" references that should now be "workflow".
 # Excludes known exceptions (historical docs, archives, samples, drafts).
 #
 # Exit codes:
-#   0 — No stale references found (or only excluded matches)
-#   1 — Stale references detected (advisory during v2.9.0 transition)
+#   0 . No stale references found (or only excluded matches)
+#   1 . Stale references detected (advisory during v2.9.0 transition)
 #
 # Usage:
 #   .\scripts\check-stale-bundle-refs.ps1          # Run from repo root
@@ -23,7 +23,7 @@ $Root = Split-Path -Parent $ScriptDir
 Write-Host "=== Terminology Guard: checking for stale 'bundle' references ==="
 Write-Host ""
 
-# Exclusion patterns — files/directories where "bundle" is expected
+# Exclusion patterns . files/directories where "bundle" is expected
 $ExcludePatterns = @(
     'docs/releases/Release_v2.0.md',
     'docs/releases/Release_v2.1.md',

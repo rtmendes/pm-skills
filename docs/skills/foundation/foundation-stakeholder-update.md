@@ -46,8 +46,8 @@ Or reference the skill file directly: `skills/foundation-stakeholder-update/SKIL
 ## Key features
 
 - **Zero-friction execution**: loads recap, detects thread continuation, runs inference, presents brief summary, accepts `go` or corrections
-- **5 channel variants**: slack, teams, email, notion, exec-memo — each with format-appropriate rendering
-- **5 audience variants**: engineering, design, leadership, customer-facing, mixed — each with tailored "what this means for you"
+- **5 channel variants**: slack, teams, email, notion, exec-memo. each with format-appropriate rendering
+- **5 audience variants**: engineering, design, leadership, customer-facing, mixed. each with tailored "what this means for you"
 - **CTA surfaced up front**: action needed or explicit FYI-only, never buried
 - **Technical-to-business translation log**: translations inspectable by the user before sending
 - **Thread continuation detection**: auto-links to prior updates on the same project/topics
@@ -63,5 +63,5 @@ Full instructions in `skills/foundation-stakeholder-update/SKILL.md`. See also:
 
 ## Related skills
 
-- [`/meeting-recap`](foundation-meeting-recap.md) — upstream: primary input source
-- [`/discover-stakeholder-summary`](../discover/discover-stakeholder-summary.md) — distinct purpose (understanding stakeholders)
+- [`/meeting-recap`](foundation-meeting-recap.md). upstream: primary input source
+- [`/discover-stakeholder-summary`](../discover/discover-stakeholder-summary.md). distinct purpose (understanding stakeholders)

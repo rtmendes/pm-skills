@@ -16,7 +16,7 @@ tags:
 
 # Edge Cases
 
-An edge cases document systematically catalogs the unusual, boundary, and error scenarios for a feature. While happy-path flows are typically well-specified, edge cases often get discovered in production — causing bugs, poor user experience, and support burden. Documenting edge cases upfront ensures engineering handles them intentionally and QA knows what to test.
+An edge cases document systematically catalogs the unusual, boundary, and error scenarios for a feature. While happy-path flows are typically well-specified, edge cases often get discovered in production . causing bugs, poor user experience, and support burden. Documenting edge cases upfront ensures engineering handles them intentionally and QA knows what to test.
 
 ## When to Use
 
@@ -41,7 +41,7 @@ Or reference the skill file directly: `skills/deliver-edge-cases/SKILL.md`
 When asked to document edge cases, follow these steps:
 
 1. **Define the Feature Scope**
-   Clearly describe what feature or flow you're analyzing. Edge cases are specific to context — the same input might be valid in one feature and invalid in another.
+   Clearly describe what feature or flow you're analyzing. Edge cases are specific to context . the same input might be valid in one feature and invalid in another.
 
 2. **Walk Through Input Validation**
    Consider every user input: What if it's empty? Too long? Wrong format? Contains special characters? What are the minimum and maximum valid values?
@@ -280,7 +280,7 @@ When asked to document edge cases, follow these steps:
     2. Click "Upgrade plan" for more space
     3. Cancel upload, files not uploaded
 
-    **Data preservation:** No partial upload — check happens before transfer starts.
+    **Data preservation:** No partial upload . check happens before transfer starts.
 
     ### Session Expired During Long Upload
 
@@ -297,40 +297,40 @@ When asked to document edge cases, follow these steps:
 
     ### Must Test (P1)
 
-    - [ ] Upload file exactly 100MB — should succeed
-    - [ ] Upload file 100MB + 1KB — should fail with size error
-    - [ ] Upload 50 files at once — should succeed
-    - [ ] Upload 51 files at once — should fail with batch limit error
-    - [ ] Disconnect network mid-upload — should pause and recover
-    - [ ] Upload .exe disguised as .pdf — should be rejected (MIME check)
-    - [ ] Double-click upload button — should only upload once
+    - [ ] Upload file exactly 100MB . should succeed
+    - [ ] Upload file 100MB + 1KB . should fail with size error
+    - [ ] Upload 50 files at once . should succeed
+    - [ ] Upload 51 files at once . should fail with batch limit error
+    - [ ] Disconnect network mid-upload . should pause and recover
+    - [ ] Upload .exe disguised as .pdf . should be rejected (MIME check)
+    - [ ] Double-click upload button . should only upload once
 
     ### Should Test (P2)
 
-    - [ ] Upload file with unicode filename — should sanitize
-    - [ ] Upload file with 300-character name — should truncate
-    - [ ] Upload 0-byte file — should fail
-    - [ ] Upload duplicate filename — should auto-rename
-    - [ ] Navigate away during upload — should show warning
-    - [ ] Storage 99% full, upload 2% of quota — should fail
+    - [ ] Upload file with unicode filename . should sanitize
+    - [ ] Upload file with 300-character name . should truncate
+    - [ ] Upload 0-byte file . should fail
+    - [ ] Upload duplicate filename . should auto-rename
+    - [ ] Navigate away during upload . should show warning
+    - [ ] Storage 99% full, upload 2% of quota . should fail
 
     ### Nice to Test (P3)
 
-    - [ ] Upload when thumbnail service down — should succeed with generic icon
-    - [ ] Two users upload same file simultaneously — both should succeed
-    - [ ] Upload file with only extension (.pdf) — should fail
+    - [ ] Upload when thumbnail service down . should succeed with generic icon
+    - [ ] Two users upload same file simultaneously . both should succeed
+    - [ ] Upload file with only extension (.pdf) . should fail
 
 ## Real-World Examples
 
 See this skill applied to three different product contexts:
 
-??? example "Storevine (B2B): Storevine B2B ecommerce platform — Campaigns campaign send flow edge cases"
+??? example "Storevine (B2B): Storevine B2B ecommerce platform . Campaigns campaign send flow edge cases"
     **Prompt:**
 
     ```
     /edge-cases
 
-    Feature: Campaigns — campaign creation and send flow
+    Feature: Campaigns . campaign creation and send flow
     Sprint: Q2 2026 Campaigns build (GA Apr 28, 2026)
 
     Key edge cases I want to cover:
@@ -356,7 +356,7 @@ See this skill applied to three different product contexts:
 
     # Edge Cases: Campaigns Campaign Send Flow
 
-??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — Resurface digest edge cases and error states"
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app . Resurface digest edge cases and error states"
     **Prompt:**
 
     ```

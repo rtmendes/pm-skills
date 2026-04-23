@@ -1,8 +1,8 @@
-# Topic 4B — Roadmap: PM-Skills Platform & Ecosystem
+# Topic 4B . Roadmap: PM-Skills Platform & Ecosystem
 
 > **Date**: 2026-03-21
 > **Author**: Claude Opus 4.6
-> **Status**: Draft — platform-level roadmap
+> **Status**: Draft . platform-level roadmap
 > **Scope**: pm-skills and pm-skills-mcp as a whole (beyond individual skills)
 > **Companion**: `topic-4_roadmap_individual-skills.md`
 
@@ -25,17 +25,17 @@
 
 ### 1.1 Where pm-skills Sits Today
 
-pm-skills is the **most comprehensive open-source PM skill library for AI agents** — 25 skills, 26 commands, 3 bundles, covering the full Triple Diamond lifecycle. It's published as a Claude Code plugin, an npm MCP server, and a plain Git repo compatible with agentskills.io.
+pm-skills is the **most comprehensive open-source PM skill library for AI agents** . 25 skills, 26 commands, 3 bundles, covering the full Triple Diamond lifecycle. It's published as a Claude Code plugin, an npm MCP server, and a plain Git repo compatible with agentskills.io.
 
-But it's still primarily a **content library** — a collection of prompts with structure. The platform capabilities (hooks, agents, output styles, project management, automation) are largely untapped.
+But it's still primarily a **content library** . a collection of prompts with structure. The platform capabilities (hooks, agents, output styles, project management, automation) are largely untapped.
 
 ### 1.2 Strategic Vision
 
-**Short-term (v2.7-v2.9)**: Transform from content library to **interactive PM workspace** — add project management, document evolution, and skill building.
+**Short-term (v2.7-v2.9)**: Transform from content library to **interactive PM workspace** . add project management, document evolution, and skill building.
 
-**Medium-term (v3.0-v3.x)**: Become an **automated PM delivery platform** — hooks for context loading, agents for research and review, output styles for different audiences.
+**Medium-term (v3.0-v3.x)**: Become an **automated PM delivery platform** . hooks for context loading, agents for research and review, output styles for different audiences.
 
-**Long-term (v4.0+)**: Enable a **community PM skill ecosystem** — community contributions, marketplace presence, cross-platform portability as a distribution advantage.
+**Long-term (v4.0+)**: Enable a **community PM skill ecosystem** . community contributions, marketplace presence, cross-platform portability as a distribution advantage.
 
 ### 1.3 Competitive Position
 
@@ -54,13 +54,13 @@ But it's still primarily a **content library** — a collection of prompts with 
 ### 2.1 Capability Maturity Model
 
 ```
-Level 1: Content Library (Current — v2.6)
+Level 1: Content Library (Current . v2.6)
 ├── Skills (25 PM skills with templates + examples)
 ├── Commands (26 slash commands)
 ├── Bundles (3 workflow chains)
 └── Plugin packaging (M-11 complete)
 
-Level 2: Interactive Workspace (Target — v2.7-v2.9)
+Level 2: Interactive Workspace (Target . v2.7-v2.9)
 ├── Project management (/project new/switch/status)
 ├── Document evolution (/update-doc, versioning)
 ├── Document linking (/link-docs, dependency graph)
@@ -68,7 +68,7 @@ Level 2: Interactive Workspace (Target — v2.7-v2.9)
 ├── CI validation pipeline
 └── Release automation
 
-Level 3: Automated PM Platform (Target — v3.0-v3.x)
+Level 3: Automated PM Platform (Target . v3.0-v3.x)
 ├── Hooks (SessionStart, PostToolUse, Stop)
 ├── Sub-agents (research, review, transcript processing)
 ├── Output styles (executive, detailed, sprint)
@@ -76,7 +76,7 @@ Level 3: Automated PM Platform (Target — v3.0-v3.x)
 ├── PM delivery model (phase gates, coverage scoring)
 └── Auto-save artifacts
 
-Level 4: Community Ecosystem (Target — v4.0+)
+Level 4: Community Ecosystem (Target . v4.0+)
 ├── Community skill contributions (issue templates, review workflow)
 ├── Anthropic marketplace presence
 ├── Codex autonomous skill creation
@@ -298,13 +298,13 @@ Plugin manifest ──→ SessionStart hook ──→ Smart context loading
         └──→ Output styles
 ```
 
-**The CI pipeline is the critical-path enabler.** Everything downstream — skill building, community contributions, release automation — depends on it.
+**The CI pipeline is the critical-path enabler.** Everything downstream . skill building, community contributions, release automation . depends on it.
 
 ---
 
 ## 7. Release Timeline
 
-### v2.7 — Quality Foundation (Next Release)
+### v2.7 . Quality Foundation (Next Release)
 
 **Theme**: Build the foundation for quality and contribution
 
@@ -317,7 +317,7 @@ Plugin manifest ──→ SessionStart hook ──→ Smart context loading
 
 **Total effort**: ~7-10 days
 
-### v2.8 — Project Workspace
+### v2.8 . Project Workspace
 
 **Theme**: Multi-project support and document lifecycle
 
@@ -331,7 +331,7 @@ Plugin manifest ──→ SessionStart hook ──→ Smart context loading
 
 **Total effort**: ~10-16 days
 
-### v2.9 — Document Evolution
+### v2.9 . Document Evolution
 
 **Theme**: Intelligent document management
 
@@ -345,7 +345,7 @@ Plugin manifest ──→ SessionStart hook ──→ Smart context loading
 
 **Total effort**: ~11-17 days
 
-### v3.0 — PM Delivery Platform
+### v3.0 . PM Delivery Platform
 
 **Theme**: Full automation and new domain skills
 

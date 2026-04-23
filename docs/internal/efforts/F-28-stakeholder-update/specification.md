@@ -11,7 +11,7 @@ Reads together with:
 |-------|-----------|----------------|---------|
 | Related recap filename | Preferred | `@filename.md` | If absent, accepts raw meeting notes (flagged `input_quality: medium` or lower) |
 | Channel | Yes | `slack | teams | email | notion | exec-memo` | Infer from audience (slack for engineering/design; email for leadership default) |
-| Audience variant | Yes | `engineering | design | leadership | customer-facing | mixed` | — |
+| Audience variant | Yes | `engineering | design | leadership | customer-facing | mixed` |. |
 | Primary CTA | No | String | Infer; if "FYI-only", state explicitly |
 | Thread continuation | No | Prior update filename | Auto-detect if prior update on same topic exists |
 
@@ -26,10 +26,10 @@ Reads together with:
 
 ## Process (detailed)
 
-1. **Load related recap** — parse frontmatter; extract decisions, actions, outcomes, meeting context
-2. **Detect thread continuation** — scan directory for prior `stakeholder-update` artifacts with matching `project`/`topics`
-3. **Present go-mode inference summary** — per contract; includes inferred channel (if not specified), inferred CTA, detected thread continuation, translation candidates
-4. **Distill key outcomes** — from recap, select 3-5 outcomes that matter to the target audience (not everything; filter by audience relevance)
+1. **Load related recap**. parse frontmatter; extract decisions, actions, outcomes, meeting context
+2. **Detect thread continuation**. scan directory for prior `stakeholder-update` artifacts with matching `project`/`topics`
+3. **Present go-mode inference summary**. per contract; includes inferred channel (if not specified), inferred CTA, detected thread continuation, translation candidates
+4. **Distill key outcomes**. from recap, select 3-5 outcomes that matter to the target audience (not everything; filter by audience relevance)
 5. **Frame the CTA**:
    - If action needed: lead with it, not bury it
    - If FYI-only: state explicitly in the TL;DR
@@ -59,7 +59,7 @@ related_recap: 2026-04-17_14-00EST_search-feature-kickoff_recap.md
 **Required sections** in order:
 
 1. Title ("Stakeholder update: {topic or meeting reference}")
-2. `## The update` — the entire shareable content; no separate summary block because the whole output is shareable content (per family contract)
+2. `## The update`. the entire shareable content; no separate summary block because the whole output is shareable content (per family contract)
 3. Within `## The update`, the selected channel variant fully rendered
 4. `## Technical-to-business translation notes` (if translations were applied)
    - Translations applied (table: term → plain language, reason)
@@ -121,11 +121,11 @@ related_recap: 2026-04-17_14-00EST_search-feature-kickoff_recap.md
 
 ## Design decisions
 
-1. **Primary audience is non-attendees, secondary is some attendees** — does not restrict, reflects reality. Some attendees want a reference version; the skill serves them too without special-casing.
-2. **Channel + audience = two axes, not one matrix** — skill takes both as inputs. Each combination produces a distinct but related output. Avoids combinatorial template explosion by driving variants from a shared content core.
-3. **Translation log is surfaced, not hidden** — users need to verify that "engineering team" translation of "velocity" to "throughput" actually lands with their engineering team. The log makes translations inspectable.
-4. **Thread continuation is auto-detected but confirmable** — detection avoids user labor; confirmation in go-mode summary prevents false positives chaining unrelated updates.
-5. **No automatic response drafting in v1.0.0** — open question flagged. Consider after usage data confirms the feature warrants the complexity.
+1. **Primary audience is non-attendees, secondary is some attendees**. does not restrict, reflects reality. Some attendees want a reference version; the skill serves them too without special-casing.
+2. **Channel + audience = two axes, not one matrix**. skill takes both as inputs. Each combination produces a distinct but related output. Avoids combinatorial template explosion by driving variants from a shared content core.
+3. **Translation log is surfaced, not hidden**. users need to verify that "engineering team" translation of "velocity" to "throughput" actually lands with their engineering team. The log makes translations inspectable.
+4. **Thread continuation is auto-detected but confirmable**. detection avoids user labor; confirmation in go-mode summary prevents false positives chaining unrelated updates.
+5. **No automatic response drafting in v1.0.0**. open question flagged. Consider after usage data confirms the feature warrants the complexity.
 
 ## Validation checkpoints
 

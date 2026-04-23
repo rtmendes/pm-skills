@@ -59,12 +59,12 @@ commands/skill-builder.md              # /skill-builder slash command
 ```
 
 **Workflow the skill teaches**:
-1. Gap analysis — check against 25 existing skills
-2. Why Gate — name 2-3 specific prompts where existing skills fail
-3. Repo-fit — new skill / revise existing / bundle / command / docs-only
-4. Classification — domain/foundation/utility + phase + category
-5. Implementation Packet — draft all files + frontmatter + checklist
-6. Validation checklist — what to check before PR
+1. Gap analysis . check against 25 existing skills
+2. Why Gate . name 2-3 specific prompts where existing skills fail
+3. Repo-fit . new skill / revise existing / bundle / command / docs-only
+4. Classification . domain/foundation/utility + phase + category
+5. Implementation Packet . draft all files + frontmatter + checklist
+6. Validation checklist . what to check before PR
 
 **Done when**:
 - [ ] `/skill-builder` produces a complete Skill Implementation Packet
@@ -78,8 +78,8 @@ commands/skill-builder.md              # /skill-builder slash command
 
 **Effort**: 0.5 day each
 
-- [ ] **Anthropic marketplace submission** — Submit pm-skills to the official plugin directory. Plugin is already compliant (M-11 verified). Just fill the form at clau.de/plugin-directory-submission.
-- [ ] **Community skill proposal issue template** — `.github/ISSUE_TEMPLATE/skill-proposal.yml` with fields for name, phase, problem, evidence, artifact, overlap.
+- [ ] **Anthropic marketplace submission** . Submit pm-skills to the official plugin directory. Plugin is already compliant (M-11 verified). Just fill the form at clau.de/plugin-directory-submission.
+- [ ] **Community skill proposal issue template** . `.github/ISSUE_TEMPLATE/skill-proposal.yml` with fields for name, phase, problem, evidence, artifact, overlap.
 
 ---
 
@@ -123,9 +123,9 @@ commands/project.md                    # /project new|switch|list|status|context
 **Effort**: 2-3 days | **Depends on**: 1.1 (CI pipeline)
 
 **What to build**:
-- `scripts/generate-release-notes.js` — builds notes from conventional commits
-- `scripts/validate-version-match.js` — ensures tag matches plugin.json
-- `.github/workflows/release-enhanced.yml` — tag push → validate → release → trigger MCP sync
+- `scripts/generate-release-notes.js` . builds notes from conventional commits
+- `scripts/validate-version-match.js` . ensures tag matches plugin.json
+- `.github/workflows/release-enhanced.yml` . tag push → validate → release → trigger MCP sync
 
 **Done when**:
 - [ ] Git tag push creates GitHub release with auto-generated notes
@@ -151,7 +151,7 @@ commands/project.md                    # /project new|switch|list|status|context
 
 **Effort**: 1-2 days | **Depends on**: 2.1 (project manager creates the context to load)
 
-**What to build**: `hooks/session-start.js` — reads `.pm-config.yaml`, loads active project's PROJECT.md, presents brief status.
+**What to build**: `hooks/session-start.js` . reads `.pm-config.yaml`, loads active project's PROJECT.md, presents brief status.
 
 **Done when**:
 - [ ] Opening Claude Code with an active project shows project name + phase + artifact count
@@ -208,7 +208,7 @@ New domain skill: `deliver-acceptance-criteria`. Extends user-stories with detai
 
 **Effort**: 3-5 days | **Depends on**: 1.2 (pm-skill-builder proves the pattern)
 
-**What to build**: `/skill-builder` as a foundation skill — PM-oriented skill design for any context (not repo-specific). Produces a Skill Design Brief, not an implementation packet.
+**What to build**: `/skill-builder` as a foundation skill . PM-oriented skill design for any context (not repo-specific). Produces a Skill Design Brief, not an implementation packet.
 
 **Done when**:
 - [ ] `/skill-builder` helps PMs design skills for personal libraries, team repos, etc.
@@ -220,8 +220,8 @@ New domain skill: `deliver-acceptance-criteria`. Extends user-stories with detai
 
 **Effort**: 2-3 days combined
 
-- `hooks/post-skill-save.js` — auto-saves artifacts to active project directory
-- `styles/pm-executive.md` — concise, decision-focused output formatting
+- `hooks/post-skill-save.js` . auto-saves artifacts to active project directory
+- `styles/pm-executive.md` . concise, decision-focused output formatting
 
 ---
 

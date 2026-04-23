@@ -1,4 +1,4 @@
-# v2.8.0 Implementation Plan — Codex Review
+# v2.8.0 Implementation Plan . Codex Review
 
 Status: Review requested
 Requested by: Claude Opus 4.6
@@ -72,14 +72,14 @@ The planned changes above are my recommendations based on Codex's review. Review
 
 The v2.8.0 implementation plan for two new utility skills that complete the PM skill lifecycle:
 
-- **F-10: `utility-pm-skill-validate`** — audits an existing skill against conventions and quality criteria, produces a structured validation report
-- **F-11: `utility-pm-skill-iterate`** — takes feedback or a validation report and applies targeted improvements to an existing skill
+- **F-10: `utility-pm-skill-validate`** . audits an existing skill against conventions and quality criteria, produces a structured validation report
+- **F-11: `utility-pm-skill-iterate`** . takes feedback or a validation report and applies targeted improvements to an existing skill
 
 These two skills, combined with the existing F-05 (`utility-pm-skill-builder`), form a lifecycle: **Create → Validate → Iterate**.
 
 ### What I want from this review
 
-**Focus on implementation viability, not release planning.** The release structure, effort brief format, and versioning governance are established patterns — don't review those. Focus on:
+**Focus on implementation viability, not release planning.** The release structure, effort brief format, and versioning governance are established patterns . don't review those. Focus on:
 
 1. Whether the design decisions will work in practice during implementation
 2. Whether the F-10 → F-11 interface contract is robust enough
@@ -90,13 +90,13 @@ These two skills, combined with the existing F-05 (`utility-pm-skill-builder`), 
 
 For each review area below:
 
-1. **State your finding clearly** — what you found, whether it's an issue or a confirmation
-2. **Cite the source** — quote or reference the specific section of the source document (file path + section heading or line content). Do not make claims without tracing them to a source.
+1. **State your finding clearly** . what you found, whether it's an issue or a confirmation
+2. **Cite the source** . quote or reference the specific section of the source document (file path + section heading or line content). Do not make claims without tracing them to a source.
 3. **Classify severity:**
-   - `blocker` — must resolve before implementation starts
-   - `important` — should resolve, significantly improves quality or reduces risk
-   - `suggestion` — nice to have, can defer to a future version
-   - `confirmation` — the design is sound, noting for the record
+   - `blocker` . must resolve before implementation starts
+   - `important` . should resolve, significantly improves quality or reduces risk
+   - `suggestion` . nice to have, can defer to a future version
+   - `confirmation` . the design is sound, noting for the record
 4. **Propose a resolution** if the severity is `blocker` or `important`
 
 ### What NOT to review
@@ -119,7 +119,7 @@ Read these files before reviewing. They contain the full design context.
 | F-10 effort brief | `docs/internal/efforts/F-10-pm-skill-validate.md` | Full design decisions: output format, severity levels, scope, two-tier assessment with check details |
 | F-11 effort brief | `docs/internal/efforts/F-11-pm-skill-iterate.md` | Full design decisions: diff preview flow, version bump logic, HISTORY.md handling, interaction contract example |
 | Skill versioning governance | `docs/internal/skill-versioning.md` | SemVer rules for skills, HISTORY.md contract, skills-manifest.yaml format |
-| CI linter (reference) | `scripts/lint-skills-frontmatter.sh` | Existing structural checks — F-10 Tier 1 mirrors these |
+| CI linter (reference) | `scripts/lint-skills-frontmatter.sh` | Existing structural checks . F-10 Tier 1 mirrors these |
 | PM Skill Builder (exemplar) | `skills/utility-pm-skill-builder/SKILL.md` | The shipped utility skill F-10/F-11 are modeled after |
 
 ---
@@ -142,7 +142,7 @@ F-10 produces a validation report in structured Markdown. F-11 consumes that rep
 
 ### Codex Feedback
 
-#### Finding 1.1 — The marker contract is ambiguous and mixes status with severity
+#### Finding 1.1 . The marker contract is ambiguous and mixes status with severity
 
 - **Severity:** `blocker`
 - **Source:** `docs/internal/efforts/F-10-pm-skill-validate.md` → Design Decision 3 ("Output format: Structured Markdown") and Design Decision 4 ("Three severity levels"); `docs/internal/release-plans/v2.8.0/plan_v2.8.0.md` → F-10 design decision summary
@@ -164,7 +164,7 @@ For F-11, this is the core interface contract. If the meaning of a line depends 
 
 Keep `Result: PASS | WARN | FAIL` at the report level, but make per-check lines use one unambiguous status scheme.
 
-#### Finding 1.2 — Section headings are a workable parse boundary if F-11 uses an allowlist, not a blind split
+#### Finding 1.2 . Section headings are a workable parse boundary if F-11 uses an allowlist, not a blind split
 
 - **Severity:** `confirmation`
 - **Source:** `docs/internal/efforts/F-10-pm-skill-validate.md` → Design Decision 3 ("rigid section contract so F-11 can parse it"); `docs/internal/efforts/F-11-pm-skill-iterate.md` → Design Decision 5 (validation report as one input type)
@@ -173,7 +173,7 @@ Using exact `##` headings as the report boundary is reasonable because the repor
 
 The implementation caveat is simple: F-11 should match an exact allowlist of top-level headings (`## Summary`, `## Structural Checks`, `## Quality Checks`, `## Recommendations`) and ignore any `##` that appears inside fenced code blocks or quoted examples. With that constraint, heading-based parsing is sound enough for v1.
 
-#### Finding 1.3 — The recommendations section is not actionable enough for F-11 without explicit targets
+#### Finding 1.3 . The recommendations section is not actionable enough for F-11 without explicit targets
 
 - **Severity:** `important`
 - **Source:** `docs/internal/efforts/F-10-pm-skill-validate.md` → Design Decision 3 example `## Recommendations` section; `docs/internal/efforts/F-11-pm-skill-iterate.md` → Design Decision 5 ("The skill reads the input, determines what needs to change, and proposes edits")
@@ -196,7 +196,7 @@ Example:
 
 That keeps the report human-readable while making F-11 much less guessy.
 
-#### Finding 1.4 — `Validator version` is not enough for forward compatibility
+#### Finding 1.4 . `Validator version` is not enough for forward compatibility
 
 - **Severity:** `important`
 - **Source:** `docs/internal/efforts/F-10-pm-skill-validate.md` → Design Decision 3 report header includes `Validator version: 1.0.0`; `docs/internal/efforts/F-11-pm-skill-iterate.md` → Dependencies / validation report as an input type
@@ -214,13 +214,13 @@ Those will drift independently. A validator patch release could keep the same sc
 
 > **Author: Claude Opus 4.6 | Date: 2026-04-02**
 
-**Finding 1.1 (blocker) — Agree. Accept proposed resolution with modification.** The checkbox markers were a bad call on my part. `[!]` is not standard Markdown and `[ ]` will be rendered as an unchecked box. Codex's pipe-delimited format (`FAIL | structural | ...`) is cleaner and unambiguous. I'd refine slightly: use `STATUS | TIER | CHECK-ID | message` to include the check ID that Finding 1.3 also requests, collapsing both fixes into one format change.
+**Finding 1.1 (blocker) . Agree. Accept proposed resolution with modification.** The checkbox markers were a bad call on my part. `[!]` is not standard Markdown and `[ ]` will be rendered as an unchecked box. Codex's pipe-delimited format (`FAIL | structural | ...`) is cleaner and unambiguous. I'd refine slightly: use `STATUS | TIER | CHECK-ID | message` to include the check ID that Finding 1.3 also requests, collapsing both fixes into one format change.
 
-**Finding 1.2 (confirmation) — Agree.** The allowlist caveat is good implementation guidance. Will note it in F-10's effort brief as an implementation constraint.
+**Finding 1.2 (confirmation) . Agree.** The allowlist caveat is good implementation guidance. Will note it in F-10's effort brief as an implementation constraint.
 
-**Finding 1.3 (important) — Agree.** The recommendation section needs target file paths and check IDs. Codex's structured format is the right direction. I'd combine this with Finding 1.1's resolution: check IDs appear both in the per-check lines and in the recommendations, giving F-11 a stable key to trace from recommendation back to finding.
+**Finding 1.3 (important) . Agree.** The recommendation section needs target file paths and check IDs. Codex's structured format is the right direction. I'd combine this with Finding 1.1's resolution: check IDs appear both in the per-check lines and in the recommendations, giving F-11 a stable key to trace from recommendation back to finding.
 
-**Finding 1.4 (important) — Partially agree.** The concern is valid in principle — tool version and schema version can drift. But for a v1 where the validator and report schema ship together and there's exactly one consumer (F-11), a separate `Report schema: v1` header is sufficient. I would not build a full compatibility layer. F-11 should check for `Report schema: v1` and warn if it sees an unknown schema version. That's enough for now.
+**Finding 1.4 (important) . Partially agree.** The concern is valid in principle . tool version and schema version can drift. But for a v1 where the validator and report schema ship together and there's exactly one consumer (F-11), a separate `Report schema: v1` header is sufficient. I would not build a full compatibility layer. F-11 should check for `Report schema: v1` and warn if it sees an unknown schema version. That's enough for now.
 
 ---
 
@@ -228,24 +228,24 @@ Those will drift independently. A validator patch release could keep the same sc
 
 ### Context
 
-F-10's Tier 2 checks are LLM-assessed (not deterministic). They are defined in `F-10-pm-skill-validate.md`, Design Decision #6, in the "Tier 2 — Quality" table.
+F-10's Tier 2 checks are LLM-assessed (not deterministic). They are defined in `F-10-pm-skill-validate.md`, Design Decision #6, in the "Tier 2 . Quality" table.
 
 ### Specific questions for Codex
 
-1. **False positive risk**: Which of the 7 quality checks are most likely to produce false positives? For example, the "Instruction clarity" check looks for `### Step` or numbered list patterns — but `foundation-persona` uses a different instruction structure. Would this flag a valid skill as failing?
+1. **False positive risk**: Which of the 7 quality checks are most likely to produce false positives? For example, the "Instruction clarity" check looks for `### Step` or numbered list patterns . but `foundation-persona` uses a different instruction structure. Would this flag a valid skill as failing?
 
 2. **Missing checks**: Are there quality dimensions we should check that aren't in the list? Consider: cross-reference consistency (does SKILL.md's "When NOT to Use" align with the builder's gap analysis?), frontmatter `metadata.category` alignment with actual content, or TEMPLATE.md guidance comment quality.
 
-3. **Line count threshold**: EXAMPLE.md completeness uses a ≥150 line threshold. Review the existing skills — is 150 a reasonable floor? Check a few EXAMPLE.md files for actual line counts.
+3. **Line count threshold**: EXAMPLE.md completeness uses a ≥150 line threshold. Review the existing skills . is 150 a reasonable floor? Check a few EXAMPLE.md files for actual line counts.
 
 4. **Determinism boundary**: The plan says Tier 1 is "deterministic" and Tier 2 is "LLM-assessed." In practice, will an LLM produce consistent results across runs for the same skill? Should the report include confidence markers or caveat language for Tier 2 findings?
 
 ### Codex Feedback
 
-#### Finding 2.1 — The current Tier 2 rubric will produce too many false positives against the shipped library
+#### Finding 2.1 . The current Tier 2 rubric will produce too many false positives against the shipped library
 
 - **Severity:** `blocker`
-- **Source:** `docs/internal/efforts/F-10-pm-skill-validate.md` → Design Decision 6 ("Tier 2 — Quality"); repo evidence from existing skills under `skills/`
+- **Source:** `docs/internal/efforts/F-10-pm-skill-validate.md` → Design Decision 6 ("Tier 2 . Quality"); repo evidence from existing skills under `skills/`
 
 Three proposed checks are not calibrated to the current library:
 
@@ -267,7 +267,7 @@ As written, F-10 would tell users that much of the shipped library is below the 
 - replace the 150-line floor with a weaker completeness check (all required sections filled, no placeholder scaffolding)
 - accept either "template referenced clearly" or "template sections enumerated explicitly" as a pass
 
-#### Finding 2.2 — The instruction-clarity check is low risk and should survive as written
+#### Finding 2.2 . The instruction-clarity check is low risk and should survive as written
 
 - **Severity:** `confirmation`
 - **Source:** `docs/internal/efforts/F-10-pm-skill-validate.md` → Design Decision 6, "Instruction clarity"; repo evidence from current `skills/*/SKILL.md`
@@ -276,7 +276,7 @@ This is the one Tier 2 check that already lines up well with the library. Curren
 
 I do not see a meaningful false-positive risk here if the check remains "step headings or numbered imperative list."
 
-#### Finding 2.3 — A placeholder/guidance-leakage check would add more value than more semantic metadata checks
+#### Finding 2.3 . A placeholder/guidance-leakage check would add more value than more semantic metadata checks
 
 - **Severity:** `suggestion`
 - **Source:** `docs/internal/efforts/F-10-pm-skill-validate.md` → Design Decision 6 (current Tier 2 list); `skills/foundation-persona/SKILL.md` → instruction to remove template guidance blockquotes from final output
@@ -291,7 +291,7 @@ Examples of high-signal things to catch:
 
 Those are concrete, user-visible defects and are much easier to judge consistently than "does `metadata.category` fully match the content."
 
-#### Finding 2.4 — Tier 2 needs caveat language, and heuristic checks should not drive hard required changes
+#### Finding 2.4 . Tier 2 needs caveat language, and heuristic checks should not drive hard required changes
 
 - **Severity:** `important`
 - **Source:** `docs/internal/efforts/F-10-pm-skill-validate.md` → Design Decision 4 (severity meanings) and Design Decision 6 (Tier 1 deterministic vs Tier 2 LLM-assessed); `docs/internal/efforts/F-11-pm-skill-iterate.md` → F-10 report is an iterator input
@@ -308,20 +308,20 @@ Also consider capping heuristic checks at `WARN`/`INFO` unless the failure is ob
 
 > **Author: Claude Opus 4.6 | Date: 2026-04-02**
 
-**Finding 2.1 (blocker) — Agree. This is the most important finding in the review.** I designed the Tier 2 checks based on what the *builder* produces (complete examples, explicit output contracts, When NOT to Use), not what the *existing library* actually has. Running F-10 against the shipped library would produce a wall of warnings against skills that are perfectly functional. That's a trust-killer.
+**Finding 2.1 (blocker) . Agree. This is the most important finding in the review.** I designed the Tier 2 checks based on what the *builder* produces (complete examples, explicit output contracts, When NOT to Use), not what the *existing library* actually has. Running F-10 against the shipped library would produce a wall of warnings against skills that are perfectly functional. That's a trust-killer.
 
 Codex's resolution is right: rebaseline against actual conventions. For v1:
 - `When NOT to Use` → INFO only (present in 1/27 skills, clearly not a convention yet)
 - Example completeness → check for placeholder leakage and all-sections-filled rather than a line count floor
 - Output Contract → accept "use the template" as a valid reference pattern, WARN only if template is not referenced at all
 
-This means F-10 v1 validates against *current conventions* and surfaces quality *suggestions* for the new standard — it doesn't retroactively fail the library.
+This means F-10 v1 validates against *current conventions* and surfaces quality *suggestions* for the new standard . it doesn't retroactively fail the library.
 
-**Finding 2.2 (confirmation) — Agree.** Instruction clarity check survives as-is.
+**Finding 2.2 (confirmation) . Agree.** Instruction clarity check survives as-is.
 
-**Finding 2.3 (suggestion) — Agree, and I'd promote this to the Tier 2 list.** Placeholder/scaffolding leakage (`[Feature Name]`, `<!-- ... -->`, authoring guidance blockquotes) is a concrete, low-ambiguity check that catches real defects. Adding this to v1 replaces the over-sensitive checks we're softening.
+**Finding 2.3 (suggestion) . Agree, and I'd promote this to the Tier 2 list.** Placeholder/scaffolding leakage (`[Feature Name]`, `<!-- ... -->`, authoring guidance blockquotes) is a concrete, low-ambiguity check that catches real defects. Adding this to v1 replaces the over-sensitive checks we're softening.
 
-**Finding 2.4 (important) — Agree.** Tier 2 findings should be capped at WARN unless objectively grounded (missing sections, placeholder leakage). The caveat line in the report is a good idea. This aligns with the severity marker redesign from Area 1 — the tier (structural vs. quality) is now visible in each line, so the reader knows which findings are deterministic.
+**Finding 2.4 (important) . Agree.** Tier 2 findings should be capped at WARN unless objectively grounded (missing sections, placeholder leakage). The caveat line in the report is a good idea. This aligns with the severity marker redesign from Area 1 . the tier (structural vs. quality) is now visible in each line, so the reader knows which findings are deterministic.
 
 ---
 
@@ -337,13 +337,13 @@ F-11 shows proposed changes as a diff preview, then writes directly on confirmat
 
 2. **Partial application**: The current design is all-or-nothing (confirm → all changes written). Should v1 support partial application, or is that unnecessary complexity? Consider: if the iterator proposes 5 changes across 2 files and 1 is wrong, the user rejects all and re-runs with refined feedback. Is that acceptable UX?
 
-3. **Diff format**: The interaction contract example shows a unified diff format. In practice, this is an LLM skill running in a conversation — it doesn't have access to `diff` tooling. The "diff" is really "here's what I'd change, shown in diff-like format." Is this honest enough, or should the format be different (e.g., before/after blocks per section)?
+3. **Diff format**: The interaction contract example shows a unified diff format. In practice, this is an LLM skill running in a conversation . it doesn't have access to `diff` tooling. The "diff" is really "here's what I'd change, shown in diff-like format." Is this honest enough, or should the format be different (e.g., before/after blocks per section)?
 
 4. **Conflict with uncommitted changes**: What if the user has uncommitted changes to the skill files? The iterator reads current files, proposes changes, and writes. If the user made manual edits between reading and writing, those could be lost. Is this a realistic risk? Should the iterator check `git status` first?
 
 ### Codex Feedback
 
-#### Finding 3.1 — All-at-once confirmation is acceptable for v1; partial apply is not necessary yet
+#### Finding 3.1 . All-at-once confirmation is acceptable for v1; partial apply is not necessary yet
 
 - **Severity:** `confirmation`
 - **Source:** `docs/internal/efforts/F-11-pm-skill-iterate.md` → Design Decision 2 ("Diff preview, then direct write")
@@ -352,7 +352,7 @@ I would keep v1 as all-or-nothing. Partial file acceptance sounds attractive, bu
 
 The one usability requirement is that the preview must be clearly grouped by file so the user can see the blast radius before saying yes.
 
-#### Finding 3.2 — A diff-like preview is honest enough if you present it as a proposed patch, not literal tool output
+#### Finding 3.2 . A diff-like preview is honest enough if you present it as a proposed patch, not literal tool output
 
 - **Severity:** `suggestion`
 - **Source:** `docs/internal/efforts/F-11-pm-skill-iterate.md` → Interaction Contract example
@@ -361,7 +361,7 @@ I would not block on the preview format. Users need file-scoped before/after vis
 
 The wording should simply avoid overstating it. "Proposed patch" or "preview of file changes" is safer than implying a tool-generated unified diff. The preview should stay grouped per file and include exact before/after snippets wherever the iterator intends to edit.
 
-#### Finding 3.3 — The real implementation risk is stale previews, not lack of `git status`
+#### Finding 3.3 . The real implementation risk is stale previews, not lack of `git status`
 
 - **Severity:** `important`
 - **Source:** `docs/internal/efforts/F-11-pm-skill-iterate.md` → Design Decision 2 flow ("Read current skill files" → later "User confirms → changes written directly")
@@ -374,13 +374,13 @@ The user can change a target file after the iterator reads it but before the wri
 
 > **Author: Claude Opus 4.6 | Date: 2026-04-02**
 
-**Finding 3.1 (confirmation) — Agree.** All-or-nothing for v1. The per-file grouping requirement is good — I'll add it to the F-11 effort brief as an implementation constraint.
+**Finding 3.1 (confirmation) . Agree.** All-or-nothing for v1. The per-file grouping requirement is good . I'll add it to the F-11 effort brief as an implementation constraint.
 
-**Finding 3.2 (suggestion) — Agree.** "Proposed changes" framing rather than "diff" framing. The interaction contract example in the effort brief should use before/after blocks per section rather than implying `diff(1)` output. Minor wording change.
+**Finding 3.2 (suggestion) . Agree.** "Proposed changes" framing rather than "diff" framing. The interaction contract example in the effort brief should use before/after blocks per section rather than implying `diff(1)` output. Minor wording change.
 
-**Finding 3.3 (important) — Agree, with a pragmatic scope.** The stale-preview risk is real in theory. In practice, the risk window is small (user confirms within the same conversation turn). But the guard is cheap to implement: before writing, re-read each target file and compare to the content used for the preview. If changed, abort and regenerate. I'll add this to the F-11 effort brief as a required safeguard.
+**Finding 3.3 (important) . Agree, with a pragmatic scope.** The stale-preview risk is real in theory. In practice, the risk window is small (user confirms within the same conversation turn). But the guard is cheap to implement: before writing, re-read each target file and compare to the content used for the preview. If changed, abort and regenerate. I'll add this to the F-11 effort brief as a required safeguard.
 
-However, I want to be honest: for an LLM skill running in a conversation, "compare exact content" means the skill instructions tell the agent to re-read before writing. It's a behavioral instruction, not a programmatic hash check. That's the right level of rigor for v1 — if this were a script, I'd want checksums.
+However, I want to be honest: for an LLM skill running in a conversation, "compare exact content" means the skill instructions tell the agent to re-read before writing. It's a behavioral instruction, not a programmatic hash check. That's the right level of rigor for v1 . if this were a script, I'd want checksums.
 
 ---
 
@@ -392,17 +392,17 @@ F-11 auto-suggests version bumps and offers to update HISTORY.md. Defined in `F-
 
 ### Specific questions for Codex
 
-1. **Bump classification accuracy**: The iterator must classify changes as patch/minor/major. This is an LLM judgment call. Review the SemVer rules in `skill-versioning.md` — are the rules specific enough for an LLM to classify consistently? Or are there gray areas that will produce inconsistent suggestions across runs?
+1. **Bump classification accuracy**: The iterator must classify changes as patch/minor/major. This is an LLM judgment call. Review the SemVer rules in `skill-versioning.md` . are the rules specific enough for an LLM to classify consistently? Or are there gray areas that will produce inconsistent suggestions across runs?
 
 2. **Multiple iterations before release**: If a user runs the iterator 3 times on the same skill before releasing, does the version bump compound? (1.0.0 → 1.0.1 → 1.0.2 → 1.0.3?) Or should the iterator recognize "you already bumped this since the last release" and suggest a single cumulative bump?
 
 3. **HISTORY.md append format**: The offer to update HISTORY.md assumes the file follows the format in `skill-versioning.md`. What if HISTORY.md exists but doesn't follow the expected format (e.g., someone manually edited it)? Should the iterator validate the format before appending?
 
-4. **Interaction with `skill-versioning.md` rule**: The versioning doc says "HISTORY.md is created when a skill ships its second version, not before." The iterator respects this (no create, only append). But what about the *first iteration* of a skill — the one that creates the second version? Should the iterator offer to *create* HISTORY.md in that specific case, since it's the trigger point?
+4. **Interaction with `skill-versioning.md` rule**: The versioning doc says "HISTORY.md is created when a skill ships its second version, not before." The iterator respects this (no create, only append). But what about the *first iteration* of a skill . the one that creates the second version? Should the iterator offer to *create* HISTORY.md in that specific case, since it's the trigger point?
 
 ### Codex Feedback
 
-#### Finding 4.1 — The SemVer rules are close, but they still need a precedence rule for gray areas
+#### Finding 4.1 . The SemVer rules are close, but they still need a precedence rule for gray areas
 
 - **Severity:** `important`
 - **Source:** `docs/internal/skill-versioning.md` → "Skill Version (SemVer)"; `docs/internal/efforts/F-11-pm-skill-iterate.md` → Design Decision 3
@@ -421,7 +421,7 @@ Without a precedence rule, two runs may classify the same edit differently.
 
 Then add 2-3 skill-specific examples using validator/iterator scenarios.
 
-#### Finding 4.2 — Auto-writing a numeric bump after every iteration will compound unreleased changes
+#### Finding 4.2 . Auto-writing a numeric bump after every iteration will compound unreleased changes
 
 - **Severity:** `important`
 - **Source:** `docs/internal/efforts/F-11-pm-skill-iterate.md` → Design Decision 3 ("After applying changes... suggests a version bump... updates `version` and `updated` on confirmation"); `docs/internal/skill-versioning.md` → skill versions are release-tracked contract versions, with release governance handled via `skills-manifest.yaml` and `HISTORY.md`
@@ -435,7 +435,7 @@ The current design has no concept of "last shipped version" versus "current work
 
 The current "increment from whatever is in frontmatter right now" rule is too eager.
 
-#### Finding 4.3 — The `HISTORY.md` rule conflicts with the second-version governance rule
+#### Finding 4.3 . The `HISTORY.md` rule conflicts with the second-version governance rule
 
 - **Severity:** `blocker`
 - **Source:** `docs/internal/skill-versioning.md` → "Skill History (HISTORY.md)" / "When to create"; `docs/internal/efforts/F-11-pm-skill-iterate.md` → Design Decision 4 ("If HISTORY.md does not exist: no offer")
@@ -449,7 +449,7 @@ The first iterator-driven version bump is exactly the moment when a second versi
 
 **Proposed resolution:** If the accepted change creates the second shipped version of a skill and `HISTORY.md` is absent, F-11 should offer to create it with entries for both `1.0.0` and the new version. For later iterations, append only.
 
-#### Finding 4.4 — HISTORY append should be guarded by format validation
+#### Finding 4.4 . HISTORY append should be guarded by format validation
 
 - **Severity:** `important`
 - **Source:** `docs/internal/skill-versioning.md` → `HISTORY.md` format and rules; `docs/internal/efforts/F-11-pm-skill-iterate.md` → Design Decision 4 assumes append behavior
@@ -465,13 +465,13 @@ Appending is only safe if the existing file actually follows the expected struct
 
 > **Author: Claude Opus 4.6 | Date: 2026-04-02**
 
-**Finding 4.1 (important) — Agree.** The SemVer rules need a tie-breaker for the gray areas Codex identified. The proposed rule is clean: "new compliance requirement = major, additive/optional = minor, clarification only = patch." I'll add this to `skill-versioning.md` along with 2-3 worked examples.
+**Finding 4.1 (important) . Agree.** The SemVer rules need a tie-breaker for the gray areas Codex identified. The proposed rule is clean: "new compliance requirement = major, additive/optional = minor, clarification only = patch." I'll add this to `skill-versioning.md` along with 2-3 worked examples.
 
-**Finding 4.2 (important) — Agree. This is a real UX problem.** Three iterations before release producing 1.0.0 → 1.0.1 → 1.0.2 → 1.0.3 is wrong — it should be one cumulative bump from the last released version. Codex's option 1 (suggest bump class but don't write until user says it's release-bound) is cleaner than option 2 (infer last shipped version). For v1: the iterator suggests "this is a patch-level change" and updates the change summary, but only writes the version number on explicit user confirmation. The `updated` date can be written immediately since it just tracks when the file was last modified.
+**Finding 4.2 (important) . Agree. This is a real UX problem.** Three iterations before release producing 1.0.0 → 1.0.1 → 1.0.2 → 1.0.3 is wrong . it should be one cumulative bump from the last released version. Codex's option 1 (suggest bump class but don't write until user says it's release-bound) is cleaner than option 2 (infer last shipped version). For v1: the iterator suggests "this is a patch-level change" and updates the change summary, but only writes the version number on explicit user confirmation. The `updated` date can be written immediately since it just tracks when the file was last modified.
 
-**Finding 4.3 (blocker) — Agree. This is a genuine conflict I introduced.** The versioning doc says HISTORY.md is created at second-version time. F-11 says "don't create it." But F-11 *is* the tool that creates the second version. The resolution is clear: if the iterator creates a version bump that would be the skill's second version, and HISTORY.md doesn't exist, offer to create it with entries for both versions. This is a special case of "offer, don't force" — just extending the offer to include creation at the trigger point.
+**Finding 4.3 (blocker) . Agree. This is a genuine conflict I introduced.** The versioning doc says HISTORY.md is created at second-version time. F-11 says "don't create it." But F-11 *is* the tool that creates the second version. The resolution is clear: if the iterator creates a version bump that would be the skill's second version, and HISTORY.md doesn't exist, offer to create it with entries for both versions. This is a special case of "offer, don't force" . just extending the offer to include creation at the trigger point.
 
-**Finding 4.4 (important) — Agree.** Validate HISTORY.md format before appending. If malformed, warn and show the proposed content without writing. This is a lightweight guard that prevents silent corruption.
+**Finding 4.4 (important) . Agree.** Validate HISTORY.md format before appending. If malformed, warn and show the proposed content without writing. This is a lightweight guard that prevents silent corruption.
 
 ---
 
@@ -493,7 +493,7 @@ The plan defines v1 scope for both skills. This review area asks whether the sco
 
 ### Codex Feedback
 
-#### Finding 5.1 — Batch validation is the only v1 scope item that looks overbuilt
+#### Finding 5.1 . Batch validation is the only v1 scope item that looks overbuilt
 
 - **Severity:** `suggestion`
 - **Source:** `docs/internal/efforts/F-10-pm-skill-validate.md` → Design Decision 5; `docs/internal/release-plans/v2.8.0/plan_v2.8.0.md` → F-10 summary and lifecycle workflows
@@ -504,7 +504,7 @@ If you want to trim v1, `--all` is the first thing I would defer or constrain.
 
 **Low-cost compromise:** keep `--all`, but make it summary-only and structural-first. Do not require full Tier 2 depth for every skill in the batch path.
 
-#### Finding 5.2 — The unified F-11 flow is realistic if input normalization is made explicit
+#### Finding 5.2 . The unified F-11 flow is realistic if input normalization is made explicit
 
 - **Severity:** `confirmation`
 - **Source:** `docs/internal/efforts/F-11-pm-skill-iterate.md` → Design Decision 5
@@ -518,7 +518,7 @@ I agree with the unified-flow decision for v1. Validation reports, free-text fee
 
 The only thing I would add is an explicit first step in the skill instructions: normalize the input into a structured list of intended changes before generating edits. With that step, a unified flow is realistic and simpler than introducing early modes.
 
-#### Finding 5.3 — The overall v1 scope is otherwise right-sized
+#### Finding 5.3 . The overall v1 scope is otherwise right-sized
 
 - **Severity:** `confirmation`
 - **Source:** `docs/internal/release-plans/v2.8.0/plan_v2.8.0.md` → release theme, dependency chain, and gating criteria; `docs/internal/efforts/F-10-pm-skill-validate.md`; `docs/internal/efforts/F-11-pm-skill-iterate.md`
@@ -529,11 +529,11 @@ I do not see major evidence that version-bump suggestions, optional `HISTORY.md`
 
 > **Author: Claude Opus 4.6 | Date: 2026-04-02**
 
-**Finding 5.1 (suggestion) — Agree with the compromise.** Keep `--all` in v1 but make it structural-only (Tier 1) with a summary table. Full Tier 2 depth on 27+ skills in one pass is both expensive and noisy. Users can drill into individual skills with the single-skill mode for quality assessment.
+**Finding 5.1 (suggestion) . Agree with the compromise.** Keep `--all` in v1 but make it structural-only (Tier 1) with a summary table. Full Tier 2 depth on 27+ skills in one pass is both expensive and noisy. Users can drill into individual skills with the single-skill mode for quality assessment.
 
-**Finding 5.2 (confirmation) — Agree.** The explicit "normalize input into structured change intents" step is a good addition to F-11's instructions. This is the key that makes the unified flow work — regardless of input type, the first thing the iterator does is extract a list of concrete intended changes. I'll add this to the effort brief.
+**Finding 5.2 (confirmation) . Agree.** The explicit "normalize input into structured change intents" step is a good addition to F-11's instructions. This is the key that makes the unified flow work . regardless of input type, the first thing the iterator does is extract a list of concrete intended changes. I'll add this to the effort brief.
 
-**Finding 5.3 (confirmation) — Noted.** Good to have Codex's confirmation that the overall scope is right-sized once the identified issues are resolved.
+**Finding 5.3 (confirmation) . Noted.** Good to have Codex's confirmation that the overall scope is right-sized once the identified issues are resolved.
 
 ---
 
@@ -555,7 +555,7 @@ Open-ended review for anything not covered in the specific areas above.
 
 ### Codex Feedback
 
-#### Finding 6.1 — Biggest risk: a noisy validator will drive wasted iteration work
+#### Finding 6.1 . Biggest risk: a noisy validator will drive wasted iteration work
 
 - **Severity:** `blocker`
 - **Source:** `docs/internal/efforts/F-10-pm-skill-validate.md` → Design Decision 6; `docs/internal/efforts/F-11-pm-skill-iterate.md` → F-10 report as one iterator input; repo evidence from current `skills/`
@@ -570,7 +570,7 @@ That creates exactly the wrong lifecycle dynamic:
 
 Resolve the validator calibration before implementation starts.
 
-#### Finding 6.2 — The lifecycle tools are not yet fully aligned on the quality standard they enforce
+#### Finding 6.2 . The lifecycle tools are not yet fully aligned on the quality standard they enforce
 
 - **Severity:** `important`
 - **Source:** `skills/utility-pm-skill-builder/SKILL.md` → Output Contract / Quality Checklist; `docs/internal/efforts/F-10-pm-skill-validate.md` → Tier 2 quality checks
@@ -587,7 +587,7 @@ If these tools ship with different implicit standards, users will get mixed sign
 
 **Proposed resolution:** Publish a shared lifecycle conventions checklist or explicitly frame F-10 as validating against a new `v2.8` standard that older skills may legitimately fail until iterated.
 
-#### Finding 6.3 — MCP constraints argue for a single-skill-first design and report-carrying workflow
+#### Finding 6.3 . MCP constraints argue for a single-skill-first design and report-carrying workflow
 
 - **Severity:** `important`
 - **Source:** `docs/internal/release-plans/v2.8.0/plan_v2.8.0.md` → MCP Impact section ("both read existing skill directories", embedded content/read access needs verification); `docs/internal/efforts/F-10-pm-skill-validate.md`; `docs/internal/efforts/F-11-pm-skill-iterate.md`
@@ -606,7 +606,7 @@ Implications:
 - prefer report-driven iteration
 - if current file contents are unavailable, require the user to provide the relevant file excerpts before proposing edits
 
-#### Finding 6.4 — No additional scope blockers beyond the ones above
+#### Finding 6.4 . No additional scope blockers beyond the ones above
 
 - **Severity:** `confirmation`
 - **Source:** all cited v2.8.0 design documents in Section 3
@@ -617,18 +617,18 @@ Outside the interface/schema issues, Tier 2 calibration, stale-preview guard, an
 
 > **Author: Claude Opus 4.6 | Date: 2026-04-02**
 
-**Finding 6.1 (blocker) — Agree. This is the same issue as 2.1, stated as a risk.** A noisy validator driving unnecessary iteration is the top risk. The fix is the same: rebaseline Tier 2 against the shipped library. Once the validator is calibrated, the lifecycle dynamic works correctly. This is the most important pre-implementation task.
+**Finding 6.1 (blocker) . Agree. This is the same issue as 2.1, stated as a risk.** A noisy validator driving unnecessary iteration is the top risk. The fix is the same: rebaseline Tier 2 against the shipped library. Once the validator is calibrated, the lifecycle dynamic works correctly. This is the most important pre-implementation task.
 
-**Finding 6.2 (important) — Agree.** The three tools need a shared quality standard. I'd frame it as: F-10 v1 validates against *current library conventions* (what exists today) and surfaces the *new v2.8 standard* (what the builder produces) as suggestions. Over time, as skills are iterated through the lifecycle, the library converges toward the higher standard. This is an evolutionary model, not a retroactive mandate. I'll add this framing to both the F-10 effort brief and D-03 (lifecycle guide).
+**Finding 6.2 (important) . Agree.** The three tools need a shared quality standard. I'd frame it as: F-10 v1 validates against *current library conventions* (what exists today) and surfaces the *new v2.8 standard* (what the builder produces) as suggestions. Over time, as skills are iterated through the lifecycle, the library converges toward the higher standard. This is an evolutionary model, not a retroactive mandate. I'll add this framing to both the F-10 effort brief and D-03 (lifecycle guide).
 
-**Finding 6.3 (important) — Agree.** MCP constraints should shape the design, not be afterthoughts. For v1:
+**Finding 6.3 (important) . Agree.** MCP constraints should shape the design, not be afterthoughts. For v1:
 - F-10: single-skill mode is the MCP-safe path; batch mode is local-only
 - F-11: validation-report-driven iteration is the MCP-safe path; free-text iteration against repo files requires local access
 - Both skills should include a "Degraded mode" section in their instructions: if file contents are unavailable, require the user to paste relevant excerpts
 
 This is a documentation addition, not an architecture change. The skills already work this way in practice (an LLM skill reads files when it can and asks for input when it can't), but making it explicit helps MCP consumers understand the expected workflow.
 
-**Finding 6.4 (confirmation) — Noted.** Codex confirms no additional scope blockers beyond the ones identified above.
+**Finding 6.4 (confirmation) . Noted.** Codex confirms no additional scope blockers beyond the ones identified above.
 
 ---
 

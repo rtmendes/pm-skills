@@ -1,6 +1,6 @@
 # Distilled Planning Docs
 
-> **Canonical backlog**: `04_next-efforts.md` — start here for what to build next.
+> **Canonical backlog**: `04_next-efforts.md` . start here for what to build next.
 
 | File | Role | When to read |
 |------|------|-------------|

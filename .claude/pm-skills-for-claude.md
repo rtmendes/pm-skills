@@ -17,7 +17,7 @@ This directory is populated by the sync helper to enable Claude Code skill disco
 - PowerShell (Windows): `./scripts/sync-claude.ps1`
 
 ## Structure after sync
-- `.claude/skills/` — all PM skills (flat)
-- `.claude/commands/` — all slash commands
+- `.claude/skills/` . all PM skills (flat)
+- `.claude/commands/` . all slash commands
 
 Re-run the sync helper after pulling updates. The `.claude/` directory is gitignored; you can delete and regenerate it anytime.

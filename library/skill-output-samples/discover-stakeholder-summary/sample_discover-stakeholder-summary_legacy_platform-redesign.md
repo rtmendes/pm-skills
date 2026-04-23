@@ -10,7 +10,7 @@ context: B2B SaaS company undertaking a major platform redesign affecting all pr
 
 ## Overview
 
-**Project:** Redesign the core platform UI — navigation, design system, and interaction patterns — across all 4 product lines (CRM, Marketing, Support, Analytics)
+**Project:** Redesign the core platform UI . navigation, design system, and interaction patterns . across all 4 product lines (CRM, Marketing, Support, Analytics)
 **Purpose:** Identify and align stakeholders across a high-impact, cross-organizational redesign that touches every customer and every team
 **Date:** January 2026
 **Owner:** Maya Patel, Senior Product Manager, Platform Team
@@ -39,25 +39,25 @@ context: B2B SaaS company undertaking a major platform redesign affecting all pr
 ### Quadrant Placement
 
 **Manage Closely (High Influence, High Interest):**
-- Laura Chen, CPO — Executive sponsor, owns product vision and cross-product consistency
-- Tomás Rivera, VP Design — Design authority, owns design system and UX standards
-- Raj Krishnamurthy, VP Engineering — Controls engineering resources across all product teams
-- Sophie Wagner, CRM Product Lead — Largest product line, most customers affected
-- Nate Park, Marketing Product Lead — Fastest-growing product, most active feature roadmap
+- Laura Chen, CPO . Executive sponsor, owns product vision and cross-product consistency
+- Tomás Rivera, VP Design . Design authority, owns design system and UX standards
+- Raj Krishnamurthy, VP Engineering . Controls engineering resources across all product teams
+- Sophie Wagner, CRM Product Lead . Largest product line, most customers affected
+- Nate Park, Marketing Product Lead . Fastest-growing product, most active feature roadmap
 
 **Keep Satisfied (High Influence, Low Interest):**
-- David Kim, CEO — Board visibility, brand implications, but delegates to CPO
-- Elena Marchetti, CFO — Budget authority for cross-product initiatives, cares about ROI not details
+- David Kim, CEO . Board visibility, brand implications, but delegates to CPO
+- Elena Marchetti, CFO . Budget authority for cross-product initiatives, cares about ROI not details
 
 **Keep Informed (Low Influence, High Interest):**
-- Aisha Johnson, Support Product Lead — Smaller team, fewer resources to contribute, but deeply affected
-- Derek Hoffman, Analytics Product Lead — Newest product, still establishing its own patterns
-- Brian O'Sullivan, VP Customer Success — Customer-facing impact, renewal risk concerns
-- Christina Reyes, VP Sales — Demo experience impact, competitive positioning
+- Aisha Johnson, Support Product Lead . Smaller team, fewer resources to contribute, but deeply affected
+- Derek Hoffman, Analytics Product Lead . Newest product, still establishing its own patterns
+- Brian O'Sullivan, VP Customer Success . Customer-facing impact, renewal risk concerns
+- Christina Reyes, VP Sales . Demo experience impact, competitive positioning
 
 **Monitor (Low Influence, Low Interest):**
-- Recruiting Team — Employer brand implications from design quality, but minimal project involvement
-- Office Operations — Training material updates needed post-launch
+- Recruiting Team . Employer brand implications from design quality, but minimal project involvement
+- Office Operations . Training material updates needed post-launch
 
 ## Stakeholder Profiles
 
@@ -76,8 +76,8 @@ context: B2B SaaS company undertaking a major platform redesign affecting all pr
 ### Laura Chen, CPO
 
 **Role:** Chief Product Officer, Executive Sponsor
-**Influence Level:** High — Final authority on product direction and cross-product decisions
-**Interest Level:** High — This is her strategic initiative, tied to board-level OKR for platform unification
+**Influence Level:** High . Final authority on product direction and cross-product decisions
+**Interest Level:** High . This is her strategic initiative, tied to board-level OKR for platform unification
 **Current Alignment:** Supportive
 
 **Needs:**
@@ -91,7 +91,7 @@ context: B2B SaaS company undertaking a major platform redesign affecting all pr
 - Customer backlash if the redesign feels like "change for change's sake"
 
 **What Motivates Them:**
-- Platform vision — building a best-in-class, cohesive product suite
+- Platform vision . building a best-in-class, cohesive product suite
 - Customer satisfaction and NPS improvement
 - Competitive positioning against point solutions
 
@@ -105,14 +105,14 @@ context: B2B SaaS company undertaking a major platform redesign affecting all pr
 ### Tomás Rivera, VP Design
 
 **Role:** VP of Design, Design System Owner, 18-person design org
-**Influence Level:** High — Owns design decisions, his team executes the redesign
-**Interest Level:** High — This project is the culmination of 2 years of design system investment
-**Current Alignment:** Strongly Supportive — this was his proposal
+**Influence Level:** High . Owns design decisions, his team executes the redesign
+**Interest Level:** High . This project is the culmination of 2 years of design system investment
+**Current Alignment:** Strongly Supportive . this was his proposal
 
 **Needs:**
 - Authority to enforce design system adoption across all product teams
 - Engineering partnership to build reusable component library
-- Time to do the work properly — no cutting corners on craft
+- Time to do the work properly . no cutting corners on craft
 
 **Concerns:**
 - Product teams forking the design system or requesting excessive exceptions
@@ -135,8 +135,8 @@ context: B2B SaaS company undertaking a major platform redesign affecting all pr
 ### Raj Krishnamurthy, VP Engineering
 
 **Role:** VP Engineering, 120 engineers across all product lines
-**Influence Level:** High — Controls engineering allocation and technical architecture decisions
-**Interest Level:** High — Massive engineering investment required, technical debt implications
+**Influence Level:** High . Controls engineering allocation and technical architecture decisions
+**Interest Level:** High . Massive engineering investment required, technical debt implications
 **Current Alignment:** Cautious
 
 **Needs:**
@@ -154,7 +154,7 @@ context: B2B SaaS company undertaking a major platform redesign affecting all pr
 **What Motivates Them:**
 - Engineering velocity and developer experience
 - Technical architecture quality and long-term maintainability
-- Team morale — engineers want to build features, not rewrite UIs
+- Team morale . engineers want to build features, not rewrite UIs
 
 **Preferred Communication:**
 - Channel: Architecture reviews, Slack #platform-eng channel
@@ -166,14 +166,14 @@ context: B2B SaaS company undertaking a major platform redesign affecting all pr
 ### Sophie Wagner, CRM Product Lead
 
 **Role:** Product Lead for CRM, company's flagship product (60% of revenue)
-**Influence Level:** High — CRM is the largest product, her voice carries significant weight
-**Interest Level:** High — Every CRM customer will be affected by the redesign
+**Influence Level:** High . CRM is the largest product, her voice carries significant weight
+**Interest Level:** High . Every CRM customer will be affected by the redesign
 **Current Alignment:** Resistant
 
 **Needs:**
 - Zero negative impact on CRM metrics (activation, retention, feature adoption)
 - Opt-in migration for enterprise customers who've customized their workflows
-- CRM team's feature roadmap protected — no more than 20% capacity allocated to redesign
+- CRM team's feature roadmap protected . no more than 20% capacity allocated to redesign
 - Customer communication plan that positions change positively
 
 **Concerns:**
@@ -197,8 +197,8 @@ context: B2B SaaS company undertaking a major platform redesign affecting all pr
 ### Nate Park, Marketing Product Lead
 
 **Role:** Product Lead for Marketing automation product, fastest-growing line
-**Influence Level:** Medium — Growing product but still 15% of revenue
-**Interest Level:** High — Sees redesign as competitive advantage for marketing buyers
+**Influence Level:** Medium . Growing product but still 15% of revenue
+**Interest Level:** High . Sees redesign as competitive advantage for marketing buyers
 **Current Alignment:** Supportive
 
 **Needs:**
@@ -208,7 +208,7 @@ context: B2B SaaS company undertaking a major platform redesign affecting all pr
 
 **Concerns:**
 - Marketing product being deprioritized in rollout sequence behind CRM
-- Design system being too "enterprise-boring" — marketing buyers expect visual flair
+- Design system being too "enterprise-boring" . marketing buyers expect visual flair
 - Timeline slipping and his competitive window closing
 
 **What Motivates Them:**
@@ -234,18 +234,18 @@ context: B2B SaaS company undertaking a major platform redesign affecting all pr
 | Christina (Sales) | Nate (Marketing) | Demo environment and competitive positioning updates |
 
 ### Alliances
-- **Executive alignment:** Laura and Tomás are strongly aligned — she championed his design system investment and this project is the payoff. Laura can influence Raj on resource allocation
-- **Growth coalition:** Nate and Christina are natural allies — both want a modern UI to win deals. Nate's enthusiasm can be leveraged to build momentum
+- **Executive alignment:** Laura and Tomás are strongly aligned . she championed his design system investment and this project is the payoff. Laura can influence Raj on resource allocation
+- **Growth coalition:** Nate and Christina are natural allies . both want a modern UI to win deals. Nate's enthusiasm can be leveraged to build momentum
 - **Operational concern:** Sophie and Brian share customer disruption concerns. Addressing Sophie's migration plan satisfies Brian's renewal risk worries simultaneously
-- **Technical partnership:** Raj and Tomás need to build trust — historically, engineering has felt design delivers "pixel-perfect mockups that ignore technical constraints." Early technical collaboration is critical
+- **Technical partnership:** Raj and Tomás need to build trust . historically, engineering has felt design delivers "pixel-perfect mockups that ignore technical constraints." Early technical collaboration is critical
 
 ### Potential Conflicts
 | Parties | Conflict Area | Risk Level |
 |---------|---------------|------------|
-| Sophie vs. Tomás | Design system flexibility vs. consistency — CRM needs custom patterns that Tomás may view as exceptions undermining the system | High |
-| Raj vs. Laura | Timeline and scope — Raj wants bounded, phased migration while Laura wants visible cross-product progress for board | High |
-| Nate vs. Sophie | Rollout priority — both want their product migrated first for different reasons | Medium |
-| Tomás vs. Raj | Component implementation quality — design wants pixel-perfect, engineering wants "good enough" to ship faster | Medium |
+| Sophie vs. Tomás | Design system flexibility vs. consistency . CRM needs custom patterns that Tomás may view as exceptions undermining the system | High |
+| Raj vs. Laura | Timeline and scope . Raj wants bounded, phased migration while Laura wants visible cross-product progress for board | High |
+| Nate vs. Sophie | Rollout priority . both want their product migrated first for different reasons | Medium |
+| Tomás vs. Raj | Component implementation quality . design wants pixel-perfect, engineering wants "good enough" to ship faster | Medium |
 
 ## Communication Plan
 

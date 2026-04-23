@@ -1,6 +1,6 @@
 ---
 title: "Storevine: Follow the Product"
-description: "Follow Storevine through the complete PM lifecycle — from discovery to pivot decision."
+description: "Follow Storevine through the complete PM lifecycle . from discovery to pivot decision."
 tags:
   - Showcase
   - Storevine
@@ -8,9 +8,9 @@ tags:
 
 # Storevine: Follow the Product
 
-> Series A, ~70 employees, ~15,000 merchants. Building **Campaigns** — native email marketing.
+> Series A, ~70 employees, ~15,000 merchants. Building **Campaigns** . native email marketing.
 >
-> **Prompt style:** Organized — structured context, references prior work, clear scope boundaries.
+> **Prompt style:** Organized . structured context, references prior work, clear scope boundaries.
 
 ## Phase: Foundation
 
@@ -174,16 +174,16 @@ tags:
 
 ### Competitive Analysis
 
-*Storevine B2B ecommerce platform — email marketing competitive landscape for Campaigns*
+*Storevine B2B ecommerce platform . email marketing competitive landscape for Campaigns*
 
 !!! quote "Prompt"
     ```
     /competitive-analysis
 
-    Scope: Email marketing tools available to ecommerce merchants — built-in vs.
+    Scope: Email marketing tools available to ecommerce merchants . built-in vs.
     third-party positioning. Informing Campaigns v1 scope and feature prioritization.
 
-    Our product: Storevine — B2B all-in-one ecommerce + web platform, Series A,
+    Our product: Storevine . B2B all-in-one ecommerce + web platform, Series A,
     ~18k active merchants [fictional]. Building Campaigns: native email marketing
     with audience segmentation and automations.
 
@@ -222,7 +222,7 @@ tags:
 
 ### Interview Synthesis
 
-*Storevine B2B ecommerce platform — merchant email marketing interviews for Campaigns discovery*
+*Storevine B2B ecommerce platform . merchant email marketing interviews for Campaigns discovery*
 
 !!! quote "Prompt"
     ```
@@ -255,30 +255,30 @@ tags:
 
 ### Stakeholder Summary
 
-*Storevine B2B ecommerce platform — Campaigns launch stakeholder map*
+*Storevine B2B ecommerce platform . Campaigns launch stakeholder map*
 
 !!! quote "Prompt"
     ```
     /stakeholder-summary
 
-    Project: Campaigns — native email marketing for Storevine merchants
+    Project: Campaigns . native email marketing for Storevine merchants
     Stage: PRD complete, moving to engineering kickoff
 
     Stakeholders I've identified:
 
     Internal:
-    - Growth PM (me) — owner
-    - Eng Lead (Platform) — aligned, participated in PRD review
-    - Design — in progress on Figma specs
-    - Legal — needs to review CAN-SPAM + GDPR section; not started yet
-    - Merchant Success — launch comms owners; engaged in discovery
-    - Storevine Marketing — dog-food use case; interested in using
+    - Growth PM (me) . owner
+    - Eng Lead (Platform) . aligned, participated in PRD review
+    - Design . in progress on Figma specs
+    - Legal . needs to review CAN-SPAM + GDPR section; not started yet
+    - Merchant Success . launch comms owners; engaged in discovery
+    - Storevine Marketing . dog-food use case; interested in using
       Campaigns for our own merchant communications
 
     External:
-    - Power-user merchants (fashion/home segment) — 5-6 who joined
+    - Power-user merchants (fashion/home segment) . 5-6 who joined
       discovery interviews; have expectations about the feature
-    - Klaviyo integration partner team — active Storevine integration;
+    - Klaviyo integration partner team . active Storevine integration;
       not sure how they'll react to a native competing feature
 
     Need: influence/interest map, stakeholder profiles, communication
@@ -288,7 +288,7 @@ tags:
     ---
 
 ??? example "Full output: Stakeholder Summary"
-    # Stakeholder Summary: Campaigns — Native Email Marketing
+    # Stakeholder Summary: Campaigns . Native Email Marketing
 
 ---
 
@@ -296,19 +296,19 @@ tags:
 
 ### Problem Statement
 
-*Storevine B2B ecommerce platform — Campaigns feature problem framing for engineering and design*
+*Storevine B2B ecommerce platform . Campaigns feature problem framing for engineering and design*
 
 !!! quote "Prompt"
     ```
     /problem-statement
 
-    Project: Campaigns — native email marketing for Storevine merchants
-    Stage: Define — establishing shared problem framing before PRD draft
+    Project: Campaigns . native email marketing for Storevine merchants
+    Stage: Define . establishing shared problem framing before PRD draft
 
     Problem I want to articulate:
     - ~68% of active merchants use an external email tool [fictional]
     - Storevine's built-in email lacks purchase-based segmentation and
-      revenue attribution — the two capabilities merchants cite most
+      revenue attribution . the two capabilities merchants cite most
     - Q4 exit survey: 22% of churned merchants cited this as a primary
       cancellation reason [fictional]
     - Competitive analysis filed last week: Shopify Email has already
@@ -334,20 +334,20 @@ tags:
 
 ### Hypothesis
 
-*Storevine B2B ecommerce platform — Campaigns v1 first-campaign guided flow hypothesis*
+*Storevine B2B ecommerce platform . Campaigns v1 first-campaign guided flow hypothesis*
 
 !!! quote "Prompt"
     ```
     /hypothesis
 
-    Project: Campaigns — native email marketing for Storevine merchants
+    Project: Campaigns . native email marketing for Storevine merchants
     Stage: Post-discovery, pre-PRD finalization
 
     Hypothesis I want to define:
     - Non-adopter merchants (no active external email tool, <250 customers)
       are ~38% of our active base [fictional] and represented 3 of 8 merchant
       interview participants (P3, P6, and P8)
-    - Core belief: setup complexity is the barrier — not awareness or price
+    - Core belief: setup complexity is the barrier . not awareness or price
     - Specific hypothesis: a guided first-campaign flow with product-seeded
       templates will drive first-send rate from ~12% [fictional] to ≥30%
       [fictional] within 60 days of GA
@@ -373,14 +373,14 @@ tags:
 
 ### Opportunity Tree
 
-*Storevine B2B ecommerce platform — churn reduction opportunity tree for Campaigns Q2 sprint planning*
+*Storevine B2B ecommerce platform . churn reduction opportunity tree for Campaigns Q2 sprint planning*
 
 !!! quote "Prompt"
     ```
     /opportunity-tree
 
-    Project: Campaigns — and broader platform churn reduction strategy
-    Stage: Pre-Q2 sprint planning — framing the opportunity space before
+    Project: Campaigns . and broader platform churn reduction strategy
+    Stage: Pre-Q2 sprint planning . framing the opportunity space before
     scope lock
 
     Desired outcome: Reduce annual merchant churn from 22% [fictional] to
@@ -390,7 +390,7 @@ tags:
     1. Merchants can't run email re-engagement without a separate external
        tool (Q4 exit survey: 22% churn [fictional]; 8 merchant interviews)
     2. Merchants can't see what's driving revenue across their store
-       (interview finding: "there's no way to see what's working" — P8)
+       (interview finding: "there's no way to see what's working" . P8)
     3. Merchants are paying for Storevine + external tools and beginning to
        question whether the platform subscription is worth it
 
@@ -412,13 +412,13 @@ tags:
 
 ### JTBD Canvas
 
-*Storevine B2B ecommerce platform — merchant email and tool-stack job-to-be-done for Campaigns*
+*Storevine B2B ecommerce platform . merchant email and tool-stack job-to-be-done for Campaigns*
 
 !!! quote "Prompt"
     ```
     /jtbd-canvas
 
-    Project: Campaigns — native email marketing for Storevine merchants
+    Project: Campaigns . native email marketing for Storevine merchants
     Stage: Pre-PRD, grounding feature scope in JTBD framework before
     engineering handoff
 
@@ -430,7 +430,7 @@ tags:
       setup, and data sync
 
     Research basis:
-    - 8 merchant interviews (Jan 12–28, 2026) — direct quotes available
+    - 8 merchant interviews (Jan 12–28, 2026) . direct quotes available
     - Competitive analysis (Feb 2026): Klaviyo used by ~40% of active
       merchants [fictional]; Mailchimp by ~20% [fictional]
     - Q4 exit survey: 22% churn cited "had to use a separate email tool"
@@ -452,13 +452,13 @@ tags:
 
 ### Solution Brief
 
-*Storevine B2B ecommerce platform — Campaigns one-page solution brief for head of product review*
+*Storevine B2B ecommerce platform . Campaigns one-page solution brief for head of product review*
 
 !!! quote "Prompt"
     ```
     /solution-brief
 
-    Project: Campaigns — native email marketing for Storevine merchants
+    Project: Campaigns . native email marketing for Storevine merchants
 
     I need a one-page brief for a head of product review before engineering
     kickoff. Full PRD already written and reviewed with engineering lead.
@@ -469,7 +469,7 @@ tags:
     - Built-in tools lack segmentation + attribution
     - 22% churn cited email gaps as a top-3 reason [fictional]
 
-    Solution: native email within Storevine admin — no separate tool
+    Solution: native email within Storevine admin . no separate tool
     subscription, no sync required
 
     v1 features to include:
@@ -485,19 +485,19 @@ tags:
     ---
 
 ??? example "Full output: Solution Brief"
-    # Solution Brief: Campaigns — Native Email Marketing for Storevine Merchants
+    # Solution Brief: Campaigns . Native Email Marketing for Storevine Merchants
 
 ---
 
 ### Spike Summary
 
-*Storevine B2B ecommerce platform — revenue attribution feasibility spike for Campaigns v1*
+*Storevine B2B ecommerce platform . revenue attribution feasibility spike for Campaigns v1*
 
 !!! quote "Prompt"
     ```
     /spike-summary
 
-    Spike: Revenue attribution feasibility — can SendGrid open/click webhooks
+    Spike: Revenue attribution feasibility . can SendGrid open/click webhooks
     be linked to Storevine purchase events within v1 timeline?
 
     Context:
@@ -525,7 +525,7 @@ tags:
 
 ### Architecture Decision Record
 
-*Storevine B2B ecommerce platform — email sending infrastructure for Campaigns*
+*Storevine B2B ecommerce platform . email sending infrastructure for Campaigns*
 
 !!! quote "Prompt"
     ```
@@ -562,15 +562,15 @@ tags:
 
 ### Design Rationale
 
-*Storevine B2B ecommerce platform — Campaigns audience selection UX design decision*
+*Storevine B2B ecommerce platform . Campaigns audience selection UX design decision*
 
 !!! quote "Prompt"
     ```
     /design-rationale
 
-    Project: Campaigns — native email marketing for Storevine merchants
+    Project: Campaigns . native email marketing for Storevine merchants
     Decision: Audience selection UX for the campaign creation flow
-    Stage: Pre-sprint design review — finalizing Figma specs before engineering
+    Stage: Pre-sprint design review . finalizing Figma specs before engineering
 
     Decision I need to document:
     - We debated 3 audience selection approaches before the design review:
@@ -582,7 +582,7 @@ tags:
     Context:
     - Primary target segment: non-adopter merchants (no current email tool)
     - Interview data: 3 of 8 merchants cited setup complexity as the barrier
-    - Figma link: [internal — Campaigns audience selection v3 spec]
+    - Figma link: [internal . Campaigns audience selection v3 spec]
 
     Need: full design rationale document for the engineering handoff package.
     Decision makers: Design Lead, Growth PM, Engineering Lead.
@@ -599,13 +599,13 @@ tags:
 
 ### PRD
 
-*Storevine B2B ecommerce platform — Campaigns (built-in email marketing)*
+*Storevine B2B ecommerce platform . Campaigns (built-in email marketing)*
 
 !!! quote "Prompt"
     ```
     /prd
 
-    Feature: Campaigns — native email marketing for Storevine merchants
+    Feature: Campaigns . native email marketing for Storevine merchants
 
     Context: Storevine all-in-one ecommerce + web builder, ~18k active merchants
     [fictional]. See: competitive-analysis (filed last week), problem-statement
@@ -616,7 +616,7 @@ tags:
     [fictional]. Power merchants patch with Klaviyo or Mailchimp; smaller merchants
     skip email entirely because setup friction is too high.
 
-    Validated solution: Built-in Campaigns — broadcast email + basic audience
+    Validated solution: Built-in Campaigns . broadcast email + basic audience
     segmentation. Phase 1 email only, SMS deferred. Pre-built templates, audience
     builder using order/tag data we already have. No custom HTML editor v1.
 
@@ -630,7 +630,7 @@ tags:
 
     Technical decisions already made:
     - Sending via SendGrid (existing account)
-    - Audience builder queries existing customer/order tables — no new pipeline
+    - Audience builder queries existing customer/order tables . no new pipeline
     - Legal review on CAN-SPAM + GDPR required before launch (not yet started)
 
     Stakeholders: Growth PM (owner), Eng Lead (aligned), Design (in progress),
@@ -646,13 +646,13 @@ tags:
 
 ### User Stories
 
-*Storevine B2B ecommerce platform — Campaigns guided first-campaign flow user story*
+*Storevine B2B ecommerce platform . Campaigns guided first-campaign flow user story*
 
 !!! quote "Prompt"
     ```
     /user-stories
 
-    Project: Campaigns — native email marketing for Storevine merchants
+    Project: Campaigns . native email marketing for Storevine merchants
     Sprint: Q2 2026 Campaigns build (kickoff Mar 3, GA Apr 28)
 
     Story I need:
@@ -684,13 +684,13 @@ tags:
 
 ### Edge Cases
 
-*Storevine B2B ecommerce platform — Campaigns campaign send flow edge cases*
+*Storevine B2B ecommerce platform . Campaigns campaign send flow edge cases*
 
 !!! quote "Prompt"
     ```
     /edge-cases
 
-    Feature: Campaigns — campaign creation and send flow
+    Feature: Campaigns . campaign creation and send flow
     Sprint: Q2 2026 Campaigns build (GA Apr 28, 2026)
 
     Key edge cases I want to cover:
@@ -719,13 +719,13 @@ tags:
 
 ### Launch Checklist
 
-*Storevine B2B ecommerce platform — Campaigns v1 GA launch checklist*
+*Storevine B2B ecommerce platform . Campaigns v1 GA launch checklist*
 
 !!! quote "Prompt"
     ```
     /launch-checklist
 
-    Feature: Campaigns v1.0 — native email marketing for Storevine merchants
+    Feature: Campaigns v1.0 . native email marketing for Storevine merchants
     Launch date: April 28, 2026
     Launch type: Major Release
     Launch owner: Growth PM
@@ -762,14 +762,14 @@ tags:
 
 ### Release Notes
 
-*Storevine B2B ecommerce platform — Campaigns v1.0 GA merchant-facing release notes*
+*Storevine B2B ecommerce platform . Campaigns v1.0 GA merchant-facing release notes*
 
 !!! quote "Prompt"
     ```
     /release-notes
 
     Product: Storevine
-    Release: Campaigns v1.0 — native email marketing, GA on Apr 28, 2026
+    Release: Campaigns v1.0 . native email marketing, GA on Apr 28, 2026
     Audience: All active Storevine merchants
 
     What's new:
@@ -802,13 +802,13 @@ tags:
 
 ### Experiment Design
 
-*Storevine B2B ecommerce platform — Campaigns guided first-campaign flow A/B experiment design*
+*Storevine B2B ecommerce platform . Campaigns guided first-campaign flow A/B experiment design*
 
 !!! quote "Prompt"
     ```
     /experiment-design
 
-    Project: Campaigns — Campaigns guided first-campaign flow
+    Project: Campaigns . Campaigns guided first-campaign flow
     Experiment: Does the guided first-campaign flow increase first-send rate
                 for non-adopter merchants?
 
@@ -841,21 +841,21 @@ tags:
 
 ### Instrumentation Spec
 
-*Storevine B2B ecommerce platform — Campaigns send flow and first-campaign flow analytics instrumentation*
+*Storevine B2B ecommerce platform . Campaigns send flow and first-campaign flow analytics instrumentation*
 
 !!! quote "Prompt"
     ```
     /instrumentation-spec
 
-    Feature: Campaigns — campaign send flow + guided first-campaign flow
+    Feature: Campaigns . campaign send flow + guided first-campaign flow
     Analytics platform: Amplitude
 
     Events I need to instrument:
-    1. campaign_created — merchant saves a campaign draft
-    2. campaign_sent — merchant sends a campaign
-    3. first_send_completed — merchant sends their FIRST campaign ever
+    1. campaign_created . merchant saves a campaign draft
+    2. campaign_sent . merchant sends a campaign
+    3. first_send_completed . merchant sends their FIRST campaign ever
        (milestone event for the non-adopter hypothesis)
-    4. attribution_recorded — a purchase is linked to a campaign click
+    4. attribution_recorded . a purchase is linked to a campaign click
        within the 7-day attribution window
 
     Prior work:
@@ -879,13 +879,13 @@ tags:
 
 ### Dashboard Requirements
 
-*Storevine B2B ecommerce platform — Campaigns adoption and revenue analytics dashboard requirements*
+*Storevine B2B ecommerce platform . Campaigns adoption and revenue analytics dashboard requirements*
 
 !!! quote "Prompt"
     ```
     /dashboard-requirements
 
-    Dashboard: Campaigns adoption and revenue — post-GA monitoring
+    Dashboard: Campaigns adoption and revenue . post-GA monitoring
     Audience: Growth PM (daily), Merchant Success (weekly), Head of Product
               (monthly board prep)
 
@@ -919,7 +919,7 @@ tags:
 
 ### Experiment Results
 
-*Storevine B2B ecommerce platform — Campaigns guided first-campaign flow A/B test results*
+*Storevine B2B ecommerce platform . Campaigns guided first-campaign flow A/B test results*
 
 !!! quote "Prompt"
     ```
@@ -958,7 +958,7 @@ tags:
 
 ### Retrospective
 
-*Storevine B2B ecommerce platform — Campaigns v1.0 build sprint retrospective*
+*Storevine B2B ecommerce platform . Campaigns v1.0 build sprint retrospective*
 
 !!! quote "Prompt"
     ```
@@ -975,7 +975,7 @@ tags:
 
     What went well:
     - Beta merchant FAQ (23 questions → 10 FAQ + 15 canned responses)
-      [fictional] — reduced GA-week ticket volume significantly
+      [fictional] . reduced GA-week ticket volume significantly
     - Instrumentation spec process caught subscriber email PII gap
       before GA
     - Feature flag rollout (10%→100%) worked; zero rollback events
@@ -988,9 +988,9 @@ tags:
     - Klaviyo partner notice email sent 2 days late (no clear owner)
 
     Previous retro actions to review (Sprint 7 retro):
-    - Add QA Lead to kickoff sessions — Complete
-    - Define escalation path for blocker tickets — In Progress
-    - Document infrastructure prerequisites for launches — Not Started
+    - Add QA Lead to kickoff sessions . Complete
+    - Define escalation path for blocker tickets . In Progress
+    - Document infrastructure prerequisites for launches . Not Started
 
     Need: full sprint retrospective with action items.
     ```
@@ -1004,7 +1004,7 @@ tags:
 
 ### Lessons Log
 
-*Storevine B2B ecommerce platform — lesson learned from the Campaigns guided first-campaign flow A/B test*
+*Storevine B2B ecommerce platform . lesson learned from the Campaigns guided first-campaign flow A/B test*
 
 !!! quote "Prompt"
     ```
@@ -1023,7 +1023,7 @@ tags:
     What surprised us: We expected the guided UX structure (progress
     indicator, step sequencing, explicit prompts) to be the mechanism.
     Funnel analysis shows the treatment advantage is concentrated at the
-    template and subject line step — content pre-population, not UX
+    template and subject line step . content pre-population, not UX
     scaffolding, is doing the work.
 
     Lesson type: Success Pattern / Strategy
@@ -1039,7 +1039,7 @@ tags:
 
 ### Refinement Notes
 
-*Storevine B2B ecommerce platform — Campaigns v1.1 sprint refinement session*
+*Storevine B2B ecommerce platform . Campaigns v1.1 sprint refinement session*
 
 !!! quote "Prompt"
     ```
@@ -1047,20 +1047,20 @@ tags:
 
     Session: Campaigns v1.1 refinement
     Date: July 22, 2026, 10:00 AM, 60 minutes
-    Sprint preparing for: Sprint 12 — Campaigns v1.1
+    Sprint preparing for: Sprint 12 . Campaigns v1.1
     Facilitator: Growth PM
 
     Stories on the agenda:
     1. CAM-088: EU merchant GDPR consent data model
     2. CAM-089: Per-campaign open rate and click rate analytics
-    3. CAM-090: Follow-on experiment — 3 vs. 5 products in guided template
+    3. CAM-090: Follow-on experiment . 3 vs. 5 products in guided template
     4. CAM-091: Abandoned cart email trigger
 
     Key constraints:
     - Legal has not yet signed off on the EU consent model (CAM-088)
     - Backend Engineer flagged ambiguity on the open rate denominator
       (CAM-089): Amplitude delivered-event count vs. SendGrid recipient count
-    - CAM-091 may need to be split — scope spans 4 engineering domains
+    - CAM-091 may need to be split . scope spans 4 engineering domains
 
     Need: full refinement notes for Sprint 12 planning.
     ```
@@ -1074,18 +1074,18 @@ tags:
 
 ### Pivot Decision
 
-*Storevine B2B ecommerce platform — Campaigns v2.0 persevere decision after guided flow validation*
+*Storevine B2B ecommerce platform . Campaigns v2.0 persevere decision after guided flow validation*
 
 !!! quote "Prompt"
     ```
     /pivot-decision
 
-    Product: Campaigns — post-GA persevere/pivot evaluation
+    Product: Campaigns . post-GA persevere/pivot evaluation
     Evaluation date: July 22, 2026 (12 weeks post-GA)
 
     Situation: Campaigns GA succeeded. Guided flow A/B test: 31.7% vs.
     13.4% first-send rate [fictional], shipped as default July 10.
-    BUT: Klaviyo-migrated merchants sending at 23% [fictional] monthly —
+    BUT: Klaviyo-migrated merchants sending at 23% [fictional] monthly .
     far below the ~60% [fictional] predicted from their Klaviyo history.
     Three migrated merchants submitted tickets citing missing advanced
     segmentation and scheduling. Migrator churn tracking at 18% [fictional].
@@ -1094,10 +1094,10 @@ tags:
     migrated merchants, or persevere on non-adopter activation?
 
     Options I need evaluated:
-    1. Persevere — continue non-adopter activation (77% of segment
+    1. Persevere . continue non-adopter activation (77% of segment
        unconverted [fictional])
-    2. Customer Segment Pivot — redirect to Klaviyo-migrated merchants
-    3. Platform Pivot — open Campaigns as an API for third-party email
+    2. Customer Segment Pivot . redirect to Klaviyo-migrated merchants
+    3. Platform Pivot . open Campaigns as an API for third-party email
        tool integration
 
     Need: full pivot decision document with analysis and rationale.

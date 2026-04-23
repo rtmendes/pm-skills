@@ -43,7 +43,7 @@ jobs:
 
           ## Download
 
-          **`pm-skills-v${{ steps.version.outputs.version }}.zip`** — Complete package for all platforms
+          **`pm-skills-v${{ steps.version.outputs.version }}.zip`** . Complete package for all platforms
 
           ## Installation
 

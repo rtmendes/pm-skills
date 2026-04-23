@@ -7,7 +7,7 @@ skill_version: "1.0.0"
 created: 2026-04-11
 status: sample
 thread: storevine
-context: Storevine B2B ecommerce platform — mermaid flowchart for Campaigns email send approval workflow
+context: Storevine B2B ecommerce platform . mermaid flowchart for Campaigns email send approval workflow
 ---
 
 ## Scenario

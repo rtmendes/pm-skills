@@ -1,8 +1,8 @@
-# Topic 3 — Specification: PM Skill Builder & Deployment Automation
+# Topic 3 . Specification: PM Skill Builder & Deployment Automation
 
 > **Date**: 2026-03-21
 > **Author**: Claude Opus 4.6
-> **Status**: Draft — agentic-development-optimized spec
+> **Status**: Draft . agentic-development-optimized spec
 > **Approach**: Skill + CI pipeline (80/20 value delivery)
 > **Companion**: `topic-3_exploration_pm-skill-builder.md`
 
@@ -477,11 +477,11 @@ A completed Skill Implementation Packet (attached or inline).
 ### Instructions
 1. Read the Skill Implementation Packet carefully
 2. Create the following files:
-   - `skills/{name}/SKILL.md` — from the packet's SKILL.md draft
-   - `skills/{name}/references/TEMPLATE.md` — from the packet's TEMPLATE.md draft
-   - `skills/{name}/references/EXAMPLE.md` — from the packet's EXAMPLE.md draft
-   - `commands/{name}.md` — from the packet's command draft
-3. Update `AGENTS.md` — add the entry from the packet
+   - `skills/{name}/SKILL.md` . from the packet's SKILL.md draft
+   - `skills/{name}/references/TEMPLATE.md` . from the packet's TEMPLATE.md draft
+   - `skills/{name}/references/EXAMPLE.md` . from the packet's EXAMPLE.md draft
+   - `commands/{name}.md` . from the packet's command draft
+3. Update `AGENTS.md` . add the entry from the packet
 4. Run validation: `node scripts/validate-frontmatter.js && node scripts/validate-completeness.js`
 5. Fix any validation errors
 6. Create a PR with the title: "Add skill: {skill-name}"

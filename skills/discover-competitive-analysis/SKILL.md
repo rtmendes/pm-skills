@@ -29,7 +29,7 @@ A competitive analysis provides structured insight into the competitive landscap
 When asked to create a competitive analysis, follow these steps:
 
 1. **Define the Scope**
-   Clarify what you're analyzing: a specific feature area, overall product positioning, or pricing strategy. Identify 3-5 key competitors—direct competitors (same solution), indirect competitors (different solution to same problem), and potential disruptors.
+   Clarify what you're analyzing: a specific feature area, overall product positioning, or pricing strategy. Identify 3-5 key competitors.direct competitors (same solution), indirect competitors (different solution to same problem), and potential disruptors.
 
 2. **Gather Intelligence**
    Research each competitor through public sources: websites, pricing pages, G2/Capterra reviews, press releases, job postings, and customer testimonials. Note what you can verify vs. what you're inferring.
@@ -41,13 +41,13 @@ When asked to create a competitive analysis, follow these steps:
    Map competitors on a 2x2 positioning matrix using dimensions relevant to your market (e.g., price vs. features, ease of use vs. power, SMB vs. enterprise). Identify white space opportunities.
 
 5. **Assess Strengths and Weaknesses**
-   For each competitor, document genuine strengths (what they do better than you) and weaknesses (where they fall short). Avoid dismissing competitors—respect drives better strategy.
+   For each competitor, document genuine strengths (what they do better than you) and weaknesses (where they fall short). Avoid dismissing competitors.respect drives better strategy.
 
 6. **Identify Strategic Implications**
    Translate observations into actionable recommendations: where to compete head-on, where to differentiate, what messaging to emphasize, and what gaps represent opportunities.
 
 7. **Note Confidence Levels**
-   Mark which conclusions are based on verified data vs. inference. Competitive intelligence has varying reliability—be honest about uncertainty.
+   Mark which conclusions are based on verified data vs. inference. Competitive intelligence has varying reliability.be honest about uncertainty.
 
 ## Output Format
 

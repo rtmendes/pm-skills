@@ -211,7 +211,7 @@ When asked to create a launch checklist, follow these steps:
 
 ### Rollback Owner
 
-[Name] — [Contact]
+[Name] . [Contact]
 
 ### Rollback Time Estimate
 
@@ -244,7 +244,7 @@ When asked to create a launch checklist, follow these steps:
 
     | Field | Value |
     |-------|-------|
-    | What | TaskFlow Mobile v3.0 — New navigation + Recurring Tasks |
+    | What | TaskFlow Mobile v3.0 . New navigation + Recurring Tasks |
     | Launch Date | March 10, 2026 |
     | Launch Type | Major Release |
     | Launch Owner | Sarah Chen (Product) |
@@ -389,7 +389,7 @@ When asked to create a launch checklist, follow these steps:
 
     ### Rollback Owner
 
-    David Park — david@taskflow.io — +1-555-0123
+    David Park . david@taskflow.io . +1-555-0123
 
     ### Rollback Time Estimate
 
@@ -418,13 +418,13 @@ When asked to create a launch checklist, follow these steps:
 
 See this skill applied to three different product contexts:
 
-??? example "Storevine (B2B): Storevine B2B ecommerce platform — Campaigns v1 GA launch checklist"
+??? example "Storevine (B2B): Storevine B2B ecommerce platform . Campaigns v1 GA launch checklist"
     **Prompt:**
 
     ```
     /launch-checklist
 
-    Feature: Campaigns v1.0 — native email marketing for Storevine merchants
+    Feature: Campaigns v1.0 . native email marketing for Storevine merchants
     Launch date: April 28, 2026
     Launch type: Major Release
     Launch owner: Growth PM
@@ -458,7 +458,7 @@ See this skill applied to three different product contexts:
 
     # Launch Checklist: Campaigns v1.0 GA
 
-??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — Resurface feature launch checklist for Sprint 8 ship"
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app . Resurface feature launch checklist for Sprint 8 ship"
     **Prompt:**
 
     ```
@@ -480,7 +480,7 @@ See this skill applied to three different product contexts:
 
     **Output:**
 
-    # Launch Checklist: Resurface — Morning Email Digest
+    # Launch Checklist: Resurface . Morning Email Digest
 
 ??? example "Workbench (Enterprise): Workbench enterprise collaboration platform - Blueprints v1 GA launch readiness checklist"
     **Prompt:**

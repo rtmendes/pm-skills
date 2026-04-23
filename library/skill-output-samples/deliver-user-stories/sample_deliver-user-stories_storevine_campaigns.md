@@ -7,18 +7,18 @@ skill_version: "2.0.0"
 created: 2026-02-20
 status: sample
 thread: storevine
-context: Storevine B2B ecommerce platform — Campaigns guided first-campaign flow user story
+context: Storevine B2B ecommerce platform . Campaigns guided first-campaign flow user story
 ---
 
 ## Scenario
 
-With the Campaigns PRD and Figma specs finalized, Storevine's growth PM worked with the Engineering Lead to translate the guided first-campaign flow into an engineering-ready user story before the sprint kickoff. This story represents the highest-priority Campaigns ticket — the experience that non-adopter merchants see when they launch Campaigns for the first time.
+With the Campaigns PRD and Figma specs finalized, Storevine's growth PM worked with the Engineering Lead to translate the guided first-campaign flow into an engineering-ready user story before the sprint kickoff. This story represents the highest-priority Campaigns ticket . the experience that non-adopter merchants see when they launch Campaigns for the first time.
 
 **Source Notes:**
 
-- CAN-SPAM Act (FTC, ftc.gov) — one-click unsubscribe and physical sender address are legally mandatory in every commercial email, directly informing the compliance validation acceptance criteria that must pass before any campaign send is permitted.
-- Nielsen Norman Group research on first-use experiences (nngroup.com) — establishes that a guided path producing visible value within the first session is the primary driver of retention for new users of productivity tools, validating the investment in a pre-populated first-campaign flow over a blank-canvas editor.
-- SendGrid documentation (sendgrid.com/docs/for-developers/tracking-events/) — technical reference for the email send API and Event Webhook that underlie the `unique_args` attribution event recording requirement in AC-5.
+- CAN-SPAM Act (FTC, ftc.gov) . one-click unsubscribe and physical sender address are legally mandatory in every commercial email, directly informing the compliance validation acceptance criteria that must pass before any campaign send is permitted.
+- Nielsen Norman Group research on first-use experiences (nngroup.com) . establishes that a guided path producing visible value within the first session is the primary driver of retention for new users of productivity tools, validating the investment in a pre-populated first-campaign flow over a blank-canvas editor.
+- SendGrid documentation (sendgrid.com/docs/for-developers/tracking-events/) . technical reference for the email send API and Event Webhook that underlie the `unique_args` attribution event recording requirement in AC-5.
 
 ---
 
@@ -27,7 +27,7 @@ With the Campaigns PRD and Figma specs finalized, Storevine's growth PM worked w
 ```
 /user-stories
 
-Project: Campaigns — native email marketing for Storevine merchants
+Project: Campaigns . native email marketing for Storevine merchants
 Sprint: Q2 2026 Campaigns build (kickoff Mar 3, GA Apr 28)
 
 Story I need:
@@ -61,7 +61,7 @@ design notes, technical notes, and dependencies. P0 priority.
 | Field | Value |
 |-------|-------|
 | ID | US-CAM-001 |
-| Title | Guided first-campaign flow — pre-populated template for non-adopter merchants |
+| Title | Guided first-campaign flow . pre-populated template for non-adopter merchants |
 | Persona | Non-adopter merchant (no active external email tool, no prior Storevine campaign sent) |
 | Priority | P0 |
 | Epic/Feature | Campaigns v1 |
@@ -77,7 +77,7 @@ design notes, technical notes, and dependencies. P0 priority.
 
 ## Context & Background
 
-Merchant interviews identified three participants (P3, P6, P8) who have no email program despite acknowledging they should have one. All three cited setup complexity as the barrier: the moment they see a blank template or a list of filter options, they close the tab. The guided first-campaign flow eliminates that moment by presenting a ready-to-send campaign on first open — the merchant's own products in a pre-designed template, addressed to an audience that makes intuitive sense (customers who have already purchased). The hypothesis tied to this story targets an increase in first-send rate from 12% [fictional] to 30% [fictional] within 60 days of GA. This story is the primary delivery mechanism for that hypothesis.
+Merchant interviews identified three participants (P3, P6, P8) who have no email program despite acknowledging they should have one. All three cited setup complexity as the barrier: the moment they see a blank template or a list of filter options, they close the tab. The guided first-campaign flow eliminates that moment by presenting a ready-to-send campaign on first open . the merchant's own products in a pre-designed template, addressed to an audience that makes intuitive sense (customers who have already purchased). The hypothesis tied to this story targets an increase in first-send rate from 12% [fictional] to 30% [fictional] within 60 days of GA. This story is the primary delivery mechanism for that hypothesis.
 
 ## Acceptance Criteria
 
@@ -95,7 +95,7 @@ Merchant interviews identified three participants (P3, P6, P8) who have no email
 
 **When** the guided flow loads
 
-**Then** the system automatically populates the campaign template with the merchant's top 3 products by sales volume in the last 90 days [fictional], including product image, name, and price pulled directly from the Storevine product catalog — no merchant action required
+**Then** the system automatically populates the campaign template with the merchant's top 3 products by sales volume in the last 90 days [fictional], including product image, name, and price pulled directly from the Storevine product catalog . no merchant action required
 
 ### AC-3: Audience defaults to recent purchasers
 
@@ -103,7 +103,7 @@ Merchant interviews identified three participants (P3, P6, P8) who have no email
 
 **When** the guided flow loads
 
-**Then** the system defaults the audience selection to the "Customers who purchased in the last 90 days" named segment, with the current recipient count displayed (e.g., "147 customers [fictional]") — the merchant may change this selection before sending but is not required to
+**Then** the system defaults the audience selection to the "Customers who purchased in the last 90 days" named segment, with the current recipient count displayed (e.g., "147 customers [fictional]") . the merchant may change this selection before sending but is not required to
 
 ### AC-4: Compliance validation passes before send is enabled
 
@@ -111,7 +111,7 @@ Merchant interviews identified three participants (P3, P6, P8) who have no email
 
 **When** the merchant clicks "Send campaign"
 
-**Then** the system validates that: (a) a subject line is present and not blank, (b) the merchant account has a physical sender address on file (required by CAN-SPAM), and (c) an unsubscribe link is present in the template — and blocks the send with a specific, actionable error message if any of these checks fail, rather than silently proceeding
+**Then** the system validates that: (a) a subject line is present and not blank, (b) the merchant account has a physical sender address on file (required by CAN-SPAM), and (c) an unsubscribe link is present in the template . and blocks the send with a specific, actionable error message if any of these checks fail, rather than silently proceeding
 
 ### AC-5: Attribution events are recorded for each recipient
 
@@ -119,7 +119,7 @@ Merchant interviews identified three participants (P3, P6, P8) who have no email
 
 **When** the system submits the campaign to SendGrid via the send API
 
-**Then** the system includes `unique_args` in the API payload with `campaign_id`, `merchant_id`, and `recipient_customer_id` for each recipient — enabling the attribution webhook receiver to link subsequent purchase events to this campaign within the 7-day attribution window
+**Then** the system includes `unique_args` in the API payload with `campaign_id`, `merchant_id`, and `recipient_customer_id` for each recipient . enabling the attribution webhook receiver to link subsequent purchase events to this campaign within the 7-day attribution window
 
 ### AC-6: Post-send confirmation is shown in-app
 
@@ -127,7 +127,7 @@ Merchant interviews identified three participants (P3, P6, P8) who have no email
 
 **When** the send completes
 
-**Then** the system displays an in-app confirmation: the number of recipients the campaign was sent to, the campaign subject line, and a message directing the merchant to check the Campaigns dashboard in 24–48 hours to see open rates and revenue attributed — replacing the guided flow with the standard Campaigns dashboard view
+**Then** the system displays an in-app confirmation: the number of recipients the campaign was sent to, the campaign subject line, and a message directing the merchant to check the Campaigns dashboard in 24–48 hours to see open rates and revenue attributed . replacing the guided flow with the standard Campaigns dashboard view
 
 ## Design Notes
 
@@ -135,25 +135,25 @@ Merchant interviews identified three participants (P3, P6, P8) who have no email
 - The audience selection step displays the named segment library (per the audience selection design rationale) with "Customers who purchased in the last 90 days" pre-selected. The merchant can change the selection; the recipient count updates dynamically when a new segment is selected.
 - If the merchant has fewer than 3 published products, the template is populated with however many products are available; if zero products are published, the template shows a placeholder with a prompt to publish a product before continuing.
 - Error states for AC-4 must follow the Error Messages spec from the edge cases document: plain language, specific cause, immediate next action.
-- Figma: Campaigns guided first-campaign flow v4 spec (internal — Figma workspace)
+- Figma: Campaigns guided first-campaign flow v4 spec (internal . Figma workspace)
 
 ## Technical Notes
 
 - First-campaign detection: query the `campaigns` table for the current `merchant_id` with `status IN ('sent', 'scheduled')`; if zero records returned, display guided flow.
 - Product pre-population: query the `products` table ordered by `total_sales_last_90_days DESC` [fictional] with `status = 'published'`; limit 3.
-- `unique_args` payload structure: `{ "campaign_id": "<uuid>", "merchant_id": "<uuid>", "recipient_customer_id": "<uuid>" }` — one entry per recipient. See spike summary for the confirmed schema.
+- `unique_args` payload structure: `{ "campaign_id": "<uuid>", "merchant_id": "<uuid>", "recipient_customer_id": "<uuid>" }` . one entry per recipient. See spike summary for the confirmed schema.
 - SendGrid send API: POST to `/v3/mail/send`; each recipient is a separate personalization object to enable per-recipient `unique_args`. This impacts payload size at high recipient counts; Platform Squad to confirm batch size limits before implementation.
-- The 202 Accepted response from SendGrid confirms the campaign has been accepted for delivery; it does not confirm delivery to individual inboxes. The in-app confirmation copy should reflect this (avoid "Your campaign has been delivered" — use "Your campaign has been sent").
+- The 202 Accepted response from SendGrid confirms the campaign has been accepted for delivery; it does not confirm delivery to individual inboxes. The in-app confirmation copy should reflect this (avoid "Your campaign has been delivered" . use "Your campaign has been sent").
 
 ## Dependencies
 
 | Dependency | Type | Status |
 |------------|------|--------|
-| `unique_args` attribution schema (US-CAM-002) | Story | Blocked — must be merged before this story is implemented |
+| `unique_args` attribution schema (US-CAM-002) | Story | Blocked . must be merged before this story is implemented |
 | SendGrid API contract (`unique_args` field spec) | Engineering spec | Ready (confirmed in spike summary) |
-| Audience selection named segment library (US-CAM-003) | Story | Blocked — named segments must be defined and queryable before the guided flow can default to one |
-| Physical sender address field in merchant account settings | Existing feature | Ready — field exists in account settings; validation logic is new |
-| CAN-SPAM/GDPR Legal sign-off | Legal | In progress — required before any send functionality is enabled in production |
+| Audience selection named segment library (US-CAM-003) | Story | Blocked . named segments must be defined and queryable before the guided flow can default to one |
+| Physical sender address field in merchant account settings | Existing feature | Ready . field exists in account settings; validation logic is new |
+| CAN-SPAM/GDPR Legal sign-off | Legal | In progress . required before any send functionality is enabled in production |
 
 ## Out of Scope
 

@@ -50,7 +50,7 @@ When asked to document experiment results, follow these steps:
    Show the primary metric outcome clearly: what were the values for control and treatment? Include statistical significance (p-value), confidence intervals, and sample sizes. Be honest about whether results are conclusive.
 
 4. **Analyze Secondary Metrics**
-   Present guardrail metrics that ensure you didn't cause unintended harm. Note any secondary metrics that moved unexpectedly—both positive and negative.
+   Present guardrail metrics that ensure you didn't cause unintended harm. Note any secondary metrics that moved unexpectedly.both positive and negative.
 
 5. **Segment the Data**
    Look for differential effects across user segments (platform, tenure, plan type, etc.). Sometimes overall results mask important segment-level insights.
@@ -62,7 +62,7 @@ When asked to document experiment results, follow these steps:
    Be clear: should we ship, iterate, or kill? Support the recommendation with the evidence. If the decision is nuanced, explain the trade-offs.
 
 8. **Define Next Steps**
-   Specify what happens now—engineering work to ship, follow-up experiments, metrics to continue monitoring, or documentation to update.
+   Specify what happens now.engineering work to ship, follow-up experiments, metrics to continue monitoring, or documentation to update.
 
 ## Output Template
 
@@ -391,8 +391,8 @@ When asked to document experiment results, follow these steps:
     | Step | Control Drop-off | Treatment Drop-off | Improvement |
     |------|------------------|-------------------|-------------|
     | Cart → Checkout | 21.8% | 20.9% | +0.9% |
-    | Shipping info | 8.4% | N/A (combined) | — |
-    | Payment info | 5.2% | N/A (combined) | — |
+    | Shipping info | 8.4% | N/A (combined) | . |
+    | Payment info | 5.2% | N/A (combined) | . |
     | Review → Purchase | 4.1% | 3.5% | +0.6% |
     | **Total checkout drop** | 37.6% | 34.4% | **+3.2%** |
 
@@ -435,7 +435,7 @@ When asked to document experiment results, follow these steps:
 
     The experiment delivered a clear, statistically significant improvement that exceeded our success threshold. The +3.2% lift in checkout conversion represents approximately $840K in additional annual revenue at current traffic levels. No guardrail metrics were violated, and the improvement was consistent across the experiment duration.
 
-    The segment analysis reveals even higher impact on mobile and new customers—our strategic growth priorities.
+    The segment analysis reveals even higher impact on mobile and new customers.our strategic growth priorities.
 
     ### Shipping Plan
 
@@ -497,7 +497,7 @@ When asked to document experiment results, follow these steps:
 
 See this skill applied to three different product contexts:
 
-??? example "Storevine (B2B): Storevine B2B ecommerce platform — Campaigns guided first-campaign flow A/B test results"
+??? example "Storevine (B2B): Storevine B2B ecommerce platform . Campaigns guided first-campaign flow A/B test results"
     **Prompt:**
 
     ```
@@ -531,7 +531,7 @@ See this skill applied to three different product contexts:
 
     # Experiment Results: Campaigns Guided First-Campaign Flow A/B Test
 
-??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — Resurface A/B test results and ship decision"
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app . Resurface A/B test results and ship decision"
     **Prompt:**
 
     ```
@@ -563,7 +563,7 @@ See this skill applied to three different product contexts:
 
     surprising: opt-in rate was 41% [fictional], way above the 10% target.
     also surprising: week 4 return rate was HIGHER than week 1 (not
-    novelty decay — habit formation).
+    novelty decay . habit formation).
 
     recommendation: ship to all eligible users.
     ```

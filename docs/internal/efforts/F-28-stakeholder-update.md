@@ -7,7 +7,7 @@ Agent: Claude Opus 4.7
 
 ## Scope
 
-Create `foundation-stakeholder-update`, a post-meeting skill that produces async communication to stakeholders — primarily non-attendees who need to know outcomes, and secondarily some attendees who want a reference version. Different from `foundation-meeting-recap` in audience, format, and purpose: not a summary of what happened, but a translation of outcomes into what-it-means for readers. Conforms to the [Meeting Skills Family Contract](../reference/skill-families/meeting-skills-contract.md).
+Create `foundation-stakeholder-update`, a post-meeting skill that produces async communication to stakeholders. primarily non-attendees who need to know outcomes, and secondarily some attendees who want a reference version. Different from `foundation-meeting-recap` in audience, format, and purpose: not a summary of what happened, but a translation of outcomes into what-it-means for readers. Conforms to the [Meeting Skills Family Contract](../reference/skill-families/meeting-skills-contract.md).
 
 ## Problem
 
@@ -28,22 +28,22 @@ PMs doing this manually write 3-5 versions (one per audience), which takes an ho
 - Related `meeting-recap` filename (preferred) or raw meeting notes
 - Target channel: `slack | teams | email | notion | exec-memo`
 - Target audience variant: `engineering | design | leadership | customer-facing | mixed`
-- Primary CTA — what the user needs from readers, or explicit "FYI-only"
+- Primary CTA. what the user needs from readers, or explicit "FYI-only"
 - Optional: prior update filename in the thread (for continuation framing)
 
 ### Process
 
-1. **Present go-mode inference summary** — per family contract. Includes inferred audience if not specified (from recap context).
-2. **Distill key outcomes** — from recap or notes, extract the 3-5 outcomes that matter to non-attendees
-3. **Frame the CTA** — surface the ask up front, not buried. If "FYI-only," say so
-4. **Translate technical-to-business** — flag jargon and acronyms unlikely to land with the audience; provide plainer alternatives. Keep a translations-applied log in the output's context section for user verification
-5. **Detect thread continuation** — if a prior update exists on the same topic/thread, reference and link it
+1. **Present go-mode inference summary**. per family contract. Includes inferred audience if not specified (from recap context).
+2. **Distill key outcomes**. from recap or notes, extract the 3-5 outcomes that matter to non-attendees
+3. **Frame the CTA**. surface the ask up front, not buried. If "FYI-only," say so
+4. **Translate technical-to-business**. flag jargon and acronyms unlikely to land with the audience; provide plainer alternatives. Keep a translations-applied log in the output's context section for user verification
+5. **Detect thread continuation**. if a prior update exists on the same topic/thread, reference and link it
 6. **Produce channel-tailored variant**:
    - **Slack/Teams**: short, emoji-light, threaded-friendly, skimmable
    - **Email**: clear subject line + structured body + sign-off
    - **Notion**: richer formatting, longer context, optimized for reference
    - **Exec-memo**: tight, formal, TL;DR first, supporting detail after, explicit asks upfront
-7. **Produce artifact** conforming to TEMPLATE.md — the entire output is effectively shareable content; no separate summary block required
+7. **Produce artifact** conforming to TEMPLATE.md. the entire output is effectively shareable content; no separate summary block required
 
 ### Output
 
@@ -84,17 +84,17 @@ Async update message suited to the selected channel. Headline (skimmable action-
 
 ## Open Questions
 
-- Anticipated response drafting — should the skill also draft responses to likely replies the user will get? Valuable; consider during spec writing. Probably opt-in, not default.
-- Send-time guidance — optimal time to post for the audience? Deferred; not in v1.0.0.
-- Per-stakeholder variant generation at scale — generate N versions for N stakeholder groups in one pass? Deferred; not in v1.0.0.
-- Tone selection beyond audience — formal / casual / urgent / celebratory? Deferred; not in v1.0.0.
-- Response template preparation — ready-to-use replies for expected FAQs? Deferred; not in v1.0.0.
+- Anticipated response drafting. should the skill also draft responses to likely replies the user will get? Valuable; consider during spec writing. Probably opt-in, not default.
+- Send-time guidance. optimal time to post for the audience? Deferred; not in v1.0.0.
+- Per-stakeholder variant generation at scale. generate N versions for N stakeholder groups in one pass? Deferred; not in v1.0.0.
+- Tone selection beyond audience. formal / casual / urgent / celebratory? Deferred; not in v1.0.0.
+- Response template preparation. ready-to-use replies for expected FAQs? Deferred; not in v1.0.0.
 
 ## Status Transitions
 
 - **Backlog** (current)
-- **In Progress** — when per-skill authoring begins
-- **Shipped** — on v2.11.0 tag + push
+- **In Progress**. when per-skill authoring begins
+- **Shipped**. on v2.11.0 tag + push
 
 ## Detailed specification
 

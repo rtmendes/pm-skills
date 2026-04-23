@@ -293,7 +293,7 @@ Acceptance Criteria:
 - Skip the problem statement ("we know what to build")
 - Over-document for small features
 - Forget instrumentation until launch
-- Treat kickoff as a handoff—it's a collaboration
+- Treat kickoff as a handoff.it's a collaboration
 
 ---
 
@@ -325,10 +325,10 @@ Before considering this workflow complete, verify:
 
 ## See Also
 
-- [Triple Diamond Workflow](triple-diamond.md) — For comprehensive product development
-- [Lean Startup Workflow](lean-startup.md) — For rapid hypothesis validation
+- [Triple Diamond Workflow](triple-diamond.md) . For comprehensive product development
+- [Lean Startup Workflow](lean-startup.md) . For rapid hypothesis validation
 
 ---
 
-*Part of [PM-Skills](https://github.com/product-on-purpose/pm-skills/blob/main/README.md) — Open source Product Management skills for AI agents*
+*Part of [PM-Skills](https://github.com/product-on-purpose/pm-skills/blob/main/README.md) . Open source Product Management skills for AI agents*
 

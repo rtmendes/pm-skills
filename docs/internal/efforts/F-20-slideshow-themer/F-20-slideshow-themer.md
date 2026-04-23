@@ -6,7 +6,7 @@ Agent: Claude Opus 4.6
 
 ## Scope
 
-Create a `utility-slideshow-themer` skill that helps users create presentation themes and layouts optimized for agentic creation. Produces a complete theme configuration (color tokens, typography scale, layout grid, slide type variants) that the slideshow-creator skill (F-19) consumes. The key insight: themes designed for agentic generation need different constraints than human-authored themes — character limits must be calibrated to slot dimensions, color contrast must be programmatically verifiable, and layout coordinates must be deterministic.
+Create a `utility-slideshow-themer` skill that helps users create presentation themes and layouts optimized for agentic creation. Produces a complete theme configuration (color tokens, typography scale, layout grid, slide type variants) that the slideshow-creator skill (F-19) consumes. The key insight: themes designed for agentic generation need different constraints than human-authored themes . character limits must be calibrated to slot dimensions, color contrast must be programmatically verifiable, and layout coordinates must be deterministic.
 
 ## Problem
 
@@ -25,12 +25,12 @@ When PMs or teams want to brand their agentic presentations:
 - Optional: existing theme to modify
 
 ### Process
-1. **Extract brand tokens** — Map brand colors to semantic roles (primary, secondary, accent, background, text, success, warning, error)
-2. **Configure typography** — Select fonts, define size scale, calibrate character limits to layout grid
-3. **Define layout grid** — Slide dimensions (16:9), margins, content zones, footer rules
-4. **Generate slide type variants** — Dark/light configurations for each of the 18 slide types
-5. **Validate accessibility** — WCAG AA contrast checks for all color/text combinations
-6. **Produce theme file** — Structured JSON/YAML theme configuration
+1. **Extract brand tokens** . Map brand colors to semantic roles (primary, secondary, accent, background, text, success, warning, error)
+2. **Configure typography** . Select fonts, define size scale, calibrate character limits to layout grid
+3. **Define layout grid** . Slide dimensions (16:9), margins, content zones, footer rules
+4. **Generate slide type variants** . Dark/light configurations for each of the 18 slide types
+5. **Validate accessibility** . WCAG AA contrast checks for all color/text combinations
+6. **Produce theme file** . Structured JSON/YAML theme configuration
 
 ### Output
 A complete theme configuration file that the slideshow-creator skill consumes, including:
@@ -46,8 +46,8 @@ A complete theme configuration file that the slideshow-creator skill consumes, i
 |----------|---------------|-----------|
 | **Classification** | utility | Meta-tooling for the slideshow system |
 | **Theme format** | JSON with documented schema | Consumable by generation scripts, human-readable, versionable |
-| **Dependency on F-19** | Hard — themes are meaningless without the creator | Theme format defined by what the slideshow-creator expects |
-| **Character limit calibration** | Include calculation guidance | Most critical differentiator — agentic themes MUST specify overflow limits |
+| **Dependency on F-19** | Hard . themes are meaningless without the creator | Theme format defined by what the slideshow-creator expects |
+| **Character limit calibration** | Include calculation guidance | Most critical differentiator . agentic themes MUST specify overflow limits |
 | **Default theme** | Ship one minimal theme | Proves the format works; teams can fork and customize |
 
 ## Quality Forecast
@@ -61,8 +61,8 @@ A complete theme configuration file that the slideshow-creator skill consumes, i
 
 ## Dependencies
 
-- **F-19 (slideshow-creator)** — defines the theme consumption format; themer must produce what creator expects
-- **F-21 (content-voice)** — optional, for tone-aligned typography choices
+- **F-19 (slideshow-creator)** . defines the theme consumption format; themer must produce what creator expects
+- **F-21 (content-voice)** . optional, for tone-aligned typography choices
 
 ## Artifacts Produced
 
@@ -73,7 +73,7 @@ A complete theme configuration file that the slideshow-creator skill consumes, i
 
 ## Estimated Complexity
 
-Medium — well-scoped but requires deep design system knowledge. Character limit calibration is the most technically nuanced part.
+Medium . well-scoped but requires deep design system knowledge. Character limit calibration is the most technically nuanced part.
 
 ## PRs
 

@@ -7,7 +7,7 @@ skill_version: "1.0.0"
 created: 2026-04-11
 status: sample
 thread: storevine
-context: Storevine B2B ecommerce platform — validating the campaign-analytics skill from skill builder output
+context: Storevine B2B ecommerce platform . validating the campaign-analytics skill from skill builder output
 ---
 
 ## Scenario

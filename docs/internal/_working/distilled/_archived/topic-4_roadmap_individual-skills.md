@@ -1,8 +1,8 @@
-# Topic 4A — Roadmap: Individual PM Skills
+# Topic 4A . Roadmap: Individual PM Skills
 
 > **Date**: 2026-03-21
 > **Author**: Claude Opus 4.6
-> **Status**: Draft — prioritized skill roadmap
+> **Status**: Draft . prioritized skill roadmap
 > **Scope**: Individual skills that need to be created or improved
 > **Companion**: `topic-4_roadmap_platform-level.md`
 
@@ -25,14 +25,14 @@
 
 | Phase | Skills | Count | Coverage Assessment |
 |-------|--------|-------|-------------------|
-| Discover | competitive-analysis, interview-synthesis, stakeholder-summary | 3 | Moderate — missing survey analysis, market sizing |
-| Define | hypothesis, jtbd-canvas, opportunity-tree, problem-statement | 4 | Strong — core PM definition covered |
-| Develop | adr, design-rationale, solution-brief, spike-summary | 4 | Good — technical decisions well covered |
-| Deliver | edge-cases, launch-checklist, prd, release-notes, user-stories | 5 | Strong — core delivery well covered |
-| Measure | dashboard-requirements, experiment-design, experiment-results, instrumentation-spec | 4 | Good — experimentation covered, analytics gaps |
-| Iterate | lessons-log, pivot-decision, refinement-notes, retrospective | 4 | Strong — reflection well covered |
-| Foundation | persona | 1 | Just started — enormous expansion potential |
-| Utility | (none shipped) | 0 | Empty — skill-builder is first candidate |
+| Discover | competitive-analysis, interview-synthesis, stakeholder-summary | 3 | Moderate . missing survey analysis, market sizing |
+| Define | hypothesis, jtbd-canvas, opportunity-tree, problem-statement | 4 | Strong . core PM definition covered |
+| Develop | adr, design-rationale, solution-brief, spike-summary | 4 | Good . technical decisions well covered |
+| Deliver | edge-cases, launch-checklist, prd, release-notes, user-stories | 5 | Strong . core delivery well covered |
+| Measure | dashboard-requirements, experiment-design, experiment-results, instrumentation-spec | 4 | Good . experimentation covered, analytics gaps |
+| Iterate | lessons-log, pivot-decision, refinement-notes, retrospective | 4 | Strong . reflection well covered |
+| Foundation | persona | 1 | Just started . enormous expansion potential |
+| Utility | (none shipped) | 0 | Empty . skill-builder is first candidate |
 
 ### 1.2 Existing Bundles (3 Workflows)
 
@@ -64,7 +64,7 @@ Each skill is evaluated across 7 dimensions:
 
 ## 3. New Skills: Prioritized Backlog
 
-### Tier 1: High Priority — Build Next
+### Tier 1: High Priority . Build Next
 
 #### 3.1 `utility-pm-skill-builder` (Meta/Utility)
 
@@ -85,7 +85,7 @@ Each skill is evaluated across 7 dimensions:
 
 | Dimension | Score | Rationale |
 |-----------|-------|-----------|
-| Value | 5 | Solves artifact sprawl — the #1 pain point |
+| Value | 5 | Solves artifact sprawl . the #1 pain point |
 | Need | 5 | Every PM session |
 | Frequency | 5 | Multiple times per session (switch, status) |
 | Complexity | 3 | Directory management + state |
@@ -113,7 +113,7 @@ Each skill is evaluated across 7 dimensions:
 
 ---
 
-### Tier 2: Medium Priority — Build After Tier 1
+### Tier 2: Medium Priority . Build After Tier 1
 
 #### 3.4 `measure-survey-analysis` (Domain/Measure)
 
@@ -182,7 +182,7 @@ Each skill is evaluated across 7 dimensions:
 
 ---
 
-### Tier 3: Lower Priority — Build When Capacity Allows
+### Tier 3: Lower Priority . Build When Capacity Allows
 
 #### 3.9 `discover-data-analysis` (Domain/Discover)
 
@@ -277,7 +277,7 @@ All 25 skills should be audited against current conventions:
 | EXAMPLE.md completeness | Some examples may be truncated | Medium |
 | Output contract presence | Older skills may lack explicit output contracts | Medium |
 
-This audit is exactly what `/skill-builder audit` would do — another reason to build the skill-builder first.
+This audit is exactly what `/skill-builder audit` would do . another reason to build the skill-builder first.
 
 ---
 

@@ -1,9 +1,9 @@
 ---
-title: "Release v2.11.0 — Meeting Skills Family + Lean Canvas"
+title: "Release v2.11.0. Meeting Skills Family + Lean Canvas"
 description: "The first pm-skills release with a canonical skill-family contract pattern. Ships 6 new foundation skills (lean-canvas + 5-skill meeting lifecycle family), enforcing CI for cross-skill consistency, thread-aligned sample library, and end-user + adoption documentation."
 ---
 
-# Release v2.11.0 — Meeting Skills Family + Lean Canvas
+# Release v2.11.0. Meeting Skills Family + Lean Canvas
 
 **Released**: 2026-04-18
 **Type**: Feature release (minor)
@@ -36,18 +36,18 @@ graph LR
 
 ### 6 new foundation-phase skills
 
-- **`foundation-lean-canvas`** (`/lean-canvas`) — one-page business thesis across 9 interlocking blocks with optional HTML visual rendering (F-26, shipped to main mid-plan 2026-04-15)
-- **`foundation-meeting-agenda`** (`/meeting-agenda`) — attendee-facing structural doc with time-boxed topics, type tags, owners, and prep
-- **`foundation-meeting-brief`** (`/meeting-brief`) — user's private strategic prep with stakeholder reads, ranked outcomes, anticipated Q&A
-- **`foundation-meeting-recap`** (`/meeting-recap`) — post-meeting topic-segmented summary with decisions bold-flagged and actions inline
-- **`foundation-meeting-synthesize`** (`/meeting-synthesize`) — cross-meeting archaeology surfacing patterns, trajectories, and contradictions across recaps
-- **`foundation-stakeholder-update`** (`/stakeholder-update`) — async outward communication with 5 channel variants (slack, teams, email, notion, exec-memo) × 5 audience variants
+- **`foundation-lean-canvas`** (`/lean-canvas`). one-page business thesis across 9 interlocking blocks with optional HTML visual rendering (F-26, shipped to main mid-plan 2026-04-15)
+- **`foundation-meeting-agenda`** (`/meeting-agenda`). attendee-facing structural doc with time-boxed topics, type tags, owners, and prep
+- **`foundation-meeting-brief`** (`/meeting-brief`). user's private strategic prep with stakeholder reads, ranked outcomes, anticipated Q&A
+- **`foundation-meeting-recap`** (`/meeting-recap`). post-meeting topic-segmented summary with decisions bold-flagged and actions inline
+- **`foundation-meeting-synthesize`** (`/meeting-synthesize`). cross-meeting archaeology surfacing patterns, trajectories, and contradictions across recaps
+- **`foundation-stakeholder-update`** (`/stakeholder-update`). async outward communication with 5 channel variants (slack, teams, email, notion, exec-memo) × 5 audience variants
 
 ### Meeting Skills Family Contract (v1.1.0)
 
 First canonical cross-cutting skill-family contract at [`docs/reference/skill-families/meeting-skills-contract.md`](../reference/skill-families/meeting-skills-contract.md). Defines shared behavioral pattern (zero-friction execution / go-mode), frontmatter schema, filename-based chaining, universal output requirements, and 6 shared taxonomies across the 5 meeting skills.
 
-**Enforced by** `scripts/validate-meeting-skills-family.sh` (and `.ps1`) — runs in CI on every PR touching family files. Checks:
+**Enforced by** `scripts/validate-meeting-skills-family.sh` (and `.ps1`). runs in CI on every PR touching family files. Checks:
 - Each SKILL.md references the contract
 - Each SKILL.md has a Zero-friction execution section
 - Each TEMPLATE.md has the required shareable-summary (or shareable-update for stakeholder-update) + sources-section structure
@@ -72,7 +72,7 @@ Library grew from 94 → 120 samples (all counted correctly per v2.11.0 errata).
 
 ### End-user guide
 
-[`docs/guides/using-meeting-skills.md`](../guides/using-meeting-skills.md) — narrative walkthrough from first-meeting through cross-meeting synthesis. 3 mermaid diagrams covering:
+[`docs/guides/using-meeting-skills.md`](../guides/using-meeting-skills.md). narrative walkthrough from first-meeting through cross-meeting synthesis. 3 mermaid diagrams covering:
 
 1. The family's 5 skills at a glance
 2. Go-mode decision flow (invocation → inference → checkpoint → output)
@@ -81,12 +81,12 @@ Library grew from 94 → 120 samples (all counted correctly per v2.11.0 errata).
 ### Adversarial review loop (process improvement)
 
 v2.11.0 was the first release reviewed by 2 rounds of Codex adversarial review. Findings:
-- **Round 1**: 15 findings (3 CRITICAL, 7 IMPORTANT, 3 MINOR, 1 NIT) — 14 resolved same session; 1 deferred to F-31 (v2.12.0)
-- **Round 2** (post-resolution): 11 findings (0 CRITICAL, 6 IMPORTANT, 3 MINOR, 2 NIT) — 10 resolved same session; 1 stylistic refinement resolved in final pass
+- **Round 1**: 15 findings (3 CRITICAL, 7 IMPORTANT, 3 MINOR, 1 NIT). 14 resolved same session; 1 deferred to F-31 (v2.12.0)
+- **Round 2** (post-resolution): 11 findings (0 CRITICAL, 6 IMPORTANT, 3 MINOR, 2 NIT). 10 resolved same session; 1 stylistic refinement resolved in final pass
 
 Process learnings codified in:
-- [`plan_v2.11_review-journal.md`](../internal/release-plans/v2.11.0/plan_v2.11_review-journal.md) — comprehensive narrative of all reviews, findings, resolutions, pattern analysis
-- [`plan_v2.11_pre-release-checklist.md`](../internal/release-plans/v2.11.0/plan_v2.11_pre-release-checklist.md) — now starts with Phase 0 Adversarial Review Loop ("re-run until findings stabilize below IMPORTANT severity"), added based on v2.11.0 experience
+- [`plan_v2.11_review-journal.md`](../internal/release-plans/v2.11.0/plan_v2.11_review-journal.md). comprehensive narrative of all reviews, findings, resolutions, pattern analysis
+- [`plan_v2.11_pre-release-checklist.md`](../internal/release-plans/v2.11.0/plan_v2.11_pre-release-checklist.md). now starts with Phase 0 Adversarial Review Loop ("re-run until findings stabilize below IMPORTANT severity"), added based on v2.11.0 experience
 
 ### v2.12.0 backlog established
 
@@ -115,7 +115,7 @@ No breaking changes. All existing skills unchanged. New skills are additive.
 
 New capabilities:
 - `/lean-canvas`, `/meeting-agenda`, `/meeting-brief`, `/meeting-recap`, `/meeting-synthesize`, `/stakeholder-update` slash commands now available
-- Meeting Skills Family Contract is canonical — read it before authoring meeting-family skills
+- Meeting Skills Family Contract is canonical. read it before authoring meeting-family skills
 - CI validator `validate-meeting-skills-family` runs automatically
 
 ### For teams already using internal meeting templates
@@ -148,17 +148,17 @@ Per M-22 (decided in v2.11.0 planning), `pm-skills-mcp` is frozen and no longer 
 
 ### For end users
 
-- [Family contract](../reference/skill-families/meeting-skills-contract.md) — authoritative spec
-- [Using the Meeting Skills Family](../guides/using-meeting-skills.md) — narrative guide with diagrams
-- [Skill Families index](../reference/skill-families/index.md) — cross-cutting pattern landing page
-- [Foundation skills index](../skills/foundation/index.md) — all 7 foundation skills listed
+- [Family contract](../reference/skill-families/meeting-skills-contract.md). authoritative spec
+- [Using the Meeting Skills Family](../guides/using-meeting-skills.md). narrative guide with diagrams
+- [Skill Families index](../reference/skill-families/index.md). cross-cutting pattern landing page
+- [Foundation skills index](../skills/foundation/index.md). all 7 foundation skills listed
 - 15 sample outputs across storevine/brainshelf/workbench threads
 
 ### For maintainers
 
 - [v2.11.0 release plan](../internal/release-plans/v2.11.0/plan_v2.11.0.md)
 - [Review journal](../internal/release-plans/v2.11.0/plan_v2.11_review-journal.md)
-- [Codex review tracker](../internal/release-plans/v2.11.0/plan_v2.11_codex-review.md) — Round 1 + 2 findings
+- [Codex review tracker](../internal/release-plans/v2.11.0/plan_v2.11_codex-review.md). Round 1 + 2 findings
 - [CI coverage analysis](../internal/release-plans/v2.11.0/plan_v2.11_ci-coverage-analysis.md)
 - [Pre-release checklist template](../internal/release-plans/v2.11.0/plan_v2.11_pre-release-checklist.md)
 - [Family authoring plan](../internal/efforts/meeting-skills-family/plan_family-contract.md)

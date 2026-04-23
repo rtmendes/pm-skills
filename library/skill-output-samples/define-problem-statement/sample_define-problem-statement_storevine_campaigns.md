@@ -7,7 +7,7 @@ skill_version: "2.0.0"
 created: 2026-02-20
 status: sample
 thread: storevine
-context: Storevine B2B ecommerce platform — Campaigns feature problem framing for engineering and design
+context: Storevine B2B ecommerce platform . Campaigns feature problem framing for engineering and design
 ---
 
 ## Scenario
@@ -16,7 +16,7 @@ Following Q4 exit survey data that identified email marketing gaps as a top-thre
 
 **Source Notes:**
 
-- The CAN-SPAM Act (FTC, ftc.gov) and GDPR Article 6 (gdpr.eu) define the compliance floor for commercial email: one-click unsubscribe, physical address disclosure, honest subject lines, and documented consent for EU recipients — establishing Legal as a non-negotiable launch gate for any production email send feature.
+- The CAN-SPAM Act (FTC, ftc.gov) and GDPR Article 6 (gdpr.eu) define the compliance floor for commercial email: one-click unsubscribe, physical address disclosure, honest subject lines, and documented consent for EU recipients . establishing Legal as a non-negotiable launch gate for any production email send feature.
 - Klaviyo's S-1 filing (SEC EDGAR, September 2023) reported ~130,000 paying ecommerce merchant customers at IPO, confirming that third-party email tool adoption at scale is the baseline condition from which Storevine must compete and that switching costs compound with every month of Klaviyo usage.
 - DMA (Data & Marketing Association, dma.org.uk) research on email marketing ROI reports median returns of £42 per £1 spent for retail senders, establishing email as the highest-ROI marketing channel available to ecommerce merchants and contextualizing the churn risk of platform gaps in this capability.
 
@@ -27,13 +27,13 @@ Following Q4 exit survey data that identified email marketing gaps as a top-thre
 ```
 /problem-statement
 
-Project: Campaigns — native email marketing for Storevine merchants
-Stage: Define — establishing shared problem framing before PRD draft
+Project: Campaigns . native email marketing for Storevine merchants
+Stage: Define . establishing shared problem framing before PRD draft
 
 Problem I want to articulate:
 - ~68% of active merchants use an external email tool [fictional]
 - Storevine's built-in email lacks purchase-based segmentation and
-  revenue attribution — the two capabilities merchants cite most
+  revenue attribution . the two capabilities merchants cite most
 - Q4 exit survey: 22% of churned merchants cited this as a primary
   cancellation reason [fictional]
 - Competitive analysis filed last week: Shopify Email has already
@@ -58,17 +58,17 @@ design, legal, and head of product before PRD review.
 
 ## Problem Summary
 
-Active Storevine merchants who run email marketing are forced to subscribe to and maintain a separate third-party tool — primarily Klaviyo or Mailchimp — because Storevine's built-in email features lack purchase-based audience segmentation and revenue attribution. This creates a direct monthly cost, an ongoing tool management burden, and a weakening of the Storevine all-in-one value proposition that manifests as churn: Q4 exit surveys confirmed that 22% [fictional] of merchants who canceled cited "had to use a separate email tool" as a primary reason.
+Active Storevine merchants who run email marketing are forced to subscribe to and maintain a separate third-party tool . primarily Klaviyo or Mailchimp . because Storevine's built-in email features lack purchase-based audience segmentation and revenue attribution. This creates a direct monthly cost, an ongoing tool management burden, and a weakening of the Storevine all-in-one value proposition that manifests as churn: Q4 exit surveys confirmed that 22% [fictional] of merchants who canceled cited "had to use a separate email tool" as a primary reason.
 
 ## User Impact
 
 ### Who is affected?
 
-Active Storevine merchants who send email marketing to their customer base — or who want to but have not started — represented by merchant owner-operators who are personally responsible for all marketing decisions, technical integrations, and vendor relationships.
+Active Storevine merchants who send email marketing to their customer base . or who want to but have not started . represented by merchant owner-operators who are personally responsible for all marketing decisions, technical integrations, and vendor relationships.
 
 ### How are they affected?
 
-Merchants who use external email tools maintain a separate platform subscription ($20–$200/month depending on list size [fictional]), configure and maintain an API data sync between Storevine and their email tool, rebuild customer and order data as segment definitions inside the email platform, and manage support relationships with two separate vendors when either platform changes. Merchants who want to start email marketing but find external tools too complex to set up either abandon the attempt or post on social media instead — forgoing email's re-engagement revenue entirely.
+Merchants who use external email tools maintain a separate platform subscription ($20–$200/month depending on list size [fictional]), configure and maintain an API data sync between Storevine and their email tool, rebuild customer and order data as segment definitions inside the email platform, and manage support relationships with two separate vendors when either platform changes. Merchants who want to start email marketing but find external tools too complex to set up either abandon the attempt or post on social media instead . forgoing email's re-engagement revenue entirely.
 
 ### Scale of impact
 
@@ -78,7 +78,7 @@ Approximately 68% [fictional] of active merchants (~12,240 of ~18,000 [fictional
 
 ### Strategic Alignment
 
-Storevine's value proposition is "everything you need to run your online store in one place." Forcing merchants to leave the platform for one of the highest-ROI marketing channels — email — is a direct contradiction of that promise. The all-in-one strategy requires that Campaigns become a genuine replacement for Klaviyo and Mailchimp for the majority of the merchant base, not a supplementary tool that layers on top of an already-complex stack.
+Storevine's value proposition is "everything you need to run your online store in one place." Forcing merchants to leave the platform for one of the highest-ROI marketing channels . email . is a direct contradiction of that promise. The all-in-one strategy requires that Campaigns become a genuine replacement for Klaviyo and Mailchimp for the majority of the merchant base, not a supplementary tool that layers on top of an already-complex stack.
 
 ### Business Impact
 
@@ -86,7 +86,7 @@ Email-related churn represents an estimated 4.8 percentage points [fictional] of
 
 ### Why Now?
 
-Q4 2025 churn data surfaced email gaps as a top-three cancellation driver for the first time [fictional]. The competitive analysis confirms that Shopify Email — Campaigns' most directly comparable built-in product — has already validated the model and is expanding rapidly (automation flows, Shopify Audiences integration). Every quarter without a native Campaigns feature is a quarter in which the Klaviyo dependency deepens for merchants who adopt it: switching costs compound with each new automation flow built, and the window for activating merchants before they commit to external tools closes with each new merchant cohort.
+Q4 2025 churn data surfaced email gaps as a top-three cancellation driver for the first time [fictional]. The competitive analysis confirms that Shopify Email . Campaigns' most directly comparable built-in product . has already validated the model and is expanding rapidly (automation flows, Shopify Audiences integration). Every quarter without a native Campaigns feature is a quarter in which the Klaviyo dependency deepens for merchants who adopt it: switching costs compound with each new automation flow built, and the window for activating merchants before they commit to external tools closes with each new merchant cohort.
 
 ## Success Criteria
 

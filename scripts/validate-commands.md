@@ -18,13 +18,13 @@ powershell -ExecutionPolicy Bypass -File .\scripts\validate-commands.ps1
 
 For each `commands/*.md` file:
 
-1. **Extracts skill paths** — scans the file content for patterns matching `skills/<name>/SKILL.md`.
+1. **Extracts skill paths** . scans the file content for patterns matching `skills/<name>/SKILL.md`.
 2. **Checks the referenced SKILL.md exists** at the extracted path.
-3. **Checks supporting files exist** — verifies `references/TEMPLATE.md` and `references/EXAMPLE.md` in the same skill directory.
+3. **Checks supporting files exist** . verifies `references/TEMPLATE.md` and `references/EXAMPLE.md` in the same skill directory.
 4. **Reports results** per command:
    - Pass: `[OK] prd.md -> skills/deliver-prd/SKILL.md`
    - Fail: `[FAIL] prd.md : referenced SKILL missing (skills/deliver-prd/SKILL.md)`
-5. **Handles multi-skill commands** — if a command references multiple skills (e.g., the kickoff workflow), all are checked.
+5. **Handles multi-skill commands** . if a command references multiple skills (e.g., the kickoff workflow), all are checked.
 
 ## Exit Codes
 
@@ -36,8 +36,8 @@ For each `commands/*.md` file:
 ## When to Use
 
 - **After editing or renaming** any command or skill directory.
-- **Before tagging a release** — catches broken links before they ship.
-- **In CI** — add as a lint step to prevent regressions.
+- **Before tagging a release** . catches broken links before they ship.
+- **In CI** . add as a lint step to prevent regressions.
 
 ## Example Output
 
@@ -50,5 +50,5 @@ For each `commands/*.md` file:
 
 ## Safety
 
-- Read-only — does not modify any files.
+- Read-only . does not modify any files.
 - Inspects only `commands/` and `skills/` directories.

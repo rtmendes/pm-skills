@@ -1,4 +1,4 @@
-# CI Audit — Post-v2.11.0 (2026-04-18)
+# CI Audit. Post-v2.11.0 (2026-04-18)
 
 **Date**: 2026-04-18 (same day as v2.11.0 tag)
 **Scope**: Complete inventory and coverage analysis of CI scripts, GitHub Actions workflows, enforcement posture, and gaps
@@ -11,7 +11,7 @@ Complements (not duplicates) `docs/internal/release-plans/v2.11.0/plan_v2.11_ci-
 
 ## Executive summary
 
-pm-skills currently ships **17 validator/check scripts** (each with `.sh` + `.ps1` + `.md` triplet) and **10 GitHub Actions workflows**. The main validation workflow (`validation.yml`) invokes 15 of the 17 scripts (the other 2 — `build-release` and `sync-claude` — are tooling rather than validators). Enforcement posture is **roughly 1/3 enforcing, 2/3 advisory**.
+pm-skills currently ships **17 validator/check scripts** (each with `.sh` + `.ps1` + `.md` triplet) and **10 GitHub Actions workflows**. The main validation workflow (`validation.yml`) invokes 15 of the 17 scripts (the other 2. `build-release` and `sync-claude`. are tooling rather than validators). Enforcement posture is **roughly 1/3 enforcing, 2/3 advisory**.
 
 ```mermaid
 graph TD
@@ -41,9 +41,9 @@ graph TD
 
 **Top 3 gaps** (detail below):
 
-1. **No sample-standards enforcement** — `library/skill-output-samples/*/sample_*.md` files aren't validated against SAMPLE_CREATION.md conventions. F-33 (v2.12.0) addresses.
-2. **No family-registration validation** — `validate-meeting-skills-family.sh` hardcodes the 5 meeting skills by name; can't detect missing family-contract-reference on a new family skill. Partially addressed by F-31 (v2.12.0).
-3. **No utility-skill content-currency check** — utility skills like `pm-skill-builder` embed example skill counts ("27 skills" in v1.0.0) that silently drift. `check-count-consistency` flags advisory; no enforcing mechanism. F-32 (v2.12.0) addresses by generating fresh content.
+1. **No sample-standards enforcement**. `library/skill-output-samples/*/sample_*.md` files aren't validated against SAMPLE_CREATION.md conventions. F-33 (v2.12.0) addresses.
+2. **No family-registration validation**. `validate-meeting-skills-family.sh` hardcodes the 5 meeting skills by name; can't detect missing family-contract-reference on a new family skill. Partially addressed by F-31 (v2.12.0).
+3. **No utility-skill content-currency check**. utility skills like `pm-skill-builder` embed example skill counts ("27 skills" in v1.0.0) that silently drift. `check-count-consistency` flags advisory; no enforcing mechanism. F-32 (v2.12.0) addresses by generating fresh content.
 
 ---
 
@@ -127,11 +127,11 @@ graph LR
 
 These fail CI and block the merge when violated:
 
-1. `validate-commands` — critical: broken commands mean users invoke skills that don't exist
-2. `validate-agents-md` — critical: AGENTS.md is how many agents discover skills
-3. `lint-skills-frontmatter` — critical: malformed frontmatter breaks loading
-4. `validate-meeting-skills-family` — critical: family contract conformance (v2.11.0 new)
-5. `validate-version-consistency` — critical: plugin + marketplace version drift breaks packaging
+1. `validate-commands`. critical: broken commands mean users invoke skills that don't exist
+2. `validate-agents-md`. critical: AGENTS.md is how many agents discover skills
+3. `lint-skills-frontmatter`. critical: malformed frontmatter breaks loading
+4. `validate-meeting-skills-family`. critical: family contract conformance (v2.11.0 new)
+5. `validate-version-consistency`. critical: plugin + marketplace version drift breaks packaging
 
 **Assessment**: appropriately scoped. These are the bare-minimum correctness gates.
 
@@ -139,16 +139,16 @@ These fail CI and block the merge when violated:
 
 These log findings but allow merges:
 
-1. `check-mcp-impact` — informational for MCP maintainers (MCP frozen per M-22)
-2. `check-context-currency` — AGENTS/claude/CONTEXT.md ages; refresh at release time
-3. `validate-skill-history` — HISTORY.md conformance when present (most skills at v1.0.0 have none)
-4. `validate-skills-manifest` — release-specific manifest schema
-5. `check-stale-bundle-refs` — terminology-regression prevention (important during v2.9.0 rename era; less critical now)
-6. `validate-gitignore-pm-skills` — dev-workflow ergonomics
-7. `validate-script-docs` — `.md` companion file coverage
-8. `check-workflow-coverage` — new workflow should have slash command
-9. `check-count-consistency` — documented counts vs. filesystem
-10. `check-generated-freshness` — auto-generated file staleness
+1. `check-mcp-impact`. informational for MCP maintainers (MCP frozen per M-22)
+2. `check-context-currency`. AGENTS/claude/CONTEXT.md ages; refresh at release time
+3. `validate-skill-history`. HISTORY.md conformance when present (most skills at v1.0.0 have none)
+4. `validate-skills-manifest`. release-specific manifest schema
+5. `check-stale-bundle-refs`. terminology-regression prevention (important during v2.9.0 rename era; less critical now)
+6. `validate-gitignore-pm-skills`. dev-workflow ergonomics
+7. `validate-script-docs`. `.md` companion file coverage
+8. `check-workflow-coverage`. new workflow should have slash command
+9. `check-count-consistency`. documented counts vs. filesystem
+10. `check-generated-freshness`. auto-generated file staleness
 
 **Assessment**: mix of "truly advisory" (e.g., check-context-currency is useful info) and "should probably be enforcing" (e.g., `check-count-consistency` would have caught the 109/120 drift discovered in v2.11.0 Round 2 review).
 
@@ -160,7 +160,7 @@ Scripts that should consider promotion from advisory to enforcing:
 |--------|---------|-------------|-----------|
 | `check-count-consistency` | Advisory | Advisory+enforcing for current-state docs only; advisory for historical release-note blocks | Historical release blocks legitimately reference past counts; current-state docs should not drift |
 | `validate-script-docs` | Advisory | Enforcing | Low cost to keep `.md` companions; matches existing `.sh + .ps1 + .md` convention |
-| `check-workflow-coverage` | Advisory | Enforcing | Same as above — low cost, high discoverability value |
+| `check-workflow-coverage` | Advisory | Enforcing | Same as above. low cost, high discoverability value |
 
 Not promoting any of these in v2.11.0 because each is a separate consideration; tracked for v2.12.0 hardening pass.
 
@@ -183,16 +183,16 @@ Not promoting any of these in v2.11.0 because each is a separate consideration; 
 | Concern | Script(s) | Coverage |
 |---------|-----------|----------|
 | Meeting Skills Family contract | `validate-meeting-skills-family` | Meeting family only (hardcoded by name) |
-| Future skill families | **None** | **GAP** — would need a generic `validate-skill-family-registration` script |
+| Future skill families | **None** | **GAP**. would need a generic `validate-skill-family-registration` script |
 
 ### Sample-level concerns (large gap)
 
 | Concern | Script(s) | Coverage |
 |---------|-----------|----------|
 | Sample filename convention | Partial via `validate-meeting-skills-family` (meeting samples only) | Meeting family only |
-| Sample section structure (Scenario/Prompt/Output) | **None** | **GAP** — SAMPLE_CREATION.md not enforced |
+| Sample section structure (Scenario/Prompt/Output) | **None** | **GAP**. SAMPLE_CREATION.md not enforced |
 | Sample frontmatter (8 fields) | **None** | **GAP** |
-| Fictional-marker discipline | **None** | **GAP** — requires content-level inspection |
+| Fictional-marker discipline | **None** | **GAP**. requires content-level inspection |
 
 **F-33 (v2.12.0)** addresses this gap with `check-sample-standards.sh`.
 
@@ -219,7 +219,7 @@ Not promoting any of these in v2.11.0 because each is a separate consideration; 
 
 | Concern | Script(s) | Coverage |
 |---------|-----------|----------|
-| Utility-skill embedded-count drift (e.g., pm-skill-builder "27 skills") | `check-count-consistency` flags advisory | **Partial** — flags drift, doesn't force refresh |
+| Utility-skill embedded-count drift (e.g., pm-skill-builder "27 skills") | `check-count-consistency` flags advisory | **Partial**. flags drift, doesn't force refresh |
 | Historical release-note references | Intentionally allowed | N/A (design intent) |
 | Worked-example content drift vs. current state | **None** | **GAP** |
 
@@ -229,7 +229,7 @@ Not promoting any of these in v2.11.0 because each is a separate consideration; 
 
 ## Workflow analysis
 
-### validation.yml — the main matrix
+### validation.yml. the main matrix
 
 **Strengths**:
 - Cross-platform matrix (Ubuntu + Windows) ensures `.sh` and `.ps1` parity
@@ -238,30 +238,30 @@ Not promoting any of these in v2.11.0 because each is a separate consideration; 
 - All 15 validator scripts represented
 
 **Observations**:
-- No matrix for `macos-latest` — probably fine since pm-skills is mostly text-content, but worth adding if sample-generation (F-32) introduces platform-specific code
-- Runs on every push to main AND every PR to main — duplicate runs when PR merges, but acceptable cost for confidence
+- No matrix for `macos-latest`. probably fine since pm-skills is mostly text-content, but worth adding if sample-generation (F-32) introduces platform-specific code
+- Runs on every push to main AND every PR to main. duplicate runs when PR merges, but acceptable cost for confidence
 
-### validate-docs.yml — scoped to docs
+### validate-docs.yml. scoped to docs
 
 **Strengths**:
-- Path-filtered triggers (only runs on doc changes) — keeps CI fast
+- Path-filtered triggers (only runs on doc changes). keeps CI fast
 - Validates MkDocs build before deploy
-- Separate from `validation.yml` — good separation of concerns
+- Separate from `validation.yml`. good separation of concerns
 
 **Observations**:
 - No link-check step visible; broken internal links would deploy
 - Could integrate with `mkdocs-strict` flag for stronger validation
 
-### validate-plugin.yml — plugin packaging
+### validate-plugin.yml. plugin packaging
 
 **Strengths**:
-- Triggers on tag pushes AND PRs — catches issues pre-merge AND pre-release
+- Triggers on tag pushes AND PRs. catches issues pre-merge AND pre-release
 - Tests the actual plugin manifest
 
 **Observations**:
 - Good coverage; no obvious gaps
 
-### validate-mcp-sync.yml — currently frozen
+### validate-mcp-sync.yml. currently frozen
 
 **Status**: per M-22 (v2.11.0 decision), pm-skills-mcp is frozen and no longer gates releases. This workflow still runs and reports sync status but shouldn't block.
 
@@ -292,12 +292,12 @@ Not promoting any of these in v2.11.0 because each is a separate consideration; 
 ### sync-agents-md.yml
 
 **Strengths**:
-- Auto-sync AGENTS.md from source — matches existing pattern
+- Auto-sync AGENTS.md from source. matches existing pattern
 
 **Observations**:
 - Makes the enforcing `validate-agents-md` check usually pass by construction; the check is still useful for manual drift detection
 
-### codeql.yml — security
+### codeql.yml. security
 
 **Standard GitHub security scanning**; no pm-skills-specific concerns.
 
@@ -322,7 +322,7 @@ No script validates `library/skill-output-samples/*/sample_*.md` against SAMPLE_
 - Missing required sections (`## Scenario`, `## Prompt`, `## Output`)
 - Missing 8-field top-level frontmatter
 - Unresolved placeholders (`TBD`, `TODO`, `<placeholder>`)
-- Fictional-marker discipline (advisory — rule-based regex)
+- Fictional-marker discipline (advisory. rule-based regex)
 
 **Evidence from v2.11.0**: initial 10 meeting samples violated SAMPLE_CREATION.md silently; caught only by manual pre-release review.
 
@@ -398,19 +398,19 @@ graph TD
 
 ### For v2.12.0 (already in backlog)
 
-- **F-33** — `check-sample-standards.sh` + `.ps1` + `.md` — closes G1. Advisory-first (2 weeks) then enforcing.
-- **F-31** — pm-skill-validate gains family + sample awareness — partially closes G2.
-- **F-32** — pm-skill-builder generates samples — partially closes G3.
+- **F-33**. `check-sample-standards.sh` + `.ps1` + `.md`. closes G1. Advisory-first (2 weeks) then enforcing.
+- **F-31**. pm-skill-validate gains family + sample awareness. partially closes G2.
+- **F-32**. pm-skill-builder generates samples. partially closes G3.
 
-### For v2.12.0 (new tracking — not yet in backlog)
+### For v2.12.0 (new tracking. not yet in backlog)
 
-- **New candidate effort F-36** — generic skill-family-registration validator (completes G2 beyond what F-31 does internally). Small effort, ~2-3 days. Create as effort brief if v2.12.0 scope allows.
+- **New candidate effort F-36**. generic skill-family-registration validator (completes G2 beyond what F-31 does internally). Small effort, ~2-3 days. Create as effort brief if v2.12.0 scope allows.
 
 ### For v2.12.0 or later (nice-to-haves)
 
-- **G4** link checking — add `mkdocs-linkcheck` to `validate-docs.yml`
-- **G5** auto-release creation — modify `release.yml` to call `gh release create` with release notes file
-- **G9** enforcement promotions — one-by-one, with 2-week advisory-observation periods
+- **G4** link checking. add `mkdocs-linkcheck` to `validate-docs.yml`
+- **G5** auto-release creation. modify `release.yml` to call `gh release create` with release notes file
+- **G9** enforcement promotions. one-by-one, with 2-week advisory-observation periods
 
 ---
 
@@ -418,15 +418,15 @@ graph TD
 
 ### Present
 
-- `codeql.yml` — GitHub's CodeQL security scanning (standard)
+- `codeql.yml`. GitHub's CodeQL security scanning (standard)
 - No secrets in repo (verified via file types; no `.env` or credential files)
 - Plugin description does not reveal internal repo structure
 
 ### Absent (but probably not needed for this repo)
 
-- No SAST tools beyond CodeQL — appropriate for a docs-heavy repo
-- No dependency scanning (Dependabot or equivalent) — worth enabling if Python requirements in `requirements-docs.txt` are used, but low priority
-- No signed commits enforcement — worth considering for release commits specifically
+- No SAST tools beyond CodeQL. appropriate for a docs-heavy repo
+- No dependency scanning (Dependabot or equivalent). worth enabling if Python requirements in `requirements-docs.txt` are used, but low priority
+- No signed commits enforcement. worth considering for release commits specifically
 
 ---
 
@@ -435,14 +435,14 @@ graph TD
 ### What v2.11.0 proved about the CI
 
 1. **Mechanical validators catch structural issues reliably**. All 5 enforcing validators caught what they were designed to catch throughout the release cycle.
-2. **Adversarial review catches cross-reference issues that validators can't**. Round 2 Codex review surfaced 6 IMPORTANT findings that all validators had passed on — all were within-document self-contradictions or semantic inconsistencies.
+2. **Adversarial review catches cross-reference issues that validators can't**. Round 2 Codex review surfaced 6 IMPORTANT findings that all validators had passed on. all were within-document self-contradictions or semantic inconsistencies.
 3. **Passive-voice checklist items don't execute**. The sample-count check in the v2.11.0 pre-release checklist was passive and silently missed the 109→120 drift; concrete-command enforcement now in the checklist.
 4. **Advisory-only checks accumulate drift**. `check-count-consistency` has flagged historical references for a long time; some are intentional-historical (OK), but enforcement for current-state references would prevent the drift from accumulating.
 
 ### Process improvement implemented in v2.11.0
 
-- **Phase 0 Adversarial Review Loop** added to pre-release checklist — run Codex review after each resolution pass until findings stabilize below IMPORTANT severity
-- **Concrete sample-count command** required in Phase 2c — prevents passive-voice check from silently passing
+- **Phase 0 Adversarial Review Loop** added to pre-release checklist. run Codex review after each resolution pass until findings stabilize below IMPORTANT severity
+- **Concrete sample-count command** required in Phase 2c. prevents passive-voice check from silently passing
 
 ---
 
@@ -450,12 +450,12 @@ graph TD
 
 **Overall CI health: good**. The main validators are appropriately enforcing; advisory checks provide visibility without blocking legitimate historical references.
 
-**Three real gaps** (G1, G2, G3) — all already tracked in v2.11.0 / v2.12.0 planning:
+**Three real gaps** (G1, G2, G3). all already tracked in v2.11.0 / v2.12.0 planning:
 - G1 closed by F-33
 - G2 partially closed by F-31, fully closed if F-36 is added
 - G3 partially closed by F-32
 
-**Six nice-to-have improvements** (G4–G9) — none are release-blocking; candidates for v2.12.0–v2.13.0 hardening passes.
+**Six nice-to-have improvements** (G4–G9). none are release-blocking; candidates for v2.12.0–v2.13.0 hardening passes.
 
 **Next audit recommended**: post-v2.12.0 tag, to evaluate whether F-31/F-32/F-33/F-36 adequately close G1/G2/G3 and whether any new gaps surface from the sample-automation changes.
 
@@ -471,7 +471,7 @@ graph TD
 6. Mapped concerns (skill / family / sample / release / docs / content-currency) to script coverage
 7. Identified gaps and prioritized by severity and existing backlog alignment
 
-No scripts were executed as part of this audit — it is a static review of configuration and scripts as they exist at v2.11.0 tag.
+No scripts were executed as part of this audit. it is a static review of configuration and scripts as they exist at v2.11.0 tag.
 
 ---
 

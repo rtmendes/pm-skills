@@ -9,7 +9,7 @@ thread: workbench
 context: blueprints-notion-enterprise-cs
 ---
 
-# Sample: foundation-stakeholder-update — Workbench Blueprints Notion Update to Enterprise CS
+# Sample: foundation-stakeholder-update. Workbench Blueprints Notion Update to Enterprise CS
 
 ## Scenario
 
@@ -57,7 +57,7 @@ visibility: team
 status: draft
 ---
 
-# Stakeholder update: Blueprints v1.1 Scope Decided — Enterprise CS Briefing
+# Stakeholder update: Blueprints v1.1 Scope Decided. Enterprise CS Briefing
 
 ## Shareable update
 
@@ -65,7 +65,7 @@ status: draft
 
 ---
 
-# Blueprints v1.1 — Enterprise CS Briefing
+# Blueprints v1.1. Enterprise CS Briefing
 
 **Status**: v1.1 scope decided 2026-04-25 | **Launch target**: 2026-06-15 | **Owner**: david-pm + anna-cs
 
@@ -109,7 +109,7 @@ status: draft
 **What we're shipping**: role-based skip rules configurable per Blueprint template.
 
 **CS talking points**:
-- Not default-on — requires explicit configuration per template
+- Not default-on. requires explicit configuration per template
 - Intended for low-risk policy categories; customers should not enable for high-risk compliance templates
 
 ---
@@ -128,7 +128,7 @@ status: draft
 
 - 2026-05-02: design updates complete
 - 2026-05-08: HIPAA validation complete
-- 2026-05-20: CS playbook locked (this is the CTA for CS team — confirm alignment by this date)
+- 2026-05-20: CS playbook locked (this is the CTA for CS team. confirm alignment by this date)
 - 2026-06-01: internal dogfood
 - 2026-06-15: v1.1 generally available
 
@@ -144,7 +144,7 @@ Post questions in #blueprints-v1-1-rollout (Slack) or comment directly on this N
 
 ---
 
-> [End of Shareable update section. Everything below is INTERNAL — not for the CS playbook.]
+> [End of Shareable update section. Everything below is INTERNAL. not for the CS playbook.]
 
 ## Technical-to-business translation notes
 
@@ -156,7 +156,7 @@ Post questions in #blueprints-v1-1-rollout (Slack) or comment directly on this N
 
 **Flagged but kept**:
 
-- "v1.1 / v1.2" version numbers — acceptable for CS internal briefing; replace with "this release / next release" if the doc goes customer-facing
+- "v1.1 / v1.2" version numbers. acceptable for CS internal briefing; replace with "this release / next release" if the doc goes customer-facing
 
 ---
 

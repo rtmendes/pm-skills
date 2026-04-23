@@ -7,18 +7,18 @@ skill_version: "2.0.0"
 created: 2026-02-20
 status: sample
 thread: brainshelf
-context: Brainshelf consumer PKM app — Resurface feature launch checklist for Sprint 8 ship
+context: Brainshelf consumer PKM app . Resurface feature launch checklist for Sprint 8 ship
 ---
 
 ## Scenario
 
-As Sprint 8 approached its final days, Priya M. created the Resurface launch checklist to coordinate the ship across engineering, design, growth, and data. The checklist was especially important because this was Brainshelf's first email feature — DNS configuration, deliverability validation, and email compliance were all new operational territory for the team. The checklist was reviewed at the T-2 go/no-go meeting on February 12, 2026, and all blockers were cleared by February 14.
+As Sprint 8 approached its final days, Priya M. created the Resurface launch checklist to coordinate the ship across engineering, design, growth, and data. The checklist was especially important because this was Brainshelf's first email feature . DNS configuration, deliverability validation, and email compliance were all new operational territory for the team. The checklist was reviewed at the T-2 go/no-go meeting on February 12, 2026, and all blockers were cleared by February 14.
 
 **Source Notes:**
 
-- Atul Gawande, "The Checklist Manifesto" (atulgawande.com/book/the-checklist-manifesto/) — the checklist methodology applied in this document; Gawande's research on the effectiveness of pre-launch checklists in reducing errors in complex, multi-stakeholder processes directly motivated the structured format.
-- Intercom, "Shipping Is Your Company's Heartbeat" (intercom.com/blog/shipping-is-your-companys-heartbeat/) — the product launch philosophy that informed the checklist's scope; Intercom's guidance on coordinating cross-functional readiness (engineering, design, marketing, support) rather than treating launch as an engineering-only event shaped the section structure.
-- M3AAWG, "Best Practices for Senders" (m3aawg.org/published-documents) — the email deliverability best practices referenced in the Legal & Compliance and Operations sections; the SPF/DKIM/DMARC configuration requirements and sender reputation guidelines are drawn from M3AAWG's sender guidelines.
+- Atul Gawande, "The Checklist Manifesto" (atulgawande.com/book/the-checklist-manifesto/) . the checklist methodology applied in this document; Gawande's research on the effectiveness of pre-launch checklists in reducing errors in complex, multi-stakeholder processes directly motivated the structured format.
+- Intercom, "Shipping Is Your Company's Heartbeat" (intercom.com/blog/shipping-is-your-companys-heartbeat/) . the product launch philosophy that informed the checklist's scope; Intercom's guidance on coordinating cross-functional readiness (engineering, design, marketing, support) rather than treating launch as an engineering-only event shaped the section structure.
+- M3AAWG, "Best Practices for Senders" (m3aawg.org/published-documents) . the email deliverability best practices referenced in the Legal & Compliance and Operations sections; the SPF/DKIM/DMARC configuration requirements and sender reputation guidelines are drawn from M3AAWG's sender guidelines.
 
 ---
 
@@ -43,7 +43,7 @@ opt-in enrollment starts mar 2. a/b test starts mar 9.
 
 ## Output
 
-# Launch Checklist: Resurface — Morning Email Digest
+# Launch Checklist: Resurface . Morning Email Digest
 
 ## Launch Overview
 
@@ -128,7 +128,7 @@ opt-in enrollment starts mar 2. a/b test starts mar 9.
 
 | Item | Owner | Due | Status | Notes |
 |------|-------|-----|--------|-------|
-| [ ] Email opt-in flow is explicit (not pre-checked) — CAN-SPAM and GDPR compliant | Priya M. | Feb 7 | | Opt-in requires affirmative user action |
+| [ ] Email opt-in flow is explicit (not pre-checked) . CAN-SPAM and GDPR compliant | Priya M. | Feb 7 | | Opt-in requires affirmative user action |
 | [ ] List-Unsubscribe and List-Unsubscribe-Post headers included in all digest emails | Jess T. | Feb 10 | | RFC 8058 compliance for one-click unsubscribe |
 | [ ] Unsubscribe link present and functional in every digest email footer | Sam W. | Feb 12 | | One-click, no confirmation dialogs |
 | [ ] Privacy policy reviewed for email data processing disclosure | Priya M. | Feb 10 | | Confirm existing privacy policy covers transactional email; update if needed |
@@ -190,14 +190,14 @@ opt-in enrollment starts mar 2. a/b test starts mar 9.
 ### Rollback Steps
 
 1. Disable the `resurface_enabled` feature flag in Amplitude (stops all digest sends immediately)
-2. Post a message in #resurface Slack channel: "Resurface paused — [reason]. Investigating."
+2. Post a message in #resurface Slack channel: "Resurface paused . [reason]. Investigating."
 3. If the issue is Resend-related, check Resend status page and open a support ticket
 4. If the issue is code-related, identify the failing component and deploy a hotfix or revert the relevant PR
 5. Re-enable the feature flag only after the root cause is resolved and the fix is verified in staging
 
 ### Rollback Owner
 
-Alex R. — #resurface Slack channel, PagerDuty on-call
+Alex R. . #resurface Slack channel, PagerDuty on-call
 
 ### Rollback Time Estimate
 
@@ -217,5 +217,5 @@ Feature flag disable: <1 minute. Hotfix deployment: ~30 minutes [fictional] (PR 
 
 | Issue | Owner | Status | Impact |
 |-------|-------|--------|--------|
-| Amplitude experiment SDK integration not yet complete | Chloe B. | In progress (Sprint 7) | Risk — if delayed, A/B variant assignment must be handled manually |
-| Privacy policy may need update for email data processing | Priya M. | Under review | Risk — must be resolved before opt-in enrollment (Mar 2) |
+| Amplitude experiment SDK integration not yet complete | Chloe B. | In progress (Sprint 7) | Risk . if delayed, A/B variant assignment must be handled manually |
+| Privacy policy may need update for email data processing | Priya M. | Under review | Risk . must be resolved before opt-in enrollment (Mar 2) |

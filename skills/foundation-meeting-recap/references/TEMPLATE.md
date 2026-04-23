@@ -35,7 +35,7 @@ meeting_quality:
   key_attendees_present: {{true | false | null}}
 
 meeting_type_source: {{explicit | inferred | null}}   # v1.1.0
-unassigned_action_ratio: {{0.0 to 1.0}}               # v1.1.0 — ratio of ownerless actions to total actions
+unassigned_action_ratio: {{0.0 to 1.0}}               # v1.1.0. ratio of ownerless actions to total actions
 
 input_quality: {{high | medium | low}}
 confidence: {{high | medium | low}}
@@ -47,12 +47,12 @@ status: draft
 
 ## Shareable summary
 
-> [guidance (v1.1.0 errata): 3-5 short lines, no mini-headers, Slack/email copy-safe. Lead with outcome, inline key decisions, inline top actions. Plain prose + simple bullets only — no nested markdown.]
+> [guidance (v1.1.0 errata): 3-5 short lines, no mini-headers, Slack/email copy-safe. Lead with outcome, inline key decisions, inline top actions. Plain prose + simple bullets only. no nested markdown.]
 
 **{{Meeting title}}** | {{Date}}
 {{1-sentence accomplishment summary, optionally naming 1-2 key decisions inline.}}
 Top actions: {{Owner 1}}: {{action}} ({{due}}); {{Owner 2}}: {{action}} ({{due}}); {{Owner 3}}: {{action}} ({{due}}).
-{{if unassigned_action_ratio > 0.3 or any high-priority action unassigned:}} ⚠ {{N}} of {{M}} actions need owners — see Ownership reconciliation section.
+{{if unassigned_action_ratio > 0.3 or any high-priority action unassigned:}} ⚠ {{N}} of {{M}} actions need owners. see Ownership reconciliation section.
 Full recap linked below.
 
 ---
@@ -79,8 +79,8 @@ Full recap linked below.
 
 - **Planned topics**: {{list or "no agenda"}}
 - **Topics addressed**: {{list}} ({{N}} of {{M}})
-- **Topics skipped**: {{list or "none"}} — {{brief reason per skip}}
-- **Topics that emerged**: {{list or "none"}} — {{brief context}}
+- **Topics skipped**: {{list or "none"}}. {{brief reason per skip}}
+- **Topics that emerged**: {{list or "none"}}. {{brief context}}
 
 ### Topics
 
@@ -94,8 +94,8 @@ Full recap linked below.
 
 **Decisions made**
 
-- **{{Decision 1}}** — {{brief rationale}}
-- **{{Decision 2}}** — {{brief rationale}} [confidence: {{level}} if inferred]
+- **{{Decision 1}}**. {{brief rationale}}
+- **{{Decision 2}}**. {{brief rationale}} [confidence: {{level}} if inferred]
 
 **Actions**
 
@@ -153,7 +153,7 @@ Full recap linked below.
 
 ### Referenced artifacts
 
-- Agenda: {{filename or "none loaded"}} — {{if loaded, note: used for topic skeleton and desired-outcomes reconciliation}}
+- Agenda: {{filename or "none loaded"}}. {{if loaded, note: used for topic skeleton and desired-outcomes reconciliation}}
 - Brief: {{filename if applicable}}
 - Prior recaps on this topic: {{filenames or "none"}}
 
@@ -165,8 +165,8 @@ Full recap linked below.
 
 - **Generated**: {{Timestamp}}
 - **Skill version**: 1.0.0
-- **Input quality**: {{high | medium | low}} — {{rationale}}
-- **Overall confidence**: {{high | medium | low}} — {{rationale}}
+- **Input quality**: {{high | medium | low}}. {{rationale}}
+- **Overall confidence**: {{high | medium | low}}. {{rationale}}
 - **Known gaps**: {{list of topics with insufficient detail, or "None identified"}}
 - **Inferences applied**: {{list of inferred values with confidence, e.g., "decision on X inferred from 'let's go with X' [confidence: medium]"}}
 - **Fabrication check**: {{"all action owners appear in attendees list or are explicitly unassigned" | or list of failures}}

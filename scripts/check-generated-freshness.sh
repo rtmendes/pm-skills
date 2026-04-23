@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
-# check-generated-freshness.sh — Verify generated workflow pages match source.
+# check-generated-freshness.sh . Verify generated workflow pages match source.
 #
 # If scripts/generate-workflow-pages.py exists, runs it to a temp directory
 # and diffs against committed docs/workflows/. Otherwise, checks that every
 # _workflows/*.md has a matching docs/workflows/*.md.
 #
 # Exit codes:
-#   0 — Generated pages are fresh (or fallback check passes)
-#   1 — Generated pages are stale or missing
+#   0 . Generated pages are fresh (or fallback check passes)
+#   1 . Generated pages are stale or missing
 #
 # Usage:
 #   ./scripts/check-generated-freshness.sh
@@ -36,7 +36,7 @@ if [[ -f "$GENERATOR" ]]; then
   # so we copy the current docs/workflows and regenerate
   mkdir -p "$TMPDIR/docs/workflows"
 
-  # Run the generator — it writes to docs/workflows/ under ROOT
+  # Run the generator . it writes to docs/workflows/ under ROOT
   # We need to capture what it would produce, so we use a temp ROOT
   TEMP_ROOT="$TMPDIR/repo"
   mkdir -p "$TEMP_ROOT/docs/workflows"

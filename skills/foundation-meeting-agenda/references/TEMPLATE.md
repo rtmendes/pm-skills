@@ -75,13 +75,13 @@ status: draft
 
 ### Topics
 
-#### {{Topic 1}} ({{time}} min) — {{Owner}}
+#### {{Topic 1}} ({{time}} min). {{Owner}}
 
 - **Type**: {{Discussion | Decision | Information | Working}}
 - **Goal**: {{What done looks like}}
 - **Pre-read**: {{Link or "none"}}
 
-#### {{Topic 2}} ({{time}} min) — {{Owner}}
+#### {{Topic 2}} ({{time}} min). {{Owner}}
 
 - **Type**: {{type}}
 - **Goal**: {{goal}}
@@ -93,8 +93,8 @@ status: draft
 
 **Required prep** (estimated: {{N}} min)
 
-- [ ] {{Prep task 1}} — {{Link}}
-- [ ] {{Prep task 2}} — {{Link}}
+- [ ] {{Prep task 1}}. {{Link}}
+- [ ] {{Prep task 2}}. {{Link}}
 
 **Recommended context**
 
@@ -139,8 +139,8 @@ status: draft
 
 - **Generated**: {{Timestamp}}
 - **Skill version**: 1.0.0
-- **Input quality**: {{high | medium | low}} — {{Brief rationale}}
-- **Overall confidence**: {{high | medium | low}} — {{Brief rationale}}
+- **Input quality**: {{high | medium | low}}. {{Brief rationale}}
+- **Overall confidence**: {{high | medium | low}}. {{Brief rationale}}
 - **Known gaps**: {{List or "None identified"}}
 - **Inferences applied**: {{List of values inferred by the skill, each with confidence marker. E.g., "Meeting type: decision-making [confidence: medium, inferred from 'decide' keyword in topic"]}}
-- **Anti-meeting check**: {{Ran — override accepted | Ran — async alternative produced instead}}
+- **Anti-meeting check**: {{Ran. override accepted | Ran. async alternative produced instead}}

@@ -9,7 +9,7 @@ thread: workbench
 context: blueprints-board-prep
 ---
 
-# Sample: foundation-meeting-synthesize — Workbench Blueprints Board Prep
+# Sample: foundation-meeting-synthesize. Workbench Blueprints Board Prep
 
 ## Scenario
 
@@ -60,7 +60,7 @@ visibility: leadership
 status: draft
 ---
 
-# Meeting synthesis: Blueprints Enterprise Expansion — Board Prep
+# Meeting synthesis: Blueprints Enterprise Expansion. Board Prep
 
 ## Shareable summary
 
@@ -106,15 +106,15 @@ Q1 delivered a strategic pivot: enterprise expansion scoped to regulated industr
 
 ### Themes (board-relevant)
 
-#### Strategic pivot [confidence: high — 3/5 meetings drove it]
+#### Strategic pivot [confidence: high. 3/5 meetings drove it]
 
 General enterprise → regulated industries. Evidence-based pivot driven by customer-interview signal and compliance-cost reality. Not scope creep; disciplined narrowing.
 
-#### Compliance as moat [confidence: high — 4/5 meetings referenced]
+#### Compliance as moat [confidence: high. 4/5 meetings referenced]
 
 SOC 2 Type II + HIPAA BAA reframed from overhead cost to strategic capex. Incumbents have these; most direct competitors do not.
 
-#### Sales motion redesign [confidence: medium — 2/5 meetings]
+#### Sales motion redesign [confidence: medium. 2/5 meetings]
 
 90-day enterprise cycle with field sales + SE pairing. SE hire timing depends on compliance progress.
 
@@ -158,20 +158,20 @@ Q1 Blueprints enterprise-expansion work began as an exploratory bet on general e
 
 For the board: regulated-industry expansion is higher-value (larger contracts, longer retention), the moat is durable (compliance takes 6 months to achieve, not a weekend project), and the sales motion is being redesigned to match. Two board decisions remain: funding the $1.2M compliance investment, and timing the SE hire.
 
-What would change this picture: a customer shift away from regulated industries in Q2 (unlikely given our pipeline) or a material compliance-cost escalation (low risk — Feb 5 feasibility review was thorough).
+What would change this picture: a customer shift away from regulated industries in Q2 (unlikely given our pipeline) or a material compliance-cost escalation (low risk. Feb 5 feasibility review was thorough).
 
 ### Prioritized follow-up suggestions (board actions)
 
-**[High priority — board decision]**
+**[High priority. board decision]**
 
 - Fund $[fictional] 1.2M compliance investment in Q2 budget
 - Commit field sales hire in Q2; defer SE hire timing to Q2 compliance-progress checkpoint
 
-**[Medium priority — exec-level monitor]**
+**[Medium priority. exec-level monitor]**
 
 - Watch for Q2 regulated-industry competitive shifts; quarterly competitive review
 
-**[Lower priority — informational]**
+**[Lower priority. informational]**
 
 - Track regulated-industry TAM estimates; consider paid research report in H2
 
@@ -181,11 +181,11 @@ What would change this picture: a customer shift away from regulated industries 
 
 ### Primary inputs (source meetings)
 
-- 2026-01-22_14-00EST_blueprints-exec-review_recap.md — high
-- 2026-02-05_14-00EST_blueprints-compliance-feasibility_recap.md — high
-- 2026-02-26_14-00EST_blueprints-customer-interviews-debrief_recap.md — high
-- 2026-03-12_14-00EST_blueprints-exec-review_recap.md — high
-- 2026-03-26_14-00EST_blueprints-sales-motion-alignment_recap.md — medium (partial notes)
+- 2026-01-22_14-00EST_blueprints-exec-review_recap.md. high
+- 2026-02-05_14-00EST_blueprints-compliance-feasibility_recap.md. high
+- 2026-02-26_14-00EST_blueprints-customer-interviews-debrief_recap.md. high
+- 2026-03-12_14-00EST_blueprints-exec-review_recap.md. high
+- 2026-03-26_14-00EST_blueprints-sales-motion-alignment_recap.md. medium (partial notes)
 
 ### Referenced artifacts
 
@@ -200,9 +200,9 @@ What would change this picture: a customer shift away from regulated industries 
 
 - **Generated**: 2026-04-02T08:00:00Z
 - **Skill version**: 1.0.0
-- **Input quality**: high — 4 of 5 sources high-quality
-- **Overall confidence**: high — strategic picture consistent across sources
+- **Input quality**: high. 4 of 5 sources high-quality
+- **Overall confidence**: high. strategic picture consistent across sources
 - **Known gaps**: 2026-03-26 Sales Motion Alignment recap is medium-quality; SE hire timing specifics are less certain
 - **Scope filter**: project=blueprints-enterprise-expansion
-- **Format hint**: board-prep — narrative front-loaded; timeline compressed; follow-ups structured as board decisions
+- **Format hint**: board-prep. narrative front-loaded; timeline compressed; follow-ups structured as board decisions
 ```

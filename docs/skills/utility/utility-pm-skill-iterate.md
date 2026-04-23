@@ -483,7 +483,7 @@ New version: {new-version | unchanged}
 
 See this skill applied to three different product contexts:
 
-??? example "Storevine (B2B): Storevine B2B ecommerce platform — iterating on campaign-analytics skill after validation findings"
+??? example "Storevine (B2B): Storevine B2B ecommerce platform . iterating on campaign-analytics skill after validation findings"
     **Prompt:**
 
     ```

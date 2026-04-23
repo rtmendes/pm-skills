@@ -33,7 +33,7 @@ Directory names follow the pattern `{prefix}-{skill-name}` where the prefix is t
 
 ## The Three Files
 
-### SKILL.md — The Instructions
+### SKILL.md . The Instructions
 
 The core file. Contains frontmatter metadata and markdown instructions that tell an AI agent how to produce an artifact. Structure:
 
@@ -47,15 +47,15 @@ The core file. Contains frontmatter metadata and markdown instructions that tell
 | Quality Checklist | Verification criteria before finalizing |
 | Examples | References `references/EXAMPLE.md` |
 
-### TEMPLATE.md — The Output Format
+### TEMPLATE.md . The Output Format
 
 Defines the structure of what the skill produces. Contains section headers with guidance comments explaining what goes in each section. The agent fills this template when executing the skill.
 
 CI requirement: must contain at least 3 `##` sections.
 
-### EXAMPLE.md — The Quality Benchmark
+### EXAMPLE.md . The Quality Benchmark
 
-A complete, realistic example of the skill's output. Shows what "good" looks like — not an outline or placeholder, but a fully filled artifact (typically 150-300 lines for complex skills).
+A complete, realistic example of the skill's output. Shows what "good" looks like . not an outline or placeholder, but a fully filled artifact (typically 150-300 lines for complex skills).
 
 ---
 
@@ -130,15 +130,15 @@ PM-skills organizes domain skills across 6 phases of the Triple Diamond framewor
 
 ```mermaid
 graph TD
-    subgraph Diamond1["Diamond 1 — Problem Space"]
+    subgraph Diamond1["Diamond 1 . Problem Space"]
         DISCOVER["**DISCOVER**\n3 skills\nresearch & context"]
         DEFINE["**DEFINE**\n4 skills\nproblem framing"]
     end
-    subgraph Diamond2["Diamond 2 — Solution Space"]
+    subgraph Diamond2["Diamond 2 . Solution Space"]
         DEVELOP["**DEVELOP**\n4 skills\nideation & spec"]
         DELIVER["**DELIVER**\n6 skills\nhandoff & launch"]
     end
-    subgraph Diamond3["Diamond 3 — Learning Space"]
+    subgraph Diamond3["Diamond 3 . Learning Space"]
         MEASURE["**MEASURE**\n4 skills\ndata & testing"]
         ITERATE["**ITERATE**\n4 skills\nlearning & adapting"]
     end
@@ -158,7 +158,7 @@ graph TD
 | Measure | 4 | Experiments, instrumentation, dashboards, results |
 | Iterate | 4 | Retrospectives, lessons, refinement, pivot decisions |
 
-Foundation and utility skills sit outside the phase model — they serve all phases or operate at a meta level.
+Foundation and utility skills sit outside the phase model . they serve all phases or operate at a meta level.
 
 ---
 
@@ -185,15 +185,15 @@ Sections: Foundation Classification, Discover Phase, ..., Iterate Phase, Utility
 ### Workflows (`_workflows/*.md`)
 
 Multi-skill workflows that chain skills together. Nine shipped workflows:
-- **Feature Kickoff** — Quick-start workflow (problem → hypothesis → PRD → stories)
-- **Lean Startup** — Build-Measure-Learn rapid iteration
-- **Triple Diamond** — Complete product development cycle
-- **Customer Discovery** — Research to validated problem
-- **Sprint Planning** — Backlog to sprint-ready stories
-- **Product Strategy** — Competitive context to architecture decisions
-- **Post-Launch Learning** — Measurement to organizational learnings
-- **Stakeholder Alignment** — Leadership buy-in package
-- **Technical Discovery** — Spike to architecture decisions
+- **Feature Kickoff** . Quick-start workflow (problem → hypothesis → PRD → stories)
+- **Lean Startup** . Build-Measure-Learn rapid iteration
+- **Triple Diamond** . Complete product development cycle
+- **Customer Discovery** . Research to validated problem
+- **Sprint Planning** . Backlog to sprint-ready stories
+- **Product Strategy** . Competitive context to architecture decisions
+- **Post-Launch Learning** . Measurement to organizational learnings
+- **Stakeholder Alignment** . Leadership buy-in package
+- **Technical Discovery** . Spike to architecture decisions
 
 ---
 
@@ -206,7 +206,7 @@ Four scripts validate skill integrity:
 | `lint-skills-frontmatter` | Frontmatter fields, description word count, phase/classification consistency, TEMPLATE.md structure, EXAMPLE.md existence |
 | `validate-agents-md` | AGENTS.md paths match actual skill directories |
 | `validate-commands` | Command files reference valid skill paths |
-| `check-mcp-impact` | Advisory — detects skill additions/renames that may affect the MCP server |
+| `check-mcp-impact` | Advisory . detects skill additions/renames that may affect the MCP server |
 
 Run all validators before committing new skills:
 
@@ -254,8 +254,8 @@ For manual creation, follow the structure in [skill template](./templates/skill-
 
 ## See Also
 
-- [Agent Skill Anatomy](./agent-skill-anatomy.md) — Spec-level, cross-platform reference (agentskills.io)
-- [Frontmatter Schema](./reference/frontmatter-schema.yaml) — Complete field definitions and validation rules
-- [Category Taxonomy](./reference/categories.md) — Category definitions and framework mappings
-- [Authoring Guide](./guides/authoring-pm-skills.md) — Step-by-step authoring instructions
-- [Getting Started](./getting-started.md) — Setup and usage guide
+- [Agent Skill Anatomy](./agent-skill-anatomy.md) . Spec-level, cross-platform reference (agentskills.io)
+- [Frontmatter Schema](./reference/frontmatter-schema.yaml) . Complete field definitions and validation rules
+- [Category Taxonomy](./reference/categories.md) . Category definitions and framework mappings
+- [Authoring Guide](./guides/authoring-pm-skills.md) . Step-by-step authoring instructions
+- [Getting Started](./getting-started.md) . Setup and usage guide

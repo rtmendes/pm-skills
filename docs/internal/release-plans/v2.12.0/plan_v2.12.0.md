@@ -9,8 +9,8 @@ Stub created: 2026-04-18 (same session as v2.11.0 completion)
 
 Two parallel threads that emerged during v2.11.0 execution:
 
-1. **Sample automation loop** — close the "samples as a dependency you can't forget" gap discovered when the meeting-skills family's initial sample round violated SAMPLE_CREATION.md conventions. Make sample creation and maintenance automatic across `/pm-skill-builder`, `/pm-skill-validate`, `/pm-skill-iterate`.
-2. **Meeting-skills ecosystem continuation** — land the workflow that chains the 5 meeting skills (F-29) and the team-level adoption guide (F-30) that v2.11.0 deferred pending real-world usage signals.
+1. **Sample automation loop**. close the "samples as a dependency you can't forget" gap discovered when the meeting-skills family's initial sample round violated SAMPLE_CREATION.md conventions. Make sample creation and maintenance automatic across `/pm-skill-builder`, `/pm-skill-validate`, `/pm-skill-iterate`.
+2. **Meeting-skills ecosystem continuation**. land the workflow that chains the 5 meeting skills (F-29) and the team-level adoption guide (F-30) that v2.11.0 deferred pending real-world usage signals.
 
 Also lands: pm-skill-validate gains family-awareness (Codex IMPORTANT #8 deferred from v2.11.0).
 
@@ -20,9 +20,9 @@ Theme is aspirational at stub time; final scope depends on adoption signals from
 
 v2.11.0 shipped the Meeting Skills Family (5 skills + contract + enforcing CI) plus `foundation-lean-canvas`. During that release, two observations drove the v2.12.0 backlog:
 
-1. **The samples problem** — meeting-skills samples were the last thing authored and the most error-prone. The initial 10 samples violated SAMPLE_CREATION.md and required a full restructure. Root cause: sample creation sits outside the `/pm-skill-builder` workflow and outside CI enforcement. A user can ship a skill with no samples, non-conforming samples, or silently drifted samples. The sample-automation thread (F-31 through F-35) closes this gap end-to-end.
+1. **The samples problem**. meeting-skills samples were the last thing authored and the most error-prone. The initial 10 samples violated SAMPLE_CREATION.md and required a full restructure. Root cause: sample creation sits outside the `/pm-skill-builder` workflow and outside CI enforcement. A user can ship a skill with no samples, non-conforming samples, or silently drifted samples. The sample-automation thread (F-31 through F-35) closes this gap end-to-end.
 
-2. **The meeting-skills ecosystem** — the 5 skills ship as individually invokable in v2.11.0. A workflow (F-29) that chains them and a team-level adoption guide (F-30) were deliberately deferred to let real-world usage inform better design. v2.12.0 is the earliest reasonable release to include them.
+2. **The meeting-skills ecosystem**. the 5 skills ship as individually invokable in v2.11.0. A workflow (F-29) that chains them and a team-level adoption guide (F-30) were deliberately deferred to let real-world usage inform better design. v2.12.0 is the earliest reasonable release to include them.
 
 ### Prerequisites
 
@@ -97,9 +97,9 @@ Total ~30-40 person-days if serial; ~15-20 days if parallelized across the depen
 
 | Decision | Status | Notes |
 |----------|--------|-------|
-| **Version** | Pending | Likely v2.12.0 (minor) — new features, no breaking changes |
+| **Version** | Pending | Likely v2.12.0 (minor). new features, no breaking changes |
 | **Full vs. staged slate** | Pending | Option: full (7 efforts) in one release OR split sample-automation (F-31/32/33/34) from ecosystem (F-29/30) across v2.12.0 + v2.13.0 |
-| **F-29 workflow design** | Pending | Depends on v2.11.0 real-world usage feedback — wait 2 weeks minimum |
+| **F-29 workflow design** | Pending | Depends on v2.11.0 real-world usage feedback. wait 2 weeks minimum |
 | **F-30 guide design** | Pending | Depends on at least one team's adoption experience |
 | **Sample-automation rollout** | Pending | Advisory-first for F-33 CI (2 weeks), enforcing after |
 | **Backward compatibility** | Pending | F-32 generates samples for new skills; existing skills without samples remain valid (not retroactive) unless F-31 is configured to fail on missing samples |
@@ -176,8 +176,8 @@ Total ~30-40 person-days if serial; ~15-20 days if parallelized across the depen
 
 | Question | Answer |
 |----------|--------|
-| New MCP tools needed? | **No** — MCP server frozen per M-22 (v2.11.0 decision) |
-| Separate MCP release required? | **No** — MCP decoupled |
+| New MCP tools needed? | **No**. MCP server frozen per M-22 (v2.11.0 decision) |
+| Separate MCP release required? | **No**. MCP decoupled |
 | Utility-skill updates visible to MCP users? | Only if MCP unfreezes; behavior changes in pm-skill-builder/validate/iterate would be visible at that point |
 
 ---

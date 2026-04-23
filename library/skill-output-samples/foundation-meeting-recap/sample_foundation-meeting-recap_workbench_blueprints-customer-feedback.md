@@ -9,11 +9,11 @@ thread: workbench
 context: blueprints-customer-feedback
 ---
 
-# Sample: foundation-meeting-recap — Workbench Blueprints Customer Feedback Review
+# Sample: foundation-meeting-recap. Workbench Blueprints Customer Feedback Review
 
 ## Scenario
 
-Workbench held a 60-minute stakeholder review on 2026-04-25 to walk 6 enterprise customers through the Blueprints v1.1 approval-gate design (from working session 2026-04-28 — simulated prior) and collect feedback. Five attendees: david-pm, sasha-designer, linda-compliance, raj-eng, and anna-cs (customer success lead joining to capture customer-voice context). Transcript from Zoom + structured notes from anna. Rich enterprise context; thorough recap.
+Workbench held a 60-minute stakeholder review on 2026-04-25 to walk 6 enterprise customers through the Blueprints v1.1 approval-gate design (from working session 2026-04-28. simulated prior) and collect feedback. Five attendees: david-pm, sasha-designer, linda-compliance, raj-eng, and anna-cs (customer success lead joining to capture customer-voice context). Transcript from Zoom + structured notes from anna. Rich enterprise context; thorough recap.
 
 Source Notes:
 - Workbench is fictional
@@ -170,7 +170,7 @@ Applied 5-of-6 threshold (majority-signal) as must-fix criterion. Themes 1, 2, 3
 
 **Decisions made**
 
-- **Must-fix for v1.1**: audit-log granularity (Theme 1), bulk-amend flow (Theme 2), role-based approval shortcut (Theme 3) — rationale: 3+ of 6 customers cited these; compliance and workflow dependencies
+- **Must-fix for v1.1**: audit-log granularity (Theme 1), bulk-amend flow (Theme 2), role-based approval shortcut (Theme 3). rationale: 3+ of 6 customers cited these; compliance and workflow dependencies
 - **Capacity fit confirmed**: raj confirmed 3 items fit within v1.1 capacity (4 eng-days of work)
 
 **Actions**
@@ -182,7 +182,7 @@ Applied 5-of-6 threshold (majority-signal) as must-fix criterion. Themes 1, 2, 3
 
 **Open questions**
 
-- Role-based shortcut: default-on or default-off? [confidence: medium — flag for linda]
+- Role-based shortcut: default-on or default-off? [confidence: medium. flag for linda]
 
 ---
 
@@ -196,7 +196,7 @@ Themes 4, 5, 6 parked to v1.2 backlog with rationale.
 
 **Decisions made**
 
-- **Parked to v1.2**: mobile-responsive approval UI, exportable approval reports, custom approval status labels — rationale: low signal (<3 of 6 customers); dependencies on other initiatives (tooling integration); edge-case for label customization
+- **Parked to v1.2**: mobile-responsive approval UI, exportable approval reports, custom approval status labels. rationale: low signal (<3 of 6 customers); dependencies on other initiatives (tooling integration); edge-case for label customization
 
 **Actions**
 
@@ -254,7 +254,7 @@ Themes 4, 5, 6 parked to v1.2 backlog with rationale.
 
 ### Referenced artifacts
 
-- Agenda: 2026-04-25_13-00EST_blueprints-v1-1-customer-feedback-review_agenda.md — used for topic skeleton
+- Agenda: 2026-04-25_13-00EST_blueprints-v1-1-customer-feedback-review_agenda.md. used for topic skeleton
 - Prior recaps: 2026-04-28_14-00EST_blueprints-approval-gate-design-working-session_recap.md (prior design session)
 
 ### External references
@@ -266,8 +266,8 @@ Themes 4, 5, 6 parked to v1.2 backlog with rationale.
 
 - **Generated**: 2026-04-25T17:00:00Z
 - **Skill version**: 1.0.0
-- **Input quality**: high — transcript + structured customer-interview notes
-- **Overall confidence**: high — themes quantified from customer data; decisions directly attested
+- **Input quality**: high. transcript + structured customer-interview notes
+- **Overall confidence**: high. themes quantified from customer data; decisions directly attested
 - **Known gaps**: role-based shortcut default-on/off decision parked for linda's review
 - **Inferences applied**: 5-of-6 must-fix threshold inferred from discussion of majority-signal framing [confidence: high, explicit in transcript]
 - **Fabrication check**: all action owners in attendees list; 0 unassigned actions

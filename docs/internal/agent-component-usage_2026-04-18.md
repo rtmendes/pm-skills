@@ -1,12 +1,12 @@
 ---
-title: Agent Component Usage — How pm-skills Can More Fully Leverage Claude Code Plugin Runtime
+title: Agent Component Usage. How pm-skills Can More Fully Leverage Claude Code Plugin Runtime
 description: Design analysis of Claude Code plugin components (hooks, sub-agents, MCP, settings, dynamic injection) and how pm-skills can creatively leverage each. Includes per-proposal Codex compatibility assessment.
 date: 2026-04-18
 status: draft
 audience: pm-skills maintainers, v2.12.0+ planners
 ---
 
-# Agent Component Usage — How pm-skills Can More Fully Leverage Claude Code Plugin Runtime
+# Agent Component Usage. How pm-skills Can More Fully Leverage Claude Code Plugin Runtime
 
 **Date**: 2026-04-18 (day v2.11.0 shipped)
 **Author**: Claude Opus 4.7 (research-assisted design doc)
@@ -14,7 +14,7 @@ audience: pm-skills maintainers, v2.12.0+ planners
 
 ## Executive summary
 
-pm-skills currently leverages Claude Code's passive component surface well — skills, commands, marketplace manifest, MCP server (frozen), workflows, AGENTS.md discovery. It has **not yet leveraged** the active/runtime surface: hooks, sub-agents, dynamic content injection, configurable plugin settings.
+pm-skills currently leverages Claude Code's passive component surface well. skills, commands, marketplace manifest, MCP server (frozen), workflows, AGENTS.md discovery. It has **not yet leveraged** the active/runtime surface: hooks, sub-agents, dynamic content injection, configurable plugin settings.
 
 Claude Code ships substantial runtime capability: **24 hook events** across 6 lifecycle phases, plugin-declared sub-agents with proactive-delegation descriptions, native MCP transport (stdio/HTTP), and `${CLAUDE_PLUGIN_ROOT}` variable expansion in hook commands. Most of this is not currently exercised by pm-skills.
 
@@ -40,20 +40,20 @@ graph TD
 
 ---
 
-## 1. Current leverage — what pm-skills uses today
+## 1. Current leverage. what pm-skills uses today
 
 ### Passive component surface (fully exercised)
 
 | Component | pm-skills usage | Files |
 |-----------|-----------------|-------|
-| Plugin manifest | Yes — declares metadata + keywords | `.claude-plugin/plugin.json` |
-| Marketplace manifest | Yes — single-plugin marketplace pattern | `marketplace.json` |
+| Plugin manifest | Yes. declares metadata + keywords | `.claude-plugin/plugin.json` |
+| Marketplace manifest | Yes. single-plugin marketplace pattern | `marketplace.json` |
 | Skills (SKILL.md) | 38 skills, frontmatter + body | `skills/*/SKILL.md` |
 | Slash commands | 45 commands | `commands/*.md` |
-| Command arguments | Yes — `$ARGUMENTS` in most commands | `commands/*.md` |
+| Command arguments | Yes. `$ARGUMENTS` in most commands | `commands/*.md` |
 | Workflow docs | 9 workflows | `_workflows/*.md` |
 | MCP server | Exists (pm-skills-mcp companion repo), currently **frozen** per M-22 | separate repo |
-| AGENTS.md discovery | Yes — agent-native skill catalog | `AGENTS.md` |
+| AGENTS.md discovery | Yes. agent-native skill catalog | `AGENTS.md` |
 | Skill references | TEMPLATE.md + EXAMPLE.md per skill | `skills/*/references/` |
 | Library samples | 120 samples across threads | `library/skill-output-samples/` |
 | CI enforcement | 5 enforcing, 10 advisory validators | `scripts/` + `.github/workflows/` |
@@ -62,8 +62,8 @@ graph TD
 
 | Component | pm-skills usage |
 |-----------|-----------------|
-| Hooks (24 events available) | **None — zero hooks defined** |
-| Sub-agents (plugin-declared) | **None — zero sub-agents defined** |
+| Hooks (24 events available) | **None. zero hooks defined** |
+| Sub-agents (plugin-declared) | **None. zero sub-agents defined** |
 | Plugin settings (`settings.json`) | **Not present** |
 | User-configurable state (`.claude/plugin-name.local.md`) | **None** |
 | MCP server (live-serving dynamic content) | **Frozen** (pm-skills-mcp) |
@@ -71,7 +71,7 @@ graph TD
 | Dynamic content injection via hooks | **None** |
 | Tool-search deferred-schema loading | Inherited from Claude Code (not pm-skills controlled) |
 
-This is the gap. Everything pm-skills does today is **passive** — waiting for the user to invoke a skill or run a command. Nothing happens automatically in response to lifecycle events, tool invocations, or conversation context.
+This is the gap. Everything pm-skills does today is **passive**. waiting for the user to invoke a skill or run a command. Nothing happens automatically in response to lifecycle events, tool invocations, or conversation context.
 
 ---
 
@@ -112,8 +112,8 @@ graph LR
 ```
 
 Two hook types:
-- **Command hooks** (`type: "command"`) — execute shell/bash scripts. Receive JSON on stdin, return modified JSON on stdout. `${CLAUDE_PLUGIN_ROOT}` expands to plugin directory.
-- **Prompt hooks** (`type: "prompt"`) — send input JSON to Claude for a decision. Model-evaluated, returns yes/no.
+- **Command hooks** (`type: "command"`). execute shell/bash scripts. Receive JSON on stdin, return modified JSON on stdout. `${CLAUDE_PLUGIN_ROOT}` expands to plugin directory.
+- **Prompt hooks** (`type: "prompt"`). send input JSON to Claude for a decision. Model-evaluated, returns yes/no.
 
 Hooks can inject context via `additionalContext` field (on `SessionStart`, `UserPromptSubmit`, `SubagentStart`, `PostToolUse`), modify tool inputs (`PreToolUse`), or replace MCP tool output (`PostToolUse`).
 
@@ -122,10 +122,10 @@ Hooks can inject context via `additionalContext` field (on `SessionStart`, `User
 Defined in `agents/{name}.md` at plugin root. YAML frontmatter includes `name`, `description`, `tools`, `model`, `memory`, `skills`, `mcpServers`. Body is the system prompt.
 
 Invocation patterns:
-- Natural-language ("Use the code-reviewer sub-agent…") — Claude decides delegation from `description` field
-- `@agent-{name}` — guarantees invocation
-- CLI `claude --agent {name}` — whole session as that agent
-- Proactively — if description contains "use proactively", Claude auto-spawns
+- Natural-language ("Use the code-reviewer sub-agent…"). Claude decides delegation from `description` field
+- `@agent-{name}`. guarantees invocation
+- CLI `claude --agent {name}`. whole session as that agent
+- Proactively. if description contains "use proactively", Claude auto-spawns
 
 Plugin sub-agents cannot set `hooks`, `mcpServers`, `permissionMode` on themselves (security constraint). Users must copy the sub-agent to their `.claude/agents/` to unlock those fields.
 
@@ -134,18 +134,18 @@ Plugin sub-agents cannot set `hooks`, `mcpServers`, `permissionMode` on themselv
 Plugins declare MCP servers in `.mcp.json` or inline in `plugin.json`. Transport types: `stdio`, `http`, `sse` (deprecated).
 
 MCP exposes three content types:
-- **Tools** — appear as named capabilities
-- **Resources** — `@server:protocol://path` syntax
-- **Prompts** — auto-become `/mcp__{server}__{prompt}` slash commands
+- **Tools**. appear as named capabilities
+- **Resources**. `@server:protocol://path` syntax
+- **Prompts**. auto-become `/mcp__{server}__{prompt}` slash commands
 
 Tool search is enabled by default: only tool names load at startup; full schemas are deferred until Claude needs them. Minimizes context overhead.
 
 ### Settings and dynamic content
 
-- `settings.json` at plugin root — currently supports only `agent` (activates a plugin sub-agent as main thread) and `subagentStatusLine`
-- `.claude/plugin-name.local.md` — pattern for user-configurable per-project state. YAML frontmatter + markdown body.
-- `$ARGUMENTS` in skill/command markdown — captures user input
-- MCP resource `@mentions` — user-triggered dynamic content
+- `settings.json` at plugin root. currently supports only `agent` (activates a plugin sub-agent as main thread) and `subagentStatusLine`
+- `.claude/plugin-name.local.md`. pattern for user-configurable per-project state. YAML frontmatter + markdown body.
+- `$ARGUMENTS` in skill/command markdown. captures user input
+- MCP resource `@mentions`. user-triggered dynamic content
 
 **There is no declarative auto-triggering beyond hooks.** Descriptions and @-mentions are passive. Hooks (especially `SessionStart`) are the only path to proactive injection.
 
@@ -155,9 +155,9 @@ Tool search is enabled by default: only tool names load at startup; full schemas
 
 Ranked by impact × feasibility. Each includes Codex compatibility assessment.
 
-### P1 — High impact, v2.12.0 candidates
+### P1. High impact, v2.12.0 candidates
 
-#### P1.1 — PostToolUse hook: quality gate for meeting-skills samples on save
+#### P1.1. PostToolUse hook: quality gate for meeting-skills samples on save
 
 **What**: `PostToolUse` hook wired to `Write` tool. When Claude writes a file matching `library/skill-output-samples/foundation-meeting-*/sample_*.md`, the hook runs `scripts/validate-meeting-skills-family.sh` against the written file and injects a quality-report as `additionalContext` into the next turn.
 
@@ -184,7 +184,7 @@ The hook script checks if the written file is a sample, runs the validator, and 
 
 **Codex compatibility**: **Not compatible.** Codex has no equivalent hook system. Codex-specific alternative: the `codex:rescue` sub-agent could be invoked manually with a "review this sample" prompt. Workaround pattern: provide a companion `/validate-sample` slash command Codex users can invoke manually, exporting the same validation logic.
 
-#### P1.2 — SessionStart hook: inject v2.11.0 context when pm-skills is active
+#### P1.2. SessionStart hook: inject v2.11.0 context when pm-skills is active
 
 **What**: `SessionStart` hook that detects if the user is working in the pm-skills repo (or one of its worktrees) and injects a context summary: current skill count, current version, active release plan if one exists, last session log pointer.
 
@@ -209,7 +209,7 @@ Script reads `AGENTS/claude/CONTEXT.md`'s Current State block, resolves the late
 
 **Codex compatibility**: **Partial.** Codex doesn't run Claude Code hooks. But Codex can manually read `AGENTS/claude/CONTEXT.md` when asked (via `jp-library:jp-init-project` pattern, or the generic `Read` tool equivalent). Not automatic for Codex. Consider a companion `AGENTS/codex/CONTEXT.md` or shared file that both agents can consume.
 
-#### P1.3 — Sub-agent: `pm-critic` for adversarial skill-output review
+#### P1.3. Sub-agent: `pm-critic` for adversarial skill-output review
 
 **What**: New sub-agent at `agents/pm-critic.md` that performs adversarial review of any PM artifact (PRD, recap, brief, synthesis). Explicit "use proactively after any PM-artifact-producing skill is invoked" in description.
 
@@ -222,7 +222,7 @@ Script reads `AGENTS/claude/CONTEXT.md`'s Current State block, resolves the late
 name: pm-critic
 description: |
   Use proactively after any PM skill produces an artifact (PRD, recap, brief,
-  synthesis, etc.). Runs adversarial review stance — finds weaknesses, not
+  synthesis, etc.). Runs adversarial review stance. finds weaknesses, not
   wins. Returns structured findings (CRITICAL/IMPORTANT/MINOR/NIT). The same
   review protocol that caught 26 findings in v2.11.0 before tag.
 tools: Read, Grep, Glob
@@ -236,15 +236,15 @@ You are pm-critic, an adversarial reviewer for PM artifacts...
 
 **Codex compatibility**: **Codex-equivalent exists.** The `codex:codex-rescue` sub-agent already provides adversarial stance. `pm-critic` overlaps in intent but runs in-Claude, not via Codex-plugin delegation. Pattern recommendation: `pm-critic` is the Claude-native reviewer; users on Codex invoke `codex:rescue` with the same review prompt. Both paths documented in a new `docs/guides/adversarial-review.md`.
 
-### P2 — Medium impact, v2.12.0–v2.13.0 candidates
+### P2. Medium impact, v2.12.0–v2.13.0 candidates
 
-#### P2.1 — Active MCP server (unfreeze pm-skills-mcp) exposing thread-profile resources
+#### P2.1. Active MCP server (unfreeze pm-skills-mcp) exposing thread-profile resources
 
 **What**: Revive `pm-skills-mcp` (currently frozen per M-22) as an active MCP server exposing:
-- `skill://{name}` resources — live SKILL.md + TEMPLATE.md + EXAMPLE.md content
-- `thread://{name}` resources — THREAD_PROFILES.md extract (from F-34)
-- `sample://{skill}/{thread}` resources — representative sample per skill/thread
-- `/mcp__pm-skills__lookup-recent-{skill}` prompts — retrieve user's recent samples of a given skill
+- `skill://{name}` resources. live SKILL.md + TEMPLATE.md + EXAMPLE.md content
+- `thread://{name}` resources. THREAD_PROFILES.md extract (from F-34)
+- `sample://{skill}/{thread}` resources. representative sample per skill/thread
+- `/mcp__pm-skills__lookup-recent-{skill}` prompts. retrieve user's recent samples of a given skill
 
 **Value**: Dynamic content, not static markdown. Tools that chain PM skills can look up thread profiles without re-parsing files. Enables F-32 (pm-skill-builder sample generation) to consume THREAD_PROFILES via MCP rather than file parsing.
 
@@ -252,7 +252,7 @@ You are pm-critic, an adversarial reviewer for PM artifacts...
 
 **Codex compatibility**: **Partial.** Codex can consume MCP servers (per `codex:codex-cli-runtime` helper). Same MCP endpoint serves both. Claude Code native advantages: auto-discovered `/mcp__*` slash commands for MCP prompts; Codex doesn't get those, but can invoke MCP tools programmatically.
 
-#### P2.2 — SubagentStop hook: run `validate-meeting-skills-family` after a subagent writes family content
+#### P2.2. SubagentStop hook: run `validate-meeting-skills-family` after a subagent writes family content
 
 **What**: `SubagentStop` hook that runs the family validator when a sub-agent (e.g., `pm-critic`, `codex:codex-rescue`, or other helpers) completes work that touched `skills/foundation-meeting-*` or `library/skill-output-samples/foundation-meeting-*`.
 
@@ -260,7 +260,7 @@ You are pm-critic, an adversarial reviewer for PM artifacts...
 
 **Codex compatibility**: **Partial.** `SubagentStop` fires for both Claude-native sub-agents and plugin sub-agents (including codex:codex-rescue). So the same hook catches Codex-delegated work. Good synergy.
 
-#### P2.3 — User-configurable plugin settings for PM skill preferences
+#### P2.3. User-configurable plugin settings for PM skill preferences
 
 **What**: `.claude/pm-skills.local.md` pattern with frontmatter like:
 
@@ -282,27 +282,27 @@ Skills read this file via Read tool when inferring defaults. A hook (`SessionSta
 
 **Codex compatibility**: **Compatible.** The file is just markdown. Both agents can read it. Neither needs special plugin machinery. The Claude Code hook auto-loads it; Codex users load manually via `@.claude/pm-skills.local.md`.
 
-### P3 — Lower impact, v2.13.0+ candidates
+### P3. Lower impact, v2.13.0+ candidates
 
-#### P3.1 — UserPromptSubmit hook: auto-detect PM-skill intent and suggest invocation
+#### P3.1. UserPromptSubmit hook: auto-detect PM-skill intent and suggest invocation
 
 **What**: Prompt-based hook that evaluates each user turn for PM-skill-adjacent intent ("I need to write a PRD", "we had a meeting yesterday, …") and suggests the relevant skill if the user hasn't invoked one.
 
 **Value**: Discoverability for users who don't know the 45 commands by heart.
 
-**Concern**: Risk of prompt spam. Must be conservative — only suggest when high-confidence skill match.
+**Concern**: Risk of prompt spam. Must be conservative. only suggest when high-confidence skill match.
 
 **Codex compatibility**: **Not compatible** (hook-specific). Codex equivalent would require a different delegation pattern (perhaps a `codex:pm-guide` sub-agent that's proactive).
 
-#### P3.2 — Sub-agent: `pm-researcher` for interview synthesis delegation
+#### P3.2. Sub-agent: `pm-researcher` for interview synthesis delegation
 
 **What**: Sub-agent specialized in consuming raw interview transcripts and producing `discover-interview-synthesis` output. Frees main thread from long-context parsing; returns structured synthesis.
 
 **Value**: Better use of context window. Large transcripts (50+ pages) fit in sub-agent context without polluting main thread.
 
-**Codex compatibility**: **Codex-equivalent exists via codex:rescue** — could delegate synthesis work there. Pattern: `pm-researcher` for Claude-native depth; `codex:rescue` with synthesis prompt for Codex users.
+**Codex compatibility**: **Codex-equivalent exists via codex:rescue**. could delegate synthesis work there. Pattern: `pm-researcher` for Claude-native depth; `codex:rescue` with synthesis prompt for Codex users.
 
-#### P3.3 — Sub-agent: `pm-diagrammer` for mermaid diagram generation
+#### P3.3. Sub-agent: `pm-diagrammer` for mermaid diagram generation
 
 **What**: Sub-agent specialized in mermaid diagram generation for PM artifacts (flow charts from PRDs, sequence diagrams from recaps, timeline diagrams from syntheses).
 
@@ -310,7 +310,7 @@ Skills read this file via Read tool when inferring defaults. A hook (`SessionSta
 
 **Codex compatibility**: **Compatible via MCP.** Mermaid Chart MCP already exists (`mcp__claude_ai_Mermaid_Chart__validate_and_render_mermaid_diagram` per the current plugin list). Both agents can invoke it. No separate sub-agent needed unless specialized workflow is desired.
 
-#### P3.4 — InstructionsLoaded hook: inject family-contract summary when meeting-skills are active
+#### P3.4. InstructionsLoaded hook: inject family-contract summary when meeting-skills are active
 
 **What**: `InstructionsLoaded` hook that detects if any meeting-family skill was loaded in the session and injects a 5-line summary of the family contract (enum lists, key rules) as `additionalContext`.
 
@@ -318,17 +318,17 @@ Skills read this file via Read tool when inferring defaults. A hook (`SessionSta
 
 **Codex compatibility**: **Not compatible.** Codex doesn't have an equivalent hook.
 
-#### P3.5 — FileChanged hook: auto-regenerate derived files
+#### P3.5. FileChanged hook: auto-regenerate derived files
 
 **What**: `FileChanged` hook that detects edits to source files that should trigger regeneration (e.g., `skills/*/SKILL.md` changed → regenerate `docs/skills/*/`). Replaces manual `generate-skill-pages.py` invocation.
 
-**Value**: Freshness guarantee — public docs never lag source.
+**Value**: Freshness guarantee. public docs never lag source.
 
 **Codex compatibility**: **Not compatible** (hook-specific). Codex users continue to run the regeneration script manually.
 
-### P4 — Experimental, v2.14.0+ or defer
+### P4. Experimental, v2.14.0+ or defer
 
-#### P4.1 — PermissionRequest hook: gatekeep `Write` to `skills/` and `docs/reference/skill-families/` outside of release cycles
+#### P4.1. PermissionRequest hook: gatekeep `Write` to `skills/` and `docs/reference/skill-families/` outside of release cycles
 
 **What**: During non-release phases, `PermissionRequest` hook intercepts writes to canonical files and requires explicit justification before allowing.
 
@@ -338,7 +338,7 @@ Skills read this file via Read tool when inferring defaults. A hook (`SessionSta
 
 **Codex compatibility**: Not compatible.
 
-#### P4.2 — Plugin-declared sub-agents for every utility skill
+#### P4.2. Plugin-declared sub-agents for every utility skill
 
 **What**: Convert `pm-skill-builder`, `pm-skill-validate`, `pm-skill-iterate` from skills into sub-agents. They're arguably more sub-agent-shaped (specialized workflows, distinct tool sets, adversarial-style review outputs).
 
@@ -411,7 +411,7 @@ When proposing a hook-specific leverage:
 3. Ship a companion slash-command or script that Codex users can invoke manually to achieve the same outcome
 4. Document both paths in the end-user guide
 
-This pattern was validated in v2.11.0 with `validate-meeting-skills-family.sh` — it runs in CI (automatic) AND users can invoke manually. Hooks extend the same pattern to per-file, per-turn, per-session triggers.
+This pattern was validated in v2.11.0 with `validate-meeting-skills-family.sh`. it runs in CI (automatic) AND users can invoke manually. Hooks extend the same pattern to per-file, per-turn, per-session triggers.
 
 ---
 
@@ -421,22 +421,22 @@ This pattern was validated in v2.11.0 with `validate-meeting-skills-family.sh` �
 
 Pick from P1 tier:
 
-- **P1.3 `pm-critic` sub-agent** — highest user-facing value. Formalizes the adversarial-review pattern that v2.11.0 proved valuable. Low implementation cost (one `agents/pm-critic.md` file).
-- **P1.2 SessionStart context injection** — modest but useful. ~1 day of hook scripting.
-- **P2.3 User settings pattern** — pairs well with F-32 (pm-skill-builder sample generation); user-profile influences generated scenarios.
+- **P1.3 `pm-critic` sub-agent**. highest user-facing value. Formalizes the adversarial-review pattern that v2.11.0 proved valuable. Low implementation cost (one `agents/pm-critic.md` file).
+- **P1.2 SessionStart context injection**. modest but useful. ~1 day of hook scripting.
+- **P2.3 User settings pattern**. pairs well with F-32 (pm-skill-builder sample generation); user-profile influences generated scenarios.
 
-Defer P1.1 (PostToolUse sample validation) until F-33 (`check-sample-standards.sh`) exists — the hook would call that script, so the script should exist first.
+Defer P1.1 (PostToolUse sample validation) until F-33 (`check-sample-standards.sh`) exists. the hook would call that script, so the script should exist first.
 
 ### v2.13.0 (medium-term, 2-3 proposals)
 
-- **P2.1 Active MCP server** — unfreeze pm-skills-mcp with the content-serving scope defined above. Coordinate with F-34 (THREAD_PROFILES.md) so the MCP server can serve thread profiles as resources.
-- **P1.1 PostToolUse sample validation** — once F-33 is live, wire this hook.
-- **P2.2 SubagentStop family-validator** — cheap to add alongside P1.1.
+- **P2.1 Active MCP server**. unfreeze pm-skills-mcp with the content-serving scope defined above. Coordinate with F-34 (THREAD_PROFILES.md) so the MCP server can serve thread profiles as resources.
+- **P1.1 PostToolUse sample validation**. once F-33 is live, wire this hook.
+- **P2.2 SubagentStop family-validator**. cheap to add alongside P1.1.
 
 ### v2.14.0+ (exploratory)
 
-- P3.1, P3.2, P3.3, P3.4, P3.5 — each individually modest; consider as a "runtime-automation hardening" bundle.
-- P4.1, P4.2 — breaking changes; require migration plan and adoption-signal confirmation.
+- P3.1, P3.2, P3.3, P3.4, P3.5. each individually modest; consider as a "runtime-automation hardening" bundle.
+- P4.1, P4.2. breaking changes; require migration plan and adoption-signal confirmation.
 
 ### Governance: add runtime-component declaration to the repo
 
@@ -454,11 +454,11 @@ Similar in spirit to `docs/reference/skill-families/` but for the runtime surfac
 
 Ideas considered but not proposed as v2.12.0–v2.14.0 candidates. Noted for future reference.
 
-- **Live collaboration mode via MCP resources** — multi-PM team shares a synced thread-profile MCP server. Overkill for v1; most teams use the repo solo.
-- **AI-generated skill scaffolding from a single prompt** — user says "I need a skill for X", hook-prompt evaluates, and `pm-skill-builder` auto-invokes with a draft. Over-automates for now; user-initiated invocation is still appropriate.
-- **Cross-family contract validation** — once 2+ families exist, a meta-validator could check inter-family consistency (e.g., meeting-skills and research-skills both have `stakeholder-*` patterns; align them). Only needed when ≥2 families ship.
-- **Usage-telemetry hooks** — `PostToolUse` that logs skill invocations locally. Privacy-sensitive; doesn't ship to remote without user opt-in. Consider when there's real need for adoption data.
-- **Auto-generate `THREAD_PROFILES.md` entries from sample corpus** — an MCP tool or hook that reads `library/skill-output-samples/` and offers to extract thread profiles. Interesting for multi-family expansion; not yet needed.
+- **Live collaboration mode via MCP resources**. multi-PM team shares a synced thread-profile MCP server. Overkill for v1; most teams use the repo solo.
+- **AI-generated skill scaffolding from a single prompt**. user says "I need a skill for X", hook-prompt evaluates, and `pm-skill-builder` auto-invokes with a draft. Over-automates for now; user-initiated invocation is still appropriate.
+- **Cross-family contract validation**. once 2+ families exist, a meta-validator could check inter-family consistency (e.g., meeting-skills and research-skills both have `stakeholder-*` patterns; align them). Only needed when ≥2 families ship.
+- **Usage-telemetry hooks**. `PostToolUse` that logs skill invocations locally. Privacy-sensitive; doesn't ship to remote without user opt-in. Consider when there's real need for adoption data.
+- **Auto-generate `THREAD_PROFILES.md` entries from sample corpus**. an MCP tool or hook that reads `library/skill-output-samples/` and offers to extract thread profiles. Interesting for multi-family expansion; not yet needed.
 
 ---
 
@@ -490,7 +490,7 @@ When deciding whether to implement a proposal:
 graph TD
     Start{Does the proposal<br/>address a pain point<br/>observed in real use?}
     Start -->|yes| A{Does it require<br/>a hook, sub-agent,<br/>or MCP?}
-    Start -->|no| Defer[Defer — insufficient signal]
+    Start -->|no| Defer[Defer. insufficient signal]
 
     A -->|hook| B{Can Codex users get<br/>equivalent via slash command?}
     A -->|subagent| C{Does codex:codex-rescue<br/>cover the same intent?}
@@ -500,8 +500,8 @@ graph TD
     B -->|no| ImplWithGap[Implement; note Codex-only gap]
     C -->|yes| PatternBridge[Bridge pattern: native + codex:rescue]
     C -->|no| ImplSubagent[Implement sub-agent]
-    D -->|yes| MCPValue[High value — unfreeze pm-skills-mcp]
-    D -->|no| MCPDefer[Defer — content is fine as files]
+    D -->|yes| MCPValue[High value. unfreeze pm-skills-mcp]
+    D -->|no| MCPDefer[Defer. content is fine as files]
 
     style Impl fill:#c8e6c9
     style ImplWithGap fill:#fff9c4
@@ -516,15 +516,15 @@ graph TD
 
 ## 9. Next concrete steps
 
-1. **Add this doc to v2.12.0 planning artifacts** — link from `plan_v2.12.0.md` as design-discussion input.
+1. **Add this doc to v2.12.0 planning artifacts**. link from `plan_v2.12.0.md` as design-discussion input.
 2. **Open a discussion thread** (GitHub Discussions or the equivalent) for community input on priorities.
 3. **Pick 2-3 P1 proposals** for the v2.12.0 slate during kickoff (post 2-4 week usage-signal period).
 4. **Document the selected proposals as efforts** (F-37, F-38, F-39, etc.) with concrete scope + deliverables.
-5. **Coordinate with MCP-unfreeze decision** — P2.1 is a trigger event; timing depends on whether pm-skills-mcp remains frozen per M-22 or unfreezes for v2.13.0.
+5. **Coordinate with MCP-unfreeze decision**. P2.1 is a trigger event; timing depends on whether pm-skills-mcp remains frozen per M-22 or unfreezes for v2.13.0.
 
 ---
 
-## 10. Appendix: Quick reference — where to put each component type
+## 10. Appendix: Quick reference. where to put each component type
 
 | Component | File location | Frontmatter? | Example |
 |-----------|---------------|--------------|---------|

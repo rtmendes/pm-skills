@@ -229,7 +229,7 @@ Teaches PMs to create syntactically valid mermaid diagrams by selecting the righ
 #### slideshow-creator
 **Path:** `skills/utility-slideshow-creator/SKILL.md`
 
-Generates professional presentations from a JSON deck specification using 18 slide types with dark/light variants. Zero design decisions at generation time — Claude selects slide types and fills content slots; all visual properties are pre-decided by the theme. Use when creating slide decks, stakeholder updates, or product review presentations.
+Generates professional presentations from a JSON deck specification using 18 slide types with dark/light variants. Zero design decisions at generation time . Claude selects slide types and fills content slots; all visual properties are pre-decided by the theme. Use when creating slide decks, stakeholder updates, or product review presentations.
 
 ---
 

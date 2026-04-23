@@ -9,7 +9,7 @@ thread: storevine
 context: campaigns-pricing-decision
 ---
 
-# Sample: foundation-meeting-recap — Storevine Campaigns Pricing Decision
+# Sample: foundation-meeting-recap. Storevine Campaigns Pricing Decision
 
 ## Scenario
 
@@ -110,7 +110,7 @@ All three planned decisions landed: two-tier structure ($19 / $49), 12-month gra
 
 - **Planned topics**: tier-structure, grandfathering, rollout-date
 - **Topics addressed**: tier-structure, grandfathering, rollout-date (3 of 3)
-- **Topics emerged**: comms-plan-ownership — arose from discussion of rollout-date transition communication
+- **Topics emerged**: comms-plan-ownership. arose from discussion of rollout-date transition communication
 
 ### Topics
 
@@ -124,7 +124,7 @@ Reviewed three options from the pricing proposal: single-tier, two-tier, and thr
 
 **Decisions made**
 
-- **Two-tier structure: Campaigns Starter at $19/mo [fictional], Campaigns Pro at $49/mo [fictional]** — rationale: matches merchant-revenue distribution; simpler to communicate than three-tier; leaves room for future Enterprise tier without promising it now
+- **Two-tier structure: Campaigns Starter at $19/mo [fictional], Campaigns Pro at $49/mo [fictional]**. rationale: matches merchant-revenue distribution; simpler to communicate than three-tier; leaves room for future Enterprise tier without promising it now
 
 **Actions**
 
@@ -146,7 +146,7 @@ Beta users currently pay a promotional $9/mo [fictional]. Options discussed: no 
 
 **Decisions made**
 
-- **12-month grandfathering at current beta pricing ($9/mo) for existing Campaigns beta users** — rationale: preserves trust; cost is bounded; standard pm-skills pattern for paid-tier migration
+- **12-month grandfathering at current beta pricing ($9/mo) for existing Campaigns beta users**. rationale: preserves trust; cost is bounded; standard pm-skills pattern for paid-tier migration
 
 **Actions**
 
@@ -168,7 +168,7 @@ Engineering timeline from maria's capacity model supports 2026-06-10 launch. Ale
 
 **Decisions made**
 
-- **Rollout date: 2026-06-10 for new customers; existing users grandfathered 2026-06-10 to 2027-06-10** — rationale: fits eng timeline, gives marketing enough runway, grandfathering end aligned to 12-month decision
+- **Rollout date: 2026-06-10 for new customers; existing users grandfathered 2026-06-10 to 2027-06-10**. rationale: fits eng timeline, gives marketing enough runway, grandfathering end aligned to 12-month decision
 
 **Actions**
 
@@ -182,7 +182,7 @@ Engineering timeline from maria's capacity model supports 2026-06-10 launch. Ale
 
 #### Comms-plan ownership (emergent)
 
-*Type: Decision (emergent — not on agenda)*
+*Type: Decision (emergent. not on agenda)*
 
 **Discussion**
 
@@ -190,7 +190,7 @@ Alex raised the question of who owns the customer-comms rollout sequence. Consen
 
 **Decisions made**
 
-- **alex-marketing owns customer-comms drafting; jonathan-pm reviews; sam-data provides segment lists** — rationale: alex has the comms background; separating drafting from review preserves bandwidth
+- **alex-marketing owns customer-comms drafting; jonathan-pm reviews; sam-data provides segment lists**. rationale: alex has the comms background; separating drafting from review preserves bandwidth
 
 **Actions**
 
@@ -239,7 +239,7 @@ Alex raised the question of who owns the customer-comms rollout sequence. Consen
 
 ### Referenced artifacts
 
-- Agenda: 2026-04-24_13-00EST_campaigns-pricing-decision_agenda.md — used for topic skeleton + outcome reconciliation
+- Agenda: 2026-04-24_13-00EST_campaigns-pricing-decision_agenda.md. used for topic skeleton + outcome reconciliation
 - Prior recaps: 2026-04-17_14-00EST_campaigns-feature-launch-kickoff_recap.md (consulted for kickoff decisions)
 
 ### External references
@@ -251,9 +251,9 @@ Alex raised the question of who owns the customer-comms rollout sequence. Consen
 
 - **Generated**: 2026-04-24T16:30:00Z
 - **Skill version**: 1.0.0
-- **Input quality**: high — transcript + notes; all speakers identifiable
-- **Overall confidence**: high — decisions and actions directly supported
+- **Input quality**: high. transcript + notes; all speakers identifiable
+- **Overall confidence**: high. decisions and actions directly supported
 - **Known gaps**: None identified
-- **Inferences applied**: none required — all fields explicitly captured
+- **Inferences applied**: none required. all fields explicitly captured
 - **Fabrication check**: all action owners (alex-marketing, maria-eng, sam-data, jonathan-pm) in attendees list; 0 unassigned actions
 ```

@@ -15,27 +15,27 @@ Create `foundation-meeting-agenda`, a pre-meeting skill that produces an attende
 
 Attendees walk into internal meetings with no structural signal for what to expect. Agendas, when they exist, are one-line items without type tags, owners, or time allocations. This produces predictable failure modes: topics balloon because "Discussion" was not distinguished from "Decision," pre-reads are skipped because estimated prep time was not given, and meetings end without clarity on what was accomplished because no desired outcomes were stated.
 
-PMs running meetings already know this. They also know that typing out a structured agenda takes 15–20 minutes they do not have. The skill closes this gap: it produces a conforming agenda from a minimal brief, with topic type tags, time allocations, owners, desired outcomes, pre-read links, and logistics — in one invocation.
+PMs running meetings already know this. They also know that typing out a structured agenda takes 15–20 minutes they do not have. The skill closes this gap: it produces a conforming agenda from a minimal brief, with topic type tags, time allocations, owners, desired outcomes, pre-read links, and logistics. in one invocation.
 
 ## How It Works
 
 ### Input
 
 - Meeting topic or purpose (required)
-- Meeting duration (optional — defaults to 30 min per family contract; skill flags the default in `Known gaps`)
-- Attendees list (optional — skill infers RACI roles when present)
+- Meeting duration (optional. defaults to 30 min per family contract; skill flags the default in `Known gaps`)
+- Attendees list (optional. skill infers RACI roles when present)
 - Time constraint context (calendar slot, cross-timezone window)
 - Context: related project, prior decisions, open questions, linked documents
 
 ### Process
 
-1. **Anti-meeting check** (per family contract) — prompt "does this need to be a meeting at all?" Accept override; offer async-alternative framing if objective is simple information transfer or single-owner decision
-2. **Clarify objective** — force a one-sentence decision-changing statement. If the user provides a vague topic ("Let's sync on X"), the skill infers and proposes a sharper objective, surfaced in the go-mode inference summary
-3. **Infer meeting type** — from topic and attendee signals; default to `other` with `[confidence: low]` when unclear
-4. **Present go-mode inference summary** — per family contract
-5. **Design agenda** — time-boxed sections with owner and topic-type tag (Discussion | Decision | Information | Working), sized to fit meeting duration
-6. **Specify pre-reads and attendee prep** — links, estimated prep time, "come ready to" expectations
-7. **Produce artifact** — conforming to TEMPLATE.md
+1. **Anti-meeting check** (per family contract). prompt "does this need to be a meeting at all?" Accept override; offer async-alternative framing if objective is simple information transfer or single-owner decision
+2. **Clarify objective**. force a one-sentence decision-changing statement. If the user provides a vague topic ("Let's sync on X"), the skill infers and proposes a sharper objective, surfaced in the go-mode inference summary
+3. **Infer meeting type**. from topic and attendee signals; default to `other` with `[confidence: low]` when unclear
+4. **Present go-mode inference summary**. per family contract
+5. **Design agenda**. time-boxed sections with owner and topic-type tag (Discussion | Decision | Information | Working), sized to fit meeting duration
+6. **Specify pre-reads and attendee prep**. links, estimated prep time, "come ready to" expectations
+7. **Produce artifact**. conforming to TEMPLATE.md
 
 ### Output
 
@@ -83,8 +83,8 @@ Structured pre-meeting agenda conforming to the family contract's frontmatter sc
 ## Status Transitions
 
 - **Backlog** (current)
-- **In Progress** — when per-skill authoring begins
-- **Shipped** — on v2.11.0 tag + push
+- **In Progress**. when per-skill authoring begins
+- **Shipped**. on v2.11.0 tag + push
 
 ## Detailed specification
 

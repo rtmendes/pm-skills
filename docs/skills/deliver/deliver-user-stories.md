@@ -16,7 +16,7 @@ tags:
 
 # User Stories
 
-User stories are concise descriptions of functionality from the user's perspective. They capture who needs something, what they need, and why — without prescribing how to build it. Good user stories enable teams to break large features into estimable, deliverable increments while maintaining focus on user value.
+User stories are concise descriptions of functionality from the user's perspective. They capture who needs something, what they need, and why . without prescribing how to build it. Good user stories enable teams to break large features into estimable, deliverable increments while maintaining focus on user value.
 
 ## When to Use
 
@@ -47,13 +47,13 @@ When asked to create user stories, follow these steps:
    Determine which users interact with this feature. Each story should be written for a specific persona, not generic "users." Different personas may need different stories for the same feature.
 
 3. **Break Down by User Goal**
-   Decompose the feature into distinct user goals. Each story should deliver a complete, valuable capability — something the user can actually do when the story is done.
+   Decompose the feature into distinct user goals. Each story should deliver a complete, valuable capability . something the user can actually do when the story is done.
 
 4. **Write Story Statements**
-   Use the format: "As a [persona], I want [action] so that [benefit]." The benefit clause is critical — it explains why this matters and helps prioritize.
+   Use the format: "As a [persona], I want [action] so that [benefit]." The benefit clause is critical . it explains why this matters and helps prioritize.
 
 5. **Define Acceptance Criteria**
-   Write specific, testable criteria using Given/When/Then format. Acceptance criteria define "done" — if all criteria pass, the story is complete.
+   Write specific, testable criteria using Given/When/Then format. Acceptance criteria define "done" . if all criteria pass, the story is complete.
 
 6. **Apply INVEST Criteria**
    Validate each story against INVEST: Independent, Negotiable, Valuable, Estimable, Small, Testable. Revise stories that don't meet these criteria.
@@ -248,7 +248,7 @@ When asked to create user stories, follow these steps:
 
     | Dependency | Type | Status |
     |------------|------|--------|
-    | None | — | Ready |
+    | None | . | Ready |
 
     ### Out of Scope
 
@@ -280,7 +280,7 @@ When asked to create user stories, follow these steps:
 
     ### Context & Background
 
-    Recurring tasks often need instance-level modifications — a weekly report might have a different deadline one week due to a holiday, or a recurring meeting might have different agenda items. Users need flexibility to modify individual instances without disrupting the overall pattern.
+    Recurring tasks often need instance-level modifications . a weekly report might have a different deadline one week due to a holiday, or a recurring meeting might have different agenda items. Users need flexibility to modify individual instances without disrupting the overall pattern.
 
     ### Acceptance Criteria
 
@@ -448,7 +448,7 @@ When asked to create user stories, follow these steps:
 
     ### Context & Background
 
-    Teams often need to temporarily halt recurring tasks — during holiday periods, team transitions, or project pauses. Deleting and recreating the series is cumbersome. A pause mechanism preserves the configuration while stopping new instance generation.
+    Teams often need to temporarily halt recurring tasks . during holiday periods, team transitions, or project pauses. Deleting and recreating the series is cumbersome. A pause mechanism preserves the configuration while stopping new instance generation.
 
     ### Acceptance Criteria
 
@@ -522,13 +522,13 @@ When asked to create user stories, follow these steps:
 
 See this skill applied to three different product contexts:
 
-??? example "Storevine (B2B): Storevine B2B ecommerce platform — Campaigns guided first-campaign flow user story"
+??? example "Storevine (B2B): Storevine B2B ecommerce platform . Campaigns guided first-campaign flow user story"
     **Prompt:**
 
     ```
     /user-stories
 
-    Project: Campaigns — native email marketing for Storevine merchants
+    Project: Campaigns . native email marketing for Storevine merchants
     Sprint: Q2 2026 Campaigns build (kickoff Mar 3, GA Apr 28)
 
     Story I need:
@@ -557,7 +557,7 @@ See this skill applied to three different product contexts:
 
     # User Story: Guided First-Campaign Flow for Non-Adopter Merchants
 
-??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — Resurface user stories for Sprint 8"
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app . Resurface user stories for Sprint 8"
     **Prompt:**
 
     ```
@@ -567,11 +567,11 @@ See this skill applied to three different product contexts:
     criteria.
 
     stories:
-    1. receive daily digest (P0) — the core email delivery
-    2. opt in to digest (P0) — home screen card + settings toggle
-    3. click item to read (P0) — one-click from email to article
-    4. change cadence (P1) — daily vs 3x/week
-    5. unsubscribe from digest (P0) — one-click from email footer
+    1. receive daily digest (P0) . the core email delivery
+    2. opt in to digest (P0) . home screen card + settings toggle
+    3. click item to read (P0) . one-click from email to article
+    4. change cadence (P1) . daily vs 3x/week
+    5. unsubscribe from digest (P0) . one-click from email footer
 
     keep them tight. alex and jess need to estimate on monday.
     ```

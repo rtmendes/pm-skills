@@ -109,8 +109,8 @@ status: draft
 
 ### Risks and tensions
 
-- **CFO uses Q1 overrun to impose a capacity cap that forces scope cut**: Mitigation — have the tradeoff map ready to make the cost of cutting visible, not abstract. Don't let "just cut scope" be a costless answer.
-- **Meeting drifts to broader capacity policy discussion, postponing search decision**: Mitigation — explicit ask upfront: "I have 3 things I need today; happy to schedule a separate capacity-policy conversation."
+- **CFO uses Q1 overrun to impose a capacity cap that forces scope cut**: Mitigation. have the tradeoff map ready to make the cost of cutting visible, not abstract. Don't let "just cut scope" be a costless answer.
+- **Meeting drifts to broader capacity policy discussion, postponing search decision**: Mitigation. explicit ask upfront: "I have 3 things I need today; happy to schedule a separate capacity-policy conversation."
 
 ### Asks
 
@@ -148,8 +148,8 @@ status: draft
 
 - **Generated**: 2026-04-17T09:00:00Z
 - **Skill version**: 1.0.0
-- **Input quality**: high — user provided meeting context, stakeholder summary existed, prior recap referenced Q1 overrun dynamics
-- **Overall confidence**: medium — stakeholder positions are high-confidence; anticipated questions are medium-confidence (inferred from typical CFO objections + priya's known style)
+- **Input quality**: high. user provided meeting context, stakeholder summary existed, prior recap referenced Q1 overrun dynamics
+- **Overall confidence**: medium. stakeholder positions are high-confidence; anticipated questions are medium-confidence (inferred from typical CFO objections + priya's known style)
 - **Known gaps**: Do not know if priya-cfo has spoken to maria-cpo 1:1 about this; if yes, she may already have a position shaped by those conversations
 - **Inferences applied**: priya's likely concerns inferred from prior exec review + style [confidence: medium]; anticipated questions inferred from CFO-role patterns [confidence: medium]
-- **Anti-meeting check**: Ran — override accepted (exec decision with relationship dynamic warrants sync conversation; async would risk misinterpretation of capacity commitment)
+- **Anti-meeting check**: Ran. override accepted (exec decision with relationship dynamic warrants sync conversation; async would risk misinterpretation of capacity commitment)

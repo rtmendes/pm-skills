@@ -7,7 +7,7 @@ skill_version: "2.0.0"
 created: 2026-02-20
 status: sample
 thread: storevine
-context: Storevine B2B ecommerce platform — Campaigns send flow and first-campaign flow analytics instrumentation
+context: Storevine B2B ecommerce platform . Campaigns send flow and first-campaign flow analytics instrumentation
 ---
 
 ## Scenario
@@ -16,9 +16,9 @@ Before the Campaigns build sprint begins, Storevine's growth PM and backend engi
 
 **Source Notes:**
 
-- Amplitude documentation (amplitude.com/docs/analytics/what-is-amplitude) — the analytics platform used for Campaigns event tracking; its tracking plan methodology and property naming conventions inform the event taxonomy in this spec.
-- GDPR Article 5(1)(c) (gdpr.eu/art-5-how-to-process-personal-data/) — data minimization principle: analytics events must not collect more personal data than necessary for the specified purpose; subscriber email addresses are explicitly excluded from all event properties in this spec.
-- Mixpanel, "Tracking Plan Best Practices" (mixpanel.com/blog/tracking-plan/) — establishes the naming convention standard (snake_case, verb+noun) and the tracking plan documentation format applied in this instrumentation spec.
+- Amplitude documentation (amplitude.com/docs/analytics/what-is-amplitude) . the analytics platform used for Campaigns event tracking; its tracking plan methodology and property naming conventions inform the event taxonomy in this spec.
+- GDPR Article 5(1)(c) (gdpr.eu/art-5-how-to-process-personal-data/) . data minimization principle: analytics events must not collect more personal data than necessary for the specified purpose; subscriber email addresses are explicitly excluded from all event properties in this spec.
+- Mixpanel, "Tracking Plan Best Practices" (mixpanel.com/blog/tracking-plan/) . establishes the naming convention standard (snake_case, verb+noun) and the tracking plan documentation format applied in this instrumentation spec.
 
 ---
 
@@ -27,15 +27,15 @@ Before the Campaigns build sprint begins, Storevine's growth PM and backend engi
 ```
 /instrumentation-spec
 
-Feature: Campaigns — campaign send flow + guided first-campaign flow
+Feature: Campaigns . campaign send flow + guided first-campaign flow
 Analytics platform: Amplitude
 
 Events I need to instrument:
-1. campaign_created — merchant saves a campaign draft
-2. campaign_sent — merchant sends a campaign
-3. first_send_completed — merchant sends their FIRST campaign ever
+1. campaign_created . merchant saves a campaign draft
+2. campaign_sent . merchant sends a campaign
+3. first_send_completed . merchant sends their FIRST campaign ever
    (milestone event for the non-adopter hypothesis)
-4. attribution_recorded — a purchase is linked to a campaign click
+4. attribution_recorded . a purchase is linked to a campaign click
    within the 7-day attribution window
 
 Prior work:
@@ -58,11 +58,11 @@ PII handling, implementation notes, and QA testing checklist.
 
 ## Overview
 
-**Feature:** Campaigns v1 — campaign creation, send, and first-campaign guided flow
+**Feature:** Campaigns v1 . campaign creation, send, and first-campaign guided flow
 
 **Analytics Goals:**
 
-1. Can we measure the first campaign send rate for non-adopter merchants within 60 days of GA — the primary metric for the A/B experiment?
+1. Can we measure the first campaign send rate for non-adopter merchants within 60 days of GA . the primary metric for the A/B experiment?
 2. Can we attribute revenue to specific Campaigns sends using the 7-day attribution window?
 3. Can we track campaign creation and send volume to monitor adoption and identify funnel drop-off?
 
@@ -77,7 +77,7 @@ PII handling, implementation notes, and QA testing checklist.
 |-------|-------|
 | **Event Name** | `campaign_created` |
 | **Trigger** | Merchant saves a campaign draft for the first time (new draft creation, not subsequent edits) |
-| **Description** | Fires when a merchant creates a new campaign draft — the entry point to the campaign creation funnel |
+| **Description** | Fires when a merchant creates a new campaign draft . the entry point to the campaign creation funnel |
 
 **Properties:**
 
@@ -99,7 +99,7 @@ PII handling, implementation notes, and QA testing checklist.
 |-------|-------|
 | **Event Name** | `campaign_sent` |
 | **Trigger** | Merchant clicks Send and the campaign is successfully submitted to the SendGrid API (202 Accepted response received) |
-| **Description** | Fires when a campaign is submitted for delivery — the primary completion event for the campaign creation funnel |
+| **Description** | Fires when a campaign is submitted for delivery . the primary completion event for the campaign creation funnel |
 
 **Properties:**
 
@@ -122,7 +122,7 @@ PII handling, implementation notes, and QA testing checklist.
 | Field | Value |
 |-------|-------|
 | **Event Name** | `first_send_completed` |
-| **Trigger** | Fires immediately after `campaign_sent` when `is_first_send = true` — the merchant has sent their first campaign ever |
+| **Trigger** | Fires immediately after `campaign_sent` when `is_first_send = true` . the merchant has sent their first campaign ever |
 | **Description** | Milestone event marking the non-adopter merchant's transition to an active email sender; this is the primary metric event for the A/B experiment |
 
 **Properties:**
@@ -145,7 +145,7 @@ PII handling, implementation notes, and QA testing checklist.
 |-------|-------|
 | **Event Name** | `attribution_recorded` |
 | **Trigger** | A SendGrid click event webhook is received for a recipient, and a purchase by that recipient is found in the Storevine order database within the 7-day attribution window |
-| **Description** | Fires when a campaign click is successfully linked to a purchase — the revenue attribution event that powers the Campaigns revenue dashboard |
+| **Description** | Fires when a campaign click is successfully linked to a purchase . the revenue attribution event that powers the Campaigns revenue dashboard |
 
 **Properties:**
 
@@ -165,7 +165,7 @@ PII handling, implementation notes, and QA testing checklist.
 | Property | Type | Description | Set When | Example |
 |----------|------|-------------|----------|---------||merchant_id | string | Pseudonymous internal merchant account identifier | On merchant login; persists across sessions | `"mrch_a1b2c3"` |
 | email_tool_status | string | Whether the merchant has an active external email tool integration at the time of the event | Set on login; updated when integration status changes | `"none"`, `"klaviyo"`, `"mailchimp"`, `"other"` |
-| merchant_customer_count_bucket | string | Bucketed customer count — updated monthly to avoid PII-adjacent precision | Updated on the first of each month or when customer count crosses a bucket boundary | `"0_50"`, `"51_150"`, `"151_250"`, `"250_plus"` |
+| merchant_customer_count_bucket | string | Bucketed customer count . updated monthly to avoid PII-adjacent precision | Updated on the first of each month or when customer count crosses a bucket boundary | `"0_50"`, `"51_150"`, `"151_250"`, `"250_plus"` |
 
 ## PII & Privacy Considerations
 
@@ -173,9 +173,9 @@ PII handling, implementation notes, and QA testing checklist.
 
 | Property | PII Type | Handling |
 |----------|----------|----------|
-| Subscriber email addresses | Email | Do not send — excluded from all event properties. Only customer_id (pseudonymous) is included. |
-| Campaign subject line text | Potentially sensitive (may contain merchant-specific information) | Do not send — only subject_line_length (character count) is included |
-| Order value | Financial | Send as integer cents — acceptable for aggregated analytics; not PII in isolation |
+| Subscriber email addresses | Email | Do not send . excluded from all event properties. Only customer_id (pseudonymous) is included. |
+| Campaign subject line text | Potentially sensitive (may contain merchant-specific information) | Do not send . only subject_line_length (character count) is included |
+| Order value | Financial | Send as integer cents . acceptable for aggregated analytics; not PII in isolation |
 
 ### Consent Requirements
 
@@ -197,7 +197,7 @@ PII handling, implementation notes, and QA testing checklist.
 
 ### Event Timing
 
-- `campaign_created` must fire at the moment the draft is first saved to the database — not at the campaign configuration step
+- `campaign_created` must fire at the moment the draft is first saved to the database . not at the campaign configuration step
 - `campaign_sent` must fire after the SendGrid API returns a 202 Accepted response; do not fire on a network timeout or queued send without confirmation
 - `first_send_completed` fires immediately after `campaign_sent` in the same request context when `is_first_send = true`; do not fire as a background task
 - `attribution_recorded` fires from the webhook receiver service when the attribution chain is established; latency of up to 60 seconds after the purchase event is acceptable

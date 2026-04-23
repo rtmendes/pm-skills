@@ -9,11 +9,11 @@ thread: brainshelf
 context: resurface-algo-review
 ---
 
-# Sample: foundation-meeting-agenda — Brainshelf Resurface Algorithm Review
+# Sample: foundation-meeting-agenda. Brainshelf Resurface Algorithm Review
 
 ## Scenario
 
-Brainshelf is a consumer PKM / read-later app (post-seed, ~20 employees, ~85K registered users). The team is iterating on Resurface, a contextual morning-email digest that pulls saved items back into attention. The PM runs a 45-minute review meeting with the algo engineer and design lead to review the current algorithm's behavior, discuss two proposed changes, and decide the next sprint's direction. Brainshelf prompts tend to be rough and casual — the PM wears multiple hats and moves fast.
+Brainshelf is a consumer PKM / read-later app (post-seed, ~20 employees, ~85K registered users). The team is iterating on Resurface, a contextual morning-email digest that pulls saved items back into attention. The PM runs a 45-minute review meeting with the algo engineer and design lead to review the current algorithm's behavior, discuss two proposed changes, and decide the next sprint's direction. Brainshelf prompts tend to be rough and casual. the PM wears multiple hats and moves fast.
 
 Source Notes:
 - Brainshelf is fictional
@@ -105,25 +105,25 @@ Review how the current Resurface algorithm is performing, compare two candidate 
 
 ### Topics
 
-#### Current behavior snapshot (10 min) — elena-algo
+#### Current behavior snapshot (10 min). elena-algo
 
 - **Type**: Information
 - **Goal**: Team aligned on what the algorithm is doing today and what metrics show
 - **Pre-read**: [Resurface metrics this sprint](https://notion.example/resurface-metrics)
 
-#### Option A: recency-weighted (10 min) — elena-algo
+#### Option A: recency-weighted (10 min). elena-algo
 
 - **Type**: Discussion
 - **Goal**: Clarity on the tradeoff (higher engagement short-term vs. topic breadth)
 - **Pre-read**: none
 
-#### Option B: topic-clustered (10 min) — mia-design
+#### Option B: topic-clustered (10 min). mia-design
 
 - **Type**: Discussion
 - **Goal**: Clarity on the tradeoff (better breadth vs. implementation complexity)
 - **Pre-read**: none
 
-#### Direction decision (15 min) — priya-pm
+#### Direction decision (15 min). priya-pm
 
 - **Type**: Decision
 - **Goal**: Pick Option A, Option B, or hybrid; assign success metric + owner
@@ -174,9 +174,9 @@ Review how the current Resurface algorithm is performing, compare two candidate 
 
 - **Generated**: 2026-04-20T08:30:00Z
 - **Skill version**: 1.0.0
-- **Input quality**: medium — casual prompt lacked specific option details; skill inferred Option A / Option B framing from "2 options" cue
-- **Overall confidence**: medium — structural agenda high-confidence; topic tradeoffs are placeholder until elena/mia fill in
+- **Input quality**: medium. casual prompt lacked specific option details; skill inferred Option A / Option B framing from "2 options" cue
+- **Overall confidence**: medium. structural agenda high-confidence; topic tradeoffs are placeholder until elena/mia fill in
 - **Known gaps**: Option A and Option B specifics not defined by PM in prompt; skill used generic framings (recency-weighted, topic-clustered) that presenters will replace with real tradeoffs
 - **Inferences applied**: Meeting type inferred as review [confidence: high, "review" explicit]; attendee roles inferred
-- **Anti-meeting check**: Ran — synchronous value: tradeoff discussion between two options with small team; sync format appropriate
+- **Anti-meeting check**: Ran. synchronous value: tradeoff discussion between two options with small team; sync format appropriate
 ```

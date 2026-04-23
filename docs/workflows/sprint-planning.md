@@ -155,9 +155,9 @@ Before considering this workflow complete, verify:
 
 ## See Also
 
-- [Feature Kickoff](feature-kickoff.md) — For the full problem-to-stories flow when starting from scratch
-- [Post-Launch Learning](post-launch-learning.md) — After the sprint ships, measure results and capture learnings
+- [Feature Kickoff](feature-kickoff.md) . For the full problem-to-stories flow when starting from scratch
+- [Post-Launch Learning](post-launch-learning.md) . After the sprint ships, measure results and capture learnings
 
 ---
 
-*Part of [PM-Skills](https://github.com/product-on-purpose/pm-skills/blob/main/README.md) — Open source Product Management skills for AI agents*
+*Part of [PM-Skills](https://github.com/product-on-purpose/pm-skills/blob/main/README.md) . Open source Product Management skills for AI agents*

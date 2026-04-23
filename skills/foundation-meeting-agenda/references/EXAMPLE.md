@@ -75,25 +75,25 @@ Commit to an in/out MVP scope, confirm engineering capacity for Q2, and set a sh
 
 ### Topics
 
-#### Scope review (20 min) — maria
+#### Scope review (20 min). maria
 
 - **Type**: Decision
 - **Goal**: Each item on the scope draft marked in, out, or deferred to v2
 - **Pre-read**: [scope draft](https://notion.example/search-scope)
 
-#### Capacity commitment (20 min) — alex
+#### Capacity commitment (20 min). alex
 
 - **Type**: Decision
 - **Goal**: Eng capacity agreed in sprint-weeks for Q2; risks and backfill plan surfaced
 - **Pre-read**: [capacity model](https://sheets.example/q2-capacity)
 
-#### Ship-date target (15 min) — jonathan
+#### Ship-date target (15 min). jonathan
 
 - **Type**: Decision
 - **Goal**: Target ship date committed with explicit dependencies called out
 - **Pre-read**: none
 
-#### Next steps (5 min) — maria
+#### Next steps (5 min). maria
 
 - **Type**: Working
 - **Goal**: Owners assigned for follow-up; next sync scheduled
@@ -103,8 +103,8 @@ Commit to an in/out MVP scope, confirm engineering capacity for Q2, and set a sh
 
 **Required prep** (estimated: 8 min)
 
-- [ ] Read the scope draft and note in/out views — [scope draft](https://notion.example/search-scope)
-- [ ] Review the capacity model and flag any concerns — [capacity model](https://sheets.example/q2-capacity)
+- [ ] Read the scope draft and note in/out views. [scope draft](https://notion.example/search-scope)
+- [ ] Review the capacity model and flag any concerns. [capacity model](https://sheets.example/q2-capacity)
 
 **Recommended context**
 
@@ -148,8 +148,8 @@ Commit to an in/out MVP scope, confirm engineering capacity for Q2, and set a sh
 
 - **Generated**: 2026-04-17T13:30:00Z
 - **Skill version**: 1.0.0
-- **Input quality**: high — user provided topic, attendees, duration, and pre-read links
-- **Overall confidence**: high — all values either user-specified or directly derivable
+- **Input quality**: high. user provided topic, attendees, duration, and pre-read links
+- **Overall confidence**: high. all values either user-specified or directly derivable
 - **Known gaps**: None identified
 - **Inferences applied**: Meeting type inferred as project-kickoff [confidence: high, from "kickoff" in topic]; attendee roles inferred from seniority context
-- **Anti-meeting check**: Ran — override accepted (decision meeting with 4 attendees warrants sync discussion of tradeoffs)
+- **Anti-meeting check**: Ran. override accepted (decision meeting with 4 attendees warrants sync discussion of tradeoffs)

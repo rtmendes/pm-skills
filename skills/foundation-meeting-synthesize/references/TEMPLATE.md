@@ -81,7 +81,7 @@ status: draft
 
 ### Themes
 
-#### {{Theme 1}} [confidence: {{level}} — {{rationale, e.g., "appears in 5/5 meetings"}}]
+#### {{Theme 1}} [confidence: {{level}}. {{rationale, e.g., "appears in 5/5 meetings"}}]
 
 {{Description of the theme and where it appeared}}
 
@@ -118,23 +118,23 @@ status: draft
 
 ### Decision evolution (resolved)
 
-> [v1.1.0 — split from contradictions. Decision evolution captures supersedes-chains: later decisions that replaced earlier ones. Historical context. NO [!] visual emphasis — this is expected, not a red flag.]
+> [v1.1.0. split from contradictions. Decision evolution captures supersedes-chains: later decisions that replaced earlier ones. Historical context. NO [!] visual emphasis. this is expected, not a red flag.]
 
 **{{Topic 1}}**
 
 - **{{Earlier date}}** ({{Meeting}}): {{Earlier decision}}
 - **{{Later date}}** ({{Meeting}}): {{Later decision supersedes earlier}}
-- **Context**: {{why the shift — new evidence, stakeholder input, reality-check}}
+- **Context**: {{why the shift. new evidence, stakeholder input, reality-check}}
 
 ### Unresolved contradictions (⚠)
 
-> [guidance: the highest-value archaeology output — decisions or positions CURRENTLY in conflict that need reconciliation. Reserve [!] emphasis for this section only. If no live contradictions, state "No live unresolved contradictions as of {{date}}."]
+> [guidance: the highest-value archaeology output. decisions or positions CURRENTLY in conflict that need reconciliation. Reserve [!] emphasis for this section only. If no live contradictions, state "No live unresolved contradictions as of {{date}}."]
 
 **[!] {{Contradiction 1}}**
 
 - **{{Date}}** ({{Meeting}}): {{Earlier decision or position}}
 - **{{Date}}** ({{Meeting}}): {{Later decision or position that conflicts}}
-- **Status**: unresolved — needs reconciliation
+- **Status**: unresolved. needs reconciliation
 
 **[!] {{Contradiction 2}}**
 
@@ -147,7 +147,7 @@ status: draft
 
 ### Narrative summary
 
-> [guidance: the "story" of this meeting set in 2-3 paragraphs — what happened, what changed, where we are, what is at stake. Prose, not bullets.]
+> [guidance: the "story" of this meeting set in 2-3 paragraphs. what happened, what changed, where we are, what is at stake. Prose, not bullets.]
 
 {{Paragraph 1}}
 
@@ -157,7 +157,7 @@ status: draft
 
 ### Prioritized follow-up suggestions
 
-> [guidance: the "now what" — actionable next steps ranked by priority]
+> [guidance: the "now what". actionable next steps ranked by priority]
 
 **[High priority]**
 
@@ -179,9 +179,9 @@ status: draft
 
 ### Primary inputs (source meetings)
 
-- {{recap-filename-1.md}} ({{date}}) — input quality: {{level}}
-- {{recap-filename-2.md}} ({{date}}) — input quality: {{level}}
-- {{recap-filename-3.md}} ({{date}}) — input quality: {{level}}
+- {{recap-filename-1.md}} ({{date}}). input quality: {{level}}
+- {{recap-filename-2.md}} ({{date}}). input quality: {{level}}
+- {{recap-filename-3.md}} ({{date}}). input quality: {{level}}
 
 ### Referenced artifacts
 
@@ -196,8 +196,8 @@ status: draft
 
 - **Generated**: {{Timestamp}}
 - **Skill version**: 1.0.0
-- **Input quality**: {{weighted average across sources}} — {{rationale}}
-- **Overall confidence**: {{level}} — {{rationale}}
+- **Input quality**: {{weighted average across sources}}. {{rationale}}
+- **Overall confidence**: {{level}}. {{rationale}}
 - **Known gaps**: {{topics or time periods with thin coverage}}
 - **Scope filter**: {{as applied, or "none"}}
 - **Format hint**: {{default | board-prep | onboarding | retro-input | exec-brief}}

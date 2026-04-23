@@ -7,18 +7,18 @@ skill_version: "2.0.0"
 created: 2026-02-20
 status: sample
 thread: storevine
-context: Storevine B2B ecommerce platform — Campaigns audience selection UX design decision
+context: Storevine B2B ecommerce platform . Campaigns audience selection UX design decision
 ---
 
 ## Scenario
 
-During the Campaigns pre-sprint design review, the design team and growth PM debated three approaches to the audience selection experience — the step where a merchant defines who receives a campaign. The decision is consequential: it is the step that most commonly causes abandonment in competing tools and the one where Campaigns has the clearest opportunity to differentiate on simplicity for non-adopter merchants.
+During the Campaigns pre-sprint design review, the design team and growth PM debated three approaches to the audience selection experience . the step where a merchant defines who receives a campaign. The decision is consequential: it is the step that most commonly causes abandonment in competing tools and the one where Campaigns has the clearest opportunity to differentiate on simplicity for non-adopter merchants.
 
 **Source Notes:**
 
-- Nielsen Norman Group, "Progressive Disclosure" (nngroup.com/articles/progressive-disclosure/) — establishes that presenting simpler options by default while keeping advanced functionality accessible on demand reduces task abandonment without limiting power users, the core design principle applied in the selected option.
-- Mailchimp Help Center, "Create a Segment" (mailchimp.com/help/create-and-send-to-a-segment/) — documents Mailchimp's hybrid audience selection approach (pre-built conditions alongside a custom filter builder), confirming that the named-segment-plus-custom-filter model is validated in the email marketing product category.
-- Baymard Institute e-commerce UX research (baymard.com) — documents that the number of required configuration steps before task completion is the leading driver of form abandonment in commerce workflows, validating the decision to minimize required fields in the default audience selection path.
+- Nielsen Norman Group, "Progressive Disclosure" (nngroup.com/articles/progressive-disclosure/) . establishes that presenting simpler options by default while keeping advanced functionality accessible on demand reduces task abandonment without limiting power users, the core design principle applied in the selected option.
+- Mailchimp Help Center, "Create a Segment" (mailchimp.com/help/create-and-send-to-a-segment/) . documents Mailchimp's hybrid audience selection approach (pre-built conditions alongside a custom filter builder), confirming that the named-segment-plus-custom-filter model is validated in the email marketing product category.
+- Baymard Institute e-commerce UX research (baymard.com) . documents that the number of required configuration steps before task completion is the leading driver of form abandonment in commerce workflows, validating the decision to minimize required fields in the default audience selection path.
 
 ---
 
@@ -27,9 +27,9 @@ During the Campaigns pre-sprint design review, the design team and growth PM deb
 ```
 /design-rationale
 
-Project: Campaigns — native email marketing for Storevine merchants
+Project: Campaigns . native email marketing for Storevine merchants
 Decision: Audience selection UX for the campaign creation flow
-Stage: Pre-sprint design review — finalizing Figma specs before engineering
+Stage: Pre-sprint design review . finalizing Figma specs before engineering
 
 Decision I need to document:
 - We debated 3 audience selection approaches before the design review:
@@ -41,7 +41,7 @@ Decision I need to document:
 Context:
 - Primary target segment: non-adopter merchants (no current email tool)
 - Interview data: 3 of 8 merchants cited setup complexity as the barrier
-- Figma link: [internal — Campaigns audience selection v3 spec]
+- Figma link: [internal . Campaigns audience selection v3 spec]
 
 Need: full design rationale document for the engineering handoff package.
 Decision makers: Design Lead, Growth PM, Engineering Lead.
@@ -66,11 +66,11 @@ Decision makers: Design Lead, Growth PM, Engineering Lead.
 
 ### Problem Statement
 
-Audience selection — choosing which customers receive a campaign — is the step in email marketing workflows where non-expert users most commonly abandon. In merchant interviews, P3, P6, and P8 all described email marketing as "overwhelming" or impossible to start; competitive analysis confirmed that Klaviyo's segment builder, while powerful, is one of the primary barriers to adoption for merchants who are not data analysts. The Campaigns v1 audience selection UX must serve the non-adopter merchant (primary v1 target) without excluding merchants who need more control than a pre-built list provides.
+Audience selection . choosing which customers receive a campaign . is the step in email marketing workflows where non-expert users most commonly abandon. In merchant interviews, P3, P6, and P8 all described email marketing as "overwhelming" or impossible to start; competitive analysis confirmed that Klaviyo's segment builder, while powerful, is one of the primary barriers to adoption for merchants who are not data analysts. The Campaigns v1 audience selection UX must serve the non-adopter merchant (primary v1 target) without excluding merchants who need more control than a pre-built list provides.
 
 ### User Need
 
-Non-adopter merchants need to identify a reasonable audience for their first email campaign without needing to understand database-style filtering logic or export and reimport customer data. The key user need is: "I want to send this campaign to the right people — customers who bought recently, or who haven't bought in a while — without needing to define what 'recently' means in a filter interface I've never seen before." At the same time, merchants with existing email programs who are evaluating Campaigns as a Mailchimp alternative need the ability to build custom segments for their specific use cases.
+Non-adopter merchants need to identify a reasonable audience for their first email campaign without needing to understand database-style filtering logic or export and reimport customer data. The key user need is: "I want to send this campaign to the right people . customers who bought recently, or who haven't bought in a while . without needing to define what 'recently' means in a filter interface I've never seen before." At the same time, merchants with existing email programs who are evaluating Campaigns as a Mailchimp alternative need the ability to build custom segments for their specific use cases.
 
 ### Constraints
 
@@ -85,7 +85,7 @@ Non-adopter merchants need to identify a reasonable audience for their first ema
 ### Design Principles Applied
 
 - **Designed for the first send, not the hundredth:** The default experience optimizes for a merchant who has never sent an email campaign; power features are available but never mandatory.
-- **Power is always accessible, never forced:** Advanced functionality is one interaction away, not buried or removed — merchants who need it can find it without the default experience being cluttered by it.
+- **Power is always accessible, never forced:** Advanced functionality is one interaction away, not buried or removed . merchants who need it can find it without the default experience being cluttered by it.
 
 ---
 
@@ -96,12 +96,12 @@ Non-adopter merchants need to identify a reasonable audience for their first ema
 **Description:** The default audience selection experience presents a filter builder interface where merchants define their audience by combining conditions (e.g., "Customer > purchased > in the last > 90 days"). Conditions can be nested with AND/OR logic. This mirrors the primary segment interface in Klaviyo and Mailchimp.
 
 **Pros:**
-- Maximum flexibility — any segment a merchant can express in purchase history, order count, or engagement can be built
+- Maximum flexibility . any segment a merchant can express in purchase history, order count, or engagement can be built
 - Familiar to merchants who have used Klaviyo and are evaluating Campaigns as a replacement
-- No opinionated curation required — design and product do not need to decide which named segments are "right"
+- No opinionated curation required . design and product do not need to decide which named segments are "right"
 
 **Cons:**
-- Highest complexity for first-time users — requires understanding of AND/OR logic and filter condition syntax before sending a single campaign
+- Highest complexity for first-time users . requires understanding of AND/OR logic and filter condition syntax before sending a single campaign
 - Engineering effort is highest of the three options: query builder component, validation, and UI is L effort [fictional] standalone
 - Contradicts the core v1 design principle of serving non-adopters who cited setup complexity as their barrier to email marketing
 
@@ -112,7 +112,7 @@ Non-adopter merchants need to identify a reasonable audience for their first ema
 **Description:** The audience selection step presents a fixed list of curated, named segments: "All customers," "Customers who purchased in the last 90 days," "Customers who haven't ordered in 6 months," "First-time buyers," and "VIP customers (5+ orders)" [fictional]. Merchants cannot modify these definitions or create custom segments.
 
 **Pros:**
-- Minimum complexity — the merchant makes one selection from a short list and moves on
+- Minimum complexity . the merchant makes one selection from a short list and moves on
 - Fastest to build and design; no query builder component required
 - Best match for the non-adopter use case: the most common first-campaign audiences are covered by the curated list
 
@@ -130,12 +130,12 @@ Non-adopter merchants need to identify a reasonable audience for their first ema
 **Pros:**
 - Serves the primary use case (non-adopters) with the same simplicity as Option B
 - Gives merchants who need more control a path to custom segments without requiring the full query builder complexity of Option A
-- Progressive disclosure pattern: the custom filter is accessible but not visible in the default flow — non-adopters who do not need it will never see it
+- Progressive disclosure pattern: the custom filter is accessible but not visible in the default flow . non-adopters who do not need it will never see it
 - Engineering effort is lower than Option A because the custom filter panel uses limited AND-only conditions, not a full query builder component
 
 **Cons:**
 - More complex to design than Option B; the disclosure pattern requires a second UI state that must be tested on mobile viewports
-- The simplified custom filter (AND-only, no nested conditions) will not satisfy merchants who need the full expressive power of Klaviyo's segment builder — those merchants are not the v1 target, but they may still evaluate and reject Campaigns on this basis
+- The simplified custom filter (AND-only, no nested conditions) will not satisfy merchants who need the full expressive power of Klaviyo's segment builder . those merchants are not the v1 target, but they may still evaluate and reject Campaigns on this basis
 
 ---
 
@@ -161,7 +161,7 @@ Non-adopter merchants need to identify a reasonable audience for their first ema
 
 ### User Research Input
 
-- Interview data: 3 of 8 merchant participants (P3, P6, P8) abandoned email marketing due to setup complexity; none of these participants described needing custom segment logic — they simply could not get started with a blank filter interface.
+- Interview data: 3 of 8 merchant participants (P3, P6, P8) abandoned email marketing due to setup complexity; none of these participants described needing custom segment logic . they simply could not get started with a blank filter interface.
 - Competitive analysis: Mailchimp's hybrid approach (named conditions + custom filters) is the documented standard in the SMB email category; Campaigns Option C is consistent with this approach and does not position Campaigns below Mailchimp's baseline capability.
 
 ---
@@ -170,15 +170,15 @@ Non-adopter merchants need to identify a reasonable audience for their first ema
 
 ### Why Option C?
 
-Option C is the only choice that serves the non-adopter primary target at full quality without foreclosing the secondary use case of moderate-sophistication merchants who need a segment the curated list does not cover. Option B would have been acceptable if Campaigns were solely targeting merchants who have never sent an email — but the merchant interview cohort includes merchants like P2 (Mailchimp user considering a switch) who have specific segment needs, and a product that cannot accommodate a time-based custom segment will lose these evaluators at the audience selection step.
+Option C is the only choice that serves the non-adopter primary target at full quality without foreclosing the secondary use case of moderate-sophistication merchants who need a segment the curated list does not cover. Option B would have been acceptable if Campaigns were solely targeting merchants who have never sent an email . but the merchant interview cohort includes merchants like P2 (Mailchimp user considering a switch) who have specific segment needs, and a product that cannot accommodate a time-based custom segment will lose these evaluators at the audience selection step.
 
 ### Key Differentiators
 
-Option A was eliminated primarily on the non-adopter usability criterion — the evidence from merchant interviews is clear that a filter builder as the first thing a non-adopter sees in the audience selection step will reproduce the same abandonment pattern that Klaviyo and Mailchimp create. Option B was eliminated on the flexibility criterion — the curated segment list covers 80% [fictional] of common v1 use cases but leaves a visible gap for merchants with moderate needs, and naming that gap in the competitive evaluation would be a liability. Option C accepts the incremental engineering and design cost (Med vs. Low) in exchange for serving both populations without compromise.
+Option A was eliminated primarily on the non-adopter usability criterion . the evidence from merchant interviews is clear that a filter builder as the first thing a non-adopter sees in the audience selection step will reproduce the same abandonment pattern that Klaviyo and Mailchimp create. Option B was eliminated on the flexibility criterion . the curated segment list covers 80% [fictional] of common v1 use cases but leaves a visible gap for merchants with moderate needs, and naming that gap in the competitive evaluation would be a liability. Option C accepts the incremental engineering and design cost (Med vs. Low) in exchange for serving both populations without compromise.
 
 ### Dissenting Opinions
 
-The Engineering Lead's initial preference was Option B on the grounds that the simpler implementation reduces build risk in a sprint that already carries the attribution webhook integration as a medium-effort item. This preference was noted and addressed by reducing the custom filter panel scope — AND-only conditions, no nested logic, no OR operators — to bring the engineering effort below the original estimate for a full query builder. The simplified custom filter panel was re-estimated at S effort [fictional] and the Engineering Lead accepted the updated scope in the design review.
+The Engineering Lead's initial preference was Option B on the grounds that the simpler implementation reduces build risk in a sprint that already carries the attribution webhook integration as a medium-effort item. This preference was noted and addressed by reducing the custom filter panel scope . AND-only conditions, no nested logic, no OR operators . to bring the engineering effort below the original estimate for a full query builder. The simplified custom filter panel was re-estimated at S effort [fictional] and the Engineering Lead accepted the updated scope in the design review.
 
 ---
 
@@ -204,10 +204,10 @@ The Engineering Lead's initial preference was Option B on the grounds that the s
 
 **Is this decision reversible?** Yes, with effort
 
-**Cost to reverse:** Promoting the custom filter panel to a full query builder with OR logic and nested conditions would require redesigning the filter UI and re-implementing the query builder component — estimated M-L engineering effort [fictional]. The named segment list is easy to extend; removing it and replacing it with a custom filter default would require user communication and onboarding copy updates.
+**Cost to reverse:** Promoting the custom filter panel to a full query builder with OR logic and nested conditions would require redesigning the filter UI and re-implementing the query builder component . estimated M-L engineering effort [fictional]. The named segment list is easy to extend; removing it and replacing it with a custom filter default would require user communication and onboarding copy updates.
 
 **Conditions that would warrant reverting:**
-- Post-GA data shows that fewer than 10% [fictional] of merchants use named segments and that the majority of segment-related support tickets are from merchants who cannot build what they need with the current options — indicating the named segment model is not matching actual merchant use cases
+- Post-GA data shows that fewer than 10% [fictional] of merchants use named segments and that the majority of segment-related support tickets are from merchants who cannot build what they need with the current options . indicating the named segment model is not matching actual merchant use cases
 - A Klaviyo downmarket push introduces a full-featured free-tier segment builder that makes Campaigns' simplified approach a visible competitive disadvantage before v2 ships
 
 ---
@@ -233,7 +233,7 @@ The Engineering Lead's initial preference was Option B on the grounds that the s
 
 ## Supporting Materials
 
-- Figma: Campaigns audience selection v3 spec (internal — Figma workspace)
+- Figma: Campaigns audience selection v3 spec (internal . Figma workspace)
 - Merchant interview synthesis (January 2026): interview findings on setup complexity
 - Competitive analysis (February 2026): Mailchimp and Klaviyo audience selection UX comparison
 

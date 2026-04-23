@@ -177,10 +177,10 @@ Before considering this workflow complete, verify:
 
 ## See Also
 
-- [Feature Kickoff](feature-kickoff.md) — When the problem is clear and you are ready to move to execution
-- [Product Strategy](product-strategy.md) — When discovery findings need to feed into broader strategic framing
-- [Triple Diamond](triple-diamond.md) — For a comprehensive end-to-end product development workflow
+- [Feature Kickoff](feature-kickoff.md) . When the problem is clear and you are ready to move to execution
+- [Product Strategy](product-strategy.md) . When discovery findings need to feed into broader strategic framing
+- [Triple Diamond](triple-diamond.md) . For a comprehensive end-to-end product development workflow
 
 ---
 
-*Part of [PM-Skills](https://github.com/product-on-purpose/pm-skills/blob/main/README.md) — Open source Product Management skills for AI agents*
+*Part of [PM-Skills](https://github.com/product-on-purpose/pm-skills/blob/main/README.md) . Open source Product Management skills for AI agents*

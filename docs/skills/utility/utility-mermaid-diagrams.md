@@ -27,7 +27,7 @@ Create effective, syntactically valid mermaid diagrams for product documents.
 
 ## When NOT to Use
 
-- Exporting diagrams to image files (PNG/SVG) — that's a rendering tool concern
+- Exporting diagrams to image files (PNG/SVG) . that's a rendering tool concern
 - Using non-mermaid diagramming tools (Figma, Lucidchart, draw.io)
 - Creating purely decorative visuals with no informational purpose
 
@@ -43,13 +43,13 @@ Or reference the skill file directly: `skills/utility-mermaid-diagrams/SKILL.md`
 
 ## Instructions
 
-1. **Identify what you're communicating** — What relationship, flow, hierarchy, or proportion needs to be visible? Who is the audience?
-2. **Apply the cardinal rule** — Confirm a diagram adds value over a list or table
-3. **Select a diagram type** — Use the selection guide above, browse `references/pm-use-cases.md` by task, or browse `references/diagram-catalog.md` by type
-4. **Plan the diagram** — Fill out the planning worksheet in `references/TEMPLATE.md`: purpose, audience, node inventory, type rationale
-5. **Write the mermaid code** — Follow `references/syntax-guide.md` rules; start with the minimal syntax example from `references/diagram-catalog.md` and expand
-6. **Validate** — Run through the quality checklist below
-7. **Embed** — Place the validated mermaid code block in your document
+1. **Identify what you're communicating** . What relationship, flow, hierarchy, or proportion needs to be visible? Who is the audience?
+2. **Apply the cardinal rule** . Confirm a diagram adds value over a list or table
+3. **Select a diagram type** . Use the selection guide above, browse `references/pm-use-cases.md` by task, or browse `references/diagram-catalog.md` by type
+4. **Plan the diagram** . Fill out the planning worksheet in `references/TEMPLATE.md`: purpose, audience, node inventory, type rationale
+5. **Write the mermaid code** . Follow `references/syntax-guide.md` rules; start with the minimal syntax example from `references/diagram-catalog.md` and expand
+6. **Validate** . Run through the quality checklist below
+7. **Embed** . Place the validated mermaid code block in your document
 
 ## Output Template
 
@@ -394,7 +394,7 @@ If both boxes are not checked, use a list or table instead.
 
 See this skill applied to three different product contexts:
 
-??? example "Storevine (B2B): Storevine B2B ecommerce platform — mermaid flowchart for Campaigns email send approval workflow"
+??? example "Storevine (B2B): Storevine B2B ecommerce platform . mermaid flowchart for Campaigns email send approval workflow"
     **Prompt:**
 
     ```
@@ -412,13 +412,13 @@ See this skill applied to three different product contexts:
 ## Quality Checklist
 
 - [ ] Diagram renders without error in target environment
-- [ ] Cardinal rule satisfied — a list or table would not communicate this more clearly
+- [ ] Cardinal rule satisfied . a list or table would not communicate this more clearly
 - [ ] No linear sequences without branching, relationships, or hierarchy
 - [ ] All labels with spaces or special characters are properly quoted
 - [ ] Special characters escaped where needed
 - [ ] Node/participant count within type-specific limits
 - [ ] Colors are accessible (WCAG AA 3:1 contrast minimum, black text on light backgrounds)
-- [ ] Color is never the sole differentiator — shapes and labels also distinguish elements
+- [ ] Color is never the sole differentiator . shapes and labels also distinguish elements
 - [ ] Diagram has a descriptive title or surrounding prose context
 - [ ] `%%` comments document any non-obvious layout or grouping choices
 

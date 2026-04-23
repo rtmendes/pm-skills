@@ -7,7 +7,7 @@ skill_version: "2.0.0"
 created: 2026-02-20
 status: sample
 thread: storevine
-context: Storevine B2B ecommerce platform — Campaigns v1.0 build sprint retrospective
+context: Storevine B2B ecommerce platform . Campaigns v1.0 build sprint retrospective
 ---
 
 ## Scenario
@@ -16,9 +16,9 @@ Nine days after Campaigns GA (April 28, 2026), Storevine's growth PM facilitated
 
 **Source Notes:**
 
-- Esther Derby and Diana Larsen, "Agile Retrospectives" (estherderby.com/agile-retrospectives) — the retrospective facilitation methodology; the Start/Stop/Continue format used in this retro is one of the structured formats described in this resource, suited for teams reviewing a completed project phase rather than a single sprint.
-- CAN-SPAM Act (FTC, ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business) — the compliance requirement that made Legal sign-off a hard launch gate; the retro action to start Legal reviews 6 weeks before GA directly addresses the crunch caused by the CAN-SPAM compliance review timeline.
-- Google, "Email Sender Guidelines" (support.google.com/mail/answer/81126) — the 2024 enforcement of DKIM, SPF, and DMARC authentication for bulk senders; the DMARC setup delay discussed in the retrospective is attributable to underestimating DNS propagation requirements introduced by Google's enforcement of these guidelines.
+- Esther Derby and Diana Larsen, "Agile Retrospectives" (estherderby.com/agile-retrospectives) . the retrospective facilitation methodology; the Start/Stop/Continue format used in this retro is one of the structured formats described in this resource, suited for teams reviewing a completed project phase rather than a single sprint.
+- CAN-SPAM Act (FTC, ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business) . the compliance requirement that made Legal sign-off a hard launch gate; the retro action to start Legal reviews 6 weeks before GA directly addresses the crunch caused by the CAN-SPAM compliance review timeline.
+- Google, "Email Sender Guidelines" (support.google.com/mail/answer/81126) . the 2024 enforcement of DKIM, SPF, and DMARC authentication for bulk senders; the DMARC setup delay discussed in the retrospective is attributable to underestimating DNS propagation requirements introduced by Google's enforcement of these guidelines.
 
 ---
 
@@ -38,7 +38,7 @@ Team: Growth PM, Engineering Lead, Backend Engineer,
 
 What went well:
 - Beta merchant FAQ (23 questions → 10 FAQ + 15 canned responses)
-  [fictional] — reduced GA-week ticket volume significantly
+  [fictional] . reduced GA-week ticket volume significantly
 - Instrumentation spec process caught subscriber email PII gap
   before GA
 - Feature flag rollout (10%→100%) worked; zero rollback events
@@ -51,9 +51,9 @@ What to improve:
 - Klaviyo partner notice email sent 2 days late (no clear owner)
 
 Previous retro actions to review (Sprint 7 retro):
-- Add QA Lead to kickoff sessions — Complete
-- Define escalation path for blocker tickets — In Progress
-- Document infrastructure prerequisites for launches — Not Started
+- Add QA Lead to kickoff sessions . Complete
+- Define escalation path for blocker tickets . In Progress
+- Document infrastructure prerequisites for launches . Not Started
 
 Need: full sprint retrospective with action items.
 ```
@@ -83,7 +83,7 @@ Need: full sprint retrospective with action items.
 
 ### Context
 
-The Campaigns v1.0 build sprint closed with a clean GA on April 28, 2026, and a full GA week (April 28 – May 5) with zero rollback events. This retrospective covers the 13-week build sprint, the pre-GA launch checklist execution, and the first 7 days of merchant activity — including the initial feature flag rollout (10% → 25% → 50% → 100% over 6 days [fictional]), the first merchant sends, and the GA-week Merchant Success ticket volume. The A/B test launched on GA day and is running; this retro does not cover experiment results (which will not be available for 60 days).
+The Campaigns v1.0 build sprint closed with a clean GA on April 28, 2026, and a full GA week (April 28 – May 5) with zero rollback events. This retrospective covers the 13-week build sprint, the pre-GA launch checklist execution, and the first 7 days of merchant activity . including the initial feature flag rollout (10% → 25% → 50% → 100% over 6 days [fictional]), the first merchant sends, and the GA-week Merchant Success ticket volume. The A/B test launched on GA day and is running; this retro does not cover experiment results (which will not be available for 60 days).
 
 ---
 
@@ -103,14 +103,14 @@ The Campaigns v1.0 build sprint closed with a clean GA on April 28, 2026, and a 
 
 ### Team Highlights
 
-- The beta merchant feedback program produced 23 support questions [fictional] that Merchant Success Lead converted into 10 FAQ entries and 15 canned responses before GA — when GA-week tickets arrived, the support team already had answers ready, and GA-week ticket volume was below the estimated range [fictional]
-- The instrumentation spec review process caught a PII gap — subscriber email addresses were initially included as event properties in an early draft of `attribution_recorded` — before any instrumentation was shipped to staging; removing this before GA avoided a potential GDPR compliance incident
+- The beta merchant feedback program produced 23 support questions [fictional] that Merchant Success Lead converted into 10 FAQ entries and 15 canned responses before GA . when GA-week tickets arrived, the support team already had answers ready, and GA-week ticket volume was below the estimated range [fictional]
+- The instrumentation spec review process caught a PII gap . subscriber email addresses were initially included as event properties in an early draft of `attribution_recorded` . before any instrumentation was shipped to staging; removing this before GA avoided a potential GDPR compliance incident
 - The feature flag rollout from 10% to 100% across 6 days [fictional] worked as designed: send failure rate peaked at 0.8% [fictional] during the initial 10% ramp (well below the 2% alert threshold), and the rollout proceeded to 100% without any rollback events or on-call escalations
 
 ### Process Wins
 
 - The dual PM + QA review on all compliance copy (CAN-SPAM required text, unsubscribe language, physical address fields) caught two instances of non-compliant copy in the pre-built template library before GA; fixing these post-launch would have required a product update and a retroactive merchant communication
-- The incident response runbook — created by Engineering Lead in the final week before GA — was used on day 2 of GA week when a brief attribution webhook backlog occurred (410 unprocessed events [fictional]); the runbook guided the on-call engineer through the diagnosis and resolution in under 20 minutes without paging anyone above the on-call level
+- The incident response runbook . created by Engineering Lead in the final week before GA . was used on day 2 of GA week when a brief attribution webhook backlog occurred (410 unprocessed events [fictional]); the runbook guided the on-call engineer through the diagnosis and resolution in under 20 minutes without paging anyone above the on-call level
 
 ### Individual Shoutouts
 
@@ -125,7 +125,7 @@ The Campaigns v1.0 build sprint closed with a clean GA on April 28, 2026, and a 
 
 - Legal review started 3 weeks before GA instead of the intended 6 weeks; the CAN-SPAM compliance architecture sign-off was not received until April 14 [fictional], which was 14 days before GA and 2 weeks after marketing needed the compliance copy finalized for the blog post, email campaign, and in-app banner
 - DMARC/SPF/DKIM setup took 5 business days instead of the 1 day estimated [fictional]; DNS propagation delays (24–72 hours per record, multiple records required) were discovered during implementation rather than during sprint planning, and the setup nearly missed its April 21 launch gate deadline
-- The Klaviyo partner notice email — required 48 hours before the GA announcement — was sent on GA day itself (April 28 [fictional]) instead of April 26; the launch checklist item had no explicitly assigned owner, and it was picked up by Growth PM only after the GA announcement draft was already in review
+- The Klaviyo partner notice email . required 48 hours before the GA announcement . was sent on GA day itself (April 28 [fictional]) instead of April 26; the launch checklist item had no explicitly assigned owner, and it was picked up by Growth PM only after the GA announcement draft was already in review
 
 ### Process Pain Points
 
@@ -147,20 +147,20 @@ The Campaigns v1.0 build sprint closed with a clean GA on April 28, 2026, and a 
 ### Legal and Compliance Timing
 
 **What was discussed:**
-The team discussed why the Legal review started 3 weeks before GA instead of 6. The root cause was not that Legal was unavailable — Legal said they could have started earlier if asked — but that the PM kickoff template and sprint planning process do not flag compliance implications as a trigger for early Legal engagement. Legal receives a calendar invite for the compliance review when the feature is ready for review, not at the start of the design phase.
+The team discussed why the Legal review started 3 weeks before GA instead of 6. The root cause was not that Legal was unavailable . Legal said they could have started earlier if asked . but that the PM kickoff template and sprint planning process do not flag compliance implications as a trigger for early Legal engagement. Legal receives a calendar invite for the compliance review when the feature is ready for review, not at the start of the design phase.
 
 **Root cause identified:**
-Legal review is not a sprint story and therefore has no sprint-board visibility. It is a launch checklist item with a due date. When Legal's review takes longer than estimated (which happened here due to a parallel compliance project taking Legal's time [fictional]), the downstream dependencies — compliance copy, marketing content, template library review — have no lead time to absorb the delay.
+Legal review is not a sprint story and therefore has no sprint-board visibility. It is a launch checklist item with a due date. When Legal's review takes longer than estimated (which happened here due to a parallel compliance project taking Legal's time [fictional]), the downstream dependencies . compliance copy, marketing content, template library review . have no lead time to absorb the delay.
 
 **Proposed solution:**
-For any feature with compliance implications (user data collection, external communication, financial transactions), Legal joins the feature kickoff meeting and is assigned as a named reviewer on a sprint story that appears on the board at design freeze — not at code freeze. The compliance review story blocks the marketing content story in the sprint board, making the dependency visible.
+For any feature with compliance implications (user data collection, external communication, financial transactions), Legal joins the feature kickoff meeting and is assigned as a named reviewer on a sprint story that appears on the board at design freeze . not at code freeze. The compliance review story blocks the marketing content story in the sprint board, making the dependency visible.
 
 ---
 
 ### DMARC/SPF/DKIM Setup and Infrastructure Estimation
 
 **What was discussed:**
-The Platform Squad estimated DMARC/SPF/DKIM setup at 1 day [fictional] based on previous experience with shared sending infrastructure on the Storevine platform. Dedicated sending domain setup proved to be significantly more complex: it required creating multiple DNS records (SPF TXT record, DKIM CNAME records, DMARC TXT record), waiting 24–72 hours for each record type to propagate before verification, and then iterating when Google's authentication checker reported partial failures due to subdomain configuration. Total elapsed time was 5 business days [fictional], with setup beginning on April 14 and completing April 21 — the launch gate deadline.
+The Platform Squad estimated DMARC/SPF/DKIM setup at 1 day [fictional] based on previous experience with shared sending infrastructure on the Storevine platform. Dedicated sending domain setup proved to be significantly more complex: it required creating multiple DNS records (SPF TXT record, DKIM CNAME records, DMARC TXT record), waiting 24–72 hours for each record type to propagate before verification, and then iterating when Google's authentication checker reported partial failures due to subdomain configuration. Total elapsed time was 5 business days [fictional], with setup beginning on April 14 and completing April 21 . the launch gate deadline.
 
 **Root cause identified:**
 This was the first time the Platform Squad had provisioned a dedicated sending domain. The team had experience with shared infrastructure but not with DNS-level configuration for email authentication. DNS propagation windows were not in the standard sprint estimation checklist, and there was no runbook to reference.
@@ -194,8 +194,8 @@ Engineering Lead will document a DMARC/SPF/DKIM setup runbook covering the full 
 
 ## Parking Lot
 
-- EU merchant GDPR consent data model: deferred from Campaigns v1.0 to v1.1; Legal review still in progress as of this retro — tracked as a blocker in Sprint 12 refinement.
-- Klaviyo-to-Campaigns migration workflow: raised by Merchant Success Lead based on migrated merchant support tickets; deferred to v2.0 roadmap planning — not a GA-week urgent item, but flagged for the persevere/pivot evaluation.
+- EU merchant GDPR consent data model: deferred from Campaigns v1.0 to v1.1; Legal review still in progress as of this retro . tracked as a blocker in Sprint 12 refinement.
+- Klaviyo-to-Campaigns migration workflow: raised by Merchant Success Lead based on migrated merchant support tickets; deferred to v2.0 roadmap planning . not a GA-week urgent item, but flagged for the persevere/pivot evaluation.
 
 ---
 
@@ -211,14 +211,14 @@ Engineering Lead will document a DMARC/SPF/DKIM setup runbook covering the full 
 
 ### Recurring Themes
 
-- Legal/compliance timing has appeared in 3 consecutive sprint retrospectives [fictional] as a process pain point — this is the first retro in which a structural solution (kickoff attendance + sprint story) was agreed upon rather than a one-time workaround.
+- Legal/compliance timing has appeared in 3 consecutive sprint retrospectives [fictional] as a process pain point . this is the first retro in which a structural solution (kickoff attendance + sprint story) was agreed upon rather than a one-time workaround.
 
 ---
 
 ## Facilitator Notes
 
 - Start/Stop/Continue format worked well for a team of 6 covering a 13-week sprint; theme dot-voting took 8 minutes [fictional] and produced a clear priority order without debate
-- Consider using the 4Ls format (Liked, Learned, Lacked, Longed For) for the first post-experiment retrospective — the A/B test results will generate learning-specific reflections that the 4Ls format captures better than Start/Stop/Continue
+- Consider using the 4Ls format (Liked, Learned, Lacked, Longed For) for the first post-experiment retrospective . the A/B test results will generate learning-specific reflections that the 4Ls format captures better than Start/Stop/Continue
 - Retrospective energy was notably high given the clean GA; next retrospective may need more structured quiet reflection time if the post-launch momentum fades and the team moves into a longer sustaining mode
 
 ---

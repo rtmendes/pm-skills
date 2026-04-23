@@ -37,7 +37,7 @@ When asked to document experiment results, follow these steps:
    Show the primary metric outcome clearly: what were the values for control and treatment? Include statistical significance (p-value), confidence intervals, and sample sizes. Be honest about whether results are conclusive.
 
 4. **Analyze Secondary Metrics**
-   Present guardrail metrics that ensure you didn't cause unintended harm. Note any secondary metrics that moved unexpectedly—both positive and negative.
+   Present guardrail metrics that ensure you didn't cause unintended harm. Note any secondary metrics that moved unexpectedly.both positive and negative.
 
 5. **Segment the Data**
    Look for differential effects across user segments (platform, tenure, plan type, etc.). Sometimes overall results mask important segment-level insights.
@@ -49,7 +49,7 @@ When asked to document experiment results, follow these steps:
    Be clear: should we ship, iterate, or kill? Support the recommendation with the evidence. If the decision is nuanced, explain the trade-offs.
 
 8. **Define Next Steps**
-   Specify what happens now—engineering work to ship, follow-up experiments, metrics to continue monitoring, or documentation to update.
+   Specify what happens now.engineering work to ship, follow-up experiments, metrics to continue monitoring, or documentation to update.
 
 ## Output Format
 

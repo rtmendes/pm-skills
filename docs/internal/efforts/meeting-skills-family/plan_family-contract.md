@@ -1,4 +1,4 @@
-# Meeting Skills Family — Authoring Plan
+# Meeting Skills Family. Authoring Plan
 
 **Status**: In Progress (scaffolding phase)
 **Owner**: Maintainers
@@ -13,11 +13,11 @@
 
 If you are a future session picking up this work, start here:
 
-1. **Read this doc top to bottom** — it is the source of truth for decisions, status, and next steps
+1. **Read this doc top to bottom**. it is the source of truth for decisions, status, and next steps
 2. **Check the File Inventory section** below to see what exists and what remains
 3. **Check the Decisions Log section** to understand *why* choices were made
-4. **Current phase** is shown in the Execution Phases section — pick up at the first `pending` row
-5. **Canonical contract** lives at `docs/reference/skill-families/meeting-skills-contract.md` — read it before editing any individual skill
+4. **Current phase** is shown in the Execution Phases section. pick up at the first `pending` row
+5. **Canonical contract** lives at `docs/reference/skill-families/meeting-skills-contract.md`. read it before editing any individual skill
 6. **Related docs**:
    - Two archived input notes: `docs/internal/_NOTES/archived-efforts/2026-04-17_foundation-meeting-skills-descriptions.md` + `..._templates.md` (the original design material)
    - Two archived original efforts: `docs/internal/_NOTES/archived-efforts/2026-04-17_F-17-meeting-synthesis-original.md` + `..._F-18-meeting-prep-original.md`
@@ -31,7 +31,7 @@ If you are a future session picking up this work, start here:
 
 Coordinate the authoring of a 5-skill `foundation-meeting-*` family that shares a common behavioral contract, frontmatter schema, file naming convention, and cross-skill CI enforcement. The family replaces narrower F-17 (meeting-synthesis) and F-18 (meeting-prep) efforts that were scoped before the expanded family design existed.
 
-## Scope — the 5 skills
+## Scope. the 5 skills
 
 | ID | Skill directory | Command | Phase in lifecycle | Primary audience |
 |----|----------------|---------|--------------------|------------------|
@@ -41,7 +41,7 @@ Coordinate the authoring of a 5-skill `foundation-meeting-*` family that shares 
 | F-17 (rewritten) | `skills/foundation-meeting-synthesize/` | `/meeting-synthesize` | Cross-meeting | User / leadership |
 | F-28 (new) | `skills/foundation-stakeholder-update/` | `/stakeholder-update` | Post-meeting | Primarily non-attendees; secondarily some attendees |
 
-All 5 classified as `foundation` phase — cross-cutting tooling that applies anywhere in the Triple Diamond lifecycle (consistent with `foundation-persona`, `foundation-lean-canvas` precedent).
+All 5 classified as `foundation` phase. cross-cutting tooling that applies anywhere in the Triple Diamond lifecycle (consistent with `foundation-persona`, `foundation-lean-canvas` precedent).
 
 ## Decisions Log
 
@@ -80,7 +80,7 @@ Single source of truth for all files produced by this work. Status values: `plan
 
 | Path | Status | Date | Notes |
 |------|--------|------|-------|
-| `docs/internal/efforts/meeting-skills-family/plan_family-contract.md` | created | 2026-04-17 | **This doc** — master coordination + file inventory |
+| `docs/internal/efforts/meeting-skills-family/plan_family-contract.md` | created | 2026-04-17 | **This doc**. master coordination + file inventory |
 | `docs/reference/skill-families/meeting-skills-contract.md` | created | 2026-04-17 | Public canonical contract v1.0.0, CI-enforced |
 
 ### Archives (moves, not creates)
@@ -102,7 +102,7 @@ Single source of truth for all files produced by this work. Status values: `plan
 | `docs/internal/efforts/F-27-meeting-recap.md` | created | 2026-04-17 | New effort. |
 | `docs/internal/efforts/F-28-stakeholder-update.md` | created | 2026-04-17 | New effort. |
 
-### Effort folders — specs (5 total)
+### Effort folders. specs (5 total)
 
 | Path | Status | Date | Notes |
 |------|--------|------|-------|
@@ -112,7 +112,7 @@ Single source of truth for all files produced by this work. Status values: `plan
 | `docs/internal/efforts/F-27-meeting-recap/specification.md` | created | 2026-04-17 | |
 | `docs/internal/efforts/F-28-stakeholder-update/specification.md` | created | 2026-04-17 | |
 
-### Effort folders — plans (5 total)
+### Effort folders. plans (5 total)
 
 | Path | Status | Date | Notes |
 |------|--------|------|-------|
@@ -181,14 +181,14 @@ These are authored in downstream execution sessions, tracked in each effort's `p
 | `docs/guides/creating-skills.md` | **modified** | 2026-04-17 | Catalog check line 60 |
 | `library/skill-output-samples/README_SAMPLES.md` | **modified** | 2026-04-17 | 94→99 samples, 33→38 skills; 5 new Browse-by-Skill rows for meeting family (standalone samples, not thread-linked) |
 | `skills-manifest.yaml` (in `docs/internal/release-plans/v2.11.0/`) | **created** | 2026-04-17 | 6 skill entries at v1.0.0 (F-26 + 5 meeting skills); family-contract note |
-| `QUICKSTART.md` | deferred (release-prep) | — | Skill/command counts not yet updated in this session |
-| `docs/getting-started/quickstart.md` | deferred (release-prep) | — | Skill/command counts not yet updated |
-| `docs/index.md` | deferred (release-prep) | — | Skill count not yet updated |
-| `docs/guides/mcp-integration.md` | deferred (release-prep) | — | Skill tool counts not yet updated |
-| `AGENTS/claude/CONTEXT.md` | deferred (release-prep) | — | Count updates not yet applied |
-| `CHANGELOG.md` | deferred (release-prep) | — | v2.11.0 entry |
-| `docs/releases/Release_v2.11.0.md` | deferred (release-prep) | — | Release notes (customary at tag time) |
-| `docs/releases/index.md` | deferred (release-prep) | — | v2.11.0 row (customary at tag time) |
+| `QUICKSTART.md` | deferred (release-prep) |. | Skill/command counts not yet updated in this session |
+| `docs/getting-started/quickstart.md` | deferred (release-prep) |. | Skill/command counts not yet updated |
+| `docs/index.md` | deferred (release-prep) |. | Skill count not yet updated |
+| `docs/guides/mcp-integration.md` | deferred (release-prep) |. | Skill tool counts not yet updated |
+| `AGENTS/claude/CONTEXT.md` | deferred (release-prep) |. | Count updates not yet applied |
+| `CHANGELOG.md` | deferred (release-prep) |. | v2.11.0 entry |
+| `docs/releases/Release_v2.11.0.md` | deferred (release-prep) |. | Release notes (customary at tag time) |
+| `docs/releases/index.md` | deferred (release-prep) |. | v2.11.0 row (customary at tag time) |
 
 **Count-update sweep**: most deferred items are count-consistency updates. The pattern in this repo is to sweep them together at release-commit time (run `scripts/check-count-consistency.sh`, update all locations that drifted). Not doing them one-by-one during authoring.
 
@@ -203,7 +203,7 @@ These are authored in downstream execution sessions, tracked in each effort's `p
 
 ## Execution Phases
 
-Current phase: **Phase 1 — Master plan doc**
+Current phase: **Phase 1. Master plan doc**
 
 | # | Phase | Files touched | Status |
 |---|-------|---------------|--------|
@@ -217,12 +217,12 @@ Current phase: **Phase 1 — Master plan doc**
 | 8 | v2.11.0 release plan update | 1 file modified | completed |
 | 9 | mkdocs nav | 1 file modified | completed |
 | 10 | Memory entries | 2 files modified/created | completed |
-| 11 | Per-skill authoring (5 skills × core 7 files each) | **completed 2026-04-17** — SKILL.md, TEMPLATE.md, EXAMPLE.md, slash command, 1 sample per skill, public doc per skill. All validators PASS. |
-| 12 | Cross-skill doc updates (critical path) | **completed 2026-04-17** — AGENTS.md, mkdocs.yml, docs/reference/commands.md updated. Validators PASS. |
-| 13 | Count-consistency sweep (critical path) | **completed 2026-04-17** — 15 files updated with current-state skill counts (32→38, 1→7 foundation, 39→45 commands). Historical release-note counts preserved intentionally. |
-| 14 | Samples browse table + skills-manifest | **completed 2026-04-17** — README_SAMPLES.md (94→99, 5 new rows), skills-manifest.yaml (6 skill entries incl. F-26 + family contract note). Both validators PASS. |
-| 15 | Add 5 more samples (1 additional per skill, bringing to 2-per-skill coverage) | **completed 2026-04-17** — agenda decision-meeting, brief negotiation-adjacent, recap stakeholder-review, synthesize exec-board-prep, stakeholder-update notion-mixed. 5 more samples (1 per skill, 3rd variant) remain deferred for full F-26 parity. |
-| 16 | *[DEFERRED]* CHANGELOG + release notes + remaining count-drift files | Customary at tag time — QUICKSTART, docs/index.md, AGENTS/claude/CONTEXT.md, CHANGELOG entry, docs/releases/Release_v2.11.0.md |
+| 11 | Per-skill authoring (5 skills × core 7 files each) | **completed 2026-04-17**. SKILL.md, TEMPLATE.md, EXAMPLE.md, slash command, 1 sample per skill, public doc per skill. All validators PASS. |
+| 12 | Cross-skill doc updates (critical path) | **completed 2026-04-17**. AGENTS.md, mkdocs.yml, docs/reference/commands.md updated. Validators PASS. |
+| 13 | Count-consistency sweep (critical path) | **completed 2026-04-17**. 15 files updated with current-state skill counts (32→38, 1→7 foundation, 39→45 commands). Historical release-note counts preserved intentionally. |
+| 14 | Samples browse table + skills-manifest | **completed 2026-04-17**. README_SAMPLES.md (94→99, 5 new rows), skills-manifest.yaml (6 skill entries incl. F-26 + family contract note). Both validators PASS. |
+| 15 | Add 5 more samples (1 additional per skill, bringing to 2-per-skill coverage) | **completed 2026-04-17**. agenda decision-meeting, brief negotiation-adjacent, recap stakeholder-review, synthesize exec-board-prep, stakeholder-update notion-mixed. 5 more samples (1 per skill, 3rd variant) remain deferred for full F-26 parity. |
+| 16 | *[DEFERRED]* CHANGELOG + release notes + remaining count-drift files | Customary at tag time. QUICKSTART, docs/index.md, AGENTS/claude/CONTEXT.md, CHANGELOG entry, docs/releases/Release_v2.11.0.md |
 
 Phases 1–10 are the scope of this scaffolding work. Phases 11–12 are downstream and deserve dedicated sessions.
 
@@ -232,12 +232,12 @@ Phases 1–10 are the scope of this scaffolding work. Phases 11–12 are downstr
 
 Parked items that need attention but do not block execution.
 
-1. **Sample count per skill** — F-26 shipped 3 thread samples. Is 3 the right number for meeting skills, or is 1 high-quality sample sufficient? Decide before phase 11.
-2. **Krisp MCP reference in SKILL.md** — should each skill explicitly mention Krisp MCP as an input source, or keep it generic ("any transcript source")? Decide in phase 5 (spec).
-3. **Workflow opportunity** — should a `meeting-lifecycle` workflow chain agenda → meeting → recap → stakeholder-update? Deferred per v2.11.0 plan open question 2. Not in this plan's scope.
-4. **Public skill doc generation** — is there an auto-generation script (`scripts/generate-skill-pages.py` referenced in F-26)? Verify during phase 11; fall back to hand-authoring if not.
-5. **CI workflow file choice** — add job to existing `validation.yml` or create new `validate-meeting-skills-family.yml`? Decide in phase 7 by reading current `validation.yml` structure.
-6. **Versioning first shipment** — all 5 skills at `1.0.0` on first ship. Verify against `docs/internal/skill-versioning.md` governance doc during phase 4.
+1. **Sample count per skill**. F-26 shipped 3 thread samples. Is 3 the right number for meeting skills, or is 1 high-quality sample sufficient? Decide before phase 11.
+2. **Krisp MCP reference in SKILL.md**. should each skill explicitly mention Krisp MCP as an input source, or keep it generic ("any transcript source")? Decide in phase 5 (spec).
+3. **Workflow opportunity**. should a `meeting-lifecycle` workflow chain agenda → meeting → recap → stakeholder-update? Deferred per v2.11.0 plan open question 2. Not in this plan's scope.
+4. **Public skill doc generation**. is there an auto-generation script (`scripts/generate-skill-pages.py` referenced in F-26)? Verify during phase 11; fall back to hand-authoring if not.
+5. **CI workflow file choice**. add job to existing `validation.yml` or create new `validate-meeting-skills-family.yml`? Decide in phase 7 by reading current `validation.yml` structure.
+6. **Versioning first shipment**. all 5 skills at `1.0.0` on first ship. Verify against `docs/internal/skill-versioning.md` governance doc during phase 4.
 
 ---
 

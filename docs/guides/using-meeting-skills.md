@@ -50,7 +50,7 @@ graph LR
 
 Imagine you have a cross-functional decision meeting Thursday afternoon. Four attendees. You're chairing. You have 30 minutes.
 
-### Step 1 — Write the agenda (2 minutes of your time)
+### Step 1. Write the agenda (2 minutes of your time)
 
 ```bash
 /meeting-agenda "Thursday 2pm EST cross-functional sync on Q2 scope; 4 attendees; 45 min"
@@ -58,13 +58,13 @@ Imagine you have a cross-functional decision meeting Thursday afternoon. Four at
 
 The skill will:
 
-1. Run the **anti-meeting check** — "does this actually need to be a meeting?" If your objective can be handled async, it'll recommend that instead. Override if needed.
-2. Present an **inference summary** — "Inferred: meeting type = decision-making, duration = 45 min (as specified), meeting objective inferred from topic." Say `go` to accept, or correct any value.
+1. Run the **anti-meeting check**. "does this actually need to be a meeting?" If your objective can be handled async, it'll recommend that instead. Override if needed.
+2. Present an **inference summary**. "Inferred: meeting type = decision-making, duration = 45 min (as specified), meeting objective inferred from topic." Say `go` to accept, or correct any value.
 3. Produce an agenda with type-tagged topics, time allocations, owners, and attendee prep.
 
 Copy the shareable summary at the top of the output into your meeting invite. Done.
 
-### Step 2 — (Optional) Private brief (3 minutes)
+### Step 2. (Optional) Private brief (3 minutes)
 
 For the CFO-is-present decision meeting, you want private tactical prep. Run:
 
@@ -82,11 +82,11 @@ The skill reads your context, pulls in related prior recaps (auto-discovered via
 
 **The brief is private by default** (`visibility: private` in frontmatter). It's your prep, not a shared artifact.
 
-### Step 3 — The meeting happens
+### Step 3. The meeting happens
 
 Run the meeting. Take live notes or let a transcription tool (Krisp, Otter, Fireflies, Zoom) capture it.
 
-### Step 4 — Recap the meeting (5 minutes of your time)
+### Step 4. Recap the meeting (5 minutes of your time)
 
 ```bash
 /meeting-recap @transcript.txt
@@ -104,7 +104,7 @@ The skill:
 
 Copy the shareable summary into Slack for the attendees. Post the full recap to the meeting's doc.
 
-### Step 5 — Stakeholder update (2 minutes)
+### Step 5. Stakeholder update (2 minutes)
 
 For non-attendees (engineering leads, leadership) who need to know outcomes:
 
@@ -123,9 +123,9 @@ The skill:
 1. Reads the recap, extracts outcomes relevant to the target audience
 2. Detects thread continuation (prior updates on the same project auto-linked)
 3. Translates technical-to-business language as needed for the audience variant
-4. Produces a channel-tailored message inside a `## Shareable update` section — **copy only that section**, everything below is internal audit notes
+4. Produces a channel-tailored message inside a `## Shareable update` section. **copy only that section**, everything below is internal audit notes
 
-### Step 6 — Later: cross-meeting synthesis
+### Step 6. Later: cross-meeting synthesis
 
 After your Q2 initiative has spanned 5-8 meetings over a few months, run:
 
@@ -216,7 +216,7 @@ sequenceDiagram
     Sync-->>You: 2026-Q2_q2-scope_synthesis.md
 ```
 
-Chaining is **filename-based** — no separate IDs, no lookup tables. The filename itself is the identifier, and skills cross-reference each other via the `related_*` frontmatter fields and auto-discovery scans.
+Chaining is **filename-based**. no separate IDs, no lookup tables. The filename itself is the identifier, and skills cross-reference each other via the `related_*` frontmatter fields and auto-discovery scans.
 
 ## File naming: quick reference
 
@@ -248,7 +248,7 @@ The check now requires a positive synchronous-value statement. Restate your meet
 
 The inference summary is a checkpoint for exactly this. Say `meeting type is actually {correct-type}` and the skill will re-infer dependent values (duration, variant behavior) from the correction.
 
-**"I have 60% of actions without owners — the recap is unusable."**
+**"I have 60% of actions without owners. the recap is unusable."**
 
 The v1.1.0 recap surfaces a `⚠ Ownership reconciliation required` section when unassigned ratio exceeds 30%. Use it as your action plan: the section lists each unassigned action and suggests a follow-up mechanism (15-min sync, Slack thread, async survey). Don't ship the recap until you've closed the reconciliation.
 
@@ -258,7 +258,7 @@ The `## Shareable update` section (v1.1.0) marks the copy-safe boundary explicit
 
 ## Related
 
-- [Family contract](../reference/skill-families/meeting-skills-contract.md) — formal specification
-- [Foundation skills](../skills/foundation/) — all foundation-phase skills including the meeting family
-- Individual skill docs — [`/meeting-agenda`](../skills/foundation/foundation-meeting-agenda.md), [`/meeting-brief`](../skills/foundation/foundation-meeting-brief.md), [`/meeting-recap`](../skills/foundation/foundation-meeting-recap.md), [`/meeting-synthesize`](../skills/foundation/foundation-meeting-synthesize.md), [`/stakeholder-update`](../skills/foundation/foundation-stakeholder-update.md)
-- Sample outputs — [`library/skill-output-samples/foundation-meeting-*/`](https://github.com/product-on-purpose/pm-skills/tree/main/library/skill-output-samples)
+- [Family contract](../reference/skill-families/meeting-skills-contract.md). formal specification
+- [Foundation skills](../skills/foundation/). all foundation-phase skills including the meeting family
+- Individual skill docs. [`/meeting-agenda`](../skills/foundation/foundation-meeting-agenda.md), [`/meeting-brief`](../skills/foundation/foundation-meeting-brief.md), [`/meeting-recap`](../skills/foundation/foundation-meeting-recap.md), [`/meeting-synthesize`](../skills/foundation/foundation-meeting-synthesize.md), [`/stakeholder-update`](../skills/foundation/foundation-stakeholder-update.md)
+- Sample outputs. [`library/skill-output-samples/foundation-meeting-*/`](https://github.com/product-on-purpose/pm-skills/tree/main/library/skill-output-samples)

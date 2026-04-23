@@ -7,18 +7,18 @@ skill_version: "2.0.0"
 created: 2026-02-20
 status: sample
 thread: storevine
-context: Storevine B2B ecommerce platform — churn reduction opportunity tree for Campaigns Q2 sprint planning
+context: Storevine B2B ecommerce platform . churn reduction opportunity tree for Campaigns Q2 sprint planning
 ---
 
 ## Scenario
 
-With the merchant interview synthesis and competitive analysis complete, Storevine's growth PM is mapping the Campaigns opportunity against the company's top-level churn reduction goal ahead of Q2 sprint planning. The opportunity-solution tree organizes three primary areas where merchant unmet needs drive platform churn — email re-engagement capability, revenue visibility, and platform value perception — and surfaces candidate solutions and assumption tests needed to focus the Q2 roadmap.
+With the merchant interview synthesis and competitive analysis complete, Storevine's growth PM is mapping the Campaigns opportunity against the company's top-level churn reduction goal ahead of Q2 sprint planning. The opportunity-solution tree organizes three primary areas where merchant unmet needs drive platform churn . email re-engagement capability, revenue visibility, and platform value perception . and surfaces candidate solutions and assumption tests needed to focus the Q2 roadmap.
 
 **Source Notes:**
 
 - Recurly Research (recurly.com) documents median annual churn rates for B2B SaaS at 5–7% for enterprise and 10–15% for SMB, establishing the benchmark against which Storevine's 22% [fictional] annual churn rate indicates significant retention opportunity relative to the category.
-- Teresa Torres, Continuous Discovery Habits (Product Talk LLC, 2021) — establishes the opportunity-solution tree as the canonical method for organizing product opportunities against a business outcome, separating opportunities (customer problems) from solutions (what to build) to avoid premature solution commitment.
-- Shopify's FY2023 Annual Report identifies merchant solutions — including Shopify Email — as a primary platform retention lever, validating the strategic logic that native tooling reduces the pull toward external alternatives and tightens platform retention.
+- Teresa Torres, Continuous Discovery Habits (Product Talk LLC, 2021) . establishes the opportunity-solution tree as the canonical method for organizing product opportunities against a business outcome, separating opportunities (customer problems) from solutions (what to build) to avoid premature solution commitment.
+- Shopify's FY2023 Annual Report identifies merchant solutions . including Shopify Email . as a primary platform retention lever, validating the strategic logic that native tooling reduces the pull toward external alternatives and tightens platform retention.
 
 ---
 
@@ -27,8 +27,8 @@ With the merchant interview synthesis and competitive analysis complete, Storevi
 ```
 /opportunity-tree
 
-Project: Campaigns — and broader platform churn reduction strategy
-Stage: Pre-Q2 sprint planning — framing the opportunity space before
+Project: Campaigns . and broader platform churn reduction strategy
+Stage: Pre-Q2 sprint planning . framing the opportunity space before
 scope lock
 
 Desired outcome: Reduce annual merchant churn from 22% [fictional] to
@@ -38,7 +38,7 @@ Opportunities I've identified from discovery:
 1. Merchants can't run email re-engagement without a separate external
    tool (Q4 exit survey: 22% churn [fictional]; 8 merchant interviews)
 2. Merchants can't see what's driving revenue across their store
-   (interview finding: "there's no way to see what's working" — P8)
+   (interview finding: "there's no way to see what's working" . P8)
 3. Merchants are paying for Storevine + external tools and beginning to
    question whether the platform subscription is worth it
 
@@ -67,7 +67,7 @@ branch, prioritization, and experiments backlog for Q2 planning.
 
 ### Why This Outcome Matters
 
-At ~18,000 active merchants [fictional] and an average merchant lifetime value of $3,200 [fictional], each percentage-point reduction in annual churn represents approximately $576,000 [fictional] in retained annual revenue. The Q4 exit survey identified tool fragmentation — merchants being required to use external tools for capabilities they expect the platform to provide — as the top-three churn driver, making this outcome directly actionable through product investment. Recurly Research benchmarks place median SMB SaaS annual churn at 10–15%; at 22% [fictional], Storevine is operating significantly above category, confirming that retention improvement is the highest-leverage investment available.
+At ~18,000 active merchants [fictional] and an average merchant lifetime value of $3,200 [fictional], each percentage-point reduction in annual churn represents approximately $576,000 [fictional] in retained annual revenue. The Q4 exit survey identified tool fragmentation . merchants being required to use external tools for capabilities they expect the platform to provide . as the top-three churn driver, making this outcome directly actionable through product investment. Recurly Research benchmarks place median SMB SaaS annual churn at 10–15%; at 22% [fictional], Storevine is operating significantly above category, confirming that retention improvement is the highest-leverage investment available.
 
 ---
 
@@ -101,7 +101,7 @@ At ~18,000 active merchants [fictional] and an average merchant lifetime value o
 
 ### Opportunity 1: Merchants can't run email re-engagement without a separate tool
 
-**Description:** The majority of active merchants who want to send targeted email campaigns to existing customers — segmented by purchase behavior, order history, or engagement — cannot do so within Storevine. They are required to subscribe to an external tool (Klaviyo, Mailchimp) and configure a data sync before sending their first campaign. Merchants who find this too complex avoid email marketing entirely.
+**Description:** The majority of active merchants who want to send targeted email campaigns to existing customers . segmented by purchase behavior, order history, or engagement . cannot do so within Storevine. They are required to subscribe to an external tool (Klaviyo, Mailchimp) and configure a data sync before sending their first campaign. Merchants who find this too complex avoid email marketing entirely.
 **Impact Potential:** High
 **Confidence:** High
 
@@ -112,16 +112,16 @@ At ~18,000 active merchants [fictional] and an average merchant lifetime value o
 
 #### Solutions
 
-**Solution 1A: Campaigns v1 — native email with segmentation, attribution, and guided first-campaign flow**
-- Description: Build purchase-based audience segmentation, drag-and-drop campaign editor, revenue attribution via SendGrid webhooks, and a guided first-campaign flow seeded with merchant product data — all within the Storevine admin
+**Solution 1A: Campaigns v1 . native email with segmentation, attribution, and guided first-campaign flow**
+- Description: Build purchase-based audience segmentation, drag-and-drop campaign editor, revenue attribution via SendGrid webhooks, and a guided first-campaign flow seeded with merchant product data . all within the Storevine admin
 - Effort: L
-- Riskiest Assumption: Non-adopter merchants (no current email tool) will activate without a switching incentive — that the guided flow is sufficient to overcome inertia
+- Riskiest Assumption: Non-adopter merchants (no current email tool) will activate without a switching incentive . that the guided flow is sufficient to overcome inertia
 - Assumption Test: Guided flow A/B test; 60-day first-send rate target of ≥30% [fictional]
 
-**Solution 1B: Klaviyo migration tooling — automated list import and flow migration wizard**
+**Solution 1B: Klaviyo migration tooling . automated list import and flow migration wizard**
 - Description: Build a one-click migration path that imports Klaviyo subscriber lists, segments, and automation flow logic into Campaigns, reducing the migration cost that currently prevents Klaviyo-integrated merchants from switching
 - Effort: XL
-- Riskiest Assumption: Klaviyo-integrated merchants have sufficient dissatisfaction with Klaviyo's cost or complexity to migrate if the tooling path is easy — and that dissatisfaction is prevalent enough to make the XL investment worthwhile
+- Riskiest Assumption: Klaviyo-integrated merchants have sufficient dissatisfaction with Klaviyo's cost or complexity to migrate if the tooling path is easy . and that dissatisfaction is prevalent enough to make the XL investment worthwhile
 - Assumption Test: Migration wizard prototype tested with 5 Klaviyo-integrated merchants; measure completion rate and self-reported activation intent
 
 ---
@@ -134,22 +134,22 @@ At ~18,000 active merchants [fictional] and an average merchant lifetime value o
 
 **Evidence:**
 - Merchant interview P8: "I use it, but honestly my open rates are bad and I don't know why. There's no way to see what's working."
-- Interview Insight 3: Revenue attribution is "the credibility gate" — without it, merchants cannot make the business case to continue using a tool
+- Interview Insight 3: Revenue attribution is "the credibility gate" . without it, merchants cannot make the business case to continue using a tool
 - Competitive analysis: Revenue attribution is the most commonly cited gap in Shopify Email reviews; Klaviyo's attribution is described as the most credible in the category
 
 #### Solutions
 
-**Solution 2A: Revenue attribution in Campaigns v1 — tie email performance to purchase events**
-- Description: Connect SendGrid open and click event webhooks to the Storevine order database to surface a revenue attribution view within the Campaigns dashboard — showing which campaigns and which recipients drove purchases and how much revenue each campaign generated
+**Solution 2A: Revenue attribution in Campaigns v1 . tie email performance to purchase events**
+- Description: Connect SendGrid open and click event webhooks to the Storevine order database to surface a revenue attribution view within the Campaigns dashboard . showing which campaigns and which recipients drove purchases and how much revenue each campaign generated
 - Effort: M
 - Riskiest Assumption: Engineering can connect SendGrid webhook events to existing order data within the v1 timeline without requiring a new data infrastructure investment
 - Assumption Test: Engineering spike (1 week); feasibility confirmation and timeline estimate to be delivered before backend scope is locked
 
-**Solution 2B: Merchant analytics dashboard — store-wide revenue, traffic, and conversion visibility**
-- Description: Build a consolidated analytics dashboard showing revenue by channel (email, storefront, referral), product performance, customer segment revenue contribution, and conversion funnel metrics — covering the full store, not just email performance
+**Solution 2B: Merchant analytics dashboard . store-wide revenue, traffic, and conversion visibility**
+- Description: Build a consolidated analytics dashboard showing revenue by channel (email, storefront, referral), product performance, customer segment revenue contribution, and conversion funnel metrics . covering the full store, not just email performance
 - Effort: XL
 - Riskiest Assumption: Improved store-wide analytics visibility materially reduces churn beyond what email attribution alone accomplishes; the gap is not just attribution within email but visibility across all channels
-- Assumption Test: Beta cohort study — 90-day retention comparison between merchants with dashboard access and standard merchants [fictional]
+- Assumption Test: Beta cohort study . 90-day retention comparison between merchants with dashboard access and standard merchants [fictional]
 
 ---
 
@@ -166,16 +166,16 @@ At ~18,000 active merchants [fictional] and an average merchant lifetime value o
 
 #### Solutions
 
-**Solution 3A: Campaigns as platform value anchor — include Campaigns in Storevine plans at no incremental cost**
+**Solution 3A: Campaigns as platform value anchor . include Campaigns in Storevine plans at no incremental cost**
 - Description: Price Campaigns as a feature included in existing Storevine subscription tiers (with a send-volume free tier for small merchants), directly addressing the "I'm paying for Storevine and still need to pay for email" objection
 - Effort: S (pricing and positioning decision; minimal engineering)
-- Riskiest Assumption: Price positioning alone — without feature parity — will change the churn driver; merchants will choose Campaigns over Klaviyo if it is free even if Klaviyo is more capable
+- Riskiest Assumption: Price positioning alone . without feature parity . will change the churn driver; merchants will choose Campaigns over Klaviyo if it is free even if Klaviyo is more capable
 - Assumption Test: Merchant value perception survey with 50 merchants [fictional] before and after Campaigns GA announcement; measure whether free pricing changes stated intent to activate
 
-**Solution 3B: App marketplace depth — identify and fill top external tool dependency gaps natively**
+**Solution 3B: App marketplace depth . identify and fill top external tool dependency gaps natively**
 - Description: Audit external tools used by churned merchants to identify the 3–5 most common dependencies beyond email; build or partner to provide native or deeply integrated alternatives within the Storevine platform
 - Effort: XL
-- Riskiest Assumption: Merchants are churning because of tool stack cost and fragmentation broadly — not because of any specific feature gap — and that a platform comprehensiveness strategy will outperform point-solution investments
+- Riskiest Assumption: Merchants are churning because of tool stack cost and fragmentation broadly . not because of any specific feature gap . and that a platform comprehensiveness strategy will outperform point-solution investments
 - Assumption Test: Churned-merchant exit interview cohort (20 merchants [fictional]) to map external tool dependencies and identify whether a consolidation message would have changed the cancellation decision
 
 ---
@@ -184,9 +184,9 @@ At ~18,000 active merchants [fictional] and an average merchant lifetime value o
 
 ### Current Focus
 
-**Priority Opportunity:** Opportunity 1 — merchants can't run email re-engagement without a separate tool
-**Priority Solution:** Solution 1A — Campaigns v1 native email with guided first-campaign flow
-**Rationale:** Highest confidence evidence base (Q4 exit survey + 8 merchant interviews + competitive validation from Shopify Email), directly addresses the stated top-three churn driver, engineering-feasible within Q2 2026 capacity, and does not require dependencies outside the Storevine platform. Solution 2A (revenue attribution) is a v1 co-requirement, not a standalone priority — attribution ships with Campaigns v1 or Campaigns is not a credible alternative to Klaviyo for any merchant who has tried it.
+**Priority Opportunity:** Opportunity 1 . merchants can't run email re-engagement without a separate tool
+**Priority Solution:** Solution 1A . Campaigns v1 native email with guided first-campaign flow
+**Rationale:** Highest confidence evidence base (Q4 exit survey + 8 merchant interviews + competitive validation from Shopify Email), directly addresses the stated top-three churn driver, engineering-feasible within Q2 2026 capacity, and does not require dependencies outside the Storevine platform. Solution 2A (revenue attribution) is a v1 co-requirement, not a standalone priority . attribution ships with Campaigns v1 or Campaigns is not a credible alternative to Klaviyo for any merchant who has tried it.
 
 ### Opportunity Ranking
 
@@ -218,7 +218,7 @@ At ~18,000 active merchants [fictional] and an average merchant lifetime value o
 
 | Date | Experiment | Result | Learning | Impact on Tree |
 |------|------------|--------|----------|----------------|
-| — | No experiments run yet | — | — | Tree reflects pre-sprint hypothesis state |
+| . | No experiments run yet | . | . | Tree reflects pre-sprint hypothesis state |
 
 ---
 

@@ -41,7 +41,7 @@ Or reference the skill file directly: `skills/define-problem-statement/SKILL.md`
 When asked to create a problem statement, follow these steps:
 
 1. **Identify the User Segment**
-   Ask who is experiencing this problem. Get specific about the user persona, role, or segment. Avoid vague descriptions like "users" — instead target "mobile shoppers completing checkout" or "enterprise admins managing 50+ users."
+   Ask who is experiencing this problem. Get specific about the user persona, role, or segment. Avoid vague descriptions like "users" . instead target "mobile shoppers completing checkout" or "enterprise admins managing 50+ users."
 
 2. **Understand the Pain Points**
    Explore what friction, frustration, or unmet need the user experiences. Ask probing questions to understand the severity and frequency of the problem. Look for evidence from user research, support tickets, or behavioral data.
@@ -190,7 +190,7 @@ When asked to create a problem statement, follow these steps:
 
     - Payment provider contract limits changes to payment form UI until March
     - Must maintain PCI compliance for any checkout modifications
-    - iOS and Android apps share checkout webview — changes affect both platforms
+    - iOS and Android apps share checkout webview . changes affect both platforms
     - Engineering capacity: 2 engineers available, 6-week runway before feature freeze
     - Cannot remove guest checkout option (legal requirement in EU markets)
     - Must preserve existing promo code functionality for marketing campaigns
@@ -208,19 +208,19 @@ When asked to create a problem statement, follow these steps:
 
 See this skill applied to three different product contexts:
 
-??? example "Storevine (B2B): Storevine B2B ecommerce platform — Campaigns feature problem framing for engineering and design"
+??? example "Storevine (B2B): Storevine B2B ecommerce platform . Campaigns feature problem framing for engineering and design"
     **Prompt:**
 
     ```
     /problem-statement
 
-    Project: Campaigns — native email marketing for Storevine merchants
-    Stage: Define — establishing shared problem framing before PRD draft
+    Project: Campaigns . native email marketing for Storevine merchants
+    Stage: Define . establishing shared problem framing before PRD draft
 
     Problem I want to articulate:
     - ~68% of active merchants use an external email tool [fictional]
     - Storevine's built-in email lacks purchase-based segmentation and
-      revenue attribution — the two capabilities merchants cite most
+      revenue attribution . the two capabilities merchants cite most
     - Q4 exit survey: 22% of churned merchants cited this as a primary
       cancellation reason [fictional]
     - Competitive analysis filed last week: Shopify Email has already
@@ -243,7 +243,7 @@ See this skill applied to three different product contexts:
 
     # Problem Statement: Merchants Require External Email Tools for Capabilities Storevine's Platform Should Provide
 
-??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — saved content re-engagement problem statement"
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app . saved content re-engagement problem statement"
     **Prompt:**
 
     ```

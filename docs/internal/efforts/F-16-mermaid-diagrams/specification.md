@@ -29,7 +29,7 @@ PMs approach diagrams from two directions:
 - **"I know I need a flowchart"** → diagram-catalog.md (type-based)
 - **"I need to show our release timeline"** → pm-use-cases.md (task-based)
 
-Both lenses cross-reference each other. Neither is primary — they serve different moments.
+Both lenses cross-reference each other. Neither is primary . they serve different moments.
 
 ### 4. PM-Relevant Framing
 Every example, every "Use for / Don't use for" statement, and every worked scenario uses PM domain language: PRDs, roadmaps, stakeholder communication, feature prioritization, sprint planning, user journeys.
@@ -109,7 +109,7 @@ metadata:
 
 6. **Instructions** (numbered steps)
    1. Identify what you're communicating (relationship? sequence? hierarchy? proportion?)
-   2. Apply the cardinal rule — confirm a diagram adds value
+   2. Apply the cardinal rule . confirm a diagram adds value
    3. Select diagram type via selection guide, pm-use-cases.md, or diagram-catalog.md
    4. Fill out the planning worksheet (TEMPLATE.md)
    5. Write the mermaid code block following syntax-guide.md rules
@@ -122,13 +122,13 @@ metadata:
 
 8. **Quality Checklist**
    - [ ] Diagram renders without error in target environment
-   - [ ] No linear sequences — every diagram has branching, relationships, or hierarchy
+   - [ ] No linear sequences . every diagram has branching, relationships, or hierarchy
    - [ ] All labels with spaces or special characters are quoted
    - [ ] Node/participant count is within type-specific limits
    - [ ] Colors are accessible (WCAG AA 3:1 contrast minimum)
    - [ ] Diagram has a descriptive title or surrounding context
    - [ ] `%%` comments document non-obvious choices
-   - [ ] Cardinal rule satisfied — a list or table wouldn't communicate this better
+   - [ ] Cardinal rule satisfied . a list or table wouldn't communicate this better
 
 9. **Reference Index**
    - One-line description + link for each of the 5 reference files
@@ -139,12 +139,12 @@ metadata:
 
 A reusable diagram planning worksheet. Sections:
 
-1. **Diagram Purpose** — What relationship, flow, or structure am I communicating? Who is the audience?
-2. **Cardinal Rule Check** — Does this need a diagram, or would a list/table suffice?
-3. **Diagram Type Selection** — Selected type + rationale (why this type over alternatives)
-4. **Node Inventory** — List all entities/participants/states before writing code
-5. **Draft Mermaid Code** — The code block (placeholder for PM to fill)
-6. **Validation Checklist** — Abbreviated version of SKILL.md quality checklist
+1. **Diagram Purpose** . What relationship, flow, or structure am I communicating? Who is the audience?
+2. **Cardinal Rule Check** . Does this need a diagram, or would a list/table suffice?
+3. **Diagram Type Selection** . Selected type + rationale (why this type over alternatives)
+4. **Node Inventory** . List all entities/participants/states before writing code
+5. **Draft Mermaid Code** . The code block (placeholder for PM to fill)
+6. **Validation Checklist** . Abbreviated version of SKILL.md quality checklist
 
 ---
 
@@ -154,19 +154,19 @@ A worked example: **PM preparing diagrams for a product launch**.
 
 Demonstrates 4 diagrams, each walking through the TEMPLATE worksheet:
 
-1. **Flowchart** — Feature approval workflow in a PRD
+1. **Flowchart** . Feature approval workflow in a PRD
    - Shows branching decision points (review → approved/rejected/needs revision)
    - Demonstrates node shapes, edge labels, subgraphs
 
-2. **Gantt** — Launch timeline with dependencies
+2. **Gantt** . Launch timeline with dependencies
    - Shows development, QA, marketing, and release phases
    - Demonstrates milestones, critical path, and section grouping
 
-3. **Sequence** — API integration flow for a technical spec
+3. **Sequence** . API integration flow for a technical spec
    - Shows message exchange between frontend, API gateway, and backend services
    - Demonstrates activation boxes, async messages, error paths
 
-4. **Quadrant** — Backlog prioritization for a planning meeting
+4. **Quadrant** . Backlog prioritization for a planning meeting
    - Shows 8-10 features plotted on effort/impact axes
    - Demonstrates axis labels, quadrant naming, point placement
 
@@ -180,15 +180,15 @@ Comprehensive reference for all 15 diagram types. Opens with a TOC for jump navi
 
 **Each type gets a consistent section (~75-100 lines):**
 
-1. **One-line description** — What this diagram type shows
-2. **Use for** — 3-4 PM-relevant scenarios
-3. **Don't use for** — 2-3 anti-patterns with redirect to better type
-4. **Syntax** — Minimal working example with PM-relevant content
-5. **Key elements** — Node shapes, edge types, special constructs available
-6. **Limits** — Maximum nodes/participants, nesting depth, rendering constraints
-7. **PM Example** — A small but realistic PM scenario (5-15 lines of mermaid)
-8. **Common Pitfalls** — 2-3 frequent mistakes with fixes
-9. **See Also** — Cross-reference to related types (e.g., "See State for lifecycle transitions")
+1. **One-line description** . What this diagram type shows
+2. **Use for** . 3-4 PM-relevant scenarios
+3. **Don't use for** . 2-3 anti-patterns with redirect to better type
+4. **Syntax** . Minimal working example with PM-relevant content
+5. **Key elements** . Node shapes, edge types, special constructs available
+6. **Limits** . Maximum nodes/participants, nesting depth, rendering constraints
+7. **PM Example** . A small but realistic PM scenario (5-15 lines of mermaid)
+8. **Common Pitfalls** . 2-3 frequent mistakes with fixes
+9. **See Also** . Cross-reference to related types (e.g., "See State for lifecycle transitions")
 
 **Types covered (in this order):**
 
@@ -209,10 +209,10 @@ Note: types within each category are presented together for contextual browsing,
 
 Organized by PM task intent, not by diagram type. Each use case includes:
 
-1. **Task description** — What the PM is trying to communicate
-2. **Recommended diagram type(s)** — Primary + alternatives with trade-off notes
-3. **Mini worked example** — 10-20 lines of mermaid showing the use case
-4. **Cross-reference** — Link to full type entry in diagram-catalog.md
+1. **Task description** . What the PM is trying to communicate
+2. **Recommended diagram type(s)** . Primary + alternatives with trade-off notes
+3. **Mini worked example** . 10-20 lines of mermaid showing the use case
+4. **Cross-reference** . Link to full type entry in diagram-catalog.md
 
 **Use cases:**
 
@@ -224,15 +224,15 @@ Organized by PM task intent, not by diagram type. Each use case includes:
 | Tracking work stages | Kanban | State |
 | Planning a release or sprint timeline | Gantt | Timeline |
 | Documenting version history or milestones | Timeline | Gantt |
-| Prioritizing backlog items (2D) | Quadrant | — |
+| Prioritizing backlog items (2D) | Quadrant | . |
 | Showing allocation or composition | Pie | Treemap |
-| Decomposing a problem or brainstorming | Mindmap | — |
+| Decomposing a problem or brainstorming | Mindmap | . |
 | Documenting domain models or data relationships | ER | Class |
 | Mapping API or object contracts | Class | ER |
 | Showing system topology or infrastructure | Architecture | Flowchart |
 | Visualizing flow quantities or budget allocation | Sankey | Pie |
 | Showing hierarchical proportional data | Treemap | Pie |
-| Displaying trends or time-series metrics | XY-Chart | — |
+| Displaying trends or time-series metrics | XY-Chart | . |
 
 ---
 
@@ -265,7 +265,7 @@ The dedicated syntax validity reference. Sections:
    - Semantic color palette (success/error/warning/info)
    - WCAG AA 3:1 contrast minimum
    - Black text on light backgrounds
-   - Never rely on color alone — use labels and shapes
+   - Never rely on color alone . use labels and shapes
    - Class-based styling per diagram type (`:::` for flowchart, `class` for state)
 
 6. **Comments**
@@ -283,7 +283,7 @@ The dedicated syntax validity reference. Sections:
    - What to do when you exceed limits: split into multiple diagrams, use subgraphs
 
 9. **Pre-Commit Validation Checklist**
-   - [ ] Paste into a mermaid live editor — does it render?
+   - [ ] Paste into a mermaid live editor . does it render?
    - [ ] All labels with spaces are quoted
    - [ ] No unescaped special characters
    - [ ] Node count within type limit
@@ -316,15 +316,15 @@ Body: brief instruction to invoke the skill with context about what the PM needs
 
 This skill is **original work** designed for the pm-skills library. While mermaid documentation exists broadly, this skill differentiates through:
 
-1. **PM-first framing** — Every example, use case, and recommendation is grounded in PM workflows, not engineering tasks
-2. **Dual-lens navigation** — Type catalog + use-case guide serve different moments of need
-3. **Syntax validity as primary concern** — Dedicated syntax guide and validation checklist address the #1 pain point for non-engineers
-4. **Cardinal rule** — Explicit gate preventing unnecessary diagrams
-5. **Planning worksheet** — Structured approach to diagram creation (TEMPLATE.md) that prevents "jumping into code"
-6. **Accessibility baked in** — WCAG AA contrast, color-independence, and semantic palettes are non-negotiable, not afterthoughts
+1. **PM-first framing** . Every example, use case, and recommendation is grounded in PM workflows, not engineering tasks
+2. **Dual-lens navigation** . Type catalog + use-case guide serve different moments of need
+3. **Syntax validity as primary concern** . Dedicated syntax guide and validation checklist address the #1 pain point for non-engineers
+4. **Cardinal rule** . Explicit gate preventing unnecessary diagrams
+5. **Planning worksheet** . Structured approach to diagram creation (TEMPLATE.md) that prevents "jumping into code"
+6. **Accessibility baked in** . WCAG AA contrast, color-independence, and semantic palettes are non-negotiable, not afterthoughts
 
 ## Open Questions
 
-1. **Mermaid version targeting** — Should the skill target a specific mermaid version range, or document features with "available since vX.Y.Z" annotations? Recommendation: annotate experimental features with version, don't pin overall.
-2. **Live editor recommendation** — Should syntax-guide.md recommend specific tools (mermaid.live, VS Code extensions)? Recommendation: yes, brief "tools for validation" section.
-3. **Dark mode guidance** — How deep to go on theme configuration for different rendering environments? Recommendation: light touch — cover the accessibility principles, not environment-specific setup.
+1. **Mermaid version targeting** . Should the skill target a specific mermaid version range, or document features with "available since vX.Y.Z" annotations? Recommendation: annotate experimental features with version, don't pin overall.
+2. **Live editor recommendation** . Should syntax-guide.md recommend specific tools (mermaid.live, VS Code extensions)? Recommendation: yes, brief "tools for validation" section.
+3. **Dark mode guidance** . How deep to go on theme configuration for different rendering environments? Recommendation: light touch . cover the accessibility principles, not environment-specific setup.

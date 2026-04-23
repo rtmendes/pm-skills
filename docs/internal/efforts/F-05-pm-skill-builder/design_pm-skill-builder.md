@@ -2,7 +2,7 @@
 
 > **Date**: 2026-03-22
 > **Author**: Claude Opus 4.6
-> **Status**: Codex-reviewed, 8 fixes applied — awaiting user approval
+> **Status**: Codex-reviewed, 8 fixes applied . awaiting user approval
 > **Effort brief**: `docs/internal/efforts/F-05-pm-skill-builder.md`
 > **Approaches doc**: `docs/internal/efforts/F-05-pm-skill-builder/approaches_pm-skill-builder.md`
 > **Issue**: #113
@@ -53,7 +53,7 @@ metadata:
 # PM Skill Builder
 
 This skill creates new PM skills for the pm-skills library. It produces a
-Skill Implementation Packet — a complete design document with draft files —
+Skill Implementation Packet . a complete design document with draft files .
 in a staging area for review before promotion to canonical locations.
 
 ## When to Use
@@ -82,7 +82,7 @@ Accept the idea in either form:
   does it produce? What PM activity does it support?"
 
 Both entry points produce the same downstream flow. If the user provides
-one form, do not ask for the other — extract what you need and proceed.
+one form, do not ask for the other . extract what you need and proceed.
 
 If the idea is vague, ask ONE follow-up question to clarify the artifact
 type and target audience before proceeding.
@@ -153,7 +153,7 @@ Identify 1-2 existing skills that are the closest structural match:
 - Same phase > same category > similar artifact type
 - Read their SKILL.md to understand section structure, instruction style,
   output contract format, and quality checklist pattern
-- Name the exemplars explicitly: "Modeled after [skill] — same phase,
+- Name the exemplars explicitly: "Modeled after [skill] . same phase,
   [category] category"
 
 Present the classification and exemplar selection for user confirmation.
@@ -163,25 +163,25 @@ Present the classification and exemplar selection for user confirmation.
 Produce the complete packet using `references/TEMPLATE.md` as the format.
 The packet includes:
 
-1. **Decision** — recommendation + Why Gate evidence (if applicable)
-2. **Classification** — type, phase (if domain), category, directory name
-3. **Overlap Analysis** — what was found, why this skill is still needed
-4. **Quality Forecast** — K/P/C/W zone distribution + writing guidance:
+1. **Decision** . recommendation + Why Gate evidence (if applicable)
+2. **Classification** . type, phase (if domain), category, directory name
+3. **Overlap Analysis** . what was found, why this skill is still needed
+4. **Quality Forecast** . K/P/C/W zone distribution + writing guidance:
    - Knowledge-heavy (≥35% K): reference frameworks, include When to Use
    - Process-heavy (≥35% P): numbered steps, prescriptive, clear I/O per step
    - Constraint-heavy (≥35% C): MUST/SHOULD/MUST NOT rules, separate section
    - Wisdom-heavy (≥25% W): reflective questions, guide thinking
-5. **Exemplar Skills** — which existing skills modeled, why
-6. **Draft Frontmatter** — complete, valid YAML block
-7. **Draft SKILL.md** — full content (not an outline), mirroring exemplar structure
-8. **Draft TEMPLATE.md** — section headers with guidance comments
-9. **Draft EXAMPLE.md** — complete, realistic example (150-300 lines) with a
+5. **Exemplar Skills** . which existing skills modeled, why
+6. **Draft Frontmatter** . complete, valid YAML block
+7. **Draft SKILL.md** . full content (not an outline), mirroring exemplar structure
+8. **Draft TEMPLATE.md** . section headers with guidance comments
+9. **Draft EXAMPLE.md** . complete, realistic example (150-300 lines) with a
    specific PM scenario, every section filled, optional sections demonstrated
    both filled and skipped
-10. **Draft Command** — command frontmatter
-11. **AGENTS.md Entry** — exact text to add
-12. **Validation Checklist** — all CI rules checked against the draft
-13. **Next Steps** — local CI, testing, contribution workflow
+10. **Draft Command** . command frontmatter
+11. **AGENTS.md Entry** . exact text to add
+12. **Validation Checklist** . all CI rules checked against the draft
+13. **Next Steps** . local CI, testing, contribution workflow
 
 ### Step 6: Write to Staging Area
 
@@ -196,7 +196,7 @@ _staging/pm-skill-builder/{skill-name}/
 └── command.md             ← draft command
 ```
 
-> **Note**: `_staging/` is gitignored — draft artifacts never ship in releases.
+> **Note**: `_staging/` is gitignored . draft artifacts never ship in releases.
 > The staging folder is discarded after promotion.
 
 Report what was written and where.
@@ -214,7 +214,7 @@ If yes, promote files to canonical locations:
 - Append entry to `AGENTS.md`
 
 After promotion, discard the staging folder. Design rationale lives in the
-GitHub issue, PR, or effort brief — not in a permanent packet file.
+GitHub issue, PR, or effort brief . not in a permanent packet file.
 
 Provide post-promotion guidance:
 - "Run CI locally: `bash scripts/lint-skills-frontmatter.sh`"
@@ -225,7 +225,7 @@ Provide post-promotion guidance:
 ## Current Library Reference
 
 Use this table for gap analysis. Also scan `skills/` directory for the
-most current inventory — this table reflects the current working tree
+most current inventory . this table reflects the current working tree
 (25 domain + 1 foundation + deliver-acceptance-criteria from F-06).
 
 ### Domain Skills (25)
@@ -273,10 +273,10 @@ most current inventory — this table reflects the current working tree
 ## Output Contract
 
 The builder MUST produce draft files for the new skill:
-- `SKILL.md` — full skill instructions
-- `references/TEMPLATE.md` — output template with guidance comments
-- `references/EXAMPLE.md` — complete worked example (150-300 lines)
-- `command.md` — slash command file
+- `SKILL.md` . full skill instructions
+- `references/TEMPLATE.md` . output template with guidance comments
+- `references/EXAMPLE.md` . complete worked example (150-300 lines)
+- `command.md` . slash command file
 
 All drafts are written to `_staging/pm-skill-builder/{skill-name}/` (gitignored).
 
@@ -329,7 +329,7 @@ scenarios at different complexity levels.
 
 ## Section 2: TEMPLATE.md (Skill Implementation Packet Format)
 
-This is the internal working structure the builder follows during skill creation. The builder presents these sections to the user during the interactive session. No permanent packet file is written — design rationale belongs in the GitHub issue or PR, not a repo artifact.
+This is the internal working structure the builder follows during skill creation. The builder presents these sections to the user during the interactive session. No permanent packet file is written . design rationale belongs in the GitHub issue or PR, not a repo artifact.
 
 ```markdown
 # Skill Implementation Packet: {Skill Name}
@@ -344,7 +344,7 @@ This is the internal working structure the builder follows during skill creation
 
 {Recommendation: create / revise existing / bundle / command / docs-only}
 
-{Why Gate evidence if applicable — the 2-3 specific prompts or scenarios
+{Why Gate evidence if applicable . the 2-3 specific prompts or scenarios
 where existing skills fail}
 
 ---
@@ -369,7 +369,7 @@ where existing skills fail}
 
 ### Findings
 
-{What was found — specific overlap and differentiation}
+{What was found . specific overlap and differentiation}
 
 ### Why this skill is still needed
 
@@ -395,7 +395,7 @@ where existing skills fail}
 
 ### Writing Guidance
 
-{Zone-specific guidance based on the dominant zone — see Quality Forecast
+{Zone-specific guidance based on the dominant zone . see Quality Forecast
 Guide in SKILL.md for the mapping}
 
 ---
@@ -415,9 +415,9 @@ Guide in SKILL.md for the mapping}
 <!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
 ---
 name: {skill-name}
-description: {20-100 word description on a single line — linter reads first line only}
-phase: {phase}          # for domain skills only — omit for foundation/utility
-classification: {type}  # for foundation/utility only — omit for domain
+description: {20-100 word description on a single line . linter reads first line only}
+phase: {phase}          # for domain skills only . omit for foundation/utility
+classification: {type}  # for foundation/utility only . omit for domain
 version: "1.0.0"
 updated: {date}
 license: Apache-2.0
@@ -436,7 +436,7 @@ metadata:
 
 ## Draft SKILL.md
 
-{Full draft content — not an outline. Includes:
+{Full draft content . not an outline. Includes:
 - Title and introductory paragraph
 - When to Use section
 - When NOT to Use section (if applicable)
@@ -461,7 +461,7 @@ Each section has:
 
 ## Draft EXAMPLE.md
 
-{A complete, realistic example — 150-300 lines.
+{A complete, realistic example . 150-300 lines.
 - Picks a specific PM scenario appropriate to the skill's domain
 - Fills every TEMPLATE.md section with concrete content
 - Demonstrates optional sections both filled and skipped
@@ -510,7 +510,7 @@ Context from user: $ARGUMENTS
 
 ## Validation Checklist
 
-### CI Validation (must pass — enforced by linter + validators)
+### CI Validation (must pass . enforced by linter + validators)
 
 - [ ] `name` matches directory name
 - [ ] `description` is 20-100 words (single-line, no `>-`)
@@ -522,7 +522,7 @@ Context from user: $ARGUMENTS
 - [ ] Command file references correct skill path (`validate-commands.sh`)
 - [ ] AGENTS.md entry uses `#### {name}` + `**Path:**` format (`validate-agents-md.sh`)
 
-### Quality Checks (should pass — builder-enforced, not CI-gated)
+### Quality Checks (should pass . builder-enforced, not CI-gated)
 
 - [ ] `references/EXAMPLE.md` is a complete artifact (150-300 lines), not an outline
 - [ ] Output contract present in SKILL.md
@@ -591,17 +591,17 @@ Three sample builder runs demonstrating different scenarios:
 ### Thread 1: Simple Domain Skill
 **Scenario**: A mid-stage SaaS company needs a skill for creating change management communications when shipping features that change user workflows.
 **Classification**: `deliver-change-communication` (deliver phase, coordination category)
-**Demonstrates**: Straightforward creation — no meaningful overlap, clear classification, efficient 4-interaction flow. Shows the builder at its most concise.
+**Demonstrates**: Straightforward creation . no meaningful overlap, clear classification, efficient 4-interaction flow. Shows the builder at its most concise.
 
 ### Thread 2: Utility Skill with Overlap + Why Gate
 **Scenario**: A contributor wants a skill that validates existing pm-skills against the current CI rules and quality bar, producing a health report with fix recommendations.
-**Classification**: `utility-pm-skill-validate` — operates on the repo and other skills, not a PM domain activity.
-**Demonstrates**: Overlap detected with M-12 CI scripts (which validate at CI time, not interactively). Why Gate triggers — user articulates that CI is pass/fail but doesn't explain *how* to fix issues or assess quality beyond CI minimums. Scope check confirms this is one skill (validate), not validate + iterate. Builder produces a focused utility packet. Also serves as early design thinking for F-10.
+**Classification**: `utility-pm-skill-validate` . operates on the repo and other skills, not a PM domain activity.
+**Demonstrates**: Overlap detected with M-12 CI scripts (which validate at CI time, not interactively). Why Gate triggers . user articulates that CI is pass/fail but doesn't explain *how* to fix issues or assess quality beyond CI minimums. Scope check confirms this is one skill (validate), not validate + iterate. Builder produces a focused utility packet. Also serves as early design thinking for F-10.
 
 ### Thread 3: Kill Gate Fires
 **Scenario**: A contributor proposes a skill for "creating product requirements documents."
-**Classification**: Would be `deliver-prd` — which already exists.
-**Demonstrates**: Direct overlap found. Why Gate fails — the contributor's scenarios are all handled by existing `deliver-prd`. Builder recommends revising the existing skill or adding sample outputs instead. Shows the builder preventing a duplicate skill, which is as valuable as creating a good one.
+**Classification**: Would be `deliver-prd` . which already exists.
+**Demonstrates**: Direct overlap found. Why Gate fails . the contributor's scenarios are all handled by existing `deliver-prd`. Builder recommends revising the existing skill or adding sample outputs instead. Shows the builder preventing a duplicate skill, which is as valuable as creating a good one.
 
 Each sample is a complete Skill Implementation Packet as the builder would produce it.
 
@@ -620,10 +620,10 @@ Each sample is a complete Skill Implementation Packet as the builder would produ
 | Design Section | Status | Notes |
 |---------------|--------|-------|
 | Design summary | **Approved** | Packet → Review → Promote, Approach C, staging area |
-| SKILL.md structure | **Reviewed** — 8 fixes applied | Frontmatter fixed (single-line), quality checklist split, library ref updated |
-| TEMPLATE.md (packet format) | **Reviewed** — 8 fixes applied | AGENTS format fixed, command format fixed, K/P/C/W rule added, validation split |
-| Command file | **Reviewed** — rewritten | Matches repo convention: `description:` only + `$ARGUMENTS` |
-| Sample outputs (3 threads) | **Reviewed** — Thread 2 replaced | Utility scenario now uses pm-skill-validate (F-10 preview) |
+| SKILL.md structure | **Reviewed** . 8 fixes applied | Frontmatter fixed (single-line), quality checklist split, library ref updated |
+| TEMPLATE.md (packet format) | **Reviewed** . 8 fixes applied | AGENTS format fixed, command format fixed, K/P/C/W rule added, validation split |
+| Command file | **Reviewed** . rewritten | Matches repo convention: `description:` only + `$ARGUMENTS` |
+| Sample outputs (3 threads) | **Reviewed** . Thread 2 replaced | Utility scenario now uses pm-skill-validate (F-10 preview) |
 
 > **Review cycle**: Codex reviewed → "Needs revision" with 8 findings → Claude verified all 8
 > against repo ground truth → all 8 confirmed and fixed → awaiting user approval.

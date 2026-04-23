@@ -9,11 +9,11 @@ Reads together with:
 
 | Input | Required? | Accepted forms | Default |
 |-------|-----------|----------------|---------|
-| Meeting topic / purpose | Yes | String or free-form context | — |
+| Meeting topic / purpose | Yes | String or free-form context |. |
 | Meeting date, duration | No | ISO / natural language / integer | Today; 30 min |
 | Attendees | No | List | Infer from topic/context |
 | Related recaps (prior meetings on topic) | No | File references | Auto-discovered via `project`/`topics` match if available |
-| Stakeholder summaries | No | File references to `discover-stakeholder-summary` outputs | — |
+| Stakeholder summaries | No | File references to `discover-stakeholder-summary` outputs |. |
 | Primary ask | No | Sentence | Infer; surface in go-mode summary |
 
 ## Inference rules
@@ -28,24 +28,24 @@ Reads together with:
 
 ## Process (detailed)
 
-1. **Anti-meeting check** (shared with `foundation-meeting-agenda`) — same trigger conditions; override → proceed
-2. **Parse and load inputs** — read `@file` references; discover sibling artifacts via `project`/`topics` frontmatter match when available
+1. **Anti-meeting check** (shared with `foundation-meeting-agenda`). same trigger conditions; override → proceed
+2. **Parse and load inputs**. read `@file` references; discover sibling artifacts via `project`/`topics` frontmatter match when available
 3. **Infer missing values** with confidence markers
-4. **Present go-mode inference summary** (per contract) — includes inferred stakeholder positions, inferred primary ask, inferred top-3 goals
+4. **Present go-mode inference summary** (per contract). includes inferred stakeholder positions, inferred primary ask, inferred top-3 goals
 5. **User confirms `go` or corrects**
-6. **Build background section** — relevant history and prior decisions from recaps/related docs
+6. **Build background section**. relevant history and prior decisions from recaps/related docs
 7. **Per stakeholder analysis**:
    - Position on topic (with evidence or inference flag)
    - Stakes (what they win/lose)
    - Likely concerns
    - Relationship state (strong / neutral / strained)
    - Tactical notes (how to engage)
-8. **Rank desired outcomes** — must / should / nice
+8. **Rank desired outcomes**. must / should / nice
 9. **Draft key messages** in priority order
 10. **Anticipate questions** with prepared responses
 11. **Identify risks and tensions** with mitigations
-12. **Specify asks** — what the user needs from specific people
-13. **Define success signals** — how the user knows the meeting went well in the moment
+12. **Specify asks**. what the user needs from specific people
+13. **Define success signals**. how the user knows the meeting went well in the moment
 14. **Render TEMPLATE.md** with filled values
 
 ## Output contract
@@ -77,7 +77,7 @@ primary_ask: "alignment on ship-date and capacity tradeoffs"
    - Risks and tensions (with mitigations)
    - Asks (per person: what the user needs)
    - Success signals (how the user knows it went well)
-4. `## Sources & References` — including prior recaps consumed, stakeholder summaries loaded, related docs
+4. `## Sources & References`. including prior recaps consumed, stakeholder summaries loaded, related docs
 
 ## Sample inventory
 
@@ -89,10 +89,10 @@ primary_ask: "alignment on ship-date and capacity tradeoffs"
 
 ## Design decisions
 
-1. **Default visibility is `private`** — brief is the user's prep document. Accidental sharing would leak tactical reads.
-2. **Stakeholder reads can run on inferred positions with `low` confidence** — rather than blocking on stakeholder summaries. The skill runs on what it has; a user without stakeholder summaries still gets value.
-3. **"Tactical notes" section is explicit, not buried** — the whole point of a brief is tactical guidance. Users hide from this when agendas pretend to be briefs; the separate skill lets the brief be honestly tactical.
-4. **No red-team mode in v1.0.0** — open question flagged; defer to iteration based on usage.
+1. **Default visibility is `private`**. brief is the user's prep document. Accidental sharing would leak tactical reads.
+2. **Stakeholder reads can run on inferred positions with `low` confidence**. rather than blocking on stakeholder summaries. The skill runs on what it has; a user without stakeholder summaries still gets value.
+3. **"Tactical notes" section is explicit, not buried**. the whole point of a brief is tactical guidance. Users hide from this when agendas pretend to be briefs; the separate skill lets the brief be honestly tactical.
+4. **No red-team mode in v1.0.0**. open question flagged; defer to iteration based on usage.
 
 ## Validation checkpoints
 

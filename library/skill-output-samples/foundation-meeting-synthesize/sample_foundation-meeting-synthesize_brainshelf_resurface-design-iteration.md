@@ -9,7 +9,7 @@ thread: brainshelf
 context: resurface-design-iteration
 ---
 
-# Sample: foundation-meeting-synthesize — Brainshelf Resurface Design Iteration Themes
+# Sample: foundation-meeting-synthesize. Brainshelf Resurface Design Iteration Themes
 
 ## Scenario
 
@@ -121,25 +121,25 @@ Q1 iterations converged on recency-weighting (v1) but surfaced an unresolved ten
 
 ### Themes
 
-#### Algorithm iteration converged on recency-weighting [confidence: high — 3/6 meetings resolved]
+#### Algorithm iteration converged on recency-weighting [confidence: high. 3/6 meetings resolved]
 
 v0 (Feb 3) → v1 (Mar 17) both used recency-weighting. Iteration refined weights but didn't change approach. Topic-clustering was explored (user-feedback signal) but deferred, not killed.
 
-#### Notification copy converged on shorter/direct [confidence: high — 1/6 meetings resolved]
+#### Notification copy converged on shorter/direct [confidence: high. 1/6 meetings resolved]
 
 Feb 17 meeting shortened notification copy based on [fictional] 22% open rate. [fictional] Follow-up data showed open rate lifted to 31% in subsequent weeks.
 
-#### UX friction threshold established [confidence: medium — 1/6 meetings]
+#### UX friction threshold established [confidence: medium. 1/6 meetings]
 
 Mar 31 meeting set <5 second friction threshold as quality bar. Not tested yet; next sprint will validate.
 
 ### Stakeholder position tracking
 
-**elena-algo** — champion of recency-weighting; concerned about topic-clustering implementation complexity
+**elena-algo**. champion of recency-weighting; concerned about topic-clustering implementation complexity
 
-**mia-design** — champion of shorter copy; open to topic-clustering if algo can support
+**mia-design**. champion of shorter copy; open to topic-clustering if algo can support
 
-**priya-pm** — deferring topic-clustering; wants user-feedback-signal resolved
+**priya-pm**. deferring topic-clustering; wants user-feedback-signal resolved
 
 ### Consolidated decision list
 
@@ -153,7 +153,7 @@ Mar 31 meeting set <5 second friction threshold as quality bar. Not tested yet; 
 
 ### Decision evolution (resolved)
 
-None — iterations built on each other without overriding earlier decisions.
+None. iterations built on each other without overriding earlier decisions.
 
 ### Unresolved contradictions (⚠)
 
@@ -161,16 +161,16 @@ None — iterations built on each other without overriding earlier decisions.
 
 - **2026-02-03** (Algo v0): recency-weighting chosen for engagement metrics
 - **2026-03-03** (User Feedback Session): [fictional] 8 users explicitly asked for topic-clustering
-- **Status**: unresolved — metrics favor recency, users request topic-clustering. Next direction meeting should resolve this by committing to one of: (a) stick with recency, explain to users; (b) test topic-clustering in a subset; (c) hybrid.
+- **Status**: unresolved. metrics favor recency, users request topic-clustering. Next direction meeting should resolve this by committing to one of: (a) stick with recency, explain to users; (b) test topic-clustering in a subset; (c) hybrid.
 
 ### Open items and stalled threads
 
-- **Topic-clustering parked without explicit revisit date** — surfaced Mar 3, not re-raised. Risk of silent drop.
-- **<5 sec friction threshold** — set but not yet measured; pending sprint validation
+- **Topic-clustering parked without explicit revisit date**. surfaced Mar 3, not re-raised. Risk of silent drop.
+- **<5 sec friction threshold**. set but not yet measured; pending sprint validation
 
 ### Narrative summary
 
-Resurface iterated steadily through Q1 with recency-weighting as the anchor decision. Copy and UX refinements followed data signals. The one unresolved tension emerged in the March 3 user feedback session: users want topic-clustering, but engagement metrics favor recency. The team parked topic-clustering but has not committed to a resolution path — revisit by when, via what test, with what decision criterion.
+Resurface iterated steadily through Q1 with recency-weighting as the anchor decision. Copy and UX refinements followed data signals. The one unresolved tension emerged in the March 3 user feedback session: users want topic-clustering, but engagement metrics favor recency. The team parked topic-clustering but has not committed to a resolution path. revisit by when, via what test, with what decision criterion.
 
 Going into Q2, the team should hold a direction meeting that explicitly resolves the engagement-vs-intent tension. Delaying risks either losing the user-stated signal (if recency stays forever) or pivoting too late (if topic-clustering is better and we keep deferring).
 
@@ -195,12 +195,12 @@ Going into Q2, the team should hold a direction meeting that explicitly resolves
 
 ### Primary inputs (source meetings)
 
-- 2026-01-20_11-00PST_resurface-kickoff_recap.md — medium
-- 2026-02-03_11-00PST_resurface-algo-v0_recap.md — high
-- 2026-02-17_11-00PST_resurface-notification-copy_recap.md — medium
-- 2026-03-03_11-00PST_resurface-user-feedback-session_recap.md — high
-- 2026-03-17_11-00PST_resurface-algo-v1_recap.md — high
-- 2026-03-31_11-00PST_resurface-ux-refinement_recap.md — medium
+- 2026-01-20_11-00PST_resurface-kickoff_recap.md. medium
+- 2026-02-03_11-00PST_resurface-algo-v0_recap.md. high
+- 2026-02-17_11-00PST_resurface-notification-copy_recap.md. medium
+- 2026-03-03_11-00PST_resurface-user-feedback-session_recap.md. high
+- 2026-03-17_11-00PST_resurface-algo-v1_recap.md. high
+- 2026-03-31_11-00PST_resurface-ux-refinement_recap.md. medium
 
 ### Referenced artifacts
 
@@ -214,8 +214,8 @@ Going into Q2, the team should hold a direction meeting that explicitly resolves
 
 - **Generated**: 2026-04-05T11:00:00Z
 - **Skill version**: 1.0.0
-- **Input quality**: medium — 3 of 6 recaps high, 3 medium; small-team ad-hoc meetings lack transcripts
-- **Overall confidence**: medium — algorithm narrative well-attested; user-feedback signal cited from one meeting
+- **Input quality**: medium. 3 of 6 recaps high, 3 medium; small-team ad-hoc meetings lack transcripts
+- **Overall confidence**: medium. algorithm narrative well-attested; user-feedback signal cited from one meeting
 - **Known gaps**: 2026-01-20 kickoff recap is medium-quality; initial scope framing is less certain
 - **Scope filter**: project=resurface
 - **Format hint**: default (full synthesis; no format-hint specified by user)

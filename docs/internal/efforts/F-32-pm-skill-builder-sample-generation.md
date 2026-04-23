@@ -32,7 +32,7 @@ Automating sample generation closes three gaps:
 
 ### Input (unchanged for the user)
 
-Same as current pm-skill-builder invocation — user provides skill idea, builder does gap analysis and generates the skill.
+Same as current pm-skill-builder invocation. user provides skill idea, builder does gap analysis and generates the skill.
 
 ### New step in the builder's process
 
@@ -74,17 +74,17 @@ Scenarios draw from each thread's documented feature arc (Campaigns / Resurface 
 
 ## Exemplars
 
-- Current `utility-pm-skill-builder` v1.0.0 — generation pattern to extend
-- `library/skill-output-samples/SAMPLE_CREATION.md` — standards the generated output must satisfy
-- `library/skill-output-samples/THREAD_PROFILES.md` (F-34, prerequisite) — thread reference the builder consumes
+- Current `utility-pm-skill-builder` v1.0.0. generation pattern to extend
+- `library/skill-output-samples/SAMPLE_CREATION.md`. standards the generated output must satisfy
+- `library/skill-output-samples/THREAD_PROFILES.md` (F-34, prerequisite). thread reference the builder consumes
 
 ## Deliverables
 
-- `skills/utility-pm-skill-builder/SKILL.md` — extended with sample-generation instruction
-- `skills/utility-pm-skill-builder/references/TEMPLATE.md` — updated output contract includes samples
-- `skills/utility-pm-skill-builder/references/EXAMPLE.md` — updated worked example shows full output with samples
-- `skills/utility-pm-skill-builder/HISTORY.md` — NEW, first HISTORY.md documenting v1.0.0 → v1.1.0 bump
-- `docs/skills/utility/utility-pm-skill-builder.md` — public doc refresh
+- `skills/utility-pm-skill-builder/SKILL.md`. extended with sample-generation instruction
+- `skills/utility-pm-skill-builder/references/TEMPLATE.md`. updated output contract includes samples
+- `skills/utility-pm-skill-builder/references/EXAMPLE.md`. updated worked example shows full output with samples
+- `skills/utility-pm-skill-builder/HISTORY.md`. NEW, first HISTORY.md documenting v1.0.0 → v1.1.0 bump
+- `docs/skills/utility/utility-pm-skill-builder.md`. public doc refresh
 - Updated skills-manifest entry for v2.12.0 release
 
 ## Validation
@@ -102,14 +102,14 @@ Scenarios draw from each thread's documented feature arc (Campaigns / Resurface 
 
 ## Dependencies
 
-- **F-34 (THREAD_PROFILES.md)** must ship first — provides the machine-readable thread reference the builder consumes
+- **F-34 (THREAD_PROFILES.md)** must ship first. provides the machine-readable thread reference the builder consumes
 
 ## Status Transitions
 
 - **Backlog** (current, blocked on F-34)
-- **In Progress** — when sample-generation logic is added to the builder
-- **Shipped** — on v2.12.0 tag + push
+- **In Progress**. when sample-generation logic is added to the builder
+- **Shipped**. on v2.12.0 tag + push
 
 ## Detailed specification
 
-Deferred — produced during refactor pass.
+Deferred. produced during refactor pass.

@@ -7,7 +7,7 @@ skill_version: "2.0.0"
 created: 2026-02-20
 status: sample
 thread: storevine
-context: Storevine B2B ecommerce platform — Campaigns (built-in email marketing)
+context: Storevine B2B ecommerce platform . Campaigns (built-in email marketing)
 ---
 
 ## Scenario
@@ -23,15 +23,15 @@ v1 to engineering.
 **Source Notes:**
 
 - Klaviyo's S-1 filing (September 2023) reported ~130,000 paying customers at IPO,
-  with Shopify as its largest platform integration partner — illustrating the scale
+  with Shopify as its largest platform integration partner . illustrating the scale
   of the email-marketing-for-ecommerce opportunity that platforms are now competing
   to internalize.
 - Shopify launched Shopify Email in 2019, offering 10,000 free emails/month to all
   merchants as a native feature, validating the platform-consolidation strategy for
   email marketing.
 - The CAN-SPAM Act (2003) and GDPR (2018) set the compliance floor for commercial
-  email: one-click unsubscribe, physical sender address, honest subject lines, and —
-  under GDPR — documented consent for EU residents.
+  email: one-click unsubscribe, physical sender address, honest subject lines, and .
+  under GDPR . documented consent for EU residents.
 - Mailchimp's free tier (500 contacts, 1,000 sends/month) and Klaviyo's
   ecommerce-specific segmentation are the two tools Storevine merchants most
   commonly use when they patch the gap with external tooling.
@@ -43,7 +43,7 @@ v1 to engineering.
 ```
 /prd
 
-Feature: Campaigns — native email marketing for Storevine merchants
+Feature: Campaigns . native email marketing for Storevine merchants
 
 Context: Storevine all-in-one ecommerce + web builder, ~18k active merchants
 [fictional]. See: competitive-analysis (filed last week), problem-statement
@@ -54,7 +54,7 @@ accounts in Q4 cited "had to use a separate email tool" as a primary reason
 [fictional]. Power merchants patch with Klaviyo or Mailchimp; smaller merchants
 skip email entirely because setup friction is too high.
 
-Validated solution: Built-in Campaigns — broadcast email + basic audience
+Validated solution: Built-in Campaigns . broadcast email + basic audience
 segmentation. Phase 1 email only, SMS deferred. Pre-built templates, audience
 builder using order/tag data we already have. No custom HTML editor v1.
 
@@ -68,7 +68,7 @@ welcome, re-engagement). No SMS, no A/B testing, no multi-step sequences.
 
 Technical decisions already made:
 - Sending via SendGrid (existing account)
-- Audience builder queries existing customer/order tables — no new pipeline
+- Audience builder queries existing customer/order tables . no new pipeline
 - Legal review on CAN-SPAM + GDPR required before launch (not yet started)
 
 Stakeholders: Growth PM (owner), Eng Lead (aligned), Design (in progress),
@@ -86,21 +86,21 @@ Legal (needs to review compliance section), Marketing (will dog-food).
 ### Problem Statement
 
 Storevine merchants who want to run email marketing campaigns must leave the
-platform to set up a separate tool — most commonly Klaviyo, Mailchimp, or Shopify
+platform to set up a separate tool . most commonly Klaviyo, Mailchimp, or Shopify
 Email. This fragmented workflow increases operational complexity and creates a clear
 retention gap: exit survey analysis shows email marketing gaps were cited by 22% of
 churned accounts in Q4 2025 [fictional] as a primary reason for cancellation.
 Smaller merchants skip email marketing entirely due to the friction of integrating
 an external tool, leaving re-engagement and re-purchase revenue uncaptured.
 
-See [Problem Statement: Email Marketing Gap — Q4 Discovery](#) for the full
+See [Problem Statement: Email Marketing Gap . Q4 Discovery](#) for the full
 analysis.
 
 ### Solution Summary
 
 Campaigns is a native email marketing feature built into Storevine. Merchants build
 an audience from their existing customer and order data, compose emails using
-pre-built templates, and send broadcast or trigger-based campaigns — all without
+pre-built templates, and send broadcast or trigger-based campaigns . all without
 leaving the platform. Version 1 covers email only; SMS is deferred to v2. Three
 automations are included at launch: abandoned cart, welcome series, and
 re-engagement.
@@ -132,15 +132,15 @@ re-engagement.
 | Merchants sending ≥1 campaign/mo | 0% (feature absent) | 40% of active merchants [fictional] | 90 days post-launch |
 | Email-marketing churn contribution | 22% of churned accounts [fictional] | ≤15% [fictional] | 6 months post-launch |
 | Campaigns paid-tier revenue | $0 | Established revenue line [fictional] | End of Q3 2026 |
-| NPS among active Campaigns users | — | ≥45 [fictional] | 90 days post-launch |
+| NPS among active Campaigns users | . | ≥45 [fictional] | 90 days post-launch |
 
 ### Non-Goals
 
-- SMS campaigns — deferred to v2
-- A/B testing of subject lines or content — requires sufficient list volume; v2
-- Advanced automation (multi-step sequences, conditional branching) — v2
-- Custom HTML email editor — template library covers estimated 85% of use cases; v2
-- Transactional emails (order confirmation, shipping) — handled by existing system
+- SMS campaigns . deferred to v2
+- A/B testing of subject lines or content . requires sufficient list volume; v2
+- Advanced automation (multi-step sequences, conditional branching) . v2
+- Custom HTML email editor . template library covers estimated 85% of use cases; v2
+- Transactional emails (order confirmation, shipping) . handled by existing system
 - Native landing page builder tied to campaigns
 
 ## User Stories
@@ -156,7 +156,7 @@ re-engagement.
 | US-7 | As a merchant, I want a welcome email to send to new subscribers automatically so that I start every relationship immediately | P1 |
 | US-8 | As a merchant, I want to import an existing email list so that I can reach customers acquired before using Storevine | P1 |
 
-See [User Stories — Campaigns v1](#) for full acceptance criteria.
+See [User Stories . Campaigns v1](#) for full acceptance criteria.
 
 ## Scope
 
@@ -183,14 +183,14 @@ See [User Stories — Campaigns v1](#) for full acceptance criteria.
 - A/B testing
 - Custom HTML email editor
 - Advanced multi-step automation sequences
-- Email deliverability reporting (bounces, spam complaints) — v2
+- Email deliverability reporting (bounces, spam complaints) . v2
 - Social posting or multi-channel campaigns
 - Transactional emails
 
 ### Future Considerations
 
 - **SMS (v2):** High merchant demand but requires carrier compliance, opt-in flows,
-  and separate sending infrastructure — deferred to isolate launch risk
+  and separate sending infrastructure . deferred to isolate launch risk
 - **Advanced automation (v2):** Multi-step sequences need a workflow engine;
   architecture decision required before design begins
 - **A/B testing (v2):** Valid results require list sizes most Storevine merchants
@@ -288,7 +288,7 @@ See [Figma: Campaigns v1 Design Specs](#) for full wireframes.
 |----------|------------------|
 | Merchant sends to a 0-subscriber segment | Validation error before send: "Your audience has 0 eligible recipients." |
 | Customer unsubscribes mid-send during a large blast | Unsubscribe processed immediately; customer excluded from remaining sends in current batch |
-| CSV import contains invalid email formats | Import proceeds; invalid rows flagged in summary ("12 addresses skipped — invalid format") |
+| CSV import contains invalid email formats | Import proceeds; invalid rows flagged in summary ("12 addresses skipped . invalid format") |
 | Abandoned cart fires but customer has since purchased | Trigger suppressed for that cart session; customer not emailed |
 | Merchant exceeds free tier limit with a scheduled campaign | Campaign paused; email to merchant: "Upgrade to Campaigns Pro to send." |
 | GDPR deletion request for a subscribed customer | Customer removed from all lists; historical send analytics aggregated, not deleted, for campaign integrity |
@@ -300,7 +300,7 @@ See [Figma: Campaigns v1 Design Specs](#) for full wireframes.
 - Email sending must use SendGrid (existing account); Storevine does not manage
   its own MTA
 - Campaign data (content, audiences, analytics events) stored in Storevine's
-  existing PostgreSQL infrastructure — no new database service for v1
+  existing PostgreSQL infrastructure . no new database service for v1
 - CAN-SPAM compliance is a hard launch gate; legal review must complete before
   any production sends
 - Free tier send limit (1,000 emails/month) enforced server-side to prevent abuse
@@ -310,11 +310,11 @@ See [Figma: Campaigns v1 Design Specs](#) for full wireframes.
 - **SendGrid:** Outbound sending API; inbound webhooks for open/click tracking;
   bounce and spam complaint webhooks (logged, not surfaced in v1 analytics UI)
 - **Storevine Orders & Customers DB:** Audience builder queries existing customer
-  and order tables — no ETL pipeline needed for v1
+  and order tables . no ETL pipeline needed for v1
 - **Billing system:** Paid tier requires integration with existing Storevine
   subscription management; usage metered by emails sent per calendar month
 - **Storevine Cart:** Abandoned cart trigger subscribes to the existing
-  cart-abandonment event stream — confirm event exists with platform team
+  cart-abandonment event stream . confirm event exists with platform team
 
 ### Data Requirements
 
@@ -364,21 +364,21 @@ See [Figma: Campaigns v1 Design Specs](#) for full wireframes.
 ## Open Questions
 
 - [ ] Does the platform team have an abandoned cart event in the event stream, or
-  does this need to be instrumented from scratch? — Owner: Platform Eng
+  does this need to be instrumented from scratch? . Owner: Platform Eng
 - [ ] Will GDPR consent requirements change the current subscriber import flow for
-  EU merchants? — Owner: Legal
+  EU merchants? . Owner: Legal
 - [ ] Should the free tier limit (1,000 emails/month) be per merchant account or
-  per subscriber list? — Owner: Growth PM
+  per subscriber list? . Owner: Growth PM
 - [ ] What is the right revenue attribution window? (Currently proposing 5 days
-  from open) — Owner: Growth PM + Data
-- [x] SMS in v1? — **Decision: No. Deferred to v2.**
-- [x] Custom HTML editor in v1? — **Decision: No. Template library only.**
+  from open) . Owner: Growth PM + Data
+- [x] SMS in v1? . **Decision: No. Deferred to v2.**
+- [x] Custom HTML editor in v1? . **Decision: No. Template library only.**
 
 ## Appendix
 
 ### Related Documents
 
-- [Problem Statement: Email Marketing Gap — Q4 Discovery](#)
+- [Problem Statement: Email Marketing Gap . Q4 Discovery](#)
 - [Competitive Analysis: Email Marketing for Ecommerce](#)
 - [User Interviews: Merchant Email Marketing Needs](#)
 - [Figma: Campaigns v1 Design Specs](#)

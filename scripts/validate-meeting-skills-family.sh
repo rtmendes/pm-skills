@@ -92,7 +92,7 @@ for skill in "${FAMILY_SKILLS[@]}"; do
   template_md="$skill_dir/references/TEMPLATE.md"
 
   if [[ ! -d "$skill_dir" ]]; then
-    # Skill not yet authored — not a failure during the scaffolding phase;
+    # Skill not yet authored . not a failure during the scaffolding phase;
     # the validator is intended to run post-authoring. Emit a notice.
     echo "⚠ $skill : skill directory not yet present (expected during scaffolding phase, not after v2.11.0 release)"
     continue
@@ -147,7 +147,7 @@ for skill in "${FAMILY_SKILLS[@]}"; do
     fi
   fi
 
-  # Check 5: TEMPLATE.md has Shareable summary section (except stakeholder-update which requires Shareable update instead — v1.1.0)
+  # Check 5: TEMPLATE.md has Shareable summary section (except stakeholder-update which requires Shareable update instead . v1.1.0)
   if is_in "$skill" "${NO_SHAREABLE_SUMMARY[@]}"; then
     # stakeholder-update requires 'Shareable update' section instead (v1.1.0 explicit boundary)
     if ! grep -qE "^#{1,6}[[:space:]]+Shareable update" "$template_md"; then
@@ -194,11 +194,11 @@ check_filename() {
   # Determine type and apply appropriate regex
   if [[ "$fn" == *"_synthesis"* || "$fn" == *"_synthesis.md" || "$fn" == *"_synthesis_"* ]]; then
     if ! [[ "$fn" =~ $VALID_SYNTHESIS ]]; then
-      fail_skill "filename-convention" "nonconforming synthesis filename '$fn' (in $source_file) — expected pattern: YYYY-Qn_topic_synthesis.md OR YYYY-MM-DD-to-YYYY-MM-DD_topic_synthesis.md"
+      fail_skill "filename-convention" "nonconforming synthesis filename '$fn' (in $source_file) . expected pattern: YYYY-Qn_topic_synthesis.md OR YYYY-MM-DD-to-YYYY-MM-DD_topic_synthesis.md"
     fi
   else
     if ! [[ "$fn" =~ $VALID_SINGLE ]]; then
-      fail_skill "filename-convention" "nonconforming single-meeting filename '$fn' (in $source_file) — expected pattern: YYYY-MM-DD_HH-MMtimezone_title_{agenda|brief|recap|stakeholder-update[-channel-audience]}[_prepared-YYYY-MM-DD].md"
+      fail_skill "filename-convention" "nonconforming single-meeting filename '$fn' (in $source_file) . expected pattern: YYYY-MM-DD_HH-MMtimezone_title_{agenda|brief|recap|stakeholder-update[-channel-audience]}[_prepared-YYYY-MM-DD].md"
     fi
   fi
 }

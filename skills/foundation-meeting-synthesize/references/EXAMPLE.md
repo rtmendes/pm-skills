@@ -71,7 +71,7 @@ Q1 converged on a scope-and-capacity decision (autocomplete + filters; 8 sprint-
 ```
 2026-01-15  |  Search Scope Kickoff
             |  → Initial scope proposal: autocomplete + filters + saved searches
-            |  [confidence: high — kickoff consensus]
+            |  [confidence: high. kickoff consensus]
             |
 2026-02-05  |  Search Scope Review
             |  → Scope narrowed: saved searches deferred to v2
@@ -91,7 +91,7 @@ Q1 converged on a scope-and-capacity decision (autocomplete + filters; 8 sprint-
 
 ### Themes
 
-#### Scope discipline held [confidence: high — consistent across 3/5 meetings]
+#### Scope discipline held [confidence: high. consistent across 3/5 meetings]
 
 Autocomplete + filters appeared IN in every scope-test moment. Saved searches appeared IN at kickoff, OUT from Feb 5 onward. Decision held through 2 subsequent capacity conversations without reopening.
 
@@ -99,7 +99,7 @@ Autocomplete + filters appeared IN in every scope-test moment. Saved searches ap
 - 2026-02-05: saved searches DEFERRED to v2; autocomplete + filters held
 - 2026-03-12: scope reconfirmed implicitly in capacity decision
 
-#### Capacity model as anchor [confidence: high — referenced in 4/5 meetings]
+#### Capacity model as anchor [confidence: high. referenced in 4/5 meetings]
 
 Alex's capacity model emerged on Feb 19 and was referenced as the authoritative capacity artifact in every subsequent meeting. The model's credibility came from having the specific tradeoff math ("cutting saved searches saves 3 sprint-weeks").
 
@@ -107,7 +107,7 @@ Alex's capacity model emerged on Feb 19 and was referenced as the authoritative 
 - 2026-03-12: referenced to anchor the 8-sprint-week commitment
 - 2026-03-26: referenced to confirm vendor risk does not change capacity (only timeline)
 
-#### Vendor-licensing as late-emerging risk [confidence: medium — appears in 1/5 meetings, recency gives weight]
+#### Vendor-licensing as late-emerging risk [confidence: medium. appears in 1/5 meetings, recency gives weight]
 
 Algolia licensing concern surfaced only on Mar 26, late in the quarter. Alex referenced a prior email from Algolia that had been sitting unreviewed since March 15. Suggests a pattern: external-risk signals arriving mid-cycle that the team lacks a routine to triage.
 
@@ -167,7 +167,7 @@ No live unresolved contradictions in this time range.
 
 ### Narrative summary
 
-Q1 search-feature planning converged on scope and capacity through a disciplined sequence. The kickoff proposed autocomplete, filters, and saved searches; a February scope review deferred saved searches to v2, and that decision held across subsequent capacity conversations. Alex's capacity model, introduced in mid-February, became the anchor artifact — referenced in every subsequent meeting and credited with giving priya-cfo the confidence to commit 8 sprint-weeks on March 12 (after the Q1 overrun context was addressed).
+Q1 search-feature planning converged on scope and capacity through a disciplined sequence. The kickoff proposed autocomplete, filters, and saved searches; a February scope review deferred saved searches to v2, and that decision held across subsequent capacity conversations. Alex's capacity model, introduced in mid-February, became the anchor artifact. referenced in every subsequent meeting and credited with giving priya-cfo the confidence to commit 8 sprint-weeks on March 12 (after the Q1 overrun context was addressed).
 
 The one outstanding question is vendor-licensing, which surfaced only on March 26. Alex referenced an Algolia email from March 15 indicating potential query-volume limits. The team correctly paused on a ship-date commitment pending investigation, but the two-week gap between the Algolia email arrival and its meeting-surfacing suggests a gap in how external-vendor risk signals get routed to active planning.
 
@@ -194,11 +194,11 @@ Going into Q2, the team has scope and capacity committed, but not a timeline. Th
 
 ### Primary inputs (source meetings)
 
-- 2026-01-15_14-00EST_search-scope-kickoff_recap.md (2026-01-15) — input quality: high
-- 2026-02-05_14-00EST_search-scope-review_recap.md (2026-02-05) — input quality: high
-- 2026-02-19_14-00EST_search-capacity-planning_recap.md (2026-02-19) — input quality: medium (partial notes; no transcript)
-- 2026-03-12_14-00EST_search-capacity-decision_recap.md (2026-03-12) — input quality: high
-- 2026-03-26_14-00EST_search-vendor-risk-review_recap.md (2026-03-26) — input quality: high
+- 2026-01-15_14-00EST_search-scope-kickoff_recap.md (2026-01-15). input quality: high
+- 2026-02-05_14-00EST_search-scope-review_recap.md (2026-02-05). input quality: high
+- 2026-02-19_14-00EST_search-capacity-planning_recap.md (2026-02-19). input quality: medium (partial notes; no transcript)
+- 2026-03-12_14-00EST_search-capacity-decision_recap.md (2026-03-12). input quality: high
+- 2026-03-26_14-00EST_search-vendor-risk-review_recap.md (2026-03-26). input quality: high
 
 ### Referenced artifacts
 
@@ -214,8 +214,8 @@ Going into Q2, the team has scope and capacity committed, but not a timeline. Th
 
 - **Generated**: 2026-04-02T10:00:00Z
 - **Skill version**: 1.0.0
-- **Input quality**: high — 4 of 5 recaps at high quality, 1 at medium; no low-quality sources
-- **Overall confidence**: high — decisions consistent across sources; stakeholder positions have multiple attestations
+- **Input quality**: high. 4 of 5 recaps at high quality, 1 at medium; no low-quality sources
+- **Overall confidence**: high. decisions consistent across sources; stakeholder positions have multiple attestations
 - **Known gaps**: Algolia licensing terms themselves not yet reviewed (only the fact that limits may apply). Depth of vendor-risk impact is medium-confidence until maria completes investigation.
 - **Scope filter**: project=search-feature
 - **Format hint**: default (full synthesis; user did not request board-prep / onboarding / retro-input / exec-brief variant)

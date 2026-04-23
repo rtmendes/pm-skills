@@ -17,7 +17,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\sync-claude.ps1
 ## What It Does
 
 1. **Creates directories** `.claude/skills` and `.claude/commands` if they don't exist.
-2. **Validates each skill** — checks that every `skills/*/` directory contains:
+2. **Validates each skill** . checks that every `skills/*/` directory contains:
    - `SKILL.md`
    - `references/TEMPLATE.md`
    - `references/EXAMPLE.md`
@@ -29,12 +29,12 @@ powershell -ExecutionPolicy Bypass -File .\scripts\sync-claude.ps1
 
 - **Use when**: Your tool (Claude Code, openskills CLI) reads from `.claude/` for discovery.
 - **Skip when**: Your tool reads `skills/` and `commands/` directly, or you're only editing content.
-- **Called automatically** by `build-release` — no need to run separately before a release build.
+- **Called automatically** by `build-release` . no need to run separately before a release build.
 
 ## Outputs
 
-- `.claude/skills/<name>/` — mirror of each skill directory
-- `.claude/commands/<name>.md` — mirror of each command file
+- `.claude/skills/<name>/` . mirror of each skill directory
+- `.claude/commands/<name>.md` . mirror of each command file
 
 Both directories are gitignored; this is a local convenience only.
 

@@ -44,7 +44,7 @@ Legend: green = verified complete, yellow = in progress, red = blocker.
 
 ---
 
-## Phase 0 — Adversarial review loop (MUST run before tag)
+## Phase 0. Adversarial review loop (MUST run before tag)
 
 **Added in v2.11.0 based on two rounds of Codex review experience** (see [`plan_v2.11_review-journal.md`](plan_v2.11_review-journal.md)).
 
@@ -68,15 +68,15 @@ graph LR
 2. If any CRITICAL or IMPORTANT findings surface:
    - Execute a resolution pass fixing all CRITICAL + IMPORTANT findings
    - Track MINOR + NIT separately; decide per-item whether to fix now or defer to next patch
-   - **Re-run Codex** on the post-resolution state — do not assume findings don't compound
+   - **Re-run Codex** on the post-resolution state. do not assume findings don't compound
 3. Repeat the loop until Codex returns zero CRITICAL and zero IMPORTANT findings
 4. If MINOR + NIT findings persist at loop termination: document each in the review journal with fix-or-defer decision
 
-**Why this is Phase 0 (not Phase 7)**: findings surfaced by adversarial review often touch the contract, skill files, or samples — i.e., they force re-runs of Phases 1-4 mechanical checks anyway. Running adversarial review first ensures Phases 1-4 are evaluated against the final state, not an intermediate one.
+**Why this is Phase 0 (not Phase 7)**: findings surfaced by adversarial review often touch the contract, skill files, or samples. i.e., they force re-runs of Phases 1-4 mechanical checks anyway. Running adversarial review first ensures Phases 1-4 are evaluated against the final state, not an intermediate one.
 
 **Rationale from v2.11.0 experience**:
 - Round 1: 15 findings (3 CRITICAL, 7 IMPORTANT, 3 MINOR, 1 NIT)
-- Round 2 (post-resolution): 11 findings (0 CRITICAL, 6 IMPORTANT, 3 MINOR, 2 NIT) — the Round 1 resolution pass itself introduced new IMPORTANT issues
+- Round 2 (post-resolution): 11 findings (0 CRITICAL, 6 IMPORTANT, 3 MINOR, 2 NIT). the Round 1 resolution pass itself introduced new IMPORTANT issues
 - The loop terminates; it doesn't recur indefinitely. v2.11.0 converged in 2 rounds.
 
 **Checklist**:
@@ -91,7 +91,7 @@ graph LR
 
 ---
 
-## Phase 1 — Mechanical CI (must all be green)
+## Phase 1. Mechanical CI (must all be green)
 
 Run locally before tagging:
 
@@ -106,16 +106,16 @@ bash scripts/check-count-consistency.sh   # advisory, but review output
 
 Checklist:
 
-- [ ] `validate-meeting-skills-family` green — all 5 skills conform to v1.1.0 contract
-- [ ] `lint-skills-frontmatter` green — all 38 skills pass
-- [ ] `validate-commands` green — all 45 commands map to valid skills
-- [ ] `validate-agents-md` green — 38 skill paths match
-- [ ] `validate-skills-manifest` green — v2.11.0 manifest conformant
-- [ ] `check-count-consistency` drift reviewed — any flagged counts confirmed intentional-historical or fixed
+- [ ] `validate-meeting-skills-family` green. all 5 skills conform to v1.1.0 contract
+- [ ] `lint-skills-frontmatter` green. all 38 skills pass
+- [ ] `validate-commands` green. all 45 commands map to valid skills
+- [ ] `validate-agents-md` green. 38 skill paths match
+- [ ] `validate-skills-manifest` green. v2.11.0 manifest conformant
+- [ ] `check-count-consistency` drift reviewed. any flagged counts confirmed intentional-historical or fixed
 
 ---
 
-## Phase 2 — Document fidelity
+## Phase 2. Document fidelity
 
 Goes beyond CI. Checks for internal consistency, narrative coherence, and surface-area completeness.
 
@@ -150,7 +150,7 @@ For each of the 5 meeting skills:
 - [ ] Real industry data cited in Source Notes uses publicly accessible URLs
 - [ ] Sample count in `library/skill-output-samples/README_SAMPLES.md` matches actual count
 
-  **Concrete command** (v1.1.0 errata — must run, not just mentally check):
+  **Concrete command** (v1.1.0 errata. must run, not just mentally check):
 
   ```bash
   # Actual sample count
@@ -158,12 +158,12 @@ For each of the 5 meeting skills:
   # Claimed count (first number in README)
   CLAIMED=$(grep -oE '^[0-9]+ sample outputs' library/skill-output-samples/README_SAMPLES.md | head -1 | grep -oE '[0-9]+')
   echo "Actual: $ACTUAL, Claimed: $CLAIMED"
-  [[ "$ACTUAL" == "$CLAIMED" ]] && echo "MATCH" || echo "DRIFT — fix before tag"
+  [[ "$ACTUAL" == "$CLAIMED" ]] && echo "MATCH" || echo "DRIFT. fix before tag"
   ```
 
   Reviewer must paste the command output in the PR description (expected vs actual). Advisory: 109 vs 120 drift in v2.11.0 was missed because the check was written in passive voice. Don't repeat.
 
-- [ ] Every sample file is either linked from `README_SAMPLES.md` browse tables OR explicitly categorized as legacy/orbit in the breakdown section — no unlinked-and-uncategorized samples
+- [ ] Every sample file is either linked from `README_SAMPLES.md` browse tables OR explicitly categorized as legacy/orbit in the breakdown section. no unlinked-and-uncategorized samples
 
 ### 2d. Public skill doc fidelity
 
@@ -180,7 +180,7 @@ For each of the 5 new public skill docs at `docs/skills/foundation/foundation-me
 
 ---
 
-## Phase 3 — Discoverability
+## Phase 3. Discoverability
 
 The family is discoverable through multiple entry points.
 
@@ -219,54 +219,54 @@ Checklist:
 
 ---
 
-## Phase 4 — Release coordination
+## Phase 4. Release coordination
 
 Documentation that explains what shipped and why.
 
-- [ ] `docs/internal/release-plans/v2.11.0/plan_v2.11.0.md` — decisions table reflects final state
-- [ ] `docs/internal/release-plans/v2.11.0/plan_v2.11_codex-review.md` — all 14 of 15 findings marked resolved
-- [ ] `docs/internal/release-plans/v2.11.0/plan_v2.11_ci-coverage-analysis.md` — gaps documented with follow-up efforts
-- [ ] `docs/internal/release-plans/v2.11.0/skills-manifest.yaml` — 6 skill entries (F-26 + 5 meeting) at v1.0.0
-- [ ] `docs/internal/efforts/meeting-skills-family/plan_family-contract.md` — master plan shows all phases with completion dates
+- [ ] `docs/internal/release-plans/v2.11.0/plan_v2.11.0.md`. decisions table reflects final state
+- [ ] `docs/internal/release-plans/v2.11.0/plan_v2.11_codex-review.md`. all 14 of 15 findings marked resolved
+- [ ] `docs/internal/release-plans/v2.11.0/plan_v2.11_ci-coverage-analysis.md`. gaps documented with follow-up efforts
+- [ ] `docs/internal/release-plans/v2.11.0/skills-manifest.yaml`. 6 skill entries (F-26 + 5 meeting) at v1.0.0
+- [ ] `docs/internal/efforts/meeting-skills-family/plan_family-contract.md`. master plan shows all phases with completion dates
 - [ ] Master plan decisions log has entry for each significant design decision
 - [ ] Every new effort brief (F-17, F-18, F-25, F-26, F-27, F-28, F-29, F-30) is linked from the release plan
 
 ---
 
-## Phase 5 — Tag-time chores
+## Phase 5. Tag-time chores
 
 Customary at git-tag time (not at feature-complete time):
 
-- [ ] `CHANGELOG.md` — v2.11.0 entry summarizing skills + contract + CI additions
-- [ ] `docs/releases/Release_v2.11.0.md` — release notes with user-facing highlights
-- [ ] `docs/releases/index.md` — v2.11.0 row added
-- [ ] `.claude-plugin/plugin.json` — version bumped from 2.10.2 to 2.11.0
-- [ ] `marketplace.json` — version bumped
+- [ ] `CHANGELOG.md`. v2.11.0 entry summarizing skills + contract + CI additions
+- [ ] `docs/releases/Release_v2.11.0.md`. release notes with user-facing highlights
+- [ ] `docs/releases/index.md`. v2.11.0 row added
+- [ ] `.claude-plugin/plugin.json`. version bumped from 2.10.2 to 2.11.0
+- [ ] `marketplace.json`. version bumped
 - [ ] Git tag created and pushed
 
 ---
 
-## Phase 6 — Post-release signals
+## Phase 6. Post-release signals
 
 Monitored after the tag to decide follow-up work:
 
 - [ ] First real-world use of at least 2 of the 5 skills within 2 weeks
 - [ ] Open issues or feedback tracked against each skill
-- [ ] F-31 (pm-skill-validate family-awareness) triaged — add to v2.12.0 backlog if needed
-- [ ] F-29 (meeting-lifecycle workflow) triaged — promote from backlog if adoption signals demand
-- [ ] F-30 (adoption guide) triaged — promote if multiple teams evaluating the family
+- [ ] F-31 (pm-skill-validate family-awareness) triaged. add to v2.12.0 backlog if needed
+- [ ] F-29 (meeting-lifecycle workflow) triaged. promote from backlog if adoption signals demand
+- [ ] F-30 (adoption guide) triaged. promote if multiple teams evaluating the family
 
 ---
 
-## Quality gates — severity tiers
+## Quality gates. severity tiers
 
 Not all items block a release equally. Use this tier map when triaging what's genuinely blocking vs. fixable-in-patch:
 
 | Tier | Blocks tag? | Examples |
 |------|-------------|----------|
-| **Tier 1 — hard gate** | Yes | Any CI failure; contract self-contradiction; broken cross-links in SKILL.md; missing required frontmatter field |
-| **Tier 2 — soft gate** | Usually | Sample non-conformance to SAMPLE_CREATION.md; stale count references in current-state docs; missing mkdocs nav |
-| **Tier 3 — hygiene** | No | Typos; wording refinements; additional mermaid diagrams; follow-up-effort backlog grooming |
+| **Tier 1. hard gate** | Yes | Any CI failure; contract self-contradiction; broken cross-links in SKILL.md; missing required frontmatter field |
+| **Tier 2. soft gate** | Usually | Sample non-conformance to SAMPLE_CREATION.md; stale count references in current-state docs; missing mkdocs nav |
+| **Tier 3. hygiene** | No | Typos; wording refinements; additional mermaid diagrams; follow-up-effort backlog grooming |
 
 Tier 1 must be green. Tier 2 must be green or explicitly accepted as known-debt in the release plan. Tier 3 is release-noted if notable; otherwise deferred.
 

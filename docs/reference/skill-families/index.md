@@ -25,11 +25,11 @@ Five `foundation-meeting-*` skills that together support the full meeting lifecy
 **Contract**: [Meeting Skills Contract](meeting-skills-contract.md) (v1.1.0)
 
 **Member skills**:
-- [`foundation-meeting-agenda`](../../skills/foundation/foundation-meeting-agenda.md) — attendee-facing structure
-- [`foundation-meeting-brief`](../../skills/foundation/foundation-meeting-brief.md) — user's private strategic prep
-- [`foundation-meeting-recap`](../../skills/foundation/foundation-meeting-recap.md) — post-meeting topic-segmented summary
-- [`foundation-meeting-synthesize`](../../skills/foundation/foundation-meeting-synthesize.md) — cross-meeting archaeology
-- [`foundation-stakeholder-update`](../../skills/foundation/foundation-stakeholder-update.md) — async outward comms
+- [`foundation-meeting-agenda`](../../skills/foundation/foundation-meeting-agenda.md). attendee-facing structure
+- [`foundation-meeting-brief`](../../skills/foundation/foundation-meeting-brief.md). user's private strategic prep
+- [`foundation-meeting-recap`](../../skills/foundation/foundation-meeting-recap.md). post-meeting topic-segmented summary
+- [`foundation-meeting-synthesize`](../../skills/foundation/foundation-meeting-synthesize.md). cross-meeting archaeology
+- [`foundation-stakeholder-update`](../../skills/foundation/foundation-stakeholder-update.md). async outward comms
 
 **Shared characteristics**:
 - Zero-friction execution (`go` mode) with load-bearing inference gates
@@ -62,7 +62,7 @@ Skip a family contract when:
 
 Not yet formalized, but potential future families include:
 
-- **Research family** — interview-synthesis, competitive-analysis, jtbd-canvas, stakeholder-summary sharing a research-evidence contract
-- **Delivery family** — prd, user-stories, acceptance-criteria, edge-cases sharing a traceability contract
+- **Research family**. interview-synthesis, competitive-analysis, jtbd-canvas, stakeholder-summary sharing a research-evidence contract
+- **Delivery family**. prd, user-stories, acceptance-criteria, edge-cases sharing a traceability contract
 
 These would get their own `docs/reference/skill-families/{family}-contract.md` file following the same pattern.

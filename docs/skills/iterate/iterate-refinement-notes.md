@@ -16,7 +16,7 @@ tags:
 
 # Refinement Notes
 
-Refinement notes capture the outcomes of backlog refinement (grooming) sessions—what was discussed, what was estimated, and what decisions were made. They serve as a quick reference for team members who missed the session and a historical record of how stories evolved from idea to ready-for-sprint.
+Refinement notes capture the outcomes of backlog refinement (grooming) sessions.what was discussed, what was estimated, and what decisions were made. They serve as a quick reference for team members who missed the session and a historical record of how stories evolved from idea to ready-for-sprint.
 
 ## When to Use
 
@@ -47,7 +47,7 @@ When asked to document refinement notes, follow these steps:
    For each story, capture the outcome: estimated points, refined status, key discussion points, and any modifications made to the original scope.
 
 3. **Document Questions Raised**
-   Questions that couldn't be answered in the session need owners and due dates. Don't let them disappear—they often block sprint planning.
+   Questions that couldn't be answered in the session need owners and due dates. Don't let them disappear.they often block sprint planning.
 
 4. **Capture Decisions Made**
    Record any scope decisions, technical approaches agreed upon, or priority changes. These decisions are valuable context that gets lost without documentation.
@@ -160,8 +160,8 @@ When asked to document refinement notes, follow these steps:
 |-------|-------|--------|--------|-------|
 | [STORY-XXX] | [Title] | [X] | Ready | [Brief note] |
 | [STORY-XXX] | [Title] | [X] | Ready | [Brief note] |
-| [STORY-XXX] | [Title] | — | Needs Work | [What's needed] |
-| [STORY-XXX] | [Title] | — | Blocked | [Blocker] |
+| [STORY-XXX] | [Title] | . | Needs Work | [What's needed] |
+| [STORY-XXX] | [Title] | . | Blocked | [Blocker] |
 
 ---
 
@@ -284,7 +284,7 @@ When asked to document refinement notes, follow these steps:
     - Team agreed to use existing CSV library (PapaParse) for consistency
 
     **Scope Changes:**
-    - Originally included Excel export—moved to separate story for future sprint
+    - Originally included Excel export.moved to separate story for future sprint
 
     **Acceptance Criteria Confirmed:**
     - [x] Export button visible on reports dashboard
@@ -350,12 +350,12 @@ When asked to document refinement notes, follow these steps:
 
     | Attribute | Value |
     |-----------|-------|
-    | **Points** | — |
+    | **Points** | . |
     | **Status** | Needs Work |
     | **Assignee** | TBD |
 
     **Discussion Notes:**
-    - Story is too large—team estimated 13+ points
+    - Story is too large.team estimated 13+ points
     - Decision: Split into 3 smaller stories
       - USER-348a: Settings navigation restructure (3 pts)
       - USER-348b: Notification preferences panel (5 pts)
@@ -374,7 +374,7 @@ When asked to document refinement notes, follow these steps:
 
     | Attribute | Value |
     |-----------|-------|
-    | **Points** | — |
+    | **Points** | . |
     | **Status** | Blocked |
     | **Assignee** | TBD |
 
@@ -384,7 +384,7 @@ When asked to document refinement notes, follow these steps:
     - Some components may need redesign (charts, badges with colored backgrounds)
 
     **Blocker:**
-    - Missing design specs—blocked on design team
+    - Missing design specs.blocked on design team
 
     ---
 
@@ -395,8 +395,8 @@ When asked to document refinement notes, follow these steps:
     | USER-342 | CSV Export for Reports | 3 | Ready | Excel export moved to future |
     | USER-345 | Password Reset Rate Limiting | 5 | Ready | Security team approved |
     | USER-347 | Profile Page Performance | 5 | Ready | Added perf test criterion |
-    | USER-348 | User Settings Redesign | — | Needs Work | Splitting into 3 stories |
-    | USER-350 | Dark Mode Toggle | — | Blocked | Waiting on design specs |
+    | USER-348 | User Settings Redesign | . | Needs Work | Splitting into 3 stories |
+    | USER-350 | Dark Mode Toggle | . | Blocked | Waiting on design specs |
 
     ---
 
@@ -412,7 +412,7 @@ When asked to document refinement notes, follow these steps:
 
     **Q: Should CSV export include hidden columns?**
     - Context: Users can hide columns in the report view. Should hidden columns appear in export?
-    - Impact: Minor—doesn't block story, but affects implementation detail
+    - Impact: Minor.doesn't block story, but affects implementation detail
     - Notes: Taylor leaning toward "export matches what you see" but will confirm with customers
 
     **Q: What's the plan for internationalization of exported dates?**
@@ -479,7 +479,7 @@ When asked to document refinement notes, follow these steps:
 
 See this skill applied to three different product contexts:
 
-??? example "Storevine (B2B): Storevine B2B ecommerce platform — Campaigns v1.1 sprint refinement session"
+??? example "Storevine (B2B): Storevine B2B ecommerce platform . Campaigns v1.1 sprint refinement session"
     **Prompt:**
 
     ```
@@ -487,20 +487,20 @@ See this skill applied to three different product contexts:
 
     Session: Campaigns v1.1 refinement
     Date: July 22, 2026, 10:00 AM, 60 minutes
-    Sprint preparing for: Sprint 12 — Campaigns v1.1
+    Sprint preparing for: Sprint 12 . Campaigns v1.1
     Facilitator: Growth PM
 
     Stories on the agenda:
     1. CAM-088: EU merchant GDPR consent data model
     2. CAM-089: Per-campaign open rate and click rate analytics
-    3. CAM-090: Follow-on experiment — 3 vs. 5 products in guided template
+    3. CAM-090: Follow-on experiment . 3 vs. 5 products in guided template
     4. CAM-091: Abandoned cart email trigger
 
     Key constraints:
     - Legal has not yet signed off on the EU consent model (CAM-088)
     - Backend Engineer flagged ambiguity on the open rate denominator
       (CAM-089): Amplitude delivered-event count vs. SendGrid recipient count
-    - CAM-091 may need to be split — scope spans 4 engineering domains
+    - CAM-091 may need to be split . scope spans 4 engineering domains
 
     Need: full refinement notes for Sprint 12 planning.
     ```
@@ -511,7 +511,7 @@ See this skill applied to three different product contexts:
 
     # Refinement Notes: July 22, 2026
 
-??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — Sprint 9 refinement for Resurface v2 improvements"
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app . Sprint 9 refinement for Resurface v2 improvements"
     **Prompt:**
 
     ```
@@ -522,12 +522,12 @@ See this skill applied to three different product contexts:
 
     stories discussed:
     1. RSF-010: embedding migration (tfidf → openai text-embedding-3-small)
-       — BLOCKED, waiting on openai api key + budget approval from marco
-    2. RSF-011: in-app resurfacing card on home screen — Ready, 5 pts [fictional]
-    3. RSF-012: cadence experiment (daily vs 3x/week, larger sample) —
+       . BLOCKED, waiting on openai api key + budget approval from marco
+    2. RSF-011: in-app resurfacing card on home screen . Ready, 5 pts [fictional]
+    3. RSF-012: cadence experiment (daily vs 3x/week, larger sample) .
        Ready, 3 pts [fictional]
     4. RSF-013: small-library handling (users with <20 items, shorter
-       exclusion window) — Needs Work, alex wants to see the data first
+       exclusion window) . Needs Work, alex wants to see the data first
 
     questions raised: should the in-app card show different items than
     the email digest or the same items? what's the minimum library size

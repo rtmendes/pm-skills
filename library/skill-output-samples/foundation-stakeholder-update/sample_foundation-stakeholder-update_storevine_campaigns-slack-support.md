@@ -9,7 +9,7 @@ thread: storevine
 context: campaigns-slack-support
 ---
 
-# Sample: foundation-stakeholder-update — Storevine Campaigns Slack Update to Support Team
+# Sample: foundation-stakeholder-update. Storevine Campaigns Slack Update to Support Team
 
 ## Scenario
 
@@ -63,7 +63,7 @@ status: draft
 
 ---
 
-**🎯 Campaigns pricing decided — support playbook needed by 2026-05-15**
+**🎯 Campaigns pricing decided. support playbook needed by 2026-05-15**
 
 **TL;DR**
 
@@ -91,7 +91,7 @@ More: [full recap](2026-04-24_13-00EST_campaigns-pricing-decision_recap.md) | [t
 
 ---
 
-> [End of Shareable update section. Everything below is INTERNAL — do not copy into Slack.]
+> [End of Shareable update section. Everything below is INTERNAL. do not copy into Slack.]
 
 ## Technical-to-business translation notes
 
@@ -104,7 +104,7 @@ More: [full recap](2026-04-24_13-00EST_campaigns-pricing-decision_recap.md) | [t
 
 **Flagged but kept**:
 
-- "Migration" — customer-facing but ambiguous; support team has a different meaning for this internally. If playbook gets external-facing version, use "transition" instead.
+- "Migration". customer-facing but ambiguous; support team has a different meaning for this internally. If playbook gets external-facing version, use "transition" instead.
 
 ---
 
@@ -133,6 +133,6 @@ More: [full recap](2026-04-24_13-00EST_campaigns-pricing-decision_recap.md) | [t
 - **Audience variant**: customer-facing
 - **Thread continuation**: no (first Campaigns pricing update)
 - **Input quality**: high
-- **Known gaps**: Annual-plan and custom-billing edge cases flagged but not detailed — support to surface during playbook build
+- **Known gaps**: Annual-plan and custom-billing edge cases flagged but not detailed. support to surface during playbook build
 - **Translations applied**: 3 applied; 1 flagged for potential external-facing review
 ```

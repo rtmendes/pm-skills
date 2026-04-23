@@ -9,7 +9,7 @@ Reads together with:
 
 | Input | Required? | Accepted forms | Default |
 |-------|-----------|----------------|---------|
-| Source meetings | Yes | List of recap filenames (preferred) or raw note files | — |
+| Source meetings | Yes | List of recap filenames (preferred) or raw note files |. |
 | Time range | No | `--quarter=2026-Q1`, `--range=YYYY-MM-DD-to-YYYY-MM-DD`, or "last quarter" / "last month" | All sources provided |
 | Topic filter | No | String (matches `project` or `topics` in source frontmatter) | None |
 | Stakeholder filter | No | List of names | None |
@@ -27,9 +27,9 @@ Reads together with:
 
 ## Process (detailed)
 
-1. **Load sources** — read all provided files; parse frontmatter; note per-source input quality
-2. **Apply filters** — if time range, topic, or stakeholder filter provided, narrow source set
-3. **Present go-mode inference summary** — per contract; includes meeting count after filter, time range detected, per-source quality levels, scope filter applied
+1. **Load sources**. read all provided files; parse frontmatter; note per-source input quality
+2. **Apply filters**. if time range, topic, or stakeholder filter provided, narrow source set
+3. **Present go-mode inference summary**. per contract; includes meeting count after filter, time range detected, per-source quality levels, scope filter applied
 4. **Build plain-text timeline**:
    - Chronological order by `meeting_date`
    - Each entry: date | meeting name | key decision or shift | confidence / contradiction flag
@@ -41,12 +41,12 @@ Reads together with:
    - For each named stakeholder across sources: initial position → current position
    - Alignment state: aligned / divergent / shifting
    - Key quoted or paraphrased statements with dates
-7. **Consolidate decisions** — all decisions across meetings, sorted chronologically, with source meeting citations. Table format with columns: Date | Decision | Context | Meeting | Confidence
-8. **Flag contradictions** — pairs of decisions or positions in conflict:
+7. **Consolidate decisions**. all decisions across meetings, sorted chronologically, with source meeting citations. Table format with columns: Date | Decision | Context | Meeting | Confidence
+8. **Flag contradictions**. pairs of decisions or positions in conflict:
    - Earlier reference + later reference
    - Status: unresolved / later supersedes / needs reconciliation
-9. **Identify open items and stalled threads** — topics resurfacing without resolution; when they last appeared
-10. **Draft narrative summary** — 2-3 paragraphs: what happened, what changed, where we are, what's at stake
+9. **Identify open items and stalled threads**. topics resurfacing without resolution; when they last appeared
+10. **Draft narrative summary**. 2-3 paragraphs: what happened, what changed, where we are, what's at stake
 11. **Prioritize follow-up suggestions**:
     - High: unblocking now; suggested owner/forum
     - Medium: important but not blocking
@@ -98,7 +98,7 @@ Omits `meeting_title`, `meeting_date`, `meeting_start_time`, `attendees` (aggreg
    - Open items and stalled threads
    - Narrative summary (2-3 paragraphs)
    - Prioritized follow-up suggestions (High / Medium / Low)
-4. `## Sources & References` — every source meeting with filename + date + input quality
+4. `## Sources & References`. every source meeting with filename + date + input quality
 
 ## Sample inventory
 
@@ -110,11 +110,11 @@ Omits `meeting_title`, `meeting_date`, `meeting_start_time`, `attendees` (aggreg
 
 ## Design decisions
 
-1. **Plain-text timeline, not binary image** — renders everywhere (chat, email, PRs, printed). Markdown-compatible code block with date | event | shift structure. Binary images break in too many downstream contexts.
-2. **Contradiction flags are a first-class section, not an afterthought** — this is the synthesis output that no human reviewer catches reliably. Elevating it is the core value-add.
-3. **Confidence markers per theme, not just overall** — "appears in 5/5" vs. "mentioned once" changes how a reader weights a claim. Aggregating to overall confidence flattens the signal.
-4. **Omit per-meeting fields in frontmatter** — synthesis aggregates; per-meeting identity lives in `source_meetings`. Keeps frontmatter semantically clean.
-5. **Format hints are output shaping, not separate modes** — one process produces the full synthesis data; the hint controls section ordering and truncation for specific use cases. Avoids code duplication across mode variants.
+1. **Plain-text timeline, not binary image**. renders everywhere (chat, email, PRs, printed). Markdown-compatible code block with date | event | shift structure. Binary images break in too many downstream contexts.
+2. **Contradiction flags are a first-class section, not an afterthought**. this is the synthesis output that no human reviewer catches reliably. Elevating it is the core value-add.
+3. **Confidence markers per theme, not just overall**. "appears in 5/5" vs. "mentioned once" changes how a reader weights a claim. Aggregating to overall confidence flattens the signal.
+4. **Omit per-meeting fields in frontmatter**. synthesis aggregates; per-meeting identity lives in `source_meetings`. Keeps frontmatter semantically clean.
+5. **Format hints are output shaping, not separate modes**. one process produces the full synthesis data; the hint controls section ordering and truncation for specific use cases. Avoids code duplication across mode variants.
 
 ## Validation checkpoints
 

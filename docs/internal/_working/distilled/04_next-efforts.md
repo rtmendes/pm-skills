@@ -2,7 +2,7 @@
 
 > **Date**: 2026-03-21 (revised 2026-03-22)
 > **Author**: Claude Opus 4.6
-> **Status**: Active working document — update status table as work progresses
+> **Status**: Active working document . update status table as work progresses
 > **Context**: Post-session reassessment after Knowledge OS separation
 > **Note**: Effort estimates are in effort-days, not calendar-days. This is a side project with variable time allocation.
 
@@ -29,7 +29,7 @@
 
 The earlier recommendation was right directionally but conflated pm-skills work with what's now Knowledge OS. Here's the updated framing:
 
-**Removed from pm-skills scope** (now Knowledge OS — separate repo, separate timeline):
+**Removed from pm-skills scope** (now Knowledge OS . separate repo, separate timeline):
 - Multi-project workspace (`/project new`, `/project switch`, artifact persistence)
 - Document evolution (`/update-doc`, `/link-docs`, versioning)
 - Transcript processing
@@ -45,7 +45,7 @@ The earlier recommendation was right directionally but conflated pm-skills work 
 - Release automation (reduces maintainer toil)
 - Community contribution infrastructure
 
-This simplification is significant. pm-skills no longer needs to become a "PM workspace" — it needs to be an excellent, visible, community-ready skill library. Knowledge OS handles the workspace layer separately.
+This simplification is significant. pm-skills no longer needs to become a "PM workspace" . it needs to be an excellent, visible, community-ready skill library. Knowledge OS handles the workspace layer separately.
 
 **The earlier recommendation's core advice stands**: stop exploring, ship something small. But now the "something small" is even smaller because workspace features moved to Knowledge OS.
 
@@ -64,7 +64,7 @@ This simplification is significant. pm-skills no longer needs to become a "PM wo
 - [ ] Write 3+ example use cases
 
 ### Agent-executable steps
-None — this is a form submission. Human-only.
+None . this is a form submission. Human-only.
 - Shortlink: [clau.de/plugin-directory-submission](https://clau.de/plugin-directory-submission)
 - In-app: `claude.ai/settings/plugins/submit` or `platform.claude.com/plugins/submit`
 
@@ -146,12 +146,12 @@ Output: Advisory message (non-blocking)
 
 ## Effort 2: PM Skill Builder Skill
 
-**What**: A utility skill (`utility-pm-skill-builder`) that guides contributors from "I have an idea for a PM skill" to a complete Skill Implementation Packet — draft files ready for PR.
+**What**: A utility skill (`utility-pm-skill-builder`) that guides contributors from "I have an idea for a PM skill" to a complete Skill Implementation Packet . draft files ready for PR.
 **Why**: This is the highest-value meta-skill. It encodes the repo's conventions (3-file pattern, frontmatter schema, naming rules, classification, validation checklist) into an interactive workflow. Without it, every new skill requires reading 6+ reference documents and knowing tribal knowledge. With it, a contributor runs `/skill-builder` and gets repo-compatible output.
 **Why now**: The prior analysis (approach_opus-4.6.md + approach_gpt-5.4.md) already converged on the design. CI validation (#1) can verify the builder's output. The Anthropic marketplace listing (#0) will drive new users who may want to contribute.
 
 ### Human decisions needed
-- [x] ~~Confirm naming~~ — **Decided**: directory `skills/utility-pm-skill-builder/`, command `/pm-skill-builder`. General builder is `utility-agent-skill-builder` / `/agent-skill-builder` (also in pm-skills, ships later).
+- [x] ~~Confirm naming~~ . **Decided**: directory `skills/utility-pm-skill-builder/`, command `/pm-skill-builder`. General builder is `utility-agent-skill-builder` / `/agent-skill-builder` (also in pm-skills, ships later).
 - [ ] Confirm v1 scope: create mode only, or include revise/audit modes?
   - Recommendation: create mode for v1, revise/audit as fast follow
 
@@ -161,7 +161,7 @@ Output: Advisory message (non-blocking)
 ```
 Frontmatter:
   name: utility-pm-skill-builder
-  description: [from approach doc — gap analysis, classification, implementation packet]
+  description: [from approach doc . gap analysis, classification, implementation packet]
   classification: utility
   version: "1.0.0"
   updated: [current date]
@@ -181,7 +181,7 @@ Content sections:
     Step 3: Repo-Fit Assessment (new skill / revise / workflow / command / docs-only)
     Step 4: Classification (domain/foundation/utility + phase + category)
     Step 5: Generate Implementation Packet (all draft files + checklists)
-    Step 6: Writing Lens (optional — process/knowledge/reflection type guidance)
+    Step 6: Writing Lens (optional . process/knowledge/reflection type guidance)
     Step 7: Validation Checklist
   - Output Contract (what the packet MUST include)
   - Quality Criteria
@@ -206,7 +206,7 @@ The Skill Implementation Packet template:
 ```
 A completed Skill Implementation Packet for a hypothetical skill:
   measure-survey-analysis
-Complete and realistic — all sections filled, frontmatter valid,
+Complete and realistic . all sections filled, frontmatter valid,
 checklist items specific.
 ```
 
@@ -222,7 +222,7 @@ Slash command with:
 
 **Step 6**: Verify output passes CI validation (#1).
 
-**Step 7**: Test end-to-end — use `/skill-builder` to design a real skill candidate, verify the packet is usable.
+**Step 7**: Test end-to-end . use `/skill-builder` to design a real skill candidate, verify the packet is usable.
 
 ### Done when
 - [ ] `/skill-builder` produces a complete Skill Implementation Packet
@@ -258,9 +258,9 @@ Instructions for generating acceptance criteria:
 Output: Structured acceptance criteria document
 ```
 
-**Step 3**: Create `references/TEMPLATE.md` — acceptance criteria template with sections for each story.
+**Step 3**: Create `references/TEMPLATE.md` . acceptance criteria template with sections for each story.
 
-**Step 4**: Create `references/EXAMPLE.md` — completed acceptance criteria for a realistic feature.
+**Step 4**: Create `references/EXAMPLE.md` . completed acceptance criteria for a realistic feature.
 
 **Step 5**: Create `commands/acceptance-criteria.md`
 
@@ -308,7 +308,7 @@ Output: Structured acceptance criteria document
 ## Effort 4: Convention Alignment Pass
 
 **What**: Audit all 25 existing skills against current conventions. Fix any gaps.
-**Why**: The CI pipeline (#1) defines what "correct" looks like. Some older skills may not fully comply — missing guidance comments in templates, short descriptions, missing output contracts. Fixing these before community contributions start ensures contributors see consistent examples.
+**Why**: The CI pipeline (#1) defines what "correct" looks like. Some older skills may not fully comply . missing guidance comments in templates, short descriptions, missing output contracts. Fixing these before community contributions start ensures contributors see consistent examples.
 **Why now**: After CI (#1), the packaging boundary (M-16), and the skill-builder (#2) are done, this is the right cleanup pass. The skill-builder's audit mode logic (even if not shipped as a command yet) provides the checklist.
 
 ### Human decisions needed
@@ -361,7 +361,7 @@ Output: Structured acceptance criteria document
 
 ### Agent-executable steps
 
-**Step 1**: Create `scripts/validate-version-match.sh` (+ `.ps1` + `.md`) — ensures git tag matches `.claude-plugin/plugin.json` version.
+**Step 1**: Create `scripts/validate-version-match.sh` (+ `.ps1` + `.md`) . ensures git tag matches `.claude-plugin/plugin.json` version.
 
 **Step 2**: Enhance release notes generation (extend existing inline template or create `scripts/generate-release-notes.sh`).
 
@@ -439,23 +439,23 @@ Effort-days are not calendar-days. Sequence within each batch matters; batches t
 
 ```
 Batch 1 (effort-days 1-2):
-  Effort 0 — marketplace submission (30 min, human-only)
-  Effort 1 — CI enhancement (extend linter + 2 new scripts)
+  Effort 0 . marketplace submission (30 min, human-only)
+  Effort 1 . CI enhancement (extend linter + 2 new scripts)
 
 Batch 2 (effort-days 3-4):
-  Effort 3 — acceptance-criteria (quick win, can overlap with infrastructure work)
-  Effort M-16 — release ZIP packaging fix (`docs/internal/**` excluded before final v2.7.0 cut)
+  Effort 3 . acceptance-criteria (quick win, can overlap with infrastructure work)
+  Effort M-16 . release ZIP packaging fix (`docs/internal/**` excluded before final v2.7.0 cut)
 
 Batch 3 (effort-days 5-9):
-  Effort 2 — skill-builder (SKILL.md + TEMPLATE.md + EXAMPLE.md + command + testing)
+  Effort 2 . skill-builder (SKILL.md + TEMPLATE.md + EXAMPLE.md + command + testing)
 
 Batch 4 (effort-days 10-14):
-  Effort 4 — convention alignment (fix any issues enhanced CI found)
-  Effort 5 — release automation
-  Effort 6 — community contribution setup
+  Effort 4 . convention alignment (fix any issues enhanced CI found)
+  Effort 5 . release automation
+  Effort 6 . community contribution setup
 
 Batch 5+ (as time allows):
-  Effort 7 or 8 — new domain skills
+  Effort 7 or 8 . new domain skills
 ```
 
 Knowledge OS is a separate Product on Purpose initiative tracked at `docs/internal/_working/knowledge/`. It does not block pm-skills work.

@@ -7,7 +7,7 @@ skill_version: "2.0.0"
 created: 2026-02-20
 status: sample
 thread: brainshelf
-context: Brainshelf consumer PKM app — internal stakeholder map for the Resurface feature
+context: Brainshelf consumer PKM app . internal stakeholder map for the Resurface feature
 ---
 
 ## Scenario
@@ -16,9 +16,9 @@ Before committing engineering resources to the Resurface feature (morning email 
 
 **Source Notes:**
 
-- Mendelow, A. L. (1991), "Stakeholder Mapping" — the power/interest quadrant framework used in this analysis; Mendelow's grid classifies stakeholders by their ability to influence the project outcome and their level of interest in the project's success.
-- Mitchell, Agle & Wood (1997), "Toward a Theory of Stakeholder Identification and Salience," Academy of Management Review — the salience model that informed the assessment of each stakeholder's urgency and legitimacy in the Resurface feature context; applied in the risk mitigation section to identify where stakeholder concerns could become blockers.
-- Teresa Torres, "Continuous Discovery Habits" (producttalk.org) — the product trio concept (PM + designer + engineer) applied in the communication plan; Torres's framework informed the decision to include the engineering lead and designer as "manage closely" stakeholders rather than treating them as downstream implementers.
+- Mendelow, A. L. (1991), "Stakeholder Mapping" . the power/interest quadrant framework used in this analysis; Mendelow's grid classifies stakeholders by their ability to influence the project outcome and their level of interest in the project's success.
+- Mitchell, Agle & Wood (1997), "Toward a Theory of Stakeholder Identification and Salience," Academy of Management Review . the salience model that informed the assessment of each stakeholder's urgency and legitimacy in the Resurface feature context; applied in the risk mitigation section to identify where stakeholder concerns could become blockers.
+- Teresa Torres, "Continuous Discovery Habits" (producttalk.org) . the product trio concept (PM + designer + engineer) applied in the communication plan; Torres's framework informed the decision to include the engineering lead and designer as "manage closely" stakeholders rather than treating them as downstream implementers.
 
 ---
 
@@ -32,11 +32,11 @@ we kick off the build. brainshelf is a ~20 person startup so this is
 small-team politics, not enterprise governance.
 
 key people:
-- marco (ceo/cofounder) — big advocate, sees this as the retention bet
-- alex (eng lead) — supportive but worried about A/B test infrastructure
-- jordan (growth) — wants resurface as the retention lever
-- dan (designer) — concerned about the digest feeling spammy
-- chloe (data) — needs instrumentation for the experiment
+- marco (ceo/cofounder) . big advocate, sees this as the retention bet
+- alex (eng lead) . supportive but worried about A/B test infrastructure
+- jordan (growth) . wants resurface as the retention lever
+- dan (designer) . concerned about the digest feeling spammy
+- chloe (data) . needs instrumentation for the experiment
 
 want a proper stakeholder map with communication plan.
 ```
@@ -49,7 +49,7 @@ want a proper stakeholder map with communication plan.
 
 ## Overview
 
-**Project:** Resurface — morning email digest surfacing saved content for re-engagement
+**Project:** Resurface . morning email digest surfacing saved content for re-engagement
 **Purpose:** Map internal stakeholder alignment, concerns, and communication needs before committing to the Resurface feature build
 **Date:** January 2026
 **Owner:** Priya M., Product Manager
@@ -80,7 +80,7 @@ want a proper stakeholder map with communication plan.
 - Alex R. (Engineering Lead)
 
 **Keep Satisfied (High Influence, Low Interest):**
-- (none — at a 20-person startup, high-influence stakeholders are all highly interested in the flagship feature bet)
+- (none . at a 20-person startup, high-influence stakeholders are all highly interested in the flagship feature bet)
 
 **Keep Informed (Low Influence, High Interest):**
 - Dan K. (Product Designer)
@@ -88,7 +88,7 @@ want a proper stakeholder map with communication plan.
 - Chloe B. (Data Analyst)
 
 **Monitor (Low Influence, Low Interest):**
-- (none for this project — all identified stakeholders have material interest)
+- (none for this project . all identified stakeholders have material interest)
 
 ## Stakeholder Profiles
 
@@ -105,8 +105,8 @@ want a proper stakeholder map with communication plan.
 ### Marco S.
 
 **Role:** CEO/Co-founder
-**Influence Level:** High — final decision authority on resource allocation and feature priority; sets the company narrative for investors and board
-**Interest Level:** High — has publicly framed Resurface as "the feature that proves Brainshelf is a daily habit, not a save-and-forget tool" in the most recent team all-hands
+**Influence Level:** High . final decision authority on resource allocation and feature priority; sets the company narrative for investors and board
+**Interest Level:** High . has publicly framed Resurface as "the feature that proves Brainshelf is a daily habit, not a save-and-forget tool" in the most recent team all-hands
 **Current Alignment:** Supportive
 
 **Needs:**
@@ -130,12 +130,12 @@ want a proper stakeholder map with communication plan.
 ### Alex R.
 
 **Role:** Engineering Lead, Backend (also Resurface feature lead)
-**Influence Level:** High — owns engineering prioritization and technical architecture decisions; can block or accelerate based on feasibility assessment
-**Interest Level:** High — directly responsible for building and maintaining the digest pipeline, email scheduling, and topic-matching algorithm
+**Influence Level:** High . owns engineering prioritization and technical architecture decisions; can block or accelerate based on feasibility assessment
+**Interest Level:** High . directly responsible for building and maintaining the digest pipeline, email scheduling, and topic-matching algorithm
 **Current Alignment:** Supportive with reservations
 
 **Needs:**
-- Clear, bounded scope for the v1 build — specifically, confirmation that the A/B test infrastructure (feature flags, variant assignment, experiment-specific event tracking) is a one-time investment, not a permanent engineering surface area
+- Clear, bounded scope for the v1 build . specifically, confirmation that the A/B test infrastructure (feature flags, variant assignment, experiment-specific event tracking) is a one-time investment, not a permanent engineering surface area
 - Enough time to build integration tests for the notification scheduling pipeline before launch (this was a Sprint 7 retro action item that got deprioritized and directly contributed to the timezone bug scenario)
 
 **Concerns:**
@@ -156,13 +156,13 @@ want a proper stakeholder map with communication plan.
 ### Dan K.
 
 **Role:** Product Designer
-**Influence Level:** Medium — owns the visual and interaction design of the digest email and the opt-in flow; design decisions directly affect open rates and click-through rates
-**Interest Level:** High — cares deeply about the user experience of the email; sees the digest as a design challenge with high stakes for user trust
+**Influence Level:** Medium . owns the visual and interaction design of the digest email and the opt-in flow; design decisions directly affect open rates and click-through rates
+**Interest Level:** High . cares deeply about the user experience of the email; sees the digest as a design challenge with high stakes for user trust
 **Current Alignment:** Supportive with concerns
 
 **Needs:**
 - The digest email must feel like a thoughtful recommendation, not an automated marketing email; design must differentiate from transactional emails and newsletter spam
-- Enough time for a design iteration cycle before launch — at least one round of internal feedback on the email template before it goes to production
+- Enough time for a design iteration cycle before launch . at least one round of internal feedback on the email template before it goes to production
 
 **Concerns:**
 - "Inbox fatigue" risk: if the daily digest feels repetitive, formulaic, or irrelevant, users will unsubscribe or mentally filter it out; the unsubscribe rate is the guardrail metric he cares most about
@@ -174,18 +174,18 @@ want a proper stakeholder map with communication plan.
 **Preferred Communication:**
 - Channel: Figma comments for design reviews; Slack for async updates
 - Frequency: Design review at each milestone (wireframe, visual design, final template)
-- Style: Visual — prefers seeing mockups over reading spec documents
+- Style: Visual . prefers seeing mockups over reading spec documents
 
 ---
 
 ### Jordan L.
 
 **Role:** Growth Lead (part-time; splits time between growth and community)
-**Influence Level:** Medium — owns the retention OKR and will report on Resurface's funnel impact to Marco; does not control engineering resources but influences priority through OKR framing
-**Interest Level:** High — Resurface is the primary lever for the Q1 retention OKR (increase 7-day return rate from 18% to 25% [fictional]); without Resurface, the OKR has no credible path
+**Influence Level:** Medium . owns the retention OKR and will report on Resurface's funnel impact to Marco; does not control engineering resources but influences priority through OKR framing
+**Interest Level:** High . Resurface is the primary lever for the Q1 retention OKR (increase 7-day return rate from 18% to 25% [fictional]); without Resurface, the OKR has no credible path
 
 **Needs:**
-- The A/B experiment must produce a clean, attributable result that can be reported as an OKR outcome — not a "we think it helped" narrative but a statistically significant metric
+- The A/B experiment must produce a clean, attributable result that can be reported as an OKR outcome . not a "we think it helped" narrative but a statistically significant metric
 - Access to real-time experiment dashboards during the test window so growth can monitor opt-in rates and flag any enrollment problems early
 
 **Concerns:**
@@ -205,8 +205,8 @@ want a proper stakeholder map with communication plan.
 ### Chloe B.
 
 **Role:** Data Analyst
-**Influence Level:** Low — does not own decisions or resources, but controls the instrumentation quality and analysis outputs that all other stakeholders depend on
-**Interest Level:** High — Resurface is the most analytically interesting project on the roadmap; the A/B experiment gives her the opportunity to run Brainshelf's first properly powered statistical test
+**Influence Level:** Low . does not own decisions or resources, but controls the instrumentation quality and analysis outputs that all other stakeholders depend on
+**Interest Level:** High . Resurface is the most analytically interesting project on the roadmap; the A/B experiment gives her the opportunity to run Brainshelf's first properly powered statistical test
 
 **Needs:**
 - Instrumentation must be defined and reviewed before engineering implementation begins; the event schema needs to capture experiment-critical properties (variant assignment, email delivery status, click timestamps, read duration) without gaps
@@ -214,7 +214,7 @@ want a proper stakeholder map with communication plan.
 
 **Concerns:**
 - If instrumentation is treated as an afterthought (shipped late, with missing properties), the experiment analysis will have gaps that weaken the result and require manual data cleanup
-- Apple Mail Privacy Protection will inflate open rate metrics for iOS/macOS users; the primary metric must be click-through rate, not open rate — this needs to be agreed before instrumentation is finalized
+- Apple Mail Privacy Protection will inflate open rate metrics for iOS/macOS users; the primary metric must be click-through rate, not open rate . this needs to be agreed before instrumentation is finalized
 
 **What Motivates Them:**
 - Analytical rigor; wants the experiment to be a model for how Brainshelf runs product experiments going forward; sees this as an opportunity to establish a standard for experiment analysis at the company
@@ -229,10 +229,10 @@ want a proper stakeholder map with communication plan.
 ### Dependencies
 | From | To | Dependency Type |
 |------|-----|-----------------|
-| Priya M. (PM) | Marco S. (CEO) | Approval — go/no-go on Resurface build commitment |
-| Priya M. (PM) | Alex R. (Eng Lead) | Resources — backend engineering capacity for the build sprint |
-| Chloe B. (Data) | Alex R. (Eng Lead) | Information — instrumentation spec must be reviewed and agreed before implementation |
-| Jordan L. (Growth) | Chloe B. (Data) | Information — experiment dashboards and analysis outputs for OKR reporting |
+| Priya M. (PM) | Marco S. (CEO) | Approval . go/no-go on Resurface build commitment |
+| Priya M. (PM) | Alex R. (Eng Lead) | Resources . backend engineering capacity for the build sprint |
+| Chloe B. (Data) | Alex R. (Eng Lead) | Information . instrumentation spec must be reviewed and agreed before implementation |
+| Jordan L. (Growth) | Chloe B. (Data) | Information . experiment dashboards and analysis outputs for OKR reporting |
 
 ### Alliances
 - **Product trio (Priya + Dan + Alex):** Aligned on the Resurface vision; the core decision-making group for scope, design, and architecture choices. Alex's scope concerns and Dan's spam concerns are complementary constraints, not conflicts.
@@ -275,7 +275,7 @@ want a proper stakeholder map with communication plan.
 - [ ] Share this stakeholder summary with the product trio (Priya, Dan, Alex) for feedback
 - [ ] Schedule instrumentation spec review meeting with Chloe before the build sprint begins
 - [ ] Confirm with Marco that no Resurface results will be referenced in investor communications before the experiment analysis is complete (April 11 target)
-- [ ] Resolve the A/B test infrastructure scope question with Alex: lightweight (feature flag + event properties) vs. reusable platform — document the decision in an ADR
+- [ ] Resolve the A/B test infrastructure scope question with Alex: lightweight (feature flag + event properties) vs. reusable platform . document the decision in an ADR
 
 ## Document History
 

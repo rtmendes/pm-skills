@@ -9,11 +9,11 @@ thread: brainshelf
 context: curator-tier-pitch
 ---
 
-# Sample: foundation-meeting-brief — Brainshelf Curator Tier Founder Pitch
+# Sample: foundation-meeting-brief. Brainshelf Curator Tier Founder Pitch
 
 ## Scenario
 
-Brainshelf's PM priya-pm is pitching a new Curator subscription tier to the two co-founders (leo-cofounder-1 and noor-cofounder-2). Leo has been skeptical of subscription expansion; noor is open. Priya has 30 minutes at the weekly product meeting. Brainshelf is scrappy — no formal meeting templates, prompts are casual.
+Brainshelf's PM priya-pm is pitching a new Curator subscription tier to the two co-founders (leo-cofounder-1 and noor-cofounder-2). Leo has been skeptical of subscription expansion; noor is open. Priya has 30 minutes at the weekly product meeting. Brainshelf is scrappy. no formal meeting templates, prompts are casual.
 
 Source Notes:
 - Brainshelf is fictional; scenario reflects post-seed consumer-PKM dynamics
@@ -97,13 +97,13 @@ status: draft
 - Curator tier concept has been on priya's roadmap for 6 weeks; first formal pitch
 - Prior conversations have been informal; no written record of cofounder positions
 - Brainshelf currently has a single paid tier (Pro at $8/mo [fictional]); Curator would add a premium tier at ~$16/mo [fictional] targeting power users who curate for others
-- [fictional] User-research round (2026-03-18) identified 12% of Pro users who explicitly asked about "sharing curated sets" — signal supporting the pitch
+- [fictional] User-research round (2026-03-18) identified 12% of Pro users who explicitly asked about "sharing curated sets". signal supporting the pitch
 
 ### Stakeholder reads
 
 **leo-cofounder-1**
 
-- **Position on topic**: ⚠ likely skeptical of subscription expansion [confidence: medium — inferred from user's offhand characterization, no direct quote]
+- **Position on topic**: ⚠ likely skeptical of subscription expansion [confidence: medium. inferred from user's offhand characterization, no direct quote]
 - **Stakes**: leo owns the pricing-strategy narrative with investors; adding a tier is a visible story change
 - **Likely concerns**: "does Pro conversion suffer if Curator exists?"; "are we solving a real problem or assuming demand?"
 - **Relationship state**: neutral; direct, data-first
@@ -111,7 +111,7 @@ status: draft
 
 **noor-cofounder-2**
 
-- **Position on topic**: ⚠ open-but-not-committed [confidence: medium — inferred]
+- **Position on topic**: ⚠ open-but-not-committed [confidence: medium. inferred]
 - **Tactical notes**: noor will go with the data; if leo resists, noor won't push back hard alone. Give noor the ammo to back the experiment (specific research citation, specific kill criteria) so she's positioned to reinforce.
 
 **⚠ Stakeholder positions inferred at medium confidence. Verify in meeting or adjust tactical-notes guidance accordingly.**
@@ -124,7 +124,7 @@ status: draft
 
 ### Key messages
 
-1. "12% of Pro users explicitly asked for curated-sharing in user research (data citation). This isn't an assumption — it's a signal."
+1. "12% of Pro users explicitly asked for curated-sharing in user research (data citation). This isn't an assumption. it's a signal."
 2. "I'm asking for a 4-week experiment with kill criteria, not a tier launch. If we hit <2% conversion or <10% retention lift, we kill it."
 3. "Cost of the experiment: [fictional] ~3 eng-days + $300 in tools. Cost of doing nothing: we keep guessing about this segment."
 
@@ -138,7 +138,7 @@ status: draft
 
 ### Risks and tensions
 
-- **Leo anchors meeting to subscription skepticism; noor doesn't push; meeting ends with defer**: Mitigation — explicitly ask leo "what would change your mind" if he says no; defer isn't acceptable — need a signal.
+- **Leo anchors meeting to subscription skepticism; noor doesn't push; meeting ends with defer**: Mitigation. explicitly ask leo "what would change your mind" if he says no; defer isn't acceptable. need a signal.
 
 ### Asks
 
@@ -173,9 +173,9 @@ status: draft
 
 - **Generated**: 2026-04-19T18:00:00Z
 - **Skill version**: 1.0.0
-- **Input quality**: low — casual one-liner; stakeholder positions characterized but not verified; no prior recap loaded
-- **Overall confidence**: medium — brief structure is solid; stakeholder reads are inferences from the user's characterization
+- **Input quality**: low. casual one-liner; stakeholder positions characterized but not verified; no prior recap loaded
+- **Overall confidence**: medium. brief structure is solid; stakeholder reads are inferences from the user's characterization
 - **Known gaps**: no direct-quote evidence for leo's or noor's positions; confidence markers attached
 - **Inferences applied**: leo's likely concerns inferred from his role pattern [confidence: medium]; noor's positioning [confidence: medium, inferred from "open" cue]
-- **Anti-meeting check**: Ran — synchronous value: conflict-resolution (leo's skepticism) + decision-making (greenlight); sync format appropriate for a pitch needing real-time reaction
+- **Anti-meeting check**: Ran. synchronous value: conflict-resolution (leo's skepticism) + decision-making (greenlight); sync format appropriate for a pitch needing real-time reaction
 ```

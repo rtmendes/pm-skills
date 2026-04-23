@@ -63,6 +63,6 @@ Full instructions in `skills/foundation-meeting-recap/SKILL.md`. See also:
 
 ## Related skills
 
-- [`/meeting-agenda`](foundation-meeting-agenda.md) — upstream: provides topic skeleton
-- [`/meeting-synthesize`](foundation-meeting-synthesize.md) — downstream: consumes recaps
-- [`/stakeholder-update`](foundation-stakeholder-update.md) — downstream: translates recap outcomes
+- [`/meeting-agenda`](foundation-meeting-agenda.md). upstream: provides topic skeleton
+- [`/meeting-synthesize`](foundation-meeting-synthesize.md). downstream: consumes recaps
+- [`/stakeholder-update`](foundation-stakeholder-update.md). downstream: translates recap outcomes

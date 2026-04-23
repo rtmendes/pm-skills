@@ -7,7 +7,7 @@ Agent: Claude Opus 4.7
 
 ## Scope
 
-Create `docs/guides/meeting-skills-family-adoption.md` — a migration and adoption guide for teams who already have internal meeting templates, playbooks, or tooling and want to move to the pm-skills foundation-meeting-* family. Helps teams evaluate the fit, plan a phased adoption, and handle cultural friction points.
+Create `docs/guides/meeting-skills-family-adoption.md`. a migration and adoption guide for teams who already have internal meeting templates, playbooks, or tooling and want to move to the pm-skills foundation-meeting-* family. Helps teams evaluate the fit, plan a phased adoption, and handle cultural friction points.
 
 ## Problem
 
@@ -42,8 +42,8 @@ Without a structured adoption guide, teams either reject the family ("we already
    - Phased rollout: agenda first, then recap, then full chain
 
 3. **Adoption friction points**
-   - Anti-meeting check rejection ("but we need this meeting") — how to handle
-   - Go-mode default vs. team discipline ("we want inference checkpoints") — how to configure
+   - Anti-meeting check rejection ("but we need this meeting"). how to handle
+   - Go-mode default vs. team discipline ("we want inference checkpoints"). how to configure
    - Stakeholder-update shareable-boundary confusion ("what's safe to paste?")
    - Cultural alignment on ownership-reconciliation (30% unassigned threshold)
 
@@ -66,14 +66,14 @@ Without a structured adoption guide, teams either reject the family ("we already
 
 ## Exemplars
 
-- `docs/guides/authoring-pm-skills.md` — guide format exemplar (long-form, structured, actionable)
-- `docs/guides/mcp-setup.md` — guide with adoption framing and troubleshooting
-- `docs/pm-skill-lifecycle.md` — workflow-pattern guide that could be extended here
+- `docs/guides/authoring-pm-skills.md`. guide format exemplar (long-form, structured, actionable)
+- `docs/guides/mcp-setup.md`. guide with adoption framing and troubleshooting
+- `docs/pm-skill-lifecycle.md`. workflow-pattern guide that could be extended here
 
 ## Deliverables
 
-- `docs/guides/meeting-skills-family-adoption.md` — the guide itself
-- `mkdocs.yml` — nav entry under Guides
+- `docs/guides/meeting-skills-family-adoption.md`. the guide itself
+- `mkdocs.yml`. nav entry under Guides
 - Cross-links from `docs/skills/foundation/foundation-meeting-*.md` into the guide
 - Cross-link from `docs/reference/skill-families/meeting-skills-contract.md` for users reading the contract first
 - Optional: 1-2 mermaid diagrams (adoption decision tree, migration phases)
@@ -93,15 +93,15 @@ Without a structured adoption guide, teams either reject the family ("we already
 ## Status Transitions
 
 - **Backlog** (current)
-- **In Progress** — when guide authoring begins
-- **Shipped** — on v2.12.0 tag + push
+- **In Progress**. when guide authoring begins
+- **Shipped**. on v2.12.0 tag + push
 
 ## Rationale for deferral to v2.12.0+
 
 v2.11.0 ships the family itself. Before writing an adoption guide, real-world feedback on friction points and common mistakes will produce a much better guide than theorizing. Defer until at least 2-3 teams have adopted internally.
 
-A lighter-weight precursor — `docs/guides/using-meeting-skills.md` — ships in v2.11.0 (tutorial for individual PMs). The adoption guide is a separate, heavier deliverable for team-level adoption.
+A lighter-weight precursor. `docs/guides/using-meeting-skills.md`. ships in v2.11.0 (tutorial for individual PMs). The adoption guide is a separate, heavier deliverable for team-level adoption.
 
 ## Detailed specification
 
-Deferred — produced during guide authoring pass.
+Deferred. produced during guide authoring pass.

@@ -49,5 +49,5 @@ For each `skills/*/HISTORY.md` that exists:
 
 ## Safety
 
-- Read-only — does not modify files
+- Read-only . does not modify files
 - Inspects only `skills/*/SKILL.md` and `skills/*/HISTORY.md`

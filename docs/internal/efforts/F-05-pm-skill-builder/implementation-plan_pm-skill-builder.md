@@ -1,11 +1,11 @@
 # F-05 PM Skill Builder Implementation Plan
 
 > **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.
-> **Revision**: v2 — incorporates all 8 Codex review findings (see `implementation-plan_reviewed-by-codex.md`)
+> **Revision**: v2 . incorporates all 8 Codex review findings (see `implementation-plan_reviewed-by-codex.md`)
 
-**Goal:** Create the `utility-pm-skill-builder` skill — an interactive utility skill that guides contributors from a PM skill idea to draft files ready for PR.
+**Goal:** Create the `utility-pm-skill-builder` skill . an interactive utility skill that guides contributors from a PM skill idea to draft files ready for PR.
 
-**Architecture:** The skill is a set of markdown files (SKILL.md, TEMPLATE.md, EXAMPLE.md) plus a slash command and AGENTS.md entry. No code — just structured content that AI agents follow. The builder uses a 7-step adaptive workflow with kill gates and exemplar-driven drafting.
+**Architecture:** The skill is a set of markdown files (SKILL.md, TEMPLATE.md, EXAMPLE.md) plus a slash command and AGENTS.md entry. No code . just structured content that AI agents follow. The builder uses a 7-step adaptive workflow with kill gates and exemplar-driven drafting.
 
 **Tech Stack:** Markdown files, YAML frontmatter, bash/PowerShell CI validation scripts.
 
@@ -21,16 +21,16 @@ Before writing anything, read these files to understand the exact conventions:
 
 | File | Why |
 |------|-----|
-| `skills/deliver-prd/SKILL.md` | Primary exemplar — same structure pattern (Instructions, Output Format, Quality Checklist) |
-| `skills/foundation-persona/SKILL.md` | Secondary exemplar — shows `classification:` frontmatter (no `phase:`) |
-| `skills/deliver-acceptance-criteria/SKILL.md` | Newest skill — shows current conventions |
-| `commands/persona.md` | Most complex command — shows how richer behavior is expressed in prose body |
-| `commands/acceptance-criteria.md` | Simplest command — baseline format |
+| `skills/deliver-prd/SKILL.md` | Primary exemplar . same structure pattern (Instructions, Output Format, Quality Checklist) |
+| `skills/foundation-persona/SKILL.md` | Secondary exemplar . shows `classification:` frontmatter (no `phase:`) |
+| `skills/deliver-acceptance-criteria/SKILL.md` | Newest skill . shows current conventions |
+| `commands/persona.md` | Most complex command . shows how richer behavior is expressed in prose body |
+| `commands/acceptance-criteria.md` | Simplest command . baseline format |
 | `AGENTS.md` | Entry format: `#### {name}` + `**Path:**` + description + `---` |
 | `scripts/lint-skills-frontmatter.sh` | CI rules: description 20-100 words, single-line, required fields, TEMPLATE.md ≥3 headers, EXAMPLE.md must exist |
 | `scripts/validate-agents-md.sh` | CI rules: path sync between AGENTS.md and skill directories |
 | `scripts/validate-commands.sh` | CI rules: command file path references |
-| `docs/internal/efforts/F-05-pm-skill-builder/design_pm-skill-builder.md` | The complete reviewed design — adapt content for shipped artifact (do NOT transcribe blindly) |
+| `docs/internal/efforts/F-05-pm-skill-builder/design_pm-skill-builder.md` | The complete reviewed design . adapt content for shipped artifact (do NOT transcribe blindly) |
 
 ---
 
@@ -102,16 +102,16 @@ metadata:
 | Utility Skills table: "This skill (F-05, in design)" | Change to: "pm-skill-builder \| coordination \| This skill" | Remove design-state language |
 | `## Examples` references "Section 4 of this design document" | Change to: "See `references/EXAMPLE.md` for a completed Skill Implementation Packet demonstrating a realistic domain skill creation." | Remove design-doc internal reference |
 | Inventory note: "this table reflects the current working tree (25 domain + 1 foundation + deliver-acceptance-criteria from F-06)" | Change to: "this table reflects the current skill inventory (26 skills). Also scan `skills/` directory for the latest count." | deliver-acceptance-criteria is already in the 26 count; clarify |
-| Domain Skills table header says "(25)" | Change to "(26)" — the table lists 26 rows including acceptance-criteria | Count the actual table rows |
+| Domain Skills table header says "(25)" | Change to "(26)" . the table lists 26 rows including acceptance-criteria | Count the actual table rows |
 
 **Body sections** (from design doc, with adaptations above applied):
 - `# PM Skill Builder` + intro paragraph
 - `## When to Use` (3 bullets)
-- `## When NOT to Use` (3 bullets — adapted)
+- `## When NOT to Use` (3 bullets . adapted)
 - `## Instructions` with Steps 1-7
-- `## Current Library Reference` — full skill table (adapted)
+- `## Current Library Reference` . full skill table (adapted)
 - `## Output Contract`
-- `## Quality Checklist` — two-tier (CI Validation + Quality Checks)
+- `## Quality Checklist` . two-tier (CI Validation + Quality Checks)
 - `## Examples`
 
 **Critical constraints:**
@@ -121,7 +121,7 @@ metadata:
 
 ### Step 3: Write TEMPLATE.md
 
-Transcribe design doc Section 2 content (the Skill Implementation Packet template). This file is a template for builder output — its content is mostly correct as-is.
+Transcribe design doc Section 2 content (the Skill Implementation Packet template). This file is a template for builder output . its content is mostly correct as-is.
 
 **One adaptation required:**
 - `## Next Steps` section references `/pm-skill-iterate`. Change to: "Use the pm-skill iteration utility (when available) to refine based on testing feedback." This is acceptable as a future-looking note since it's inside a template users will fill, not in the shipped skill instructions.
@@ -146,11 +146,11 @@ Create a complete, realistic example of a Skill Implementation Packet using the 
 - Fill every one of the 13 TEMPLATE.md sections with concrete content
 - 150-300 lines total
 - Realistic PM scenario: "Creating change management communications for SaaS feature launches that alter user workflows"
-- Overlap analysis: check against `deliver-release-notes` (different purpose — release notes are external-facing, change comms are internal/adoption-focused) and `deliver-launch-checklist` (checklist includes comms as a line item but doesn't guide the writing)
+- Overlap analysis: check against `deliver-release-notes` (different purpose . release notes are external-facing, change comms are internal/adoption-focused) and `deliver-launch-checklist` (checklist includes comms as a line item but doesn't guide the writing)
 - Quality Forecast: weights summing to 100, rounded to nearest 5
 - Exemplar skills: `deliver-release-notes` (same phase, coordination category) and `deliver-launch-checklist` (same phase, different artifact type)
 - Draft Frontmatter: valid YAML matching repo conventions
-- Draft SKILL.md section: **representative excerpt** showing all section headers with 1-2 lines of content each (not a full 70-line skill file — the example demonstrates packet structure)
+- Draft SKILL.md section: **representative excerpt** showing all section headers with 1-2 lines of content each (not a full 70-line skill file . the example demonstrates packet structure)
 - Draft TEMPLATE.md section: **representative excerpt** with ≥3 `##` headers and guidance comments
 - Draft EXAMPLE.md section: brief note explaining what a complete example would contain
 - Draft Command: complete command file matching repo convention
@@ -259,7 +259,7 @@ Expected:
 - `lint-skills-frontmatter.sh`: 27 skills pass, 0 failures
 - `validate-agents-md.sh`: All 27 paths sync, 0 orphans, 0 missing
 - `validate-commands.sh`: All commands valid including `pm-skill-builder`
-- `check-mcp-impact.sh`: Either "new skill detected" advisory OR "unable to determine diff base" (both are acceptable — the script requires a git diff base)
+- `check-mcp-impact.sh`: Either "new skill detected" advisory OR "unable to determine diff base" (both are acceptable . the script requires a git diff base)
 
 ### Step 2: Run all validators (PowerShell)
 
@@ -289,9 +289,9 @@ git commit -m "fix(F-05): address CI validation findings"
 
 ---
 
-## Task 5: Functional test — run `/pm-skill-builder` with a realistic idea
+## Task 5: Functional test . run `/pm-skill-builder` with a realistic idea
 
-**Files:** None (testing only — any generated files go to `_staging/` which is gitignored)
+**Files:** None (testing only . any generated files go to `_staging/` which is gitignored)
 
 ### Step 1: Test the builder
 
@@ -329,7 +329,7 @@ The F-05 effort brief has several stale references that must be updated:
 | Stale content | Fix |
 |---------------|-----|
 | Staging listed as `library/pm-skill-builder/{skill-name}` | → `_staging/pm-skill-builder/{skill-name}/` (gitignored, discarded after promotion) |
-| Sample output library listed as in-scope | Remove from scope — `references/EXAMPLE.md` serves the demonstration purpose |
+| Sample output library listed as in-scope | Remove from scope . `references/EXAMPLE.md` serves the demonstration purpose |
 | Thread 2 description uses older meeting-synthesis scenario | Update to validator-oriented scenario matching design doc revision |
 | Any remaining `library/pm-skill-builder/` references | → `_staging/pm-skill-builder/` |
 
@@ -398,7 +398,7 @@ bash scripts/validate-agents-md.sh
 # Command file path references (bash)
 bash scripts/validate-commands.sh
 
-# MCP impact advisory — non-blocking (bash)
+# MCP impact advisory . non-blocking (bash)
 bash scripts/check-mcp-impact.sh
 
 # PowerShell equivalents
@@ -414,6 +414,6 @@ pwsh -File scripts/check-mcp-impact.ps1
 
 All content for Tasks 2-3 comes from the reviewed design document, **adapted for the shipped artifact** (not transcribed blindly). Key adaptations are listed in the Task 2 table.
 
-EXAMPLE.md (Task 2, Step 4) requires substantial new writing — everything else is adaptation from the design doc with specific changes documented.
+EXAMPLE.md (Task 2, Step 4) requires substantial new writing . everything else is adaptation from the design doc with specific changes documented.
 
-Task 5 (functional test) is new — validates that the builder instructions actually work end-to-end, not just that CI passes.
+Task 5 (functional test) is new . validates that the builder instructions actually work end-to-end, not just that CI passes.

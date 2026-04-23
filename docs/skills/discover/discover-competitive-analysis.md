@@ -42,7 +42,7 @@ Or reference the skill file directly: `skills/discover-competitive-analysis/SKIL
 When asked to create a competitive analysis, follow these steps:
 
 1. **Define the Scope**
-   Clarify what you're analyzing: a specific feature area, overall product positioning, or pricing strategy. Identify 3-5 key competitors—direct competitors (same solution), indirect competitors (different solution to same problem), and potential disruptors.
+   Clarify what you're analyzing: a specific feature area, overall product positioning, or pricing strategy. Identify 3-5 key competitors.direct competitors (same solution), indirect competitors (different solution to same problem), and potential disruptors.
 
 2. **Gather Intelligence**
    Research each competitor through public sources: websites, pricing pages, G2/Capterra reviews, press releases, job postings, and customer testimonials. Note what you can verify vs. what you're inferring.
@@ -54,13 +54,13 @@ When asked to create a competitive analysis, follow these steps:
    Map competitors on a 2x2 positioning matrix using dimensions relevant to your market (e.g., price vs. features, ease of use vs. power, SMB vs. enterprise). Identify white space opportunities.
 
 5. **Assess Strengths and Weaknesses**
-   For each competitor, document genuine strengths (what they do better than you) and weaknesses (where they fall short). Avoid dismissing competitors—respect drives better strategy.
+   For each competitor, document genuine strengths (what they do better than you) and weaknesses (where they fall short). Avoid dismissing competitors.respect drives better strategy.
 
 6. **Identify Strategic Implications**
    Translate observations into actionable recommendations: where to compete head-on, where to differentiate, what messaging to emphasize, and what gaps represent opportunities.
 
 7. **Note Confidence Levels**
-   Mark which conclusions are based on verified data vs. inference. Competitive intelligence has varying reliability—be honest about uncertainty.
+   Mark which conclusions are based on verified data vs. inference. Competitive intelligence has varying reliability.be honest about uncertainty.
 
 ## Output Template
 
@@ -457,19 +457,19 @@ When asked to create a competitive analysis, follow these steps:
 
     ### Where to Differentiate
     1. **Analytics depth:** Make reporting and dashboards a primary differentiator, not an afterthought. Position as "the PM tool for data-driven teams"
-    2. **Resource intelligence:** Build predictive resource planning that shows utilization forecasts—no competitor does this well at our price point
+    2. **Resource intelligence:** Build predictive resource planning that shows utilization forecasts.no competitor does this well at our price point
     3. **Time-to-insight:** Focus on immediate visibility vs. "set up dashboards later" approach of competitors
 
     ### Messaging Implications
-    - Lead with analytics and visibility in all positioning—this is our white space
+    - Lead with analytics and visibility in all positioning.this is our white space
     - Avoid feature-count battles with ClickUp; emphasize depth over breadth
     - Target messaging at team leads and operations managers who care about metrics
     - Use "finally, a PM tool that shows you what's really happening" as positioning theme
 
     ### Watch List
-    - Asana's AI roadmap—they have resources to move quickly
-    - ClickUp reliability improvements—if they solve stability, they're formidable
-    - Monday.com analytics investments—likely to improve given market demand
+    - Asana's AI roadmap.they have resources to move quickly
+    - ClickUp reliability improvements.if they solve stability, they're formidable
+    - Monday.com analytics investments.likely to improve given market demand
     - New entrants from BI space moving into PM (e.g., if Tableau/Looker launched PM features)
 
     ## Sources and Confidence
@@ -498,16 +498,16 @@ When asked to create a competitive analysis, follow these steps:
 
 See this skill applied to three different product contexts:
 
-??? example "Storevine (B2B): Storevine B2B ecommerce platform — email marketing competitive landscape for Campaigns"
+??? example "Storevine (B2B): Storevine B2B ecommerce platform . email marketing competitive landscape for Campaigns"
     **Prompt:**
 
     ```
     /competitive-analysis
 
-    Scope: Email marketing tools available to ecommerce merchants — built-in vs.
+    Scope: Email marketing tools available to ecommerce merchants . built-in vs.
     third-party positioning. Informing Campaigns v1 scope and feature prioritization.
 
-    Our product: Storevine — B2B all-in-one ecommerce + web platform, Series A,
+    Our product: Storevine . B2B all-in-one ecommerce + web platform, Series A,
     ~18k active merchants [fictional]. Building Campaigns: native email marketing
     with audience segmentation and automations.
 
@@ -543,7 +543,7 @@ See this skill applied to three different product contexts:
 
     # Competitive Analysis: Email Marketing for Ecommerce Merchants
 
-??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — competitive landscape for content resurfacing features"
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app . competitive landscape for content resurfacing features"
     **Prompt:**
 
     ```
@@ -555,7 +555,7 @@ See this skill applied to three different product contexts:
 
     context: brainshelf is a consumer pkm/save-for-later tool, ~85k registered
     users, ~22k MAU [fictional]. core problem is users save tons of stuff but
-    never come back to read it — 47 items saved/month, <9% revisited within
+    never come back to read it . 47 items saved/month, <9% revisited within
     30 days [fictional].
 
     4 competitors to analyze: readwise, raindrop.io, pocket (mozilla),

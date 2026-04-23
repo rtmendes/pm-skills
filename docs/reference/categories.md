@@ -333,11 +333,11 @@ spike-summary → refinement-notes → launch-checklist → release-notes
 | Category | Triple Diamond | Lean Startup | Design Thinking |
 |----------|---------------|--------------|-----------------|
 | research | Discover | Customer Development | Empathize |
-| problem-framing | Define | — | Define |
+| problem-framing | Define | . | Define |
 | ideation | Define/Develop | Build (hypothesis) | Ideate |
 | specification | Deliver | Build | Prototype |
 | validation | Measure | Measure | Test |
-| reflection | Iterate | Learn | — |
+| reflection | Iterate | Learn | . |
 | coordination | All phases | All phases | All phases |
 
 ### Detailed Mapping
@@ -424,5 +424,5 @@ Summary of skills across categories:
 
 ## See Also
 
-- [Frontmatter Schema](./frontmatter-schema.yaml) — How to specify categories in skill metadata
-- [Triple Diamond Framework](../concepts/triple-diamond.md) — The primary framework organizing pm-skills
+- [Frontmatter Schema](./frontmatter-schema.yaml) . How to specify categories in skill metadata
+- [Triple Diamond Framework](../concepts/triple-diamond.md) . The primary framework organizing pm-skills

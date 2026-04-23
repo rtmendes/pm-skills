@@ -1,6 +1,6 @@
 ---
 title: "Showcase: Follow the Product"
-description: "See PM Skills in action — follow three fictional companies through the complete product lifecycle."
+description: "See PM Skills in action . follow three fictional companies through the complete product lifecycle."
 tags:
   - Showcase
 ---
@@ -8,32 +8,32 @@ tags:
 # Showcase: Follow the Product
 
 See every PM skill in action. Three fictional companies, three different prompt styles,
-one complete lifecycle each — from discovery research through pivot decisions.
+one complete lifecycle each . from discovery research through pivot decisions.
 
 Each journey demonstrates **25+ real artifacts** produced by pm-skills slash commands,
 including the full prompt that generated each one.
 
 <div class="grid cards" markdown>
 
-- :material-store: **Storevine** — B2B Ecommerce Platform
+- :material-store: **Storevine** . B2B Ecommerce Platform
   ---
-  Series A, ~70 employees, ~15,000 merchants. Building **Campaigns** — native email marketing.
+  Series A, ~70 employees, ~15,000 merchants. Building **Campaigns** . native email marketing.
   
-  **Prompt style:** Organized — structured context, references prior work, clear scope boundaries.
+  **Prompt style:** Organized . structured context, references prior work, clear scope boundaries.
   [:octicons-arrow-right-24: Follow the journey](storevine.md)
 
-- :material-bookshelf: **Brainshelf** — Consumer PKM App
+- :material-bookshelf: **Brainshelf** . Consumer PKM App
   ---
-  Post-seed, ~20 employees, ~22,000 MAU. Building **Resurface** — contextual morning email digest.
+  Post-seed, ~20 employees, ~22,000 MAU. Building **Resurface** . contextual morning email digest.
   
-  **Prompt style:** Casual — rough, fast, enough context to work. Bullet points and shorthand.
+  **Prompt style:** Casual . rough, fast, enough context to work. Bullet points and shorthand.
   [:octicons-arrow-right-24: Follow the journey](brainshelf.md)
 
-- :material-office-building: **Workbench** — Enterprise Collaboration
+- :material-office-building: **Workbench** . Enterprise Collaboration
   ---
-  Series B, ~200 employees, ~500 enterprise customers. Building **Blueprints** — document templates with approval gates.
+  Series B, ~200 employees, ~500 enterprise customers. Building **Blueprints** . document templates with approval gates.
   
-  **Prompt style:** Enterprise — full stakeholder lists, quantified baselines, explicit metrics.
+  **Prompt style:** Enterprise . full stakeholder lists, quantified baselines, explicit metrics.
   [:octicons-arrow-right-24: Follow the journey](workbench.md)
 
 </div>
@@ -42,9 +42,9 @@ including the full prompt that generated each one.
 
 Every sample follows a consistent three-part structure:
 
-1. **Scenario** — the company, team, and specific PM problem
-2. **Prompt** — the exact slash command the PM typed
-3. **Output** — the complete artifact, following every template section
+1. **Scenario** . the company, team, and specific PM problem
+2. **Prompt** . the exact slash command the PM typed
+3. **Output** . the complete artifact, following every template section
 
 Fictional metrics are marked with `[fictional]`. Competitor names are real.
 Only the three companies (Storevine, Brainshelf, Workbench) are fictional.

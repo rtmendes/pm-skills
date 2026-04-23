@@ -41,7 +41,7 @@ Or reference the skill file directly: `skills/measure-experiment-design/SKILL.md
 When asked to design an experiment, follow these steps:
 
 1. **Articulate the Hypothesis**
-   Write a clear, testable hypothesis in the format: "We believe [change] for [users] will [outcome] as measured by [metric]." One hypothesis per experiment — if you're testing multiple things, run multiple experiments.
+   Write a clear, testable hypothesis in the format: "We believe [change] for [users] will [outcome] as measured by [metric]." One hypothesis per experiment . if you're testing multiple things, run multiple experiments.
 
 2. **Define the Variants**
    Describe the control (current experience) and treatment (new experience) in sufficient detail. Include screenshots, mockups, or precise descriptions so anyone can understand what users will see.
@@ -53,7 +53,7 @@ When asked to design an experiment, follow these steps:
    Determine how many users you need per variant to detect your minimum detectable effect (MDE) with statistical significance. Specify your significance level (typically 0.05) and power (typically 0.80).
 
 5. **Estimate Duration**
-   Based on sample size and available traffic, calculate how long the experiment needs to run. Account for weekly patterns — avoid ending mid-week if behavior varies by day.
+   Based on sample size and available traffic, calculate how long the experiment needs to run. Account for weekly patterns . avoid ending mid-week if behavior varies by day.
 
 6. **Define Targeting and Allocation**
    Specify which users are eligible for the experiment and how traffic is split between variants. Document any exclusions (e.g., employees, specific segments).
@@ -346,7 +346,7 @@ When asked to design an experiment, follow these steps:
     ### Inclusion Criteria
 
     - Logged-in or guest users
-    - Mobile web (not native apps — app experiment runs separately)
+    - Mobile web (not native apps . app experiment runs separately)
     - Users in US and Canada (payment methods configured)
     - Cart value >= $10 (exclude micro-purchases)
 
@@ -419,20 +419,20 @@ When asked to design an experiment, follow these steps:
 
     - Hypothesis Document: Mobile Checkout Improvement (internal doc link)
     - Design Mockups (Figma link)
-    - Previous Experiment: Guest Checkout (results/guest-checkout-q3-2025.md) — 3% lift, informed this design
+    - Previous Experiment: Guest Checkout (results/guest-checkout-q3-2025.md) . 3% lift, informed this design
     - User Research: Checkout Friction Study (research PDF)
 
 ## Real-World Examples
 
 See this skill applied to three different product contexts:
 
-??? example "Storevine (B2B): Storevine B2B ecommerce platform — Campaigns guided first-campaign flow A/B experiment design"
+??? example "Storevine (B2B): Storevine B2B ecommerce platform . Campaigns guided first-campaign flow A/B experiment design"
     **Prompt:**
 
     ```
     /experiment-design
 
-    Project: Campaigns — Campaigns guided first-campaign flow
+    Project: Campaigns . Campaigns guided first-campaign flow
     Experiment: Does the guided first-campaign flow increase first-send rate
                 for non-adopter merchants?
 
@@ -462,7 +462,7 @@ See this skill applied to three different product contexts:
 
     # Experiment Design: Guided First-Campaign Flow for Non-Adopter Merchants
 
-??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — Resurface A/B test experiment design"
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app . Resurface A/B test experiment design"
     **Prompt:**
 
     ```
@@ -477,7 +477,7 @@ See this skill applied to three different product contexts:
     control gets nothing (current experience). measure 7-day return rate
     for both groups.
 
-    secondary metric: email CTR (treatment only — control doesn't get
+    secondary metric: email CTR (treatment only . control doesn't get
     email). guardrail: unsub rate ≤2%/week.
 
     sample: 400 per variant from the 9,800 eligible users [fictional].

@@ -7,7 +7,7 @@ skill_version: "2.0.0"
 created: 2026-02-20
 status: sample
 thread: brainshelf
-context: Brainshelf consumer PKM app — user interviews on saved content re-engagement
+context: Brainshelf consumer PKM app . user interviews on saved content re-engagement
 ---
 
 ## Scenario
@@ -16,9 +16,9 @@ In January 2026, Brainshelf's PM conducted 7 semi-structured user interviews ove
 
 **Source Notes:**
 
-- Steve Portigal, "Interviewing Users" (portigal.com/books) — the semi-structured interview methodology used in this research; Portigal's approach to rapport-based, open-ended interviews informed the question structure and the deliberate avoidance of leading language about guilt or failure.
-- Indi Young, "Mental Models: Aligning Design Strategy with Human Behavior" (rosenfeldmedia.com) — mental model mapping was applied during synthesis to distinguish saving behavior from reading behavior as separate task flows with separate motivations, revealing the gap between users' stated intent ("I'll read this later") and their actual behavior (saving is the completion event, not the start of a reading journey).
-- Soman, D. (2001), "The Mental Accounting of Sunk Time Costs," Journal of Behavioral Decision Making — the behavioral economics research supporting the observation that accumulated, unvisited saved items create a sunk-cost guilt response that reduces rather than increases the likelihood of re-engagement; the guilt pile is not just an aesthetic complaint but a behavioral trap.
+- Steve Portigal, "Interviewing Users" (portigal.com/books) . the semi-structured interview methodology used in this research; Portigal's approach to rapport-based, open-ended interviews informed the question structure and the deliberate avoidance of leading language about guilt or failure.
+- Indi Young, "Mental Models: Aligning Design Strategy with Human Behavior" (rosenfeldmedia.com) . mental model mapping was applied during synthesis to distinguish saving behavior from reading behavior as separate task flows with separate motivations, revealing the gap between users' stated intent ("I'll read this later") and their actual behavior (saving is the completion event, not the start of a reading journey).
+- Soman, D. (2001), "The Mental Accounting of Sunk Time Costs," Journal of Behavioral Decision Making . the behavioral economics research supporting the observation that accumulated, unvisited saved items create a sunk-cost guilt response that reduces rather than increases the likelihood of re-engagement; the guilt pile is not just an aesthetic complaint but a behavioral trap.
 
 ---
 
@@ -53,7 +53,7 @@ building the hypothesis doc for resurface.
 
 ### Objective
 
-Understand why Brainshelf users save content at a high rate (~47 items/month average [fictional]) but revisit fewer than 9% of saved items within 30 days [fictional], and identify what — if anything — would create a natural trigger for re-engagement with saved content.
+Understand why Brainshelf users save content at a high rate (~47 items/month average [fictional]) but revisit fewer than 9% of saved items within 30 days [fictional], and identify what . if anything . would create a natural trigger for re-engagement with saved content.
 
 ### Methodology
 
@@ -80,7 +80,7 @@ Understand why Brainshelf users save content at a high rate (~47 items/month ave
 
 **Prevalence:** 5 of 7 participants
 
-**Summary:** Five participants independently described their saved library in negative emotional terms — "guilt pile," "graveyard," "overwhelming," "anxiety-inducing." The saved library, rather than being a resource that users feel good about, has become a source of guilt. Users feel they should be reading what they saved, and the growing backlog makes them feel worse the longer it grows. The library is experienced as a record of failed intentions rather than a useful collection.
+**Summary:** Five participants independently described their saved library in negative emotional terms . "guilt pile," "graveyard," "overwhelming," "anxiety-inducing." The saved library, rather than being a resource that users feel good about, has become a source of guilt. Users feel they should be reading what they saved, and the growing backlog makes them feel worse the longer it grows. The library is experienced as a record of failed intentions rather than a useful collection.
 
 **Evidence:**
 - P1: "Honestly I try not to open the library tab anymore. It just makes me feel bad about all the things I said I'd read and didn't." [fictional]
@@ -91,7 +91,7 @@ Understand why Brainshelf users save content at a high rate (~47 items/month ave
 
 **Prevalence:** 7 of 7 participants
 
-**Summary:** Every participant described their revisit behavior as entirely self-initiated. There is no external cue — no notification, no email, no habit tied to a daily routine — that prompts them to return to their saved library. When asked "What makes you go back to read something you saved?", the most common answer was a variant of "I just remember it exists" or "I'm bored and think of it." Revisiting is accidental, not habitual. Several participants described specific moments where they needed a saved article and couldn't find it because they had forgotten they saved it.
+**Summary:** Every participant described their revisit behavior as entirely self-initiated. There is no external cue . no notification, no email, no habit tied to a daily routine . that prompts them to return to their saved library. When asked "What makes you go back to read something you saved?", the most common answer was a variant of "I just remember it exists" or "I'm bored and think of it." Revisiting is accidental, not habitual. Several participants described specific moments where they needed a saved article and couldn't find it because they had forgotten they saved it.
 
 **Evidence:**
 - P2: "Nothing reminds me. I save something, close the tab, and it's just... gone from my brain. The only time I go back is when I'm actively looking for something specific." [fictional]
@@ -102,49 +102,49 @@ Understand why Brainshelf users save content at a high rate (~47 items/month ave
 
 **Prevalence:** 4 of 7 participants (explicitly; 2 more showed the pattern without naming it)
 
-**Summary:** When prompted to reflect on their saving intent, four participants recognized a distinction they hadn't previously articulated: not every save is a "read later" save. Some items are saved as reference material ("I might need this someday"), some as aspirational markers ("I want to be the kind of person who reads this"), and some as genuinely intended reading. The problem is that Brainshelf treats all saves identically — there is no mechanism to distinguish intent at save time or to filter the library by intent type later. This makes the library feel undifferentiated and overwhelming.
+**Summary:** When prompted to reflect on their saving intent, four participants recognized a distinction they hadn't previously articulated: not every save is a "read later" save. Some items are saved as reference material ("I might need this someday"), some as aspirational markers ("I want to be the kind of person who reads this"), and some as genuinely intended reading. The problem is that Brainshelf treats all saves identically . there is no mechanism to distinguish intent at save time or to filter the library by intent type later. This makes the library feel undifferentiated and overwhelming.
 
 **Evidence:**
-- P4: "Half the things I save are design inspiration — I don't want to read those, I want to look at them when I need ideas. But they're mixed in with the articles I actually wanted to read." [fictional]
-- P5: "You know what, now that you ask — a lot of what I save is aspirational. Like, I save long academic papers because I want to read them. But I know I probably won't. Saving them feels like a commitment that I never follow through on." [fictional]
+- P4: "Half the things I save are design inspiration . I don't want to read those, I want to look at them when I need ideas. But they're mixed in with the articles I actually wanted to read." [fictional]
+- P5: "You know what, now that you ask . a lot of what I save is aspirational. Like, I save long academic papers because I want to read them. But I know I probably won't. Saving them feels like a commitment that I never follow through on." [fictional]
 - P1: "There's definitely stuff in my library that I saved because I thought I'd need it for work. That's different from the articles I saved because they looked interesting. But Brainshelf doesn't know the difference." [fictional]
 
 ## Notable Quotes
 
 > "I try not to open the library tab anymore. It just makes me feel bad about all the things I said I'd read and didn't."
-> — P1, software engineer, 18 months on Brainshelf [fictional]
+> . P1, software engineer, 18 months on Brainshelf [fictional]
 
 > "Nothing reminds me. I save something, close the tab, and it's just... gone from my brain."
-> — P2, grad student, 6 months on Brainshelf [fictional]
+> . P2, grad student, 6 months on Brainshelf [fictional]
 
 > "I call it my guilt pile. I have over 400 things saved. I haven't read most of them. At this point it's more like an archive of my good intentions."
-> — P5, researcher, 14 months on Brainshelf [fictional]
+> . P5, researcher, 14 months on Brainshelf [fictional]
 
 > "That's actually why I stopped using Brainshelf. The library got so big it felt pointless."
-> — P7, churned freelance writer, former user [fictional]
+> . P7, churned freelance writer, former user [fictional]
 
 > "Sometimes I'll be in a meeting and remember I saved an article about exactly this topic like three months ago, and I'll dig through my library trying to find it. But I never would have gone back to it on my own."
-> — P6, marketing manager, 8 months on Brainshelf [fictional]
+> . P6, marketing manager, 8 months on Brainshelf [fictional]
 
 ## Insights
 
 ### Insight 1: Saving Satisfies the Intent to Read
 
-The act of saving an article to Brainshelf provides the same psychological closure as actually reading it. The save action resolves the tension of "I should read this" without requiring the effort of actually reading. For most users, the save is not the beginning of a reading journey — it is the end. This means that increasing the quality or ease of the saving experience will not drive re-engagement; the saving experience is already satisfying enough.
+The act of saving an article to Brainshelf provides the same psychological closure as actually reading it. The save action resolves the tension of "I should read this" without requiring the effort of actually reading. For most users, the save is not the beginning of a reading journey . it is the end. This means that increasing the quality or ease of the saving experience will not drive re-engagement; the saving experience is already satisfying enough.
 
 **Implication:** Any re-engagement intervention must create a new touchpoint after the save event, not improve the save event itself. The save is the completion; re-engagement requires a separate trigger.
 
-### Insight 2: Users Need an External Trigger — They Cannot Self-Generate Return Visits
+### Insight 2: Users Need an External Trigger . They Cannot Self-Generate Return Visits
 
-Not a single participant described a self-sustaining habit of returning to their saved library. Return visits are accidental, situational, or prompted by an unrelated external need (like a meeting topic). The absence of any natural trigger means that Brainshelf is entirely dependent on user self-motivation for engagement beyond the save event — and self-motivation is failing at scale (9% revisit rate [fictional]).
+Not a single participant described a self-sustaining habit of returning to their saved library. Return visits are accidental, situational, or prompted by an unrelated external need (like a meeting topic). The absence of any natural trigger means that Brainshelf is entirely dependent on user self-motivation for engagement beyond the save event . and self-motivation is failing at scale (9% revisit rate [fictional]).
 
 **Implication:** An external trigger mechanism (email, push notification, in-app card) is required to create a return visit habit. Email is the most promising first test because it reaches users outside the app and does not require them to have push notifications enabled.
 
 ### Insight 3: Not All Saves Are Created Equal
 
-Users save content with at least three different intents — "to read later," "to reference when needed," and "to aspirationally have" — but Brainshelf treats all saves as a flat, undifferentiated list. This makes the library feel overwhelming because every item appears to demand the same attention, even though the user's relationship to each item is different. A library of 400 items feels more manageable if the user can distinguish the 50 they actually want to read from the 350 they want to reference or keep.
+Users save content with at least three different intents . "to read later," "to reference when needed," and "to aspirationally have" . but Brainshelf treats all saves as a flat, undifferentiated list. This makes the library feel overwhelming because every item appears to demand the same attention, even though the user's relationship to each item is different. A library of 400 items feels more manageable if the user can distinguish the 50 they actually want to read from the 350 they want to reference or keep.
 
-**Implication:** Resurface (the email digest) should not attempt to surface the entire library equally. It should prioritize items where the user's likely intent was "to read later" — recent saves of articles and blog posts, not design screenshots or reference links saved months ago. Longer term, offering intent categorization at save time (or inferred from content type) would reduce guilt pile anxiety by making the library feel curated rather than accumulated.
+**Implication:** Resurface (the email digest) should not attempt to surface the entire library equally. It should prioritize items where the user's likely intent was "to read later" . recent saves of articles and blog posts, not design screenshots or reference links saved months ago. Longer term, offering intent categorization at save time (or inferred from content type) would reduce guilt pile anxiety by making the library feel curated rather than accumulated.
 
 ## Recommendations
 
@@ -162,7 +162,7 @@ Every participant lacked a natural trigger to return to their saved library. An 
 
 **2. Prioritize Recent, Article-Type Saves in the Resurface Algorithm**
 
-The interview finding that users save with different intents (read vs. reference vs. aspirational) means a naive resurface algorithm that treats all saves equally will surface irrelevant content — design screenshots, old reference links, aspirational papers the user will never read. The resurface algorithm should weight recently saved articles and blog posts higher than old or non-article content types. Content type can be inferred from URL structure, metadata, and save recency without requiring the user to manually tag intent.
+The interview finding that users save with different intents (read vs. reference vs. aspirational) means a naive resurface algorithm that treats all saves equally will surface irrelevant content . design screenshots, old reference links, aspirational papers the user will never read. The resurface algorithm should weight recently saved articles and blog posts higher than old or non-article content types. Content type can be inferred from URL structure, metadata, and save recency without requiring the user to manually tag intent.
 
 ## Appendix
 
@@ -175,7 +175,7 @@ Interviews followed a semi-structured format with open-ended questions designed 
 - Small sample size (n=7) means findings are directional, not statistically representative; the themes should be validated with quantitative behavioral data before committing to major product investment.
 - Participant recruitment was opt-in, which may overrepresent users who feel strongly about their saving behavior (either positively or negatively); the "guilt pile" theme may be amplified by self-selection.
 - No participants from non-English-speaking markets were included; cultural differences in information management behavior may exist but were not captured.
-- The churned user (P7) was the only non-active participant; the churned perspective is valuable but underrepresented — a follow-up study focused on churned users would strengthen the churn-related findings.
+- The churned user (P7) was the only non-active participant; the churned perspective is valuable but underrepresented . a follow-up study focused on churned users would strengthen the churn-related findings.
 
 ### Raw Notes
 

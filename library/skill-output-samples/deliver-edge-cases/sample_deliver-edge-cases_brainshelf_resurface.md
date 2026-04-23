@@ -7,7 +7,7 @@ skill_version: "2.0.0"
 created: 2026-02-20
 status: sample
 thread: brainshelf
-context: Brainshelf consumer PKM app — Resurface digest edge cases and error states
+context: Brainshelf consumer PKM app . Resurface digest edge cases and error states
 ---
 
 ## Scenario
@@ -16,9 +16,9 @@ During Sprint 8 planning, Priya M. and Alex R. mapped the edge cases for the Res
 
 **Source Notes:**
 
-- James Whittaker, "Exploratory Software Testing" (microsoft.com/en-us/research/publication/exploratory-software-testing/) — the exploratory testing methodology that informed the edge case discovery approach; Whittaker's "tours" framework (boundary, bad neighborhood, saboteur) was used to systematically identify failure modes across the digest pipeline.
-- Nielsen Norman Group, "Error Message Guidelines" (nngroup.com/articles/error-message-guidelines/) — the error message design principles applied in the Error Messages section; NN/g's guidance that error messages should be visible, constructive, and written in plain language shaped the user-facing copy.
-- IETF RFC 8058, "Signaling One-Click Functionality for List Email Headers" (rfc-editor.org/rfc/rfc8058) — the technical standard for the `List-Unsubscribe-Post` header that ensures one-click unsubscribe compliance with Gmail and other major email clients.
+- James Whittaker, "Exploratory Software Testing" (microsoft.com/en-us/research/publication/exploratory-software-testing/) . the exploratory testing methodology that informed the edge case discovery approach; Whittaker's "tours" framework (boundary, bad neighborhood, saboteur) was used to systematically identify failure modes across the digest pipeline.
+- Nielsen Norman Group, "Error Message Guidelines" (nngroup.com/articles/error-message-guidelines/) . the error message design principles applied in the Error Messages section; NN/g's guidance that error messages should be visible, constructive, and written in plain language shaped the user-facing copy.
+- IETF RFC 8058, "Signaling One-Click Functionality for List Email Headers" (rfc-editor.org/rfc/rfc8058) . the technical standard for the `List-Unsubscribe-Post` header that ensures one-click unsubscribe compliance with Gmail and other major email clients.
 
 ---
 
@@ -107,11 +107,11 @@ The Resurface digest is a daily email containing 3–5 saved items matched to th
 
 | Error State | User Message | Additional Action |
 |-------------|--------------|-------------------|
-| Digest disabled due to hard bounces | "We couldn't deliver your Resurface digest — your email address may have changed. Update your email in Settings to re-enable." | Link to Settings > Account |
+| Digest disabled due to hard bounces | "We couldn't deliver your Resurface digest . your email address may have changed. Update your email in Settings to re-enable." | Link to Settings > Account |
 | Opt-in attempted without a confirmed email address | "Please confirm your email address in Settings before enabling the Resurface digest." | Link to Settings > Account |
 | Unsubscribe confirmation | "You've been unsubscribed from the Resurface digest. You can re-enable it anytime from Settings." | Link to Brainshelf Settings |
-| Cadence change confirmation (to 3x/week) | "Got it — you'll hear from us Monday, Wednesday, and Friday." | None |
-| Cadence change confirmation (to daily) | "Welcome back to daily — your next digest arrives tomorrow morning." | None |
+| Cadence change confirmation (to 3x/week) | "Got it . you'll hear from us Monday, Wednesday, and Friday." | None |
+| Cadence change confirmation (to daily) | "Welcome back to daily . your next digest arrives tomorrow morning." | None |
 
 ## Recovery Paths
 
@@ -127,7 +127,7 @@ The Resurface digest is a daily email containing 3–5 saved items matched to th
 
 ### Resend API Outage (Digest Skipped)
 
-**User sees:** Nothing — the user simply does not receive a digest that day. No in-app notification for a single skipped day.
+**User sees:** Nothing . the user simply does not receive a digest that day. No in-app notification for a single skipped day.
 
 **Recovery options:**
 1. The system automatically retries on the next scheduled day; no user action required

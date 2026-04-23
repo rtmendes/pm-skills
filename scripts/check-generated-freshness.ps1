@@ -1,12 +1,12 @@
-# check-generated-freshness.ps1 — Verify generated workflow pages match source.
+# check-generated-freshness.ps1 . Verify generated workflow pages match source.
 #
 # If scripts/generate-workflow-pages.py exists, runs it to a temp directory
 # and diffs against committed docs/workflows/. Otherwise, checks that every
 # _workflows/*.md has a matching docs/workflows/*.md.
 #
 # Exit codes:
-#   0 — Generated pages are fresh (or fallback check passes)
-#   1 — Generated pages are stale or missing
+#   0 . Generated pages are fresh (or fallback check passes)
+#   1 . Generated pages are stale or missing
 #
 # Usage:
 #   .\scripts\check-generated-freshness.ps1

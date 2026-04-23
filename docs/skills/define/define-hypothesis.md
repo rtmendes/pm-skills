@@ -41,7 +41,7 @@ Or reference the skill file directly: `skills/define-hypothesis/SKILL.md`
 When asked to create a hypothesis, follow these steps:
 
 1. **State the Belief**
-   Articulate what you believe will happen. Use the structured format: "We believe that [action/change] for [target user] will [expected outcome]." Be specific about the intervention — vague hypotheses can't be tested.
+   Articulate what you believe will happen. Use the structured format: "We believe that [action/change] for [target user] will [expected outcome]." Be specific about the intervention . vague hypotheses can't be tested.
 
 2. **Identify the Target User**
    Define who this hypothesis applies to. A hypothesis about "users" is too broad. Specify the segment: new users in their first week, power users with 10+ sessions, churned users returning, etc.
@@ -172,7 +172,7 @@ When asked to create a hypothesis, follow these steps:
 | Setup & instrumentation | [Dates] | [Duration] |
 | Test running | [Dates] | [Duration] |
 | Analysis | [Dates] | [Duration] |
-| Decision | [Date] | — |
+| Decision | [Date] | . |
 
 ## Example Output
 
@@ -193,7 +193,7 @@ When asked to create a hypothesis, follow these steps:
 
     ### Problem Context
 
-    Our SaaS product has a 34% onboarding completion rate — meaning 66% of new signups never finish setup and experience the core value proposition. User research indicates the current 7-step onboarding feels overwhelming, with significant drop-off occurring at steps 4 and 5 (team invitation and integration setup). Users who don't complete onboarding are 4x more likely to churn within 14 days.
+    Our SaaS product has a 34% onboarding completion rate . meaning 66% of new signups never finish setup and experience the core value proposition. User research indicates the current 7-step onboarding feels overwhelming, with significant drop-off occurring at steps 4 and 5 (team invitation and integration setup). Users who don't complete onboarding are 4x more likely to churn within 14 days.
 
     ### Supporting Evidence
 
@@ -205,9 +205,9 @@ When asked to create a hypothesis, follow these steps:
 
     ### Alternative Hypotheses Considered
 
-    - **Progress indicators:** Adding a progress bar might reduce anxiety without changing steps — rejected because underlying issue is step count, not visibility
-    - **Tooltips/guidance:** More help content might reduce confusion — rejected because it adds more cognitive load
-    - **Optional steps:** Making steps skippable might work — considered as fallback if simplification fails
+    - **Progress indicators:** Adding a progress bar might reduce anxiety without changing steps . rejected because underlying issue is step count, not visibility
+    - **Tooltips/guidance:** More help content might reduce confusion . rejected because it adds more cognitive load
+    - **Optional steps:** Making steps skippable might work . considered as fallback if simplification fails
 
     ## Target User Segment
 
@@ -279,7 +279,7 @@ When asked to create a hypothesis, follow these steps:
 
     - **Validated if:** Onboarding completion increases by ≥10% relative (34% → 37.4%+) with 95% confidence AND guardrail metrics stay within acceptable range
     - **Invalidated if:** Onboarding completion shows no significant change or decreases, OR guardrail metrics breach acceptable range
-    - **Inconclusive if:** Results don't reach statistical significance within test window — extend test or increase sample
+    - **Inconclusive if:** Results don't reach statistical significance within test window . extend test or increase sample
 
     ## Risks & Assumptions
 
@@ -305,26 +305,26 @@ When asked to create a hypothesis, follow these steps:
     | Test running | Jan 18-31, 2026 | 14 days |
     | Observation window | Feb 1-7, 2026 | 7 days |
     | Analysis | Feb 8-10, 2026 | 3 days |
-    | Decision | Feb 11, 2026 | — |
+    | Decision | Feb 11, 2026 | . |
 
 ## Real-World Examples
 
 See this skill applied to three different product contexts:
 
-??? example "Storevine (B2B): Storevine B2B ecommerce platform — Campaigns v1 first-campaign guided flow hypothesis"
+??? example "Storevine (B2B): Storevine B2B ecommerce platform . Campaigns v1 first-campaign guided flow hypothesis"
     **Prompt:**
 
     ```
     /hypothesis
 
-    Project: Campaigns — native email marketing for Storevine merchants
+    Project: Campaigns . native email marketing for Storevine merchants
     Stage: Post-discovery, pre-PRD finalization
 
     Hypothesis I want to define:
     - Non-adopter merchants (no active external email tool, <250 customers)
       are ~38% of our active base [fictional] and represented 3 of 8 merchant
       interview participants (P3, P6, and P8)
-    - Core belief: setup complexity is the barrier — not awareness or price
+    - Core belief: setup complexity is the barrier . not awareness or price
     - Specific hypothesis: a guided first-campaign flow with product-seeded
       templates will drive first-send rate from ~12% [fictional] to ≥30%
       [fictional] within 60 days of GA
@@ -347,7 +347,7 @@ See this skill applied to three different product contexts:
 
     # Hypothesis: Pre-Populated Templates Drive First Campaign Sends for Non-Adopter Merchants
 
-??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — Resurface morning email digest hypothesis"
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app . Resurface morning email digest hypothesis"
     **Prompt:**
 
     ```

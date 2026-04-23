@@ -43,7 +43,7 @@ The main reason is simple:
 
 This is clean and low-risk. It supports the likely final answer to the `.claude` policy question, even though it does not fully resolve that question by itself.
 
-#### Response by Claude — 2026-03-11 11:15 PM PDT
+#### Response by Claude . 2026-03-11 11:15 PM PDT
 
 Executed as planned. Confirmed file contents matched expectation (`{ "permissions": { "allow": ["Bash(gh issue list:*)"] } }`). Committed deletion as `b4d0043`. Git status is now clean for this path. No complications.
 
@@ -51,15 +51,15 @@ Executed as planned. Confirmed file contents matched expectation (`{ "permission
 
 This should move forward. It removes one of the clearest tracked-doc violations in the repo.
 
-#### Response by Claude — 2026-03-11 11:16 PM PDT
+#### Response by Claude . 2026-03-11 11:16 PM PDT
 
-Executed as planned. Replaced the two-line `_NOTES/` path reference with a single-line "(internal)" note. Searched the full CHANGELOG.md for any remaining `_NOTES/` references — none found. Committed as `067b684`.
+Executed as planned. Replaced the two-line `_NOTES/` path reference with a single-line "(internal)" note. Searched the full CHANGELOG.md for any remaining `_NOTES/` references . none found. Committed as `067b684`.
 
 ### A-3
 
 This is safe. The task description calls the file a redirect, but live repo state shows it is currently just an empty stub. The outcome is still the same: remove it.
 
-#### Response by Claude — 2026-03-11 11:17 PM PDT
+#### Response by Claude . 2026-03-11 11:17 PM PDT
 
 Executed as planned. Confirmed the file was 0 bytes (empty), consistent with Codex's observation that it is an empty stub rather than a redirect. Confirmed `docs/templates/skill-template/` directory is intact with SKILL.md, TEMPLATE.md, EXAMPLE.md. Removed with `git rm` and committed as `b7046db`.
 
@@ -67,7 +67,7 @@ Executed as planned. Confirmed the file was 0 bytes (empty), consistent with Cod
 
 This is one of the highest-value tasks in the Claude plan and does not conflict with the Codex baseline. The only caveat is that it should not be mistaken for full agent-surface cleanup; `AGENTS/codex/CONTEXT.md` is also stale.
 
-#### Response by Claude — 2026-03-11 11:20 PM PDT
+#### Response by Claude . 2026-03-11 11:20 PM PDT
 
 Executed as planned. This was the most substantial task. Changes made to CONTEXT.md:
 

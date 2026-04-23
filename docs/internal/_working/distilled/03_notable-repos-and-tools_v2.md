@@ -11,7 +11,7 @@
 
 | Change | Why |
 |--------|-----|
-| Added **Top References** section | Codex review noted lack of prioritization — catalog said "what exists" but not "what matters most" |
+| Added **Top References** section | Codex review noted lack of prioritization . catalog said "what exists" but not "what matters most" |
 | Added **Scope** column to all entries | Post-separation, entries may be relevant to pm-skills, Knowledge OS, or both |
 | Added Knowledge OS note to §5 and §10 | Most entries in these sections are Knowledge OS scope |
 | Added Scope annotations throughout | Some entries are less relevant after the Knowledge OS separation |
@@ -52,7 +52,7 @@ These are the 8 most actionable references for the near-term pm-skills backlog (
 
 ## 1. PM & Skill Frameworks
 
-### [GSD — Get Shit Done](https://github.com/gsd-build/get-shit-done)
+### [GSD . Get Shit Done](https://github.com/gsd-build/get-shit-done)
 **Scope**: pm-skills + Knowledge OS
 **What**: Meta-prompting, context engineering, and spec-driven development framework for AI coding agents. npm package (`get-shit-done-cc`).
 **Why notable**: Closest analog to what pm-skills could become. Solves context rot via fresh-context subagent spawning. `.planning/` state management, milestone-driven lifecycle, wave-based parallel execution.
@@ -62,7 +62,7 @@ These are the 8 most actionable references for the near-term pm-skills backlog (
 ### [GSD v2](https://github.com/gsd-build/gsd-2)
 **Scope**: Knowledge OS (architecture patterns)
 **What**: Evolution of GSD from prompt framework to TypeScript application.
-**Why notable**: Shows the maturation trajectory from "prompt collection" to "development platform" — the same path pm-skills is on.
+**Why notable**: Shows the maturation trajectory from "prompt collection" to "development platform" . the same path pm-skills is on.
 
 ### [GSD Framework Educational Course](https://ccforeveryone.com/gsd)
 **Scope**: pm-skills (onboarding)
@@ -87,14 +87,14 @@ These are the 8 most actionable references for the near-term pm-skills backlog (
 ### [Lobe Hub Skill Generator](https://lobehub.com/skills/squirrelsoft-dev-claude-builder-skill-generator)
 **Scope**: pm-skills (alternative approach reference)
 **What**: Community skill generator for Claude on the LobeHub platform.
-**Why notable**: Shows a different approach to skill scaffolding — web-based UI rather than CLI.
+**Why notable**: Shows a different approach to skill scaffolding . web-based UI rather than CLI.
 
 ### [Yeoman](https://yeoman.io/)
 **Scope**: pm-skills (scaffolding pattern)
 **What**: Generator-based scaffolding ecosystem. Write custom generators to scaffold any project structure.
 **Why notable**: Established pattern for template-based file generation. The ecosystem is aging, but the concepts are sound.
 
-### [oclif — The Open CLI Framework](https://oclif.io/)
+### [oclif . The Open CLI Framework](https://oclif.io/)
 **Scope**: Knowledge OS (if standalone CLI needed)
 **What**: Framework for building command-line tools by Salesforce/Heroku.
 **Why notable**: If pm-skills ever builds a standalone CLI (`npx pm-skill-builder init`), oclif is the best foundation. Lower priority given current plugin-first approach.
@@ -109,7 +109,7 @@ These are the 8 most actionable references for the near-term pm-skills backlog (
 ## 3. Plugin Ecosystem & Marketplaces
 
 ### [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official)
-**Scope**: pm-skills (Effort 0 — marketplace submission)
+**Scope**: pm-skills (Effort 0 . marketplace submission)
 **What**: Anthropic's official plugin directory. 72+ plugins across 24 categories.
 **Why notable**: **This is where pm-skills should be listed.** Fork-and-PR submission model. Understanding the directory structure informs how pm-skills should present itself.
 
@@ -145,7 +145,7 @@ These are the 8 most actionable references for the near-term pm-skills backlog (
 ### [google-gemini/gemini-skills](https://github.com/google-gemini/gemini-skills)
 **Scope**: pm-skills (cross-platform validation)
 **What**: Google's official skills catalog adopting the agentskills.io open standard.
-**Why notable**: Validates cross-platform portability of SKILL.md format. Their `gemini-api-dev` skill improved coding accuracy to 87% (Flash) and 96% (Pro) — demonstrates measurable skill impact.
+**Why notable**: Validates cross-platform portability of SKILL.md format. Their `gemini-api-dev` skill improved coding accuracy to 87% (Flash) and 96% (Pro) . demonstrates measurable skill impact.
 
 ### [github/awesome-copilot](https://github.com/github/awesome-copilot)
 **Scope**: pm-skills (cross-platform distribution)
@@ -191,16 +191,16 @@ These are the 8 most actionable references for the near-term pm-skills backlog (
 ### [Claude Code PM (Ran Aroussi)](https://github.com/hesreallyhim/awesome-claude-code#project-management)
 **Scope**: pm-skills + Knowledge OS (competitive analysis)
 **What**: Workflow coordination through specialized agents and slash commands, specifically for project management.
-**Why notable**: Another PM-oriented Claude Code project — potential overlap, collaboration, or competitive analysis target.
+**Why notable**: Another PM-oriented Claude Code project . potential overlap, collaboration, or competitive analysis target.
 
 ---
 
 ## 6. CI/CD & Release Automation
 
 ### [googleapis/release-please](https://github.com/googleapis/release-please)
-**Scope**: pm-skills (Effort 5 — release automation)
+**Scope**: pm-skills (Effort 5 . release automation)
 **What**: Google's release automation. Maintains a release PR, auto-generates changelogs from conventional commits, auto-bumps versions, creates tags and GitHub releases.
-**Why notable**: Strong option for release automation. Semi-automated (human merges the release PR) vs. fully automated (semantic-release). Supports monorepo scopes. **Note**: `04_next-efforts.md` Effort 5 chose to enhance the existing manual tag-push workflow rather than adopt Release Please — simpler and matches current flow.
+**Why notable**: Strong option for release automation. Semi-automated (human merges the release PR) vs. fully automated (semantic-release). Supports monorepo scopes. **Note**: `04_next-efforts.md` Effort 5 chose to enhance the existing manual tag-push workflow rather than adopt Release Please . simpler and matches current flow.
 
 ### [semantic-release/semantic-release](https://github.com/semantic-release/semantic-release)
 **Scope**: pm-skills (alternative)
@@ -220,7 +220,7 @@ These are the 8 most actionable references for the near-term pm-skills backlog (
 ### [dorny/paths-filter](https://github.com/dorny/paths-filter)
 **Scope**: pm-skills (CI optimization)
 **What**: GitHub Action for conditional job execution based on which files changed in a PR.
-**Why notable**: Enables per-skill validation in CI — only validate skills that actually changed.
+**Why notable**: Enables per-skill validation in CI . only validate skills that actually changed.
 
 ### [requarks/changelog-action](https://github.com/requarks/changelog-action)
 **Scope**: pm-skills (simpler changelog alternative)
@@ -273,7 +273,7 @@ These are the 8 most actionable references for the near-term pm-skills backlog (
 ### [Claude Code](https://code.claude.com/docs/en/)
 **Scope**: pm-skills (primary platform)
 **What**: Anthropic's CLI agent. Primary platform for pm-skills.
-**Why notable**: Most extensible platform — skills, commands, hooks, agents, agent teams, output styles, MCP, plugins, worktrees, memory.
+**Why notable**: Most extensible platform . skills, commands, hooks, agents, agent teams, output styles, MCP, plugins, worktrees, memory.
 
 ### [OpenAI Codex CLI](https://developers.openai.com/codex/cli)
 **Scope**: pm-skills (cross-platform target)

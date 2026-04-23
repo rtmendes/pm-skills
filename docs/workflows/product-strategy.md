@@ -216,10 +216,10 @@ Before considering this workflow complete, verify:
 
 ## See Also
 
-- [Customer Discovery](customer-discovery.md) — When you need more research before committing to a strategic direction
-- [Stakeholder Alignment](stakeholder-alignment.md) — To get buy-in on the strategy from leadership and cross-functional partners
-- [Technical Discovery](technical-discovery.md) — For evaluating technical feasibility of the proposed solution
+- [Customer Discovery](customer-discovery.md) . When you need more research before committing to a strategic direction
+- [Stakeholder Alignment](stakeholder-alignment.md) . To get buy-in on the strategy from leadership and cross-functional partners
+- [Technical Discovery](technical-discovery.md) . For evaluating technical feasibility of the proposed solution
 
 ---
 
-*Part of [PM-Skills](https://github.com/product-on-purpose/pm-skills/blob/main/README.md) — Open source Product Management skills for AI agents*
+*Part of [PM-Skills](https://github.com/product-on-purpose/pm-skills/blob/main/README.md) . Open source Product Management skills for AI agents*

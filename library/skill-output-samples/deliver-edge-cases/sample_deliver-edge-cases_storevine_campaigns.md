@@ -7,7 +7,7 @@ skill_version: "2.0.0"
 created: 2026-02-20
 status: sample
 thread: storevine
-context: Storevine B2B ecommerce platform — Campaigns campaign send flow edge cases
+context: Storevine B2B ecommerce platform . Campaigns campaign send flow edge cases
 ---
 
 ## Scenario
@@ -16,9 +16,9 @@ Before the Campaigns build sprint begins, Storevine's growth PM and the Engineer
 
 **Source Notes:**
 
-- CAN-SPAM Act (FTC, ftc.gov) — mandatory commercial email requirements (one-click unsubscribe, physical sender address, honest subject line) that make certain input validation edge cases P1 blockers — any campaign that bypasses these checks creates direct legal exposure for Storevine as the platform enabling the send.
-- SendGrid API documentation (sendgrid.com/docs/api-reference/mail-send/mail-send/) — public API reference documenting error response codes (429 rate limit, 500 service error, 422 validation error) used to define the expected system behavior for integration failure scenarios.
-- Nielsen Norman Group, "Error Message Guidelines" (nngroup.com/articles/error-message-guidelines/) — establishes best practices for user-facing error copy: state what happened, explain why if relevant, and tell the user what to do next — the principles applied in the Error Messages and Recovery Paths sections.
+- CAN-SPAM Act (FTC, ftc.gov) . mandatory commercial email requirements (one-click unsubscribe, physical sender address, honest subject line) that make certain input validation edge cases P1 blockers . any campaign that bypasses these checks creates direct legal exposure for Storevine as the platform enabling the send.
+- SendGrid API documentation (sendgrid.com/docs/api-reference/mail-send/mail-send/) . public API reference documenting error response codes (429 rate limit, 500 service error, 422 validation error) used to define the expected system behavior for integration failure scenarios.
+- Nielsen Norman Group, "Error Message Guidelines" (nngroup.com/articles/error-message-guidelines/) . establishes best practices for user-facing error copy: state what happened, explain why if relevant, and tell the user what to do next . the principles applied in the Error Messages and Recovery Paths sections.
 
 ---
 
@@ -27,7 +27,7 @@ Before the Campaigns build sprint begins, Storevine's growth PM and the Engineer
 ```
 /edge-cases
 
-Feature: Campaigns — campaign creation and send flow
+Feature: Campaigns . campaign creation and send flow
 Sprint: Q2 2026 Campaigns build (GA Apr 28, 2026)
 
 Key edge cases I want to cover:
@@ -68,7 +68,7 @@ The Campaigns campaign send flow covers the full creation and send path: audienc
 
 | Scenario | Expected Behavior | Priority | Notes |
 |----------|------------------|----------|-------|
-| Subject line is empty | Block send; show inline error "Add a subject line — recipients see this first" | P1 | Required by CAN-SPAM (honest subject line mandate) |
+| Subject line is empty | Block send; show inline error "Add a subject line . recipients see this first" | P1 | Required by CAN-SPAM (honest subject line mandate) |
 | Subject line contains only whitespace | Treat as empty; block send with same error as empty | P2 | Whitespace-only values must not bypass the empty check |
 | Subject line exceeds 150 characters | Show character count warning at 100 characters; block save at 151 | P2 | Most email clients display 60–70 characters; 150 is the Campaigns max |
 | Email body is blank | Block send; show inline error "Add content to your campaign before sending" | P1 | Empty HTML template is not a valid send |
@@ -82,7 +82,7 @@ The Campaigns campaign send flow covers the full creation and send path: audienc
 |----------|------------------|----------|-------|
 | Audience size is 1 customer | Allow send; no minimum recipient count enforced in v1 | P2 | Confirm no bulk-send rate restrictions apply at this volume |
 | Free tier monthly send limit exactly reached (10,000 sends used [fictional]) | Block send; show pre-send error "You've reached your 10,000 free sends for this month [fictional]. Upgrade to continue sending." | P1 | Block must fire before the SendGrid API call is made |
-| Campaign audience exceeds remaining free tier sends (e.g., 200 recipients remaining, audience of 500) | Block send; show error with remaining count "You have 200 [fictional] free sends remaining this month — this campaign would send to 500. Reduce your audience or upgrade your plan." | P1 | Partial sends are not permitted; the entire campaign must be within the available send quota |
+| Campaign audience exceeds remaining free tier sends (e.g., 200 recipients remaining, audience of 500) | Block send; show error with remaining count "You have 200 [fictional] free sends remaining this month . this campaign would send to 500. Reduce your audience or upgrade your plan." | P1 | Partial sends are not permitted; the entire campaign must be within the available send quota |
 | Subject line is exactly 150 characters | Allow send; display character count warning but do not block | P2 | Warning copy: "Your subject line is at the 150-character limit. Most email clients show 60–70 characters." |
 | Campaign is scheduled at exactly midnight on the first day of a new billing month | Campaign should use the send quota for the month in which it is sent, not the month in which it was scheduled | P2 | Edge case for scheduled send (future feature); document for when scheduling ships |
 
@@ -90,11 +90,11 @@ The Campaigns campaign send flow covers the full creation and send path: audienc
 
 | Scenario | Expected Behavior | Priority | Notes |
 |----------|------------------|----------|-------|
-| Network failure during campaign send | Show toast error "Your campaign didn't send — check your connection and try again"; campaign draft is preserved; send button re-enables after 5 seconds | P1 | No automatic retry; user initiates retry manually |
-| SendGrid API returns 429 (rate limit) | Queue the send and retry automatically after 60 seconds; show in-progress indicator "Your campaign is queued — we'll send it shortly" | P1 | SendGrid rate limits apply per sender per day; retry once; escalate to error state if retry also fails |
-| SendGrid API returns 500 or 503 | Show error "Something went wrong on our end — your campaign is saved. Try again in a few minutes."; do not retry automatically | P1 | Log the error with campaign ID and merchant ID for support |
-| SendGrid API returns 422 (validation error) | Show error "There's a problem with your campaign content — review your template and try again"; log the specific validation error for engineering review | P1 | 422 typically indicates a malformed payload; this should not occur if pre-send validation passes |
-| Recipient list changes between audience preview and send confirmation | Recalculate audience count at the confirmation step; display updated count with note "Audience updated — X recipients will receive this campaign" | P2 | Race condition when segment data changes while merchant is in the send flow |
+| Network failure during campaign send | Show toast error "Your campaign didn't send . check your connection and try again"; campaign draft is preserved; send button re-enables after 5 seconds | P1 | No automatic retry; user initiates retry manually |
+| SendGrid API returns 429 (rate limit) | Queue the send and retry automatically after 60 seconds; show in-progress indicator "Your campaign is queued . we'll send it shortly" | P1 | SendGrid rate limits apply per sender per day; retry once; escalate to error state if retry also fails |
+| SendGrid API returns 500 or 503 | Show error "Something went wrong on our end . your campaign is saved. Try again in a few minutes."; do not retry automatically | P1 | Log the error with campaign ID and merchant ID for support |
+| SendGrid API returns 422 (validation error) | Show error "There's a problem with your campaign content . review your template and try again"; log the specific validation error for engineering review | P1 | 422 typically indicates a malformed payload; this should not occur if pre-send validation passes |
+| Recipient list changes between audience preview and send confirmation | Recalculate audience count at the confirmation step; display updated count with note "Audience updated . X recipients will receive this campaign" | P2 | Race condition when segment data changes while merchant is in the send flow |
 | Session expires while merchant is drafting a campaign | Prompt to re-authenticate; campaign draft state is preserved in the browser session and re-loaded after login | P2 | Draft is not submitted; no send has occurred; data is not lost |
 
 ### Concurrency
@@ -109,7 +109,7 @@ The Campaigns campaign send flow covers the full creation and send path: audienc
 
 | Scenario | Expected Behavior | Priority | Notes |
 |----------|------------------|----------|-------|
-| SendGrid service is fully unavailable (no response) | Queue the campaign send; display in-app banner "Email sends are temporarily delayed — we'll send your campaign when the service is restored"; notify merchant via email if the delay exceeds 30 minutes [fictional] | P1 | Queued campaigns must be drained in order; no partial or reordered sends |
+| SendGrid service is fully unavailable (no response) | Queue the campaign send; display in-app banner "Email sends are temporarily delayed . we'll send your campaign when the service is restored"; notify merchant via email if the delay exceeds 30 minutes [fictional] | P1 | Queued campaigns must be drained in order; no partial or reordered sends |
 | Attribution webhook receiver is down at send time | Campaign send completes normally; attribution events for this send are missed but recoverable from the SendGrid event log; log the gap for manual reprocessing | P2 | Attribution is decoupled from the send action and must never block it |
 | Storevine order database write fails for an attribution event | Log the failure silently; do not surface an error to the merchant; do not fail or retry the send | P3 | Attribution event writes are best-effort; a missed attribution event is a measurement gap, not a product failure |
 | Attribution webhook receives a duplicate event (SendGrid retry) | The webhook receiver must be idempotent; deduplicate by `sg_event_id` before writing to the attribution events table | P2 | SendGrid guarantees at-least-once delivery; duplicate events are expected |
@@ -118,15 +118,15 @@ The Campaigns campaign send flow covers the full creation and send path: audienc
 
 | Error State | User Message | Additional Action |
 |-------------|--------------|-------------------|
-| Subject line empty | "Add a subject line — recipients see this first" | — |
-| Email body empty | "Add content to your campaign before sending" | — |
+| Subject line empty | "Add a subject line . recipients see this first" | . |
+| Email body empty | "Add content to your campaign before sending" | . |
 | Audience has zero recipients | "Your audience has no recipients. Choose a different segment." | "Choose audience" button |
 | Physical address missing | "Add your business address in Account Settings to comply with CAN-SPAM requirements." | "Go to Account Settings" link |
 | Free tier send limit reached | "You've reached your 10,000 free sends for this month [fictional]. Upgrade to continue sending." | "Upgrade plan" link |
 | Campaign audience exceeds remaining sends | "You have [X] free sends remaining this month. Reduce your audience or upgrade your plan." | "Upgrade plan" link |
-| Network failure during send | "Your campaign didn't send — check your connection and try again." | "Try again" button |
-| SendGrid service unavailable | "Email sends are temporarily delayed — we'll send your campaign when the service is restored." | "View Storevine Status" link |
-| SendGrid validation error (422) | "There's a problem with your campaign content — review your template and try again." | — |
+| Network failure during send | "Your campaign didn't send . check your connection and try again." | "Try again" button |
+| SendGrid service unavailable | "Email sends are temporarily delayed . we'll send your campaign when the service is restored." | "View Storevine Status" link |
+| SendGrid validation error (422) | "There's a problem with your campaign content . review your template and try again." | . |
 
 ## Recovery Paths
 
@@ -153,20 +153,20 @@ The Campaigns campaign send flow covers the full creation and send path: audienc
 
 ### Network Failure During Send
 
-**User sees:** Toast error "Your campaign didn't send — check your connection and try again"; the send button re-enables after 5 seconds.
+**User sees:** Toast error "Your campaign didn't send . check your connection and try again"; the send button re-enables after 5 seconds.
 
 **Recovery options:**
-1. Click "Try again" — the same campaign draft is submitted again; no duplicate send risk because the send button was disabled during the first attempt.
+1. Click "Try again" . the same campaign draft is submitted again; no duplicate send risk because the send button was disabled during the first attempt.
 2. Exit and return later; the draft is preserved.
 
 **Data preservation:** Campaign draft is preserved; no partial send has occurred; recipient list is intact.
 
 ### SendGrid Service Unavailable
 
-**User sees:** In-app banner "Email sends are temporarily delayed — we'll send your campaign when the service is restored."
+**User sees:** In-app banner "Email sends are temporarily delayed . we'll send your campaign when the service is restored."
 
 **Recovery options:**
-1. Wait — the campaign is queued automatically and will send when the service recovers.
+1. Wait . the campaign is queued automatically and will send when the service recovers.
 2. Cancel the queued send from the Campaigns dashboard if the merchant no longer wants to send.
 
 **Data preservation:** Campaign draft and queue position are preserved; the send will complete when the service is restored unless canceled by the merchant.
@@ -175,7 +175,7 @@ The Campaigns campaign send flow covers the full creation and send path: audienc
 
 ### Must Test (P1)
 
-- [ ] **Empty subject line:** Attempt to send a campaign with a blank subject line; verify send is blocked and inline error "Add a subject line — recipients see this first" appears below the subject field
+- [ ] **Empty subject line:** Attempt to send a campaign with a blank subject line; verify send is blocked and inline error "Add a subject line . recipients see this first" appears below the subject field
 - [ ] **Empty body:** Attempt to send a campaign with a blank email body; verify send is blocked and inline error appears
 - [ ] **Physical address missing:** Attempt to send a campaign when the merchant account has no physical sender address configured; verify send is blocked and the link to Account Settings is present in the error message
 - [ ] **Zero-recipient audience:** Create a custom filter that matches no customers; verify send is blocked and "Your audience has no recipients" error appears

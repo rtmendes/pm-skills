@@ -14,7 +14,7 @@ metadata:
 # PM Skill Builder
 
 This skill creates new PM skills for the pm-skills library. It produces a
-Skill Implementation Packet — a complete design document with draft files —
+Skill Implementation Packet . a complete design document with draft files .
 in a staging area for review before promotion to canonical locations.
 
 ## When to Use
@@ -43,7 +43,7 @@ Accept the idea in either form:
   does it produce? What PM activity does it support?"
 
 Both entry points produce the same downstream flow. If the user provides
-one form, do not ask for the other — extract what you need and proceed.
+one form, do not ask for the other . extract what you need and proceed.
 
 If the idea is vague, ask ONE follow-up question to clarify the artifact
 type and target audience before proceeding.
@@ -114,7 +114,7 @@ Identify 1-2 existing skills that are the closest structural match:
 - Same phase > same category > similar artifact type
 - Read their SKILL.md to understand section structure, instruction style,
   output contract format, and quality checklist pattern
-- Name the exemplars explicitly: "Modeled after [skill] — same phase,
+- Name the exemplars explicitly: "Modeled after [skill] . same phase,
   [category] category"
 
 Present the classification and exemplar selection for user confirmation.
@@ -124,25 +124,25 @@ Present the classification and exemplar selection for user confirmation.
 Produce the complete packet using `references/TEMPLATE.md` as the format.
 The packet includes:
 
-1. **Decision** — recommendation + Why Gate evidence (if applicable)
-2. **Classification** — type, phase (if domain), category, directory name
-3. **Overlap Analysis** — what was found, why this skill is still needed
-4. **Quality Forecast** — K/P/C/W zone distribution + writing guidance:
+1. **Decision** . recommendation + Why Gate evidence (if applicable)
+2. **Classification** . type, phase (if domain), category, directory name
+3. **Overlap Analysis** . what was found, why this skill is still needed
+4. **Quality Forecast** . K/P/C/W zone distribution + writing guidance:
    - Knowledge-heavy (≥35% K): reference frameworks, include When to Use
    - Process-heavy (≥35% P): numbered steps, prescriptive, clear I/O per step
    - Constraint-heavy (≥35% C): MUST/SHOULD/MUST NOT rules, separate section
    - Wisdom-heavy (≥25% W): reflective questions, guide thinking
-5. **Exemplar Skills** — which existing skills modeled, why
-6. **Draft Frontmatter** — complete, valid YAML block
-7. **Draft SKILL.md** — full content (not an outline), mirroring exemplar structure
-8. **Draft TEMPLATE.md** — section headers with guidance comments
-9. **Draft EXAMPLE.md** — complete, realistic example (150-300 lines) with a
+5. **Exemplar Skills** . which existing skills modeled, why
+6. **Draft Frontmatter** . complete, valid YAML block
+7. **Draft SKILL.md** . full content (not an outline), mirroring exemplar structure
+8. **Draft TEMPLATE.md** . section headers with guidance comments
+9. **Draft EXAMPLE.md** . complete, realistic example (150-300 lines) with a
    specific PM scenario, every section filled, optional sections demonstrated
    both filled and skipped
-10. **Draft Command** — command frontmatter
-11. **AGENTS.md Entry** — exact text to add
-12. **Validation Checklist** — all CI rules checked against the draft
-13. **Next Steps** — local CI, testing, contribution workflow
+10. **Draft Command** . command frontmatter
+11. **AGENTS.md Entry** . exact text to add
+12. **Validation Checklist** . all CI rules checked against the draft
+13. **Next Steps** . local CI, testing, contribution workflow
 
 ### Step 6: Write to Staging Area
 
@@ -157,7 +157,7 @@ _staging/pm-skill-builder/{skill-name}/
 └── command.md             ← draft command
 ```
 
-> **Note**: `_staging/` is gitignored — draft artifacts never ship in releases.
+> **Note**: `_staging/` is gitignored . draft artifacts never ship in releases.
 > The staging folder is discarded after promotion.
 
 Report what was written and where.
@@ -186,7 +186,7 @@ Then:
 5. If validation passes, delete the staging folder: `_staging/pm-skill-builder/{skill-name}/`
 6. If validation fails, report the error and keep staging intact for fixes
 
-Design rationale lives in the GitHub issue, PR, or effort brief — not
+Design rationale lives in the GitHub issue, PR, or effort brief . not
 in a permanent packet file.
 
 Provide post-promotion guidance:
@@ -197,8 +197,8 @@ Provide post-promotion guidance:
 
 ## Current Library Reference
 
-Use this table for gap analysis — it reflects the current skill inventory
-(27 skills). Also scan the `skills/` directory for the latest count.
+Use this table for gap analysis . it reflects the current skill inventory
+(38 skills). Also scan the `skills/` directory for the latest count.
 
 ### Domain Skills (25)
 
@@ -245,10 +245,10 @@ Use this table for gap analysis — it reflects the current skill inventory
 ## Output Contract
 
 The builder MUST produce draft files for the new skill:
-- `SKILL.md` — full skill instructions
-- `references/TEMPLATE.md` — output template with guidance comments
-- `references/EXAMPLE.md` — complete worked example (150-300 lines)
-- `command.md` — slash command file
+- `SKILL.md` . full skill instructions
+- `references/TEMPLATE.md` . output template with guidance comments
+- `references/EXAMPLE.md` . complete worked example (150-300 lines)
+- `command.md` . slash command file
 
 All drafts are written to `_staging/pm-skill-builder/{skill-name}/` (gitignored).
 

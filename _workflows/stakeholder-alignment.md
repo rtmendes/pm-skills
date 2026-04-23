@@ -185,10 +185,10 @@ Before considering this workflow complete, verify:
 
 ## See Also
 
-- [Product Strategy](product-strategy.md) — For deeper strategic analysis including competitive landscape and opportunity mapping
-- [Feature Kickoff](feature-kickoff.md) — After approval, move to execution with the full problem-to-launch flow
-- [Customer Discovery](customer-discovery.md) — If stakeholders want more evidence before committing
+- [Product Strategy](product-strategy.md) . For deeper strategic analysis including competitive landscape and opportunity mapping
+- [Feature Kickoff](feature-kickoff.md) . After approval, move to execution with the full problem-to-launch flow
+- [Customer Discovery](customer-discovery.md) . If stakeholders want more evidence before committing
 
 ---
 
-*Part of [PM-Skills](../README.md) — Open source Product Management skills for AI agents*
+*Part of [PM-Skills](../README.md) . Open source Product Management skills for AI agents*

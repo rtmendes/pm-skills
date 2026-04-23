@@ -121,7 +121,7 @@ status: draft
 
 ### Success signals
 
-> [guidance: how the user will know the meeting went well in the moment — behavioral cues, not just outcome markers]
+> [guidance: how the user will know the meeting went well in the moment. behavioral cues, not just outcome markers]
 
 - {{Signal 1}}
 - {{Signal 2}}
@@ -149,8 +149,8 @@ status: draft
 
 - **Generated**: {{Timestamp}}
 - **Skill version**: 1.0.0
-- **Input quality**: {{high | medium | low}} — {{rationale}}
-- **Overall confidence**: {{high | medium | low}} — {{rationale}}
+- **Input quality**: {{high | medium | low}}. {{rationale}}
+- **Overall confidence**: {{high | medium | low}}. {{rationale}}
 - **Known gaps**: {{List or "None identified"}}
 - **Inferences applied**: {{list of inferred values with confidence}}
-- **Anti-meeting check**: {{Ran — override accepted | Ran — async alternative produced instead}}
+- **Anti-meeting check**: {{Ran. override accepted | Ran. async alternative produced instead}}

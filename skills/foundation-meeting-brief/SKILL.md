@@ -1,4 +1,3 @@
-<!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
 ---
 name: foundation-meeting-brief
 description: Produces a private strategic preparation document for the user before a meeting that matters. Captures stakes, stakeholder positions and reads, ranked desired outcomes, key messages, anticipated questions with prepared responses, risks and tensions, specific asks, and success signals. Distinct from meeting-agenda because this artifact is not shared with attendees; it is the user's personal tactical prep for meetings where positioning matters.
@@ -47,9 +46,9 @@ The skill runs on inferred stakeholder positions with low-confidence flags when 
 
 ## Anti-meeting check
 
-This skill opens with the shared anti-meeting check — see [`/meeting-agenda`](../foundation-meeting-agenda/SKILL.md) for the full check.
+This skill opens with the shared anti-meeting check. see [`/meeting-agenda`](../foundation-meeting-agenda/SKILL.md) for the full check.
 
-**v1.1.0**: the check requires a positive synchronous-value statement (tradeoff to discuss, conflict to resolve, co-creation, relationship-building, or blocker escalation). Brief-prep scenarios most often pass because they typically involve navigating stakeholder positions or negotiation dynamics — which qualify as "conflict to resolve" or "relationship-building." But the check still runs, and if no synchronous value is named, the skill recommends the async alternative before producing a brief.
+**v1.1.0**: the check requires a positive synchronous-value statement (tradeoff to discuss, conflict to resolve, co-creation, relationship-building, or blocker escalation). Brief-prep scenarios most often pass because they typically involve navigating stakeholder positions or negotiation dynamics. which qualify as "conflict to resolve" or "relationship-building." But the check still runs, and if no synchronous value is named, the skill recommends the async alternative before producing a brief.
 
 **Load-bearing inference gates** (v1.1.0): when stakeholder positions, primary ask, or decision-maker attribution are inferred below-high confidence, flag in the go-mode summary with `⚠`. The brief's tactical guidance depends on these; silent acceptance of weak inferences creates risky advice. See family contract "Zero-friction execution" section.
 
@@ -122,5 +121,5 @@ When asked to create a meeting brief, follow these steps:
 ## See also
 
 - [Meeting Skills Family Contract](../../docs/reference/skill-families/meeting-skills-contract.md)
-- [`/meeting-agenda`](../foundation-meeting-agenda/SKILL.md) — shares the anti-meeting check
-- [`/discover-stakeholder-summary`](../discover-stakeholder-summary/SKILL.md) — upstream input source for stakeholder positions
+- [`/meeting-agenda`](../foundation-meeting-agenda/SKILL.md). shares the anti-meeting check
+- [`/discover-stakeholder-summary`](../discover-stakeholder-summary/SKILL.md). upstream input source for stakeholder positions

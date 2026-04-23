@@ -30,11 +30,11 @@ status: draft
 
 ## Shareable update
 
-> [v1.1.0: copy the section below into Slack. Everything below the "End of Shareable update" marker is internal — do not paste.]
+> [v1.1.0: copy the section below into Slack. Everything below the "End of Shareable update" marker is internal. do not paste.]
 
 ---
 
-### Slack / Teams variant (primary — matches frontmatter channel)
+### Slack / Teams variant (primary. matches frontmatter channel)
 
 **Search feature Q2: scope and capacity decided; ship-date pending vendor review**
 
@@ -117,8 +117,8 @@ jonathan
 
 **Flagged but kept** (may need further review for non-engineering audiences):
 
-- "Algolia licensing" — if update goes to non-engineering readers, add context on what Algolia is (search provider) and why licensing matters
-- "provider-change evaluation" — if wider audience, rephrase as "evaluate different search tooling"
+- "Algolia licensing". if update goes to non-engineering readers, add context on what Algolia is (search provider) and why licensing matters
+- "provider-change evaluation". if wider audience, rephrase as "evaluate different search tooling"
 
 ---
 
@@ -147,6 +147,6 @@ jonathan
 - **Channel**: slack
 - **Audience variant**: engineering
 - **Thread continuation**: no (first update on this topic in Q2)
-- **Input quality**: high — recap was high-quality; all outcomes directly supported
+- **Input quality**: high. recap was high-quality; all outcomes directly supported
 - **Known gaps**: None identified for engineering audience; flagged 2 items that would need translation if this same update goes wider later
 - **Translations applied**: 0 for engineering audience (all terminology appropriate); 2 flagged for potential wider-audience use

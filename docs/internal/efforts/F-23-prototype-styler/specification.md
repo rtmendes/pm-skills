@@ -2,7 +2,7 @@
 
 ## Overview
 
-A utility skill that helps establish agent-optimized UX/UI component standards for use with the `utility-prototype-creator` skill (F-22). Produces a reusable style system — CSS custom properties, component CSS classes, layout conventions, interaction standards, and HTML snippet patterns — that the prototype-creator consumes to generate visually consistent prototypes. The critical design principle: styles optimized for agentic creation must be **deterministic** (same input produces same visual output), **self-contained** (inline-able in a single `<style>` block), and **error-resistant** (graceful degradation when Claude misuses a component class).
+A utility skill that helps establish agent-optimized UX/UI component standards for use with the `utility-prototype-creator` skill (F-22). Produces a reusable style system . CSS custom properties, component CSS classes, layout conventions, interaction standards, and HTML snippet patterns . that the prototype-creator consumes to generate visually consistent prototypes. The critical design principle: styles optimized for agentic creation must be **deterministic** (same input produces same visual output), **self-contained** (inline-able in a single `<style>` block), and **error-resistant** (graceful degradation when Claude misuses a component class).
 
 ## Skill Identity
 
@@ -21,13 +21,13 @@ A utility skill that helps establish agent-optimized UX/UI component standards f
 Traditional design systems assume a human developer reads documentation, understands context, and makes judgment calls. An agent-optimized style system assumes the consumer is an AI that follows naming conventions literally, applies classes based on pattern matching, and cannot "see" the result. Every class name must communicate its purpose. Every component must look acceptable even if a class is missed.
 
 ### 2. Inline-Able by Constraint
-The entire style system must fit in a single `<style>` block that can be pasted into an HTML file. No external files, no imports, no build steps. This constraint shapes every design decision — no utility-class explosion, no component variants beyond what fits in ~200 lines of CSS.
+The entire style system must fit in a single `<style>` block that can be pasted into an HTML file. No external files, no imports, no build steps. This constraint shapes every design decision . no utility-class explosion, no component variants beyond what fits in ~200 lines of CSS.
 
 ### 3. Fault-Tolerant Components
 When Claude forgets a class or misapplies a component pattern, the result should look "slightly off" rather than "completely broken." This means: sensible defaults on base elements, CSS custom properties with fallback values, and components that degrade to readable content without their styling classes.
 
 ### 4. Semantic CSS Variable Names
-Variable names are the primary API for theme customization. They must be self-documenting: `--color-primary`, `--space-md`, `--radius-sm`, `--shadow-card` — not `--c1`, `--s3`, `--r2`. An agent reading the variable names should understand what to use where.
+Variable names are the primary API for theme customization. They must be self-documenting: `--color-primary`, `--space-md`, `--radius-sm`, `--shadow-card` . not `--c1`, `--s3`, `--r2`. An agent reading the variable names should understand what to use where.
 
 ### 5. Accessibility Is Structural
 Focus indicators, contrast ratios, and semantic markup patterns are baked into the base styles, not added as optional enhancements. The style system makes it harder to create an inaccessible prototype than an accessible one.
@@ -55,7 +55,7 @@ name: utility-prototype-styler
 description: >-
   Creates agent-optimized CSS component style systems for use with
   utility-prototype-creator. Produces design tokens, component classes,
-  layout patterns, interaction standards, and HTML snippets — all
+  layout patterns, interaction standards, and HTML snippets . all
   inline-able in a single style block. Designed for fault tolerance,
   semantic naming, and accessibility by default.
 version: "1.0.0"
@@ -83,11 +83,11 @@ metadata:
    - Creating icon libraries or illustration assets (out of scope)
 
 3. **Style System Architecture** (~30 lines)
-   - **Layer 1 — Design Tokens**: CSS custom properties for colors, spacing, typography, borders, shadows, transitions. The theming API.
-   - **Layer 2 — Base Styles**: Element-level defaults (`body`, `h1`-`h6`, `p`, `a`, `button`, `input`, `table`). No classes needed — bare HTML looks good.
-   - **Layer 3 — Component Classes**: BEM-inspired classes for cards, modals, navigation, alerts, badges, tabs, forms. Each component is self-contained.
-   - **Layer 4 — Layout Patterns**: Grid and flexbox utilities for page structure, sidebar layouts, card grids, and stacked content.
-   - **Layer 5 — Interaction States**: Hover, focus, active, disabled, loading, empty state styles. Applied via pseudo-classes and data attributes.
+   - **Layer 1 . Design Tokens**: CSS custom properties for colors, spacing, typography, borders, shadows, transitions. The theming API.
+   - **Layer 2 . Base Styles**: Element-level defaults (`body`, `h1`-`h6`, `p`, `a`, `button`, `input`, `table`). No classes needed . bare HTML looks good.
+   - **Layer 3 . Component Classes**: BEM-inspired classes for cards, modals, navigation, alerts, badges, tabs, forms. Each component is self-contained.
+   - **Layer 4 . Layout Patterns**: Grid and flexbox utilities for page structure, sidebar layouts, card grids, and stacked content.
+   - **Layer 5 . Interaction States**: Hover, focus, active, disabled, loading, empty state styles. Applied via pseudo-classes and data attributes.
 
 4. **Component Library** (~30 lines)
    - 12-15 core components, each with:
@@ -96,20 +96,20 @@ metadata:
      - Interaction states included
      - Accessibility requirements (ARIA, keyboard, focus)
    - Components: button (primary/secondary/ghost), card, modal/dialog, navigation bar, sidebar, tabs, form group (label + input), table, alert (info/success/warning/error), badge, dropdown/select, accordion, toast notification, empty state
-   - Each component designed for graceful degradation — works without JavaScript, looks acceptable without variant classes
+   - Each component designed for graceful degradation . works without JavaScript, looks acceptable without variant classes
 
 5. **Instructions** (~35 lines, numbered steps)
-   1. Choose visual direction — minimal, corporate, playful, technical, or custom
-   2. Define color palette — primary, secondary, accent, background, surface, text, and semantic colors (success, warning, error, info)
-   3. Set spacing scale — base unit and scale (e.g., 4px base: 4, 8, 12, 16, 24, 32, 48, 64)
-   4. Configure typography — font families (heading, body), size scale (6 sizes), line heights, weights
-   5. Define border and shadow tokens — border radii (sm, md, lg, full), shadow levels (sm, md, lg)
-   6. Build component classes — apply tokens to each of the 12-15 components
-   7. Establish layout patterns — page structures, grid configurations, container widths
-   8. Define interaction standards — hover opacity/color shifts, focus ring style, transition durations, disabled opacity
-   9. Add dark mode variant — CSS custom property swap via `[data-theme="dark"]` selector
-   10. Validate — contrast check all color pairs, test fault tolerance (remove classes, check degradation)
-   11. Package — combine all layers into a single `<style>` block with section comments
+   1. Choose visual direction . minimal, corporate, playful, technical, or custom
+   2. Define color palette . primary, secondary, accent, background, surface, text, and semantic colors (success, warning, error, info)
+   3. Set spacing scale . base unit and scale (e.g., 4px base: 4, 8, 12, 16, 24, 32, 48, 64)
+   4. Configure typography . font families (heading, body), size scale (6 sizes), line heights, weights
+   5. Define border and shadow tokens . border radii (sm, md, lg, full), shadow levels (sm, md, lg)
+   6. Build component classes . apply tokens to each of the 12-15 components
+   7. Establish layout patterns . page structures, grid configurations, container widths
+   8. Define interaction standards . hover opacity/color shifts, focus ring style, transition durations, disabled opacity
+   9. Add dark mode variant . CSS custom property swap via `[data-theme="dark"]` selector
+   10. Validate . contrast check all color pairs, test fault tolerance (remove classes, check degradation)
+   11. Package . combine all layers into a single `<style>` block with section comments
 
 6. **Output Contract** (~10 lines)
    - References TEMPLATE.md as the style system format
@@ -123,15 +123,15 @@ metadata:
    - [ ] All 12-15 component classes documented with HTML snippets
    - [ ] Every text/background color pair meets WCAG AA contrast (4.5:1 body, 3:1 large)
    - [ ] Focus indicators visible on all interactive elements (buttons, links, inputs, tabs)
-   - [ ] Components degrade gracefully — missing a variant class doesn't break layout
+   - [ ] Components degrade gracefully . missing a variant class doesn't break layout
    - [ ] Dark mode variant works via `[data-theme="dark"]` attribute swap
    - [ ] Total `<style>` block is under 15KB
-   - [ ] Semantic variable names — no abbreviations, no numbered tokens
+   - [ ] Semantic variable names . no abbreviations, no numbered tokens
    - [ ] Section comments separate the 5 layers in the style block
 
 8. **Companion Skills** (~5 lines)
-   - `utility-prototype-creator` (F-22) — consumes styles produced by this skill
-   - `foundation-content-voice` (F-21) — optional, for typography aligned with voice personality
+   - `utility-prototype-creator` (F-22) . consumes styles produced by this skill
+   - `foundation-content-voice` (F-21) . optional, for typography aligned with voice personality
 
 ---
 
@@ -139,16 +139,16 @@ metadata:
 
 A structured style system template. Sections:
 
-1. **Style System Metadata** — Name, version, visual direction, author, description
-2. **Color Palette** — Table: token name / light mode value / dark mode value / usage. Covers: primary, secondary, accent, background, surface, text, text-muted, border, success, warning, error, info, highlight.
-3. **Spacing Scale** — Table: token name / value / usage example. Base unit through largest spacing.
-4. **Typography Scale** — Table: token name / font family / size / line height / weight / usage
-5. **Border & Shadow Tokens** — Table: token name / value / usage
-6. **Component Inventory** — For each component: class name, HTML snippet, variant classes, states, accessibility notes
-7. **Layout Patterns** — Page structure templates (sidebar + main, centered, full-width), grid configurations, container widths
-8. **Interaction Standards** — Hover behavior, focus ring specification, transition values, disabled state treatment, loading state pattern
-9. **Dark Mode Configuration** — Token overrides for `[data-theme="dark"]`
-10. **Contrast Validation** — Table: text token / background token / ratio / pass/fail for all planned pairings
+1. **Style System Metadata** . Name, version, visual direction, author, description
+2. **Color Palette** . Table: token name / light mode value / dark mode value / usage. Covers: primary, secondary, accent, background, surface, text, text-muted, border, success, warning, error, info, highlight.
+3. **Spacing Scale** . Table: token name / value / usage example. Base unit through largest spacing.
+4. **Typography Scale** . Table: token name / font family / size / line height / weight / usage
+5. **Border & Shadow Tokens** . Table: token name / value / usage
+6. **Component Inventory** . For each component: class name, HTML snippet, variant classes, states, accessibility notes
+7. **Layout Patterns** . Page structure templates (sidebar + main, centered, full-width), grid configurations, container widths
+8. **Interaction Standards** . Hover behavior, focus ring specification, transition values, disabled state treatment, loading state pattern
+9. **Dark Mode Configuration** . Token overrides for `[data-theme="dark"]`
+10. **Contrast Validation** . Table: text token / background token / ratio / pass/fail for all planned pairings
 
 ---
 
@@ -158,22 +158,22 @@ A worked example: **Creating a SaaS dashboard style system for prototype-creator
 
 Demonstrates the full TEMPLATE workflow:
 
-1. **Visual Direction** — "Technical, clean, data-dense. Optimized for dashboards and form-heavy interfaces."
-2. **Color Palette** — 13 tokens derived from a blue-gray base palette. Shows light and dark mode values for each. Includes contrast validation.
-3. **Spacing Scale** — 4px base unit, 8-step scale (4, 8, 12, 16, 24, 32, 48, 64)
-4. **Typography** — System font stack for body (Inter/system-ui), monospace for data. 6-step size scale from 12px to 32px.
-5. **Components** — Full implementation for 6 representative components:
-   - **Button** (primary, secondary, ghost variants) — shows HTML snippet, hover/focus/disabled states
-   - **Card** — with header, body, footer zones and shadow levels
-   - **Form Group** — label, input, helper text, error state
-   - **Table** — striped rows, sticky header, responsive scroll wrapper
-   - **Alert** — info/success/warning/error variants with icon, message, dismiss
-   - **Modal** — backdrop, dialog, header, body, footer, close button, focus trap note
-6. **Layout Patterns** — Sidebar dashboard layout (240px sidebar + fluid main), card grid (auto-fill, min 280px), stacked form layout
-7. **Interaction Standards** — Hover: 0.8 opacity or color shift. Focus: 2px solid primary offset 2px. Transition: 150ms ease. Disabled: 0.5 opacity, cursor not-allowed.
-8. **Dark Mode** — Shows the token swap for all 13 color tokens. Demonstrates a card component in both modes.
-9. **Complete Style Block** — The final assembled `<style>` block (~200 lines) with all 5 layers and section comments
-10. **Fault Tolerance Test** — Shows a card component rendered (a) with all classes, (b) with missing variant class, (c) as bare HTML. All three are readable.
+1. **Visual Direction** . "Technical, clean, data-dense. Optimized for dashboards and form-heavy interfaces."
+2. **Color Palette** . 13 tokens derived from a blue-gray base palette. Shows light and dark mode values for each. Includes contrast validation.
+3. **Spacing Scale** . 4px base unit, 8-step scale (4, 8, 12, 16, 24, 32, 48, 64)
+4. **Typography** . System font stack for body (Inter/system-ui), monospace for data. 6-step size scale from 12px to 32px.
+5. **Components** . Full implementation for 6 representative components:
+   - **Button** (primary, secondary, ghost variants) . shows HTML snippet, hover/focus/disabled states
+   - **Card** . with header, body, footer zones and shadow levels
+   - **Form Group** . label, input, helper text, error state
+   - **Table** . striped rows, sticky header, responsive scroll wrapper
+   - **Alert** . info/success/warning/error variants with icon, message, dismiss
+   - **Modal** . backdrop, dialog, header, body, footer, close button, focus trap note
+6. **Layout Patterns** . Sidebar dashboard layout (240px sidebar + fluid main), card grid (auto-fill, min 280px), stacked form layout
+7. **Interaction Standards** . Hover: 0.8 opacity or color shift. Focus: 2px solid primary offset 2px. Transition: 150ms ease. Disabled: 0.5 opacity, cursor not-allowed.
+8. **Dark Mode** . Shows the token swap for all 13 color tokens. Demonstrates a card component in both modes.
+9. **Complete Style Block** . The final assembled `<style>` block (~200 lines) with all 5 layers and section comments
+10. **Fault Tolerance Test** . Shows a card component rendered (a) with all classes, (b) with missing variant class, (c) as bare HTML. All three are readable.
 
 ---
 

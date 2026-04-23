@@ -1,7 +1,7 @@
 # v2.11.0 Post-Release Confirmation
 
 **Tag created**: 2026-04-18
-**Type**: Feature release (minor) — Meeting Skills Family + Lean Canvas
+**Type**: Feature release (minor). Meeting Skills Family + Lean Canvas
 
 Authoritative record that v2.11.0 actually shipped. Complements the in-progress-state artifacts (`plan_v2.11.0.md`, `plan_v2.11_codex-review.md`, `plan_v2.11_review-journal.md`, etc.) by recording what happened at tag time and what was verified post-tag.
 
@@ -12,7 +12,7 @@ Authoritative record that v2.11.0 actually shipped. Complements the in-progress-
 | Attribute | Value |
 |-----------|-------|
 | Commit SHA | `1144e03` |
-| Commit message | `release: v2.11.0 — Meeting Skills Family + Lean Canvas` |
+| Commit message | `release: v2.11.0. Meeting Skills Family + Lean Canvas` |
 | Parent commit | `0389d65` (feat F-26 HTML sample companions) |
 | Tag name | `v2.11.0` (annotated) |
 | Tag object SHA | `e05e3fc` |
@@ -89,13 +89,13 @@ These happen in GitHub's environment after the push; track here for maintainer v
 ### GitHub Actions workflows
 
 Expected to run on the push:
-- [ ] `validation.yml` — full validator matrix (Ubuntu + Windows, bash + pwsh)
-- [ ] `deploy-docs.yml` — mkdocs site deploy with new v2.11.0 pages (if configured to deploy on tag or main-push)
-- [ ] `release.yml` — release artifact generation (if configured to trigger on tag)
-- [ ] `release-zips.yml` — release zip generation (if configured to trigger on tag)
-- [ ] `sync-agents-md.yml` — AGENTS.md sync (if configured)
-- [ ] `validate-mcp-sync.yml` — MCP sync check (advisory; pm-skills-mcp is frozen per M-22)
-- [ ] `validate-plugin.yml` — plugin manifest validation
+- [ ] `validation.yml`. full validator matrix (Ubuntu + Windows, bash + pwsh)
+- [ ] `deploy-docs.yml`. mkdocs site deploy with new v2.11.0 pages (if configured to deploy on tag or main-push)
+- [ ] `release.yml`. release artifact generation (if configured to trigger on tag)
+- [ ] `release-zips.yml`. release zip generation (if configured to trigger on tag)
+- [ ] `sync-agents-md.yml`. AGENTS.md sync (if configured)
+- [ ] `validate-mcp-sync.yml`. MCP sync check (advisory; pm-skills-mcp is frozen per M-22)
+- [ ] `validate-plugin.yml`. plugin manifest validation
 
 **Confirmation to run post-tag**: check the Actions tab at `https://github.com/product-on-purpose/pm-skills/actions` for green status on the v2.11.0 commit. Any failure there that didn't surface locally indicates a local-vs-CI environment difference worth tracking.
 
@@ -105,7 +105,7 @@ Not auto-created by the tag push alone. To create:
 
 ```bash
 gh release create v2.11.0 \
-  --title "v2.11.0 — Meeting Skills Family + Lean Canvas" \
+  --title "v2.11.0. Meeting Skills Family + Lean Canvas" \
   --notes-file docs/releases/Release_v2.11.0.md
 ```
 
@@ -133,7 +133,7 @@ Two rounds of Codex adversarial review across the session:
 | Round | Findings | CRITICAL | IMPORTANT | MINOR | NIT | Resolved in-session | Deferred |
 |-------|----------|----------|-----------|-------|-----|---------------------|----------|
 | 1 | 15 | 3 | 7 | 3 | 1 | 14 | 1 (R1-I8 → F-31 in v2.12.0) |
-| 2 | 11 | 0 | 6 | 3 | 2 | 10 | 1 (R2-M2 — resolved in final pass before tag) |
+| 2 | 11 | 0 | 6 | 3 | 2 | 10 | 1 (R2-M2. resolved in final pass before tag) |
 
 **Zero CRITICAL or IMPORTANT findings open at tag time.** Full narrative: `plan_v2.11_review-journal.md`.
 
@@ -164,7 +164,7 @@ Two rounds of Codex adversarial review across the session:
 6. F-29 meeting-lifecycle workflow (real-world-usage-informed)
 7. F-30 family-adoption guide (real-world-usage-informed)
 
-Re-run Phase 0 Adversarial Review Loop before v2.12.0 tag — now canonical in the pre-release checklist.
+Re-run Phase 0 Adversarial Review Loop before v2.12.0 tag. now canonical in the pre-release checklist.
 
 ---
 

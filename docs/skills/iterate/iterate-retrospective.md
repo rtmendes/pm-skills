@@ -16,7 +16,7 @@ tags:
 
 # Retrospective
 
-A retrospective is a structured reflection that helps teams learn from their experiences and continuously improve. By regularly examining what went well, what didn't, and what to change, teams build a culture of learning and adaptation. The value isn't just in the discussion—it's in the documented actions and follow-through.
+A retrospective is a structured reflection that helps teams learn from their experiences and continuously improve. By regularly examining what went well, what didn't, and what to change, teams build a culture of learning and adaptation. The value isn't just in the discussion.it's in the documented actions and follow-through.
 
 ## When to Use
 
@@ -52,7 +52,7 @@ When asked to facilitate or document a retrospective, follow these steps:
    - **Sailboat:** Visual metaphor (wind=helps, anchor=holds back)
 
 3. **Gather Input**
-   Collect observations from all team members. Ensure everyone contributes—quiet voices often have important insights. Group similar items to identify themes.
+   Collect observations from all team members. Ensure everyone contributes.quiet voices often have important insights. Group similar items to identify themes.
 
 4. **Discuss and Prioritize**
    Don't try to address everything. Focus the discussion on the most impactful items. Vote or discuss to identify the top 2-3 issues to address.
@@ -254,8 +254,8 @@ When asked to facilitate or document a retrospective, follow these steps:
 
 ## Example Output
 
-??? example "Retrospective: Sprint 14 — Payment Feature Launch"
-    # Retrospective: Sprint 14 — Payment Feature Launch
+??? example "Retrospective: Sprint 14 . Payment Feature Launch"
+    # Retrospective: Sprint 14 . Payment Feature Launch
 
     ## Overview
 
@@ -299,7 +299,7 @@ When asked to facilitate or document a retrospective, follow these steps:
 
     - Shipped payment feature on time despite mid-sprint requirements change
     - Zero critical bugs found in production after launch
-    - Team rallied together during the P2 incident—great cross-functional response
+    - Team rallied together during the P2 incident.great cross-functional response
     - New PR template caught several issues before merge
 
     ### Process Wins
@@ -311,7 +311,7 @@ When asked to facilitate or document a retrospective, follow these steps:
     ### Individual Shoutouts
 
     - Jordan: Stepped up to mentor Chris during onboarding while maintaining velocity
-    - Sam: On-call response to P2 was exemplary—clear communication, fast resolution
+    - Sam: On-call response to P2 was exemplary.clear communication, fast resolution
     - Taylor: Requirements change was communicated with context, not just "do this"
 
     ---
@@ -327,9 +327,9 @@ When asked to facilitate or document a retrospective, follow these steps:
 
     ### Process Pain Points
 
-    - Requirements changes mid-sprint—how do we protect sprint scope better?
-    - Flaky tests are getting worse—5 tests failed intermittently this sprint
-    - On-call runbook is still incomplete—we were lucky Sam knew what to do
+    - Requirements changes mid-sprint.how do we protect sprint scope better?
+    - Flaky tests are getting worse.5 tests failed intermittently this sprint
+    - On-call runbook is still incomplete.we were lucky Sam knew what to do
     - Onboarding documentation is outdated
 
     ### Themes Identified
@@ -362,7 +362,7 @@ When asked to facilitate or document a retrospective, follow these steps:
     ### Documentation Gaps
 
     **What was discussed:**
-    Chris mentioned that onboarding was harder than it needed to be—docs pointed to systems that no longer exist or had wrong information. The P2 incident also showed that our runbooks are incomplete. If Sam hadn't been on call, resolution would have taken longer.
+    Chris mentioned that onboarding was harder than it needed to be.docs pointed to systems that no longer exist or had wrong information. The P2 incident also showed that our runbooks are incomplete. If Sam hadn't been on call, resolution would have taken longer.
 
     **Root cause identified:**
     - No owner for documentation maintenance
@@ -404,12 +404,12 @@ When asked to facilitate or document a retrospective, follow these steps:
 
     **Action 1: Fix race condition tests**
     - What: Fix the 3 tests identified as having race conditions (test_async_payment, test_webhook_handler, test_batch_process)
-    - Why: Test reliability theme—reducing CI failures and investigation time
+    - Why: Test reliability theme.reducing CI failures and investigation time
     - Success criteria: Tests pass 50 consecutive times in CI
 
     **Action 2: Complete on-call runbook**
     - What: Finish documenting P1/P2 response procedures, escalation paths, and common issues
-    - Why: Documentation gaps theme—P2 incident showed risk
+    - Why: Documentation gaps theme.P2 incident showed risk
     - Success criteria: Runbook reviewed by Alex and used in next on-call rotation
 
     **Action 3: Update onboarding documentation**
@@ -419,7 +419,7 @@ When asked to facilitate or document a retrospective, follow these steps:
 
     **Action 4: Draft scope change process**
     - What: Create 1-page process for handling mid-sprint scope changes
-    - Why: Scope protection theme—prevent future frustration from unplanned changes
+    - Why: Scope protection theme.prevent future frustration from unplanned changes
     - Success criteria: Team agrees to trial process in Sprint 15
 
     ---
@@ -450,8 +450,8 @@ When asked to facilitate or document a retrospective, follow these steps:
 
     ## Facilitator Notes
 
-    - Start/Stop/Continue worked well for this team—consider alternating with 4Ls next time for variety
-    - Should timebox discussion sections more strictly—we ran 5 min over
+    - Start/Stop/Continue worked well for this team.consider alternating with 4Ls next time for variety
+    - Should timebox discussion sections more strictly.we ran 5 min over
     - Anonymous input submission before meeting helped quieter team members contribute equally
 
     ---
@@ -469,7 +469,7 @@ When asked to facilitate or document a retrospective, follow these steps:
 
 See this skill applied to three different product contexts:
 
-??? example "Storevine (B2B): Storevine B2B ecommerce platform — Campaigns v1.0 build sprint retrospective"
+??? example "Storevine (B2B): Storevine B2B ecommerce platform . Campaigns v1.0 build sprint retrospective"
     **Prompt:**
 
     ```
@@ -486,7 +486,7 @@ See this skill applied to three different product contexts:
 
     What went well:
     - Beta merchant FAQ (23 questions → 10 FAQ + 15 canned responses)
-      [fictional] — reduced GA-week ticket volume significantly
+      [fictional] . reduced GA-week ticket volume significantly
     - Instrumentation spec process caught subscriber email PII gap
       before GA
     - Feature flag rollout (10%→100%) worked; zero rollback events
@@ -499,9 +499,9 @@ See this skill applied to three different product contexts:
     - Klaviyo partner notice email sent 2 days late (no clear owner)
 
     Previous retro actions to review (Sprint 7 retro):
-    - Add QA Lead to kickoff sessions — Complete
-    - Define escalation path for blocker tickets — In Progress
-    - Document infrastructure prerequisites for launches — Not Started
+    - Add QA Lead to kickoff sessions . Complete
+    - Define escalation path for blocker tickets . In Progress
+    - Document infrastructure prerequisites for launches . Not Started
 
     Need: full sprint retrospective with action items.
     ```
@@ -512,13 +512,13 @@ See this skill applied to three different product contexts:
 
     # Retrospective: Campaigns v1.0 Build Sprint
 
-??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — Sprint 8 retrospective after Resurface launch"
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app . Sprint 8 retrospective after Resurface launch"
     **Prompt:**
 
     ```
     /retrospective
 
-    sprint 8 retro — resurface launch sprint. need to write this up.
+    sprint 8 retro . resurface launch sprint. need to write this up.
 
     what happened: we shipped resurface on time! first big feature in 6 months.
     but we also had a timezone bug that sent the morning digest at 5am to UK/Europe
@@ -528,16 +528,16 @@ See this skill applied to three different product contexts:
     format: start/stop/continue. small team (7 people in the room).
     2 wins, the timezone thing, and a few process issues that came up.
 
-    previous retro action items were: (1) set up staging environment email testing —
-    DONE, (2) add integration test for notification delivery — NOT DONE (this
-    contributed to the bug), (3) weekly eng/pm sync — IN PROGRESS.
+    previous retro action items were: (1) set up staging environment email testing .
+    DONE, (2) add integration test for notification delivery . NOT DONE (this
+    contributed to the bug), (3) weekly eng/pm sync . IN PROGRESS.
     ```
 
     ---
 
     **Output:**
 
-    # Retrospective: Sprint 8 — Resurface Launch
+    # Retrospective: Sprint 8 . Resurface Launch
 
 ??? example "Workbench (Enterprise): Workbench enterprise collaboration platform: Blueprints v1 GA post-launch retrospective"
     **Prompt:**

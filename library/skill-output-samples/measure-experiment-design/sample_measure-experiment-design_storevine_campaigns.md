@@ -7,7 +7,7 @@ skill_version: "2.0.0"
 created: 2026-02-20
 status: sample
 thread: storevine
-context: Storevine B2B ecommerce platform — Campaigns guided first-campaign flow A/B experiment design
+context: Storevine B2B ecommerce platform . Campaigns guided first-campaign flow A/B experiment design
 ---
 
 ## Scenario
@@ -16,9 +16,9 @@ Four weeks before the Campaigns GA date, Storevine's growth PM formalized the A/
 
 **Source Notes:**
 
-- Evan Miller, "How Not To Run An A/B Test" (evanmiller.org/how-not-to-run-an-ab-test.html) — establishes the importance of pre-defined sample sizes and fixed test durations to avoid peeking bias and inflated false positive rates, the protocol followed in this experiment design.
-- Ronald Fisher's convention of p < 0.05 as the standard significance threshold for scientific experiments, established in "The Design of Experiments" (1935) — the alpha level used in this experiment, consistent with industry practice for product A/B tests.
-- Nielsen Norman Group research on first-use experiences (nngroup.com) — establishes that guided first-session paths producing tangible value are the primary driver of tool retention for new users, providing the behavioral research basis for the hypothesis being tested.
+- Evan Miller, "How Not To Run An A/B Test" (evanmiller.org/how-not-to-run-an-ab-test.html) . establishes the importance of pre-defined sample sizes and fixed test durations to avoid peeking bias and inflated false positive rates, the protocol followed in this experiment design.
+- Ronald Fisher's convention of p < 0.05 as the standard significance threshold for scientific experiments, established in "The Design of Experiments" (1935) . the alpha level used in this experiment, consistent with industry practice for product A/B tests.
+- Nielsen Norman Group research on first-use experiences (nngroup.com) . establishes that guided first-session paths producing tangible value are the primary driver of tool retention for new users, providing the behavioral research basis for the hypothesis being tested.
 
 ---
 
@@ -27,7 +27,7 @@ Four weeks before the Campaigns GA date, Storevine's growth PM formalized the A/
 ```
 /experiment-design
 
-Project: Campaigns — Campaigns guided first-campaign flow
+Project: Campaigns . Campaigns guided first-campaign flow
 Experiment: Does the guided first-campaign flow increase first-send rate
             for non-adopter merchants?
 
@@ -79,13 +79,13 @@ criteria, risks, and implementation notes.
 
 ## Background
 
-Merchant interviews (January 2026) identified three participants with no email program who cited setup complexity as the barrier — not price, not awareness. Interview Insight 2 categorized this non-adopter segment as the highest-ROI activation target for Campaigns v1 because there is no migration cost, no existing workflow to replicate, and no seasonal disruption risk. The hypothesis was formalized in the Define phase with a target of 30% [fictional] first-send rate against a current baseline of 12% [fictional]. The experiment operationalizes that hypothesis: it directly tests whether removing the blank-canvas complexity with pre-populated content is the activation mechanism, or whether some other factor drives the difference.
+Merchant interviews (January 2026) identified three participants with no email program who cited setup complexity as the barrier . not price, not awareness. Interview Insight 2 categorized this non-adopter segment as the highest-ROI activation target for Campaigns v1 because there is no migration cost, no existing workflow to replicate, and no seasonal disruption risk. The hypothesis was formalized in the Define phase with a target of 30% [fictional] first-send rate against a current baseline of 12% [fictional]. The experiment operationalizes that hypothesis: it directly tests whether removing the blank-canvas complexity with pre-populated content is the activation mechanism, or whether some other factor drives the difference.
 
 ## Variants
 
 ### Control (A)
 
-**Description:** The standard Campaigns campaign creation flow that all merchants see — a blank template editor with a library of 8 generic pre-built templates, and the named segment library as the audience selection step. No content is pre-filled; the merchant builds their campaign from scratch.
+**Description:** The standard Campaigns campaign creation flow that all merchants see . a blank template editor with a library of 8 generic pre-built templates, and the named segment library as the audience selection step. No content is pre-filled; the merchant builds their campaign from scratch.
 
 **Details:**
 - Entry point: Campaigns section of Storevine admin (same for both variants)
@@ -93,7 +93,7 @@ Merchant interviews (January 2026) identified three participants with no email p
 - Audience: Named segment library with no pre-selected segment
 - No guided completion prompts or progress indicators
 
-**Screenshot/Mockup:** Figma — Campaigns creation flow v4 / Control variant
+**Screenshot/Mockup:** Figma . Campaigns creation flow v4 / Control variant
 
 ### Treatment (B)
 
@@ -105,7 +105,7 @@ Merchant interviews (January 2026) identified three participants with no email p
 - Audience: Defaulted to "Customers who purchased in the last 90 days" segment; merchant may change this selection
 - Guided completion prompt: Subject line field is pre-focused; progress indicator shows 3 steps (Template → Subject Line → Send)
 
-**Screenshot/Mockup:** Figma — Campaigns creation flow v4 / Treatment variant
+**Screenshot/Mockup:** Figma . Campaigns creation flow v4 / Treatment variant
 
 ## Metrics
 
@@ -127,8 +127,8 @@ Merchant interviews (January 2026) identified three participants with no email p
 
 | Metric | Definition | Threshold |
 |--------|------------|-----------|
-| Email unsubscribe rate | % of recipients who unsubscribe from any campaign sent during the test period | Must not exceed 2.0% — above this level, inbox providers may begin filtering Storevine domain sends |
-| Spam complaint rate | % of recipients who report a campaign as spam | Must not exceed 0.1% — above this level, SendGrid domain reputation degrades |
+| Email unsubscribe rate | % of recipients who unsubscribe from any campaign sent during the test period | Must not exceed 2.0% . above this level, inbox providers may begin filtering Storevine domain sends |
+| Spam complaint rate | % of recipients who report a campaign as spam | Must not exceed 0.1% . above this level, SendGrid domain reputation degrades |
 
 ## Sample Size & Duration
 
@@ -151,7 +151,7 @@ Merchant interviews (January 2026) identified three participants with no email p
 | **Traffic allocation** | 100% of eligible segment to experiment (no holdout) |
 | **Users per day in experiment** | ~113 merchants/day [fictional] across both variants |
 | **Minimum duration** | ~22 days to reach 2,400 merchants [fictional] |
-| **Recommended duration** | 60 days — covers the full hypothesis measurement window and two distinct seasonal sub-periods (May promotions + early June) |
+| **Recommended duration** | 60 days . covers the full hypothesis measurement window and two distinct seasonal sub-periods (May promotions + early June) |
 
 ## Audience Targeting
 
@@ -184,7 +184,7 @@ Treatment variant's first campaign send rate is ≥30% [fictional] at 60 days wi
 
 ### Loss (Keep Control)
 
-Treatment variant's first campaign send rate is lower than control or does not reach statistical significance, AND the point estimate is below 20% [fictional]. In this case, the guided flow design is revisited — specifically whether the pre-populated template content quality is driving abandonment rather than the blank-canvas problem.
+Treatment variant's first campaign send rate is lower than control or does not reach statistical significance, AND the point estimate is below 20% [fictional]. In this case, the guided flow design is revisited . specifically whether the pre-populated template content quality is driving abandonment rather than the blank-canvas problem.
 
 ### Inconclusive (More Data Needed)
 
@@ -208,12 +208,12 @@ Treatment variant's first campaign send rate is 20–29% [fictional] at 60 days 
 ## Implementation Notes
 
 - Feature flag name: `campaigns_guided_first_campaign_flow`; variant assignment at merchant_id level; 50/50 split
-- First-campaign detection query: `SELECT COUNT(*) FROM campaigns WHERE merchant_id = ? AND status = 'sent'` — treatment flow is shown if count = 0
+- First-campaign detection query: `SELECT COUNT(*) FROM campaigns WHERE merchant_id = ? AND status = 'sent'` . treatment flow is shown if count = 0
 - Instrumentation: `campaign_sent` event must include `experiment_variant` property (`control` or `treatment`) for all sends during the test window; `first_send_completed` event must also include `experiment_variant`
 - `experiment_variant` property must be set at the time of flow entry, not at send time, to correctly attribute sends where the merchant returns later to complete their campaign
 
 ## References
 
 - Hypothesis document: "Pre-Populated Templates Drive First Campaign Sends for Non-Adopter Merchants" (Define phase, Feb 20, 2026)
-- Figma: Campaigns creation flow v4 — control and treatment variants (internal)
+- Figma: Campaigns creation flow v4 . control and treatment variants (internal)
 - Instrumentation spec: Campaigns Guided First-Campaign Flow Events (Measure phase)

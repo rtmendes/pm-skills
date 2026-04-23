@@ -20,6 +20,7 @@ For each `skills/*/SKILL.md`:
 
 ### Required Structure
 - `SKILL.md` exists in the skill directory.
+- **First line is the YAML delimiter `---`** (no preamble, comments, or attribution headers above it). The open [`skills` CLI](https://github.com/vercel-labs/skills) expects frontmatter at line 1; anything else silently breaks CLI discovery.
 - YAML frontmatter is present (delimited by `---`).
 - `references/TEMPLATE.md` exists.
 - `references/EXAMPLE.md` exists.
@@ -28,7 +29,7 @@ For each `skills/*/SKILL.md`:
 | Field | Rule |
 |---|---|
 | `name` | Must be present and match the directory name exactly |
-| `description` | Must be present and be 20-100 words long |
+| `description` | Must be present, 20-100 words long, and free of inline `": "` (colon-space) patterns that break strict YAML parsers like the one used by the skills.sh CLI. If the description must contain a colon, wrap the full value in double quotes. |
 | `version` | Must be present exactly once at the root level |
 | `updated` | Must be present |
 | `license` | Must be present |
@@ -48,9 +49,9 @@ For each `skills/*/SKILL.md`:
 `domain`, `foundation`, `utility`
 
 ### Additional Guards
-- **No nested version** — `metadata.version` must not exist (only root `version` is allowed).
-- **Exactly one root version** — catches duplicate `version:` lines.
-- **Template structure** — `references/TEMPLATE.md` must contain at least 3 `##` headers.
+- **No nested version** . `metadata.version` must not exist (only root `version` is allowed).
+- **Exactly one root version** . catches duplicate `version:` lines.
+- **Template structure** . `references/TEMPLATE.md` must contain at least 3 `##` headers.
 
 ## Exit Codes
 
@@ -72,12 +73,12 @@ For each `skills/*/SKILL.md`:
 
 ## When to Use
 
-- **After editing skill frontmatter** — catches typos, missing fields, or invalid phase/classification combos.
-- **After adding a new skill** — ensures it follows the repo conventions.
-- **Before tagging a release** — prevents malformed skills from shipping.
-- **In CI** — add as a lint step for pull request validation.
+- **After editing skill frontmatter** . catches typos, missing fields, or invalid phase/classification combos.
+- **After adding a new skill** . ensures it follows the repo conventions.
+- **Before tagging a release** . prevents malformed skills from shipping.
+- **In CI** . add as a lint step for pull request validation.
 
 ## Safety
 
-- Read-only — does not modify any files.
+- Read-only . does not modify any files.
 - Inspects only `skills/` directory contents.

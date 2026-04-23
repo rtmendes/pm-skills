@@ -61,11 +61,11 @@ graph LR
 
 Use the Lean Startup workflow when:
 
-- **Testing new ideas or markets** — high uncertainty about product-market fit
-- **Resource-constrained** — need to validate before major investment
-- **Speed is critical** — competitive pressure requires rapid iteration
-- **Building MVPs** — want to learn quickly with minimum viable product
-- **Considering a pivot** — need data to inform strategic direction
+- **Testing new ideas or markets** . high uncertainty about product-market fit
+- **Resource-constrained** . need to validate before major investment
+- **Speed is critical** . competitive pressure requires rapid iteration
+- **Building MVPs** . want to learn quickly with minimum viable product
+- **Considering a pivot** . need data to inform strategic direction
 
 ---
 
@@ -73,7 +73,7 @@ Use the Lean Startup workflow when:
 
 **Goal:** Create the minimum needed to test your hypothesis
 
-The Build phase isn't about building a complete product—it's about building just enough to learn.
+The Build phase isn't about building a complete product.it's about building just enough to learn.
 
 ### Core Skills
 
@@ -198,11 +198,11 @@ hypothesis   solution-   experiment- experiment- pivot-
 
 ### 5-Skill Lean Cycle
 
-1. **[`define-hypothesis`](../skills/define/define-hypothesis.md)** — State what you believe
-2. **[`develop-solution-brief`](../skills/develop/develop-solution-brief.md)** — Define MVP approach
-3. **[`measure-experiment-design`](../skills/measure/measure-experiment-design.md)** — Plan measurement
-4. **[`measure-experiment-results`](../skills/measure/measure-experiment-results.md)** — Document learnings
-5. **[`iterate-pivot-decision`](../skills/iterate/iterate-pivot-decision.md)** — Decide next step
+1. **[`define-hypothesis`](../skills/define/define-hypothesis.md)** . State what you believe
+2. **[`develop-solution-brief`](../skills/develop/develop-solution-brief.md)** . Define MVP approach
+3. **[`measure-experiment-design`](../skills/measure/measure-experiment-design.md)** . Plan measurement
+4. **[`measure-experiment-results`](../skills/measure/measure-experiment-results.md)** . Document learnings
+5. **[`iterate-pivot-decision`](../skills/iterate/iterate-pivot-decision.md)** . Decide next step
 
 This core loop can run in 1-2 week cycles.
 
@@ -247,9 +247,9 @@ Use [`iterate-pivot-decision`](../skills/iterate/iterate-pivot-decision.md) to d
 
 Track progress through:
 
-1. **Baseline** — Where you are today
-2. **Target** — Where you need to be
-3. **Learning velocity** — How fast you're moving toward target
+1. **Baseline** . Where you are today
+2. **Target** . Where you need to be
+3. **Learning velocity** . How fast you're moving toward target
 
 Use [`measure-dashboard-requirements`](../skills/measure/measure-dashboard-requirements.md) to specify these metrics.
 
@@ -321,8 +321,8 @@ Before considering this workflow complete, verify:
 
 ## See Also
 
-- [Triple Diamond Workflow](triple-diamond.md) — For comprehensive product development
-- [Feature Kickoff Workflow](feature-kickoff.md) — For quick-start feature development
+- [Triple Diamond Workflow](triple-diamond.md) . For comprehensive product development
+- [Feature Kickoff Workflow](feature-kickoff.md) . For quick-start feature development
 
 ---
 
@@ -334,5 +334,5 @@ Before considering this workflow complete, verify:
 
 ---
 
-*Part of [PM-Skills](https://github.com/product-on-purpose/pm-skills/blob/main/README.md) — Open source Product Management skills for AI agents*
+*Part of [PM-Skills](https://github.com/product-on-purpose/pm-skills/blob/main/README.md) . Open source Product Management skills for AI agents*
 

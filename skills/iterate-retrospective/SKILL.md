@@ -13,7 +13,7 @@ metadata:
 <!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
 # Retrospective
 
-A retrospective is a structured reflection that helps teams learn from their experiences and continuously improve. By regularly examining what went well, what didn't, and what to change, teams build a culture of learning and adaptation. The value isn't just in the discussion—it's in the documented actions and follow-through.
+A retrospective is a structured reflection that helps teams learn from their experiences and continuously improve. By regularly examining what went well, what didn't, and what to change, teams build a culture of learning and adaptation. The value isn't just in the discussion.it's in the documented actions and follow-through.
 
 ## When to Use
 
@@ -39,7 +39,7 @@ When asked to facilitate or document a retrospective, follow these steps:
    - **Sailboat:** Visual metaphor (wind=helps, anchor=holds back)
 
 3. **Gather Input**
-   Collect observations from all team members. Ensure everyone contributes—quiet voices often have important insights. Group similar items to identify themes.
+   Collect observations from all team members. Ensure everyone contributes.quiet voices often have important insights. Group similar items to identify themes.
 
 4. **Discuss and Prioritize**
    Don't try to address everything. Focus the discussion on the most impactful items. Vote or discuss to identify the top 2-3 issues to address.

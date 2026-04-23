@@ -160,10 +160,10 @@ Before considering this workflow complete, verify:
 
 ## See Also
 
-- [Product Strategy](product-strategy.md) — For broader strategic context when the technical decision has strategic implications
-- [Feature Kickoff](feature-kickoff.md) — After feasibility is confirmed, move to execution with the full problem-to-launch flow
-- [Sprint Planning](sprint-planning.md) — To break the confirmed solution into sprint-ready stories
+- [Product Strategy](product-strategy.md) . For broader strategic context when the technical decision has strategic implications
+- [Feature Kickoff](feature-kickoff.md) . After feasibility is confirmed, move to execution with the full problem-to-launch flow
+- [Sprint Planning](sprint-planning.md) . To break the confirmed solution into sprint-ready stories
 
 ---
 
-*Part of [PM-Skills](https://github.com/product-on-purpose/pm-skills/blob/main/README.md) — Open source Product Management skills for AI agents*
+*Part of [PM-Skills](https://github.com/product-on-purpose/pm-skills/blob/main/README.md) . Open source Product Management skills for AI agents*

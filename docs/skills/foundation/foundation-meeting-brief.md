@@ -60,5 +60,5 @@ Full instructions are in the skill file at `skills/foundation-meeting-brief/SKIL
 
 ## Related skills
 
-- [`/meeting-agenda`](foundation-meeting-agenda.md) — attendee-facing agenda (shares anti-meeting check)
-- [`/discover-stakeholder-summary`](../discover/discover-stakeholder-summary.md) — upstream input for stakeholder positions
+- [`/meeting-agenda`](foundation-meeting-agenda.md). attendee-facing agenda (shares anti-meeting check)
+- [`/discover-stakeholder-summary`](../discover/discover-stakeholder-summary.md). upstream input for stakeholder positions

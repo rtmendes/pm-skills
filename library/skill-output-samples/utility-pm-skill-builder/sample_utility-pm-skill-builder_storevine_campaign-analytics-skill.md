@@ -7,7 +7,7 @@ skill_version: "1.0.0"
 created: 2026-04-11
 status: sample
 thread: storevine
-context: Storevine B2B ecommerce platform — using the skill builder to create a campaign-analytics skill
+context: Storevine B2B ecommerce platform . using the skill builder to create a campaign-analytics skill
 ---
 
 ## Scenario

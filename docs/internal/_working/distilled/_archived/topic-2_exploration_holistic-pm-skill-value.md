@@ -1,8 +1,8 @@
-# Topic 2 — Exploration: Holistic PM-Skill Value Expansion
+# Topic 2 . Exploration: Holistic PM-Skill Value Expansion
 
 > **Date**: 2026-03-21
 > **Author**: Claude Opus 4.6
-> **Status**: Draft — exploration document
+> **Status**: Draft . exploration document
 > **Scope**: How pm-skills can leverage full Claude Code capabilities and compare across platforms
 
 ---
@@ -32,7 +32,7 @@
 
 pm-skills currently uses **one component type** of the Claude Code extensibility system: **skills** (with associated **commands**). But Claude Code's plugin architecture offers at least **eight distinct component types** that could dramatically expand what pm-skills delivers. This document explores each component, how it could enhance PM workflows, and how the expanded capabilities compare across AI coding platforms.
 
-The key insight: **pm-skills is positioned at a unique intersection** — it's a domain-specific skill library (PM/UX) built on a universal skill specification (agentskills.io) that runs on the most extensible AI coding platform (Claude Code). No other PM tool has this combination. The opportunity is to leverage the full platform without losing the cross-platform portability that makes pm-skills valuable.
+The key insight: **pm-skills is positioned at a unique intersection** . it's a domain-specific skill library (PM/UX) built on a universal skill specification (agentskills.io) that runs on the most extensible AI coding platform (Claude Code). No other PM tool has this combination. The opportunity is to leverage the full platform without losing the cross-platform portability that makes pm-skills valuable.
 
 ---
 
@@ -41,26 +41,26 @@ The key insight: **pm-skills is positioned at a unique intersection** — it's a
 ### 2.1 Current Utilization Gap
 
 pm-skills today uses:
-- **Skills** (25 SKILL.md files) — the core PM content
-- **Commands** (26 command files) — slash command shortcuts
-- **Bundles** (3 workflow chains) — multi-skill sequences
+- **Skills** (25 SKILL.md files) . the core PM content
+- **Commands** (26 command files) . slash command shortcuts
+- **Bundles** (3 workflow chains) . multi-skill sequences
 
 pm-skills does NOT use:
-- **Hooks** — event-driven automation (auto-validate, auto-save, auto-link)
-- **Agents** (sub-agents) — autonomous multi-step workflows
-- **Output Styles** — custom rendering for PM artifacts
-- **MCP Servers** — direct integration (exists in pm-skills-mcp but not in plugin)
-- **Plugin Manifest** — full plugin packaging (partially done in v2.6.0)
-- **Agent Teams** — coordinated multi-agent workflows
-- **Memory/Context** — persistent project state
+- **Hooks** . event-driven automation (auto-validate, auto-save, auto-link)
+- **Agents** (sub-agents) . autonomous multi-step workflows
+- **Output Styles** . custom rendering for PM artifacts
+- **MCP Servers** . direct integration (exists in pm-skills-mcp but not in plugin)
+- **Plugin Manifest** . full plugin packaging (partially done in v2.6.0)
+- **Agent Teams** . coordinated multi-agent workflows
+- **Memory/Context** . persistent project state
 
 ### 2.2 The Platform Evolution Context
 
 Since pm-skills was first created, the AI landscape has shifted significantly:
 
-1. **agentskills.io became an open standard** (Dec 2025) — adopted by 26+ platforms
-2. **Claude Code added plugins** — full component model with hooks, agents, MCP
-3. **Agent Teams launched** (Feb 2026) — multi-agent coordination
+1. **agentskills.io became an open standard** (Dec 2025) . adopted by 26+ platforms
+2. **Claude Code added plugins** . full component model with hooks, agents, MCP
+3. **Agent Teams launched** (Feb 2026) . multi-agent coordination
 4. **OpenAI Codex** gained autonomous task execution in sandboxed environments
 5. **Gemini CLI** adopted the agentskills.io standard with native skill support
 6. **Cursor** added experimental agent skills support
@@ -86,7 +86,7 @@ This means pm-skills' competitive advantage has shifted from "the only AI PM too
 
 ### 3.2 Commands (Currently Used)
 
-**What they are**: Markdown files that define slash commands for user invocation. Simpler than skills — they're direct instruction sets.
+**What they are**: Markdown files that define slash commands for user invocation. Simpler than skills . they're direct instruction sets.
 
 **Current pm-skills usage**: 26 commands, one per skill plus `/kickoff`.
 
@@ -211,7 +211,7 @@ This means pm-skills' competitive advantage has shifted from "the only AI PM too
 
 | Dimension | pm-skills Advantage | pm-skills Gap |
 |-----------|-------------------|---------------|
-| **Breadth of skills** | 25 curated PM skills — most comprehensive | No UX-specific skills yet |
+| **Breadth of skills** | 25 curated PM skills . most comprehensive | No UX-specific skills yet |
 | **Workflow chains** | 3 bundles (kickoff, triple-diamond, lean-startup) | No automated workflow execution |
 | **Cross-platform** | Works on 6+ platforms via agentskills.io | Platform-specific features lost |
 | **Template quality** | Every skill has TEMPLATE.md + EXAMPLE.md | No variant templates per context |
@@ -262,7 +262,7 @@ Layer 3 (MCP): pm-skills-mcp
 
 ### Approach C: PM Delivery Platform (Build a Full Framework)
 
-Go beyond skills and build a complete PM delivery framework — like GSD but for PM work. Include project management, workflow orchestration, team collaboration, and CI/CD for PM artifacts.
+Go beyond skills and build a complete PM delivery framework . like GSD but for PM work. Include project management, workflow orchestration, team collaboration, and CI/CD for PM artifacts.
 
 **Tradeoffs**:
 | Pro | Con |
@@ -335,11 +335,11 @@ Phase 6: ITERATE
 ### 6.3 What "Standardization" Means
 
 Standardizing pm-skills into a PM delivery model would mean:
-1. **Defined phase gates** — clear criteria for when each phase is "done"
-2. **Prescribed artifact flow** — which artifacts feed which downstream skills
-3. **State tracking** — persistent awareness of where a project is in the lifecycle
-4. **Automation** — hooks and agents that enforce the model (auto-create next artifact, flag skipped phases)
-5. **Metrics** — track coverage (how many artifacts exist per phase) and velocity (time per phase)
+1. **Defined phase gates** . clear criteria for when each phase is "done"
+2. **Prescribed artifact flow** . which artifacts feed which downstream skills
+3. **State tracking** . persistent awareness of where a project is in the lifecycle
+4. **Automation** . hooks and agents that enforce the model (auto-create next artifact, flag skipped phases)
+5. **Metrics** . track coverage (how many artifacts exist per phase) and velocity (time per phase)
 
 ---
 
@@ -347,14 +347,14 @@ Standardizing pm-skills into a PM delivery model would mean:
 
 ### Primary Recommendation: Approach B (Layered Architecture)
 
-The highest-value investment is **Approach B** — maintaining the cross-platform skill core while adding Claude Code-specific automation.
+The highest-value investment is **Approach B** . maintaining the cross-platform skill core while adding Claude Code-specific automation.
 
 ### 80/20 Implementation Priorities
 
 | Priority | Component | Value | Effort | Platform |
 |----------|-----------|-------|--------|----------|
-| 1 | **SessionStart hook** — load project context | Very High | Low | Claude Code |
-| 2 | **PostToolUse hook** — auto-save artifacts | Very High | Medium | Claude Code |
+| 1 | **SessionStart hook** . load project context | Very High | Low | Claude Code |
+| 2 | **PostToolUse hook** . auto-save artifacts | Very High | Medium | Claude Code |
 | 3 | **Output style: pm-executive** | High | Low | Claude Code |
 | 4 | **Transcript processing agent** | High | Medium | Claude Code |
 | 5 | **PRD review agent** | Medium | Medium | Claude Code |
@@ -365,7 +365,7 @@ The highest-value investment is **Approach B** — maintaining the cross-platfor
 
 ### The "Never Do" List
 
-- Don't build a full PM delivery framework — let the model emerge from usage
+- Don't build a full PM delivery framework . let the model emerge from usage
 - Don't sacrifice cross-platform portability for Claude Code-specific features
 - Don't add hooks that silently modify user files without confirmation
 - Don't build agent teams until the single-agent workflow is solid
@@ -468,7 +468,7 @@ A `/pm-next` command that analyzes the active project's state and recommends the
 
 3. **Localization**: PM artifacts may need to support non-English languages. Skills should be language-aware.
 
-4. **Integration with PM tools**: The real competition isn't other AI tools — it's Jira, Linear, Notion, Confluence. The highest-value integration may be exporting pm-skills artifacts to these tools.
+4. **Integration with PM tools**: The real competition isn't other AI tools . it's Jira, Linear, Notion, Confluence. The highest-value integration may be exporting pm-skills artifacts to these tools.
 
 ---
 
@@ -478,46 +478,46 @@ A `/pm-next` command that analyzes the active project's state and recommends the
 
 | Feature | Cool Factor | Actual PM Value | Verdict |
 |---------|------------|----------------|---------|
-| Agent teams for parallel discovery | High | Medium | Defer — fancy but rarely needed |
-| Auto-save hooks | Low | Very High | Build now — solves daily pain |
-| Output styles | Medium | High | Build soon — polishes deliverables |
-| Transcript processing agent | High | High | Build — solves real weekly pain |
-| MCP dashboard | High | Medium | Defer — nice-to-have |
-| PM Copilot mode | Very High | Medium | Defer — complex, unproven |
-| "/pm-next" command | Medium | High | Build — reduces decision fatigue |
-| Cross-project search | Low | High | Build eventually — needed at scale |
+| Agent teams for parallel discovery | High | Medium | Defer . fancy but rarely needed |
+| Auto-save hooks | Low | Very High | Build now . solves daily pain |
+| Output styles | Medium | High | Build soon . polishes deliverables |
+| Transcript processing agent | High | High | Build . solves real weekly pain |
+| MCP dashboard | High | Medium | Defer . nice-to-have |
+| PM Copilot mode | Very High | Medium | Defer . complex, unproven |
+| "/pm-next" command | Medium | High | Build . reduces decision fatigue |
+| Cross-project search | Low | High | Build eventually . needed at scale |
 
 ---
 
 ## 15. Next Steps
 
-1. **Implement Phase 1 hooks** — SessionStart (load project) + PostToolUse (auto-save)
-2. **Create one output style** — `pm-executive` as proof of concept
-3. **Build one sub-agent** — transcript processing as the highest-value agent
-4. **Update plugin.json** — register new components
-5. **Document platform compatibility** — which features work where
-6. **Test on Codex and Gemini CLI** — validate cross-platform skill loading
+1. **Implement Phase 1 hooks** . SessionStart (load project) + PostToolUse (auto-save)
+2. **Create one output style** . `pm-executive` as proof of concept
+3. **Build one sub-agent** . transcript processing as the highest-value agent
+4. **Update plugin.json** . register new components
+5. **Document platform compatibility** . which features work where
+6. **Test on Codex and Gemini CLI** . validate cross-platform skill loading
 
 ---
 
 ## 16. Sources
 
 ### Internal Sources
-- `.claude-plugin/plugin.json` — Current plugin manifest
-- `_NOTES/efforts/active/M-11-claude-plugin-packaging/` — Plugin packaging effort
-- `_NOTES/efforts/mcp-as-built-architecture.md` — MCP architecture reference
-- `_bundles/feature-kickoff.md` — Workflow chain example
-- `docs/internal/Releases_2.3-2.4_detailed-breakdown.md` — Release engineering patterns
+- `.claude-plugin/plugin.json` . Current plugin manifest
+- `_NOTES/efforts/active/M-11-claude-plugin-packaging/` . Plugin packaging effort
+- `_NOTES/efforts/mcp-as-built-architecture.md` . MCP architecture reference
+- `_bundles/feature-kickoff.md` . Workflow chain example
+- `docs/internal/Releases_2.3-2.4_detailed-breakdown.md` . Release engineering patterns
 
 ### External Sources
-- [Claude Code Plugins Documentation](https://code.claude.com/docs/en/plugins) — Component types and plugin system
-- [Claude Code Extensions Explained](https://muneebsa.medium.com/claude-code-extensions-explained-skills-mcp-hooks-subagents-agent-teams-plugins-9294907e84ff) — Skills, MCP, Hooks, Subagents, Agent Teams
-- [A Mental Model for Claude Code](https://levelup.gitconnected.com/a-mental-model-for-claude-code-skills-subagents-and-plugins-3dea9924bf05) — Skills, Subagents, and Plugins
-- [GSD Framework](https://github.com/gsd-build/get-shit-done) — Spec-driven development reference
-- [agentskills.io Specification](https://agentskills.io/specification) — Open standard
-- [Agent Skills in VS Code](https://code.visualstudio.com/docs/copilot/customization/agent-skills) — Copilot skills
-- [Gemini CLI Agent Skills](https://geminicli.com/docs/cli/skills/) — Gemini integration
-- [Cursor Agent Skills](https://cursor.com/docs/context/skills) — Cursor integration
-- [OpenAI Codex CLI](https://developers.openai.com/codex/cli) — Codex capabilities
-- [GitHub Copilot Agent Skills](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills) — Copilot agent skills
-- [Anthropic Agent Skills Open Standard](https://venturebeat.com/technology/anthropic-launches-enterprise-agent-skills-and-opens-the-standard) — Enterprise context
+- [Claude Code Plugins Documentation](https://code.claude.com/docs/en/plugins) . Component types and plugin system
+- [Claude Code Extensions Explained](https://muneebsa.medium.com/claude-code-extensions-explained-skills-mcp-hooks-subagents-agent-teams-plugins-9294907e84ff) . Skills, MCP, Hooks, Subagents, Agent Teams
+- [A Mental Model for Claude Code](https://levelup.gitconnected.com/a-mental-model-for-claude-code-skills-subagents-and-plugins-3dea9924bf05) . Skills, Subagents, and Plugins
+- [GSD Framework](https://github.com/gsd-build/get-shit-done) . Spec-driven development reference
+- [agentskills.io Specification](https://agentskills.io/specification) . Open standard
+- [Agent Skills in VS Code](https://code.visualstudio.com/docs/copilot/customization/agent-skills) . Copilot skills
+- [Gemini CLI Agent Skills](https://geminicli.com/docs/cli/skills/) . Gemini integration
+- [Cursor Agent Skills](https://cursor.com/docs/context/skills) . Cursor integration
+- [OpenAI Codex CLI](https://developers.openai.com/codex/cli) . Codex capabilities
+- [GitHub Copilot Agent Skills](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills) . Copilot agent skills
+- [Anthropic Agent Skills Open Standard](https://venturebeat.com/technology/anthropic-launches-enterprise-agent-skills-and-opens-the-standard) . Enterprise context

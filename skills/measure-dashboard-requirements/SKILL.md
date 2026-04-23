@@ -43,7 +43,7 @@ When asked to specify dashboard requirements, follow these steps:
    Specify what drill-downs users need: date ranges, user segments, product areas, geographic regions. Anticipate the "slice and dice" questions users will ask.
 
 6. **Document Data Sources**
-   Identify where data comes from and any known data quality issues. Note latency requirements—does the dashboard need real-time data or is daily refresh sufficient?
+   Identify where data comes from and any known data quality issues. Note latency requirements.does the dashboard need real-time data or is daily refresh sufficient?
 
 7. **Set Permissions and Access**
    Determine who can view what. Some metrics may need restricted access. Consider both security requirements and organizational politics.

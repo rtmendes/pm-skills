@@ -1,8 +1,8 @@
-# Topic 1 — Exploration: Multi-Project Structure for PM-Skills
+# Topic 1 . Exploration: Multi-Project Structure for PM-Skills
 
 > **Date**: 2026-03-21
 > **Author**: Claude Opus 4.6
-> **Status**: Draft — exploration document
+> **Status**: Draft . exploration document
 > **Related efforts**: M-01 (common workspace), M-02 (update-doc), M-03 (link-docs), M-04 (project-context)
 
 ---
@@ -30,11 +30,11 @@
 
 ## 1. Summary
 
-Product Managers rarely work on a single project. They juggle 3-8 active initiatives at varying phases — one in discovery, two in development, one launching, two iterating. Each initiative produces 5-15 PM artifacts (problem statements, PRDs, user stories, retrospectives) that need to stay connected, versioned, and accessible.
+Product Managers rarely work on a single project. They juggle 3-8 active initiatives at varying phases . one in discovery, two in development, one launching, two iterating. Each initiative produces 5-15 PM artifacts (problem statements, PRDs, user stories, retrospectives) that need to stay connected, versioned, and accessible.
 
-**pm-skills currently solves the artifact-creation problem beautifully — but it doesn't solve the artifact-organization problem at all.** When a PM runs `/prd` today, the output floats in conversation history or gets manually saved. There's no concept of "this PRD belongs to Project X, which also has a problem statement, two user story sets, and a launch checklist." There's no way to say "update the PRD for Project X with insights from yesterday's interview synthesis."
+**pm-skills currently solves the artifact-creation problem beautifully . but it doesn't solve the artifact-organization problem at all.** When a PM runs `/prd` today, the output floats in conversation history or gets manually saved. There's no concept of "this PRD belongs to Project X, which also has a problem statement, two user story sets, and a launch checklist." There's no way to say "update the PRD for Project X with insights from yesterday's interview synthesis."
 
-This document explores how to architect a multi-project system that turns pm-skills from an artifact *factory* into an artifact *workspace* — where documents live together, reference each other, evolve together, and can be processed by AI agents that understand their relationships.
+This document explores how to architect a multi-project system that turns pm-skills from an artifact *factory* into an artifact *workspace* . where documents live together, reference each other, evolve together, and can be processed by AI agents that understand their relationships.
 
 ---
 
@@ -42,7 +42,7 @@ This document explores how to architect a multi-project system that turns pm-ski
 
 ### 2.1 The Artifact Sprawl Problem
 
-A PM using pm-skills today produces artifacts in isolation. Each `/prd`, `/hypothesis`, or `/retrospective` invocation is stateless — the skill doesn't know:
+A PM using pm-skills today produces artifacts in isolation. Each `/prd`, `/hypothesis`, or `/retrospective` invocation is stateless . the skill doesn't know:
 
 - What project the artifact belongs to
 - What other artifacts exist for this project
@@ -58,11 +58,11 @@ Each artifact is self-contained but disconnected. A PRD written with `/prd` does
 There's no place to see "all artifacts for Project X." No way to ask "what's the current state of Project X?" No way to say "I'm working on Project X" and have all skills understand that context.
 
 **Problem C: Temporal Disconnection**
-Projects evolve. A discovery interview changes the problem statement, which should ripple to the hypothesis, which should inform the PRD update. Today, these updates require manual re-invocation of every downstream skill — if the PM even remembers which documents exist.
+Projects evolve. A discovery interview changes the problem statement, which should ripple to the hypothesis, which should inform the PRD update. Today, these updates require manual re-invocation of every downstream skill . if the PM even remembers which documents exist.
 
 ### 2.2 The Transcript Processing Gap
 
-PMs accumulate raw inputs — meeting transcripts, interview recordings, Slack threads, stakeholder emails. These contain insights that should update existing project documents. But today there's no mechanism to:
+PMs accumulate raw inputs . meeting transcripts, interview recordings, Slack threads, stakeholder emails. These contain insights that should update existing project documents. But today there's no mechanism to:
 
 1. Ingest a transcript into a project context
 2. Extract actionable insights relevant to specific documents
@@ -314,10 +314,10 @@ Adapt GSD's `.planning/` pattern but with PM vocabulary. One project per working
 
 **Why:** The 80/20 analysis reveals that the highest-value capabilities are:
 
-1. **Project context switching** (solves P3, P6) — worth 40% of total value
-2. **Artifact persistence with project grouping** (solves P1, P2) — worth 30% of total value
-3. **Document update capability** (solves P4, P7) — worth 20% of total value
-4. **Transcript processing** (solves P5) — worth 10% of total value
+1. **Project context switching** (solves P3, P6) . worth 40% of total value
+2. **Artifact persistence with project grouping** (solves P1, P2) . worth 30% of total value
+3. **Document update capability** (solves P4, P7) . worth 20% of total value
+4. **Transcript processing** (solves P5) . worth 10% of total value
 
 Approach B delivers items 1-3 as plugin commands integrated into the existing pm-skills install path. Users don't need a separate repo. The workspace directory is configurable (default: `~/pm-projects/` or a path in the current working directory).
 
@@ -325,9 +325,9 @@ Approach B delivers items 1-3 as plugin commands integrated into the existing pm
 
 The smallest thing that delivers real value:
 
-1. **`/project new <name>`** — Creates project directory with `PROJECT.md`
-2. **`/project switch <name>`** — Sets active project context (stored in `.pm-config.yaml`)
-3. **`/project status`** — Shows all artifacts, their dates, and phase status
+1. **`/project new <name>`** . Creates project directory with `PROJECT.md`
+2. **`/project switch <name>`** . Sets active project context (stored in `.pm-config.yaml`)
+3. **`/project status`** . Shows all artifacts, their dates, and phase status
 4. **A hook** that auto-saves skill outputs to the active project's `artifacts/` directory
 
 **Everything else (linking, update-doc, transcript processing, graph views) is Phase 2+.**
@@ -346,7 +346,7 @@ The plugin approach (B) keeps everything in one install: `plugin install pm-skil
 
 GSD's model is excellent for software projects (code lives in one repo, one project at a time). PM work is fundamentally multi-project. Adopting GSD's single-project assumption would force PMs to create separate repos/directories for each initiative, which is the opposite of "see all my work in one place."
 
-That said, **GSD's state management patterns should be borrowed heavily** — the `.planning/` structure, STATE.md, CONTEXT.md, and milestone archiving are excellent patterns that translate directly to PM project management.
+That said, **GSD's state management patterns should be borrowed heavily** . the `.planning/` structure, STATE.md, CONTEXT.md, and milestone archiving are excellent patterns that translate directly to PM project management.
 
 ### The Separate Repo Escape Hatch
 
@@ -403,7 +403,7 @@ When a PM runs `/prd` while Project X is active, automatically load:
 - The most recent `problem-statement.md` and `hypothesis.md` (upstream artifacts)
 - Any recent `inputs/` files marked as unprocessed
 
-This eliminates P3 ("I have to re-explain context") without token overhead — load only what's relevant to the current skill.
+This eliminates P3 ("I have to re-explain context") without token overhead . load only what's relevant to the current skill.
 
 ### 9.3 Transcript Processing Pipeline
 
@@ -450,19 +450,19 @@ q2-pricing-experiment      Measure     4/4        1d ago        🟢 Current
 
 ## 10. Assumptions
 
-1. **PMs use Claude Code as their primary AI interface** — the workspace is optimized for Claude Code but should degrade gracefully in other environments (plain markdown files are universally readable).
+1. **PMs use Claude Code as their primary AI interface** . the workspace is optimized for Claude Code but should degrade gracefully in other environments (plain markdown files are universally readable).
 
-2. **Projects are primarily single-user** — while team collaboration is desirable, the v1 design should work well for one PM managing multiple projects. Team features are Phase 2.
+2. **Projects are primarily single-user** . while team collaboration is desirable, the v1 design should work well for one PM managing multiple projects. Team features are Phase 2.
 
-3. **Artifacts are markdown** — pm-skills already produce markdown output. The workspace stores and manages markdown files. Non-markdown artifacts (diagrams, spreadsheets) are referenced but not managed.
+3. **Artifacts are markdown** . pm-skills already produce markdown output. The workspace stores and manages markdown files. Non-markdown artifacts (diagrams, spreadsheets) are referenced but not managed.
 
-4. **Git is optional but recommended** — the workspace directory can be a Git repo for history, but the system should work without Git.
+4. **Git is optional but recommended** . the workspace directory can be a Git repo for history, but the system should work without Git.
 
-5. **The pm-skills plugin install path is the primary distribution** — users who have pm-skills installed get project management "for free" as part of the plugin.
+5. **The pm-skills plugin install path is the primary distribution** . users who have pm-skills installed get project management "for free" as part of the plugin.
 
-6. **Token economy matters** — loading project context should add < 2,000 tokens to each skill invocation. This means PROJECT.md must be concise and context loading must be selective.
+6. **Token economy matters** . loading project context should add < 2,000 tokens to each skill invocation. This means PROJECT.md must be concise and context loading must be selective.
 
-7. **The workspace directory is local to the user's machine** — not cloud-hosted, not in a database. This matches the file-based nature of Claude Code and the agentskills.io philosophy.
+7. **The workspace directory is local to the user's machine** . not cloud-hosted, not in a database. This matches the file-based nature of Claude Code and the agentskills.io philosophy.
 
 ---
 
@@ -524,13 +524,13 @@ Loading project context into every skill invocation eats tokens. A rich PROJECT.
 
 If every skill needs to understand project context, that's 25 skills to modify. This is a significant maintenance burden.
 
-**Mitigation**: Use a shared preamble or hook that injects project context *before* the skill runs, rather than modifying each skill's SKILL.md. The skill itself doesn't need to know about projects — it just receives additional context.
+**Mitigation**: Use a shared preamble or hook that injects project context *before* the skill runs, rather than modifying each skill's SKILL.md. The skill itself doesn't need to know about projects . it just receives additional context.
 
 ### 12.4 File Naming Collisions
 
 If a PM runs `/prd` twice for the same project, what happens to `prd.md`? Overwrite? Auto-version (`prd_v1.md`, `prd_v2.md`)? Timestamp (`prd_2026-03-21.md`)?
 
-**Mitigation**: Use versioned naming (`prd_v1.md`) with automatic increment. The old version is preserved, not overwritten. This matches how PMs actually work — PRDs evolve through numbered drafts.
+**Mitigation**: Use versioned naming (`prd_v1.md`) with automatic increment. The old version is preserved, not overwritten. This matches how PMs actually work . PRDs evolve through numbered drafts.
 
 ### 12.5 Cross-Platform Fragility
 
@@ -563,7 +563,7 @@ PMs don't live in Claude Code alone. They use Jira/Linear for tickets, Confluenc
 - Export artifacts to external tools (e.g., push user stories to Linear)
 - Import context from external tools (e.g., pull Jira ticket details into a sprint retro)
 
-This is where MCP becomes critical — MCP servers for Linear, Notion, Slack, etc. can bridge the workspace to the PM's actual tool ecosystem.
+This is where MCP becomes critical . MCP servers for Linear, Notion, Slack, etc. can bridge the workspace to the PM's actual tool ecosystem.
 
 ### 13.5 The "Naming" Problem
 
@@ -573,7 +573,7 @@ What should the multi-project capability be called?
 - `pm-portfolio`? (captures the multi-project nature)
 - Just `projects/`? (simple but ambiguous)
 
-The name matters because it becomes a mental model. GSD chose `.planning/` — a directory that clearly signals "this is where plans live."
+The name matters because it becomes a mental model. GSD chose `.planning/` . a directory that clearly signals "this is where plans live."
 
 ---
 
@@ -595,7 +595,7 @@ The name matters because it becomes a mental model. GSD chose `.planning/` — a
 
 ### 14.2 Real Value Assessment
 
-The real value isn't any single capability — it's the **compound effect** of having a project context that persists across sessions and skill invocations. Today, every Claude Code session starts from zero. With a project workspace:
+The real value isn't any single capability . it's the **compound effect** of having a project context that persists across sessions and skill invocations. Today, every Claude Code session starts from zero. With a project workspace:
 
 - Session 1: Create problem statement → saved to project
 - Session 2: "I'm working on acme-checkout" → Claude loads problem statement → create hypothesis with full context
@@ -610,21 +610,21 @@ Each session builds on the last. That's the real value: **cumulative project int
 
 ### Immediate (This Sprint)
 
-1. **Define the project directory specification** — file structure, naming conventions, PROJECT.md schema
-2. **Build `/project new` and `/project switch` commands** — minimum viable project management
-3. **Design the context injection mechanism** — how skills receive project context without modification
+1. **Define the project directory specification** . file structure, naming conventions, PROJECT.md schema
+2. **Build `/project new` and `/project switch` commands** . minimum viable project management
+3. **Design the context injection mechanism** . how skills receive project context without modification
 
 ### Near-Term (Next 2 Sprints)
 
-4. **Build `/project status`** — multi-project dashboard
-5. **Build `/update-doc`** — intelligent document revision
-6. **Add auto-save hook** — save skill outputs to active project
+4. **Build `/project status`** . multi-project dashboard
+5. **Build `/update-doc`** . intelligent document revision
+6. **Add auto-save hook** . save skill outputs to active project
 
 ### Medium-Term (Next Quarter)
 
-7. **Build `/link-docs`** — document relationship management
-8. **Build `/process-transcript`** — transcript ingestion and insight distribution
-9. **Add MCP project endpoints** — expose project data via pm-skills-mcp
+7. **Build `/link-docs`** . document relationship management
+8. **Build `/process-transcript`** . transcript ingestion and insight distribution
+9. **Add MCP project endpoints** . expose project data via pm-skills-mcp
 
 ### Decision Point
 
@@ -639,19 +639,19 @@ Before implementation, decide:
 ## 16. Sources
 
 ### Internal Sources
-- `_NOTES/efforts/active/M-01-common-workspace/README.md` — Effort M-01 metadata
-- `_NOTES/efforts/active/M-02-update-doc-command/README.md` — Effort M-02 metadata
-- `_NOTES/efforts/active/M-03-link-docs-command/README.md` — Effort M-03 metadata
-- `_NOTES/efforts/active/M-04-project-context-command/README.md` — Effort M-04 metadata
-- `_NOTES/efforts/INDEX_EFFORTS.md` — Effort tracking index
-- `_NOTES/efforts/mcp-as-built-architecture.md` — MCP architecture reference
-- `_bundles/feature-kickoff.md` — Example workflow bundle
-- `docs/internal/Releases_2.3-2.4_detailed-breakdown.md` — Release engineering patterns
+- `_NOTES/efforts/active/M-01-common-workspace/README.md` . Effort M-01 metadata
+- `_NOTES/efforts/active/M-02-update-doc-command/README.md` . Effort M-02 metadata
+- `_NOTES/efforts/active/M-03-link-docs-command/README.md` . Effort M-03 metadata
+- `_NOTES/efforts/active/M-04-project-context-command/README.md` . Effort M-04 metadata
+- `_NOTES/efforts/INDEX_EFFORTS.md` . Effort tracking index
+- `_NOTES/efforts/mcp-as-built-architecture.md` . MCP architecture reference
+- `_bundles/feature-kickoff.md` . Example workflow bundle
+- `docs/internal/Releases_2.3-2.4_detailed-breakdown.md` . Release engineering patterns
 
 ### External Sources
-- [GSD Framework (get-shit-done)](https://github.com/gsd-build/get-shit-done) — Spec-driven development system
-- [GSD Framework Article](https://pasqualepillitteri.it/en/news/169/gsd-framework-claude-code-ai-development) — GSD architecture overview
-- [GSD Deep Analysis](https://deepwiki.com/gsd-build/get-shit-done) — Deep technical analysis
-- [agentskills.io Specification](https://agentskills.io/specification) — Open standard for agent skills
-- [Claude Code Plugins Documentation](https://code.claude.com/docs/en/plugins) — Plugin system reference
-- [Beating Context Rot with GSD (The New Stack)](https://thenewstack.io/beating-the-rot-and-getting-stuff-done/) — Context rot problem analysis
+- [GSD Framework (get-shit-done)](https://github.com/gsd-build/get-shit-done) . Spec-driven development system
+- [GSD Framework Article](https://pasqualepillitteri.it/en/news/169/gsd-framework-claude-code-ai-development) . GSD architecture overview
+- [GSD Deep Analysis](https://deepwiki.com/gsd-build/get-shit-done) . Deep technical analysis
+- [agentskills.io Specification](https://agentskills.io/specification) . Open standard for agent skills
+- [Claude Code Plugins Documentation](https://code.claude.com/docs/en/plugins) . Plugin system reference
+- [Beating Context Rot with GSD (The New Stack)](https://thenewstack.io/beating-the-rot-and-getting-stuff-done/) . Context rot problem analysis

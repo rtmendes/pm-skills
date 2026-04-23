@@ -3,8 +3,8 @@
 **Purpose**: Comprehensive narrative record of every review (Codex adversarial + self) performed on v2.11.0 before tag, every finding (CRITICAL through NIT), and every resolution. Serves three downstream functions:
 
 1. **Audit trail** for anyone questioning why v2.11.0 shipped the way it did
-2. **Pattern library** for future releases — what classes of problem surface at what stages
-3. **Process validation** for the pre-release checklist — does it work in practice?
+2. **Pattern library** for future releases. what classes of problem surface at what stages
+3. **Process validation** for the pre-release checklist. does it work in practice?
 
 This document is intentionally long. Its job is to preserve context, not to be skimmed. Readers looking for a summary should read `plan_v2.11_codex-review.md` (structured tracker); readers looking for the methodology should start here.
 
@@ -49,11 +49,11 @@ timeline
 - Design decisions: go-mode, anti-meeting check, optional frontmatter, filename-based chaining
 - v2.11.0 release plan
 
-### Findings — 3 CRITICAL
+### Findings. 3 CRITICAL
 
 #### R1-C1: `artifact_type` enum self-contradiction in contract
 
-**What**: Contract listed `artifact_type` values as bare names (`agenda`, `brief`, `recap`, `synthesis`, `stakeholder-update`) in the Shared Taxonomies section. Contract's own example YAML used `artifact_type: meeting-recap` — which is NOT in its own listed enum. All 5 template implementations used prefixed names (`meeting-agenda`, `meeting-brief`, etc.). Validator's `ALLOWED_ARTIFACT_TYPE` mapping expected prefixed values.
+**What**: Contract listed `artifact_type` values as bare names (`agenda`, `brief`, `recap`, `synthesis`, `stakeholder-update`) in the Shared Taxonomies section. Contract's own example YAML used `artifact_type: meeting-recap`. which is NOT in its own listed enum. All 5 template implementations used prefixed names (`meeting-agenda`, `meeting-brief`, etc.). Validator's `ALLOWED_ARTIFACT_TYPE` mapping expected prefixed values.
 
 **Why load-bearing**: Downstream consumers following the contract's letter (bare names) would reject artifacts that CI blesses. Self-inconsistent spec. Documentation authority undermined.
 
@@ -75,7 +75,7 @@ timeline
 
 **Resolution** (Round 1 pass): Extended filename pattern with `-{channel}-{audience}` suffix for stakeholder-update. Updated contract, template, 2 existing samples, validator regex (v1.0.0 single-file regex expanded to allow optional variant suffix).
 
-### Findings — 7 IMPORTANT (Round 1)
+### Findings. 7 IMPORTANT (Round 1)
 
 Condensed:
 
@@ -85,10 +85,10 @@ Condensed:
 - **R1-I4**: Synthesize couldn't reproduce results across mixed explicit/inferred/null meeting_type inputs → **Resolved**: `meeting_type_source` field added to recap frontmatter; synthesize SKILL.md documents mixed-source handling.
 - **R1-I5**: Recap `[owner: unassigned]` for 60% ownerless actions created operationally broken recaps → **Resolved**: 30%-threshold ownership reconciliation section; `unassigned_action_ratio` frontmatter field.
 - **R1-I6**: Synthesize contradiction flags tagged resolved decision-evolution as contradictions → **Resolved**: split into "Decision evolution" (resolved, no `⚠`) and "Unresolved contradictions" (reserve `⚠`).
-- **R1-I7**: Stakeholder-update "entire output is shareable" claim was misleading — template included audit sections → **Resolved**: explicit `## Shareable update` section boundary; validator checks for it.
+- **R1-I7**: Stakeholder-update "entire output is shareable" claim was misleading. template included audit sections → **Resolved**: explicit `## Shareable update` section boundary; validator checks for it.
 - **R1-I8** (eighth IMPORTANT): Validator schema-shape-only; misses per-skill field requirements → **Deferred** to F-31 scope expansion in v2.12.0 (requires YAML parsing; scope-separate).
 
-### Findings — 3 MINOR + 1 NIT (Round 1)
+### Findings. 3 MINOR + 1 NIT (Round 1)
 
 - **R1-M1**: Timezone abbreviations DST-ambiguous → Resolved: added DST note + IANA timezone complement option.
 - **R1-M2**: No slug normalization rules → Resolved: ASCII rules, 60-char max, collision suffix convention added.
@@ -105,16 +105,16 @@ Condensed:
 
 **Method**: Filesystem scan, cross-reference check, mental walk through documentation surface. No tooling beyond `bash`/`grep`/`find`.
 
-### Findings — 1 IMPORTANT (self-surfaced)
+### Findings. 1 IMPORTANT (self-surfaced)
 
-- **SR-1**: README_SAMPLES.md count drift — claimed 109 samples, filesystem had 120. Gap traced to incorrect baseline assumption (I had assumed 94 pre-meeting-family samples; actual pre-meeting was 105 due to 3 `discover-*` skills with 6 samples each and `deliver-prd` with 5 samples).
+- **SR-1**: README_SAMPLES.md count drift. claimed 109 samples, filesystem had 120. Gap traced to incorrect baseline assumption (I had assumed 94 pre-meeting-family samples; actual pre-meeting was 105 due to 3 `discover-*` skills with 6 samples each and `deliver-prd` with 5 samples).
 
 ### Gap in self-review
 
 Comparison to Round 2 Codex (below): Codex found 11 findings including 6 IMPORTANTs. My self-review found 1. The gap is instructive:
 
 - **Self-review biases**: I was looking for things missing (broken cross-refs, stale counts) from my mental model of "what I'd built." I missed things internally self-contradictory within a single document because my mental model said "I already fixed the artifact_type enum."
-- **Codex strength**: Codex read each file fresh without my mental model. It saw that the contract's duration example said 30 min while the type-specific table said 45 min — same document, different values. I couldn't see that because I "knew" I'd fixed the 30-min issue.
+- **Codex strength**: Codex read each file fresh without my mental model. It saw that the contract's duration example said 30 min while the type-specific table said 45 min. same document, different values. I couldn't see that because I "knew" I'd fixed the 30-min issue.
 
 **Methodology conclusion**: self-review catches missing artifacts; adversarial agent-review catches internal inconsistency. Both are needed. Neither substitutes for the other.
 
@@ -132,11 +132,11 @@ Comparison to Round 2 Codex (below): Codex found 11 findings including 6 IMPORTA
 - Docs: `using-meeting-skills.md`, `plan_v2.11_pre-release-checklist.md`, `plan_v2.12.0.md`
 - One specific sample for deep-inspection: Storevine pricing decision recap
 
-### Findings — 0 CRITICAL, 6 IMPORTANT
+### Findings. 0 CRITICAL, 6 IMPORTANT
 
 #### R2-I1: Contract duration example contradicts type-specific table
 
-**What**: Go-mode default-flow example: "Duration: `30 min` (default — not specified)" for `decision-making` meeting type. v1.1.0 type-specific duration table says `decision-making` defaults to `45 min`.
+**What**: Go-mode default-flow example: "Duration: `30 min` (default. not specified)" for `decision-making` meeting type. v1.1.0 type-specific duration table says `decision-making` defaults to `45 min`.
 
 **Why load-bearing**: Implementers see two canonical-looking examples that contradict the new table. The new duration behavior can silently regress while validators stay green.
 
@@ -145,8 +145,8 @@ Comparison to Round 2 Codex (below): Codex found 11 findings including 6 IMPORTA
 #### R2-I2: Contract has stale `--type=decision` and old bare-enum comment
 
 **What**: Two stale references inside the v1.1.0 contract's own examples:
-1. Fully-specified example: `--type=decision` — but enum value is `decision-making`
-2. `artifact_type` inline comment: `# agenda | brief | recap | synthesis | stakeholder-update` — old bare enum
+1. Fully-specified example: `--type=decision`. but enum value is `decision-making`
+2. `artifact_type` inline comment: `# agenda | brief | recap | synthesis | stakeholder-update`. old bare enum
 
 **Why load-bearing**: Stale enum references undermine the v1.1.0 enum correction (R1-C1). Would fail the checklist's own example-YAML self-consistency test if strictly applied.
 
@@ -154,7 +154,7 @@ Comparison to Round 2 Codex (below): Codex found 11 findings including 6 IMPORTA
 
 #### R2-I3: Validator-what-it-checks still claims "whole output is shareable"
 
-**What**: Contract's Enforcement section item 4 said stakeholder-update is exempt from Shareable summary "where the whole output is shareable content" — this was the v1.0.0 claim replaced in R1-I7.
+**What**: Contract's Enforcement section item 4 said stakeholder-update is exempt from Shareable summary "where the whole output is shareable content". this was the v1.0.0 claim replaced in R1-I7.
 
 **Why load-bearing**: Contract contained both the corrected v1.1.0 rule (Shareable update section) AND the old unsafe rule in different places.
 
@@ -182,14 +182,14 @@ Comparison to Round 2 Codex (below): Codex found 11 findings including 6 IMPORTA
 
 **Why load-bearing**: Physically impossible artifact. Undermines sample credibility.
 
-**Resolution** (Round 2 pass): Corrected timestamp to `2026-04-24T19:30:00Z` (post-meeting end). Audited other 14 samples: found 2 more impossible timestamps (brainshelf scope-cut recap, workbench customer-feedback recap) — both corrected.
+**Resolution** (Round 2 pass): Corrected timestamp to `2026-04-24T19:30:00Z` (post-meeting end). Audited other 14 samples: found 2 more impossible timestamps (brainshelf scope-cut recap, workbench customer-feedback recap). both corrected.
 
-### Findings — 3 MINOR, 2 NIT (Round 2)
+### Findings. 3 MINOR, 2 NIT (Round 2)
 
 - **R2-M1**: All 15 samples lacked top-level sample-library frontmatter per SAMPLE_CREATION.md §5 (`artifact`, `version`, `repo_version`, `skill_version`, `created`, `status`, `thread`, `context`) → **Resolved**: all 15 now have 8-field frontmatter.
 - **R2-M2**: Recap sample shareable summary exceeds 3-6 line bound with mini-headings ("Key decisions:", "Top actions:") → **Deferred** in Round 2, **resolved** in this final pass (see MINOR R2-8 section below).
-- **R2-M3**: Fictional-marker discipline inconsistent — $49/mo, $9/mo, $16/mo, $8/mo unmarked → **Resolved**: all invented prices tagged; grep audit clean.
-- **R2-N1**: Guide mermaid go-mode diagram routed `--go` as user-response option after inference summary (wrong — `--go` should bypass the summary) → **Resolved**: diagram restructured with `--go` as invocation-level branch.
+- **R2-M3**: Fictional-marker discipline inconsistent. $49/mo, $9/mo, $16/mo, $8/mo unmarked → **Resolved**: all invented prices tagged; grep audit clean.
+- **R2-N1**: Guide mermaid go-mode diagram routed `--go` as user-response option after inference summary (wrong. `--go` should bypass the summary) → **Resolved**: diagram restructured with `--go` as invocation-level branch.
 - **R2-N2**: End-marker convention documented in guide/samples but not in contract → **Resolved**: contract adds end-marker convention to Shareable update section.
 
 **Round 2 totals**: 11 findings. 10 resolved Round 2 pass. 1 resolved in this final pass (R2-M2 shareable summary length refinement).
@@ -210,7 +210,7 @@ Samples drifted from standards in 4 ways: filename convention violations (R1-C2)
 
 ### Class 3: Passive-voice process bugs (1 finding)
 
-Pre-release checklist had a check for sample count that didn't specify HOW to check — so the check didn't execute. **Pattern**: checklist items must be active-voice commands with outputs, not passive assertions. Mitigation: adversarial-review the checklist itself as part of every release.
+Pre-release checklist had a check for sample count that didn't specify HOW to check. so the check didn't execute. **Pattern**: checklist items must be active-voice commands with outputs, not passive assertions. Mitigation: adversarial-review the checklist itself as part of every release.
 
 ### Class 4: Visual/navigational inconsistency (2 findings)
 
@@ -228,7 +228,7 @@ The v2.11.0 pre-release checklist (`plan_v2.11_pre-release-checklist.md`) was us
 
 | Checklist phase | Caught issues? | Gaps? |
 |-----------------|---------------|-------|
-| Phase 1: Mechanical CI | N/A — all green before review started | None |
+| Phase 1: Mechanical CI | N/A. all green before review started | None |
 | Phase 2a: Contract fidelity | **Caught all 3 contract self-contradictions** (R2-I1, I2, I3) | Required adversarial reading; mechanical check insufficient |
 | Phase 2b: Skill-file fidelity | **All skills pass mechanical checks** | Deeper "does SKILL.md reference the contract accurately" check relies on adversarial review |
 | Phase 2c: Sample fidelity | **Missed R2-I4 (count drift)** | Passive "count matches" check; now fixed with concrete command |
@@ -238,7 +238,7 @@ The v2.11.0 pre-release checklist (`plan_v2.11_pre-release-checklist.md`) was us
 | Phase 5: Tag-time chores | Pending (this session) | None flagged |
 | Phase 6: Post-release signals | N/A (not yet released) | N/A |
 
-**Verdict**: Checklist works well for mechanical and structural checks. Adversarial review is the proven complement for cross-reference consistency and semantic correctness. **Round 2 validated that running Codex review AFTER a resolution pass surfaces new findings that the resolution pass itself introduced** — this is the rationale for the adversarial-review-loop recommendation added to the checklist.
+**Verdict**: Checklist works well for mechanical and structural checks. Adversarial review is the proven complement for cross-reference consistency and semantic correctness. **Round 2 validated that running Codex review AFTER a resolution pass surfaces new findings that the resolution pass itself introduced**. this is the rationale for the adversarial-review-loop recommendation added to the checklist.
 
 ---
 
@@ -274,10 +274,10 @@ graph TD
 Total across all reviews: **27 findings** (15 Round 1 + 1 self-review + 11 Round 2).
 
 - **Resolved in Round 1 pass** (2026-04-17): 14 findings (3 CRITICAL + 7 IMPORTANT + 3 MINOR + 1 NIT)
-- **Deferred from Round 1**: 1 finding (R1-I8 — validator per-skill field enforcement, now scoped into F-31 for v2.12.0)
+- **Deferred from Round 1**: 1 finding (R1-I8. validator per-skill field enforcement, now scoped into F-31 for v2.12.0)
 - **Resolved in Round 2 pass** (2026-04-18): 10 findings (6 IMPORTANT + 2 MINOR + 2 NIT)
-- **Resolved in final pass** (2026-04-18 later): 1 finding (R2-M2 — recap shareable summary length refinement)
-- **Resolved via self-review** (merged into Round 2): 1 finding (SR-1 — same as R2-I4)
+- **Resolved in final pass** (2026-04-18 later): 1 finding (R2-M2. recap shareable summary length refinement)
+- **Resolved via self-review** (merged into Round 2): 1 finding (SR-1. same as R2-I4)
 
 **Zero CRITICAL findings remain open. Zero IMPORTANT findings remain open. Zero MINOR findings remain open from v2.11.0 review passes.**
 
@@ -301,24 +301,24 @@ One NIT-class stylistic item that could be polished further (recap sample summar
 - 3 recap timestamps corrected (Round 2)
 - 15 samples gained top-level frontmatter (Round 2)
 - Fictional markers normalized (Round 2)
-- 3 recap samples: shareable summary tightened (final pass — this document's companion fixes)
+- 3 recap samples: shareable summary tightened (final pass. this document's companion fixes)
 
 **Template** (`skills/foundation-meeting-recap/references/TEMPLATE.md`):
 - Shareable summary pattern tightened to 3-5 lines without mini-headers (final pass)
 
 **Docs**:
-- `docs/guides/using-meeting-skills.md` — 3 mermaid diagrams; go-mode diagram corrected (Round 2)
-- `docs/skills/foundation/index.md` — full 7-skill listing
-- `docs/reference/skill-families/index.md` — new landing page
-- `library/skill-output-samples/README_SAMPLES.md` — count 109→120, breakdown restructure (Round 2)
-- `docs/internal/release-plans/v2.11.0/plan_v2.11_pre-release-checklist.md` — concrete command enforcement (Round 2); adversarial-review-loop added (final pass)
+- `docs/guides/using-meeting-skills.md`. 3 mermaid diagrams; go-mode diagram corrected (Round 2)
+- `docs/skills/foundation/index.md`. full 7-skill listing
+- `docs/reference/skill-families/index.md`. new landing page
+- `library/skill-output-samples/README_SAMPLES.md`. count 109→120, breakdown restructure (Round 2)
+- `docs/internal/release-plans/v2.11.0/plan_v2.11_pre-release-checklist.md`. concrete command enforcement (Round 2); adversarial-review-loop added (final pass)
 
 **Release plan + companion docs**:
-- `plan_v2.11.0.md` — kept current through all rounds
-- `plan_v2.11_codex-review.md` — tracks both rounds
-- `plan_v2.11_ci-coverage-analysis.md` — out-of-scope CI gaps documented
-- `plan_v2.11_pre-release-checklist.md` — template + process
-- `plan_v2.11_review-journal.md` — this document, final pass
+- `plan_v2.11.0.md`. kept current through all rounds
+- `plan_v2.11_codex-review.md`. tracks both rounds
+- `plan_v2.11_ci-coverage-analysis.md`. out-of-scope CI gaps documented
+- `plan_v2.11_pre-release-checklist.md`. template + process
+- `plan_v2.11_review-journal.md`. this document, final pass
 
 Total: ~30 files materially modified across the review cycle.
 
@@ -328,13 +328,13 @@ Total: ~30 files materially modified across the review cycle.
 
 For auditability. Summary findings table precedes full text.
 
-*(Abbreviated — full agent output preserved in session log; resolution tracker at plan_v2.11_codex-review.md captures the distilled findings.)*
+*(Abbreviated. full agent output preserved in session log; resolution tracker at plan_v2.11_codex-review.md captures the distilled findings.)*
 
 ---
 
 ## Appendix: Raw Codex output from Round 2
 
-*(Same treatment — resolution tracker canonical.)*
+*(Same treatment. resolution tracker canonical.)*
 
 ---
 

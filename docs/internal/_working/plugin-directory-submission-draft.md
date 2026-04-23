@@ -1,4 +1,4 @@
-# Plugin Directory Submission — Copy/Paste Draft
+# Plugin Directory Submission . Copy/Paste Draft
 
 > **Form URL:** https://claude.ai/settings/plugins/submit
 > **Alt:** https://clau.de/plugin-directory-submission
@@ -15,7 +15,7 @@
 https://github.com/product-on-purpose/pm-skills
 ```
 
-**Plugin homepage** (optional — public documentation site):
+**Plugin homepage** (optional . public documentation site):
 ```
 https://github.com/product-on-purpose/pm-skills
 ```
@@ -27,7 +27,7 @@ https://github.com/product-on-purpose/pm-skills
 ```
 pm-skills
 ```
-> Note: Check that the name isn't taken. `phuryn/pm-skills` exists (7.9K stars) but is a different project. The form checks the Claude plugin namespace, not GitHub — the name should be available.
+> Note: Check that the name isn't taken. `phuryn/pm-skills` exists (7.9K stars) but is a different project. The form checks the Claude plugin namespace, not GitHub . the name should be available.
 
 **Plugin description** *:
 ```
@@ -40,7 +40,7 @@ Also includes a foundation persona skill, an interactive skill builder (/pm-skil
 
 **Example use cases** *:
 ```
-Example 1: Product manager needs to write a PRD for a new feature. Uses /prd "Add real-time collaboration to document editor" and gets a structured PRD with goals, requirements, scope boundaries, dependencies, and success metrics — ready for engineering handoff.
+Example 1: Product manager needs to write a PRD for a new feature. Uses /prd "Add real-time collaboration to document editor" and gets a structured PRD with goals, requirements, scope boundaries, dependencies, and success metrics . ready for engineering handoff.
 
 Example 2: Team starting a new initiative needs to frame the problem clearly. Uses /problem-statement "Customer churn in enterprise segment" to produce a problem framing document with user impact, business context, and measurable success criteria that aligns stakeholders before solutioning begins.
 
@@ -102,14 +102,14 @@ The "Plugin homepage" field accepts a documentation site URL. Options:
 - Effort estimate: 2-4 hours for a polished site using existing content
 
 ### Recommendation
-**Start with Option A** (GitHub repo URL) to submit now. Create the GitHub Pages site later as a separate effort — it's not blocking for the submission. The README is already comprehensive enough for reviewers. Add the Pages URL to the submission later if needed.
+**Start with Option A** (GitHub repo URL) to submit now. Create the GitHub Pages site later as a separate effort . it's not blocking for the submission. The README is already comprehensive enough for reviewers. Add the Pages URL to the submission later if needed.
 
 ---
 
 ## After Submission
 
-1. Monitor for acceptance notification (no published SLA — could be days or weeks)
+1. Monitor for acceptance notification (no published SLA . could be days or weeks)
 2. If accepted: update README with plugin directory install badge
-3. If questions from reviewer: respond promptly — all artifacts are in place
+3. If questions from reviewer: respond promptly . all artifacts are in place
 4. If name conflict: may need to use `pm-skills-toolkit` or `pm-skills-library` as alternatives
-5. Update `docs/internal/backlog-canonical.md` — mark Effort 0 as submitted/complete
+5. Update `docs/internal/backlog-canonical.md` . mark Effort 0 as submitted/complete

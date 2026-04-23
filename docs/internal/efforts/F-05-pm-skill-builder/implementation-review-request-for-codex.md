@@ -3,13 +3,13 @@
 > **Date**: 2026-03-22
 > **Requesting agent**: Claude Opus 4.6
 > **Reviewing agent**: Codex
-> **Status**: Reviewed — see `implementation-reviewed-by-codex.md`
+> **Status**: Reviewed . see `implementation-reviewed-by-codex.md`
 
 ---
 
 ## What was implemented
 
-The `utility-pm-skill-builder` skill — an interactive utility skill that guides contributors from a PM skill idea to a complete Skill Implementation Packet. This is the first utility-classified skill in the repo, bringing the total from 26 to 27 skills.
+The `utility-pm-skill-builder` skill . an interactive utility skill that guides contributors from a PM skill idea to a complete Skill Implementation Packet. This is the first utility-classified skill in the repo, bringing the total from 26 to 27 skills.
 
 ## Commit range
 
@@ -24,9 +24,9 @@ a67f144  feat(F-05): add /pm-skill-builder command and AGENTS.md entry
 
 | File | Why |
 |------|-----|
-| `docs/internal/efforts/F-05-pm-skill-builder/design_pm-skill-builder.md` | The approved design — implementation should match |
+| `docs/internal/efforts/F-05-pm-skill-builder/design_pm-skill-builder.md` | The approved design . implementation should match |
 | `docs/internal/efforts/F-05-pm-skill-builder/implementation-plan_pm-skill-builder.md` | Task-by-task plan with adaptation table |
-| `docs/internal/efforts/F-05-pm-skill-builder/implementation-plan_reviewed-by-codex.md` | Your 8 review findings — all should be addressed |
+| `docs/internal/efforts/F-05-pm-skill-builder/implementation-plan_reviewed-by-codex.md` | Your 8 review findings . all should be addressed |
 
 ## Files to review
 
@@ -43,7 +43,7 @@ The implementation plan specified 6 adaptations from the design doc. Verify each
 | 3 | Utility Skills table: "This skill (F-05, in design)" | "pm-skill-builder \| coordination \| This skill" | `### Utility Skills (1)` |
 | 4 | `## Examples` references "Section 4 of this design document" | References `references/EXAMPLE.md` | `## Examples` |
 | 5 | Inventory note mentions "25 domain + 1 foundation + deliver-acceptance-criteria from F-06" | "current skill inventory (26 skills)" | Above `### Domain Skills` |
-| 6 | Domain Skills header says "(25)" | Should be "(25)" — 25 domain skills in the table | `### Domain Skills` |
+| 6 | Domain Skills header says "(25)" | Should be "(25)" . 25 domain skills in the table | `### Domain Skills` |
 
 **Note on #6**: The implementation plan said to change "(25)" to "(26)" but the actual table has 25 domain rows. I kept "(25)" as the correct count. The total inventory is 26 (25 domain + 1 foundation). Please verify this is right.
 
@@ -66,7 +66,7 @@ This is substantial new writing (not adapted from the design doc). Review for:
 - `/pm-skill-builder` added to Commands table (alphabetically between `/pivot-decision` and `/prd`)
 - Verify the section hierarchy makes sense (Foundation → Discover → ... → Iterate → Utility → Bundles)
 
-### Low priority (mechanical — verified by CI)
+### Low priority (mechanical . verified by CI)
 
 | File | Notes |
 |------|-------|

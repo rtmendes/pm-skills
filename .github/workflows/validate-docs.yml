@@ -75,7 +75,7 @@ jobs:
           if [[ $FAIL -eq 1 ]]; then
             echo ""
             echo "FAILED: Nav pages missing from build output."
-            echo "Check exclude_docs in mkdocs.yml — a pattern may be"
+            echo "Check exclude_docs in mkdocs.yml . a pattern may be"
             echo "matching files in subdirectories unintentionally."
             exit 1
           fi

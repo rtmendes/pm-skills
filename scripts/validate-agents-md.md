@@ -49,5 +49,5 @@ The script compares repo-relative skill paths such as `skills/deliver-prd/SKILL.
 
 ## Safety
 
-- Read-only — does not modify files
+- Read-only . does not modify files
 - Inspects only `AGENTS.md` and `skills/`

@@ -2,7 +2,7 @@
 
 > **Date**: 2026-03-22
 > **Author**: Claude Opus 4.6
-> **Status**: Design phase — awaiting approach selection
+> **Status**: Design phase . awaiting approach selection
 > **Effort brief**: `docs/internal/efforts/F-05-pm-skill-builder.md`
 > **Issue**: #113
 
@@ -32,7 +32,7 @@ This is the **Option C (Packet → Review → Write Files)** pattern, confirmed 
 |--------|-----------------|
 | `04_next-efforts.md` Effort 2 | 7-step workflow spec, frontmatter outline, Implementation Packet template |
 | `idea_skill-builder_vs_skill-creator.md` | K/P/C/W zone model for skill content types, quality rubric, capsule format |
-| `deliver-acceptance-criteria` (Codex, F-06) | Fresh example of a well-structured domain skill — Output Contract, Quality Checklist pattern |
+| `deliver-acceptance-criteria` (Codex, F-06) | Fresh example of a well-structured domain skill . Output Contract, Quality Checklist pattern |
 | `foundation-persona` | Precedent for a multi-mode utility skill with resolve-first-then-generate pattern |
 | `deliver-prd` | Established pattern for a complex domain skill with numbered instructions |
 
@@ -89,7 +89,7 @@ Step 5: Generate Implementation Packet
 
 Step 6: Writing Lens (optional)
   → Builder analyzes the proposed skill's K/P/C/W zone distribution
-  → Suggests: "This skill is 40% Process, 30% Knowledge — make sure your instructions
+  → Suggests: "This skill is 40% Process, 30% Knowledge . make sure your instructions
     are step-by-step (process-heavy) with framework references (knowledge)"
   → Provides zone-specific writing guidance
 
@@ -119,7 +119,7 @@ Typical conversation: **8-10 messages** from the user.
 | **Most thorough** | Every design decision is explicitly surfaced and confirmed |
 | **Strongest kill gate** | Steps 1-3 each have an opportunity to redirect bad ideas |
 | **Most educational** | A first-time contributor learns the repo's design philosophy step by step |
-| **Spec-faithful** | Matches `04_next-efforts.md` exactly — no design drift from the plan |
+| **Spec-faithful** | Matches `04_next-efforts.md` exactly . no design drift from the plan |
 | **Writing Lens is powerful** | The K/P/C/W zone analysis produces genuinely better skill content |
 | **Audit trail** | The packet documents every decision, not just the output |
 
@@ -128,7 +128,7 @@ Typical conversation: **8-10 messages** from the user.
 | Weakness | Impact |
 |----------|--------|
 | **Slow for experienced users** | Someone who knows the repo conventions doesn't need 7 steps |
-| **Conversation fatigue** | 8-10 messages is a lot — users may abandon mid-flow |
+| **Conversation fatigue** | 8-10 messages is a lot . users may abandon mid-flow |
 | **Writing Lens may confuse** | K/P/C/W zones are a sophisticated concept; first-time contributors may not understand it |
 | **Over-structured for simple skills** | A straightforward domain skill (like acceptance-criteria) doesn't need gap analysis + why gate + repo-fit + classification + writing lens |
 | **SKILL.md will be very long** | Encoding 7 steps with all their logic makes for a large instruction set |
@@ -188,7 +188,7 @@ Typical conversation: **4-5 messages** from the user.
 
 | Strength | Why it matters |
 |----------|---------------|
-| **Fast** | 3 interactions to a complete packet — respects the user's time |
+| **Fast** | 3 interactions to a complete packet . respects the user's time |
 | **Kill gate is still present** | The combined gap analysis + why gate catches bad ideas early |
 | **Low conversation fatigue** | Short enough to complete in one sitting without losing momentum |
 | **Simple SKILL.md** | Fewer steps = fewer instructions = easier for the AI to follow reliably |
@@ -202,7 +202,7 @@ Typical conversation: **4-5 messages** from the user.
 | **No writing lens** | The K/P/C/W zone guidance doesn't appear. The generated SKILL.md outline is generic rather than content-type-aware. |
 | **Less educational** | A new contributor learns the conventions but not the design philosophy |
 | **Classification may be wrong** | With one quick step, the builder may misclassify a skill (e.g., utility vs domain) without enough discussion |
-| **No validation checkpoint** | The packet is generated and the user is offered files immediately — no explicit validation step against CI rules |
+| **No validation checkpoint** | The packet is generated and the user is offered files immediately . no explicit validation step against CI rules |
 
 ### Best for
 
@@ -281,7 +281,7 @@ Step 4: Generate Skill Implementation Packet
     ### Draft SKILL.md
     [Full outline with section headers, instruction steps, output contract,
     quality checklist. Writing lens guidance is woven into the instructions
-    as inline notes — e.g., "This skill is process-heavy; make instructions
+    as inline notes . e.g., "This skill is process-heavy; make instructions
     step-by-step with numbered sequences."]
 
     ### Draft TEMPLATE.md Sections
@@ -344,11 +344,11 @@ Typical conversation: **5-7 messages** from the user.
 
 | Strength | Why it matters |
 |----------|---------------|
-| **Kill gate preserved** | Gap analysis + Why Gate always runs — the highest-value part of the builder |
+| **Kill gate preserved** | Gap analysis + Why Gate always runs . the highest-value part of the builder |
 | **Writing lens is woven in, not forced** | Zone-aware guidance appears as inline notes in the packet, not as a separate step |
 | **Adaptive conversation length** | Simple ideas get 4 interactions; complex ones get 6-7. No wasted steps. |
 | **Repo-fit is integrated** | Classification step naturally surfaces "is this really a new skill?" without a separate assessment |
-| **Validation is built into the packet** | The checklist at the end IS the validation step — no separate interaction needed |
+| **Validation is built into the packet** | The checklist at the end IS the validation step . no separate interaction needed |
 | **Review checkpoint before file writing** | User sees the complete packet and can request changes before anything touches disk |
 | **Educational without being didactic** | The packet itself teaches conventions (the frontmatter is correct, the template has guidance comments, the checklist explains the rules) |
 
@@ -359,7 +359,7 @@ Typical conversation: **5-7 messages** from the user.
 | **Writing lens is less prominent** | Inline notes are easier to miss than a dedicated step. Users may not internalize K/P/C/W thinking. |
 | **SKILL.md is moderately complex** | More instructions than Approach B, less than Approach A. ~220-280 lines. |
 | **"Adaptive" is harder to test** | The branching behavior means more paths to validate |
-| **Gap analysis quality depends on the skill library table** | The builder needs an up-to-date reference of all existing skills — if the table in SKILL.md is stale, gap analysis is wrong |
+| **Gap analysis quality depends on the skill library table** | The builder needs an up-to-date reference of all existing skills . if the table in SKILL.md is stale, gap analysis is wrong |
 
 ### Mitigations for weaknesses
 
@@ -406,4 +406,4 @@ Typical conversation: **5-7 messages** from the user.
 
 The key insight: **the kill gate is a safety feature, the writing lens is a quality feature, and the validation checklist is a correctness feature**. Only the safety feature needs to be a gate (blocking). The quality and correctness features work just as well as inline content in the packet.
 
-If the maintainer later wants to add revise/audit modes (v2 scope), Approach C's structure accommodates them naturally — revise mode skips Steps 1-3 and goes straight to packet editing, audit mode runs only the validation checklist against existing skills.
+If the maintainer later wants to add revise/audit modes (v2 scope), Approach C's structure accommodates them naturally . revise mode skips Steps 1-3 and goes straight to packet editing, audit mode runs only the validation checklist against existing skills.

@@ -1,8 +1,8 @@
-# Topic 2 — Specification: Layered PM-Skills Platform Architecture
+# Topic 2 . Specification: Layered PM-Skills Platform Architecture
 
 > **Date**: 2026-03-21
 > **Author**: Claude Opus 4.6
-> **Status**: Draft — agentic-development-optimized spec
+> **Status**: Draft . agentic-development-optimized spec
 > **Approach**: Layered architecture (cross-platform core + Claude Code extensions)
 > **Companion**: `topic-2_exploration_holistic-pm-skill-value.md`
 
@@ -229,7 +229,7 @@ Your job:
 6. Write the report to the project's inputs/ directory
 
 Be specific. Quote the transcript. Include line numbers.
-Do NOT modify existing artifacts — only recommend changes.
+Do NOT modify existing artifacts . only recommend changes.
 ```
 
 #### Agent: `artifact-reviewer`
@@ -268,7 +268,7 @@ When this style is active:
 5. Use tables for comparisons
 6. Bold key metrics and dates
 7. End with clear "Next Steps" with owners and dates
-8. Omit methodology details — focus on outcomes
+8. Omit methodology details . focus on outcomes
 ```
 
 #### Style: `pm-detailed`
@@ -290,7 +290,7 @@ When this style is active:
 5. Include appendices for raw data
 6. Cross-reference related artifacts
 7. Use footnotes for sources
-8. No hard word limit — completeness over brevity
+8. No hard word limit . completeness over brevity
 ```
 
 ---

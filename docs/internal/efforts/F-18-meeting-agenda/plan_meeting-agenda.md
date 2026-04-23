@@ -45,8 +45,8 @@ Per-skill execution plan. Reads together with the effort brief ([`../F-18-meetin
    - Frontmatter (name, description, phase=foundation, version=1.0.0, updated, license, metadata)
    - Purpose section referencing family contract
    - When to use section
-   - Supported Modes (if any — default single mode for v1.0.0)
-   - **Zero-friction execution section** (per contract — required for CI)
+   - Supported Modes (if any. default single mode for v1.0.0)
+   - **Zero-friction execution section** (per contract. required for CI)
    - **Anti-meeting check** flow step (shared with meeting-brief)
    - Process section (reference specification.md for detail)
    - Quality checklist
@@ -56,16 +56,16 @@ Per-skill execution plan. Reads together with the effort brief ([`../F-18-meetin
    - `## Shareable summary` section scaffold
    - `## Full agenda` section with sub-sections per spec
    - `## Sources & References` section with all 4 required subsections
-4. **Write EXAMPLE.md** — worked example of a decision meeting for search-feature kickoff
+4. **Write EXAMPLE.md**. worked example of a decision meeting for search-feature kickoff
 5. **Write slash command** `commands/meeting-agenda.md`:
    - Frontmatter (name, description)
    - Body referencing `skills/foundation-meeting-agenda/SKILL.md`
-6. **Write 3 library samples** — covering the scenarios listed in deliverables
+6. **Write 3 library samples**. covering the scenarios listed in deliverables
 7. **Generate/write public skill doc** at `docs/skills/foundation/foundation-meeting-agenda.md`
-8. **Update AGENTS.md** — add entry for foundation-meeting-agenda
-9. **Update commands reference** — row in `docs/reference/commands.md`
-10. **Update samples browse table** — entries in `library/skill-output-samples/README_SAMPLES.md`
-11. **Update mkdocs.yml** — Foundation nav entry
+8. **Update AGENTS.md**. add entry for foundation-meeting-agenda
+9. **Update commands reference**. row in `docs/reference/commands.md`
+10. **Update samples browse table**. entries in `library/skill-output-samples/README_SAMPLES.md`
+11. **Update mkdocs.yml**. Foundation nav entry
 
 ## Validation checkpoints
 

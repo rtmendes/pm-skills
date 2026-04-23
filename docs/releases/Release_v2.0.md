@@ -3,7 +3,7 @@ Date: 2026-01-26
 Status: Shipped (tag v2.0.0). Use for support, audits, and future agent runs.
 
 ## Big Idea
-We flattened the skill source to a single, predictable layout (`skills/{phase-skill}/`) and added tooling to keep discovery smooth (sync helper) and releases reproducible (build script). The goal is to make skills easier to reference, lint, package, and consume across assistants—without breaking discovery for tools that still look for `.claude/skills`.
+We flattened the skill source to a single, predictable layout (`skills/{phase-skill}/`) and added tooling to keep discovery smooth (sync helper) and releases reproducible (build script). The goal is to make skills easier to reference, lint, package, and consume across assistants.without breaking discovery for tools that still look for `.claude/skills`.
 
 ## Scope and Goals
 - One canonical flat layout for skills and commands.
@@ -15,7 +15,7 @@ We flattened the skill source to a single, predictable layout (`skills/{phase-sk
 ## What’s New & Better
 - **Flat skills layout**: All 24 skills now live at `skills/{phase-skill}/`, removing nested phase folders.
 - **Command alignment**: Every slash command updated to the flat paths.
-- **Sync helper**: `scripts/sync-claude.(sh|ps1)` recreates `.claude/skills` and `.claude/commands` with validation—keeps openskills/Claude Code discovery working.
+- **Sync helper**: `scripts/sync-claude.(sh|ps1)` recreates `.claude/skills` and `.claude/commands` with validation.keeps openskills/Claude Code discovery working.
 - **Reproducible packaging**: `scripts/build-release.(sh|ps1)` builds `pm-skills-v2.0.zip` + SHA256 manifest, excluding populated `.claude/*`.
 - **Docs refresh**: README, QUICKSTART, AGENTS, bundles, guides, ecosystem/ref structure docs all match the flat layout and two-path install story.
 - **Front-matter consistency**: All SKILL.md files now have `name`, `phase`, `version: 2.0.0`, `updated: 2026-01-26`.

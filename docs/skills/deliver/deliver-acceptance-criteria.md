@@ -223,13 +223,13 @@ When asked to create acceptance criteria, follow these steps:
 
 See this skill applied to three different product contexts:
 
-??? example "Storevine (B2B): Storevine B2B ecommerce platform — acceptance criteria for the Campaigns email template builder"
+??? example "Storevine (B2B): Storevine B2B ecommerce platform . acceptance criteria for the Campaigns email template builder"
     **Prompt:**
 
     ```
     /acceptance-criteria
 
-    Feature: Campaigns — email template builder
+    Feature: Campaigns . email template builder
     The template builder lets merchants drag-and-drop content blocks (text, image, button, divider, product card) onto a canvas, customize styling, preview on desktop and mobile, and save templates for reuse across campaigns. Templates are stored per-merchant and can be duplicated.
     ```
 

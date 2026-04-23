@@ -19,7 +19,7 @@ Review the design document at `docs/internal/efforts/F-05-pm-skill-builder/desig
 - Are the 7 instruction steps clear enough for an AI agent to follow without ambiguity?
 - Is the Current Library Reference table accurate against the actual `skills/` directory?
 - Does the output contract define exactly what the builder must produce?
-- Is the quality checklist complete — does it cover everything the enhanced CI (M-12) validates?
+- Is the quality checklist complete . does it cover everything the enhanced CI (M-12) validates?
 
 #### 2. TEMPLATE.md / Packet Format (Section 2)
 - Are the 13 packet sections complete? Is anything missing that would be needed to create a skill?
@@ -34,7 +34,7 @@ Review the design document at `docs/internal/efforts/F-05-pm-skill-builder/desig
 #### 4. Sample Outputs (Section 4)
 - Are the 3 thread scenarios realistic and differentiated enough?
 - Do they cover the key builder paths: happy path, why-gate-triggered, and kill-gate-fired?
-- Is anything missing — e.g., a foundation or utility skill scenario?
+- Is anything missing . e.g., a foundation or utility skill scenario?
 
 #### 5. Staging Area Design
 - Is `library/pm-skill-builder/{skill-name}/` the right location?
@@ -69,12 +69,12 @@ After the guided checks above: what problems, gaps, or improvements exist that t
 
 Structure your review as:
 
-1. **Section-by-section assessment** — for each of the 4 design sections
-2. **Cross-document consistency** — any misalignment
-3. **Executability assessment** — could this be built as-is?
-4. **Recommended changes** — prioritized list
-5. **What we missed** — anything the prompt didn't anticipate
-6. **Overall verdict** — approve / approve with changes / needs revision
+1. **Section-by-section assessment** . for each of the 4 design sections
+2. **Cross-document consistency** . any misalignment
+3. **Executability assessment** . could this be built as-is?
+4. **Recommended changes** . prioritized list
+5. **What we missed** . anything the prompt didn't anticipate
+6. **Overall verdict** . approve / approve with changes / needs revision
 
 ---
 
@@ -240,21 +240,21 @@ The core design is good: adaptive depth, a real kill gate, exemplar-driven draft
 
 ### Assessment: All 8 findings confirmed
 
-Every finding was verified against the repo's actual files. Codex's review is accurate and thorough. The "Needs revision" verdict is correct — the design direction is sound but the implementation details would produce files that fail CI.
+Every finding was verified against the repo's actual files. Codex's review is accurate and thorough. The "Needs revision" verdict is correct . the design direction is sound but the implementation details would produce files that fail CI.
 
 ### Finding-by-Finding Response
 
-#### 1. Frontmatter `>-` fails linter — CONFIRMED, BLOCKING
+#### 1. Frontmatter `>-` fails linter . CONFIRMED, BLOCKING
 
 **Codex's claim**: The `>-` multiline YAML description won't pass the linter.
 
-**Verification**: Read `scripts/lint-skills-frontmatter.sh` lines 8-10 and the `frontmatter_value` function. It uses `sed -n "s/^${key}:[[:space:]]*//p" | head -1` — this captures only the text after `description:` on the same line. For `>-`, it would capture the literal string `>-`, which is 1 word, failing the 20-100 word check.
+**Verification**: Read `scripts/lint-skills-frontmatter.sh` lines 8-10 and the `frontmatter_value` function. It uses `sed -n "s/^${key}:[[:space:]]*//p" | head -1` . this captures only the text after `description:` on the same line. For `>-`, it would capture the literal string `>-`, which is 1 word, failing the 20-100 word check.
 
 **Existing pattern**: Both `deliver-prd` and `foundation-persona` use single-line descriptions (34 and 27 words respectively). No existing skill uses multiline YAML.
 
 **Action**: Rewrite to single-line description. Target ~35-45 words to match existing utility/foundation pattern.
 
-#### 2. AGENTS.md entry format wrong — CONFIRMED, BLOCKING
+#### 2. AGENTS.md entry format wrong . CONFIRMED, BLOCKING
 
 **Codex's claim**: The design proposes `### {Name}` + `- **Skill:**` + `- **Command:**` + `- **Description:**` but the repo uses a different format.
 
@@ -272,7 +272,7 @@ Key differences: level-4 header (not level-3), `**Path:**` (not `**Skill:**`), d
 
 **Action**: Replace the AGENTS.md Entry section in TEMPLATE.md with the actual repo pattern. The builder must generate entries that pass `validate-agents-md.sh`.
 
-#### 3. Command frontmatter doesn't match conventions — CONFIRMED, BLOCKING
+#### 3. Command frontmatter doesn't match conventions . CONFIRMED, BLOCKING
 
 **Codex's claim**: The design introduces `name`, `arguments`, and `skill_file` fields that don't exist in current commands.
 
@@ -284,9 +284,9 @@ description: {one-line description}
 ```
 Body is instructional prose ending with `Context from user: $ARGUMENTS`. No `name`, `arguments`, or `skill_file` fields anywhere.
 
-**Action**: Rewrite the command design to match exactly. The optional `idea` argument is still the right UX choice — it just gets handled via `$ARGUMENTS` in the prose body, not via a frontmatter schema.
+**Action**: Rewrite the command design to match exactly. The optional `idea` argument is still the right UX choice . it just gets handled via `$ARGUMENTS` in the prose body, not via a frontmatter schema.
 
-#### 4. Staging area under `library/` conflicts with release packaging — CONFIRMED, BLOCKING
+#### 4. Staging area under `library/` conflicts with release packaging . CONFIRMED, BLOCKING
 
 **Codex's claim**: `library/` is tracked and ships in releases, so draft artifacts would be included.
 
@@ -294,46 +294,46 @@ Body is instructional prose ending with `Context from user: $ARGUMENTS`. No `nam
 
 **Action**: Move staging to `_staging/pm-skill-builder/{skill-name}/`. The `_staging/` prefix follows the existing convention of underscore-prefixed directories for non-shipped content (like `_bundles/`, `_NOTES/`). Add `_staging/` to `.gitignore` so drafts never ship. PACKET.md still serves as permanent design record but lives in the staging area until promotion.
 
-**Alternative**: If we want PACKET.md to be a permanent *tracked* record, create `docs/internal/skill-packets/{skill-name}/PACKET.md` — internal docs are gitignored and won't ship. The staging area for draft files stays separate.
+**Alternative**: If we want PACKET.md to be a permanent *tracked* record, create `docs/internal/skill-packets/{skill-name}/PACKET.md` . internal docs are gitignored and won't ship. The staging area for draft files stays separate.
 
 **Decision needed from user**: Should PACKET.md be tracked (design record) or gitignored (scratch artifact)?
 
-#### 5. Split validation into CI-enforced vs quality-advisory — CONFIRMED, NON-BLOCKING
+#### 5. Split validation into CI-enforced vs quality-advisory . CONFIRMED, NON-BLOCKING
 
 **Codex's claim**: The Quality Checklist conflates enforced CI rules with aspirational quality checks.
 
 **Verification**: CI enforces: description 20-100 words, TEMPLATE.md ≥3 `##` headers, AGENTS.md path sync, command path validity. CI does NOT enforce: Output Contract presence, Quality Checklist presence in SKILL.md, example completeness.
 
 **Action**: Split the Validation Checklist in TEMPLATE.md into two sections:
-- **CI Validation** (must pass — matches `lint-skills-frontmatter.sh` + `validate-agents-md.sh` + `validate-commands.sh`)
-- **Quality Checks** (should pass — builder-enforced but not CI-gated)
+- **CI Validation** (must pass . matches `lint-skills-frontmatter.sh` + `validate-agents-md.sh` + `validate-commands.sh`)
+- **Quality Checks** (should pass . builder-enforced but not CI-gated)
 
 Also add the missing CI checks Codex noted: `updated` field present, `license` field present, exactly one root `version`, no `metadata.version`.
 
-#### 6. Thread 2 sample not convincingly utility — CONFIRMED, NON-BLOCKING
+#### 6. Thread 2 sample not convincingly utility . CONFIRMED, NON-BLOCKING
 
 **Codex's claim**: The "cross-functional meeting synthesis" example reads like a domain skill or overlap problem, not a clean utility case.
 
-**Verification**: Agreed on inspection. A utility skill operates on the repo, workflow, or other skills — meeting synthesis is a PM activity (domain). The design itself defines utility as "meta-skills, repo tooling" in Step 4.
+**Verification**: Agreed on inspection. A utility skill operates on the repo, workflow, or other skills . meeting synthesis is a PM activity (domain). The design itself defines utility as "meta-skills, repo tooling" in Step 4.
 
 **Action**: Replace Thread 2 with a genuine utility scenario. Options:
 - `utility-pm-skill-validate` preview (validates existing skills against CI + quality bar)
 - `utility-skill-migration` (migrates skills between spec versions)
 - `utility-template-linter` (checks TEMPLATE.md quality beyond CI minimums)
 
-Recommend: `utility-pm-skill-validate` — it's already F-10 in the backlog, so the sample doubles as early design thinking.
+Recommend: `utility-pm-skill-validate` . it's already F-10 in the backlog, so the sample doubles as early design thinking.
 
-#### 7. K/P/C/W weights need summing rule — CONFIRMED, NON-BLOCKING
+#### 7. K/P/C/W weights need summing rule . CONFIRMED, NON-BLOCKING
 
 **Codex's claim**: Without a rule, different agents will fill the zone distribution differently.
 
 **Action**: Add explicit rule: "Weights must sum to 100. They are approximate guidance signals, not scored metrics. Round to nearest 5." This makes the table deterministic enough to be useful without false precision.
 
-#### 8. Reconcile design doc / effort brief / 04_next-efforts.md — CONFIRMED, NON-BLOCKING
+#### 8. Reconcile design doc / effort brief / 04_next-efforts.md . CONFIRMED, NON-BLOCKING
 
 **Codex's claim**: `04_next-efforts.md` still says `/skill-builder` and frames revise/audit as command modes, contradicting the design's `/pm-skill-builder` naming and F-10/F-11 separation.
 
-**Verification**: Confirmed — `04_next-efforts.md` was written before the naming decision and lifecycle separation.
+**Verification**: Confirmed . `04_next-efforts.md` was written before the naming decision and lifecycle separation.
 
 **Action**: Update `04_next-efforts.md` Effort 2 section to reflect:
 - `/pm-skill-builder` naming
@@ -350,7 +350,7 @@ Also update `approaches_pm-skill-builder.md` to remove "M-12 running in parallel
 | 1 | `>-` frontmatter | Blocking | Single-line description, ~35-45 words | Yes |
 | 2 | AGENTS entry format | Blocking | Use `####` + `**Path:**` + paragraph pattern | Yes |
 | 3 | Command schema | Blocking | `description:` only + prose body + `$ARGUMENTS` | Yes |
-| 4 | Staging in `library/` | Blocking | Move to `_staging/` (gitignored) — user decides on PACKET.md tracking | Yes |
+| 4 | Staging in `library/` | Blocking | Move to `_staging/` (gitignored) . user decides on PACKET.md tracking | Yes |
 | 5 | Validation split | Non-blocking | Two sections: CI Validation + Quality Checks | No |
 | 6 | Thread 2 sample | Non-blocking | Replace with genuine utility scenario | No |
 | 7 | K/P/C/W summing | Non-blocking | "Must sum to 100, round to nearest 5" | No |
@@ -358,4 +358,4 @@ Also update `approaches_pm-skill-builder.md` to remove "M-12 running in parallel
 
 ### Verdict Response
 
-Agree with "Needs revision." All 4 blocking issues are format mismatches that would cause generated output to fail CI — these are straightforward fixes that don't change the design direction. The 4 non-blocking issues improve clarity and consistency. Proceeding with all 8 fixes before implementation.
+Agree with "Needs revision." All 4 blocking issues are format mismatches that would cause generated output to fail CI . these are straightforward fixes that don't change the design direction. The 4 non-blocking issues improve clarity and consistency. Proceeding with all 8 fixes before implementation.

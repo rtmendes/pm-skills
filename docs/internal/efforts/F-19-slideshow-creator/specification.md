@@ -26,7 +26,7 @@ Claude selects slide types and fills content slots. All visual properties (coord
 This separation means the expensive part (AI reasoning) only handles content decisions, while the deterministic part (rendering) runs locally for free.
 
 ### 3. Character Limits as Hard Constraints
-Every content slot has a maximum character count calibrated to its physical dimensions on the slide. This prevents text overflow — the #1 cause of broken AI-generated presentations.
+Every content slot has a maximum character count calibrated to its physical dimensions on the slide. This prevents text overflow . the #1 cause of broken AI-generated presentations.
 
 ### 4. Brand-Agnostic with Themeable Defaults
 Ships with a professional default theme. All visual values (colors, fonts, sizes, coordinates) are expressed as configurable tokens. The slideshow-themer skill (F-20) produces custom theme configurations.
@@ -91,11 +91,11 @@ metadata:
    - Reference to generation workflow in references
 
 4. **18 Slide Types** (quick reference table)
-   - Type key, function, default variant, use case — one row per type
+   - Type key, function, default variant, use case . one row per type
    - Points to `references/slide-types.md` for full slot definitions
 
 5. **Decision Logic** (quick reference table)
-   - Content pattern → recommended slide type — one row per type
+   - Content pattern → recommended slide type . one row per type
    - Points to `references/decision-logic.md` for variant strategy
 
 6. **JSON Deck Spec Format** (minimal example)
@@ -247,12 +247,12 @@ BULLETS (dark) > HIGHLIGHT (light) > CLOSING (dark)
 
 ### pptxgenjs Rules (Mandatory)
 
-1. Never use `#` in hex colors — write `"2563EB"`, not `"#2563EB"`
-2. Never encode opacity in hex strings — use `{ color: "000000", opacity: 0.12 }`
+1. Never use `#` in hex colors . write `"2563EB"`, not `"#2563EB"`
+2. Never encode opacity in hex strings . use `{ color: "000000", opacity: 0.12 }`
 3. Never reuse option objects across addShape/addText calls (pptxgenjs mutates them)
 4. Use `bullet: true` for bullet points (never unicode bullet characters)
 5. Use `breakLine: true` between items in text arrays
-6. Each presentation needs `new pptxgen()` — never reuse instances
+6. Each presentation needs `new pptxgen()` . never reuse instances
 
 ### Google Slides Compatibility
 
@@ -322,21 +322,21 @@ Shows:
 4. Notes on what each slide type choice communicates
 
 **Example slides (generic PM content, zero brand references):**
-1. `title_dark` — "Q3 Product Update" / "Engineering All-Hands — October 2026"
-2. `section` — "Key Metrics" (dark)
-3. `stat` — "94%" / "Customer satisfaction score, highest this year" (light)
-4. `dual_stat` — "Q2 vs Q3" with two revenue figures (dark)
-5. `bullets` — "What Shipped This Quarter" with 4 feature items (light)
-6. `timeline` — "Roadmap Milestones" with 5 milestones (light)
-7. `highlight` — "Key Insight" with a product finding (dark)
-8. `table` — "Quarterly Metrics" with 4 metrics across Q1-Q3 (light)
-9. `closing` — optional tagline + URL (dark)
+1. `title_dark` . "Q3 Product Update" / "Engineering All-Hands . October 2026"
+2. `section` . "Key Metrics" (dark)
+3. `stat` . "94%" / "Customer satisfaction score, highest this year" (light)
+4. `dual_stat` . "Q2 vs Q3" with two revenue figures (dark)
+5. `bullets` . "What Shipped This Quarter" with 4 feature items (light)
+6. `timeline` . "Roadmap Milestones" with 5 milestones (light)
+7. `highlight` . "Key Insight" with a product finding (dark)
+8. `table` . "Quarterly Metrics" with 4 metrics across Q1-Q3 (light)
+9. `closing` . optional tagline + URL (dark)
 
 ---
 
 ## Default Professional Theme
 
-The skill ships with a generic professional theme. This is NOT a brand — it's a clean, neutral starting point.
+The skill ships with a generic professional theme. This is NOT a brand . it's a clean, neutral starting point.
 
 ### Color Tokens (Default)
 
@@ -358,7 +358,7 @@ The skill ships with a generic professional theme. This is NOT a brand — it's 
 
 ### Typography (Default)
 
-**Font:** Lexend Deca (Google Fonts — renders without substitution in Google Slides)
+**Font:** Lexend Deca (Google Fonts . renders without substitution in Google Slides)
 
 | Token | Size | Bold | Use |
 |---|---|---|---|
@@ -399,17 +399,17 @@ This skill adapts a production-tested agentic presentation system. The following
 | Brand colors (13 Pushpay tokens) | Replaced with 13 generic professional tokens (slate/blue palette) |
 | "Pushpay Confidential" footer | Empty by default (user configures) |
 | "Technology that leads to connection." tagline | Empty by default |
-| "Pushpay Brand Guidelines 2024" references | Removed — theme is self-documenting |
+| "Pushpay Brand Guidelines 2024" references | Removed . theme is self-documenting |
 | Example content (donor retention, churches) | Replaced with generic PM content (product updates, metrics) |
-| Font (Lexend Deca) | Retained — it's a Google Font, not proprietary |
-| Slide types (18) | Retained — architecture is brand-agnostic |
-| Character limits | Retained — calibrated to layout grid, font-independent |
-| Decision logic | Retained — content patterns are universal |
-| Platform rules | Retained — pptxgenjs constraints are framework-level |
+| Font (Lexend Deca) | Retained . it's a Google Font, not proprietary |
+| Slide types (18) | Retained . architecture is brand-agnostic |
+| Character limits | Retained . calibrated to layout grid, font-independent |
+| Decision logic | Retained . content patterns are universal |
+| Platform rules | Retained . pptxgenjs constraints are framework-level |
 
 ## Open Questions
 
-1. **Generation script packaging** — Should the skill include the generation script in the pm-skills repo, or reference it as an external tool? Recommendation: include a minimal script or point to an npm package.
-2. **Theme file format** — JSON or YAML for the theme configuration file? JSON matches the deck spec format; YAML is more human-readable. Recommendation: JSON for consistency.
-3. **PDF export dependency** — Puppeteer (for PDF) is a heavy dependency. Should PDF export be optional/separate? Recommendation: yes, document as optional.
-4. **Default theme refinement** — The proposed palette (Tailwind slate/blue inspired) should be tested in actual .pptx rendering before shipping. Colors that look good on screen may not render identically in PowerPoint.
+1. **Generation script packaging** . Should the skill include the generation script in the pm-skills repo, or reference it as an external tool? Recommendation: include a minimal script or point to an npm package.
+2. **Theme file format** . JSON or YAML for the theme configuration file? JSON matches the deck spec format; YAML is more human-readable. Recommendation: JSON for consistency.
+3. **PDF export dependency** . Puppeteer (for PDF) is a heavy dependency. Should PDF export be optional/separate? Recommendation: yes, document as optional.
+4. **Default theme refinement** . The proposed palette (Tailwind slate/blue inspired) should be tested in actual .pptx rendering before shipping. Colors that look good on screen may not render identically in PowerPoint.

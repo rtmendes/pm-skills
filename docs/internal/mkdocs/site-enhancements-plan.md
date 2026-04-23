@@ -1,4 +1,4 @@
-# MkDocs Site Enhancements — Plan and Execution
+# MkDocs Site Enhancements . Plan and Execution
 
 Status: Planned
 Created: 2026-04-04
@@ -65,12 +65,12 @@ Use Material's [grid cards](https://squidfunk.github.io/mkdocs-material/referenc
 ```markdown
 <div class="grid cards" markdown>
 
-- :material-magnify: **Discover** — 3 skills
+- :material-magnify: **Discover** . 3 skills
   ---
   Research, competitive analysis, stakeholder mapping
   [:octicons-arrow-right-24: Browse](skills/discover/)
 
-- :material-target: **Define** — 4 skills
+- :material-target: **Define** . 4 skills
   ---
   Problem framing, hypotheses, opportunity trees
   [:octicons-arrow-right-24: Browse](skills/define/)
@@ -95,7 +95,7 @@ Enable the built-in tags plugin so users can browse skills by category (research
 
 ### Files
 - Modify: `mkdocs.yml` (enable tags plugin, add `tags_file: tags.md`)
-- Create: `docs/tags.md` (minimal — just needs frontmatter, plugin auto-populates)
+- Create: `docs/tags.md` (minimal . just needs frontmatter, plugin auto-populates)
 - Already done: generation script adds tags to frontmatter
 
 ### mkdocs.yml change
@@ -207,7 +207,7 @@ flowchart TD
 Enable the social plugin so every page generates an OpenGraph preview card. When someone shares a link on Slack/LinkedIn/Twitter, it shows the skill name, description, and PM Skills branding.
 
 ### Design
-No page changes needed — the plugin generates cards from page titles and descriptions automatically.
+No page changes needed . the plugin generates cards from page titles and descriptions automatically.
 
 ### Files
 - Modify: `mkdocs.yml` (enable social plugin)
@@ -243,23 +243,23 @@ Short, concrete end-to-end workflows for common PM tasks. More specific than wor
 # Recipes
 
 ## Pitch a feature
-1. `/problem-statement` — frame why this matters
-2. `/hypothesis` — define what you'll test
-3. `/solution-brief` — one-page overview
-4. `/prd` — full requirements
+1. `/problem-statement` . frame why this matters
+2. `/hypothesis` . define what you'll test
+3. `/solution-brief` . one-page overview
+4. `/prd` . full requirements
 
 ## Run an experiment
-1. `/hypothesis` — state the assumption
-2. `/experiment-design` — design the test
-3. `/instrumentation-spec` — define tracking
-4. `/experiment-results` — analyze outcomes
-5. `/pivot-decision` — ship, iterate, or kill
+1. `/hypothesis` . state the assumption
+2. `/experiment-design` . design the test
+3. `/instrumentation-spec` . define tracking
+4. `/experiment-results` . analyze outcomes
+5. `/pivot-decision` . ship, iterate, or kill
 
 ## Launch a feature
-1. `/acceptance-criteria` — define "done"
-2. `/edge-cases` — identify failure modes
-3. `/launch-checklist` — pre-launch readiness
-4. `/release-notes` — communicate to users
+1. `/acceptance-criteria` . define "done"
+2. `/edge-cases` . identify failure modes
+3. `/launch-checklist` . pre-launch readiness
+4. `/release-notes` . communicate to users
 
 ## Start from scratch (full lifecycle)
 Use the `/workflow-feature-kickoff` workflow, then extend with Measure and Iterate skills.
@@ -289,7 +289,7 @@ Side-by-side comparisons for commonly confused skill pairs.
 |---|---|---|
 | **When** | After solution alignment, before engineering | During ideation, before committing |
 | **Audience** | Engineering, QA, stakeholders | Leadership, team alignment |
-| **Depth** | Comprehensive — requirements, scope, timeline | Overview — problem, approach, metrics |
+| **Depth** | Comprehensive . requirements, scope, timeline | Overview . problem, approach, metrics |
 | **Length** | 3-8 pages | 1 page |
 | **Use when** | Ready to build | Exploring options |
 
@@ -342,7 +342,7 @@ flowchart LR
 - Or: manually create phase flow diagrams (more control over accuracy)
 
 ### Implementation note
-The connections between skills are not codified anywhere in the repo — they'd need to be manually defined. The workflow files have some of this information but not all phases are covered. Recommend manual mermaid diagrams for v1, with the option to derive them from workflows later.
+The connections between skills are not codified anywhere in the repo . they'd need to be manually defined. The workflow files have some of this information but not all phases are covered. Recommend manual mermaid diagrams for v1, with the option to derive them from workflows later.
 
 ### Effort: ~1.5 hours (8 phase diagrams)
 
@@ -351,7 +351,7 @@ The connections between skills are not codified anywhere in the repo — they'd 
 ## E-09: "Follow the Product" Interactive Journeys
 
 ### What
-Three story pages where a reader follows one company's entire feature arc through all 6 phases. Each step shows the phase, skill, prompt, and full output. This is the showcase — it demonstrates pm-skills producing 25+ real artifacts for a single product.
+Three story pages where a reader follows one company's entire feature arc through all 6 phases. Each step shows the phase, skill, prompt, and full output. This is the showcase . it demonstrates pm-skills producing 25+ real artifacts for a single product.
 
 ### Design
 Each journey page uses Material's content tabs and collapsible admonitions:
@@ -360,7 +360,7 @@ Each journey page uses Material's content tabs and collapsible admonitions:
 # Storevine: Building Campaigns
 
 > B2B ecommerce platform, Series A, ~70 employees.
-> Follow the PM team building built-in email marketing — from merchant
+> Follow the PM team building built-in email marketing . from merchant
 > interviews through experiment results and a persevere decision.
 
 ## Phase 1: Discover
@@ -384,10 +384,10 @@ Each journey page uses Material's content tabs and collapsible admonitions:
 ```
 
 ### Files
-- Create: `docs/showcase/index.md` — choose your journey + prompt style guide
-- Create: `docs/showcase/storevine.md` — Storevine Campaigns arc (28 artifacts)
-- Create: `docs/showcase/brainshelf.md` — Brainshelf Resurface arc (28 artifacts)
-- Create: `docs/showcase/workbench.md` — Workbench Blueprints arc (28 artifacts)
+- Create: `docs/showcase/index.md` . choose your journey + prompt style guide
+- Create: `docs/showcase/storevine.md` . Storevine Campaigns arc (28 artifacts)
+- Create: `docs/showcase/brainshelf.md` . Brainshelf Resurface arc (28 artifacts)
+- Create: `docs/showcase/workbench.md` . Workbench Blueprints arc (28 artifacts)
 - Modify: `mkdocs.yml` nav (add Showcase tab)
 
 ### Implementation
@@ -446,7 +446,7 @@ The script already reads each skill directory. Add a step that:
 4. Embeds them as `??? example` blocks on the skill page
 
 ### Coverage
-25 of 29 skills have samples (the 3 utility skills and deliver-acceptance-criteria don't — they were added after the sample library was created in v2.5.0).
+25 of 29 skills have samples (the 3 utility skills and deliver-acceptance-criteria don't . they were added after the sample library was created in v2.5.0).
 
 ### Effort: ~1.5 hours (script modification + testing)
 
@@ -462,7 +462,7 @@ A curated page showing real prompts from the sample library, organized by style 
 ```markdown
 # Prompt Gallery
 
-Learn by example — see how PMs at different companies write prompts.
+Learn by example . see how PMs at different companies write prompts.
 
 ## Organized (Storevine style)
 Structured, references prior work, clear scope.
@@ -470,7 +470,7 @@ Structured, references prior work, clear scope.
 ### PRD prompt
 ```
 /prd
-Building Campaigns for Storevine — built-in email/SMS...
+Building Campaigns for Storevine . built-in email/SMS...
 Prior work: competitive analysis, problem statement, solution brief...
 ```
 
@@ -503,7 +503,7 @@ how much context you provide up front vs. how much the skill infers.
 - Modify: `mkdocs.yml` nav
 
 ### Implementation
-Could be generated from the sample library (extract prompt sections) or manually curated for the best examples. Manual curation is better for v1 — not every prompt is equally illustrative.
+Could be generated from the sample library (extract prompt sections) or manually curated for the best examples. Manual curation is better for v1 . not every prompt is equally illustrative.
 
 ### Effort: ~1 hour
 
@@ -521,14 +521,14 @@ Could be generated from the sample library (extract prompt sections) or manually
 5. E-06: Recipes (30 min)
 6. E-07: Skill comparisons (45 min)
 7. E-04: Skill finder (45 min)
-8. E-11: Prompt gallery (1 hour — manual curation)
+8. E-11: Prompt gallery (1 hour . manual curation)
 
 ### Batch 3: Script enhancements (~3 hours)
 9. E-08: Phase mermaid flows (1.5 hours)
-10. E-10: Per-skill real-world samples (1.5 hours — script modification)
+10. E-10: Per-skill real-world samples (1.5 hours . script modification)
 
 ### Batch 4: Showcase (~3 hours)
-11. E-09: Follow the Product journeys (3 hours — script + generation)
+11. E-09: Follow the Product journeys (3 hours . script + generation)
 
 ### Total: ~9.5 hours across 4 batches
 
@@ -548,4 +548,4 @@ E-10 (per-skill samples) ── reads from sample library
 E-09 (showcase) ── reads from sample library, should be last (biggest)
 ```
 
-No blocking dependencies — any enhancement can be built independently. The recommended order is by impact-per-hour, not by dependency.
+No blocking dependencies . any enhancement can be built independently. The recommended order is by impact-per-hour, not by dependency.

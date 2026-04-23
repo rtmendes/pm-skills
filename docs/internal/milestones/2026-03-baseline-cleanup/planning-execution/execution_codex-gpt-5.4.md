@@ -1,4 +1,4 @@
-# Execution Plan — Codex GPT-5.4
+# Execution Plan . Codex GPT-5.4
 ## pm-skills Repo Hygiene Baseline
 
 **Agent:** Codex GPT-5.4  
@@ -68,7 +68,7 @@ Claude already landed the first cleanup batch (`A-1` through `A-4`). Codex now n
 
 ---
 
-### C-1 — Rewrite active policy docs to reflect accepted canonical homes
+### C-1 . Rewrite active policy docs to reflect accepted canonical homes
 
 **Why:** The policy layer still teaches the wrong tracked-vs-local model. Everything else inherits from these files.  
 **Effort:** 20-30 min  
@@ -115,7 +115,7 @@ Show the diff before concluding.
 
 ---
 
-### C-2 — Consolidate release governance and normalize effort entry points
+### C-2 . Consolidate release governance and normalize effort entry points
 
 **Why:** The repo still has two tracked release-governance trees and no tracked README that explains the accepted effort model.  
 **Effort:** 45-75 min  
@@ -177,7 +177,7 @@ Show the planned file moves and diffs before concluding.
 
 ---
 
-### C-3 — Refresh Codex continuity and shared decision capture
+### C-3 . Refresh Codex continuity and shared decision capture
 
 **Why:** The tracked Codex continuity layer is stale, and the shared decision log is too thin to support reliable agent work.  
 **Effort:** 30-45 min  
@@ -228,7 +228,7 @@ Show the diff before concluding.
 
 ---
 
-### C-4 — Align contributor schema and authoring docs
+### C-4 . Align contributor schema and authoring docs
 
 **Why:** The repo shipped the newer frontmatter model, but the contributor docs still teach the old one.  
 **Effort:** 30-45 min  
@@ -278,7 +278,7 @@ Show the diffs before concluding.
 
 ---
 
-### C-5 — Align public/reference docs and remove speculative surfaces
+### C-5 . Align public/reference docs and remove speculative surfaces
 
 **Why:** Several tracked docs still advertise the wrong inventory or helper surfaces.  
 **Effort:** 30-45 min  
@@ -333,7 +333,7 @@ Show the diffs before concluding.
 
 ---
 
-### C-6 — Clean remaining active release/sample docs and hand back to coordinator
+### C-6 . Clean remaining active release/sample docs and hand back to coordinator
 
 **Why:** A small set of active tracked docs still carries stale release truth or `_NOTES` references even after the broader structure is fixed.  
 **Effort:** 20-30 min  
@@ -420,4 +420,4 @@ C-1 and C-2 are done. Start with C-3.
 | 2026-03-15 | Claude dependency | `A-5` remains deferred until a later wrap-session effort. |
 | 2026-03-17 | Claude dependency | `A-8` and `A-9` are now unblocked because `C-3` refreshed the Codex continuity layer to the current baseline. |
 | 2026-03-16 | Claude dependency | `A-11` is now unblocked because `C-2` established the tracked `docs/internal/release-plans/**` structure and updated the effort/backlog entry points. |
-| 2026-03-17 | Claude A-11 complete | Claude landed effort tracking: `docs/internal/efforts/README.md`, `F-02-persona-skill.md`, `F-03-persona-library-tier0.md` created; `M-10-skill-sample-outputs-library.md` rewritten to standardized template. GitHub issues #108/#109/#110, label `effort`, milestone `v2.7.0`. C-6 should re-read M-10 brief before editing — format has changed. |
+| 2026-03-17 | Claude A-11 complete | Claude landed effort tracking: `docs/internal/efforts/README.md`, `F-02-persona-skill.md`, `F-03-persona-library-tier0.md` created; `M-10-skill-sample-outputs-library.md` rewritten to standardized template. GitHub issues #108/#109/#110, label `effort`, milestone `v2.7.0`. C-6 should re-read M-10 brief before editing . format has changed. |

@@ -1,6 +1,6 @@
 ---
 title: MCP Server Setup
-description: Install, configure, and use PM Skills via the Model Context Protocol — instant access from Claude Desktop, Cursor, VS Code, and any MCP client.
+description: Install, configure, and use PM Skills via the Model Context Protocol . instant access from Claude Desktop, Cursor, VS Code, and any MCP client.
 tags:
   - Guides
   - MCP
@@ -8,7 +8,7 @@ tags:
 
 # MCP Server Setup
 
-The [pm-skills-mcp](https://github.com/product-on-purpose/pm-skills-mcp) server gives you instant access to all 38 PM skills via the Model Context Protocol. (Note: MCP server is frozen as of v2.11.0 per M-22; may lag the main repo until adoption criteria are met.) No file management, no cloning — just configure your AI client and start using skills.
+The [pm-skills-mcp](https://github.com/product-on-purpose/pm-skills-mcp) server gives you instant access to all 38 PM skills via the Model Context Protocol. (Note: MCP server is frozen as of v2.11.0 per M-22; may lag the main repo until adoption criteria are met.) No file management, no cloning . just configure your AI client and start using skills.
 
 ## What You Get
 
@@ -23,7 +23,7 @@ The [pm-skills-mcp](https://github.com/product-on-purpose/pm-skills-mcp) server 
 
 ## Prerequisites
 
-- **Node.js 18+** — check with `node --version`
+- **Node.js 18+** . check with `node --version`
 - An MCP-compatible AI client (Claude Desktop, Cursor, Claude Code, VS Code with Cline/Continue)
 
 ## Quick Setup by Platform
@@ -151,7 +151,7 @@ Or install globally: `npm install -g pm-skills-mcp`, then use `pm-skills-mcp` as
 
 ## Using MCP Tools
 
-Once connected, your AI assistant can invoke any PM skill as a tool. You don't need to know the tool names — just describe what you need.
+Once connected, your AI assistant can invoke any PM skill as a tool. You don't need to know the tool names . just describe what you need.
 
 ### Natural language
 
@@ -188,7 +188,7 @@ MCP tool names are derived from skill directory names by stripping the phase/cla
 | `/persona` | `pm_persona` | `foundation-persona` → strip `foundation-` → `pm_persona` |
 | `/pm-skill-validate` | `pm_pm_skill_validate` | `utility-pm-skill-validate` → strip `utility-` → `pm_pm_skill_validate` |
 
-The double `pm_` for utility tools is intentional — it preserves the skill name and stays consistent.
+The double `pm_` for utility tools is intentional . it preserves the skill name and stays consistent.
 
 ## Customization
 
@@ -229,7 +229,7 @@ Point the server at a custom skills directory:
 | Cursor with MCP | Yes | Also works (AGENTS.md) |
 | Claude Code | Either | Slash commands are convenient |
 | Want zero setup | Yes | Requires clone/download |
-| Want to customize skills | No — fork pm-skills | Yes |
+| Want to customize skills | No . fork pm-skills | Yes |
 | Building automated workflows | Yes | Possible but harder |
 | GitHub Copilot | No MCP support | AGENTS.md discovery |
 | Windsurf | No MCP support | AGENTS.md discovery |
@@ -242,7 +242,7 @@ See the [Ecosystem Overview](../reference/ecosystem.md) for a detailed compariso
 |---------|-------------|-----|
 | Tools not appearing | Server didn't start | Check `node --version` (need 18+), try `npx pm-skills-mcp` manually |
 | "pm_prd not found" | Old MCP version | Update: `npm update -g pm-skills-mcp` (need v2.8.0+) |
-| Slow first response | Cache cold start | Normal — subsequent calls are fast |
+| Slow first response | Cache cold start | Normal . subsequent calls are fast |
 | Custom skills not loading | Wrong path | Use absolute path to `skills/` directory, not repo root |
 | Connection refused | Port conflict | Try `npx` instead of global install |
 

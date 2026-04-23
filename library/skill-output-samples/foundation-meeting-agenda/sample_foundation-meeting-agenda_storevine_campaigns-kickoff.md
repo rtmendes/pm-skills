@@ -9,7 +9,7 @@ thread: storevine
 context: campaigns-kickoff
 ---
 
-# Sample: foundation-meeting-agenda — Storevine Campaigns Kickoff
+# Sample: foundation-meeting-agenda. Storevine Campaigns Kickoff
 
 ## Scenario
 
@@ -105,25 +105,25 @@ Commit to v1 MVP scope, confirm engineering capacity for Q2, and set a launch ta
 
 ### Topics
 
-#### Scope review (20 min) — jonathan
+#### Scope review (20 min). jonathan
 
 - **Type**: Decision
 - **Goal**: Each item in the scope draft marked in, out, or deferred to v2
 - **Pre-read**: [Campaigns scope draft](https://notion.example/campaigns-scope)
 
-#### Engineering capacity (20 min) — maria
+#### Engineering capacity (20 min). maria
 
 - **Type**: Decision
 - **Goal**: Eng capacity agreed in sprint-weeks for Q2; staffing plan and backfill noted
 - **Pre-read**: [Q2 capacity model](https://sheets.example/q2-capacity)
 
-#### Launch-target commit (15 min) — jonathan
+#### Launch-target commit (15 min). jonathan
 
 - **Type**: Decision
 - **Goal**: Launch date committed; marketing and data-instrumentation dependencies named
 - **Pre-read**: none
 
-#### Next steps (5 min) — jonathan
+#### Next steps (5 min). jonathan
 
 - **Type**: Working
 - **Goal**: Follow-up owners assigned; next sync scheduled
@@ -181,5 +181,5 @@ Commit to v1 MVP scope, confirm engineering capacity for Q2, and set a launch ta
 - **Overall confidence**: high
 - **Known gaps**: None identified
 - **Inferences applied**: Meeting type inferred as project-kickoff [confidence: high, "kickoff" explicit in request]; attendee roles inferred from team-lead descriptors
-- **Anti-meeting check**: Ran — synchronous value: co-creation of scope/capacity commitments + tradeoff discussion; sync format appropriate
+- **Anti-meeting check**: Ran. synchronous value: co-creation of scope/capacity commitments + tradeoff discussion; sync format appropriate
 ```

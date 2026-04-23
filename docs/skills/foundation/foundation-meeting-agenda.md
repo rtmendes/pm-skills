@@ -59,6 +59,6 @@ Full instructions are in the skill file at `skills/foundation-meeting-agenda/SKI
 
 ## Related skills
 
-- [`/meeting-brief`](foundation-meeting-brief.md) — user's private prep (shares anti-meeting check)
-- [`/meeting-recap`](foundation-meeting-recap.md) — downstream: auto-populates from this agenda's topic list
-- [`/stakeholder-update`](foundation-stakeholder-update.md) — downstream: translates outcomes to non-attendees
+- [`/meeting-brief`](foundation-meeting-brief.md). user's private prep (shares anti-meeting check)
+- [`/meeting-recap`](foundation-meeting-recap.md). downstream: auto-populates from this agenda's topic list
+- [`/stakeholder-update`](foundation-stakeholder-update.md). downstream: translates outcomes to non-attendees

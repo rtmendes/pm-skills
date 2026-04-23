@@ -1,4 +1,3 @@
-<!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
 ---
 name: foundation-stakeholder-update
 description: Produces async communication to stakeholders, primarily non-attendees and secondarily some attendees who want a reference. Translates meeting outcomes into what-it-means language for readers, with channel variants (slack, teams, email, notion, exec-memo) and audience variants (engineering, design, leadership, customer-facing, mixed). Surfaces a primary CTA up front, flags technical-to-business translations for user verification, and detects thread continuation from prior updates.
@@ -46,7 +45,7 @@ Per the family contract, this skill never blocks on interrogation. Default flow:
 5. Accept `go` or corrections
 6. Produce the channel-tailored update
 
-If invoked with `--go`, skip the inference summary. The entire output is shareable content (per family contract — no separate summary block needed).
+If invoked with `--go`, skip the inference summary. The entire output is shareable content (per family contract. no separate summary block needed).
 
 ## Instructions
 
@@ -62,7 +61,7 @@ When asked to create a stakeholder update, follow these steps:
    Show inferred channel (if not specified), detected audience, proposed CTA, thread continuation status, translation candidates (flagged jargon or acronyms that may not land).
 
 4. **Distill key outcomes**
-   From the recap or notes, select 3-5 outcomes that matter to the target audience. Do not include everything from the recap — filter by audience relevance.
+   From the recap or notes, select 3-5 outcomes that matter to the target audience. Do not include everything from the recap. filter by audience relevance.
 
 5. **Frame the CTA**
    If action is needed: lead with it, not bury it
@@ -92,9 +91,9 @@ When asked to create a stakeholder update, follow these steps:
 - [ ] Channel variant matches the specified or inferred channel
 - [ ] Audience variant's "what this means for you" is specifically tailored (not generic)
 - [ ] CTA is surfaced up front, not buried
-- [ ] Technical-to-business translations are logged in Generation context for user verification (INTERNAL — outside shareable boundary)
+- [ ] Technical-to-business translations are logged in Generation context for user verification (INTERNAL. outside shareable boundary)
 - [ ] Thread continuation referenced if prior updates exist on the same topic
-- [ ] `## Shareable update` section present with channel-tailored body (v1.1.0 — replaces "entire output is shareable" from v1.0.0)
+- [ ] `## Shareable update` section present with channel-tailored body (v1.1.0. replaces "entire output is shareable" from v1.0.0)
 - [ ] Explicit boundary marker between Shareable update and internal sections (translations, sources)
 - [ ] Sources and References section lists the source recap and any prior updates in thread (INTERNAL)
 - [ ] Filename uses v1.1.0 variant pattern: `YYYY-MM-DD_HH-MMtimezone_title_stakeholder-update-{channel}-{audience}.md`
@@ -102,5 +101,5 @@ When asked to create a stakeholder update, follow these steps:
 ## See also
 
 - [Meeting Skills Family Contract](../../docs/reference/skill-families/meeting-skills-contract.md)
-- [`/meeting-recap`](../foundation-meeting-recap/SKILL.md) — upstream: primary input source
-- [`/discover-stakeholder-summary`](../discover-stakeholder-summary/SKILL.md) — distinct purpose (understanding stakeholders, not communicating to them)
+- [`/meeting-recap`](../foundation-meeting-recap/SKILL.md). upstream: primary input source
+- [`/discover-stakeholder-summary`](../discover-stakeholder-summary/SKILL.md). distinct purpose (understanding stakeholders, not communicating to them)

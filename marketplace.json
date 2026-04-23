@@ -5,7 +5,7 @@
     {
       "name": "pm-skills",
       "description": "38 PM skills covering the full product lifecycle: 25 phase skills, 7 foundation skills (including the v2.11.0 Meeting Skills Family of 5 cross-cutting skills + lean-canvas + persona), and 6 utility skills. Includes templates, examples, workflows, thread-aligned samples, and lifecycle tools for creating, validating, and iterating skills. First release with a canonical skill-family contract pattern enforced by CI. Follows the agentskills.io specification.",
-      "version": "2.11.0",
+      "version": "2.11.1",
       "source": ".",
       "author": "product-on-purpose",
       "homepage": "https://github.com/product-on-purpose/pm-skills",

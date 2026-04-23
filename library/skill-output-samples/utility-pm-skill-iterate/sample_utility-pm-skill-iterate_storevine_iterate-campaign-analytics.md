@@ -7,7 +7,7 @@ skill_version: "1.0.0"
 created: 2026-04-11
 status: sample
 thread: storevine
-context: Storevine B2B ecommerce platform — iterating on campaign-analytics skill after validation findings
+context: Storevine B2B ecommerce platform . iterating on campaign-analytics skill after validation findings
 ---
 
 ## Scenario

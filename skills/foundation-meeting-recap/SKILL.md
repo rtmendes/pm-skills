@@ -1,4 +1,3 @@
-<!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
 ---
 name: foundation-meeting-recap
 description: Produces a topic-segmented post-meeting summary for attendees with decisions highlighted and actions captured inline per topic (plus a consolidated action view at the end). Auto-populates topic skeleton from a sibling meeting-agenda when available and reconciles planned vs. actual topics. Accepts transcripts from Zoom, Meet, Otter, Fireflies, Krisp MCP, or manual notes; runs on variable-quality input without blocking.
@@ -29,7 +28,7 @@ This skill belongs to the Meeting Skills Family. It conforms to the [Meeting Ski
 
 ## When NOT to Use
 
-- Communicating outcomes to non-attendees. Use `/stakeholder-update` — recap assumes reader context; stakeholder-update translates to readers without it.
+- Communicating outcomes to non-attendees. Use `/stakeholder-update`. recap assumes reader context; stakeholder-update translates to readers without it.
 - Cross-meeting synthesis (patterns across multiple meetings). Use `/meeting-synthesize`.
 - Live meeting note-taking. This skill consumes finished inputs; it does not transcribe live.
 
@@ -61,17 +60,17 @@ The shareable summary also leads with this flag when triggered: `⚠ Ownership r
 
 The `unassigned_action_ratio` frontmatter field (float 0.0–1.0) records the ratio for downstream tools.
 
-Rationale: a recap with 60% ownerless actions is "non-fabricated" (per the prohibition above) but operationally broken — a pile of broken tickets. The threshold makes this visible instead of silently shipping.
+Rationale: a recap with 60% ownerless actions is "non-fabricated" (per the prohibition above) but operationally broken. a pile of broken tickets. The threshold makes this visible instead of silently shipping.
 
 ## Instructions
 
 When asked to create a meeting recap, follow these steps:
 
 1. **Parse inputs and detect type**
-   Transcript (timestamped speaker-attributed lines), notes (bullet or prose), or hybrid. Note input quality upfront — transcript plus structured notes is high; scrappy bullets is low.
+   Transcript (timestamped speaker-attributed lines), notes (bullet or prose), or hybrid. Note input quality upfront. transcript plus structured notes is high; scrappy bullets is low.
 
 2. **Auto-discover related agenda**
-   Look in the same directory for a file matching the pattern `{YYYY-MM-DD}_{HH-MMtimezone}_{title-slug}_agenda.md`. If found, load it — its topic list is the recap's topic skeleton and its `desired_outcomes` drive the meeting-quality reconciliation.
+   Look in the same directory for a file matching the pattern `{YYYY-MM-DD}_{HH-MMtimezone}_{title-slug}_agenda.md`. If found, load it. its topic list is the recap's topic skeleton and its `desired_outcomes` drive the meeting-quality reconciliation.
 
 3. **Present go-mode inference summary**
    Show detected meeting date, title, attendees (if inferred), input quality assessment. Accept `go` or corrections.
@@ -82,7 +81,7 @@ When asked to create a meeting recap, follow these steps:
 
 5. **Per topic segment, extract**
    - **Discussion summary**: 2-3 sentences capturing what was discussed
-   - **Decisions made**: bold-flagged visually. Never fabricate — if uncertain, flag "appears to have decided X [confidence: medium]"
+   - **Decisions made**: bold-flagged visually. Never fabricate. if uncertain, flag "appears to have decided X [confidence: medium]"
    - **Actions**: owner + due date + dependencies. Flag missing owners as `[owner: unassigned]` and missing dates as `[due: not specified]`. Never invent.
    - **Open questions**: unresolved items with confidence marker on whether they are truly unresolved or simply not re-raised
 
@@ -124,6 +123,6 @@ When asked to create a meeting recap, follow these steps:
 ## See also
 
 - [Meeting Skills Family Contract](../../docs/reference/skill-families/meeting-skills-contract.md)
-- [`/meeting-agenda`](../foundation-meeting-agenda/SKILL.md) — upstream: provides topic skeleton and desired-outcomes
-- [`/meeting-synthesize`](../foundation-meeting-synthesize/SKILL.md) — downstream: consumes recaps for cross-meeting synthesis
-- [`/stakeholder-update`](../foundation-stakeholder-update/SKILL.md) — downstream: translates recap outcomes to non-attendees
+- [`/meeting-agenda`](../foundation-meeting-agenda/SKILL.md). upstream: provides topic skeleton and desired-outcomes
+- [`/meeting-synthesize`](../foundation-meeting-synthesize/SKILL.md). downstream: consumes recaps for cross-meeting synthesis
+- [`/stakeholder-update`](../foundation-stakeholder-update/SKILL.md). downstream: translates recap outcomes to non-attendees

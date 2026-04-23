@@ -33,7 +33,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\validate-version-consistency.
 
 ## When to Use
 
-- In CI on every push/PR (hard-fail — mismatches should never merge)
+- In CI on every push/PR (hard-fail . mismatches should never merge)
 - Before tagging a release (version bump both files together)
 - After editing either `plugin.json` or `marketplace.json`
 

@@ -14,7 +14,7 @@ Before writing any files, read these to absorb conventions:
 |------|-----|
 | `skills/utility-pm-skill-builder/SKILL.md` | Utility skill frontmatter + section pattern |
 | `skills/utility-pm-skill-validate/SKILL.md` | Second utility skill for cross-reference |
-| `skills/utility-pm-skill-iterate/SKILL.md` | Third utility skill — verify consistency |
+| `skills/utility-pm-skill-iterate/SKILL.md` | Third utility skill . verify consistency |
 | `commands/pm-skill-builder.md` | Command file format |
 | `AGENTS.md` | Entry format for new skills |
 | `docs/getting-started.md` | Skill count to update |
@@ -49,7 +49,7 @@ scripts/lint-skills-frontmatter.ps1
 
 **Action:** Write the cross-cutting syntax validity reference (~300-400 lines)
 
-This is the highest-value reference file — it's the primary differentiator and the foundation that all other reference files depend on. Write it first so diagram-catalog.md can cross-reference it.
+This is the highest-value reference file . it's the primary differentiator and the foundation that all other reference files depend on. Write it first so diagram-catalog.md can cross-reference it.
 
 **Sections:**
 1. Label quoting rules (when, how, examples of failures)
@@ -201,11 +201,11 @@ Commits 1 and 2 can be combined into a single commit if review confirms no issue
 
 ## Validation Checklist (post-implementation)
 
-- [ ] `scripts/lint-skills-frontmatter.ps1` — passes
-- [ ] `scripts/validate-commands.ps1` — passes
-- [ ] `scripts/validate-agents-md.ps1` — passes
-- [ ] `mkdocs build --strict` — zero warnings
-- [ ] `mkdocs serve` — skill page renders, navigation works
+- [ ] `scripts/lint-skills-frontmatter.ps1` . passes
+- [ ] `scripts/validate-commands.ps1` . passes
+- [ ] `scripts/validate-agents-md.ps1` . passes
+- [ ] `mkdocs build --strict` . zero warnings
+- [ ] `mkdocs serve` . skill page renders, navigation works
 - [ ] All mermaid examples in reference files render in mermaid.live
 - [ ] SKILL.md quality checklist items are all testable (no vague language)
 - [ ] TEMPLATE.md has ≥3 sections

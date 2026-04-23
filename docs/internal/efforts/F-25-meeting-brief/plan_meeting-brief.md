@@ -57,7 +57,7 @@ Per-skill execution plan. Reads together with the effort brief ([`../F-25-meetin
    - Private-use Shareable summary block (with guidance note: share only with trusted advisor)
    - Full brief section with context, background, stakeholder reads, ranked outcomes, key messages, anticipated Q&A, risks, asks, success signals
    - Sources & References section
-4. **Write EXAMPLE.md** — worked example: user prepping for exec briefing on Q2 commitments
+4. **Write EXAMPLE.md**. worked example: user prepping for exec briefing on Q2 commitments
 5. **Write slash command** `commands/meeting-brief.md`
 6. **Write 3 library samples** per deliverables list
 7. **Generate/write public skill doc** at `docs/skills/foundation/foundation-meeting-brief.md`

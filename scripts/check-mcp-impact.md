@@ -48,5 +48,5 @@ In GitHub Actions, advisories are emitted as workflow warnings. Locally, they ar
 
 ## Safety
 
-- Read-only — inspects git metadata only
+- Read-only . inspects git metadata only
 - Non-blocking by design

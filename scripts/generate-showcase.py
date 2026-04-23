@@ -28,24 +28,24 @@ THREADS = {
         "display": "Storevine",
         "subtitle": "B2B Ecommerce Platform",
         "icon": ":material-store:",
-        "description": "Series A, ~70 employees, ~15,000 merchants. Building **Campaigns** — native email marketing.",
-        "prompt_style": "Organized — structured context, references prior work, clear scope boundaries.",
+        "description": "Series A, ~70 employees, ~15,000 merchants. Building **Campaigns** . native email marketing.",
+        "prompt_style": "Organized . structured context, references prior work, clear scope boundaries.",
         "suffix": "campaigns",
     },
     "brainshelf": {
         "display": "Brainshelf",
         "subtitle": "Consumer PKM App",
         "icon": ":material-bookshelf:",
-        "description": "Post-seed, ~20 employees, ~22,000 MAU. Building **Resurface** — contextual morning email digest.",
-        "prompt_style": "Casual — rough, fast, enough context to work. Bullet points and shorthand.",
+        "description": "Post-seed, ~20 employees, ~22,000 MAU. Building **Resurface** . contextual morning email digest.",
+        "prompt_style": "Casual . rough, fast, enough context to work. Bullet points and shorthand.",
         "suffix": "resurface",
     },
     "workbench": {
         "display": "Workbench",
         "subtitle": "Enterprise Collaboration",
         "icon": ":material-office-building:",
-        "description": "Series B, ~200 employees, ~500 enterprise customers. Building **Blueprints** — document templates with approval gates.",
-        "prompt_style": "Enterprise — full stakeholder lists, quantified baselines, explicit metrics.",
+        "description": "Series B, ~200 employees, ~500 enterprise customers. Building **Blueprints** . document templates with approval gates.",
+        "prompt_style": "Enterprise . full stakeholder lists, quantified baselines, explicit metrics.",
         "suffix": "blueprints",
     },
 }
@@ -190,7 +190,7 @@ def generate_thread_page(thread_key: str) -> None:
     lines = []
     lines.append("---")
     lines.append(f"title: \"{thread['display']}: Follow the Product\"")
-    lines.append(f"description: \"Follow {thread['display']} through the complete PM lifecycle — from discovery to pivot decision.\"")
+    lines.append(f"description: \"Follow {thread['display']} through the complete PM lifecycle . from discovery to pivot decision.\"")
     lines.append("tags:")
     lines.append("  - Showcase")
     lines.append(f"  - {thread['display']}")
@@ -287,7 +287,7 @@ def generate_index_page() -> None:
     lines = []
     lines.append("---")
     lines.append('title: "Showcase: Follow the Product"')
-    lines.append('description: "See PM Skills in action — follow three fictional companies through the complete product lifecycle."')
+    lines.append('description: "See PM Skills in action . follow three fictional companies through the complete product lifecycle."')
     lines.append("tags:")
     lines.append("  - Showcase")
     lines.append("---")
@@ -295,7 +295,7 @@ def generate_index_page() -> None:
     lines.append("# Showcase: Follow the Product")
     lines.append("")
     lines.append("See every PM skill in action. Three fictional companies, three different prompt styles,")
-    lines.append("one complete lifecycle each — from discovery research through pivot decisions.")
+    lines.append("one complete lifecycle each . from discovery research through pivot decisions.")
     lines.append("")
     lines.append("Each journey demonstrates **25+ real artifacts** produced by pm-skills slash commands,")
     lines.append("including the full prompt that generated each one.")
@@ -304,7 +304,7 @@ def generate_index_page() -> None:
     lines.append('<div class="grid cards" markdown>')
     lines.append("")
     for key, thread in THREADS.items():
-        lines.append(f"- {thread['icon']} **{thread['display']}** — {thread['subtitle']}")
+        lines.append(f"- {thread['icon']} **{thread['display']}** . {thread['subtitle']}")
         lines.append("  ---")
         lines.append(f"  {thread['description']}")
         lines.append(f"  ")
@@ -318,9 +318,9 @@ def generate_index_page() -> None:
     lines.append("")
     lines.append("Every sample follows a consistent three-part structure:")
     lines.append("")
-    lines.append("1. **Scenario** — the company, team, and specific PM problem")
-    lines.append("2. **Prompt** — the exact slash command the PM typed")
-    lines.append("3. **Output** — the complete artifact, following every template section")
+    lines.append("1. **Scenario** . the company, team, and specific PM problem")
+    lines.append("2. **Prompt** . the exact slash command the PM typed")
+    lines.append("3. **Output** . the complete artifact, following every template section")
     lines.append("")
     lines.append("Fictional metrics are marked with `[fictional]`. Competitor names are real.")
     lines.append("Only the three companies (Storevine, Brainshelf, Workbench) are fictional.")

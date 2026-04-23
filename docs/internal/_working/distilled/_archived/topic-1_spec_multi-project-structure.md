@@ -1,8 +1,8 @@
-# Topic 1 — Specification: Multi-Project Workspace for PM-Skills
+# Topic 1 . Specification: Multi-Project Workspace for PM-Skills
 
 > **Date**: 2026-03-21
 > **Author**: Claude Opus 4.6
-> **Status**: Draft — agentic-development-optimized spec
+> **Status**: Draft . agentic-development-optimized spec
 > **Approach**: 80/20 best-value (Plugin-Integrated Project Workspace)
 > **Companion**: `topic-1_exploration_multi-project-structure.md`
 
@@ -26,7 +26,7 @@
 
 **Goal**: Add multi-project workspace capabilities to pm-skills, enabling PMs to group artifacts by project, switch context between projects, and build on previous work across sessions.
 
-**Approach**: Plugin-integrated commands (`/project`, `/update-doc`, `/link-docs`) that manage a local directory structure. Skills themselves are not modified — project context is injected via a shared preamble loaded by commands.
+**Approach**: Plugin-integrated commands (`/project`, `/update-doc`, `/link-docs`) that manage a local directory structure. Skills themselves are not modified . project context is injected via a shared preamble loaded by commands.
 
 **Delivery**: Three phases, each independently valuable.
 
@@ -89,7 +89,7 @@
 | Storage location | Configurable, default `~/pm-projects/` | Survives repo changes, shareable via Git |
 | File format | Markdown + YAML frontmatter | Human-readable, universal, Git-friendly |
 | State management | `.pm-config.yaml` at workspace root | Simple, parseable, no database |
-| Skill modification | None — context injection via commands | Keeps 25 skills untouched |
+| Skill modification | None . context injection via commands | Keeps 25 skills untouched |
 | Version control | Optional Git per workspace | Users choose their persistence model |
 | Platform portability | Files are plain markdown | Works in any AI tool, editor, or viewer |
 
@@ -161,8 +161,8 @@ arguments:
 
 ```
 <project-name>/
-├── PROJECT.md              # REQUIRED — project metadata and context
-├── artifacts/              # REQUIRED — skill outputs organized here
+├── PROJECT.md              # REQUIRED . project metadata and context
+├── artifacts/              # REQUIRED . skill outputs organized here
 │   ├── define/             # Phase-organized subdirectories
 │   │   ├── problem-statement.md
 │   │   ├── hypothesis.md
@@ -176,10 +176,10 @@ arguments:
 │   ├── discover/
 │   ├── measure/
 │   └── iterate/
-├── inputs/                 # OPTIONAL — raw inputs (transcripts, notes)
+├── inputs/                 # OPTIONAL . raw inputs (transcripts, notes)
 │   └── interview-2026-03-15.md
-├── links.yaml              # Phase 2 — document relationships
-└── .history/               # Phase 2 — revision tracking
+├── links.yaml              # Phase 2 . document relationships
+└── .history/               # Phase 2 . revision tracking
 ```
 
 ### 3.3 PROJECT.md Schema

@@ -2,7 +2,7 @@
 
 Source of truth for workflow definitions.
 
-Each `.md` file defines a multi-skill workflow — a guided sequence of PM skills for a common product management process.
+Each `.md` file defines a multi-skill workflow . a guided sequence of PM skills for a common product management process.
 
 ## Link Convention
 
@@ -16,4 +16,4 @@ This makes them directly usable by AI agents (Copilot, Cursor, Windsurf) and rep
 
 ## Editing
 
-Edit workflow content here. Do **not** edit `docs/workflows/` directly — those files are generated from this directory by `scripts/generate-workflow-pages.py`.
+Edit workflow content here. Do **not** edit `docs/workflows/` directly . those files are generated from this directory by `scripts/generate-workflow-pages.py`.

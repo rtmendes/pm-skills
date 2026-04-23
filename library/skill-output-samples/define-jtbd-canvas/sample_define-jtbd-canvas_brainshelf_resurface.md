@@ -7,18 +7,18 @@ skill_version: "2.0.0"
 created: 2026-02-20
 status: sample
 thread: brainshelf
-context: Brainshelf consumer PKM app — JTBD canvas for saved content re-engagement
+context: Brainshelf consumer PKM app . JTBD canvas for saved content re-engagement
 ---
 
 ## Scenario
 
-During the Define phase for the Resurface feature, Brainshelf's PM created a Jobs to be Done canvas to articulate the core job users are trying to accomplish when they save content — and to expose the gap between the stated job ("save to read later") and the actual behavior (saving satisfies the intent to read, so reading never happens). The canvas draws directly from the January 2026 interview synthesis (n=7) and maps the functional, emotional, and social dimensions of the job, revealing that the functional job ("rediscover relevant saved content") is currently unserved by any solution the user has hired, while the emotional job ("feel that my saving effort was worthwhile") is actively undermined by the guilt pile.
+During the Define phase for the Resurface feature, Brainshelf's PM created a Jobs to be Done canvas to articulate the core job users are trying to accomplish when they save content . and to expose the gap between the stated job ("save to read later") and the actual behavior (saving satisfies the intent to read, so reading never happens). The canvas draws directly from the January 2026 interview synthesis (n=7) and maps the functional, emotional, and social dimensions of the job, revealing that the functional job ("rediscover relevant saved content") is currently unserved by any solution the user has hired, while the emotional job ("feel that my saving effort was worthwhile") is actively undermined by the guilt pile.
 
 **Source Notes:**
 
-- Clayton Christensen, "Competing Against Luck" (Harvard Business Review Press, 2016) — the JTBD theory applied in this canvas; Christensen's framework distinguishes the functional job (revisit relevant content), the emotional job (feel productive, not guilty), and the social job (appear well-read) as separate dimensions requiring separate product responses.
-- Alan Klement, "When Coffee and Kale Compete" (whencoffeeandkalecompete.com) — the demand-side innovation perspective used to analyze competing solutions and switch triggers; Klement's emphasis on "progress-making forces" informed the hiring criteria and the analysis of why users stay with the guilt pile rather than switching to Readwise.
-- Bob Moesta, "Demand-Side Sales 101" (demandsidesales.com) — the four forces of progress framework applied in the Competing Solutions section to understand the push/pull dynamics of switching from doing nothing (guilt pile tolerance) to hiring a resurfacing tool.
+- Clayton Christensen, "Competing Against Luck" (Harvard Business Review Press, 2016) . the JTBD theory applied in this canvas; Christensen's framework distinguishes the functional job (revisit relevant content), the emotional job (feel productive, not guilty), and the social job (appear well-read) as separate dimensions requiring separate product responses.
+- Alan Klement, "When Coffee and Kale Compete" (whencoffeeandkalecompete.com) . the demand-side innovation perspective used to analyze competing solutions and switch triggers; Klement's emphasis on "progress-making forces" informed the hiring criteria and the analysis of why users stay with the guilt pile rather than switching to Readwise.
+- Bob Moesta, "Demand-Side Sales 101" (demandsidesales.com) . the four forces of progress framework applied in the Competing Solutions section to understand the push/pull dynamics of switching from doing nothing (guilt pile tolerance) to hiring a resurfacing tool.
 
 ---
 
@@ -29,7 +29,7 @@ During the Define phase for the Resurface feature, Brainshelf's PM created a Job
 
 the core job for the resurface feature. users save stuff to brainshelf
 with the intent to read it later, but the act of saving satisfies the
-intent — they never actually come back. so the real job isn't "save to
+intent . they never actually come back. so the real job isn't "save to
 read later" (that job is already done by the save action), the real job
 is "rediscover the things I saved that are still worth my time."
 
@@ -63,11 +63,11 @@ doing nothing (guilt pile grows), raindrop.io (organize but no resurface).
 **Key Characteristics:**
 - Saves content 3–5 times per week or more (the act of saving is habitual; the act of reading saved content is not)
 - Works in a knowledge-intensive role or has knowledge-intensive interests (tech, design, research, journalism, academia)
-- Experiences information overload as a daily condition, not an occasional event — there is always more to save than time to read
+- Experiences information overload as a daily condition, not an occasional event . there is always more to save than time to read
 
 **Not Defined By:**
-- Age, gender, or geography — the pattern (save but don't return) is consistent across all demographic segments in the interview sample
-- Technical sophistication — both power users and casual users exhibit the same save-but-don't-read behavior; the distinction is frequency of saving, not propensity to return
+- Age, gender, or geography . the pattern (save but don't return) is consistent across all demographic segments in the interview sample
+- Technical sophistication . both power users and casual users exhibit the same save-but-don't-read behavior; the distinction is frequency of saving, not propensity to return
 
 ---
 
@@ -75,11 +75,11 @@ doing nothing (guilt pile grows), raindrop.io (organize but no resurface).
 
 **When does this job arise?**
 
-The job arises when the user encounters a moment of idle time or curiosity (morning coffee, commute, waiting room, end of workday) and thinks "I should read something useful" — but does not have a specific article in mind. The saved library contains relevant material, but the user does not spontaneously think to open it because there is no trigger connecting the moment of availability to the library's contents. The job also arises when a topic comes up in conversation or a meeting and the user remembers "I saved something about this" but cannot recall what or where.
+The job arises when the user encounters a moment of idle time or curiosity (morning coffee, commute, waiting room, end of workday) and thinks "I should read something useful" . but does not have a specific article in mind. The saved library contains relevant material, but the user does not spontaneously think to open it because there is no trigger connecting the moment of availability to the library's contents. The job also arises when a topic comes up in conversation or a meeting and the user remembers "I saved something about this" but cannot recall what or where.
 
 **Where does this happen?**
 
-Mobile (commute, waiting) and desktop (work breaks, evening browsing). The reading context is personal — not shared or collaborative.
+Mobile (commute, waiting) and desktop (work breaks, evening browsing). The reading context is personal . not shared or collaborative.
 
 **Frequency:**
 
@@ -87,7 +87,7 @@ The moment of availability arises daily. The act of successfully connecting that
 
 **Urgency:**
 
-Low urgency in the moment — the user will simply open Twitter, Reddit, or a news site instead. But the cumulative effect of never returning to saved content creates a slow-building dissatisfaction that eventually erodes the perceived value of the product.
+Low urgency in the moment . the user will simply open Twitter, Reddit, or a news site instead. But the cumulative effect of never returning to saved content creates a slow-building dissatisfaction that eventually erodes the perceived value of the product.
 
 ---
 
@@ -121,7 +121,7 @@ Surface 3–5 saved items that are (1) still relevant to the user's current inte
 
 - No external trigger connects moments of availability to the saved library; the user must self-generate the motivation to open the library, which rarely happens
 - The saved library is an undifferentiated list sorted by date; there is no mechanism to surface the most relevant or timely items from a collection of hundreds
-- Saved items lose timeliness — a news article saved 3 months ago may be outdated; a research paper may still be relevant but the user has no way to distinguish freshness without manually reviewing each item
+- Saved items lose timeliness . a news article saved 3 months ago may be outdated; a research paper may still be relevant but the user has no way to distinguish freshness without manually reviewing each item
 
 ---
 
@@ -133,15 +133,15 @@ Surface 3–5 saved items that are (1) still relevant to the user's current inte
 |-----------------|----------------|
 | Productive and satisfied | Reading a saved item delivers on the promise implicit in saving it; the user wants to feel that their saving effort was worthwhile, not wasted |
 | In control of their information diet | The user wants to feel that they are managing information intentionally, not drowning in it |
-| Pleasantly surprised | Rediscovering a saved item they had forgotten is a serendipity moment — a positive emotional peak that reinforces the value of the tool |
+| Pleasantly surprised | Rediscovering a saved item they had forgotten is a serendipity moment . a positive emotional peak that reinforces the value of the tool |
 
 **How do they want to avoid feeling?**
 
 | Feeling to Avoid | Current Trigger |
 |------------------|-----------------|
-| Guilt | Opening the library tab and seeing hundreds of unread items — a visible record of failed intentions |
+| Guilt | Opening the library tab and seeing hundreds of unread items . a visible record of failed intentions |
 | Overwhelm | Scrolling through the library and not knowing where to start; the volume makes every individual item feel less worth reading |
-| Shame | Realizing that the "read later" intention was, in most cases, never fulfilled — the library is aspirational, not functional |
+| Shame | Realizing that the "read later" intention was, in most cases, never fulfilled . the library is aspirational, not functional |
 
 **Emotional Pains:**
 
@@ -168,7 +168,7 @@ Surface 3–5 saved items that are (1) still relevant to the user's current inte
 
 **Social Context:**
 
-- The social dimension is primarily internal (self-perception) rather than public — users do not share their reading stats, but they carry an internal narrative about whether they are "good readers" or "just collectors"
+- The social dimension is primarily internal (self-perception) rather than public . users do not share their reading stats, but they carry an internal narrative about whether they are "good readers" or "just collectors"
 - PKM and "tools for thought" communities on Twitter/X and Reddit create an ambient social norm of productive reading habits; users who participate in these communities feel additional pressure to demonstrate that they use their tools well
 
 ---
@@ -186,7 +186,7 @@ Surface 3–5 saved items that are (1) still relevant to the user's current inte
 
 **Why Do They Switch?**
 
-- A moment of acute guilt (e.g., opening the library and realizing they haven't read anything in months) can trigger a search for a solution — this is the moment where Readwise acquisitions happen
+- A moment of acute guilt (e.g., opening the library and realizing they haven't read anything in months) can trigger a search for a solution . this is the moment where Readwise acquisitions happen
 - Recommendation from a peer in the PKM community who describes a daily review habit creates aspiration and a concrete action path
 
 **Why Do They Stay?**
@@ -201,15 +201,15 @@ Surface 3–5 saved items that are (1) still relevant to the user's current inte
 
 **Must-Have (Table Stakes):**
 
-- Resurfacing must happen outside the app — the user must be reached where they already are (inbox, phone notification), not required to self-initiate an app visit
+- Resurfacing must happen outside the app . the user must be reached where they already are (inbox, phone notification), not required to self-initiate an app visit
 - Surfaced items must be relevant to the user's current interests, not random; irrelevant suggestions will be ignored and increase unsubscribe risk
-- The experience must be effortless — one click from the trigger (email, notification) to reading the saved item, not a multi-step navigation
+- The experience must be effortless . one click from the trigger (email, notification) to reading the saved item, not a multi-step navigation
 
 **Differentiators (Decision Drivers):**
 
-- Resurfacing without annotation lock-in — unlike Readwise, the tool should surface saved articles based on topic relevance, not just highlighted passages; this makes resurfacing accessible to users who save but don't highlight
-- Accessible pricing — freemium or significantly lower cost than Readwise; the user is not yet sure resurfacing will work for them and needs a low-risk entry point
-- Emotional framing — the resurface experience should feel like a gift ("here's something interesting you saved") not a reminder of failure ("you have 400 unread items")
+- Resurfacing without annotation lock-in . unlike Readwise, the tool should surface saved articles based on topic relevance, not just highlighted passages; this makes resurfacing accessible to users who save but don't highlight
+- Accessible pricing . freemium or significantly lower cost than Readwise; the user is not yet sure resurfacing will work for them and needs a low-risk entry point
+- Emotional framing . the resurface experience should feel like a gift ("here's something interesting you saved") not a reminder of failure ("you have 400 unread items")
 
 **Nice-to-Have:**
 
@@ -220,24 +220,24 @@ Surface 3–5 saved items that are (1) still relevant to the user's current inte
 
 ## Insights and Implications
 
-**Key Insight 1:** The act of saving satisfies the intent to read — saving IS the psychological completion, not the beginning of a reading journey.
+**Key Insight 1:** The act of saving satisfies the intent to read . saving IS the psychological completion, not the beginning of a reading journey.
 - Product Implication: Resurface must create a new completion event (reading the resurfaced item) that is separate from and independent of the save event; the product cannot rely on the save action to motivate future reading.
 
-**Key Insight 2:** The saved library has become a negative emotional space — users avoid opening it because it represents accumulated failure.
+**Key Insight 2:** The saved library has become a negative emotional space . users avoid opening it because it represents accumulated failure.
 - Product Implication: The resurface mechanism must bypass the library entirely; it should deliver individual items directly (via email or notification) without requiring the user to encounter the full library. The experience must feel like serendipity, not obligation.
 
 **Key Insight 3:** Readwise owns the power-user end of the resurfacing spectrum but is inaccessible to the majority of read-later users due to price and annotation requirements.
-- Product Implication: Brainshelf can differentiate by offering resurfacing that works without annotations (using topic-matching and recency instead) at a lower price point or on the free tier. The target is the 80%+ of save-for-later users who never highlight — the majority that Readwise cannot serve.
+- Product Implication: Brainshelf can differentiate by offering resurfacing that works without annotations (using topic-matching and recency instead) at a lower price point or on the free tier. The target is the 80%+ of save-for-later users who never highlight . the majority that Readwise cannot serve.
 
 ---
 
 ## Supporting Quotes
 
-> "I call it my guilt pile. I have over 400 things saved. I haven't read most of them." — P5, researcher, 14 months on Brainshelf [fictional]
+> "I call it my guilt pile. I have over 400 things saved. I haven't read most of them." . P5, researcher, 14 months on Brainshelf [fictional]
 
-> "Nothing reminds me. I save something, close the tab, and it's just... gone from my brain." — P2, grad student, 6 months on Brainshelf [fictional]
+> "Nothing reminds me. I save something, close the tab, and it's just... gone from my brain." . P2, grad student, 6 months on Brainshelf [fictional]
 
-> "That's actually why I stopped using Brainshelf. The library got so big it felt pointless." — P7, churned freelance writer [fictional]
+> "That's actually why I stopped using Brainshelf. The library got so big it felt pointless." . P7, churned freelance writer [fictional]
 
 ---
 

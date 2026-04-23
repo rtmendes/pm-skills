@@ -7,18 +7,18 @@ skill_version: "2.0.0"
 created: 2026-02-20
 status: sample
 thread: brainshelf
-context: Brainshelf consumer PKM app — opportunity tree for saved content re-engagement
+context: Brainshelf consumer PKM app . opportunity tree for saved content re-engagement
 ---
 
 ## Scenario
 
-Brainshelf's PM built an opportunity solution tree mapping three user-facing opportunities against the Q1 2026 retention OKR (increase 7-day return rate from 18% to 25% [fictional] by end of Q2 2026). The three opportunity branches — re-engagement trigger gap, content relevance decay, and library overwhelm — were derived from the January 2026 user interviews and behavioral data analysis. The PM prioritized the re-engagement trigger gap as the highest-impact, highest-confidence opportunity and selected the morning email digest (Solution 1A) as the first experiment, informed by the competitive analysis showing Readwise as the only competitor with a proven resurfacing mechanic in the category.
+Brainshelf's PM built an opportunity solution tree mapping three user-facing opportunities against the Q1 2026 retention OKR (increase 7-day return rate from 18% to 25% [fictional] by end of Q2 2026). The three opportunity branches . re-engagement trigger gap, content relevance decay, and library overwhelm . were derived from the January 2026 user interviews and behavioral data analysis. The PM prioritized the re-engagement trigger gap as the highest-impact, highest-confidence opportunity and selected the morning email digest (Solution 1A) as the first experiment, informed by the competitive analysis showing Readwise as the only competitor with a proven resurfacing mechanic in the category.
 
 **Source Notes:**
 
-- Teresa Torres, "Continuous Discovery Habits" (producttalk.org) — the opportunity solution tree framework applied in this document; Torres's methodology structures product discovery around a measurable outcome, user-derived opportunities, solution options, and assumption tests, ensuring that solution selection is evidence-driven rather than opinion-driven.
-- Lenny Rachitsky's consumer app retention benchmarks (Lenny's Newsletter, 2023) — 7-day return rate benchmarks for consumer utility apps; placed Brainshelf's 18% baseline [fictional] below the 25–35% median range and informed the 25% [fictional] target as the minimum viable improvement.
-- Amplitude, "North Star Metric" (amplitude.com/blog/north-star-metric) — the framework used to select 7-day return rate as the North Star metric for the tree; return rate measures the specific behavior (coming back to read) that the Resurface feature is designed to create, making it more actionable than DAU or MAU for this outcome.
+- Teresa Torres, "Continuous Discovery Habits" (producttalk.org) . the opportunity solution tree framework applied in this document; Torres's methodology structures product discovery around a measurable outcome, user-derived opportunities, solution options, and assumption tests, ensuring that solution selection is evidence-driven rather than opinion-driven.
+- Lenny Rachitsky's consumer app retention benchmarks (Lenny's Newsletter, 2023) . 7-day return rate benchmarks for consumer utility apps; placed Brainshelf's 18% baseline [fictional] below the 25–35% median range and informed the 25% [fictional] target as the minimum viable improvement.
+- Amplitude, "North Star Metric" (amplitude.com/blog/north-star-metric) . the framework used to select 7-day return rate as the North Star metric for the tree; return rate measures the specific behavior (coming back to read) that the Resurface feature is designed to create, making it more actionable than DAU or MAU for this outcome.
 
 ---
 
@@ -31,10 +31,10 @@ outcome: increase 7-day return rate from 18% to 25% [fictional]
 by end of Q2 2026.
 
 three opportunities from interviews + data:
-1. re-engagement trigger gap — users have no external prompt to return
-2. content relevance decay — old saves lose timeliness, making the
+1. re-engagement trigger gap . users have no external prompt to return
+2. content relevance decay . old saves lose timeliness, making the
    library feel stale
-3. library overwhelm — 400-item undifferentiated list creates avoidance
+3. library overwhelm . 400-item undifferentiated list creates avoidance
 
 solutions I'm considering:
 - opp 1: morning email digest (resurface), in-app notification card
@@ -95,12 +95,12 @@ digest  notif.  ness    archive tagging collect.
 
 **Description:** Users have no external prompt to return to their saved content. Revisiting is entirely self-initiated, which means it almost never happens. All 7 interview participants described the absence of a trigger as the primary reason they don't return; behavioral data confirms that save-only sessions (save event with no read event) represent 72% of all sessions [fictional].
 **Impact Potential:** High
-**Confidence:** High — supported by both qualitative (7/7 interviews) and quantitative (72% save-only sessions [fictional]) evidence
+**Confidence:** High . supported by both qualitative (7/7 interviews) and quantitative (72% save-only sessions [fictional]) evidence
 
 **Evidence:**
-- Interviews (Jan 2026): "Nothing reminds me. I save something, close the tab, and it's just... gone from my brain." — P2 [fictional]
+- Interviews (Jan 2026): "Nothing reminds me. I save something, close the tab, and it's just... gone from my brain." . P2 [fictional]
 - Behavioral data: 72% of sessions are save-only [fictional]; only 28% include a read event on a saved item
-- Competitive analysis: Readwise's core value proposition is the daily review email — the only proven trigger mechanism in the PKM category
+- Competitive analysis: Readwise's core value proposition is the daily review email . the only proven trigger mechanism in the PKM category
 
 #### Solutions
 
@@ -120,13 +120,13 @@ digest  notif.  ness    archive tagging collect.
 
 ### Opportunity 2: Content Relevance Decay
 
-**Description:** Saved items lose timeliness as they age. A news article saved 3 months ago may be outdated; a research paper may still be relevant but the user has no way to distinguish freshness without manually reviewing each item. Over time, the library feels stale — users assume that most of what they saved is no longer worth reading, which reduces the motivation to browse.
+**Description:** Saved items lose timeliness as they age. A news article saved 3 months ago may be outdated; a research paper may still be relevant but the user has no way to distinguish freshness without manually reviewing each item. Over time, the library feels stale . users assume that most of what they saved is no longer worth reading, which reduces the motivation to browse.
 **Impact Potential:** Medium
-**Confidence:** Medium — directionally supported by interview data (3/7 mentioned timeliness), but not as universally cited as the trigger gap
+**Confidence:** Medium . directionally supported by interview data (3/7 mentioned timeliness), but not as universally cited as the trigger gap
 
 **Evidence:**
-- Interviews: "Half the stuff I saved is probably outdated by now. I saved it months ago." — P6 [fictional]
-- Behavioral data: revisit rate drops sharply after 14 days — items saved within 7 days have a 16% revisit rate [fictional] vs. 4% for items saved 30+ days ago [fictional]
+- Interviews: "Half the stuff I saved is probably outdated by now. I saved it months ago." . P6 [fictional]
+- Behavioral data: revisit rate drops sharply after 14 days . items saved within 7 days have a 16% revisit rate [fictional] vs. 4% for items saved 30+ days ago [fictional]
 - Competitive analysis: no competitor addresses freshness scoring; Readwise resurfaces based on annotation date, not content timeliness
 
 #### Solutions
@@ -147,13 +147,13 @@ digest  notif.  ness    archive tagging collect.
 
 ### Opportunity 3: Library Overwhelm
 
-**Description:** The saved library is an undifferentiated list of hundreds of items sorted by date. There is no structure, no categorization by intent, and no way to distinguish "to read" items from "reference" items from "aspirational" saves. The volume creates decision paralysis — users open the library, scroll briefly, feel overwhelmed, and close it. This avoidance behavior is the mechanism through which the guilt pile converts into disengagement.
+**Description:** The saved library is an undifferentiated list of hundreds of items sorted by date. There is no structure, no categorization by intent, and no way to distinguish "to read" items from "reference" items from "aspirational" saves. The volume creates decision paralysis . users open the library, scroll briefly, feel overwhelmed, and close it. This avoidance behavior is the mechanism through which the guilt pile converts into disengagement.
 **Impact Potential:** Medium
-**Confidence:** Medium — 5/7 interview participants described the library in negative terms, but the negativity may be a symptom of the trigger gap (Opportunity 1) rather than an independent cause
+**Confidence:** Medium . 5/7 interview participants described the library in negative terms, but the negativity may be a symptom of the trigger gap (Opportunity 1) rather than an independent cause
 
 **Evidence:**
-- Interviews: "I'd open it, scroll for a minute, feel overwhelmed, and close it. Eventually I just stopped opening it." — P7 [fictional]
-- Interviews: "Half the things I save are design inspiration — I don't want to read those, I want to look at them when I need ideas. But they're mixed in with everything else." — P4 [fictional]
+- Interviews: "I'd open it, scroll for a minute, feel overwhelmed, and close it. Eventually I just stopped opening it." . P7 [fictional]
+- Interviews: "Half the things I save are design inspiration . I don't want to read those, I want to look at them when I need ideas. But they're mixed in with everything else." . P4 [fictional]
 - Behavioral data: average library size in the target segment is 310 items [fictional]; users with 500+ items [fictional] have a 7-day return rate of only 11% [fictional] vs. 22% for users with fewer than 100 items [fictional]
 
 #### Solutions
@@ -176,9 +176,9 @@ digest  notif.  ness    archive tagging collect.
 
 ### Current Focus
 
-**Priority Opportunity:** Opportunity 1 — Re-Engagement Trigger Gap
-**Priority Solution:** Solution 1A — Morning Email Digest (Resurface)
-**Rationale:** The trigger gap is the highest-confidence opportunity (7/7 interviews, 72% save-only sessions [fictional]) and the only opportunity with a proven competitive proof point (Readwise's daily review email). The email digest addresses the core behavioral barrier (no external trigger to return) directly. Opportunities 2 and 3 may resolve naturally if the email digest creates a return habit — stale content is less of an issue if users are reading regularly, and library overwhelm is less of an issue if users are engaging with individual items rather than browsing the full list.
+**Priority Opportunity:** Opportunity 1 . Re-Engagement Trigger Gap
+**Priority Solution:** Solution 1A . Morning Email Digest (Resurface)
+**Rationale:** The trigger gap is the highest-confidence opportunity (7/7 interviews, 72% save-only sessions [fictional]) and the only opportunity with a proven competitive proof point (Readwise's daily review email). The email digest addresses the core behavioral barrier (no external trigger to return) directly. Opportunities 2 and 3 may resolve naturally if the email digest creates a return habit . stale content is less of an issue if users are reading regularly, and library overwhelm is less of an issue if users are engaging with individual items rather than browsing the full list.
 
 ### Opportunity Ranking
 
@@ -209,7 +209,7 @@ digest  notif.  ness    archive tagging collect.
 
 | Date | Experiment | Result | Learning | Impact on Tree |
 |------|------------|--------|----------|----------------|
-| — | — | — | — | — |
+| . | . | . | . | . |
 
 *(No experiments have run yet. This log will be updated as experiments complete.)*
 

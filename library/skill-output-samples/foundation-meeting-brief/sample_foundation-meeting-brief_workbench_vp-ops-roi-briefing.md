@@ -9,7 +9,7 @@ thread: workbench
 context: vp-ops-roi-briefing
 ---
 
-# Sample: foundation-meeting-brief — Workbench VP Ops ROI Briefing Prep
+# Sample: foundation-meeting-brief. Workbench VP Ops ROI Briefing Prep
 
 ## Scenario
 
@@ -114,7 +114,7 @@ status: draft
 
 ### Key messages
 
-1. "Customer evidence is specific and consistent: 5 of 6 healthcare customers expressed willingness-to-pay; all 6 described the same workflow requirement. This isn't 'we think customers want this' — it's 'we heard them say it.'"
+1. "Customer evidence is specific and consistent: 5 of 6 healthcare customers expressed willingness-to-pay; all 6 described the same workflow requirement. This isn't 'we think customers want this'. it's 'we heard them say it.'"
 2. "Q2 investment is $[fictional] 480K for a 6-month expansion pilot with explicit kill criteria at 3-month checkpoint."
 3. "ROI measurement approach: 3 named healthcare customers signed for pilot by end Q3 at target ACV. If <2 of 3 by Q3-end, we reduce investment."
 
@@ -129,8 +129,8 @@ status: draft
 
 ### Risks and tensions
 
-- **Carlos blocks CEO review by raising new concerns Tuesday**: Mitigation — explicit ask today: "what concerns would you raise in front of CEO that you want to raise with me first?"
-- **Meeting drifts to broader cost-discipline discussion**: Mitigation — upfront framing: "I have one specific ask today: your read on Tuesday's CEO review."
+- **Carlos blocks CEO review by raising new concerns Tuesday**: Mitigation. explicit ask today: "what concerns would you raise in front of CEO that you want to raise with me first?"
+- **Meeting drifts to broader cost-discipline discussion**: Mitigation. upfront framing: "I have one specific ask today: your read on Tuesday's CEO review."
 
 ### Asks
 
@@ -167,9 +167,9 @@ status: draft
 
 - **Generated**: 2026-04-27T09:00:00Z
 - **Skill version**: 1.0.0
-- **Input quality**: high — enterprise-style prompt with full context, pre-reads, prior-recap references
-- **Overall confidence**: high — Carlos position directly attested in prior recap; anticipated questions inferred from typical VP-Ops patterns
+- **Input quality**: high. enterprise-style prompt with full context, pre-reads, prior-recap references
+- **Overall confidence**: high. Carlos position directly attested in prior recap; anticipated questions inferred from typical VP-Ops patterns
 - **Known gaps**: None identified
 - **Inferences applied**: Carlos's likely concerns inferred from prior recap + VP-Ops role pattern [confidence: high]
-- **Anti-meeting check**: Ran — synchronous value: relationship-building (pre-CEO alignment) + conflict-resolution (Carlos's Q1 concerns); sync format essential
+- **Anti-meeting check**: Ran. synchronous value: relationship-building (pre-CEO alignment) + conflict-resolution (Carlos's Q1 concerns); sync format essential
 ```

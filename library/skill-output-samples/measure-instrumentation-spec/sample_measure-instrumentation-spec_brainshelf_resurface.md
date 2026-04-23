@@ -7,18 +7,18 @@ skill_version: "2.0.0"
 created: 2026-02-20
 status: sample
 thread: brainshelf
-context: Brainshelf consumer PKM app — Resurface feature analytics instrumentation spec
+context: Brainshelf consumer PKM app . Resurface feature analytics instrumentation spec
 ---
 
 ## Scenario
 
-Before Sprint 8 began, Chloe B. wrote the instrumentation spec for the Resurface feature to ensure every measurable interaction — opt-in, email sent, email opened, item clicked, cadence changed, unsubscribe, and digest skipped — was tracked consistently across the client and server. The spec was written early so that Alex R. and Jess T. could instrument events during the build rather than retrofitting analytics after ship, which the team had learned from a prior feature launch was error-prone and created data gaps in the first week of measurement.
+Before Sprint 8 began, Chloe B. wrote the instrumentation spec for the Resurface feature to ensure every measurable interaction . opt-in, email sent, email opened, item clicked, cadence changed, unsubscribe, and digest skipped . was tracked consistently across the client and server. The spec was written early so that Alex R. and Jess T. could instrument events during the build rather than retrofitting analytics after ship, which the team had learned from a prior feature launch was error-prone and created data gaps in the first week of measurement.
 
 **Source Notes:**
 
-- Amplitude, "Event Tracking Best Practices" (amplitude.com/blog/event-tracking-best-practices) — the event naming conventions and property taxonomy used in this spec; Amplitude's guidance on using snake_case naming, consistent property types, and separating user properties from event properties informed the structure.
-- Segment, "Analytics Academy: Tracking Plan" (segment.com/academy/collecting-data/naming-conventions-for-clean-data/) — the tracking plan methodology that influenced the event inventory format; Segment's emphasis on a centralized tracking plan document as the single source of truth for all analytics events shaped the document's role in the development workflow.
-- GDPR Article 6, "Lawfulness of Processing" (gdpr-info.eu/art-6-gdpr/) — the legal basis for processing analytics data in the context of the Resurface feature; the consent and legitimate interest considerations referenced in the PII & Privacy section are drawn from GDPR Article 6.
+- Amplitude, "Event Tracking Best Practices" (amplitude.com/blog/event-tracking-best-practices) . the event naming conventions and property taxonomy used in this spec; Amplitude's guidance on using snake_case naming, consistent property types, and separating user properties from event properties informed the structure.
+- Segment, "Analytics Academy: Tracking Plan" (segment.com/academy/collecting-data/naming-conventions-for-clean-data/) . the tracking plan methodology that influenced the event inventory format; Segment's emphasis on a centralized tracking plan document as the single source of truth for all analytics events shaped the document's role in the development workflow.
+- GDPR Article 6, "Lawfulness of Processing" (gdpr-info.eu/art-6-gdpr/) . the legal basis for processing analytics data in the context of the Resurface feature; the consent and legitimate interest considerations referenced in the PII & Privacy section are drawn from GDPR Article 6.
 
 ---
 
@@ -31,13 +31,13 @@ resurface analytics events for amplitude. need the full spec before
 sprint 8 starts so alex and jess can instrument during the build.
 
 events:
-1. resurface_opt_in — user enables the digest
-2. resurface_digest_sent — server sends a digest email
-3. resurface_digest_opened — user opens the email (caveat: apple MPP)
-4. resurface_item_clicked — user clicks an item in the digest
-5. resurface_unsubscribe — user unsubscribes
-6. resurface_cadence_changed — user changes frequency
-7. resurface_digest_skipped — server skips sending (no qualifying items,
+1. resurface_opt_in . user enables the digest
+2. resurface_digest_sent . server sends a digest email
+3. resurface_digest_opened . user opens the email (caveat: apple MPP)
+4. resurface_item_clicked . user clicks an item in the digest
+5. resurface_unsubscribe . user unsubscribes
+6. resurface_cadence_changed . user changes frequency
+7. resurface_digest_skipped . server skips sending (no qualifying items,
    exclusion window exhausted, etc.)
 
 also need user properties: digest_enabled, digest_cadence, digest_timezone.
@@ -53,7 +53,7 @@ keep it tight. chloe wants to review before sprint planning on monday.
 
 ## Overview
 
-**Feature:** Resurface — daily morning email digest of topic-matched saved items
+**Feature:** Resurface . daily morning email digest of topic-matched saved items
 
 **Analytics Goals:**
 

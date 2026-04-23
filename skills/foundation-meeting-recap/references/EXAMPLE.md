@@ -85,8 +85,8 @@ Agreed on MVP scope (autocomplete + filters in; saved searches deferred) and Q2 
 
 - **Planned topics**: scope, capacity, timeline, next-steps
 - **Topics addressed**: scope, capacity (2 of 4)
-- **Topics skipped**: timeline — deferred because vendor contract question blocks commitment; next-steps — absorbed into emergent vendor-contract discussion
-- **Topics that emerged**: vendor-contract-review — alex raised a prior email from the search-provider indicating potential licensing limits on usage; needs investigation before timeline is committable
+- **Topics skipped**: timeline. deferred because vendor contract question blocks commitment; next-steps. absorbed into emergent vendor-contract discussion
+- **Topics that emerged**: vendor-contract-review. alex raised a prior email from the search-provider indicating potential licensing limits on usage; needs investigation before timeline is committable
 
 ### Topics
 
@@ -100,7 +100,7 @@ Walked the scope draft together. Autocomplete and filters had clear customer-res
 
 **Decisions made**
 
-- **MVP scope: autocomplete IN, filters IN, saved searches OUT (defer to v2)** — rationale: autocomplete + filters cover 80% of the research-identified user need; saved searches adds complexity (accounts, persistence) that costs Q2 engineering time without proportional customer-value gain
+- **MVP scope: autocomplete IN, filters IN, saved searches OUT (defer to v2)**. rationale: autocomplete + filters cover 80% of the research-identified user need; saved searches adds complexity (accounts, persistence) that costs Q2 engineering time without proportional customer-value gain
 
 **Actions**
 
@@ -123,7 +123,7 @@ Alex walked the Q2 capacity model. 8 sprint-weeks available for search; no backf
 
 **Decisions made**
 
-- **Q2 engineering capacity: 8 sprint-weeks committed to search feature** — rationale: fits within scope agreed in prior topic; no backfill required
+- **Q2 engineering capacity: 8 sprint-weeks committed to search feature**. rationale: fits within scope agreed in prior topic; no backfill required
 
 **Actions**
 
@@ -138,7 +138,7 @@ Alex walked the Q2 capacity model. 8 sprint-weeks available for search; no backf
 
 #### Vendor-contract-review (emergent)
 
-*Type: Discussion (emergent — not on agenda)*
+*Type: Discussion (emergent. not on agenda)*
 
 **Discussion**
 
@@ -146,7 +146,7 @@ Alex surfaced a prior email from the search-provider (Algolia) indicating possib
 
 **Decisions made**
 
-- **Defer timeline commitment until vendor contract is reviewed** [confidence: high] — rationale: committing a date before vendor-licensing risk is known would create rework
+- **Defer timeline commitment until vendor contract is reviewed** [confidence: high]. rationale: committing a date before vendor-licensing risk is known would create rework
 
 **Actions**
 
@@ -155,8 +155,8 @@ Alex surfaced a prior email from the search-provider (Algolia) indicating possib
 
 **Open questions**
 
-- Does vendor licensing support our projected Q2 query volume? [confidence: high — specific question]
-- If limits apply, are they negotiable or hard? [confidence: medium — depends on legal review]
+- Does vendor licensing support our projected Q2 query volume? [confidence: high. specific question]
+- If limits apply, are they negotiable or hard? [confidence: medium. depends on legal review]
 
 ---
 
@@ -199,7 +199,7 @@ Alex surfaced a prior email from the search-provider (Algolia) indicating possib
 
 ### Referenced artifacts
 
-- Agenda: 2026-04-17_14-00EST_search-feature-kickoff_agenda.md — used for topic skeleton and desired-outcomes reconciliation
+- Agenda: 2026-04-17_14-00EST_search-feature-kickoff_agenda.md. used for topic skeleton and desired-outcomes reconciliation
 - Brief: 2026-04-17_14-00EST_search-feature-kickoff_brief.md (consulted for stakeholder context)
 - Prior recaps on this topic: none (this is a kickoff)
 
@@ -213,8 +213,8 @@ Alex surfaced a prior email from the search-provider (Algolia) indicating possib
 
 - **Generated**: 2026-04-18T09:15:00Z
 - **Skill version**: 1.0.0
-- **Input quality**: high — transcript plus live notes; all speakers identifiable
-- **Overall confidence**: high — decisions, actions, owners, dates all directly supported in transcript
+- **Input quality**: high. transcript plus live notes; all speakers identifiable
+- **Overall confidence**: high. decisions, actions, owners, dates all directly supported in transcript
 - **Known gaps**: None identified
-- **Inferences applied**: topic "vendor-contract-review" emerged during meeting and was not in agenda; labeled as emergent [confidence: high — explicit in transcript]
+- **Inferences applied**: topic "vendor-contract-review" emerged during meeting and was not in agenda; labeled as emergent [confidence: high. explicit in transcript]
 - **Fabrication check**: all action owners (maria, alex, jonathan) appear in attendees list; no unassigned actions

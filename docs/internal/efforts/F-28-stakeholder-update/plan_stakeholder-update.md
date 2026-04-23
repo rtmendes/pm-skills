@@ -62,7 +62,7 @@ Per-skill execution plan. Reads together with effort brief ([`../F-28-stakeholde
    - `## The update` section with selected channel variant
    - `## Technical-to-business translation notes` (when translations applied)
    - Sources & References
-4. **Write EXAMPLE.md** — engineering update from customer-facing team on search-feature decisions
+4. **Write EXAMPLE.md**. engineering update from customer-facing team on search-feature decisions
 5. **Write slash command** `commands/stakeholder-update.md`
 6. **Write 3 library samples** covering distinct channel + audience combinations per deliverables
 7. **Generate/write public skill doc**
@@ -77,13 +77,13 @@ Per-skill execution plan. Reads together with effort brief ([`../F-28-stakeholde
 
 ## Estimated effort
 
-Medium-high. Expect 60-75 minutes. Channel variants multiply authoring work (one content core, five rendering targets). Sample authoring is the largest time sink — 3 samples × 3-5 channel variants each if comprehensive, or 3 samples × 1 channel each if illustrative only. Recommend 3 samples × 1 channel (focused).
+Medium-high. Expect 60-75 minutes. Channel variants multiply authoring work (one content core, five rendering targets). Sample authoring is the largest time sink. 3 samples × 3-5 channel variants each if comprehensive, or 3 samples × 1 channel each if illustrative only. Recommend 3 samples × 1 channel (focused).
 
 ## Notes
 
 - **No separate Shareable summary section**: the entire output is shareable content
-- **Primary audience is non-attendees; secondary is some attendees** — framing reflects mixed audience reality
-- Translation log is inspectable — not hidden — so users can verify translations land
+- **Primary audience is non-attendees; secondary is some attendees**. framing reflects mixed audience reality
+- Translation log is inspectable. not hidden. so users can verify translations land
 - Thread continuation auto-detection runs against `project`/`topics` frontmatter match on prior stakeholder-update filenames in same directory
 - `primary_cta` is non-empty; "FYI-only" is an acceptable value
 - Channel inference when absent: engineering/design → slack; leadership → email; mixed → notion; formal reporting → exec-memo

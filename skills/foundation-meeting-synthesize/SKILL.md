@@ -1,10 +1,9 @@
-<!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
 ---
 name: foundation-meeting-synthesize
-description: Cross-meeting archaeology skill. Consumes multiple meeting recaps (or raw notes) over a period and surfaces patterns invisible in any single meeting: how decisions evolved, who has been saying what, where threads are stalling, where contradictions have emerged. Produces a plain-text timeline, themes with confidence markers, stakeholder position tracking, consolidated decision list, contradiction flags, open items, narrative summary, and prioritized follow-ups.
+description: Cross-meeting archaeology skill. Consumes multiple meeting recaps (or raw notes) over a period and surfaces patterns invisible in any single meeting. Shows how decisions evolved, who has been saying what, where threads are stalling, and where contradictions have emerged. Produces a plain-text timeline, themes with confidence markers, stakeholder position tracking, consolidated decision list, contradiction flags, open items, narrative summary, and prioritized follow-ups.
 classification: foundation
-version: "1.0.0"
-updated: 2026-04-17
+version: "1.0.1"
+updated: 2026-04-22
 license: Apache-2.0
 metadata:
   category: meeting
@@ -64,7 +63,7 @@ When asked to create a meeting synthesis, follow these steps:
    Meeting count after filter, time range detected from source metadata, per-source input quality levels, scope filter description.
 
 4. **Build the plain-text timeline**
-   Chronological order by `meeting_date`. Each entry shows date, meeting name, key decision or shift, and confidence or contradiction flag if applicable. Render as markdown (no binary images — must render everywhere).
+   Chronological order by `meeting_date`. Each entry shows date, meeting name, key decision or shift, and confidence or contradiction flag if applicable. Render as markdown (no binary images. must render everywhere).
 
 5. **Extract themes**
    Cluster recurring topics across sources. For each theme, record description, sources where it appeared, and confidence marker tied to frequency ("appears in 5/5 meetings" → high; "appears in 2/5 meetings" → medium; "mentioned in 1 meeting" → low).
@@ -129,5 +128,5 @@ When asked to create a meeting synthesis, follow these steps:
 ## See also
 
 - [Meeting Skills Family Contract](../../docs/reference/skill-families/meeting-skills-contract.md)
-- [`/meeting-recap`](../foundation-meeting-recap/SKILL.md) — upstream: primary input source
-- [`/discover-interview-synthesis`](../discover-interview-synthesis/SKILL.md) — sibling pattern for user-research conversations (different domain)
+- [`/meeting-recap`](../foundation-meeting-recap/SKILL.md). upstream: primary input source
+- [`/discover-interview-synthesis`](../discover-interview-synthesis/SKILL.md). sibling pattern for user-research conversations (different domain)

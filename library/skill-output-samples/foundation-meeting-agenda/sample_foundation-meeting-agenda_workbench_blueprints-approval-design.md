@@ -9,11 +9,11 @@ thread: workbench
 context: blueprints-approval-design
 ---
 
-# Sample: foundation-meeting-agenda — Workbench Blueprints Approval-Gate Design
+# Sample: foundation-meeting-agenda. Workbench Blueprints Approval-Gate Design
 
 ## Scenario
 
-Workbench is an enterprise collaboration platform (Series B, ~200 employees, ~500 enterprise customers). The team is designing approval gates for Blueprints, a template system targeted at regulated-industry customers (healthcare, FSI). The PM runs a 60-minute working session with design, engineering, and compliance to co-design the approval-gate UX. This is enterprise PM work — the prompt is thorough with stakeholder list, constraints, and prior research references.
+Workbench is an enterprise collaboration platform (Series B, ~200 employees, ~500 enterprise customers). The team is designing approval gates for Blueprints, a template system targeted at regulated-industry customers (healthcare, FSI). The PM runs a 60-minute working session with design, engineering, and compliance to co-design the approval-gate UX. This is enterprise PM work. the prompt is thorough with stakeholder list, constraints, and prior research references.
 
 Source Notes:
 - Workbench is fictional
@@ -110,25 +110,25 @@ Co-design the approval-gate user experience for Blueprints v1.1. Outcome: a whit
 
 ### Topics
 
-#### Constraint alignment (10 min) — linda-compliance
+#### Constraint alignment (10 min). linda-compliance
 
 - **Type**: Information
 - **Goal**: Team aligned on which regulatory requirements are must-haves vs. nice-to-haves
 - **Pre-read**: [regulatory requirements summary](https://notion.example/blueprints-regs)
 
-#### Approval-flow co-design (25 min) — sasha-designer
+#### Approval-flow co-design (25 min). sasha-designer
 
 - **Type**: Working
 - **Goal**: Whiteboard-level sketch of the happy-path approval flow, jointly drafted in the session
 - **Pre-read**: [customer interview synthesis](https://notion.example/blueprints-customer-interviews)
 
-#### Exception handling (15 min) — raj-eng
+#### Exception handling (15 min). raj-eng
 
 - **Type**: Discussion
 - **Goal**: Agreement on how rejected-and-amended docs flow through approval; implementation sizing
 - **Pre-read**: none
 
-#### Deliverable commit (10 min) — david-pm
+#### Deliverable commit (10 min). david-pm
 
 - **Type**: Decision
 - **Goal**: Spec-doc owner assigned; review cadence agreed
@@ -183,9 +183,9 @@ Co-design the approval-gate user experience for Blueprints v1.1. Outcome: a whit
 
 - **Generated**: 2026-04-24T10:00:00Z
 - **Skill version**: 1.0.0
-- **Input quality**: high — thorough enterprise-style prompt with full context
-- **Overall confidence**: high — all values user-specified or directly derivable
+- **Input quality**: high. thorough enterprise-style prompt with full context
+- **Overall confidence**: high. all values user-specified or directly derivable
 - **Known gaps**: None identified
 - **Inferences applied**: Meeting type inferred as working-session [confidence: high, "working session format" explicit]; linda's role as decision-maker inferred from compliance-approval authority
-- **Anti-meeting check**: Ran — synchronous value: co-creation (shared Figma board) + compliance validation; sync format essential
+- **Anti-meeting check**: Ran. synchronous value: co-creation (shared Figma board) + compliance validation; sync format essential
 ```

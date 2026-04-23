@@ -13,7 +13,7 @@ metadata:
 <!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
 # Refinement Notes
 
-Refinement notes capture the outcomes of backlog refinement (grooming) sessions—what was discussed, what was estimated, and what decisions were made. They serve as a quick reference for team members who missed the session and a historical record of how stories evolved from idea to ready-for-sprint.
+Refinement notes capture the outcomes of backlog refinement (grooming) sessions.what was discussed, what was estimated, and what decisions were made. They serve as a quick reference for team members who missed the session and a historical record of how stories evolved from idea to ready-for-sprint.
 
 ## When to Use
 
@@ -34,7 +34,7 @@ When asked to document refinement notes, follow these steps:
    For each story, capture the outcome: estimated points, refined status, key discussion points, and any modifications made to the original scope.
 
 3. **Document Questions Raised**
-   Questions that couldn't be answered in the session need owners and due dates. Don't let them disappear—they often block sprint planning.
+   Questions that couldn't be answered in the session need owners and due dates. Don't let them disappear.they often block sprint planning.
 
 4. **Capture Decisions Made**
    Record any scope decisions, technical approaches agreed upon, or priority changes. These decisions are valuable context that gets lost without documentation.

@@ -35,7 +35,7 @@ Runs against these 5 skills:
 | Check | Rule |
 |-------|------|
 | SKILL.md references contract | File contains a link to `docs/reference/skill-families/meeting-skills-contract.md` |
-| Zero-friction execution section | SKILL.md contains a heading `## Zero-friction execution` (or `## Go mode`) — the go-mode behavioral contract must be acknowledged in each skill |
+| Zero-friction execution section | SKILL.md contains a heading `## Zero-friction execution` (or `## Go mode`). the go-mode behavioral contract must be acknowledged in each skill |
 | TEMPLATE.md frontmatter fields | Universal base fields required: `artifact_type`, `version`, `generated_at`, `generated_by_skill`, `input_quality`, `confidence`, `visibility`, `status` |
 | `artifact_type` value | Matches the skill: `meeting-agenda`, `meeting-brief`, `meeting-recap`, `meeting-synthesis`, or `stakeholder-update` |
 | Shareable summary section | TEMPLATE.md contains `## Shareable summary` section (**exception**: `foundation-stakeholder-update`, whose entire output is shareable content per family contract) |
@@ -44,18 +44,18 @@ Runs against these 5 skills:
 
 ## What It Does NOT Check
 
-Deliberately out of scope — other scripts or manual review handle these:
+Deliberately out of scope. other scripts or manual review handle these:
 
-- Universal skill frontmatter (name, description word count, version, updated, license) — handled by `lint-skills-frontmatter`
-- Commands referencing correct SKILL.md path — handled by `validate-commands`
-- AGENTS.md listing all skills — handled by `validate-agents-md`
-- Field population in frontmatter (optional fields may be null/absent — skills infer)
+- Universal skill frontmatter (name, description word count, version, updated, license). handled by `lint-skills-frontmatter`
+- Commands referencing correct SKILL.md path. handled by `validate-commands`
+- AGENTS.md listing all skills. handled by `validate-agents-md`
+- Field population in frontmatter (optional fields may be null/absent. skills infer)
 - Content quality or semantic correctness
 - Enum value validation beyond `artifact_type` (optional enums like `meeting_type`, `channel`, etc. are validated at skill-authoring time via sample review, not CI)
 
 ## Posture
 
-**Enforcing** — violations fail the CI job and block merges. Rationale: all 5 skills are authored together against the family contract; there is no retroactive cleanup phase needed. See contract section "Enforcement (CI)" for the full rationale.
+**Enforcing**. violations fail the CI job and block merges. Rationale: all 5 skills are authored together against the family contract; there is no retroactive cleanup phase needed. See contract section "Enforcement (CI)" for the full rationale.
 
 ## Graceful behavior during scaffolding
 
@@ -63,8 +63,8 @@ When a skill directory does not yet exist (pre-authoring), the script emits a wa
 
 ## Exit codes
 
-- `0` — all checks passed
-- `1` — one or more checks failed
+- `0`. all checks passed
+- `1`. one or more checks failed
 
 ## When to update this script
 

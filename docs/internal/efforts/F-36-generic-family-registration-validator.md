@@ -7,7 +7,7 @@ Agent: Claude Opus 4.7
 
 ## Scope
 
-Create `scripts/validate-skill-family-registration.sh` + `.ps1` + `.md` — a generic validator that detects skill-family membership via a `metadata.frameworks` frontmatter marker, loads the declared family's contract path from convention, and invokes the family's per-family validator. Scales the meeting-skills family pattern to any future cross-cutting skill family without requiring per-family hardcoding.
+Create `scripts/validate-skill-family-registration.sh` + `.ps1` + `.md`. a generic validator that detects skill-family membership via a `metadata.frameworks` frontmatter marker, loads the declared family's contract path from convention, and invokes the family's per-family validator. Scales the meeting-skills family pattern to any future cross-cutting skill family without requiring per-family hardcoding.
 
 Surfaced by the post-v2.11.0 CI audit (see `docs/internal/audit-ci/2026-04-18_ci-audit_post-v2.11.0.md`, gap G2). Complements F-31 (pm-skill-validate family-awareness).
 
@@ -15,7 +15,7 @@ Surfaced by the post-v2.11.0 CI audit (see `docs/internal/audit-ci/2026-04-18_ci
 
 v2.11.0 shipped the first skill family with its own validator (`validate-meeting-skills-family.sh`). That validator hardcodes the 5 meeting skills by name in a `FAMILY_SKILLS` array and enforces meeting-family-specific checks only.
 
-When the next family lands (e.g., Research Family, Delivery Family — both candidates in `docs/reference/skill-families/index.md`), the current pattern requires:
+When the next family lands (e.g., Research Family, Delivery Family. both candidates in `docs/reference/skill-families/index.md`), the current pattern requires:
 1. A per-family validator script (`validate-research-skills-family.sh`)
 2. A per-family step in `validation.yml`
 3. A per-family FAMILY_SKILLS array maintained inside the validator
@@ -57,9 +57,9 @@ scripts/validate-{family-name}.sh
 
 For every skill in `skills/` with a `metadata.frameworks` entry containing a value matching `*-skills-family` pattern:
 
-1. **Family contract exists at the predicted path** — if `metadata.frameworks: [research-skills-family]`, check `docs/reference/skill-families/research-skills-family-contract.md` exists
-2. **SKILL.md references the family contract** — skill's SKILL.md must contain a link to the family contract file
-3. **Per-family validator runs if present** — if `scripts/validate-{family}.sh` exists, invoke it; otherwise skip with a note
+1. **Family contract exists at the predicted path**. if `metadata.frameworks: [research-skills-family]`, check `docs/reference/skill-families/research-skills-family-contract.md` exists
+2. **SKILL.md references the family contract**. skill's SKILL.md must contain a link to the family contract file
+3. **Per-family validator runs if present**. if `scripts/validate-{family}.sh` exists, invoke it; otherwise skip with a note
 4. **Cross-family generic checks**:
    - Skill frontmatter includes `metadata.frameworks` as an array (not a string)
    - Multiple family memberships allowed (a skill could belong to multiple cross-cutting families; future-proof)
@@ -87,7 +87,7 @@ Added to `.github/workflows/validation.yml` as an enforcing step:
   run: pwsh -File scripts/validate-skill-family-registration.ps1
 ```
 
-Unlike F-33 (which starts advisory), F-36 is designed to be enforcing from day one — the conformance checks are structural and trivially satisfied by new skills that follow the convention.
+Unlike F-33 (which starts advisory), F-36 is designed to be enforcing from day one. the conformance checks are structural and trivially satisfied by new skills that follow the convention.
 
 ## Classification
 
@@ -97,19 +97,19 @@ Unlike F-33 (which starts advisory), F-36 is designed to be enforcing from day o
 
 ## Exemplars
 
-- `scripts/validate-meeting-skills-family.sh` — pattern for per-family validator (F-36 invokes these)
-- `scripts/lint-skills-frontmatter.sh` — pattern for iterating across all skills with frontmatter parsing
-- `scripts/validate-agents-md.sh` — pattern for cross-skill consistency checks
-- `docs/reference/skill-families/index.md` — landing page that documents the families this validator discovers
+- `scripts/validate-meeting-skills-family.sh`. pattern for per-family validator (F-36 invokes these)
+- `scripts/lint-skills-frontmatter.sh`. pattern for iterating across all skills with frontmatter parsing
+- `scripts/validate-agents-md.sh`. pattern for cross-skill consistency checks
+- `docs/reference/skill-families/index.md`. landing page that documents the families this validator discovers
 
 ## Deliverables
 
-- `scripts/validate-skill-family-registration.sh` — bash implementation
-- `scripts/validate-skill-family-registration.ps1` — PowerShell equivalent
-- `scripts/validate-skill-family-registration.md` — documentation per `.sh + .ps1 + .md` convention
-- `.github/workflows/validation.yml` — new step added (enforcing)
-- `scripts/README_SCRIPTS.md` — entry describing the new script
-- `docs/reference/skill-families/index.md` — minor update describing the registration convention for new family authors
+- `scripts/validate-skill-family-registration.sh`. bash implementation
+- `scripts/validate-skill-family-registration.ps1`. PowerShell equivalent
+- `scripts/validate-skill-family-registration.md`. documentation per `.sh + .ps1 + .md` convention
+- `.github/workflows/validation.yml`. new step added (enforcing)
+- `scripts/README_SCRIPTS.md`. entry describing the new script
+- `docs/reference/skill-families/index.md`. minor update describing the registration convention for new family authors
 
 ## Validation
 
@@ -121,7 +121,7 @@ Unlike F-33 (which starts advisory), F-36 is designed to be enforcing from day o
 
 - How do we handle family membership that's declared in SKILL.md but the skill doesn't conform to the family contract? Proposal: F-36 only checks *registration* (the declaration + convention); per-family validator catches conformance.
 - Should multi-family skills be allowed? Proposal: yes in the schema, but flag as unusual with advisory warning. Real-world case: a skill that belongs to both meeting-skills-family and a hypothetical research-skills-family.
-- What if a family contract exists but no skills declare membership yet? Proposal: not validated — the contract alone doesn't require declared members. Prevents chicken-and-egg issues during family design.
+- What if a family contract exists but no skills declare membership yet? Proposal: not validated. the contract alone doesn't require declared members. Prevents chicken-and-egg issues during family design.
 
 ## Dependencies
 
@@ -132,8 +132,8 @@ Unlike F-33 (which starts advisory), F-36 is designed to be enforcing from day o
 ## Status Transitions
 
 - **Backlog** (current)
-- **In Progress** — when validator authoring begins
-- **Shipped** — on v2.12.0 tag + push
+- **In Progress**. when validator authoring begins
+- **Shipped**. on v2.12.0 tag + push
 
 ## Relationship to existing per-family validator
 
@@ -148,4 +148,4 @@ Both run in CI; they're complementary, not overlapping:
 
 ## Detailed specification
 
-Deferred — produced during script authoring pass. Starting implementation pattern: iterate `skills/*/SKILL.md`, parse YAML frontmatter, extract `metadata.frameworks` list, for each entry matching `*-skills-family` pattern, perform the checks listed above.
+Deferred. produced during script authoring pass. Starting implementation pattern: iterate `skills/*/SKILL.md`, parse YAML frontmatter, extract `metadata.frameworks` list, for each entry matching `*-skills-family` pattern, perform the checks listed above.

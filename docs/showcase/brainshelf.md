@@ -1,6 +1,6 @@
 ---
 title: "Brainshelf: Follow the Product"
-description: "Follow Brainshelf through the complete PM lifecycle — from discovery to pivot decision."
+description: "Follow Brainshelf through the complete PM lifecycle . from discovery to pivot decision."
 tags:
   - Showcase
   - Brainshelf
@@ -8,9 +8,9 @@ tags:
 
 # Brainshelf: Follow the Product
 
-> Post-seed, ~20 employees, ~22,000 MAU. Building **Resurface** — contextual morning email digest.
+> Post-seed, ~20 employees, ~22,000 MAU. Building **Resurface** . contextual morning email digest.
 >
-> **Prompt style:** Casual — rough, fast, enough context to work. Bullet points and shorthand.
+> **Prompt style:** Casual . rough, fast, enough context to work. Bullet points and shorthand.
 
 ## Phase: Foundation
 
@@ -167,7 +167,7 @@ tags:
 
 ### Competitive Analysis
 
-*Brainshelf consumer PKM app — competitive landscape for content resurfacing features*
+*Brainshelf consumer PKM app . competitive landscape for content resurfacing features*
 
 !!! quote "Prompt"
     ```
@@ -179,7 +179,7 @@ tags:
 
     context: brainshelf is a consumer pkm/save-for-later tool, ~85k registered
     users, ~22k MAU [fictional]. core problem is users save tons of stuff but
-    never come back to read it — 47 items saved/month, <9% revisited within
+    never come back to read it . 47 items saved/month, <9% revisited within
     30 days [fictional].
 
     4 competitors to analyze: readwise, raindrop.io, pocket (mozilla),
@@ -196,7 +196,7 @@ tags:
 
 ### Interview Synthesis
 
-*Brainshelf consumer PKM app — user interviews on saved content re-engagement*
+*Brainshelf consumer PKM app . user interviews on saved content re-engagement*
 
 !!! quote "Prompt"
     ```
@@ -227,7 +227,7 @@ tags:
 
 ### Stakeholder Summary
 
-*Brainshelf consumer PKM app — internal stakeholder map for the Resurface feature*
+*Brainshelf consumer PKM app . internal stakeholder map for the Resurface feature*
 
 !!! quote "Prompt"
     ```
@@ -238,11 +238,11 @@ tags:
     small-team politics, not enterprise governance.
 
     key people:
-    - marco (ceo/cofounder) — big advocate, sees this as the retention bet
-    - alex (eng lead) — supportive but worried about A/B test infrastructure
-    - jordan (growth) — wants resurface as the retention lever
-    - dan (designer) — concerned about the digest feeling spammy
-    - chloe (data) — needs instrumentation for the experiment
+    - marco (ceo/cofounder) . big advocate, sees this as the retention bet
+    - alex (eng lead) . supportive but worried about A/B test infrastructure
+    - jordan (growth) . wants resurface as the retention lever
+    - dan (designer) . concerned about the digest feeling spammy
+    - chloe (data) . needs instrumentation for the experiment
 
     want a proper stakeholder map with communication plan.
     ```
@@ -258,7 +258,7 @@ tags:
 
 ### Problem Statement
 
-*Brainshelf consumer PKM app — saved content re-engagement problem statement*
+*Brainshelf consumer PKM app . saved content re-engagement problem statement*
 
 !!! quote "Prompt"
     ```
@@ -283,7 +283,7 @@ tags:
 
 ### Hypothesis
 
-*Brainshelf consumer PKM app — Resurface morning email digest hypothesis*
+*Brainshelf consumer PKM app . Resurface morning email digest hypothesis*
 
 !!! quote "Prompt"
     ```
@@ -311,7 +311,7 @@ tags:
 
 ### Opportunity Tree
 
-*Brainshelf consumer PKM app — opportunity tree for saved content re-engagement*
+*Brainshelf consumer PKM app . opportunity tree for saved content re-engagement*
 
 !!! quote "Prompt"
     ```
@@ -321,10 +321,10 @@ tags:
     by end of Q2 2026.
 
     three opportunities from interviews + data:
-    1. re-engagement trigger gap — users have no external prompt to return
-    2. content relevance decay — old saves lose timeliness, making the
+    1. re-engagement trigger gap . users have no external prompt to return
+    2. content relevance decay . old saves lose timeliness, making the
        library feel stale
-    3. library overwhelm — 400-item undifferentiated list creates avoidance
+    3. library overwhelm . 400-item undifferentiated list creates avoidance
 
     solutions I'm considering:
     - opp 1: morning email digest (resurface), in-app notification card
@@ -344,7 +344,7 @@ tags:
 
 ### JTBD Canvas
 
-*Brainshelf consumer PKM app — JTBD canvas for saved content re-engagement*
+*Brainshelf consumer PKM app . JTBD canvas for saved content re-engagement*
 
 !!! quote "Prompt"
     ```
@@ -352,7 +352,7 @@ tags:
 
     the core job for the resurface feature. users save stuff to brainshelf
     with the intent to read it later, but the act of saving satisfies the
-    intent — they never actually come back. so the real job isn't "save to
+    intent . they never actually come back. so the real job isn't "save to
     read later" (that job is already done by the save action), the real job
     is "rediscover the things I saved that are still worth my time."
 
@@ -375,7 +375,7 @@ tags:
 
 ### Solution Brief
 
-*Brainshelf consumer PKM app — Resurface feature solution brief for team alignment*
+*Brainshelf consumer PKM app . Resurface feature solution brief for team alignment*
 
 !!! quote "Prompt"
     ```
@@ -403,13 +403,13 @@ tags:
     ---
 
 ??? example "Full output: Solution Brief"
-    # Solution Brief: Resurface — Morning Email Digest
+    # Solution Brief: Resurface . Morning Email Digest
 
 ---
 
 ### Spike Summary
 
-*Brainshelf consumer PKM app — topic-matching algorithm spike for the Resurface digest*
+*Brainshelf consumer PKM app . topic-matching algorithm spike for the Resurface digest*
 
 !!! quote "Prompt"
     ```
@@ -421,10 +421,10 @@ tags:
     annoy people?
 
     three approaches tested:
-    1. tag-based — use OG tags, domain, URL patterns. simplest, no ML.
-    2. tfidf — extract article text, vectorize, cosine similarity. no
+    1. tag-based . use OG tags, domain, URL patterns. simplest, no ML.
+    2. tfidf . extract article text, vectorize, cosine similarity. no
        external api. medium complexity.
-    3. openai embeddings — text-embedding-3-small. highest accuracy but
+    3. openai embeddings . text-embedding-3-small. highest accuracy but
        adds external dependency and per-call cost.
 
     benchmark: 3 real user libraries (anonymized), 50 items each,
@@ -447,21 +447,21 @@ tags:
 
 ### Architecture Decision Record
 
-*Brainshelf consumer PKM app — email sending infrastructure decision for the Resurface digest*
+*Brainshelf consumer PKM app . email sending infrastructure decision for the Resurface digest*
 
 !!! quote "Prompt"
     ```
     /adr
 
     email sending infra for resurface. we don't have any email sending
-    today — everything is in-app or firebase push. need to pick a provider
+    today . everything is in-app or firebase push. need to pick a provider
     for the daily digest.
 
     options we looked at:
     - sendgrid (twilio): mature, everyone uses it, but their free tier
       shrank and the dashboard is confusing
     - postmark: great deliverability reputation, simple api, but
-      transactional only — no batch/digest support without workarounds
+      transactional only . no batch/digest support without workarounds
     - resend: new, developer-first, react email templates, free tier
       covers our a/b test volume
 
@@ -478,7 +478,7 @@ tags:
 
 ### Design Rationale
 
-*Brainshelf consumer PKM app — digest email layout design decision for the Resurface feature*
+*Brainshelf consumer PKM app . digest email layout design decision for the Resurface feature*
 
 !!! quote "Prompt"
     ```
@@ -486,15 +486,15 @@ tags:
 
     digest email layout for resurface. dan showed three options:
 
-    option A: rich cards — article thumbnail, title, excerpt, topic tag
+    option A: rich cards . article thumbnail, title, excerpt, topic tag
     for each item. looks great in figma but heavy on images and might
     trigger promotions tab.
 
-    option B: structured text — article title (linked), source domain,
+    option B: structured text . article title (linked), source domain,
     topic tag, estimated read time. no images. clean, editorial feel.
     fast to scan.
 
-    option C: minimal plain text — just titles and links, no styling.
+    option C: minimal plain text . just titles and links, no styling.
     maximum deliverability but looks like a system notification, not a
     product experience.
 
@@ -515,7 +515,7 @@ tags:
 
 ### PRD
 
-*Brainshelf consumer PKM app — Resurface feature PRD for Sprint 8 build*
+*Brainshelf consumer PKM app . Resurface feature PRD for Sprint 8 build*
 
 !!! quote "Prompt"
     ```
@@ -528,7 +528,7 @@ tags:
     to recent reading. opt-in required. 7:30 AM local time. tfidf for
     topic matching. resend for email. text-only layout.
 
-    target users: active savers (10+ items, active in last 30 days) —
+    target users: active savers (10+ items, active in last 30 days) .
     about 9,800 users [fictional].
 
     metrics: 7-day return rate 18%→25% [fictional], email CTR ≥15% [fictional],
@@ -545,13 +545,13 @@ tags:
     ---
 
 ??? example "Full output: PRD"
-    # PRD: Resurface — Morning Email Digest
+    # PRD: Resurface . Morning Email Digest
 
 ---
 
 ### User Stories
 
-*Brainshelf consumer PKM app — Resurface user stories for Sprint 8*
+*Brainshelf consumer PKM app . Resurface user stories for Sprint 8*
 
 !!! quote "Prompt"
     ```
@@ -561,11 +561,11 @@ tags:
     criteria.
 
     stories:
-    1. receive daily digest (P0) — the core email delivery
-    2. opt in to digest (P0) — home screen card + settings toggle
-    3. click item to read (P0) — one-click from email to article
-    4. change cadence (P1) — daily vs 3x/week
-    5. unsubscribe from digest (P0) — one-click from email footer
+    1. receive daily digest (P0) . the core email delivery
+    2. opt in to digest (P0) . home screen card + settings toggle
+    3. click item to read (P0) . one-click from email to article
+    4. change cadence (P1) . daily vs 3x/week
+    5. unsubscribe from digest (P0) . one-click from email footer
 
     keep them tight. alex and jess need to estimate on monday.
     ```
@@ -579,7 +579,7 @@ tags:
 
 ### Edge Cases
 
-*Brainshelf consumer PKM app — Resurface digest edge cases and error states*
+*Brainshelf consumer PKM app . Resurface digest edge cases and error states*
 
 !!! quote "Prompt"
     ```
@@ -607,7 +607,7 @@ tags:
 
 ### Launch Checklist
 
-*Brainshelf consumer PKM app — Resurface feature launch checklist for Sprint 8 ship*
+*Brainshelf consumer PKM app . Resurface feature launch checklist for Sprint 8 ship*
 
 !!! quote "Prompt"
     ```
@@ -628,13 +628,13 @@ tags:
     ---
 
 ??? example "Full output: Launch Checklist"
-    # Launch Checklist: Resurface — Morning Email Digest
+    # Launch Checklist: Resurface . Morning Email Digest
 
 ---
 
 ### Release Notes
 
-*Brainshelf consumer PKM app — Resurface feature release notes for users*
+*Brainshelf consumer PKM app . Resurface feature release notes for users*
 
 !!! quote "Prompt"
     ```
@@ -644,7 +644,7 @@ tags:
     enrollment starts mar 2. writing for the in-app changelog and blog.
 
     tone: friendly, plain language. not techy. our users are knowledge
-    workers who save articles — talk to them about reading, not about
+    workers who save articles . talk to them about reading, not about
     algorithms.
 
     highlights: daily email digest with your most relevant saved content,
@@ -669,7 +669,7 @@ tags:
 
 ### Experiment Design
 
-*Brainshelf consumer PKM app — Resurface A/B test experiment design*
+*Brainshelf consumer PKM app . Resurface A/B test experiment design*
 
 !!! quote "Prompt"
     ```
@@ -684,7 +684,7 @@ tags:
     control gets nothing (current experience). measure 7-day return rate
     for both groups.
 
-    secondary metric: email CTR (treatment only — control doesn't get
+    secondary metric: email CTR (treatment only . control doesn't get
     email). guardrail: unsub rate ≤2%/week.
 
     sample: 400 per variant from the 9,800 eligible users [fictional].
@@ -702,7 +702,7 @@ tags:
 
 ### Instrumentation Spec
 
-*Brainshelf consumer PKM app — Resurface feature analytics instrumentation spec*
+*Brainshelf consumer PKM app . Resurface feature analytics instrumentation spec*
 
 !!! quote "Prompt"
     ```
@@ -712,13 +712,13 @@ tags:
     sprint 8 starts so alex and jess can instrument during the build.
 
     events:
-    1. resurface_opt_in — user enables the digest
-    2. resurface_digest_sent — server sends a digest email
-    3. resurface_digest_opened — user opens the email (caveat: apple MPP)
-    4. resurface_item_clicked — user clicks an item in the digest
-    5. resurface_unsubscribe — user unsubscribes
-    6. resurface_cadence_changed — user changes frequency
-    7. resurface_digest_skipped — server skips sending (no qualifying items,
+    1. resurface_opt_in . user enables the digest
+    2. resurface_digest_sent . server sends a digest email
+    3. resurface_digest_opened . user opens the email (caveat: apple MPP)
+    4. resurface_item_clicked . user clicks an item in the digest
+    5. resurface_unsubscribe . user unsubscribes
+    6. resurface_cadence_changed . user changes frequency
+    7. resurface_digest_skipped . server skips sending (no qualifying items,
        exclusion window exhausted, etc.)
 
     also need user properties: digest_enabled, digest_cadence, digest_timezone.
@@ -735,7 +735,7 @@ tags:
 
 ### Dashboard Requirements
 
-*Brainshelf consumer PKM app — Resurface experiment dashboard requirements for Amplitude*
+*Brainshelf consumer PKM app . Resurface experiment dashboard requirements for Amplitude*
 
 !!! quote "Prompt"
     ```
@@ -745,9 +745,9 @@ tags:
     the a/b test starts (mar 9).
 
     two audiences:
-    1. product team (priya, chloe, alex, jordan) — daily monitoring
+    1. product team (priya, chloe, alex, jordan) . daily monitoring
        during the 4-week test
-    2. marco (ceo) — weekly exec check-in, needs a single-screen summary
+    2. marco (ceo) . weekly exec check-in, needs a single-screen summary
 
     questions the dashboard should answer:
     - is the treatment group returning more than control?
@@ -775,7 +775,7 @@ tags:
 
 ### Experiment Results
 
-*Brainshelf consumer PKM app — Resurface A/B test results and ship decision*
+*Brainshelf consumer PKM app . Resurface A/B test results and ship decision*
 
 !!! quote "Prompt"
     ```
@@ -807,7 +807,7 @@ tags:
 
     surprising: opt-in rate was 41% [fictional], way above the 10% target.
     also surprising: week 4 return rate was HIGHER than week 1 (not
-    novelty decay — habit formation).
+    novelty decay . habit formation).
 
     recommendation: ship to all eligible users.
     ```
@@ -823,13 +823,13 @@ tags:
 
 ### Retrospective
 
-*Brainshelf consumer PKM app — Sprint 8 retrospective after Resurface launch*
+*Brainshelf consumer PKM app . Sprint 8 retrospective after Resurface launch*
 
 !!! quote "Prompt"
     ```
     /retrospective
 
-    sprint 8 retro — resurface launch sprint. need to write this up.
+    sprint 8 retro . resurface launch sprint. need to write this up.
 
     what happened: we shipped resurface on time! first big feature in 6 months.
     but we also had a timezone bug that sent the morning digest at 5am to UK/Europe
@@ -839,21 +839,21 @@ tags:
     format: start/stop/continue. small team (7 people in the room).
     2 wins, the timezone thing, and a few process issues that came up.
 
-    previous retro action items were: (1) set up staging environment email testing —
-    DONE, (2) add integration test for notification delivery — NOT DONE (this
-    contributed to the bug), (3) weekly eng/pm sync — IN PROGRESS.
+    previous retro action items were: (1) set up staging environment email testing .
+    DONE, (2) add integration test for notification delivery . NOT DONE (this
+    contributed to the bug), (3) weekly eng/pm sync . IN PROGRESS.
     ```
 
     ---
 
 ??? example "Full output: Retrospective"
-    # Retrospective: Sprint 8 — Resurface Launch
+    # Retrospective: Sprint 8 . Resurface Launch
 
 ---
 
 ### Lessons Log
 
-*Brainshelf consumer PKM app — timezone handling lesson from the Resurface Sprint 8 launch*
+*Brainshelf consumer PKM app . timezone handling lesson from the Resurface Sprint 8 launch*
 
 !!! quote "Prompt"
     ```
@@ -864,13 +864,13 @@ tags:
     of 7:30 local because the backend didn't recognize "Europe/Kyiv" and
     silently fell back to UTC.
 
-    detected: feb 18, 2026 — alex noticed the send log timestamps were
+    detected: feb 18, 2026 . alex noticed the send log timestamps were
     wrong for EU users.
-    fixed: feb 18, same day — updated IANA database, added explicit
+    fixed: feb 18, same day . updated IANA database, added explicit
     fallback logging, patched within 2 hours.
 
     lesson type: failure pattern / technical
-    the real lesson isn't the specific bug — it's that we had ZERO
+    the real lesson isn't the specific bug . it's that we had ZERO
     integration tests for timezone-dependent behavior. the unit tests
     mocked the timezone, so they never caught the gap between the device
     timezone string and the server's IANA database.
@@ -885,7 +885,7 @@ tags:
 
 ### Refinement Notes
 
-*Brainshelf consumer PKM app — Sprint 9 refinement for Resurface v2 improvements*
+*Brainshelf consumer PKM app . Sprint 9 refinement for Resurface v2 improvements*
 
 !!! quote "Prompt"
     ```
@@ -896,12 +896,12 @@ tags:
 
     stories discussed:
     1. RSF-010: embedding migration (tfidf → openai text-embedding-3-small)
-       — BLOCKED, waiting on openai api key + budget approval from marco
-    2. RSF-011: in-app resurfacing card on home screen — Ready, 5 pts [fictional]
-    3. RSF-012: cadence experiment (daily vs 3x/week, larger sample) —
+       . BLOCKED, waiting on openai api key + budget approval from marco
+    2. RSF-011: in-app resurfacing card on home screen . Ready, 5 pts [fictional]
+    3. RSF-012: cadence experiment (daily vs 3x/week, larger sample) .
        Ready, 3 pts [fictional]
     4. RSF-013: small-library handling (users with <20 items, shorter
-       exclusion window) — Needs Work, alex wants to see the data first
+       exclusion window) . Needs Work, alex wants to see the data first
 
     questions raised: should the in-app card show different items than
     the email digest or the same items? what's the minimum library size
@@ -920,7 +920,7 @@ tags:
 
 ### Pivot Decision
 
-*Brainshelf consumer PKM app — post-experiment persevere decision for Resurface*
+*Brainshelf consumer PKM app . post-experiment persevere decision for Resurface*
 
 !!! quote "Prompt"
     ```
@@ -929,7 +929,7 @@ tags:
     post-experiment pivot decision for resurface. a/b test showed +5.3pp
     lift in 7-day return rate, p=0.008 [fictional]. all guardrails passed.
 
-    recommending: persevere — ship to all eligible users, invest in v2.
+    recommending: persevere . ship to all eligible users, invest in v2.
 
     alternatives considered:
     1. persevere: ship email digest, iterate on relevance and cadence
@@ -944,7 +944,7 @@ tags:
     ---
 
 ??? example "Full output: Pivot Decision"
-    # Pivot Decision: Resurface — Post-Experiment Evaluation
+    # Pivot Decision: Resurface . Post-Experiment Evaluation
 
 ---
 

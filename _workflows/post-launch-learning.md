@@ -211,10 +211,10 @@ Before considering this workflow complete, verify:
 
 ## See Also
 
-- [Feature Kickoff](feature-kickoff.md) — The workflow that typically precedes this one, ending at launch
-- [Lean Startup](lean-startup.md) — If results suggest pivoting, use this to design the next experiment
-- [Sprint Planning](sprint-planning.md) — If results suggest iterating, use this to plan the next sprint
+- [Feature Kickoff](feature-kickoff.md) . The workflow that typically precedes this one, ending at launch
+- [Lean Startup](lean-startup.md) . If results suggest pivoting, use this to design the next experiment
+- [Sprint Planning](sprint-planning.md) . If results suggest iterating, use this to plan the next sprint
 
 ---
 
-*Part of [PM-Skills](../README.md) — Open source Product Management skills for AI agents*
+*Part of [PM-Skills](../README.md) . Open source Product Management skills for AI agents*

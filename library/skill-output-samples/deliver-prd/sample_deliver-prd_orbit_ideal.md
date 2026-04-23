@@ -5,10 +5,10 @@ skill_version: "2.0"
 created: 2026-02-20
 status: sample
 thread: orbit
-context: Orbit async workspace — Orbit Digest PRD
+context: Orbit async workspace . Orbit Digest PRD
 ---
 
-# Sample: Orbit Digest — Product Requirements Document
+# Sample: Orbit Digest . Product Requirements Document
 *Skill:* `deliver-prd` | *Thread:* Orbit | *Sample:* 01 of 03
 
 ---
@@ -18,9 +18,9 @@ context: Orbit async workspace — Orbit Digest PRD
 Orbit is a B2B async workspace platform at Series B, scaling from SMB to mid-market enterprise. After a discovery sprint interviewing eight enterprise trial non-converters, the PM team found that fewer than 20% [fictional] of async video updates are watched by teammates within 48 hours of posting, starving pilots of the shared context needed to justify a paid seat. A follow-up hypothesis test with six enterprise pilot teams showed that surfacing a short AI-generated text summary before the video player loads increased update open rate from 17% to 23% [fictional]. This PRD formalizes Orbit Digest for engineering handoff ahead of the May 2026 enterprise summit.
 
 ### Source Notes
-- Atlassian acquired Loom for $975M in October 2023, establishing the enterprise market for async video — Atlassian press release, Oct 2023: https://www.atlassian.com/company/news/press-releases/atlassian-acquires-loom
-- Buffer's annual State of Remote Work consistently identifies async communication gaps as a leading collaboration challenge for distributed teams — Buffer, "State of Remote Work 2023": https://buffer.com/state-of-remote-work/2023
-- GitLab's Remote Work Report identifies "information overload" as a top pain point even for async-first teams — GitLab, "Remote Work Report 2022": https://about.gitlab.com/company/culture/all-remote/remote-work-report/
+- Atlassian acquired Loom for $975M in October 2023, establishing the enterprise market for async video . Atlassian press release, Oct 2023: https://www.atlassian.com/company/news/press-releases/atlassian-acquires-loom
+- Buffer's annual State of Remote Work consistently identifies async communication gaps as a leading collaboration challenge for distributed teams . Buffer, "State of Remote Work 2023": https://buffer.com/state-of-remote-work/2023
+- GitLab's Remote Work Report identifies "information overload" as a top pain point even for async-first teams . GitLab, "Remote Work Report 2022": https://about.gitlab.com/company/culture/all-remote/remote-work-report/
 
 ---
 
@@ -30,7 +30,7 @@ Orbit is a B2B async workspace platform at Series B, scaling from SMB to mid-mar
 /prd
 
 Feature: Orbit Digest
-Phase: Deliver — ready for engineering handoff
+Phase: Deliver . ready for engineering handoff
 
 Team context:
 Orbit is a B2B async workspace, Series B, ~120 employees. We're expanding from SMB
@@ -38,12 +38,12 @@ to mid-market enterprise. Product team is 3 PMs + 1 design researcher.
 
 Discovery finding:
 Enterprise teams create Orbit channels but only 17% of updates are watched within
-48 hours [fictional]. Root cause: no shared context before video plays — recipients
+48 hours [fictional]. Root cause: no shared context before video plays . recipients
 can't decide if a 4-minute update is worth opening. This is killing our enterprise
 trial-to-paid conversion (currently 19% [fictional]).
 
 Validated solution:
-Orbit Digest — AI-generated text summary (3–5 sentences) surfaced inline before the
+Orbit Digest . AI-generated text summary (3–5 sentences) surfaced inline before the
 video player loads. Hypothesis tested with 6 enterprise pilot teams. Update open rate
 increased from 17% to 23% [fictional] during the pilot.
 
@@ -63,7 +63,7 @@ Scope for this release:
   AI confidence scores shown to end users
 
 Technical decisions already locked:
-- HLS streaming (not WebRTC) — ADR-2026-03
+- HLS streaming (not WebRTC) . ADR-2026-03
 - Whisper (self-hosted) for transcription; Deepgram and AssemblyAI ruled out in spike
 - Summary stored as metadata on the video record, no separate table
 - No confidence score in any user-facing surface (shows confidence indicators
@@ -86,7 +86,7 @@ Diego Flores (Enterprise Sales), Isabel Chen (Legal/Privacy)
 Enterprise teams at Orbit create async update channels to replace synchronous standups and
 review cycles, but fewer than 20% [fictional] of video updates are watched by teammates
 within 48 hours of posting. Without shared context before a video plays, recipients cannot
-determine whether a 4-minute async update is relevant enough to open — so they defer,
+determine whether a 4-minute async update is relevant enough to open . so they defer,
 forget, and eventually stop watching. This creates information silos that directly stall
 Orbit's enterprise trial-to-paid conversion rate, currently at 19% [fictional].
 
@@ -95,14 +95,14 @@ Orbit's enterprise trial-to-paid conversion rate, currently at 19% [fictional].
 Orbit Digest is an AI-generated text summary (3–5 sentences) surfaced inline above the
 video player for each async update on Digest-enabled channels. The summary is generated
 automatically from the video transcript as soon as processing completes, giving recipients
-the shared context they need to decide whether to watch — without requiring creators to
+the shared context they need to decide whether to watch . without requiring creators to
 write separate description text.
 
 ### Target Users
 
-- **Primary:** Async update recipients — enterprise team members who receive updates in
+- **Primary:** Async update recipients . enterprise team members who receive updates in
   Orbit channels and must decide whether to watch them
-- **Secondary:** Async update creators — team leads and PMs whose updates need to be seen;
+- **Secondary:** Async update creators . team leads and PMs whose updates need to be seen;
   Digest lowers the "will anyone watch this?" anxiety by giving context before the play button
 - **Admin:** Workspace and channel admins who configure Digest defaults for their teams
 
@@ -127,7 +127,7 @@ write separate description text.
 
 ### Non-Goals
 
-- Retroactive summarization of existing video libraries (deferred — privacy review and
+- Retroactive summarization of existing video libraries (deferred . privacy review and
   cost modeling required for recordings made before Digest existed)
 - Live session transcription and summary (different use case; scoped separately)
 - Summaries on public or externally shared channel links (legal review required; deferred
@@ -174,20 +174,20 @@ See [Orbit Digest User Stories](#) for full acceptance criteria.
 - Summaries for public or externally shared channel links
 - AI confidence score on any user-facing surface
 - Translation of summaries (transcript language detected; summary generated in the same
-  language — multi-language parity is a v1.2 R&D track)
+  language . multi-language parity is a v1.2 R&D track)
 - Summary search indexing in global search
 - Summary export or API access
 
 ### Future Considerations
 
 - **Retroactive summarization (v1.1):** High value for existing video libraries; blocked
-  by cost modeling and privacy review for pre-Digest recordings — targeting Q3 2026
+  by cost modeling and privacy review for pre-Digest recordings . targeting Q3 2026
 - **External channel summaries (v1.1):** Legal has open questions on data handling for
   guest-accessible content; will resolve during v1 legal review
 - **Multi-language support (v1.2):** Auto-detect transcript language and generate summary
-  in the same language — dependent on Whisper multilingual benchmark results
+  in the same language . dependent on Whisper multilingual benchmark results
 - **Summary API (future):** Expose summaries via Orbit's developer API for third-party
-  integrations — deferred until adoption data validates demand
+  integrations . deferred until adoption data validates demand
 
 ## Solution Design
 
@@ -259,7 +259,7 @@ See [Orbit Digest User Stories](#) for full acceptance criteria.
 2. Toggles Digest on for this channel
 3. All future updates in this channel auto-generate Digest summaries
 
-See [Orbit Digest Design Specs — Figma](#) for full mockups, error states, mobile
+See [Orbit Digest Design Specs . Figma](#) for full mockups, error states, mobile
 layouts, and animation specs.
 
 ### Edge Cases
@@ -269,8 +269,8 @@ layouts, and animation specs.
 | Video shorter than 60 seconds | No Digest generated; Digest area hidden entirely |
 | Silent video or screen recording with no speech | Digest area shows "Summary unavailable" with creator retry link |
 | Creator deletes video update after Digest generated | Summary soft-deleted with the parent update; no orphaned records |
-| Creator re-uploads or trims the video | Existing summary persists; creator prompted: "Your video changed — regenerate summary?" |
-| Non-English transcript detected | Summary generated in the detected language; Digest label updated (e.g., "Digest — Français") |
+| Creator re-uploads or trims the video | Existing summary persists; creator prompted: "Your video changed . regenerate summary?" |
+| Non-English transcript detected | Summary generated in the detected language; Digest label updated (e.g., "Digest . Français") |
 | Whisper pipeline backlog exceeds 5 minutes | "Digest generating…" placeholder remains; creator notified in-product when Digest is ready |
 | Workspace downgrades from Enterprise to Starter | Digest toggle disabled for new updates; existing summaries remain visible |
 
@@ -278,7 +278,7 @@ layouts, and animation specs.
 
 ### Constraints
 
-- Summary generation must not block video upload or playback — runs fully asynchronously
+- Summary generation must not block video upload or playback . runs fully asynchronously
   and independently of the video delivery pipeline
 - Self-hosted Whisper pipeline introduces per-video compute cost; Digest is gated to
   Enterprise plan at launch to maintain unit economics within the target threshold of
@@ -348,15 +348,15 @@ layouts, and animation specs.
 
 ## Open Questions
 
-- [ ] **Minimum video length threshold** — Is 60 seconds the right cutoff, or should
+- [ ] **Minimum video length threshold** . Is 60 seconds the right cutoff, or should
   engineering expose this as a configurable constant for faster post-launch iteration?
   Owner: Marcus Webb (PM)
-- [ ] **Summary regeneration limit** — Should we cap regenerations per update to prevent
+- [ ] **Summary regeneration limit** . Should we cap regenerations per update to prevent
   compute abuse? (Proposed: 3 regenerations per update.) Owner: Maya Okonkwo (Engineering)
-- [ ] **External channel Digest (v1.1 scope)** — If legal review resolves before GA, can
+- [ ] **External channel Digest (v1.1 scope)** . If legal review resolves before GA, can
   we include external channel support in v1 without scope risk? Owner: Isabel Chen
   (Legal/Privacy)
-- [ ] **Extractive fallback** — If the LLM summarization service is unavailable, should we
+- [ ] **Extractive fallback** . If the LLM summarization service is unavailable, should we
   fall back to an extractive summary (first 3 transcript sentences) or show "Summary
   unavailable"? Owner: AI Platform Team
 
@@ -365,8 +365,8 @@ layouts, and animation specs.
 ### Related Documents
 
 - [Problem Statement: Enterprise Async Engagement Gap](#)
-- [Interview Synthesis: Enterprise Trial Non-Converters — 8 Interviews](#)
-- [Hypothesis: Orbit Digest — AI Summaries Before Video](#)
+- [Interview Synthesis: Enterprise Trial Non-Converters . 8 Interviews](#)
+- [Hypothesis: Orbit Digest . AI Summaries Before Video](#)
 - [Solution Brief: Orbit Digest](#)
 - [ADR-2026-03: HLS vs. WebRTC for Async Video Delivery](#)
 - [Spike: Transcription Vendor Evaluation (Whisper / Deepgram / AssemblyAI)](#)
@@ -376,7 +376,7 @@ layouts, and animation specs.
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| 0.1 | Feb 10, 2026 | Marcus Webb | Initial draft — problem, goals, user stories |
+| 0.1 | Feb 10, 2026 | Marcus Webb | Initial draft . problem, goals, user stories |
 | 0.2 | Feb 14, 2026 | Marcus Webb | Added technical constraints; updated scope after ADR-2026-03 and spike results |
 | 0.3 | Feb 17, 2026 | Marcus Webb | Incorporated Priya's UX flow review; added edge cases table; refined Non-Goals |
 | 1.0 | Feb 20, 2026 | Marcus Webb | Final review complete; approved by Maya Okonkwo, Priya Nair, Diego Flores; Isabel Chen approval pending legal |

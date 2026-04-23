@@ -1,7 +1,7 @@
 # [F-16] Mermaid Diagrams Utility Skill
 Status: Merged to main (pending v2.10.0 tag)
 Milestone: v2.10.0
-Issue: TBD (merged without tracking issue — direct commit to feature branch)
+Issue: TBD (merged without tracking issue . direct commit to feature branch)
 Agent: Claude Opus 4.6
 
 ## Scope
@@ -28,15 +28,15 @@ PM describes what they need to communicate:
 
 ### Process
 
-1. **Assess the need** — Is a diagram the right medium? Apply the cardinal rule: diagrams earn their place when they reveal relationships, branching, or flow that prose flattens. If a list suffices, say so.
+1. **Assess the need** . Is a diagram the right medium? Apply the cardinal rule: diagrams earn their place when they reveal relationships, branching, or flow that prose flattens. If a list suffices, say so.
 
-2. **Select diagram type** — Navigate via two lenses:
+2. **Select diagram type** . Navigate via two lenses:
    - **PM use-case guide**: "I need to show decisions" → Flowchart, "I need to show timelines" → Gantt/Timeline
    - **Diagram catalog**: Browse all 15 types with syntax, limits, and PM-relevant examples
 
-3. **Draft the diagram** — Use the planning worksheet (TEMPLATE.md) to inventory nodes, define relationships, and write the mermaid code block following syntax guide rules.
+3. **Draft the diagram** . Use the planning worksheet (TEMPLATE.md) to inventory nodes, define relationships, and write the mermaid code block following syntax guide rules.
 
-4. **Validate** — Run through the syntax validity checklist: renders without error, labels quoted correctly, special characters escaped, node count within limits, accessible colors.
+4. **Validate** . Run through the syntax validity checklist: renders without error, labels quoted correctly, special characters escaped, node count within limits, accessible colors.
 
 ### Output
 A syntactically valid mermaid diagram embedded in the PM's document, with clear labels and accessible styling.
@@ -63,7 +63,7 @@ A syntactically valid mermaid diagram embedded in the PM's document, with clear 
 
 ## Dependencies
 
-- None — standalone utility skill
+- None . standalone utility skill
 
 ## Artifacts Produced
 
@@ -78,8 +78,8 @@ A syntactically valid mermaid diagram embedded in the PM's document, with clear 
 
 ## Estimated Complexity
 
-Medium — significant reference content to write (15 diagram types × consistent structure), but straightforward skill architecture. No code, no automation, no cross-cutting dependencies.
+Medium . significant reference content to write (15 diagram types × consistent structure), but straightforward skill architecture. No code, no automation, no cross-cutting dependencies.
 
 ## PRs
 
-Direct merge to main via `feature/f-16-mermaid-diagrams` branch (commit `06af8fb`, merge commit on main 2026-04-07). No PR — branch merged locally.
+Direct merge to main via `feature/f-16-mermaid-diagrams` branch (commit `06af8fb`, merge commit on main 2026-04-07). No PR . branch merged locally.

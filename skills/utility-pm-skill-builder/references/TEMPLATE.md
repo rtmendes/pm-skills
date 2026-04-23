@@ -10,7 +10,7 @@
 
 {Recommendation: create / revise existing / workflow / command / docs-only}
 
-{Why Gate evidence if applicable — the 2-3 specific prompts or scenarios
+{Why Gate evidence if applicable . the 2-3 specific prompts or scenarios
 where existing skills fail}
 
 ---
@@ -35,7 +35,7 @@ where existing skills fail}
 
 ### Findings
 
-{What was found — specific overlap and differentiation}
+{What was found . specific overlap and differentiation}
 
 ### Why this skill is still needed
 
@@ -61,7 +61,7 @@ where existing skills fail}
 
 ### Writing Guidance
 
-{Zone-specific guidance based on the dominant zone — see Quality Forecast
+{Zone-specific guidance based on the dominant zone . see Quality Forecast
 Guide in SKILL.md for the mapping}
 
 ---
@@ -81,9 +81,9 @@ Guide in SKILL.md for the mapping}
 <!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
 ---
 name: {skill-name}
-description: {20-100 word description on a single line — linter reads first line only}
-phase: {phase}          # for domain skills only — omit for foundation/utility
-classification: {type}  # for foundation/utility only — omit for domain
+description: {20-100 word description on a single line . linter reads first line only}
+phase: {phase}          # for domain skills only . omit for foundation/utility
+classification: {type}  # for foundation/utility only . omit for domain
 version: "1.0.0"
 updated: {date}
 license: Apache-2.0
@@ -102,7 +102,7 @@ metadata:
 
 ## Draft SKILL.md
 
-{Full draft content — not an outline. Includes:
+{Full draft content . not an outline. Includes:
 - Title and introductory paragraph
 - When to Use section
 - When NOT to Use section (if applicable)
@@ -127,7 +127,7 @@ Each section has:
 
 ## Draft EXAMPLE.md
 
-{A complete, realistic example — 150-300 lines.
+{A complete, realistic example . 150-300 lines.
 - Picks a specific PM scenario appropriate to the skill's domain
 - Fills every TEMPLATE.md section with concrete content
 - Demonstrates optional sections both filled and skipped
@@ -176,7 +176,7 @@ Context from user: $ARGUMENTS
 
 ## Validation Checklist
 
-### CI Validation (must pass — enforced by linter + validators)
+### CI Validation (must pass . enforced by linter + validators)
 
 - [ ] `name` matches directory name
 - [ ] `description` is 20-100 words (single-line, no `>-`)
@@ -188,7 +188,7 @@ Context from user: $ARGUMENTS
 - [ ] Command file references correct skill path (`validate-commands.sh`)
 - [ ] AGENTS.md entry uses `#### {name}` + `**Path:**` format (`validate-agents-md.sh`)
 
-### Quality Checks (should pass — builder-enforced, not CI-gated)
+### Quality Checks (should pass . builder-enforced, not CI-gated)
 
 - [ ] `references/EXAMPLE.md` is a complete artifact (150-300 lines), not an outline
 - [ ] Output contract present in SKILL.md

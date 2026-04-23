@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
-# check-count-consistency.sh — Detect stale hardcoded counts in docs.
+# check-count-consistency.sh . Detect stale hardcoded counts in docs.
 #
 # Counts actual skills, commands, and workflows, then scans tracked .md and
 # .json files for hardcoded numbers that no longer match.
 #
 # Exit codes:
-#   0 — All counts are consistent
-#   1 — Stale counts detected
+#   0 . All counts are consistent
+#   1 . Stale counts detected
 #
 # Usage:
 #   ./scripts/check-count-consistency.sh
@@ -51,7 +51,7 @@ EXCLUDES=(
   ':!scripts/check-count-consistency.md'
 )
 
-# Minimum threshold — counts below this are likely per-phase/per-category,
+# Minimum threshold . counts below this are likely per-phase/per-category,
 # not total counts. Comparison uses >= so values equal to the threshold are
 # still checked, which matters as resource counts cross round-number boundaries.
 MIN_THRESHOLD=10

@@ -29,7 +29,7 @@ status: draft
 
 ## Shareable update
 
-> [v1.1.0: This section contains the message body to copy and paste into {{channel}}. EVERYTHING BELOW this section is NOT shareable — audit notes and sources stay internal. The format below matches the selected channel variant; other variants are reference-only.]
+> [v1.1.0: This section contains the message body to copy and paste into {{channel}}. EVERYTHING BELOW this section is NOT shareable. audit notes and sources stay internal. The format below matches the selected channel variant; other variants are reference-only.]
 
 ---
 
@@ -57,7 +57,7 @@ status: draft
 - {{Ask}}: {{by when}}
 
 {{if FYI-only:}}
-*FYI-only — no action needed.*
+*FYI-only. no action needed.*
 
 {{if thread continuation:}}
 *Follow-up to: {{link to prior update}}*
@@ -82,7 +82,7 @@ Hi {{audience}},
 
 **Context**
 
-{{Brief framing — 2-3 sentences}}
+{{Brief framing. 2-3 sentences}}
 
 **What was decided or advanced**
 
@@ -117,7 +117,7 @@ Thanks,
 
 ---
 
-> [End of Shareable update section. Everything below is INTERNAL — do not copy into the outgoing message.]
+> [End of Shareable update section. Everything below is INTERNAL. do not copy into the outgoing message.]
 
 ## Technical-to-business translation notes
 
@@ -130,7 +130,7 @@ Thanks,
 
 **Flagged but kept** (may need further review):
 
-- "{{Term}}" — may not land with all readers, consider rewording if update goes wider
+- "{{Term}}". may not land with all readers, consider rewording if update goes wider
 
 ---
 
@@ -157,6 +157,6 @@ Thanks,
 - **Channel**: {{channel}}
 - **Audience variant**: {{variant}}
 - **Thread continuation**: {{yes with link / no}}
-- **Input quality**: {{high | medium | low}} — {{rationale}}
+- **Input quality**: {{high | medium | low}}. {{rationale}}
 - **Known gaps**: {{e.g., "User did not specify full audience list; defaulted to leadership tone"}}
-- **Translations applied**: {{count}} — see Technical-to-business translation notes section above
+- **Translations applied**: {{count}}. see Technical-to-business translation notes section above

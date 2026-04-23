@@ -1,8 +1,8 @@
-# Topic 3 — Exploration: PM Skill Builder Skill
+# Topic 3 . Exploration: PM Skill Builder Skill
 
 > **Date**: 2026-03-21
 > **Author**: Claude Opus 4.6
-> **Status**: Draft — exploration document
+> **Status**: Draft . exploration document
 > **Related efforts**: M-11 (plugin packaging), skill_utility-skill-builder
 > **Prior art**: `_NOTES/efforts/active/skill_utility-skill-builder/approach_opus-4.6.md` (comprehensive analysis)
 
@@ -36,7 +36,7 @@ The pm-skills library currently contains 25 PM skills across 8 categories (6 Tri
 
 **A pm-skill-builder would consolidate this into an interactive workflow** that guides a contributor from "I have an idea for a PM skill" to "here's a complete, validated implementation packet ready for PR."
 
-The prior analysis (`approach_opus-4.6.md`) already established the core design direction: **two skills — `/pm-skill-builder` (repo-specific utility) and `/skill-builder` (PM-oriented foundation)**, with the pm-skill-builder shipping first. This exploration builds on that analysis to address the additional questions: web-based execution, CI/CD automation, community publishing, and cross-tool compatibility.
+The prior analysis (`approach_opus-4.6.md`) already established the core design direction: **two skills . `/pm-skill-builder` (repo-specific utility) and `/skill-builder` (PM-oriented foundation)**, with the pm-skill-builder shipping first. This exploration builds on that analysis to address the additional questions: web-based execution, CI/CD automation, community publishing, and cross-tool compatibility.
 
 ---
 
@@ -84,11 +84,11 @@ If pm-skills wants community contributions (the prompt mentions "allow a larger 
 The prompt asks: "Can web-based Claude Code and Codex execute the full deployment lifecycle?"
 
 This is about whether the skill creation workflow can be executed from:
-- **Claude Code CLI** (terminal) — full capability
-- **Claude Code web** (claude.ai with projects) — limited to file operations
-- **Codex** (autonomous tasks) — sandboxed, no interactive input
-- **Gemini CLI** — skill loading but no commands
-- **Cursor/Copilot** — skill loading via AGENTS.md
+- **Claude Code CLI** (terminal) . full capability
+- **Claude Code web** (claude.ai with projects) . limited to file operations
+- **Codex** (autonomous tasks) . sandboxed, no interactive input
+- **Gemini CLI** . skill loading but no commands
+- **Cursor/Copilot** . skill loading via AGENTS.md
 
 ---
 
@@ -100,10 +100,10 @@ The `approach_opus-4.6.md` document (reviewed and agreed by both Opus 4.6 and GP
 
 | Decision | Resolution |
 |----------|-----------|
-| Import vs. customize upstream skill-builder | **Customize** — don't import |
-| One skill or two | **Two** — `/pm-skill-builder` (utility) + `/skill-builder` (foundation) |
+| Import vs. customize upstream skill-builder | **Customize** . don't import |
+| One skill or two | **Two** . `/pm-skill-builder` (utility) + `/skill-builder` (foundation) |
 | Primary gate | **Repo-fit assessment** > zone assessment |
-| K/P/C/W zones | **Demoted** — lightweight writing lens, not primary framework |
+| K/P/C/W zones | **Demoted** . lightweight writing lens, not primary framework |
 | Output artifact | **Skill Implementation Packet** = the TEMPLATE.md |
 | Exemplars | **Shipped skills** (deliver-prd, discover-competitive-analysis, etc.) |
 | File structure | **Standard 3-file pattern** (SKILL.md + TEMPLATE.md + EXAMPLE.md) |
@@ -160,11 +160,11 @@ The `approach_opus-4.6.md` document (reviewed and agreed by both Opus 4.6 and GP
 
 ### 4.3 Feasibility Verdict
 
-**Claude Code CLI**: Can execute the **full lifecycle** — this is the primary platform.
+**Claude Code CLI**: Can execute the **full lifecycle** . this is the primary platform.
 
-**Claude Code Web**: Can execute **scaffold + author + changelog** — useful for initial skill design and content creation. Validation, PR, and release must happen elsewhere (CI or CLI).
+**Claude Code Web**: Can execute **scaffold + author + changelog** . useful for initial skill design and content creation. Validation, PR, and release must happen elsewhere (CI or CLI).
 
-**Codex**: Can execute **scaffold + author + validate + PR** — excellent for autonomous skill creation from a spec. Codex can be given a Skill Implementation Packet and produce all files autonomously. However, it can't do interactive design sessions (no user input during execution).
+**Codex**: Can execute **scaffold + author + validate + PR** . excellent for autonomous skill creation from a spec. Codex can be given a Skill Implementation Packet and produce all files autonomously. However, it can't do interactive design sessions (no user input during execution).
 
 **Recommended workflow**: Use Claude Code Web or CLI for the interactive design phase (gap analysis, why gate, classification). Use Codex for autonomous file generation from a completed spec. Use CI for validation and release.
 
@@ -346,7 +346,7 @@ jobs:
 | **Homebrew formulas** | PR to homebrew-core | CI + 2 reviewer approvals | Community reviewers |
 | **Terraform providers** | PR to registry | CI + HashiCorp review | Automated + manual |
 
-**Best pattern for pm-skills**: The **Homebrew model** — community PRs with CI validation and maintainer review. The CI catches convention violations; maintainers assess PM quality and fit.
+**Best pattern for pm-skills**: The **Homebrew model** . community PRs with CI validation and maintainer review. The CI catches convention violations; maintainers assess PM quality and fit.
 
 ### 6.2 Scaffolding Tool Patterns
 
@@ -404,11 +404,11 @@ The pm-skill-builder skill + GitHub Actions workflows + Codex integration. Codex
 
 ### Primary Recommendation: Approach A + CI (Approach B for v1.1)
 
-**Phase 1 (v1)**: Build the pm-skill-builder as a skill only. It produces a Skill Implementation Packet — a structured document that includes all draft files. The user (or an agent) then places the files in the correct directories. CI validates on PR.
+**Phase 1 (v1)**: Build the pm-skill-builder as a skill only. It produces a Skill Implementation Packet . a structured document that includes all draft files. The user (or an agent) then places the files in the correct directories. CI validates on PR.
 
 **Phase 2 (v1.1)**: Add companion scripts for scaffolding (`scripts/scaffold-skill.sh`) and inline validation. Add `/pm-skill-builder scaffold` subcommand.
 
-**Phase 3 (v2)**: Add Codex integration — a Codex task template that takes a Skill Implementation Packet and produces a PR. Add GitHub issue template for community skill proposals.
+**Phase 3 (v2)**: Add Codex integration . a Codex task template that takes a Skill Implementation Packet and produces a PR. Add GitHub issue template for community skill proposals.
 
 ### 80/20 Value Breakdown
 
@@ -549,7 +549,7 @@ A skill-builder skill must be an excellent example of a well-built skill. If it 
 
 ### 13.2 Over-Automation Risk
 
-Automating skill creation is only valuable if the *quality* of automated output matches hand-crafted skills. A scaffold that produces boilerplate but not PM insight is worse than no scaffold — it creates false confidence.
+Automating skill creation is only valuable if the *quality* of automated output matches hand-crafted skills. A scaffold that produces boilerplate but not PM insight is worse than no scaffold . it creates false confidence.
 
 ### 13.3 Community Scale Mismatch
 
@@ -567,7 +567,7 @@ Generating sample outputs requires actually running skills with test inputs. Thi
 
 ## 14. What You Might Be Missing
 
-1. **Skill retirement**: Not just creating skills — what about deprecating or merging skills that overlap?
+1. **Skill retirement**: Not just creating skills . what about deprecating or merging skills that overlap?
 2. **Skill versioning**: How do skill versions relate to plugin versions? Can a skill be at v2.0 while the plugin is at v2.6?
 3. **A/B testing skills**: If you want to compare two versions of a skill, you need a mechanism to run both and compare outputs.
 4. **Skill analytics**: Which skills are used most? Least? This informs roadmap priorities.
@@ -579,7 +579,7 @@ Generating sample outputs requires actually running skills with test inputs. Thi
 
 ### Where the Real Value Is
 
-The highest-value outcome isn't the skill-builder skill itself — it's the **CI pipeline** it enables. Today, there's no automated way to verify that a PR adding a new skill meets all conventions. The validation workflow is the foundation for everything else: community contributions, release automation, quality assurance.
+The highest-value outcome isn't the skill-builder skill itself . it's the **CI pipeline** it enables. Today, there's no automated way to verify that a PR adding a new skill meets all conventions. The validation workflow is the foundation for everything else: community contributions, release automation, quality assurance.
 
 | Component | Real Value | Reason |
 |-----------|-----------|--------|
@@ -600,7 +600,7 @@ The highest-value outcome isn't the skill-builder skill itself — it's the **CI
 3. Build CI validation workflow (highest standalone value)
 
 ### Near-Term
-4. Build pm-skill-builder skill (v1 — interactive, no scripts)
+4. Build pm-skill-builder skill (v1 . interactive, no scripts)
 5. Build release automation workflow
 6. Test on Claude Code CLI end-to-end
 
@@ -615,19 +615,19 @@ The highest-value outcome isn't the skill-builder skill itself — it's the **CI
 ## 17. Sources
 
 ### Internal Sources
-- `_NOTES/efforts/active/skill_utility-skill-builder/approach_opus-4.6.md` — Two-skill approach analysis
-- `_NOTES/efforts/active/skill_utility-skill-builder/prep_opus-4.6.md` — Opus prep document
-- `_NOTES/efforts/active/skill_utility-skill-builder/prep_gpt-5.4.md` — GPT-5.4 prep document
-- `_NOTES/efforts/active/skill_utility-skill-builder/approach_gpt-5.4.md` — GPT-5.4 approach
-- `_NOTES/efforts/active/M-11-claude-plugin-packaging/final-spec/final-spec_claude-plugin_opus-4.6.md` — Plugin packaging spec
-- `_NOTES/efforts/active/M-11-claude-plugin-packaging/planning/implementation-plan.md` — Plugin implementation plan
-- `docs/guides/authoring-pm-skills.md` — Authoring guide
-- `docs/reference/frontmatter-schema.yaml` — Frontmatter schema
-- `.github/workflows/validation.yml` — Existing CI workflow
+- `_NOTES/efforts/active/skill_utility-skill-builder/approach_opus-4.6.md` . Two-skill approach analysis
+- `_NOTES/efforts/active/skill_utility-skill-builder/prep_opus-4.6.md` . Opus prep document
+- `_NOTES/efforts/active/skill_utility-skill-builder/prep_gpt-5.4.md` . GPT-5.4 prep document
+- `_NOTES/efforts/active/skill_utility-skill-builder/approach_gpt-5.4.md` . GPT-5.4 approach
+- `_NOTES/efforts/active/M-11-claude-plugin-packaging/final-spec/final-spec_claude-plugin_opus-4.6.md` . Plugin packaging spec
+- `_NOTES/efforts/active/M-11-claude-plugin-packaging/planning/implementation-plan.md` . Plugin implementation plan
+- `docs/guides/authoring-pm-skills.md` . Authoring guide
+- `docs/reference/frontmatter-schema.yaml` . Frontmatter schema
+- `.github/workflows/validation.yml` . Existing CI workflow
 
 ### External Sources
-- [GSD Framework](https://github.com/gsd-build/get-shit-done) — Spec-driven development reference
-- [agentskills.io Specification](https://agentskills.io/specification) — Open standard
-- [Claude Code Plugins](https://code.claude.com/docs/en/plugins) — Plugin system
-- [OpenAI Codex CLI](https://developers.openai.com/codex/cli) — Codex autonomous execution
-- [GitHub Actions Automation Best Practices](https://docs.github.com/en/actions) — CI/CD reference
+- [GSD Framework](https://github.com/gsd-build/get-shit-done) . Spec-driven development reference
+- [agentskills.io Specification](https://agentskills.io/specification) . Open standard
+- [Claude Code Plugins](https://code.claude.com/docs/en/plugins) . Plugin system
+- [OpenAI Codex CLI](https://developers.openai.com/codex/cli) . Codex autonomous execution
+- [GitHub Actions Automation Best Practices](https://docs.github.com/en/actions) . CI/CD reference

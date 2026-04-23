@@ -1,4 +1,4 @@
-# Release v2.9.1 — Workflow Docs & CI Consistency
+# Release v2.9.1 . Workflow Docs & CI Consistency
 
 **Status:** Final
 **Date:** 2026-04-10
@@ -17,11 +17,11 @@ invoke, and customize workflows. Replaces the brief section that was embedded
 in `using-skills.md`.
 
 **Key sections:**
-- **Which Workflow Should I Use?** — mermaid decision tree based on project phase, uncertainty level, and audience
-- **Workflow Comparison Matrix** — all 9 workflows compared by use case, skills count, complexity, and duration
-- **Invoking Workflows** — how to run each one via slash commands
-- **Customizing Workflows** — skip steps, add steps, combine workflows
-- **Building Custom Workflows** — create your own `_workflows/*.md` files
+- **Which Workflow Should I Use?** . mermaid decision tree based on project phase, uncertainty level, and audience
+- **Workflow Comparison Matrix** . all 9 workflows compared by use case, skills count, complexity, and duration
+- **Invoking Workflows** . how to run each one via slash commands
+- **Customizing Workflows** . skip steps, add steps, combine workflows
+- **Building Custom Workflows** . create your own `_workflows/*.md` files
 
 ## New: Documentation Count Consistency CI (M-20)
 

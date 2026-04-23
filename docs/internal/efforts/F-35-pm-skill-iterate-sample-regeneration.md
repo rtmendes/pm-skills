@@ -22,7 +22,7 @@ Even with F-32 (builder generates initial samples) and F-31 (validator detects d
 
 This is the same shape of tedium that F-32 solved for initial generation. The iteration step needs the same automation.
 
-Without it, samples tend to stagnate — skill iterations accumulate, samples fall further behind, and eventually the samples become misleading artifacts that teach users the wrong template.
+Without it, samples tend to stagnate. skill iterations accumulate, samples fall further behind, and eventually the samples become misleading artifacts that teach users the wrong template.
 
 ## How It Works
 
@@ -36,9 +36,9 @@ When `/pm-skill-iterate` completes a skill update, it detects whether the update
 
 If any of these changed, the iterate skill offers sample regeneration as a follow-up step with three options:
 
-1. **Regenerate all samples** — use the same thread + scenario context from existing samples, re-generate output against new template
-2. **Regenerate drift only** — if F-31 validator reports specific samples drifted, regenerate just those
-3. **Skip** — user accepts drift, maybe deliberately (samples were manually refined and should not be overwritten)
+1. **Regenerate all samples**. use the same thread + scenario context from existing samples, re-generate output against new template
+2. **Regenerate drift only**. if F-31 validator reports specific samples drifted, regenerate just those
+3. **Skip**. user accepts drift, maybe deliberately (samples were manually refined and should not be overwritten)
 
 ### Regeneration logic
 
@@ -85,17 +85,17 @@ All samples conform to new template. /pm-skill-validate clean.
 
 ## Exemplars
 
-- Current `utility-pm-skill-iterate` v1.0.0 — iteration pattern to extend
-- F-32 (`utility-pm-skill-builder` with sample generation) — sample-authoring logic pattern to reuse
-- F-31 (`utility-pm-skill-validate` with sample-awareness) — drift-detection source
+- Current `utility-pm-skill-iterate` v1.0.0. iteration pattern to extend
+- F-32 (`utility-pm-skill-builder` with sample generation). sample-authoring logic pattern to reuse
+- F-31 (`utility-pm-skill-validate` with sample-awareness). drift-detection source
 
 ## Deliverables
 
-- `skills/utility-pm-skill-iterate/SKILL.md` — extended with sample-regeneration behavior
-- `skills/utility-pm-skill-iterate/references/TEMPLATE.md` — updated iteration-report template
-- `skills/utility-pm-skill-iterate/references/EXAMPLE.md` — updated worked example including regeneration
-- `skills/utility-pm-skill-iterate/HISTORY.md` — NEW, first HISTORY.md
-- `docs/skills/utility/utility-pm-skill-iterate.md` — public doc refresh
+- `skills/utility-pm-skill-iterate/SKILL.md`. extended with sample-regeneration behavior
+- `skills/utility-pm-skill-iterate/references/TEMPLATE.md`. updated iteration-report template
+- `skills/utility-pm-skill-iterate/references/EXAMPLE.md`. updated worked example including regeneration
+- `skills/utility-pm-skill-iterate/HISTORY.md`. NEW, first HISTORY.md
+- `docs/skills/utility/utility-pm-skill-iterate.md`. public doc refresh
 - Updated skills-manifest entry for v2.12.0 release
 
 ## Validation
@@ -108,21 +108,21 @@ All samples conform to new template. /pm-skill-validate clean.
 ## Open Questions
 
 - Should regeneration be invoked automatically or always offered as explicit user choice? Proposal: always offered explicit (user may have manual refinements worth preserving), with `--regenerate-samples` flag for non-interactive automation.
-- When regenerating, should the skill offer to also update the Scenario section based on new skill context? Proposal: no in v1.1.0 — preserves the separation between creative (Scenario) and structural (Output) concerns. Could be a v2 option.
-- What about samples the user has edited significantly — how does regeneration know? Proposal: no detection mechanism in v1.1.0; user is warned that regeneration overwrites Output. Heuristic "significantly edited" detection is a v2 enhancement.
+- When regenerating, should the skill offer to also update the Scenario section based on new skill context? Proposal: no in v1.1.0. preserves the separation between creative (Scenario) and structural (Output) concerns. Could be a v2 option.
+- What about samples the user has edited significantly. how does regeneration know? Proposal: no detection mechanism in v1.1.0; user is warned that regeneration overwrites Output. Heuristic "significantly edited" detection is a v2 enhancement.
 
 ## Dependencies
 
-- **F-32** ideally ships first — provides the sample-authoring logic to reuse
-- **F-31** ideally ships first — provides the drift-detection that triggers the regeneration offer
+- **F-32** ideally ships first. provides the sample-authoring logic to reuse
+- **F-31** ideally ships first. provides the drift-detection that triggers the regeneration offer
 - Could ship independently if the iteration skill embeds its own regeneration logic, but code duplication increases
 
 ## Status Transitions
 
 - **Backlog** (current, logically blocked on F-31 and F-32)
-- **In Progress** — when iteration-skill extension begins
-- **Shipped** — on v2.12.0 tag + push
+- **In Progress**. when iteration-skill extension begins
+- **Shipped**. on v2.12.0 tag + push
 
 ## Detailed specification
 
-Deferred — produced during refactor pass.
+Deferred. produced during refactor pass.

@@ -1,8 +1,8 @@
-# Topic 3 — Model Examples: PM Skill Builder Specifications
+# Topic 3 . Model Examples: PM Skill Builder Specifications
 
 > **Date**: 2026-03-21
 > **Author**: Claude Opus 4.6
-> **Status**: Draft — GSD-compatible and open-spec-compatible examples
+> **Status**: Draft . GSD-compatible and open-spec-compatible examples
 > **Companion**: `topic-3_spec_pm-skill-builder.md`
 
 ---
@@ -19,7 +19,7 @@
 
 ## 1. Skill Implementation Packet: Complete Example
 
-This is what the pm-skill-builder produces — a Skill Implementation Packet for a hypothetical new skill: `measure-survey-analysis`.
+This is what the pm-skill-builder produces . a Skill Implementation Packet for a hypothetical new skill: `measure-survey-analysis`.
 
 ```markdown
 # Skill Implementation Packet: measure-survey-analysis
@@ -33,7 +33,7 @@ This is what the pm-skill-builder produces — a Skill Implementation Packet for
   2. When asked "what do these survey results mean for our product," Claude
      lacks a structured framework for translating survey responses into
      actionable PM decisions
-  3. No existing skill covers quantitative user research analysis — the closest
+  3. No existing skill covers quantitative user research analysis . the closest
      is `discover-interview-synthesis` which handles qualitative data only
 
 ## Classification
@@ -140,7 +140,7 @@ prioritized, actionable PM insights.
 | Survey type | [NPS / CSAT / Feature preference / Custom] |
 | Total respondents | [N] |
 | Response rate | [X%] |
-| Collection period | [Start] — [End] |
+| Collection period | [Start] . [End] |
 | Distribution method | [Email / In-app / Etc.] |
 
 ## Key Findings
@@ -417,15 +417,15 @@ The Skill Implementation Packet MUST include:
 ## Quality Criteria
 
 A good Implementation Packet:
-1. **Passes the "first-try" test** — files created from the packet should
+1. **Passes the "first-try" test** . files created from the packet should
    pass CI validation without manual fixes
-2. **Has specific Why Gate evidence** — not "it would be nice" but
+2. **Has specific Why Gate evidence** . not "it would be nice" but
    "here's what fails without this skill"
-3. **Has clear differentiation** — explains exactly how this differs from
+3. **Has clear differentiation** . explains exactly how this differs from
    the closest existing skills
-4. **Has a realistic EXAMPLE.md scenario** — not abstract, but a concrete
+4. **Has a realistic EXAMPLE.md scenario** . not abstract, but a concrete
    PM situation with specific details
-5. **Follows naming conventions** — name passes all validation rules
+5. **Follows naming conventions** . name passes all validation rules
 ```
 
 ---

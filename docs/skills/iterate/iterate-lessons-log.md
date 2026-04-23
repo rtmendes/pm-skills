@@ -16,7 +16,7 @@ tags:
 
 # Lessons Log
 
-A lessons log entry captures significant learning from projects, incidents, or experiences in a format that's useful to future teams who weren't there. Unlike retrospectives (which focus on team improvement), lessons logs focus on organizational knowledge that transcends individual teams—patterns, anti-patterns, and hard-won wisdom.
+A lessons log entry captures significant learning from projects, incidents, or experiences in a format that's useful to future teams who weren't there. Unlike retrospectives (which focus on team improvement), lessons logs focus on organizational knowledge that transcends individual teams.patterns, anti-patterns, and hard-won wisdom.
 
 ## When to Use
 
@@ -48,10 +48,10 @@ When asked to create a lessons log entry, follow these steps:
    Explain the situation fully enough that someone who wasn't there can understand it. Include the project, timeline, team, and any relevant constraints. Future readers need this context to assess applicability.
 
 3. **Describe What Happened**
-   Write a factual account of what occurred. Be specific about actions taken, decisions made, and outcomes observed. Avoid blame—focus on events and systems.
+   Write a factual account of what occurred. Be specific about actions taken, decisions made, and outcomes observed. Avoid blame.focus on events and systems.
 
 4. **Extract the Lesson**
-   Articulate what you learned clearly. The lesson should be actionable—something others can apply. Distinguish between what you observed and your interpretation of why it matters.
+   Articulate what you learned clearly. The lesson should be actionable.something others can apply. Distinguish between what you observed and your interpretation of why it matters.
 
 5. **Formulate Recommendations**
    Provide specific guidance for future teams facing similar situations. What should they do? What should they avoid? What questions should they ask?
@@ -83,7 +83,7 @@ When asked to create a lessons log entry, follow these steps:
 
 <!-- One paragraph summary of the lesson for quick scanning -->
 
-[Brief summary of what happened and what was learned—someone should be able to decide if this is relevant from this paragraph alone]
+[Brief summary of what happened and what was learned.someone should be able to decide if this is relevant from this paragraph alone]
 
 ---
 
@@ -139,7 +139,7 @@ When asked to create a lessons log entry, follow these steps:
 
 <!-- What was the result? -->
 
-[Description of the outcome—good, bad, or mixed]
+[Description of the outcome.good, bad, or mixed]
 
 ---
 
@@ -239,7 +239,7 @@ When asked to create a lessons log entry, follow these steps:
 
 <!-- Relevant quotes from team members or stakeholders -->
 
-> "[Quote]" — [Attribution]
+> "[Quote]" . [Attribution]
 
 ### Artifacts
 
@@ -291,7 +291,7 @@ When asked to create a lessons log entry, follow these steps:
 
     ## Summary
 
-    Our payment service experienced a 47-minute outage during Black Friday due to database connection pool exhaustion under 10x normal load. Despite running load tests, we didn't catch this because our synthetic load tests didn't replicate real traffic patterns—specifically the bursty, concentrated nature of flash sale traffic. Production traffic replay would have caught this.
+    Our payment service experienced a 47-minute outage during Black Friday due to database connection pool exhaustion under 10x normal load. Despite running load tests, we didn't catch this because our synthetic load tests didn't replicate real traffic patterns.specifically the bursty, concentrated nature of flash sale traffic. Production traffic replay would have caught this.
 
     ---
 
@@ -305,7 +305,7 @@ When asked to create a lessons log entry, follow these steps:
 
     | Date | Event |
     |------|-------|
-    | Oct 15 | Load testing complete—10x capacity validated |
+    | Oct 15 | Load testing complete.10x capacity validated |
     | Oct 20 | Capacity review approved additional database instances |
     | Nov 1 | Infrastructure scaling deployed |
     | Nov 29 09:00 | Black Friday sale begins |
@@ -326,8 +326,8 @@ When asked to create a lessons log entry, follow these steps:
 
     ### Constraints
 
-    - Black Friday is immovable—no option to delay or reschedule
-    - Payment service is critical path—no graceful degradation possible
+    - Black Friday is immovable.no option to delay or reschedule
+    - Payment service is critical path.no graceful degradation possible
     - Real traffic replay wasn't available (privacy concerns, infrastructure gap)
 
     ---
@@ -338,7 +338,7 @@ When asked to create a lessons log entry, follow these steps:
 
     1. **Sale launch (09:00):** Traffic increased as expected. Systems initially handling load well.
 
-    2. **Flash sale spike (09:02):** A limited-quantity flash sale created concentrated traffic—5,000 users hitting checkout simultaneously rather than distributed load.
+    2. **Flash sale spike (09:02):** A limited-quantity flash sale created concentrated traffic.5,000 users hitting checkout simultaneously rather than distributed load.
 
     3. **Connection pool saturation (09:03):** Payment service database connections exhausted. Each flash sale request held connections longer due to inventory checks under contention.
 
@@ -365,7 +365,7 @@ When asked to create a lessons log entry, follow these steps:
 
     ### Outcome
 
-    47-minute service outage during our highest-revenue hour. Estimated $340,000 direct revenue loss, unknown brand damage. Customer trust impacted—we received 400+ complaint tickets in the following week referencing the Black Friday experience.
+    47-minute service outage during our highest-revenue hour. Estimated $340,000 direct revenue loss, unknown brand damage. Customer trust impacted.we received 400+ complaint tickets in the following week referencing the Black Friday experience.
 
     ---
 
@@ -374,13 +374,13 @@ When asked to create a lessons log entry, follow these steps:
     ### What We Learned
 
     **Primary Lesson:**
-    Synthetic load tests with evenly distributed traffic don't catch burst-pattern failures. Production traffic replay—using anonymized real traffic patterns—reveals timing, distribution, and correlation patterns that synthetic tests miss.
+    Synthetic load tests with evenly distributed traffic don't catch burst-pattern failures. Production traffic replay.using anonymized real traffic patterns.reveals timing, distribution, and correlation patterns that synthetic tests miss.
 
     **Supporting Observations:**
     - Our load test sent 100 requests/second evenly distributed. Real traffic came in bursts of 5,000 in 10 seconds.
     - Synthetic tests didn't simulate correlated requests (many users hitting the same flash sale item).
     - Connection pool math was correct for throughput but wrong for concurrency under burst.
-    - The failure mode was predictable in retrospect—database contention under burst is a known pattern.
+    - The failure mode was predictable in retrospect.database contention under burst is a known pattern.
 
     ### Why This Matters
 
@@ -409,7 +409,7 @@ When asked to create a lessons log entry, follow these steps:
 
     ### Avoid This
 
-    1. **Don't assume synthetic load tests prove production readiness.** Synthetic tests prove a specific pattern works—they don't prove all patterns work. Know what you haven't tested.
+    1. **Don't assume synthetic load tests prove production readiness.** Synthetic tests prove a specific pattern works.they don't prove all patterns work. Know what you haven't tested.
 
     2. **Don't treat load testing as a one-time checkbox.** Traffic patterns change. Run load tests regularly, especially before major events or after significant changes.
 
@@ -461,9 +461,9 @@ When asked to create a lessons log entry, follow these steps:
 
     ### Quotes
 
-    > "The load test results looked great. We hit 10x traffic with no issues. What we didn't realize is that we were testing a fantasy version of 10x traffic." — Sarah Chen, Platform Engineering
+    > "The load test results looked great. We hit 10x traffic with no issues. What we didn't realize is that we were testing a fantasy version of 10x traffic." . Sarah Chen, Platform Engineering
 
-    > "In retrospect, of course flash sales create burst patterns. We just didn't think to simulate it." — Mike Johnson, Payment Service Owner
+    > "In retrospect, of course flash sales create burst patterns. We just didn't think to simulate it." . Mike Johnson, Payment Service Owner
 
     ### Artifacts
 
@@ -498,7 +498,7 @@ When asked to create a lessons log entry, follow these steps:
 
 See this skill applied to three different product contexts:
 
-??? example "Storevine (B2B): Storevine B2B ecommerce platform — lesson learned from the Campaigns guided first-campaign flow A/B test"
+??? example "Storevine (B2B): Storevine B2B ecommerce platform . lesson learned from the Campaigns guided first-campaign flow A/B test"
     **Prompt:**
 
     ```
@@ -517,7 +517,7 @@ See this skill applied to three different product contexts:
     What surprised us: We expected the guided UX structure (progress
     indicator, step sequencing, explicit prompts) to be the mechanism.
     Funnel analysis shows the treatment advantage is concentrated at the
-    template and subject line step — content pre-population, not UX
+    template and subject line step . content pre-population, not UX
     scaffolding, is doing the work.
 
     Lesson type: Success Pattern / Strategy
@@ -530,7 +530,7 @@ See this skill applied to three different product contexts:
 
     # Content Quality, Not UX Scaffolding, Is the Non-Adopter Activation Mechanism
 
-??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — timezone handling lesson from the Resurface Sprint 8 launch"
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app . timezone handling lesson from the Resurface Sprint 8 launch"
     **Prompt:**
 
     ```
@@ -541,13 +541,13 @@ See this skill applied to three different product contexts:
     of 7:30 local because the backend didn't recognize "Europe/Kyiv" and
     silently fell back to UTC.
 
-    detected: feb 18, 2026 — alex noticed the send log timestamps were
+    detected: feb 18, 2026 . alex noticed the send log timestamps were
     wrong for EU users.
-    fixed: feb 18, same day — updated IANA database, added explicit
+    fixed: feb 18, same day . updated IANA database, added explicit
     fallback logging, patched within 2 hours.
 
     lesson type: failure pattern / technical
-    the real lesson isn't the specific bug — it's that we had ZERO
+    the real lesson isn't the specific bug . it's that we had ZERO
     integration tests for timezone-dependent behavior. the unit tests
     mocked the timezone, so they never caught the gap between the device
     timezone string and the server's IANA database.

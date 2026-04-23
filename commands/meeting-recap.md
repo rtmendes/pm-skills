@@ -19,7 +19,7 @@ Behavior:
 Quality requirements:
 - Input quality flagged honestly
 - Every action has an owner (or explicit `[owner: unassigned]`) and a due date (or explicit `[due: not specified]`)
-- No fabrication — owners invented only where explicitly named
+- No fabrication. owners invented only where explicitly named
 - Decisions are bold-flagged; inferred decisions carry confidence markers
 - Consolidated actions view regrouped by owner
 - Agenda reconciliation (planned vs. hit vs. skipped vs. emerged) populated when agenda was loaded

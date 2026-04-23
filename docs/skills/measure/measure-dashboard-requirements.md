@@ -56,7 +56,7 @@ When asked to specify dashboard requirements, follow these steps:
    Specify what drill-downs users need: date ranges, user segments, product areas, geographic regions. Anticipate the "slice and dice" questions users will ask.
 
 6. **Document Data Sources**
-   Identify where data comes from and any known data quality issues. Note latency requirements—does the dashboard need real-time data or is daily refresh sufficient?
+   Identify where data comes from and any known data quality issues. Note latency requirements.does the dashboard need real-time data or is daily refresh sufficient?
 
 7. **Set Permissions and Access**
    Determine who can view what. Some metrics may need restricted access. Consider both security requirements and organizational politics.
@@ -710,13 +710,13 @@ When asked to specify dashboard requirements, follow these steps:
 
 See this skill applied to three different product contexts:
 
-??? example "Storevine (B2B): Storevine B2B ecommerce platform — Campaigns adoption and revenue analytics dashboard requirements"
+??? example "Storevine (B2B): Storevine B2B ecommerce platform . Campaigns adoption and revenue analytics dashboard requirements"
     **Prompt:**
 
     ```
     /dashboard-requirements
 
-    Dashboard: Campaigns adoption and revenue — post-GA monitoring
+    Dashboard: Campaigns adoption and revenue . post-GA monitoring
     Audience: Growth PM (daily), Merchant Success (weekly), Head of Product
               (monthly board prep)
 
@@ -747,7 +747,7 @@ See this skill applied to three different product contexts:
 
     # Dashboard Requirements: Campaigns Adoption and Revenue
 
-??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — Resurface experiment dashboard requirements for Amplitude"
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app . Resurface experiment dashboard requirements for Amplitude"
     **Prompt:**
 
     ```
@@ -757,9 +757,9 @@ See this skill applied to three different product contexts:
     the a/b test starts (mar 9).
 
     two audiences:
-    1. product team (priya, chloe, alex, jordan) — daily monitoring
+    1. product team (priya, chloe, alex, jordan) . daily monitoring
        during the 4-week test
-    2. marco (ceo) — weekly exec check-in, needs a single-screen summary
+    2. marco (ceo) . weekly exec check-in, needs a single-screen summary
 
     questions the dashboard should answer:
     - is the treatment group returning more than control?

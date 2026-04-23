@@ -50,7 +50,7 @@ Per-skill execution plan. Reads together with effort brief ([`../F-27-meeting-re
    - **Zero-friction execution section**
    - **Input format flexibility** emphasis (transcripts from any tool, notes, hybrid)
    - **Agenda auto-discovery** behavior described (filename prefix match)
-   - **Fabrication prohibition** explicit — never invent owners or dates
+   - **Fabrication prohibition** explicit. never invent owners or dates
    - Process section referencing spec
    - Quality checklist
    - Link to family contract
@@ -59,7 +59,7 @@ Per-skill execution plan. Reads together with effort brief ([`../F-27-meeting-re
    - Shareable summary block (meeting + date + 1-2 sentence + key decisions + top actions)
    - Full recap with meeting details, overall summary, agenda reconciliation, per-topic segments, consolidated actions, meeting quality signals, next steps
    - Sources & References
-4. **Write EXAMPLE.md** — search-feature-kickoff recap from transcript + live notes
+4. **Write EXAMPLE.md**. search-feature-kickoff recap from transcript + live notes
 5. **Write slash command** `commands/meeting-recap.md`
 6. **Write 3 library samples** per deliverables
 7. **Generate/write public skill doc**
@@ -74,7 +74,7 @@ Per-skill execution plan. Reads together with effort brief ([`../F-27-meeting-re
 
 ## Estimated effort
 
-Medium-high. Expect 60-75 minutes. Transcript-to-structured-output extraction is the most technically nuanced part — sample quality matters for establishing the extraction discipline.
+Medium-high. Expect 60-75 minutes. Transcript-to-structured-output extraction is the most technically nuanced part. sample quality matters for establishing the extraction discipline.
 
 ## Notes
 

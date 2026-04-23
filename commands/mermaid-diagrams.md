@@ -4,7 +4,7 @@ description: Create a syntactically valid mermaid diagram for your product docum
 
 Use the `utility-mermaid-diagrams` skill to help the user create an effective mermaid diagram.
 
-Read the skill instructions from `skills/utility-mermaid-diagrams/SKILL.md` and follow them to guide the user through diagram creation — from selecting the right type to validating syntax.
+Read the skill instructions from `skills/utility-mermaid-diagrams/SKILL.md` and follow them to guide the user through diagram creation . from selecting the right type to validating syntax.
 
 Use `skills/utility-mermaid-diagrams/references/TEMPLATE.md` as the planning worksheet format.
 

@@ -43,10 +43,10 @@ This guide helps you access PM-Skills through the Model Context Protocol (MCP) v
 ```
 
 **Key Benefits:**
-- **Zero file management** — No cloning, no uploads
-- **Universal** — Works with any MCP-compatible client
-- **Parameterized** — Tools accept topic, context, format options
-- **Discoverable** — Built-in search and listing tools
+- **Zero file management** . No cloning, no uploads
+- **Universal** . Works with any MCP-compatible client
+- **Parameterized** . Tools accept topic, context, format options
+- **Discoverable** . Built-in search and listing tools
 
 ---
 
@@ -96,7 +96,7 @@ Claude Desktop provides the best MCP experience. Configuration file locations:
 
 **Restart Claude Desktop** to load the server.
 
-**Verify:** Ask Claude "What PM skills are available?" — it should list the current PM-Skills catalog from the server.
+**Verify:** Ask Claude "What PM skills are available?" . it should list the current PM-Skills catalog from the server.
 
 ---
 
@@ -428,7 +428,7 @@ This section documents how `pm-skills` releases flow to `pm-skills-mcp`. It is i
 
 ### Architecture
 
-`pm-skills-mcp` is **release-pinned** — it embeds a snapshot of skill files at build time and ships them in the npm package. It does not live-sync with the `pm-skills` repo.
+`pm-skills-mcp` is **release-pinned** . it embeds a snapshot of skill files at build time and ships them in the npm package. It does not live-sync with the `pm-skills` repo.
 
 ```
 pm-skills (tag v2.8.0)
@@ -487,7 +487,7 @@ Prefixes stripped: `discover-`, `define-`, `develop-`, `deliver-`, `measure-`, `
 | `check-mcp-impact.sh/.ps1` | `scripts/` | Local advisory. Non-blocking. |
 | `check-mcp-impact.md` | `scripts/` | Script documentation |
 
-**Expected CI behavior after a pm-skills release**: `validate-mcp-sync` will show a failure on `main` until `pm-skills-mcp` is updated. This is the guardrail working as designed — it creates visible pressure to complete the sync.
+**Expected CI behavior after a pm-skills release**: `validate-mcp-sync` will show a failure on `main` until `pm-skills-mcp` is updated. This is the guardrail working as designed . it creates visible pressure to complete the sync.
 
 ---
 

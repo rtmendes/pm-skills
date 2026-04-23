@@ -23,7 +23,7 @@
 
 ## 1. PM & Skill Frameworks
 
-### [GSD — Get Shit Done](https://github.com/gsd-build/get-shit-done)
+### [GSD . Get Shit Done](https://github.com/gsd-build/get-shit-done)
 **What**: Meta-prompting, context engineering, and spec-driven development framework for AI coding agents. npm package (`get-shit-done-cc`).
 **Why notable**: Closest analog to what pm-skills could become. Solves context rot via fresh-context subagent spawning. `.planning/` state management, milestone-driven lifecycle, wave-based parallel execution.
 **Limitation**: Single-project-per-repo, developer-oriented (not PM).
@@ -31,7 +31,7 @@
 
 ### [GSD v2](https://github.com/gsd-build/gsd-2)
 **What**: Evolution of GSD from prompt framework to TypeScript application.
-**Why notable**: Shows the maturation trajectory from "prompt collection" to "development platform" — the same path pm-skills is on. More robust agent session control, programmatic orchestration.
+**Why notable**: Shows the maturation trajectory from "prompt collection" to "development platform" . the same path pm-skills is on. More robust agent session control, programmatic orchestration.
 
 ### [GSD Framework Educational Course](https://ccforeveryone.com/gsd)
 **What**: Free interactive lesson on GSD spec-driven development.
@@ -52,13 +52,13 @@
 
 ### [Lobe Hub Skill Generator](https://lobehub.com/skills/squirrelsoft-dev-claude-builder-skill-generator)
 **What**: Community skill generator for Claude on the LobeHub platform.
-**Why notable**: Shows a different approach to skill scaffolding — web-based UI rather than CLI.
+**Why notable**: Shows a different approach to skill scaffolding . web-based UI rather than CLI.
 
 ### [Yeoman](https://yeoman.io/)
 **What**: Generator-based scaffolding ecosystem. Write custom generators to scaffold any project structure.
 **Why notable**: Established pattern for template-based file generation. Could inform a `pm-skill-builder` CLI tool, though the ecosystem is aging.
 
-### [oclif — The Open CLI Framework](https://oclif.io/)
+### [oclif . The Open CLI Framework](https://oclif.io/)
 **What**: Framework for building command-line tools by Salesforce/Heroku.
 **Why notable**: If pm-skills ever builds a standalone CLI (`npx pm-skill-builder init`), oclif is the best foundation.
 
@@ -100,7 +100,7 @@
 
 ### [google-gemini/gemini-skills](https://github.com/google-gemini/gemini-skills)
 **What**: Google's official skills catalog adopting the agentskills.io open standard.
-**Why notable**: Validates cross-platform portability of SKILL.md format. Their `gemini-api-dev` skill improved coding accuracy to 87% (Flash) and 96% (Pro) — demonstrates measurable skill impact.
+**Why notable**: Validates cross-platform portability of SKILL.md format. Their `gemini-api-dev` skill improved coding accuracy to 87% (Flash) and 96% (Pro) . demonstrates measurable skill impact.
 
 ### [github/awesome-copilot](https://github.com/github/awesome-copilot)
 **What**: GitHub's community collection of skills, custom agents, instructions, and prompts for Copilot.
@@ -128,7 +128,7 @@
 
 ### [AgentSys](https://github.com/hesreallyhim/awesome-claude-code#agent-systems)
 **What**: System integrating plugins, agents, and skills for task-to-production workflows.
-**Why notable**: Shows end-to-end workflow orchestration pattern — from task definition through agent execution to production output.
+**Why notable**: Shows end-to-end workflow orchestration pattern . from task definition through agent execution to production output.
 
 ### [Claude Squad](https://github.com/hesreallyhim/awesome-claude-code#multi-agent)
 **What**: Manages multiple Claude Code instances in separate workspaces for parallelization.
@@ -136,7 +136,7 @@
 
 ### [Claude Code PM (Ran Aroussi)](https://github.com/hesreallyhim/awesome-claude-code#project-management)
 **What**: Workflow coordination through specialized agents and slash commands, specifically for project management.
-**Why notable**: Another PM-oriented Claude Code project — potential overlap, collaboration, or competitive analysis target.
+**Why notable**: Another PM-oriented Claude Code project . potential overlap, collaboration, or competitive analysis target.
 
 ---
 
@@ -160,7 +160,7 @@
 
 ### [dorny/paths-filter](https://github.com/dorny/paths-filter)
 **What**: GitHub Action for conditional job execution based on which files changed in a PR.
-**Why notable**: Enables per-skill validation in CI — only validate skills that actually changed. More valuable at scale (50+ skills).
+**Why notable**: Enables per-skill validation in CI . only validate skills that actually changed. More valuable at scale (50+ skills).
 
 ### [requarks/changelog-action](https://github.com/requarks/changelog-action)
 **What**: Auto-generate changelogs from git history with customizable templates.
@@ -180,7 +180,7 @@
 
 ### [agentskills.io](https://agentskills.io/specification)
 **What**: The open standard for agent skills. Published by Anthropic, adopted by 26+ platforms.
-**Why notable**: pm-skills is built on this spec. Understanding it deeply is essential — the spec is intentionally minimal (one required file: SKILL.md with YAML frontmatter).
+**Why notable**: pm-skills is built on this spec. Understanding it deeply is essential . the spec is intentionally minimal (one required file: SKILL.md with YAML frontmatter).
 
 ### [agentskills/agentskills (GitHub)](https://github.com/agentskills/agentskills)
 **What**: Source repository for the agentskills.io specification.
@@ -204,7 +204,7 @@
 
 ### [Claude Code](https://code.claude.com/docs/en/)
 **What**: Anthropic's CLI agent. Primary platform for pm-skills.
-**Why notable**: Most extensible platform — skills, commands, hooks, agents, agent teams, output styles, MCP, plugins, worktrees, memory.
+**Why notable**: Most extensible platform . skills, commands, hooks, agents, agent teams, output styles, MCP, plugins, worktrees, memory.
 
 ### [OpenAI Codex CLI](https://developers.openai.com/codex/cli)
 **What**: OpenAI's coding agent. Open source, built in Rust. Supports agentskills.io.
@@ -280,7 +280,7 @@
 
 ### [AI's New Rules for Repo Architecture (Augment Code)](https://www.augmentcode.com/learn/monorepo-vs-polyrepo-ai-s-new-rules-for-repo-architecture)
 **Topic**: How AI agents change the monorepo vs. polyrepo calculus.
-**Key insight**: AI with large context windows benefits from monorepo — can see cross-project dependencies. Supports pm-skills' single-workspace approach for multi-project management.
+**Key insight**: AI with large context windows benefits from monorepo . can see cross-project dependencies. Supports pm-skills' single-workspace approach for multi-project management.
 
 ### [Monorepo vs. Polyrepo Reference](https://github.com/joelparkerhenderson/monorepo-vs-polyrepo)
 **Topic**: Comprehensive comparison of monorepo and polyrepo strategies.
@@ -304,7 +304,7 @@
 
 ### [2026 PM Trends (Clarkston Consulting)](https://clarkstonconsulting.com/insights/2026-program-and-project-management-trends/)
 **Topic**: Leading PMOs as "enterprise enablement engines" with AI agent governance.
-**Key insight**: AI agent governance is becoming a key PMO concern. pm-skills could eventually address this — not just "use AI for PM" but "govern how AI does PM."
+**Key insight**: AI agent governance is becoming a key PMO concern. pm-skills could eventually address this . not just "use AI for PM" but "govern how AI does PM."
 
 ### [40 Best Document Management Systems 2026](https://thedigitalprojectmanager.com/tools/document-management-systems/)
 **Topic**: Landscape of document management tools.

@@ -1,4 +1,3 @@
-<!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
 ---
 name: foundation-meeting-agenda
 description: Produces an attendee-facing agenda that sets what will be discussed, who owns each topic, and how time will be spent. Supports ten meeting type variants (standup, planning, review, decision-making, brainstorm, 1-on-1, stakeholder-review, project-kickoff, working-session, exec-briefing). Emits a shareable summary suitable for Slack or email plus a full agenda with time-boxed topics, type tags, owners, attendee prep, and logistics.
@@ -50,15 +49,15 @@ This skill opens with an explicit question: "Does this need to be a meeting, or 
 
 **v1.1.0: the check now requires a positive synchronous-value statement.** The meeting passes the check only when at least one of these is named:
 
-- **Tradeoff to discuss** — multiple options, uncertain preference
-- **Conflict to resolve** — named stakeholders disagreeing
-- **Co-creation** — shared whiteboarding or document-writing in the meeting
-- **Relationship-building** — first-time stakeholder meeting, mutual calibration
-- **Blocker escalation** — time-sensitive unblocking
+- **Tradeoff to discuss**. multiple options, uncertain preference
+- **Conflict to resolve**. named stakeholders disagreeing
+- **Co-creation**. shared whiteboarding or document-writing in the meeting
+- **Relationship-building**. first-time stakeholder meeting, mutual calibration
+- **Blocker escalation**. time-sensitive unblocking
 
 If none apply, the skill recommends the async alternative (written update, doc review, Slack poll) and produces a short one-page "how to handle this async" framing instead of an agenda.
 
-The v1.0.0 version of this check ("single-owner decision with no tradeoffs", "pure information broadcast", "status-only sync with >5 people") was bypassed too easily — users would stay at five attendees or add "decision" to the topic. The stricter v1.1.0 biases toward async; users can still override.
+The v1.0.0 version of this check ("single-owner decision with no tradeoffs", "pure information broadcast", "status-only sync with >5 people") was bypassed too easily. users would stay at five attendees or add "decision" to the topic. The stricter v1.1.0 biases toward async; users can still override.
 
 This check is shared with `/meeting-brief` and not run by the post-meeting skills (recap, synthesize, stakeholder-update).
 
@@ -146,7 +145,7 @@ Before delivering the agenda, verify:
 
 ## See also
 
-- [Meeting Skills Family Contract](../../docs/reference/skill-families/meeting-skills-contract.md) — shared behavioral and structural requirements
-- [`/meeting-brief`](../foundation-meeting-brief/SKILL.md) — user's private prep (shares anti-meeting check)
-- [`/meeting-recap`](../foundation-meeting-recap/SKILL.md) — downstream: recap auto-populates from this agenda's topic list
-- [`/stakeholder-update`](../foundation-stakeholder-update/SKILL.md) — downstream: translates meeting outcomes to non-attendees
+- [Meeting Skills Family Contract](../../docs/reference/skill-families/meeting-skills-contract.md). shared behavioral and structural requirements
+- [`/meeting-brief`](../foundation-meeting-brief/SKILL.md). user's private prep (shares anti-meeting check)
+- [`/meeting-recap`](../foundation-meeting-recap/SKILL.md). downstream: recap auto-populates from this agenda's topic list
+- [`/stakeholder-update`](../foundation-stakeholder-update/SKILL.md). downstream: translates meeting outcomes to non-attendees

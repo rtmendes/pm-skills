@@ -29,7 +29,7 @@ A stakeholder summary documents the people and groups who have interest in or in
 When asked to create a stakeholder summary, follow these steps:
 
 1. **Identify All Stakeholders**
-   List everyone with a stake in the project: sponsors, approvers, contributors, consumers of the output, and those affected by changes. Cast a wide net initially—you can prioritize later. Include both individuals and groups.
+   List everyone with a stake in the project: sponsors, approvers, contributors, consumers of the output, and those affected by changes. Cast a wide net initially.you can prioritize later. Include both individuals and groups.
 
 2. **Assess Influence and Interest**
    For each stakeholder, evaluate their influence (power to affect the project) and interest (how much they care about outcomes). This determines how much attention each requires.

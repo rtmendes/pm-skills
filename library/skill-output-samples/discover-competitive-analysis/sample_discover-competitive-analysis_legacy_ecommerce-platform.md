@@ -88,7 +88,7 @@ The e-commerce platform market is consolidating around platforms that combine st
 ### Shopify
 
 **Overview:** Dominant e-commerce platform with massive ecosystem, serving millions of merchants from garage startups to enterprise brands via Shopify Plus.
-**Target Customer:** Broadest range — from first-time sellers to mid-market brands
+**Target Customer:** Broadest range . from first-time sellers to mid-market brands
 **Key Differentiator:** Ecosystem scale (8,000+ apps), brand recognition, Shop app consumer network
 
 **Strengths:**
@@ -99,7 +99,7 @@ The e-commerce platform market is consolidating around platforms that combine st
 - Shopify Capital provides merchant financing
 
 **Weaknesses:**
-- Core platform is thin — relies on paid apps for essential operations features
+- Core platform is thin . relies on paid apps for essential operations features
 - Checkout customization locked behind $2,300/mo Plus plan
 - App dependency creates fragmented data and vendor risk
 - Transaction fees on non-Shopify Payments orders
@@ -140,7 +140,7 @@ The e-commerce platform market is consolidating around platforms that combine st
 **Key Differentiator:** Open source, full code ownership, WordPress ecosystem leverage
 
 **Strengths:**
-- Zero platform fees — only hosting and plugin costs
+- Zero platform fees . only hosting and plugin costs
 - Complete code ownership and customization freedom
 - Massive WordPress developer community
 - 800+ official extensions plus thousands of third-party plugins
@@ -161,7 +161,7 @@ The e-commerce platform market is consolidating around platforms that combine st
 
 **Overview:** Enterprise-grade, API-first commerce platform built on MACH architecture (Microservices, API-first, Cloud-native, Headless) for maximum composability.
 **Target Customer:** Enterprise brands ($100M+) and retailers with in-house engineering teams
-**Key Differentiator:** Pure composable commerce — no monolithic constraints, infinite flexibility
+**Key Differentiator:** Pure composable commerce . no monolithic constraints, infinite flexibility
 
 **Strengths:**
 - True microservices architecture allows granular feature adoption
@@ -172,7 +172,7 @@ The e-commerce platform market is consolidating around platforms that combine st
 
 **Weaknesses:**
 - Requires significant engineering resources to implement and maintain
-- No out-of-the-box storefront — everything must be built
+- No out-of-the-box storefront . everything must be built
 - Minimum viable implementation costs $200K+ in development alone
 - Overkill for brands under $100M in revenue
 - Ecosystem is partner/SI-dependent, not self-service
@@ -183,35 +183,35 @@ The e-commerce platform market is consolidating around platforms that combine st
 
 | Gap | Opportunity | Strategic Value | Difficulty |
 |-----|-------------|-----------------|------------|
-| Unified operations at mid-market pricing | Bundle inventory, subscriptions, CRM, and marketing into core platform — eliminate "app tax" | High | Medium |
+| Unified operations at mid-market pricing | Bundle inventory, subscriptions, CRM, and marketing into core platform . eliminate "app tax" | High | Medium |
 | AI-powered merchandising accessible to non-enterprise | Automated product recommendations, pricing optimization, and demand forecasting for brands without data science teams | High | High |
 | Integrated DTC + wholesale from one platform | Single inventory pool, unified customer profiles across channels without enterprise pricing | High | Medium |
-| Native customer lifecycle marketing | Email, SMS, and automation built into commerce data — no Klaviyo/Attentive required | Medium | Medium |
+| Native customer lifecycle marketing | Email, SMS, and automation built into commerce data . no Klaviyo/Attentive required | Medium | Medium |
 
 ## Strategic Recommendations
 
 ### Where to Compete Head-On
 1. **Core storefront and checkout:** Must match Shopify's ease of use and BigCommerce's flexibility. A clunky storefront builder is an immediate disqualifier regardless of operational depth
-2. **API and headless capabilities:** Developer-friendly APIs are table stakes for mid-market — match Commercetools' developer experience at an accessible price point
+2. **API and headless capabilities:** Developer-friendly APIs are table stakes for mid-market . match Commercetools' developer experience at an accessible price point
 
 ### Where to Differentiate
 1. **Unified commerce operations:** Position as the platform that replaces Shopify + 12 apps. Lead with TCO comparison showing hidden costs of fragmented tool stacks
 2. **Built-in intelligence:** Make AI personalization and analytics native, not add-on. "Enterprise-grade insights, mid-market pricing" as core value proposition
-3. **Subscription-native commerce:** Build subscriptions as a first-class feature, not an afterthought — the recurring revenue model is growing 20%+ YoY across DTC
+3. **Subscription-native commerce:** Build subscriptions as a first-class feature, not an afterthought . the recurring revenue model is growing 20%+ YoY across DTC
 
 ### Messaging Implications
-- Lead with total cost of ownership — "One platform, not twelve apps glued together"
+- Lead with total cost of ownership . "One platform, not twelve apps glued together"
 - Target operations-minded founders and VPs of Commerce who feel the pain of tool sprawl
 - Avoid direct feature comparison with Shopify; instead, reframe the conversation around operational maturity
 - Use "outgrown Shopify, can't afford Commercetools" as positioning wedge
-- Emphasize data unification — "Your customer data shouldn't live in 8 different apps"
+- Emphasize data unification . "Your customer data shouldn't live in 8 different apps"
 
 ### Watch List
 - Shopify's continued expansion into operations features (fulfillment, B2B, financial services)
-- BigCommerce's potential acquisition — could gain resources or lose independence
-- WooCommerce hosted offering — if Automattic invests heavily, it could compete on simplicity
+- BigCommerce's potential acquisition . could gain resources or lose independence
+- WooCommerce hosted offering . if Automattic invests heavily, it could compete on simplicity
 - Emerging players like Medusa.js (open-source headless) gaining developer mindshare
-- Shopify's AI investments — they have the data scale to build superior personalization
+- Shopify's AI investments . they have the data scale to build superior personalization
 
 ## Sources and Confidence
 

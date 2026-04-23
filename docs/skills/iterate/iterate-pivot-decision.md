@@ -16,7 +16,7 @@ tags:
 
 # Pivot Decision
 
-A pivot decision document captures the analysis and rationale behind a strategic direction change—or the decision to stay the course. Based on the Lean Startup concept of "pivot or persevere," this artifact ensures major strategic decisions are made with evidence, communicated clearly, and preserved for organizational learning.
+A pivot decision document captures the analysis and rationale behind a strategic direction change.or the decision to stay the course. Based on the Lean Startup concept of "pivot or persevere," this artifact ensures major strategic decisions are made with evidence, communicated clearly, and preserved for organizational learning.
 
 ## When to Use
 
@@ -44,13 +44,13 @@ When asked to document a pivot decision, follow these steps:
    Document what you're currently doing, how long you've been doing it, what you've invested, and what results you've achieved. This grounds the decision in reality.
 
 2. **Present the Evidence**
-   Compile all relevant data: metrics, user feedback, experiment results, market signals. Be comprehensive—include evidence that supports both staying and changing course.
+   Compile all relevant data: metrics, user feedback, experiment results, market signals. Be comprehensive.include evidence that supports both staying and changing course.
 
 3. **Review Hypotheses**
    Revisit the original hypotheses that justified the current direction. Which have been validated? Which have been invalidated? Which remain untested?
 
 4. **Define Options**
-   Articulate at least three options: persevere (continue current direction), and two or more distinct pivot options. Describe each option concretely—what would change?
+   Articulate at least three options: persevere (continue current direction), and two or more distinct pivot options. Describe each option concretely.what would change?
 
 5. **Analyze Each Option**
    Evaluate options against key criteria: market opportunity, competitive advantage, team capability, resource requirements, and risk. Use evidence, not opinions.
@@ -132,9 +132,9 @@ When asked to document a pivot decision, follow these steps:
 ### Customer/User Feedback
 
 **What Users Are Saying:**
-- "[Quote 1]" — [Source]
-- "[Quote 2]" — [Source]
-- "[Quote 3]" — [Source]
+- "[Quote 1]" . [Source]
+- "[Quote 2]" . [Source]
+- "[Quote 3]" . [Source]
 
 **User Behavior Patterns:**
 - [Behavioral observation 1]
@@ -191,7 +191,7 @@ When asked to document a pivot decision, follow these steps:
 
 ---
 
-### Option 2: [Pivot Type — e.g., Customer Segment Pivot]
+### Option 2: [Pivot Type . e.g., Customer Segment Pivot]
 
 **Description:** [What this pivot looks like]
 
@@ -211,7 +211,7 @@ When asked to document a pivot decision, follow these steps:
 
 ---
 
-### Option 3: [Pivot Type — e.g., Platform Pivot]
+### Option 3: [Pivot Type . e.g., Platform Pivot]
 
 **Description:** [What this pivot looks like]
 
@@ -444,18 +444,18 @@ Common pivot types (Lean Startup):
     ### Customer/User Feedback
 
     **What Users Are Saying:**
-    - "I'd use this more if my company offered it as a benefit" — User interview, P7
-    - "My HR team is always looking for wellness solutions. You should talk to them." — User interview, P12
-    - "The app is good, but I have too many fitness apps already. If work paid for it, that'd change things." — User interview, P3
+    - "I'd use this more if my company offered it as a benefit" . User interview, P7
+    - "My HR team is always looking for wellness solutions. You should talk to them." . User interview, P12
+    - "The app is good, but I have too many fitness apps already. If work paid for it, that'd change things." . User interview, P3
 
     **What Enterprise Buyers Are Saying:**
-    - "We spend $400/employee on wellness benefits and have no idea if they work. Your analytics could show ROI." — Inbound inquiry, HR Director at 800-person company
-    - "Our current vendor is enterprise software from 2010. Your UX is 10 years better." — Inbound inquiry, Wellness Coordinator
+    - "We spend $400/employee on wellness benefits and have no idea if they work. Your analytics could show ROI." . Inbound inquiry, HR Director at 800-person company
+    - "Our current vendor is enterprise software from 2010. Your UX is 10 years better." . Inbound inquiry, Wellness Coordinator
 
     **User Behavior Patterns:**
-    - Power users (top 10%) often share app to colleagues—word of mouth within companies
-    - Highest engagement on Monday mornings—suggests workplace wellness routines
-    - Most churned users cite "too many apps" as reason—commodity market problem
+    - Power users (top 10%) often share app to colleagues.word of mouth within companies
+    - Highest engagement on Monday mornings.suggests workplace wellness routines
+    - Most churned users cite "too many apps" as reason.commodity market problem
 
     ### Market Signals
 
@@ -466,7 +466,7 @@ Common pivot types (Lean Startup):
 
     ### Internal Learnings
 
-    - Our analytics dashboard is more sophisticated than we realized—enterprise buyers loved it
+    - Our analytics dashboard is more sophisticated than we realized.enterprise buyers loved it
     - We underestimated how much we compete with free (Apple Health, Google Fit) in B2C
     - The team has more B2B experience than B2C (3 of 6 came from enterprise SaaS)
 
@@ -485,7 +485,7 @@ Common pivot types (Lean Startup):
 
     ### Key Learnings from Validation
 
-    - Analytics capability is real and valued—just by wrong customer segment
+    - Analytics capability is real and valued.just by wrong customer segment
     - B2C fitness is a commodity market with winner-take-all dynamics
     - Corporate buyers have budget and willingness to pay for wellness
     - Our team's B2B DNA may be better suited to enterprise selling
@@ -611,7 +611,7 @@ Common pivot types (Lean Startup):
 
     4. **Competitive positioning:** B2B wellness is fragmented with legacy UX. Our consumer-grade design is a genuine differentiator. In B2C, we're one of hundreds of "good enough" apps.
 
-    5. **Resource efficiency:** B2B pivot requires $150K and 2-3 months—our most capital-efficient option.
+    5. **Resource efficiency:** B2B pivot requires $150K and 2-3 months.our most capital-efficient option.
 
     ### Trade-offs Accepted
 
@@ -685,7 +685,7 @@ Common pivot types (Lean Startup):
     | Audience | Message | Channel | When |
     |----------|---------|---------|------|
     | B2C users | "We're focusing on helping companies..." | In-app + email | Jan 22 |
-    | Inbound leads | "We're building this—let's talk" | Personal outreach | Jan 17 |
+    | Inbound leads | "We're building this.let's talk" | Personal outreach | Jan 17 |
     | Tech press | Not yet | N/A | After first contract |
 
     ---
@@ -716,18 +716,18 @@ Common pivot types (Lean Startup):
 
 See this skill applied to three different product contexts:
 
-??? example "Storevine (B2B): Storevine B2B ecommerce platform — Campaigns v2.0 persevere decision after guided flow validation"
+??? example "Storevine (B2B): Storevine B2B ecommerce platform . Campaigns v2.0 persevere decision after guided flow validation"
     **Prompt:**
 
     ```
     /pivot-decision
 
-    Product: Campaigns — post-GA persevere/pivot evaluation
+    Product: Campaigns . post-GA persevere/pivot evaluation
     Evaluation date: July 22, 2026 (12 weeks post-GA)
 
     Situation: Campaigns GA succeeded. Guided flow A/B test: 31.7% vs.
     13.4% first-send rate [fictional], shipped as default July 10.
-    BUT: Klaviyo-migrated merchants sending at 23% [fictional] monthly —
+    BUT: Klaviyo-migrated merchants sending at 23% [fictional] monthly .
     far below the ~60% [fictional] predicted from their Klaviyo history.
     Three migrated merchants submitted tickets citing missing advanced
     segmentation and scheduling. Migrator churn tracking at 18% [fictional].
@@ -736,10 +736,10 @@ See this skill applied to three different product contexts:
     migrated merchants, or persevere on non-adopter activation?
 
     Options I need evaluated:
-    1. Persevere — continue non-adopter activation (77% of segment
+    1. Persevere . continue non-adopter activation (77% of segment
        unconverted [fictional])
-    2. Customer Segment Pivot — redirect to Klaviyo-migrated merchants
-    3. Platform Pivot — open Campaigns as an API for third-party email
+    2. Customer Segment Pivot . redirect to Klaviyo-migrated merchants
+    3. Platform Pivot . open Campaigns as an API for third-party email
        tool integration
 
     Need: full pivot decision document with analysis and rationale.
@@ -751,7 +751,7 @@ See this skill applied to three different product contexts:
 
     # Pivot Decision: Campaigns v2.0 Roadmap Direction
 
-??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — post-experiment persevere decision for Resurface"
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app . post-experiment persevere decision for Resurface"
     **Prompt:**
 
     ```
@@ -760,7 +760,7 @@ See this skill applied to three different product contexts:
     post-experiment pivot decision for resurface. a/b test showed +5.3pp
     lift in 7-day return rate, p=0.008 [fictional]. all guardrails passed.
 
-    recommending: persevere — ship to all eligible users, invest in v2.
+    recommending: persevere . ship to all eligible users, invest in v2.
 
     alternatives considered:
     1. persevere: ship email digest, iterate on relevance and cadence
@@ -776,7 +776,7 @@ See this skill applied to three different product contexts:
 
     **Output:**
 
-    # Pivot Decision: Resurface — Post-Experiment Evaluation
+    # Pivot Decision: Resurface . Post-Experiment Evaluation
 
 ??? example "Workbench (Enterprise): Workbench enterprise collaboration platform: Blueprints customer segment pivot decision"
     **Prompt:**

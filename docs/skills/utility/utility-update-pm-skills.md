@@ -137,7 +137,7 @@ Show the user what the update includes:
    ```
 
 **If `--report-only`:** Generate the report using `references/TEMPLATE.md`
-with the banner "Report only — update was not applied." Save to
+with the banner "Report only . update was not applied." Save to
 `_pm-skills/updates/update-report_v{latest}_report-only_{YYYY-MM-DD_HHMMSS}.md`. Stop
 execution.
 
@@ -163,7 +163,7 @@ Execute the update using validated-before-copy with backup:
 
 1. **Download**: Fetch the release ZIP asset (`pm-skills-vX.Y.Z.zip`)
    from the GitHub Release page to a temporary directory. This is the
-   curated build artifact produced by `build-release.sh` — it includes
+   curated build artifact produced by `build-release.sh` . it includes
    only user-facing content and excludes `docs/internal/`.
 
 2. **Validate**: Confirm the extracted archive contains `skills/`,
@@ -238,7 +238,7 @@ Execute the update using validated-before-copy with backup:
 <!-- MODE BANNER (choose one, delete the other) -->
 
 <!-- For report-only mode, include this banner: -->
-> **Report only — update was not applied.**
+> **Report only . update was not applied.**
 > Run `/update-pm-skills` to apply this update.
 
 <!-- For completion mode, include this banner: -->
@@ -313,7 +313,7 @@ communication platform." -->
 ### Opportunities
 
 {2-3 sentences describing what the user can now do that they couldn't before.
-Ground suggestions in detected skills and workflows — reference actual new
+Ground suggestions in detected skills and workflows . reference actual new
 capabilities by name with their slash commands (e.g., "Try `/mermaid-diagrams`
 on your next PRD"). Label speculative pairings as suggestions. Link workflows
 to their component skills.}
@@ -406,7 +406,7 @@ No backup was created (user opted out).
 
     This update adds a self-updater skill that lets you check for new
     pm-skills releases, preview what's changed, and update your local
-    installation — all from a single slash command. It also formally
+    installation . all from a single slash command. It also formally
     releases the mermaid diagramming and slideshow creation skills that
     were available since v2.9.1.
 
@@ -437,7 +437,7 @@ No backup was created (user opted out).
     current without committing to an update. Try `/update-pm-skills --report-only`
     before updating to see exactly what files will change and what new
     capabilities are available. The self-updater means you no longer need to
-    manually download releases — future updates are one command away.
+    manually download releases . future updates are one command away.
 
     ## Files Written
 
@@ -481,7 +481,7 @@ No backup was created (user opted out).
 
     # PM Skills Update Report
 
-    > **Report only — update was not applied.**
+    > **Report only . update was not applied.**
     > Run `/update-pm-skills` to apply this update.
 
     ---

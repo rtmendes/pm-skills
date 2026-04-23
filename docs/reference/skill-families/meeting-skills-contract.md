@@ -17,7 +17,7 @@ Individual skill `SKILL.md` files implement the family-specific behavior (what t
 
 ## Why a family contract exists
 
-Meeting skills share enough cross-cutting structure — shareable summaries for chat clients, sources traceability, file-based chaining between artifacts, quality signals, input flexibility — that implementing each skill independently would produce drift. The family contract makes the shared surface explicit and enforceable so the skills compose cleanly: a recap can auto-populate from an agenda, a synthesis can consume recaps, a stakeholder update can reference a recap, and the interfaces between them stay stable across future iterations.
+Meeting skills share enough cross-cutting structure. shareable summaries for chat clients, sources traceability, file-based chaining between artifacts, quality signals, input flexibility. that implementing each skill independently would produce drift. The family contract makes the shared surface explicit and enforceable so the skills compose cleanly: a recap can auto-populate from an agenda, a synthesis can consume recaps, a stakeholder update can reference a recap, and the interfaces between them stay stable across future iterations.
 
 ---
 
@@ -71,8 +71,8 @@ The skill never blocks on interrogation. When invoked, it reads whatever input i
 2. Skill reads inputs, runs inference pass
 3. Skill presents a brief inference summary:
    > Inferred:
-   > - Meeting type: `decision-making` (confidence: medium — from "need to decide whether to ship v2")
-   > - Duration: `45 min` (type-specific default for decision-making — not specified)
+   > - Meeting type: `decision-making` (confidence: medium. from "need to decide whether to ship v2")
+   > - Duration: `45 min` (type-specific default for decision-making. not specified)
    > - Attendees: 6 people, RACI inferred from attendee-list context
    > - Objective: "Decide v2 ship timing for Q2"
    >
@@ -80,15 +80,15 @@ The skill never blocks on interrogation. When invoked, it reads whatever input i
 4. User says `go` → skill produces output; or user corrects any subset → skill re-infers and re-summarizes
 5. Output's `Generation context` section notes every inference that made it into the final artifact
 
-**Explicit go-mode**: `/meeting-agenda --go @topic-doc.md` — skips the checkpoint, uses defaults, produces output in one shot. User reviews `Generation context` to see what was defaulted.
+**Explicit go-mode**: `/meeting-agenda --go @topic-doc.md`. skips the checkpoint, uses defaults, produces output in one shot. User reviews `Generation context` to see what was defaulted.
 
-**Fully-specified**: `/meeting-agenda --type=decision-making --duration=60 --topic="..." @attendees.md` — skill uses provided values as authoritative; no checkpoint because nothing is ambiguous.
+**Fully-specified**: `/meeting-agenda --type=decision-making --duration=60 --topic="..." @attendees.md`. skill uses provided values as authoritative; no checkpoint because nothing is ambiguous.
 
 **Blocking questions** are permitted only when inference confidence is actively low on a load-bearing input AND no reasonable default exists. This should be rare. When asking, the skill must state the default it will apply if the user does not answer.
 
 **Load-bearing inference gates** (v1.1.0):
 
-Some inferences are load-bearing — downstream output depends on them. When confidence is below `high` on any of the following fields, the skill must flag the risk in the inference summary with a `⚠` marker and surface the dependency explicitly. The user can still say `go`, but the flag ensures they see the risk:
+Some inferences are load-bearing. downstream output depends on them. When confidence is below `high` on any of the following fields, the skill must flag the risk in the inference summary with a `⚠` marker and surface the dependency explicitly. The user can still say `go`, but the flag ensures they see the risk:
 
 | Field | Why load-bearing | Required flag when <high confidence |
 |-------|------------------|-------------------------------------|
@@ -103,9 +103,9 @@ Implementation: each skill's process step that computes inferences must check co
 
 - Asking "is this attendee list correct?" mid-flow
 - Asking the user to confirm inferred values before producing anything
-- Rejecting low-quality input — `input_quality: low` exists precisely for this
+- Rejecting low-quality input. `input_quality: low` exists precisely for this
 - Requiring more than what the user provided before producing any output
-- Passing load-bearing low-confidence inferences silently (v1.1.0 — must flag with `⚠`)
+- Passing load-bearing low-confidence inferences silently (v1.1.0. must flag with `⚠`)
 
 ### 2. Adaptive Executor pattern
 
@@ -137,9 +137,9 @@ No separate `meeting_id` field. The filename itself is the identifier; artifacts
 
 Chaining fields in frontmatter:
 
-- `project` + `topics` — enables cross-meeting grouping for synthesis
-- `related_brief`, `related_agenda`, `related_recap`, `related_synthesis` — explicit filename references
-- `source_meetings` (synthesis only) — list of recap filenames feeding the synthesis
+- `project` + `topics`. enables cross-meeting grouping for synthesis
+- `related_brief`, `related_agenda`, `related_recap`, `related_synthesis`. explicit filename references
+- `source_meetings` (synthesis only). list of recap filenames feeding the synthesis
 
 This keeps coordination costs low: no lookup tables, no ID assignment ceremony, no collisions across overlapping topics and teams.
 
@@ -169,9 +169,9 @@ business-review
 other
 ```
 
-(v1.1.0 added `incident-postmortem`, `customer-call`, `training-workshop`, `business-review` — common archetypes that were previously forced into `other`.)
+(v1.1.0 added `incident-postmortem`, `customer-call`, `training-workshop`, `business-review`. common archetypes that were previously forced into `other`.)
 
-**Frontmatter field**: `meeting_type` (optional — skill infers when absent).
+**Frontmatter field**: `meeting_type` (optional. skill infers when absent).
 
 **Applies to**: `meeting-agenda`, `meeting-brief`, `meeting-recap`, `stakeholder-update` (single-meeting skills). `meeting-synthesize` omits this field (aggregates across meeting types) but may filter by it via `scope_filter`.
 
@@ -202,9 +202,9 @@ attendees:
 ### Input quality levels
 
 ```
-high      — structured notes with clear topics, complete attendee list, explicit decisions and actions captured
-medium    — partial notes, some gaps, requires moderate inference
-low       — fragmentary input, significant inference required, multiple gaps
+high     . structured notes with clear topics, complete attendee list, explicit decisions and actions captured
+medium   . partial notes, some gaps, requires moderate inference
+low      . fragmentary input, significant inference required, multiple gaps
 ```
 
 **Frontmatter field**: `input_quality` (required).
@@ -214,9 +214,9 @@ low       — fragmentary input, significant inference required, multiple gaps
 Same enum used for overall confidence (frontmatter `confidence`) and inline per-section markers:
 
 ```
-high    — directly supported by input
-medium  — inferred from multiple contextual cues
-low     — tentative, verify before sharing
+high   . directly supported by input
+medium . inferred from multiple contextual cues
+low    . tentative, verify before sharing
 ```
 
 ### Artifact types
@@ -282,22 +282,22 @@ Every output document leads with a `## Shareable summary` block designed to be c
 - 3–6 short lines for most outputs; a short paragraph plus bullets for synthesis
 - Leads with the most important information (outcome, ask, or headline)
 - Skimmable in under 10 seconds
-- Self-contained — a reader who does not open the full doc still gets the essentials
-- Plain prose and simple bullets — no nested headers, no tables, no markdown that breaks in chat clients
+- Self-contained. a reader who does not open the full doc still gets the essentials
+- Plain prose and simple bullets. no nested headers, no tables, no markdown that breaks in chat clients
 
 The `stakeholder-update` skill is a special case (clarified in v1.1.0):
 
 - It does NOT use a `## Shareable summary` section (the channel-tailored body already is the shareable content)
 - Instead, it MUST use a `## Shareable update` section that contains ONLY the channel-tailored message body (what a user would copy and paste into Slack, email, Notion, etc.)
-- The `## Shareable update` section is the explicit shareable boundary — audit notes (`## Technical-to-business translation notes`) and `## Sources & References` sit OUTSIDE that boundary and must NOT be copied into the outgoing message
+- The `## Shareable update` section is the explicit shareable boundary. audit notes (`## Technical-to-business translation notes`) and `## Sources & References` sit OUTSIDE that boundary and must NOT be copied into the outgoing message
 - The validator enforces presence of `## Shareable update` for stakeholder-update (not `## Shareable summary`, which would be wrong for this skill)
 
-v1.0.0 claimed "the entire output is shareable content" which was misleading — the template included audit sections that should not go to stakeholders. v1.1.0 adds an explicit shareable boundary.
+v1.0.0 claimed "the entire output is shareable content" which was misleading. the template included audit sections that should not go to stakeholders. v1.1.0 adds an explicit shareable boundary.
 
 **End-marker convention** (v1.1.0): to make the boundary visually unambiguous, templates mark the END of the Shareable update section with a blockquote like:
 
 ```markdown
-> [End of Shareable update section. Everything below is INTERNAL — do not copy into the outgoing message.]
+> [End of Shareable update section. Everything below is INTERNAL. do not copy into the outgoing message.]
 ```
 
 The end-marker is a hard convention for this family's templates and samples. A reader scanning for "what do I paste" can scroll until they see the end marker and know to stop copying. The validator does not currently enforce the end-marker (it only enforces the `## Shareable update` section heading), but the convention is strongly recommended and documented in the end-user guide at `docs/guides/using-meeting-skills.md`.
@@ -326,8 +326,8 @@ Every output document ends with a `## Sources & References` section with this st
 ### Generation context
 - **Generated**: {{Timestamp}}
 - **Skill version**: {{Version}}
-- **Input quality**: {{high | medium | low}} — {{Brief rationale}}
-- **Overall confidence**: {{high | medium | low}} — {{Brief rationale}}
+- **Input quality**: {{high | medium | low}}. {{Brief rationale}}
+- **Overall confidence**: {{high | medium | low}}. {{Brief rationale}}
 - **Known gaps**: {{List of topics the input did not cover sufficiently, or "None identified"}}
 - **Inferences applied**: {{List of values inferred by the skill, each with confidence marker}}
 ```
@@ -352,7 +352,7 @@ generated_by_skill: meeting-recap
 meeting_title: "Search Feature Kickoff"
 meeting_date: 2026-04-17
 meeting_start_time: "14:00 EST"
-meeting_type: project-kickoff           # optional — skill infers when absent; values from Meeting type enum
+meeting_type: project-kickoff           # optional. skill infers when absent; values from Meeting type enum
 meeting_duration_minutes: 30            # default 30 when not specified
 
 # Project / topic (enables cross-meeting grouping for synthesis)
@@ -391,7 +391,7 @@ status: draft                           # draft | final | archived
 
 #### Per-skill additional fields
 
-- **`meeting-agenda`**: `meeting_duration_minutes` (integer, default varies by meeting type — see table below), `desired_outcomes` (list)
+- **`meeting-agenda`**: `meeting_duration_minutes` (integer, default varies by meeting type. see table below), `desired_outcomes` (list)
 
 **Type-specific duration defaults** (v1.1.0):
 
@@ -437,13 +437,13 @@ The variant suffix (`-{channel}-{audience}`) prevents filename collisions when o
 
 Where:
 
-- `YYYY-MM-DD` — meeting date (not prep date)
-- `HH-MMtimezone` — meeting start time with concatenated timezone abbreviation (e.g., `14-00EST`, `09-30PST`, `16-00UTC`). See DST note below.
-- `title` — short slug of the meeting title (see slug normalization rules below)
-- `artifact-type` — one of `agenda`, `brief`, `recap`, `stakeholder-update`
-- `{channel}` (stakeholder-update only) — `slack`, `teams`, `email`, `notion`, or `exec-memo`
-- `{audience}` (stakeholder-update only) — `engineering`, `design`, `leadership`, `customer-facing`, or `mixed`
-- `_prepared-YYYY-MM-DD` — optional, only when prep date differs from meeting date
+- `YYYY-MM-DD`. meeting date (not prep date)
+- `HH-MMtimezone`. meeting start time with concatenated timezone abbreviation (e.g., `14-00EST`, `09-30PST`, `16-00UTC`). See DST note below.
+- `title`. short slug of the meeting title (see slug normalization rules below)
+- `artifact-type`. one of `agenda`, `brief`, `recap`, `stakeholder-update`
+- `{channel}` (stakeholder-update only). `slack`, `teams`, `email`, `notion`, or `exec-memo`
+- `{audience}` (stakeholder-update only). `engineering`, `design`, `leadership`, `customer-facing`, or `mixed`
+- `_prepared-YYYY-MM-DD`. optional, only when prep date differs from meeting date
 
 Examples:
 
@@ -487,7 +487,7 @@ Examples:
 
 **Why this format**:
 
-- Meeting date + time creates a natural-sort key that groups a meeting's artifact family together — all four single-meeting types sort adjacently
+- Meeting date + time creates a natural-sort key that groups a meeting's artifact family together. all four single-meeting types sort adjacently
 - Time + timezone makes same-day meetings distinguishable without needing a separate ID
 - Optional `_prepared-YYYY-MM-DD` suffix captures post-meeting artifacts written later without cluttering names that do not need it
 - No separate `meeting_id` required; the filename is the identifier
@@ -503,27 +503,27 @@ Every skill must:
 
 ### 6. Anti-meeting check (pre-meeting skills only)
 
-`meeting-agenda` and `meeting-brief` must begin with an anti-meeting check — an upfront prompt asking "does this need to be a meeting at all?" If the stated objective can be met async (written update, document review, decision via Slack poll, etc.), the skill recommends that instead and produces a brief async-alternative suggestion rather than a full meeting artifact.
+`meeting-agenda` and `meeting-brief` must begin with an anti-meeting check. an upfront prompt asking "does this need to be a meeting at all?" If the stated objective can be met async (written update, document review, decision via Slack poll, etc.), the skill recommends that instead and produces a brief async-alternative suggestion rather than a full meeting artifact.
 
 This check runs before the go-mode inference summary. If the user overrides ("yes, it needs to be a meeting"), the skill proceeds.
 
-`meeting-recap`, `meeting-synthesize`, and `stakeholder-update` do not run this check — they operate on meetings that have already happened or on meeting-series analysis, where the question is moot.
+`meeting-recap`, `meeting-synthesize`, and `stakeholder-update` do not run this check. they operate on meetings that have already happened or on meeting-series analysis, where the question is moot.
 
 **Synchronous-value statement requirement** (v1.1.0):
 
 The anti-meeting check passes only when the meeting has at least one named source of synchronous value:
 
-- **Tradeoff to discuss** — multiple options exist with uncertain preference; real-time back-and-forth produces better decisions than async
-- **Conflict to resolve** — visible disagreement between named stakeholders; sync resolution is faster than async ping-pong
-- **Co-creation** — shared document-writing, whiteboarding, design critique; the artifact is produced in the meeting, not before or after
-- **Relationship-building** — first-time stakeholder meetings; mutual calibration on working styles
-- **Blocker escalation** — time-sensitive unblocking; async would miss the window
+- **Tradeoff to discuss**. multiple options exist with uncertain preference; real-time back-and-forth produces better decisions than async
+- **Conflict to resolve**. visible disagreement between named stakeholders; sync resolution is faster than async ping-pong
+- **Co-creation**. shared document-writing, whiteboarding, design critique; the artifact is produced in the meeting, not before or after
+- **Relationship-building**. first-time stakeholder meetings; mutual calibration on working styles
+- **Blocker escalation**. time-sensitive unblocking; async would miss the window
 
 If none of these apply, the skill recommends the async alternative. Common anti-patterns (bypassed by earlier versions of this check):
 
-- Status-only syncs where everyone reads the same update to each other — default to async document + threaded Q&A
-- Round-robin check-ins with >5 attendees and no decision need — default to async survey or threaded Slack
-- "Just an FYI" meetings — default to recorded Loom or async doc
+- Status-only syncs where everyone reads the same update to each other. default to async document + threaded Q&A
+- Round-robin check-ins with >5 attendees and no decision need. default to async survey or threaded Slack
+- "Just an FYI" meetings. default to recorded Loom or async doc
 - Agenda padding ("there might be discussion") without a specific tradeoff named
 
 The check is intentionally stricter in v1.1.0 because it was bypassed in v1.0.0 by simply staying at five attendees or adding the word "decision" to the topic. The stricter check biases toward async; users can still override.
@@ -534,12 +534,12 @@ The check is intentionally stricter in v1.1.0 because it was bypassed in v1.0.0 
 
 Things this family of skills will not do. Listed here to prevent scope creep in future iterations.
 
-1. **Calendar integration** — skills produce documents, not calendar events. Users copy output into their calendar tool. If calendar MCP integration is desired later, it is a separate workflow, not skill scope.
-2. **Live transcription** — skills consume transcripts, they do not produce them. Upstream tools (Krisp, Otter, Fireflies, Zoom) handle transcription.
-3. **Meeting recording** — not a skill responsibility.
-4. **Attendee authentication or identity resolution** — skills accept names as provided. Disambiguation of "Alex" vs. "Alex R." vs. "Alexandra" is the user's responsibility; skills flag ambiguity but do not resolve it.
-5. **Synchronous collaboration** — these are async prep and post-processing skills. Real-time collaboration during meetings is out of scope.
-6. **Slide generation** — if a stakeholder-update needs slides, the user chains to a separate slideshow skill. Meeting family skills produce markdown artifacts.
+1. **Calendar integration**. skills produce documents, not calendar events. Users copy output into their calendar tool. If calendar MCP integration is desired later, it is a separate workflow, not skill scope.
+2. **Live transcription**. skills consume transcripts, they do not produce them. Upstream tools (Krisp, Otter, Fireflies, Zoom) handle transcription.
+3. **Meeting recording**. not a skill responsibility.
+4. **Attendee authentication or identity resolution**. skills accept names as provided. Disambiguation of "Alex" vs. "Alex R." vs. "Alexandra" is the user's responsibility; skills flag ambiguity but do not resolve it.
+5. **Synchronous collaboration**. these are async prep and post-processing skills. Real-time collaboration during meetings is out of scope.
+6. **Slide generation**. if a stakeholder-update needs slides, the user chains to a separate slideshow skill. Meeting family skills produce markdown artifacts.
 
 ---
 
@@ -555,18 +555,18 @@ docs/reference/skill-families/meeting-skills-contract.md
 
 ### What the validator checks
 
-1. **Skill directory structure** — each of the 5 skills has a `SKILL.md`, `references/TEMPLATE.md`, `references/EXAMPLE.md`
-2. **Contract reference** — each `SKILL.md` contains a link to `docs/reference/skill-families/meeting-skills-contract.md`
-3. **Zero-friction execution section** — each `SKILL.md` contains a section titled `Zero-friction execution` (or equivalent `Go mode`) that reaffirms the behavioral contract
-4. **Template shareable summary / shareable update** — each `TEMPLATE.md` contains a `## Shareable summary` section, EXCEPT `stakeholder-update` which must contain a `## Shareable update` section instead (v1.1.0 explicit copy boundary; audit notes and sources sit outside the section and must not be shareable). Treating the entire stakeholder-update output as shareable — the v1.0.0 claim — is explicitly rejected.
-5. **Template sources section** — each `TEMPLATE.md` contains a `## Sources & References` section with the four required subsections (Primary inputs, Referenced artifacts, External references, Generation context)
-6. **Frontmatter schema shape** — each `TEMPLATE.md` frontmatter block includes the universal base fields (`artifact_type`, `version`, `generated_at`, `generated_by_skill`, `input_quality`, `confidence`, `visibility`, `status`)
-7. **Enum values** — when frontmatter uses `meeting_type`, `attendee role`, `input_quality`, `confidence`, `artifact_type`, `channel`, `audience_variant`, `visibility`, or `status`, the value (if populated) is from the enum defined in this contract
-8. **File naming in examples** — filenames referenced in `EXAMPLE.md` and sample output match the naming convention above
+1. **Skill directory structure**. each of the 5 skills has a `SKILL.md`, `references/TEMPLATE.md`, `references/EXAMPLE.md`
+2. **Contract reference**. each `SKILL.md` contains a link to `docs/reference/skill-families/meeting-skills-contract.md`
+3. **Zero-friction execution section**. each `SKILL.md` contains a section titled `Zero-friction execution` (or equivalent `Go mode`) that reaffirms the behavioral contract
+4. **Template shareable summary / shareable update**. each `TEMPLATE.md` contains a `## Shareable summary` section, EXCEPT `stakeholder-update` which must contain a `## Shareable update` section instead (v1.1.0 explicit copy boundary; audit notes and sources sit outside the section and must not be shareable). Treating the entire stakeholder-update output as shareable. the v1.0.0 claim. is explicitly rejected.
+5. **Template sources section**. each `TEMPLATE.md` contains a `## Sources & References` section with the four required subsections (Primary inputs, Referenced artifacts, External references, Generation context)
+6. **Frontmatter schema shape**. each `TEMPLATE.md` frontmatter block includes the universal base fields (`artifact_type`, `version`, `generated_at`, `generated_by_skill`, `input_quality`, `confidence`, `visibility`, `status`)
+7. **Enum values**. when frontmatter uses `meeting_type`, `attendee role`, `input_quality`, `confidence`, `artifact_type`, `channel`, `audience_variant`, `visibility`, or `status`, the value (if populated) is from the enum defined in this contract
+8. **File naming in examples**. filenames referenced in `EXAMPLE.md` and sample output match the naming convention above
 
 ### What the validator does NOT check
 
-- Field population (values may be null/absent — skills infer)
+- Field population (values may be null/absent. skills infer)
 - Inference confidence thresholds
 - Coverage of every enum value in examples
 - Semantic correctness of content
@@ -609,5 +609,5 @@ When the contract version changes, the validator script must be updated to match
 | Date | Version | Change |
 |------|---------|--------|
 | 2026-04-17 | 1.0.0 | Initial contract. Absorbs content from archived `_NOTES/foundation-meeting-skills-descriptions.md` and `..._templates.md` (2026-04-17). Codifies 18 decisions from the authoring plan. |
-| 2026-04-17 | 1.1.0 | Resolution pass from Codex adversarial review (see `docs/internal/release-plans/v2.11.0/plan_v2.11_codex-review.md`). Changes: (1) `artifact_type` enum corrected from bare names to prefixed names (matches implementation); (2) stakeholder-update filename pattern adds `-{channel}-{audience}` variant suffix to prevent collisions; (3) slug normalization rules added (ASCII, 60-char max, collision suffixes); (4) timezone DST note added; (5) load-bearing inference gates added (stakeholder positions, primary CTA, decision-maker attribution require `⚠` flag when confidence <high); (6) meeting-duration default is now type-specific (30 min is fallback, not universal); (7) anti-meeting check now requires a positive synchronous-value statement (prevents bypass by staying at 5 attendees); (8) recap adds `meeting_type_source` and `unassigned_action_ratio` frontmatter fields; (9) meeting-type enum expanded with `incident-postmortem`, `customer-call`, `training-workshop`, `business-review`; (10) stakeholder-update shareable boundary made explicit via `## Shareable update` section. No breaking changes — all v1.0.0 valid artifacts remain valid; new behavior is additive. |
-| 2026-04-18 | 1.1.0 (errata) | Second Codex adversarial review resolution. Non-breaking clarifications: (a) corrected go-mode default-flow example duration to reflect type-specific table (was 30 min, now 45 min for decision-making); (b) corrected fully-specified example `--type=decision` to `--type=decision-making` matching the enum; (c) corrected `artifact_type` inline comment in universal base-fields example from old bare enum names to prefixed names; (d) corrected validator-what-it-checks section to require `## Shareable update` for stakeholder-update instead of treating whole output as shareable; (e) added explicit end-marker convention for stakeholder-update shareable boundary. No version bump — these are errata within v1.1.0, caught by adversarial review before v2.11.0 release tag. |
+| 2026-04-17 | 1.1.0 | Resolution pass from Codex adversarial review (see `docs/internal/release-plans/v2.11.0/plan_v2.11_codex-review.md`). Changes: (1) `artifact_type` enum corrected from bare names to prefixed names (matches implementation); (2) stakeholder-update filename pattern adds `-{channel}-{audience}` variant suffix to prevent collisions; (3) slug normalization rules added (ASCII, 60-char max, collision suffixes); (4) timezone DST note added; (5) load-bearing inference gates added (stakeholder positions, primary CTA, decision-maker attribution require `⚠` flag when confidence <high); (6) meeting-duration default is now type-specific (30 min is fallback, not universal); (7) anti-meeting check now requires a positive synchronous-value statement (prevents bypass by staying at 5 attendees); (8) recap adds `meeting_type_source` and `unassigned_action_ratio` frontmatter fields; (9) meeting-type enum expanded with `incident-postmortem`, `customer-call`, `training-workshop`, `business-review`; (10) stakeholder-update shareable boundary made explicit via `## Shareable update` section. No breaking changes. all v1.0.0 valid artifacts remain valid; new behavior is additive. |
+| 2026-04-18 | 1.1.0 (errata) | Second Codex adversarial review resolution. Non-breaking clarifications: (a) corrected go-mode default-flow example duration to reflect type-specific table (was 30 min, now 45 min for decision-making); (b) corrected fully-specified example `--type=decision` to `--type=decision-making` matching the enum; (c) corrected `artifact_type` inline comment in universal base-fields example from old bare enum names to prefixed names; (d) corrected validator-what-it-checks section to require `## Shareable update` for stakeholder-update instead of treating whole output as shareable; (e) added explicit end-marker convention for stakeholder-update shareable boundary. No version bump. these are errata within v1.1.0, caught by adversarial review before v2.11.0 release tag. |

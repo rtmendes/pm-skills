@@ -50,5 +50,5 @@ Version mismatches in the latest manifest are warning-only so draft release plan
 
 ## Safety
 
-- Read-only — does not modify files
+- Read-only . does not modify files
 - Inspects only `docs/internal/release-plans/*/skills-manifest.yaml` and `skills/*/SKILL.md`

@@ -7,12 +7,12 @@ skill_version: "2.0.0"
 created: 2026-02-20
 status: sample
 thread: brainshelf
-context: Brainshelf consumer PKM app — Sprint 8 retrospective after Resurface launch
+context: Brainshelf consumer PKM app . Sprint 8 retrospective after Resurface launch
 ---
 
 ## Scenario
 
-Brainshelf shipped Resurface — a morning email digest resurfacing saved content — in Sprint 8. Within 48 hours of launch, a timezone offset bug caused the digest to send at 5:00 AM local time for users in UTC+1 and UTC+2 timezones (primarily UK and Central Europe) instead of the configured 7:30 AM. Approximately 340 affected users [fictional] received an early-morning email before the bug was detected and patched. The sprint also had two meaningful wins: on-time delivery of the first major user-facing feature in six months, and strong opt-in rate. The team held this retrospective three days after the bug was resolved.
+Brainshelf shipped Resurface . a morning email digest resurfacing saved content . in Sprint 8. Within 48 hours of launch, a timezone offset bug caused the digest to send at 5:00 AM local time for users in UTC+1 and UTC+2 timezones (primarily UK and Central Europe) instead of the configured 7:30 AM. Approximately 340 affected users [fictional] received an early-morning email before the bug was detected and patched. The sprint also had two meaningful wins: on-time delivery of the first major user-facing feature in six months, and strong opt-in rate. The team held this retrospective three days after the bug was resolved.
 
 **Source Notes:**
 
@@ -26,7 +26,7 @@ Brainshelf shipped Resurface — a morning email digest resurfacing saved conten
 ```
 /retrospective
 
-sprint 8 retro — resurface launch sprint. need to write this up.
+sprint 8 retro . resurface launch sprint. need to write this up.
 
 what happened: we shipped resurface on time! first big feature in 6 months.
 but we also had a timezone bug that sent the morning digest at 5am to UK/Europe
@@ -36,16 +36,16 @@ hours of catching it, but some users were not happy.
 format: start/stop/continue. small team (7 people in the room).
 2 wins, the timezone thing, and a few process issues that came up.
 
-previous retro action items were: (1) set up staging environment email testing —
-DONE, (2) add integration test for notification delivery — NOT DONE (this
-contributed to the bug), (3) weekly eng/pm sync — IN PROGRESS.
+previous retro action items were: (1) set up staging environment email testing .
+DONE, (2) add integration test for notification delivery . NOT DONE (this
+contributed to the bug), (3) weekly eng/pm sync . IN PROGRESS.
 ```
 
 ---
 
 ## Output
 
-# Retrospective: Sprint 8 — Resurface Launch
+# Retrospective: Sprint 8 . Resurface Launch
 
 ## Overview
 
@@ -87,19 +87,19 @@ Sprint 8 was the Resurface launch sprint. Resurface is the first major user-faci
 
 ### Team Highlights
 
-- Resurface shipped on time after six months without a major feature launch — the team stayed in scope and executed the sprint plan without unplanned cuts.
+- Resurface shipped on time after six months without a major feature launch . the team stayed in scope and executed the sprint plan without unplanned cuts.
 - Email opt-in rate in the first 72 hours exceeded the 15% hypothesis threshold: 19% of eligible users opted in [fictional], validating the demand assumption before the bug was even fixed.
 - Bug response was fast once identified: root cause isolated in under 30 minutes, patch deployed in 2 hours, affected-user communication sent within the same hour as the patch. For a 20-person company, the incident response was professional.
 
 ### Process Wins
 
 - The staging email environment (completed from Sprint 7 retro) caught two template rendering bugs before launch that would otherwise have shipped to users; the staging investment paid back immediately.
-- The decision to require opt-in before the A/B experiment enrollment (not just after) meant the timezone incident affected opted-in users only — a smaller and more forgiving audience than the full user base.
+- The decision to require opt-in before the A/B experiment enrollment (not just after) meant the timezone incident affected opted-in users only . a smaller and more forgiving audience than the full user base.
 
 ### Individual Shoutouts
 
-- Alex R. for staying online through the incident, owning the root cause analysis, and writing a clear postmortem within 24 hours of the fix — making this retro easier to run.
-- Chloe B. for surfacing the anomalous send-time pattern in the analytics dashboard before user complaints reached support volume — the monitoring caught the bug faster than the support queue did.
+- Alex R. for staying online through the incident, owning the root cause analysis, and writing a clear postmortem within 24 hours of the fix . making this retro easier to run.
+- Chloe B. for surfacing the anomalous send-time pattern in the analytics dashboard before user complaints reached support volume . the monitoring caught the bug faster than the support queue did.
 
 ---
 
@@ -140,11 +140,11 @@ Sprint 8 was the Resurface launch sprint. Resurface is the first major user-faci
 
 ### Deprioritized Action Items Losing Visibility
 
-**What was discussed:** The notification integration test was on the Sprint 7 retro list. Dan K. pointed out that when action items are added to the backlog they lose the "came from a retro" context — there's no way to distinguish a retro-sourced item from a normal feature request. Three sprint planning sessions passed without anyone noting the item was aging.
+**What was discussed:** The notification integration test was on the Sprint 7 retro list. Dan K. pointed out that when action items are added to the backlog they lose the "came from a retro" context . there's no way to distinguish a retro-sourced item from a normal feature request. Three sprint planning sessions passed without anyone noting the item was aging.
 
 **Root cause identified:** Retro action items are written into the team's linear backlog without a label or priority designation that distinguishes them from other work. In planning, they compete on equal footing with feature work and lose.
 
-**Proposed solution:** Tag all retro action items with a `retro-action` label and a target sprint. If the item slips past its target sprint, it surfaces at the next retro automatically as an aging item — not a separate tracking system, just a label-based filter on the backlog review.
+**Proposed solution:** Tag all retro action items with a `retro-action` label and a target sprint. If the item slips past its target sprint, it surfaces at the next retro automatically as an aging item . not a separate tracking system, just a label-based filter on the backlog review.
 
 ---
 
@@ -172,7 +172,7 @@ Sprint 8 was the Resurface launch sprint. Resurface is the first major user-faci
 
 ## Parking Lot
 
-- **In-app resurface cards (vs. email-only):** Several users in the community forum asked for an in-app card alternative to the email digest. Deferred — the A/B experiment on email format needs to complete before adding a third surface variant. Will revisit post-experiment.
+- **In-app resurface cards (vs. email-only):** Several users in the community forum asked for an in-app card alternative to the email digest. Deferred . the A/B experiment on email format needs to complete before adding a third surface variant. Will revisit post-experiment.
 - **Notification quiet hours settings:** Two users specifically complained about the 5 AM send in the UK and mentioned they would want quiet hours controls even after the bug is fixed. This is a legitimate product gap, not just a bug consequence. Add to the Resurface v1.1 refinement backlog.
 
 ---
@@ -191,7 +191,7 @@ Sprint 8 was the Resurface launch sprint. Resurface is the first major user-faci
 
 ### Recurring Themes
 
-- Test coverage gaps on new pipeline code have appeared in two consecutive retros (Sprint 7: missing test on email template rendering; Sprint 8: missing test on scheduling timezone conversion). This is a pattern, not an isolated incident — the root cause is scope pressure on test writing during launch sprints.
+- Test coverage gaps on new pipeline code have appeared in two consecutive retros (Sprint 7: missing test on email template rendering; Sprint 8: missing test on scheduling timezone conversion). This is a pattern, not an isolated incident . the root cause is scope pressure on test writing during launch sprints.
 
 ---
 

@@ -1,13 +1,13 @@
 ---
 title: "Foundation Skills"
-description: "PM skills in the Foundation phase — cross-cutting tooling that applies anywhere in the Triple Diamond lifecycle."
+description: "PM skills in the Foundation phase . cross-cutting tooling that applies anywhere in the Triple Diamond lifecycle."
 tags:
   - Foundation
 ---
 
 # Foundation Skills
 
-Foundation skills are cross-cutting — they apply in any Triple Diamond phase and are not tied to a specific product-development stage. Use them to shape perspective (persona), frame strategy (lean canvas), or manage the meeting lifecycle that supports every initiative (meeting family).
+Foundation skills are cross-cutting . they apply in any Triple Diamond phase and are not tied to a specific product-development stage. Use them to shape perspective (persona), frame strategy (lean canvas), or manage the meeting lifecycle that supports every initiative (meeting family).
 
 ## Skills in this phase
 

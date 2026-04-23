@@ -7,7 +7,7 @@ skill_version: "1.0.0"
 created: 2026-04-11
 status: sample
 thread: storevine
-context: Storevine B2B ecommerce platform — acceptance criteria for the Campaigns email template builder
+context: Storevine B2B ecommerce platform . acceptance criteria for the Campaigns email template builder
 ---
 
 ## Scenario
@@ -21,7 +21,7 @@ Storevine's Campaigns feature includes an email template builder that lets merch
 ```
 /acceptance-criteria
 
-Feature: Campaigns — email template builder
+Feature: Campaigns . email template builder
 The template builder lets merchants drag-and-drop content blocks (text, image, button, divider, product card) onto a canvas, customize styling, preview on desktop and mobile, and save templates for reuse across campaigns. Templates are stored per-merchant and can be duplicated.
 ```
 
@@ -40,7 +40,7 @@ status: draft
 
 ## Story Context
 
-Storevine merchants need to create branded marketing emails without writing HTML. The template builder provides a drag-and-drop canvas where merchants assemble content blocks, apply styling, preview results, and save reusable templates. Scope is limited to the builder UI and template persistence — campaign scheduling and send logic are covered separately.
+Storevine merchants need to create branded marketing emails without writing HTML. The template builder provides a drag-and-drop canvas where merchants assemble content blocks, apply styling, preview results, and save reusable templates. Scope is limited to the builder UI and template persistence . campaign scheduling and send logic are covered separately.
 
 ## Happy Path
 
@@ -116,5 +116,5 @@ Storevine merchants need to create branded marketing emails without writing HTML
 
 ## Notes
 
-- Template rendering engine is shared with the campaign preview — changes to rendering affect both surfaces.
+- Template rendering engine is shared with the campaign preview . changes to rendering affect both surfaces.
 - Product card blocks depend on the Catalog API; availability is an external dependency.

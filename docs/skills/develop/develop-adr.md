@@ -16,7 +16,7 @@ tags:
 
 # Architecture Decision Record (ADR)
 
-An Architecture Decision Record documents a significant technical decision along with its context and consequences. ADRs capture the "why" behind architectural choices so future team members understand the reasoning — especially important when they question why something was done a particular way. This skill follows Michael Nygard's lightweight ADR format.
+An Architecture Decision Record documents a significant technical decision along with its context and consequences. ADRs capture the "why" behind architectural choices so future team members understand the reasoning . especially important when they question why something was done a particular way. This skill follows Michael Nygard's lightweight ADR format.
 
 ## When to Use
 
@@ -53,7 +53,7 @@ When asked to create an ADR, follow these steps:
    Clearly articulate what you decided. Use active voice: "We will use..." rather than "It was decided..." Be specific about what is and isn't included in the decision.
 
 5. **Document the Consequences**
-   List the outcomes of this decision — positive, negative, and neutral. Good ADRs are honest about trade-offs. What becomes easier? What becomes harder? What new constraints or options does this create?
+   List the outcomes of this decision . positive, negative, and neutral. Good ADRs are honest about trade-offs. What becomes easier? What becomes harder? What new constraints or options does this create?
 
 ## Output Template
 
@@ -226,7 +226,7 @@ Be honest about trade-offs.
 
 See this skill applied to three different product contexts:
 
-??? example "Storevine (B2B): Storevine B2B ecommerce platform — email sending infrastructure for Campaigns"
+??? example "Storevine (B2B): Storevine B2B ecommerce platform . email sending infrastructure for Campaigns"
     **Prompt:**
 
     ```
@@ -260,21 +260,21 @@ See this skill applied to three different product contexts:
 
     # ADR-007: Email Sending Infrastructure for Campaigns
 
-??? example "Brainshelf (Consumer): Brainshelf consumer PKM app — email sending infrastructure decision for the Resurface digest"
+??? example "Brainshelf (Consumer): Brainshelf consumer PKM app . email sending infrastructure decision for the Resurface digest"
     **Prompt:**
 
     ```
     /adr
 
     email sending infra for resurface. we don't have any email sending
-    today — everything is in-app or firebase push. need to pick a provider
+    today . everything is in-app or firebase push. need to pick a provider
     for the daily digest.
 
     options we looked at:
     - sendgrid (twilio): mature, everyone uses it, but their free tier
       shrank and the dashboard is confusing
     - postmark: great deliverability reputation, simple api, but
-      transactional only — no batch/digest support without workarounds
+      transactional only . no batch/digest support without workarounds
     - resend: new, developer-first, react email templates, free tier
       covers our a/b test volume
 

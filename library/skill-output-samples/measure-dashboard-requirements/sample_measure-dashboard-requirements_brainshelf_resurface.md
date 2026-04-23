@@ -7,7 +7,7 @@ skill_version: "2.0.0"
 created: 2026-02-20
 status: sample
 thread: brainshelf
-context: Brainshelf consumer PKM app — Resurface experiment dashboard requirements for Amplitude
+context: Brainshelf consumer PKM app . Resurface experiment dashboard requirements for Amplitude
 ---
 
 ## Scenario
@@ -16,9 +16,9 @@ Before the A/B test began, Priya M. asked Chloe B. to build the Resurface experi
 
 **Source Notes:**
 
-- Stephen Few, "Information Dashboard Design" (perceptualedge.com) — the dashboard design principles applied in the layout specification; Few's guidance on minimizing chart junk, using small multiples for comparison, and placing the most important metric in the top-left position informed the visualization specifications.
-- Amplitude, "Dashboard Best Practices" (amplitude.com/blog/analytics-dashboards) — the Amplitude-specific guidance on chart types, cohort definitions, and filter configuration used to translate the requirements into implementable specs.
-- Edward Tufte, "The Visual Display of Quantitative Information" (edwardtufte.com) — the data-ink ratio principle applied to the chart specifications; Tufte's emphasis on maximizing the data-to-ink ratio influenced the decision to use line charts over bar charts for time-series metrics and to avoid decorative chart elements.
+- Stephen Few, "Information Dashboard Design" (perceptualedge.com) . the dashboard design principles applied in the layout specification; Few's guidance on minimizing chart junk, using small multiples for comparison, and placing the most important metric in the top-left position informed the visualization specifications.
+- Amplitude, "Dashboard Best Practices" (amplitude.com/blog/analytics-dashboards) . the Amplitude-specific guidance on chart types, cohort definitions, and filter configuration used to translate the requirements into implementable specs.
+- Edward Tufte, "The Visual Display of Quantitative Information" (edwardtufte.com) . the data-ink ratio principle applied to the chart specifications; Tufte's emphasis on maximizing the data-to-ink ratio influenced the decision to use line charts over bar charts for time-series metrics and to avoid decorative chart elements.
 
 ---
 
@@ -31,9 +31,9 @@ resurface experiment dashboard for amplitude. need it ready before
 the a/b test starts (mar 9).
 
 two audiences:
-1. product team (priya, chloe, alex, jordan) — daily monitoring
+1. product team (priya, chloe, alex, jordan) . daily monitoring
    during the 4-week test
-2. marco (ceo) — weekly exec check-in, needs a single-screen summary
+2. marco (ceo) . weekly exec check-in, needs a single-screen summary
 
 questions the dashboard should answer:
 - is the treatment group returning more than control?
@@ -87,9 +87,9 @@ filters: date range, experiment variant, library size segment.
 
 ### What This Dashboard Is NOT For
 
-- Operational monitoring of the digest send pipeline (send failures, retry rates, Resend API health) — these are tracked in the Datadog operational dashboard, not Amplitude
-- Individual user debugging ("why didn't user X receive their digest?") — use Amplitude's user timeline for individual-level investigation
-- Post-experiment deep analysis (regression models, causal inference) — the dashboard provides descriptive metrics; post-experiment analysis will be done in a separate notebook
+- Operational monitoring of the digest send pipeline (send failures, retry rates, Resend API health) . these are tracked in the Datadog operational dashboard, not Amplitude
+- Individual user debugging ("why didn't user X receive their digest?") . use Amplitude's user timeline for individual-level investigation
+- Post-experiment deep analysis (regression models, causal inference) . the dashboard provides descriptive metrics; post-experiment analysis will be done in a separate notebook
 
 ---
 
@@ -109,7 +109,7 @@ filters: date range, experiment variant, library size segment.
 Daily at 9:00 AM by Priya and Chloe (after the morning digest cycle completes). Weekly on Mondays by Marco (5-minute screen share in the exec check-in).
 
 **What device/format?**
-Desktop browser (Amplitude web app). Marco views via screen share — the dashboard must be readable at a glance on a projected screen without scrolling.
+Desktop browser (Amplitude web app). Marco views via screen share . the dashboard must be readable at a glance on a projected screen without scrolling.
 
 ---
 
@@ -137,7 +137,7 @@ Desktop browser (Amplitude web app). Marco views via screen share — the dashbo
 | **Granularity** | Daily |
 | **Current Baseline** | n/a (new metric) |
 | **Target** | ≥15% [fictional] |
-| **Notes** | Treatment only (control receives no email). Do NOT use open rate — Apple MPP inflates it. |
+| **Notes** | Treatment only (control receives no email). Do NOT use open rate . Apple MPP inflates it. |
 
 ### Metric 3: Email Unsubscribe Rate (Guardrail Metric)
 
@@ -149,7 +149,7 @@ Desktop browser (Amplitude web app). Marco views via screen share — the dashbo
 | **Granularity** | Weekly |
 | **Current Baseline** | n/a (new metric) |
 | **Target** | ≤2% per week [fictional] |
-| **Notes** | Guardrail — breaching this threshold triggers experiment pause and review |
+| **Notes** | Guardrail . breaching this threshold triggers experiment pause and review |
 
 ### Metric 4: Opt-In Rate (Diagnostic Metric)
 
@@ -187,7 +187,7 @@ Desktop browser (Amplitude web app). Marco views via screen share — the dashbo
 | **Y-Axis** | 7-day return rate (%) |
 | **Series/Breakdown** | Two lines: Control (gray) and Treatment (blue). Include 95% confidence interval shading. |
 | **Interactivity** | Tooltip on hover shows exact value, sample size, and CI for each point |
-| **Position** | Top-left (most prominent position — this is the primary metric) |
+| **Position** | Top-left (most prominent position . this is the primary metric) |
 
 ### Chart 2: Email CTR Trend (Daily)
 
@@ -367,8 +367,8 @@ Desktop browser (Amplitude web app). Marco views via screen share — the dashbo
 
 ### Related Dashboards
 
-- Brainshelf Product Health Dashboard (existing) — overall MAU, retention, save rate
-- Resend Delivery Dashboard (Datadog) — email send success rate, bounce rate, API latency
+- Brainshelf Product Health Dashboard (existing) . overall MAU, retention, save rate
+- Resend Delivery Dashboard (Datadog) . email send success rate, bounce rate, API latency
 
 ### Reference Documents
 

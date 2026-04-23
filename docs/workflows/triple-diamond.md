@@ -70,10 +70,10 @@ graph LR
 
 Use the Triple Diamond when:
 
-- **Starting a new product or major initiative** — need comprehensive discovery and validation
-- **Building features with significant uncertainty** — multiple unknowns about users or solutions
-- **Establishing a new team or practice** — want structured approach to build discipline
-- **Working on high-stakes projects** — cost of failure is high, need thorough validation
+- **Starting a new product or major initiative** . need comprehensive discovery and validation
+- **Building features with significant uncertainty** . multiple unknowns about users or solutions
+- **Establishing a new team or practice** . want structured approach to build discipline
+- **Working on high-stakes projects** . cost of failure is high, need thorough validation
 
 Consider a lighter approach (see [feature-kickoff.md](feature-kickoff.md)) when:
 
@@ -293,10 +293,10 @@ Move to Iterate when:
 ### Cycle Continuation
 
 Based on learnings, return to:
-- **Discover** — if fundamental assumptions were wrong
-- **Define** — if problem needs reframing
-- **Develop** — if solution needs significant changes
-- **Deliver** — if incremental improvements are needed
+- **Discover** . if fundamental assumptions were wrong
+- **Define** . if problem needs reframing
+- **Develop** . if solution needs significant changes
+- **Deliver** . if incremental improvements are needed
 
 ---
 
@@ -382,10 +382,10 @@ Before considering this workflow complete, verify:
 
 ## See Also
 
-- [Lean Startup Workflow](lean-startup.md) — For rapid Build-Measure-Learn cycles
-- [Feature Kickoff Workflow](feature-kickoff.md) — Quick-start for well-understood features
+- [Lean Startup Workflow](lean-startup.md) . For rapid Build-Measure-Learn cycles
+- [Feature Kickoff Workflow](feature-kickoff.md) . Quick-start for well-understood features
 
 ---
 
-*Part of [PM-Skills](https://github.com/product-on-purpose/pm-skills/blob/main/README.md) — Open source Product Management skills for AI agents*
+*Part of [PM-Skills](https://github.com/product-on-purpose/pm-skills/blob/main/README.md) . Open source Product Management skills for AI agents*
 
