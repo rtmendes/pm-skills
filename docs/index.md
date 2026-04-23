@@ -259,13 +259,13 @@ Follow three fictional companies through the complete product lifecycle - from d
 
 | Version | Date | Highlights |
 |---------|------|-----------|
-| **v2.10.1** | 2026-04-13 | Post-v2.10.0 polish: dynamic skill-page counts, backlog spec drafts, F-25 scope move |
-| **[v2.10.0](releases/Release_v2.10.0.md)** | 2026-04-11 | Utility skill expansion: `/mermaid-diagrams`, `/slideshow-creator`, `/update-pm-skills` |
+| **[v2.11.1](releases/Release_v2.11.1.md)** | 2026-04-22 | skills.sh CLI compatibility patch: unblocks `npx skills add product-on-purpose/pm-skills`; lint hardening; em-dash sweep completion |
+| **[v2.11.0](releases/Release_v2.11.0.md)** | 2026-04-18 | Meeting Skills Family: 5 foundation skills + canonical contract + enforcing CI; lean-canvas; 32 to 38 skills |
+| [v2.10.2](releases/Release_v2.10.2.md) | 2026-04-14 | Manifest drift fix + JSON count CI extension |
+| [v2.10.1](releases/Release_v2.10.1.md) | 2026-04-13 | Post-v2.10.0 polish: dynamic skill-page counts, backlog spec drafts |
+| [v2.10.0](releases/Release_v2.10.0.md) | 2026-04-11 | Utility skill expansion: `/mermaid-diagrams`, `/slideshow-creator`, `/update-pm-skills` |
 | [v2.9.1](releases/Release_v2.9.1.md) | 2026-04-10 | Workflows guide + docs count consistency CI |
-| [v2.9.0](releases/Release_v2.9.0.md) | 2026-04-06 | Workflows: rename bundles → workflows, expand 3 → 9, 7 `/workflow-*` commands |
-| [v2.8.2](releases/Release_v2.8.2.md) | 2026-04-04 | Docs site polish + versioning concepts |
-| [v2.8.1](releases/Release_v2.8.1.md) | 2026-04-04 | MkDocs Material documentation site launch |
-| [v2.8.0](releases/Release_v2.8.0.md) | 2026-04-03 | PM skill lifecycle: Create, Validate, Iterate |
+| [v2.9.0](releases/Release_v2.9.0.md) | 2026-04-06 | Workflows: rename bundles to workflows, expand 3 to 9, 7 `/workflow-*` commands |
 
 [:octicons-arrow-right-24: All releases](releases/) · [:octicons-arrow-right-24: Full changelog](changelog.md)
 

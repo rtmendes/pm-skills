@@ -5,6 +5,165 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+v2.12.0 planning opened at `docs/internal/release-plans/v2.12.0/plan_v2.12.0.md`.
+
+## [2.11.1] - 2026-04-22
+
+skills.sh CLI compatibility patch. Unblocks `npx skills add product-on-purpose/pm-skills` so the full 38-skill library is discoverable and installable through the open [`skills` CLI](https://github.com/vercel-labs/skills) and the skills.sh directory. No behavioral changes to any skill.
+
+### Fixed
+
+- **6 foundation skills** silently dropped by the skills CLI's strict YAML parser because each SKILL.md opened with an HTML attribution comment before the `---` frontmatter delimiter. Leading comment removed from `foundation-lean-canvas`, `foundation-meeting-agenda`, `foundation-meeting-brief`, `foundation-meeting-recap`, `foundation-meeting-synthesize`, `foundation-stakeholder-update`. Attribution is preserved via the identical comment that already lives immediately after the frontmatter block in each file.
+- **`foundation-meeting-synthesize` description** contained an inline `": "` (colon-space) that strict YAML parsers interpret as a nested key-value separator, truncating the description. Reworded to split the sentence. Version bumped 1.0.0 → 1.0.1.
+- **25 stale tracked files under `.claude/skills/`** (pre-v1 personal-setup relics) removed via `git rm`. The path was already gitignored; these files predated the rule. Affected directories: `init-project/`, `init-project-jpkb/`, `wrap-session/`.
+
+### Added
+
+- **`skills` CLI install path** in README as the recommended first option, with one-line `npx skills add product-on-purpose/pm-skills` and a new row in the Installation Options table. New skills.sh shield badge in the header badge row.
+- **New lint rules** in `scripts/lint-skills-frontmatter.sh/.ps1/.md`:
+  - First line of every SKILL.md must be the `---` YAML delimiter (no preamble, comments, or attribution headers above it).
+  - Unquoted `description` field must not contain inline `": "` patterns. If a colon is required, wrap the full description value in double quotes.
+- **Distribution plan** at `docs/internal/distribution/2026-04-22_skills-sh.md` documenting the six-phase submission approach (Phase 0 through 3 complete as of this release; Phase 4 optional; Phase 5 is a post-release soft-launch workstream).
+
+### Changed
+
+- **Em-dash sweep completion**: 376 tracked files swept, 5,805 em-dash characters replaced with `.` per the 2026-04-13 standing style rule. Zero behavioral change. Brings total em-dashes in tracked files to 0 (previous partial sweep had reduced a subset; this completes it across the full repo).
+- **Stale count reconciliation**: 8 current-state skill-count references across 5 files updated from `27 skills` or `31 skills` to `38 skills` (`docs/agent-skill-anatomy.md` had 4 instances; one each in `docs/skills/utility/utility-pm-skill-builder.md`, `scripts/README_SCRIPTS.md`, `skills/utility-pm-skill-builder/SKILL.md`, and `skills/utility-pm-skill-builder/references/EXAMPLE.md`). Historical per-release count snapshots in README "What's New" sections intentionally left untouched as accurate records of past release states.
+- **`README.md` version badge** bumped from 2.11.0 to 2.11.1.
+
+### Infrastructure / process
+
+- Dry-run against live skills CLI (`npx skills add <local path> -l`) added as a de facto pre-release validation. Phase 3 of the distribution plan documents the exact commands. Recommended for any future release that touches SKILL.md frontmatter.
+
+## [2.11.0] . 2026-04-18
+
+Foundation-phase expansion release. Ships 6 new foundation skills (lean canvas + 5-skill meeting lifecycle family), a canonical skill-family contract pattern enforced by CI, 15 thread-aligned library samples, and end-user documentation. First pm-skills release with a cross-cutting skill-family contract. Two rounds of Codex adversarial review before tag.
+
+### Added
+
+**6 new foundation skills**:
+- **F-26: `foundation-lean-canvas`** (`/lean-canvas`) . one-page business thesis across 9 interlocking blocks with optional HTML visual rendering (content + visual modes; Ash Maurya nine-block layout; 3 thread samples)
+- **F-18: `foundation-meeting-agenda`** (`/meeting-agenda`) . attendee-facing agenda with time-boxed topics, type tags, owners, prep; 10 meeting-type variants; anti-meeting check with synchronous-value requirement
+- **F-25: `foundation-meeting-brief`** (`/meeting-brief`) . user's private strategic prep with stakeholder reads, ranked outcomes, anticipated Q&A; `visibility: private` default
+- **F-27: `foundation-meeting-recap`** (`/meeting-recap`) . topic-segmented post-meeting summary with decisions bold-flagged and actions inline; auto-discovers sibling agenda; ownership reconciliation threshold at 30% unassigned
+- **F-17: `foundation-meeting-synthesize`** (`/meeting-synthesize`) . cross-meeting archaeology surfacing patterns, trajectories, contradictions; format hints (board-prep, onboarding, retro-input, exec-brief)
+- **F-28: `foundation-stakeholder-update`** (`/stakeholder-update`) . async outward comms with 5 channel × 5 audience variants; explicit Shareable update boundary
+
+**Meeting Skills Family Contract v1.1.0** at `docs/reference/skill-families/meeting-skills-contract.md` . canonical, CI-enforced, shipped after two rounds of adversarial review with errata-within-version.
+
+**New directory pattern** `docs/reference/skill-families/` with landing-page index for future cross-cutting skill-family contracts.
+
+**Enforcing CI validator** `scripts/validate-meeting-skills-family.sh` + `.ps1` + `.md`, wired into `.github/workflows/validation.yml`. Checks contract-reference, zero-friction-execution section, shareable-summary/shareable-update section, sources-and-references structure, artifact_type enum values, and filename convention conformance across EXAMPLE.md + library samples.
+
+**15 new library samples** (3 per meeting skill × storevine/brainshelf/workbench threads) conforming to `SAMPLE_CREATION.md` with 8-key top-level frontmatter + Scenario/Prompt/Output structure + fictional-marker discipline. Total library grew 94 → 120 (legacy/orbit samples accurately accounted for).
+
+**End-user guide** `docs/guides/using-meeting-skills.md` with 3 mermaid diagrams (family skills graph, go-mode decision flow, chain sequence).
+
+**Release-plan companion docs**:
+- `plan_v2.11.0.md` . release plan with decisions table and deliverables
+- `plan_v2.11_codex-review.md` . Round 1 + Round 2 findings tracker (26 findings total)
+- `plan_v2.11_ci-coverage-analysis.md` . CI gaps and follow-up scripts
+- `plan_v2.11_pre-release-checklist.md` . pre-release quality checklist (Phase 0 Adversarial Review Loop added from v2.11.0 learnings)
+- `plan_v2.11_review-journal.md` . comprehensive narrative of all reviews, findings, resolutions, pattern analysis
+
+**v2.12.0 backlog** . 7 efforts created for sample-automation loop (F-31–F-35) + meeting-skills ecosystem continuation (F-29, F-30). Stub at `docs/internal/release-plans/v2.12.0/plan_v2.12.0.md`.
+
+### Changed
+
+- **Skill count 32 → 38** (+6: F-26 + 5 meeting skills)
+- **Foundation classification 1 → 7** (adds lean-canvas + 5 meeting skills to persona)
+- **Slash commands 39 → 45** (+6)
+- Current-state count references updated across `README.md`, `CLAUDE.md`, `plugin.json`, `marketplace.json`, `docs/getting-started.md`, `docs/reference/commands.md`, `docs/skills/index.md`, `docs/reference/ecosystem.md`, `docs/reference/project-structure.md`, `docs/guides/mcp-setup.md`, `QUICKSTART.md`, `docs/index.md`, `docs/concepts/agent-skill-anatomy.md`
+- `library/skill-output-samples/README_SAMPLES.md` . count 94 → 120 with 6-category breakdown (canonical, legacy/orbit, persona, lean-canvas, utility-single-thread, meeting-family)
+- `AGENTS.md` . 5 new foundation-meeting-* entries with family-contract note
+- `mkdocs.yml` . Foundation nav expanded to 7 skills + new Reference → Skill Families section + Guides section
+- `.github/workflows/validation.yml` . 2 new enforcing steps for `validate-meeting-skills-family` (bash + powershell)
+- `docs/internal/efforts/F-17-meeting-synthesis.md` and `F-18-meeting-prep.md` . archived to `_NOTES/archived-efforts/` and rewritten with expanded family-aware scope
+
+### Infrastructure / process
+
+- Two rounds of Codex adversarial review (`codex:codex-rescue` subagent) documented in review journal; 26 findings total, 24 resolved same-session
+- Pre-release checklist now starts with Phase 0 Adversarial Review Loop . re-run Codex after each resolution pass until findings stabilize below IMPORTANT severity
+- First post-v1.0.0 contract version bump with errata-within-version documented in change log
+
+### Not shipped in v2.11.0 (deferred)
+
+- R1-I8 IMPORTANT: utility-pm-skill-validate per-skill field enforcement . scoped into F-31 for v2.12.0
+- Retroactive sample generation for existing skills that lack them . post-v2.12.0 candidate
+- MCP server unfreeze criteria (frozen per M-22)
+
+## [2.10.2] . 2026-04-14
+
+Maintenance patch: corrects plugin manifest drift and extends the count-consistency CI to prevent it from recurring. No skill behavior changes.
+
+### Changed
+- `.claude-plugin/plugin.json` and `marketplace.json` . skill count in description corrected from 29 to 32 (reconciled with the 32-skill repo state shipped in v2.10.0)
+- `scripts/check-count-consistency.sh` / `.ps1` / `.md` . extended to scan tracked `.json` files (previously `.md` only), so drift in `plugin.json` and `marketplace.json` is now caught by the same CI that covers markdown. Threshold comparison changed from `>` to `>=` to catch round-number boundary drift. Added exclusions for `.github/.created-issues.json` (tooling state) and `.github/scripts/` (npm manifests).
+- `README.md` . v2.10.x What's New entry corrected from "10 workflows" to "9 workflows" (no new workflow shipped in v2.10.x; the repo has been at 9 workflows since v2.9.0)
+
+## [2.10.1] . 2026-04-13
+
+Documentation and tooling polish following v2.10.0. No skill behavior changes.
+
+### Added
+- Specifications for 10 backlog skills (draft effort briefs)
+- Generated `docs/skills/` pages for F-16, F-19, F-24
+
+### Changed
+- `scripts/generate-skill-pages.py` . skill/command/workflow counts now computed dynamically instead of hardcoded, preventing the stale-count drift that previously required manual sweeps
+- Backlog updated to reflect v2.10.0 shipped state
+
+### Removed
+- F-25 effort brief (scope moved to a separate agent-config-toolkit initiative)
+
+## [2.10.0] . 2026-04-11
+
+> **Note:** F-16 (mermaid-diagrams) and F-19 (slideshow-creator) content has
+> been available since v2.9.1 but is formally released and documented with
+> v2.10.0 as the utility skill expansion release.
+
+### Added
+- **F-16: `utility-mermaid-diagrams`** . new utility skill teaching PMs to create syntactically valid mermaid diagrams. 15 diagram types with dual-lens navigation (type catalog + PM use-case guide), dedicated syntax validity reference, planning worksheet, and worked examples. 2,656 lines across 7 files.
+- **F-19: `utility-slideshow-creator`** . new utility skill for generating professional presentations from JSON deck specifications. 18 slide types with dark/light variants, content-to-layout decision logic, calibrated character limits, Google Slides compatibility. Ships with a generic professional theme. 766 lines across 7 files.
+- **F-24: `utility-update-pm-skills`** . new utility skill for checking, previewing, and applying pm-skills updates. Three modes: `--status` (quick version check), `--report-only` (preview without writing files), default (full update with confirmation). Includes validated-before-copy safety, optional backup, value-delta reports, post-update smoke test, 13-item quality checklist, FAQ, and degraded mode for no-network environments.
+- `/mermaid-diagrams` slash command
+- `/slideshow-creator` slash command
+- `/update-pm-skills` slash command with `--status` and `--report-only` flags
+- `docs/guides/updating-pm-skills.md` . user-facing guide for the update skill
+- `_pm-skills/` local state directory convention (gitignored) for update reports and backups
+- 7 new sample outputs in `library/skill-output-samples/` for deliver-acceptance-criteria and all 6 utility skills (storevine thread). Sample library: 84 → 91, now covering all 32 skills.
+- Generated `docs/skills/` pages for all 3 new utility skills
+
+### Changed
+- Repo now ships 32 skills (25 phase + 1 foundation + 6 utility), 39 command docs, and 10 workflows
+- Comprehensive docs count sweep across 20+ files
+- MCP server decoupled from pm-skills release cycle (M-22) . frozen, no longer a release prerequisite
+- Codex cross-LLM review completed for release plan and F-24 feature design (1 Blocker, 12 Major, 11 Minor resolved)
+
+## [2.9.1] . 2026-04-10
+
+### Added
+- **D-05: Workflows guide** . dedicated `docs/guides/using-workflows.md` with decision tree (mermaid), comparison matrix for all 9 workflows, invocation guide, and customization patterns. Replaces the brief workflow section previously in `using-skills.md`.
+- **M-20: Documentation count consistency CI** . 3 new validation script pairs:
+  - `check-workflow-coverage` . verifies every workflow has matching docs page, AGENTS.md entry, and mkdocs nav entry
+  - `check-count-consistency` . detects stale hardcoded skill/command/workflow counts in documentation
+  - `check-generated-freshness` . verifies generated workflow pages match sources
+- `validate-version-consistency` . hard-fail CI check ensuring `plugin.json` and `marketplace.json` versions match
+- `validate-gitignore-pm-skills` . advisory CI check for `_pm-skills/` in `.gitignore`
+- `validate-script-docs` . advisory CI check ensuring every script pair has companion `.md` documentation
+- Companion `.md` documentation for all new scripts and 2 previously undocumented scripts (`check-context-currency`, `check-stale-bundle-refs`)
+- `_pm-skills/` added to `.gitignore` (local state directory for update reports and backups)
+
+### Changed
+- `scripts/README_SCRIPTS.md` . expanded from 8 to 16 script entries with updated "When to use what" guide
+- `.github/workflows/validation.yml` . added 6 new CI checks (1 hard-fail, 5 advisory)
+- `docs/guides/using-skills.md` . trimmed workflow section to overview + link to new dedicated guide
+- `docs/workflows/index.md` . added link to workflows guide
+- `mkdocs.yml` . added "Using Workflows" nav entry under Guides
+- Fixed `marketplace.json` version 2.8.2 → 2.9.0 (was out of sync with `plugin.json`)
+
 ## [2.9.0] . 2026-04-06
 
 ### Added
@@ -18,7 +177,54 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Renamed "Workflow Bundles" → "Workflows" across all documentation
 - Added URL redirects for old `/bundles/*` doc site paths
 
-## [2.8.0] - 2026-04-03 ([release notes](releases/Release_v2.8.0.md))
+## [2.8.2] - 2026-04-04
+
+### Added
+- **Skill versioning concepts page** . `docs/concepts/versioning.md`: public-facing guide to skill SemVer, HISTORY.md, skills-manifest.yaml, tie-breaker rule, and lifecycle tool integration.
+- **git-revision-date-localized plugin** . shows "last updated" and "created" dates on every page (enabled in CI).
+- **Custom CSS** . `docs/stylesheets/extra.css` for card grid, tag badge, and admonition styling.
+- **Theme overrides directory** . `overrides/` for future MkDocs Material customization.
+- **F-12 effort brief** . skill quality convergence draft (first real-world use of lifecycle tools at scale).
+
+### Changed
+- `requirements-docs.txt` . added `mkdocs-git-revision-date-localized-plugin`.
+- `mkdocs.yml` . added git-revision-date, custom_dir, extra_css, versioning page in nav.
+- `docs/reference/categories.md` . fixed stale coordination skill count (5→7) and total (27→29).
+- `marketplace.json` . updated to v2.8.1 / 29 skills.
+
+### Release Notes
+- Documentation-only release. No skill or command behavior changes.
+- No `pm-skills-mcp` code changes required (docs parity update only).
+
+## [2.8.1] - 2026-04-04 ([release notes](docs/releases/Release_v2.8.1.md))
+
+### Added
+- **Documentation site** at [product-on-purpose.github.io/pm-skills](https://product-on-purpose.github.io/pm-skills/) . MkDocs Material with tab navigation, dark mode, search, and mermaid diagram rendering.
+- **"Follow the Product" showcase** . 3 interactive narrative journeys (Storevine B2B, Brainshelf Consumer, Workbench Enterprise) with 84 real sample outputs from the sample library, including prompts and full artifacts.
+- **Skill finder** . interactive decision tree and artifact table for choosing the right skill.
+- **Recipes** . 7 end-to-end workflows (Pitch a Feature, Run an Experiment, Launch a Feature, Discover and Frame, Define the Opportunity, Sprint Retro, Full Lifecycle) with mermaid flow diagrams.
+- **Skill comparisons** . 6 side-by-side comparisons for commonly confused skill pairs (PRD vs Solution Brief, Hypothesis vs Problem Statement, etc.).
+- **Prompt gallery** . curated real prompts in 3 styles (organized, casual, enterprise) from the sample library.
+- **Per-skill real-world examples** . 3 collapsible sample outputs (one per narrative thread) embedded on 25 skill pages.
+- **Quick-try snippets** . copy-pasteable slash command at the top of every skill page.
+- **Phase flow diagrams** . mermaid diagrams on all 6 phase index pages showing how skills connect.
+- **Tags plugin** . browse skills by phase and category tags.
+- **Social cards** . OpenGraph preview cards for link sharing (enabled in CI).
+- **Generation scripts** . `scripts/generate-skill-pages.py` (29 skill pages + indexes + commands ref) and `scripts/generate-showcase.py` (3 showcase journeys from sample library).
+- **Deploy workflow** . `.github/workflows/deploy-docs.yml` auto-deploys on push to main.
+- **MkDocs config guide** . `docs/internal/mkdocs/mkdocs-config.md` for maintainers.
+- **MCP setup guide** . `docs/guides/mcp-setup.md` for users: install, configure, and use pm-skills-mcp across Claude Desktop, Cursor, Claude Code, and VS Code.
+
+### Changed
+- **MCP integration guide** . updated tool counts (25→29 skill tools, 42 total), added acceptance-criteria and utility skill tools, updated slash command mapping table, removed stale catalog note, updated version references to v2.8.0.
+
+### Release Notes
+- Documentation-only release . no PM skill or slash-command behavior changes.
+- No `pm-skills-mcp` update required.
+- Site is generated from existing content (skills, samples, docs) plus new guide pages.
+- 70+ navigable pages, zero build warnings.
+
+## [2.8.0] - 2026-04-03 ([release notes](docs/releases/Release_v2.8.0.md))
 
 ### Added
 - **F-10: utility-pm-skill-validate skill** (#121) . second utility skill. Audits existing skills against structural conventions (mirroring CI) and LLM-assessed quality criteria. Produces a pipe-delimited validation report (`Report schema: v1`) with severity-graded findings (FAIL/WARN/INFO) and actionable recommendations with target file paths. Two-tier assessment rebaselined against shipped library conventions. Includes SKILL.md, TEMPLATE.md (report format), EXAMPLE.md (validated `deliver-prd`), `/pm-skill-validate` command, and AGENTS.md entry. Skill count: 27 → 28.
@@ -41,7 +247,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Repo now contains 29 skills (25 domain + 1 foundation + 3 utility), 30 command docs, and 3 workflow bundles.
 - **MCP note**: `pm-skills-mcp` needs a re-embed to pick up both new skills. `utility-pm-skill-validate` → `pm_pm_skill_validate`. `utility-pm-skill-iterate` → `pm_pm_skill_iterate`.
 
-## [2.7.0] - 2026-03-22 ([release notes](releases/Release_v2.7.0.md))
+## [2.7.0] - 2026-03-22 ([release notes](docs/releases/Release_v2.7.0.md))
 
 ### Added
 - **F-06: deliver-acceptance-criteria skill** (#114) . new Deliver phase skill for Given/When/Then acceptance criteria generation covering happy path, edge cases, error states, and non-functional criteria. Includes SKILL.md, TEMPLATE.md, EXAMPLE.md (e-commerce checkout scenario), `/acceptance-criteria` command, and AGENTS.md entry. Skill count: 25 → 26.
