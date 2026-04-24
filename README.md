@@ -92,6 +92,7 @@
   - [Installation Options](#installation-options)
   - [Quick Start by Platform](#quick-start-by-platform)
   - [Releases](#releases)
+  - [Primary: skills CLI (via skills.sh)](#primary-skills-cli-via-skillssh)
   - [Alternative: openskills CLI](#alternative-openskills-cli)
 - [Usage](#usage)
   - [How Skills Work](#how-skills-work)
@@ -449,10 +450,18 @@ cd pm-skills
 <details>
 <summary><strong>Claude Code</strong></summary>
 
-No setup needed! Skills work directly via slash commands in your terminal:
+**Fastest install (one command):**
 
 ```bash
-# Clone the repo to get slash commands
+npx skills add product-on-purpose/pm-skills
+```
+
+Installs all 38 skills into your agent's default skills directory. Slash commands (`/prd`, `/hypothesis`, `/user-stories`, etc.) become available immediately. No clone, no sync helper.
+
+**Alternative: clone the full repo** (gives you the sample library, library/skill-output-samples, internal docs, and workflows alongside the skills):
+
+```bash
+# Clone the repo to get slash commands + everything else
 git clone https://github.com/product-on-purpose/pm-skills.git
 cd pm-skills
 
@@ -606,6 +615,18 @@ Each release includes `QUICKSTART.md` with installation and usage instructions.
 Release notes are published in `docs/releases/` (for example, `docs/releases/Release_v2.2.md`).
 
 [![Download Latest](https://img.shields.io/github/v/release/product-on-purpose/pm-skills?style=for-the-badge&label=Download&color=brightgreen)](https://github.com/product-on-purpose/pm-skills/releases/latest)
+
+### Primary: skills CLI (via skills.sh)
+
+The open [`skills` CLI](https://github.com/vercel-labs/skills) from Vercel Labs is the recommended install path for most agents. One command, no configuration:
+
+```bash
+npx skills add product-on-purpose/pm-skills
+```
+
+This clones pm-skills, scans the `skills/` directory, and installs all 38 skills into your agent's default skills directory. Supported agents include Claude Code, Cursor, GitHub Copilot, Cline, and others. Discoverable via the [skills.sh directory](https://skills.sh/product-on-purpose/pm-skills).
+
+Telemetry is anonymous and opt-out via `DISABLE_TELEMETRY=1` or `DO_NOT_TRACK=1` in your environment.
 
 ### Alternative: openskills CLI
 
