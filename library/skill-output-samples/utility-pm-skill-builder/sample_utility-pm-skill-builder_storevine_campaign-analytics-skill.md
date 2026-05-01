@@ -63,17 +63,6 @@ Existing skills assume the PM already knows which metrics matter or are scoped t
 
 Fills the gap between "we need to measure campaigns" and "here is the dashboard spec" -- produces the analytical foundation that feeds downstream skills. [fictional]
 
-## Quality Forecast
-
-| Zone | Weight | Description |
-|------|--------|-------------|
-| Knowledge (K) | 35 | Funnel metrics, attribution models, cohort analysis |
-| Process (P) | 40 | Step-by-step framework definition |
-| Constraint (C) | 15 | Vanity metric guardrails and attribution pitfalls |
-| Wisdom (W) | 10 | Attribution model selection judgment |
-
-**Dominant zone**: Process (40%). **Exemplars**: `measure-dashboard-requirements`, `measure-instrumentation-spec`.
-
 ## Draft Frontmatter
 
 ```yaml

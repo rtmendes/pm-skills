@@ -62,28 +62,6 @@ distinct coordination artifact in the Deliver phase.
 
 ---
 
-## Quality Forecast
-
-### Zone Distribution
-
-| Zone | Weight | Description |
-|------|--------|-------------|
-| Knowledge (K) | 20 | Change management principles, communication best practices |
-| Process (P) | 40 | Step-by-step workflow from feature context to drafted communications |
-| Constraint (C) | 15 | Audience segmentation rules, required sections, tone guidelines |
-| Wisdom (W) | 25 | Judgment on what level of detail each audience needs, when to escalate |
-
-**Dominant zone**: Process (40%)
-
-### Writing Guidance
-
-Process-heavy skill: use numbered steps with clear inputs and outputs at each
-stage. Be prescriptive about the workflow order (identify audiences → assess
-impact → draft per-audience messages → review). Include decision points where
-the PM must choose between communication approaches based on change severity.
-
----
-
 ## Exemplar Skills
 
 | Skill | Why selected |
@@ -282,7 +260,6 @@ Creates targeted change management communications for feature launches that alte
 - [x] `references/EXAMPLE.md` will be a complete artifact (150-300 lines)
 - [x] Output contract present in draft SKILL.md
 - [x] Quality checklist present in draft SKILL.md
-- [x] Quality Forecast identifies Process (40%) as dominant zone with writing guidance
 - [x] Gap analysis checked all 27 existing skills
 - [x] Why Gate not triggered (no high overlap . release-notes and launch-checklist serve different purposes)
 

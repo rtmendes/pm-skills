@@ -6,15 +6,13 @@ tags:
   - coordination
 ---
 
-# <!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
+# PM Skill Builder
 
 !!! info "Quick facts"
     **Classification:** Utility | **Version:** 1.0.0 | **Category:** coordination | **License:** Apache-2.0
 
 **Try it:** `/pm-skill-builder "Your context here"`
 { .md-button }
-
-# PM Skill Builder
 
 This skill creates new PM skills for the pm-skills library. It produces a
 Skill Implementation Packet . a complete design document with draft files .
@@ -140,22 +138,17 @@ The packet includes:
 1. **Decision** . recommendation + Why Gate evidence (if applicable)
 2. **Classification** . type, phase (if domain), category, directory name
 3. **Overlap Analysis** . what was found, why this skill is still needed
-4. **Quality Forecast** . K/P/C/W zone distribution + writing guidance:
-   - Knowledge-heavy (≥35% K): reference frameworks, include When to Use
-   - Process-heavy (≥35% P): numbered steps, prescriptive, clear I/O per step
-   - Constraint-heavy (≥35% C): MUST/SHOULD/MUST NOT rules, separate section
-   - Wisdom-heavy (≥25% W): reflective questions, guide thinking
-5. **Exemplar Skills** . which existing skills modeled, why
-6. **Draft Frontmatter** . complete, valid YAML block
-7. **Draft SKILL.md** . full content (not an outline), mirroring exemplar structure
-8. **Draft TEMPLATE.md** . section headers with guidance comments
-9. **Draft EXAMPLE.md** . complete, realistic example (150-300 lines) with a
+4. **Exemplar Skills** . which existing skills modeled, why
+5. **Draft Frontmatter** . complete, valid YAML block
+6. **Draft SKILL.md** . full content (not an outline), mirroring exemplar structure
+7. **Draft TEMPLATE.md** . section headers with guidance comments
+8. **Draft EXAMPLE.md** . complete, realistic example (150-300 lines) with a
    specific PM scenario, every section filled, optional sections demonstrated
    both filled and skipped
-10. **Draft Command** . command frontmatter
-11. **AGENTS.md Entry** . exact text to add
-12. **Validation Checklist** . all CI rules checked against the draft
-13. **Next Steps** . local CI, testing, contribution workflow
+9. **Draft Command** . command frontmatter
+10. **AGENTS.md Entry** . exact text to add
+11. **Validation Checklist** . all CI rules checked against the draft
+12. **Next Steps** . local CI, testing, contribution workflow
 
 ### Step 6: Write to Staging Area
 
@@ -252,29 +245,6 @@ where existing skills fail}
 ### Why this skill is still needed
 
 {The gap this skill fills that no existing skill covers}
-
----
-
-## Quality Forecast
-
-### Zone Distribution
-
-| Zone | Weight | Description |
-|------|--------|-------------|
-| Knowledge (K) | {0-100} | {What domain knowledge this skill encodes} |
-| Process (P) | {0-100} | {What workflow/steps this skill teaches} |
-| Constraint (C) | {0-100} | {What rules/guardrails this skill enforces} |
-| Wisdom (W) | {0-100} | {What judgment/reflection this skill develops} |
-
-> **Rule**: Weights must sum to 100. Round to nearest 5. These are approximate
-> guidance signals for writing style, not scored metrics.
-
-**Dominant zone**: {zone} ({weight}%)
-
-### Writing Guidance
-
-{Zone-specific guidance based on the dominant zone . see Quality Forecast
-Guide in SKILL.md for the mapping}
 
 ---
 
@@ -405,7 +375,6 @@ Context from user: $ARGUMENTS
 - [ ] `references/EXAMPLE.md` is a complete artifact (150-300 lines), not an outline
 - [ ] Output contract present in SKILL.md
 - [ ] Quality checklist present in SKILL.md
-- [ ] Quality Forecast identifies dominant zone with writing guidance
 - [ ] Gap analysis checked all existing skills (not just same-phase)
 - [ ] Why Gate evidence is specific (names prompts/scenarios, not vague)
 
@@ -484,28 +453,6 @@ Context from user: $ARGUMENTS
     message, or internal knowledge-base update that tells affected users what
     changed, what they need to do differently, and where to get help. This is a
     distinct coordination artifact in the Deliver phase.
-
-    ---
-
-    ## Quality Forecast
-
-    ### Zone Distribution
-
-    | Zone | Weight | Description |
-    |------|--------|-------------|
-    | Knowledge (K) | 20 | Change management principles, communication best practices |
-    | Process (P) | 40 | Step-by-step workflow from feature context to drafted communications |
-    | Constraint (C) | 15 | Audience segmentation rules, required sections, tone guidelines |
-    | Wisdom (W) | 25 | Judgment on what level of detail each audience needs, when to escalate |
-
-    **Dominant zone**: Process (40%)
-
-    ### Writing Guidance
-
-    Process-heavy skill: use numbered steps with clear inputs and outputs at each
-    stage. Be prescriptive about the workflow order (identify audiences → assess
-    impact → draft per-audience messages → review). Include decision points where
-    the PM must choose between communication approaches based on change severity.
 
     ---
 
@@ -707,7 +654,6 @@ Context from user: $ARGUMENTS
     - [x] `references/EXAMPLE.md` will be a complete artifact (150-300 lines)
     - [x] Output contract present in draft SKILL.md
     - [x] Quality checklist present in draft SKILL.md
-    - [x] Quality Forecast identifies Process (40%) as dominant zone with writing guidance
     - [x] Gap analysis checked all 27 existing skills
     - [x] Why Gate not triggered (no high overlap . release-notes and launch-checklist serve different purposes)
 
@@ -765,7 +711,6 @@ Before finalizing the packet, verify all items in both tiers:
 - [ ] EXAMPLE.md is a complete artifact (150-300 lines), not an outline
 - [ ] Output contract is present in draft SKILL.md
 - [ ] Quality checklist is present in draft SKILL.md
-- [ ] Quality Forecast identifies dominant zone and provides writing guidance
 
 ## Output Contract
 

@@ -64,6 +64,14 @@ def parse_frontmatter(content: str) -> tuple:
     fm_text = match.group(1)
     body = match.group(2)
 
+    # Also strip a leading HTML comment from the body (post-frontmatter convention,
+    # standardized by commit 0ab0a60 for plugin-validation compatibility).
+    body_stripped = body.lstrip()
+    if body_stripped.startswith("<!--"):
+        end = body_stripped.find("-->")
+        if end != -1:
+            body = body_stripped[end + 3:].lstrip()
+
     metadata = {}
     current_key = None
     in_metadata_block = False

@@ -64,4 +64,3 @@ Track Codex sessions for pm-skills. Use this file for stable facts and current e
 - Current release governance: `docs/internal/release-plans/v2.7.0/README.md`
 - Shared decisions: `AGENTS/DECISIONS.md`
 - Local technical decisions: `AGENTS/codex/DECISIONS.md`
-- Current F-05 implementation-plan review: `docs/internal/efforts/F-05-pm-skill-builder/implementation-plan_reviewed-by-codex.md`

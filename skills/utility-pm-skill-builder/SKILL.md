@@ -127,22 +127,17 @@ The packet includes:
 1. **Decision** . recommendation + Why Gate evidence (if applicable)
 2. **Classification** . type, phase (if domain), category, directory name
 3. **Overlap Analysis** . what was found, why this skill is still needed
-4. **Quality Forecast** . K/P/C/W zone distribution + writing guidance:
-   - Knowledge-heavy (≥35% K): reference frameworks, include When to Use
-   - Process-heavy (≥35% P): numbered steps, prescriptive, clear I/O per step
-   - Constraint-heavy (≥35% C): MUST/SHOULD/MUST NOT rules, separate section
-   - Wisdom-heavy (≥25% W): reflective questions, guide thinking
-5. **Exemplar Skills** . which existing skills modeled, why
-6. **Draft Frontmatter** . complete, valid YAML block
-7. **Draft SKILL.md** . full content (not an outline), mirroring exemplar structure
-8. **Draft TEMPLATE.md** . section headers with guidance comments
-9. **Draft EXAMPLE.md** . complete, realistic example (150-300 lines) with a
+4. **Exemplar Skills** . which existing skills modeled, why
+5. **Draft Frontmatter** . complete, valid YAML block
+6. **Draft SKILL.md** . full content (not an outline), mirroring exemplar structure
+7. **Draft TEMPLATE.md** . section headers with guidance comments
+8. **Draft EXAMPLE.md** . complete, realistic example (150-300 lines) with a
    specific PM scenario, every section filled, optional sections demonstrated
    both filled and skipped
-10. **Draft Command** . command frontmatter
-11. **AGENTS.md Entry** . exact text to add
-12. **Validation Checklist** . all CI rules checked against the draft
-13. **Next Steps** . local CI, testing, contribution workflow
+9. **Draft Command** . command frontmatter
+10. **AGENTS.md Entry** . exact text to add
+11. **Validation Checklist** . all CI rules checked against the draft
+12. **Next Steps** . local CI, testing, contribution workflow
 
 ### Step 6: Write to Staging Area
 
@@ -275,7 +270,6 @@ Before finalizing the packet, verify all items in both tiers:
 - [ ] EXAMPLE.md is a complete artifact (150-300 lines), not an outline
 - [ ] Output contract is present in draft SKILL.md
 - [ ] Quality checklist is present in draft SKILL.md
-- [ ] Quality Forecast identifies dominant zone and provides writing guidance
 
 ## Examples
 

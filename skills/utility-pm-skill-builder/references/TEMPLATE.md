@@ -43,29 +43,6 @@ where existing skills fail}
 
 ---
 
-## Quality Forecast
-
-### Zone Distribution
-
-| Zone | Weight | Description |
-|------|--------|-------------|
-| Knowledge (K) | {0-100} | {What domain knowledge this skill encodes} |
-| Process (P) | {0-100} | {What workflow/steps this skill teaches} |
-| Constraint (C) | {0-100} | {What rules/guardrails this skill enforces} |
-| Wisdom (W) | {0-100} | {What judgment/reflection this skill develops} |
-
-> **Rule**: Weights must sum to 100. Round to nearest 5. These are approximate
-> guidance signals for writing style, not scored metrics.
-
-**Dominant zone**: {zone} ({weight}%)
-
-### Writing Guidance
-
-{Zone-specific guidance based on the dominant zone . see Quality Forecast
-Guide in SKILL.md for the mapping}
-
----
-
 ## Exemplar Skills
 
 | Skill | Why selected |
@@ -193,7 +170,6 @@ Context from user: $ARGUMENTS
 - [ ] `references/EXAMPLE.md` is a complete artifact (150-300 lines), not an outline
 - [ ] Output contract present in SKILL.md
 - [ ] Quality checklist present in SKILL.md
-- [ ] Quality Forecast identifies dominant zone with writing guidance
 - [ ] Gap analysis checked all existing skills (not just same-phase)
 - [ ] Why Gate evidence is specific (names prompts/scenarios, not vague)
 
