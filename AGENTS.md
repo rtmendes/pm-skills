@@ -18,6 +18,11 @@ Generate a one-page lean canvas across nine interlocking blocks (problem, custom
 
 Generates a context-appropriate persona for product or marketing workflows with explicit assumptions, confidence, and evidence trail. Use when shaping artifact perspective, stress-testing decisions, or framing PM/GTM decisions.
 
+#### okr-writer
+**Path:** `skills/foundation-okr-writer/SKILL.md`
+
+Drafts, reviews, rewrites, and coaches outcome-based OKR sets. Supports five entry modes (Guided default, One-Shot via --oneshot, Sustained Coach, Audit Only, Rewrite). Diagnoses empowered-team context, refuses to fabricate baselines, refuses compensation coupling, and reframes feature-delivery KRs into outcome KRs. Member of the OKR Skills set (companion `measure-okr-grader` planned for a later release).
+
 #### meeting-agenda
 **Path:** `skills/foundation-meeting-agenda/SKILL.md`
 
@@ -285,6 +290,7 @@ Workflow links are repo-relative within this repository.
 | `/lean-canvas` | Generate a one-page lean canvas with optional HTML output |
 | `/mermaid-diagrams` | utility-mermaid-diagrams |
 | `/lessons-log` | Create a structured lessons learned entry |
+| `/okr-writer` | Draft, review, rewrite, or coach OKRs with outcome-based KRs and quality audit |
 | `/opportunity-tree` | Create an opportunity solution tree |
 | `/persona` | Generate a product or marketing persona |
 | `/pivot-decision` | Document a pivot or persevere decision |
