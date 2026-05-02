@@ -6,15 +6,13 @@ tags:
   - specification
 ---
 
-# <!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
+# User Stories
 
 !!! info "Quick facts"
     **Phase:** Deliver | **Version:** 2.0.0 | **Category:** specification | **License:** Apache-2.0
 
 **Try it:** `/user-stories "Your context here"`
 { .md-button }
-
-# User Stories
 
 User stories are concise descriptions of functionality from the user's perspective. They capture who needs something, what they need, and why . without prescribing how to build it. Good user stories enable teams to break large features into estimable, deliverable increments while maintaining focus on user value.
 

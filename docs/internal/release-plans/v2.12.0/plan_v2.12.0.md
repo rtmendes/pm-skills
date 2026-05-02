@@ -1,6 +1,6 @@
 # v2.12.0 Release Plan: OKR Skills Launch
 
-Status: In Progress
+Status: Release prep complete; pending tag
 Owner: Maintainers
 Type: Feature release (minor)
 Stub created: 2026-04-18 (during v2.11.0 completion)
@@ -10,23 +10,33 @@ Theme pivoted: 2026-05-01 (from sample-automation to OKR launch)
 
 Ship the first two skills of the OKR Skills set: `foundation-okr-writer` and `measure-okr-grader`. The original v2.12.0 stub theme (sample-automation + meeting-ecosystem continuation) has been pushed to v2.13.0+ because that work is gated on real-world meeting-skills usage feedback that has not yet arrived. The OKR work has momentum from the 2026-04-29 strategy session and a complete OKR-doctrine knowledge base.
 
-## Status Snapshot (2026-05-01)
+## Status Snapshot (2026-05-01, evening)
 
 | Item | Status |
 |---|---|
-| `foundation-okr-writer` skill canonical | Shipped to main branch (uncommitted at time of writing) |
+| `foundation-okr-writer` skill canonical | Shipped (commit `6bcfba1`) |
 | `foundation-okr-writer` 3 thread samples | Shipped (storevine, brainshelf, workbench) |
 | `foundation-okr-writer` AGENTS.md + mkdocs.yml + commands ref | Updated |
 | `foundation-okr-writer` Codex adversarial review | 2 medium findings resolved (generator-bug fix, nonexistent-command redirect rephrased) |
-| `measure-okr-grader` skill | Not yet built; strategy doc and storevine draft sample exist |
-| `measure-okr-grader` 3 thread samples | Storevine drafted; brainshelf and workbench unwritten |
-| pm-skill-builder packet format | Simplified |
+| `measure-okr-grader` skill | Shipped (commit `a5c000f`) |
+| `measure-okr-grader` 3 thread samples | Shipped (storevine, brainshelf, workbench) |
+| `measure-okr-grader` Phase 0 Adversarial Review Loop | 3 rounds; converged on 0 findings round 3 |
+| `measure-okr-grader` cross-reference cleanup in writer | Applied (line 45 redirect, line 184 active reference) |
+| pm-skill-builder packet format | Simplified (silently bundled) |
 | Legacy effort docs | Reorganized; old format removed from tracked tree |
 | Sprint-skill backlog stubs (F-41, F-42) | Added |
-| CHANGELOG entry | Not yet authored |
-| skills-manifest.yaml | Not yet authored |
-| Pre-release checklist | Not yet executed |
-| Tag and push | Not yet done |
+| CHANGELOG.md v2.12.0 entry | Authored |
+| skills-manifest.yaml | Authored |
+| Release_v2.12.0.md | Authored |
+| README.md skill counts and version badge | Updated to 40 / 2.12.0 |
+| .claude-plugin/plugin.json + marketplace.json | Updated to 40 / 2.12.0 |
+| README_SAMPLES.md | Updated (126 / 40) |
+| Em-dash sweep across docs/skills/ mirror | Committed |
+| docs/internal/audit-ci/ → docs/internal/audit/_archived/ rename | Committed |
+| Pre-release checklist | Executed (full CI clean, Phase 0 review converged, em-dash zero in tracked files) |
+| Codex adversarial review on full release diff | Pending |
+| /ultrareview on full release | Pending (user-triggered) |
+| Tag and push | Pending |
 
 ## Major Deliverables
 

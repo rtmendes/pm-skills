@@ -6,15 +6,13 @@ tags:
   - meeting
 ---
 
-# <!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
+# Meeting Synthesize
 
 !!! info "Quick facts"
     **Classification:** Foundation | **Version:** 1.0.1 | **Category:** meeting | **License:** Apache-2.0
 
 **Try it:** `/meeting-synthesize "Your context here"`
 { .md-button }
-
-# Meeting Synthesize
 
 Meeting synthesis is the archaeology skill for multi-meeting initiatives. It consumes a set of meeting recaps (and optionally raw notes) over a period, and surfaces patterns that no single meeting reveals: how decisions evolved, how stakeholder positions shifted, where threads are stalling, where contradictions have emerged.
 

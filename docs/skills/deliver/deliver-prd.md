@@ -6,15 +6,13 @@ tags:
   - specification
 ---
 
-# <!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
+# Product Requirements Document (PRD)
 
 !!! info "Quick facts"
     **Phase:** Deliver | **Version:** 2.0.0 | **Category:** specification | **License:** Apache-2.0
 
 **Try it:** `/prd "Your context here"`
 { .md-button }
-
-# Product Requirements Document (PRD)
 
 A Product Requirements Document is the primary specification artifact that communicates what to build and why. It bridges the gap between problem understanding and engineering implementation by providing clear requirements, success criteria, and scope boundaries. A good PRD enables engineering to build the right thing while maintaining flexibility on implementation details.
 

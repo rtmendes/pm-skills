@@ -6,15 +6,13 @@ tags:
   - validation
 ---
 
-# <!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
+# Dashboard Requirements
 
 !!! info "Quick facts"
     **Phase:** Measure | **Version:** 2.0.0 | **Category:** validation | **License:** Apache-2.0
 
 **Try it:** `/dashboard-requirements "Your context here"`
 { .md-button }
-
-# Dashboard Requirements
 
 A dashboard requirements document specifies what questions a dashboard should answer, what metrics it displays, and how data should be visualized. Clear requirements help data teams build dashboards that actually inform decisions rather than just displaying numbers.
 

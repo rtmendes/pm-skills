@@ -6,15 +6,13 @@ tags:
   - reflection
 ---
 
-# <!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
+# Pivot Decision
 
 !!! info "Quick facts"
     **Phase:** Iterate | **Version:** 2.0.0 | **Category:** reflection | **License:** Apache-2.0
 
 **Try it:** `/pivot-decision "Your context here"`
 { .md-button }
-
-# Pivot Decision
 
 A pivot decision document captures the analysis and rationale behind a strategic direction change.or the decision to stay the course. Based on the Lean Startup concept of "pivot or persevere," this artifact ensures major strategic decisions are made with evidence, communicated clearly, and preserved for organizational learning.
 

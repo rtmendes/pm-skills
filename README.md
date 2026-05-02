@@ -5,7 +5,7 @@
   <br>
 </h1>
 
-<h4 align=”center”>A curated collection of 38 best-practice, plug-and-play product management “agent skills” (25 phase skills + 7 foundation skills + 6 utility skills) plus templates and workflows for consistent, professional PM outputs.</h4>
+<h4 align=”center”>A curated collection of 40 best-practice, plug-and-play product management “agent skills” (26 phase skills + 8 foundation skills + 6 utility skills) plus templates and workflows for consistent, professional PM outputs.</h4>
 
 <p align="center">
   <a href="https://github.com/product-on-purpose/pm-skills/issues/new?labels=bug">Report a Bug</a>
@@ -21,10 +21,10 @@
     <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=flat-square" alt="License">
   </a>
   <a href="https://github.com/product-on-purpose/pm-skills/releases">
-    <img src="https://img.shields.io/badge/version-2.11.1-blue.svg?style=flat-square" alt="Version">
+    <img src="https://img.shields.io/badge/version-2.12.0-blue.svg?style=flat-square" alt="Version">
   </a>
   <a href="#the-skills">
-    <img src="https://img.shields.io/badge/skills-38-brightgreen.svg?style=flat-square" alt="Skills">
+    <img src="https://img.shields.io/badge/skills-40-brightgreen.svg?style=flat-square" alt="Skills">
   </a>
   <a href="https://agentskills.io/specification">
     <img src="https://img.shields.io/badge/spec-agentskills.io-orange.svg?style=flat-square" alt="Agent Skills Spec">
@@ -896,7 +896,7 @@ See [docs/reference/project-structure.md](docs/reference/project-structure.md) f
 
 </details>
 <details>
-<summary>v2.2.0–v2.3.0 - MCP sync guardrails + governance baseline</summary>
+<summary>v2.2.0 to v2.3.0 - MCP sync guardrails + governance baseline</summary>
 
 **v2.3.0** . MCP sync guardrail defaults to blocking mode.
 **v2.2.0** . Cross-repo sync checker (observe mode), planning/backlog governance.

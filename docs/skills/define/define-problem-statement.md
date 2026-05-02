@@ -6,15 +6,13 @@ tags:
   - problem-framing
 ---
 
-# <!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
+# Problem Statement
 
 !!! info "Quick facts"
     **Phase:** Define | **Version:** 2.0.0 | **Category:** problem-framing | **License:** Apache-2.0
 
 **Try it:** `/problem-statement "Your context here"`
 { .md-button }
-
-# Problem Statement
 
 A problem statement is a concise document that frames the problem you're solving, articulates the impact on users and the business, and defines clear success criteria. It serves as the foundation for all subsequent product work by ensuring alignment on *what* problem to solve before jumping to *how* to solve it.
 

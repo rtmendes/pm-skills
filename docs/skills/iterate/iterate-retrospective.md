@@ -6,15 +6,13 @@ tags:
   - reflection
 ---
 
-# <!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
+# Retrospective
 
 !!! info "Quick facts"
     **Phase:** Iterate | **Version:** 2.0.0 | **Category:** reflection | **License:** Apache-2.0
 
 **Try it:** `/retrospective "Your context here"`
 { .md-button }
-
-# Retrospective
 
 A retrospective is a structured reflection that helps teams learn from their experiences and continuously improve. By regularly examining what went well, what didn't, and what to change, teams build a culture of learning and adaptation. The value isn't just in the discussion.it's in the documented actions and follow-through.
 

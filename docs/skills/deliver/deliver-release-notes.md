@@ -6,15 +6,13 @@ tags:
   - coordination
 ---
 
-# <!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
+# Release Notes
 
 !!! info "Quick facts"
     **Phase:** Deliver | **Version:** 2.0.0 | **Category:** coordination | **License:** Apache-2.0
 
 **Try it:** `/release-notes "Your context here"`
 { .md-button }
-
-# Release Notes
 
 Release notes communicate product changes to users in a way that highlights value and builds excitement. Unlike changelogs (which document what changed technically), release notes translate changes into user benefits. Good release notes help users discover new capabilities, understand improvements, and trust that issues are being addressed.
 

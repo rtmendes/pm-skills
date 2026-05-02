@@ -6,15 +6,13 @@ tags:
   - coordination
 ---
 
-# <!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
+# PM Skills Updater
 
 !!! info "Quick facts"
     **Classification:** Utility | **Version:** 1.0.0 | **Category:** coordination | **License:** Apache-2.0
 
 **Try it:** `/update-pm-skills "Your context here"`
 { .md-button }
-
-# PM Skills Updater
 
 This skill updates a local pm-skills installation to the latest public
 release. It validates connectivity, compares versions, previews changes,

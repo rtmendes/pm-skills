@@ -6,15 +6,13 @@ tags:
   - communication
 ---
 
-# <!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
+# Slideshow Creator
 
 !!! info "Quick facts"
     **Classification:** Utility | **Version:** 1.0.0 | **Category:** communication | **License:** Apache-2.0
 
 **Try it:** `/slideshow-creator "Your context here"`
 { .md-button }
-
-# Slideshow Creator
 
 Generate professional presentations (.pptx and .pdf) from a JSON deck specification. Zero design decisions at generation time . Claude selects slide types and fills content slots; all visual properties are pre-decided by the theme.
 

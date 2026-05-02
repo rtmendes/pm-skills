@@ -6,15 +6,13 @@ tags:
   - documentation
 ---
 
-# <!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
+# Mermaid Diagrams
 
 !!! info "Quick facts"
     **Classification:** Utility | **Version:** 1.0.0 | **Category:** documentation | **License:** Apache-2.0
 
 **Try it:** `/mermaid-diagrams "Your context here"`
 { .md-button }
-
-# Mermaid Diagrams
 
 Create effective, syntactically valid mermaid diagrams for product documents.
 

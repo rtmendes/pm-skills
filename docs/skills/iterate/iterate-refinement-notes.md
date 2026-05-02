@@ -6,15 +6,13 @@ tags:
   - coordination
 ---
 
-# <!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
+# Refinement Notes
 
 !!! info "Quick facts"
     **Phase:** Iterate | **Version:** 2.0.0 | **Category:** coordination | **License:** Apache-2.0
 
 **Try it:** `/refinement-notes "Your context here"`
 { .md-button }
-
-# Refinement Notes
 
 Refinement notes capture the outcomes of backlog refinement (grooming) sessions.what was discussed, what was estimated, and what decisions were made. They serve as a quick reference for team members who missed the session and a historical record of how stories evolved from idea to ready-for-sprint.
 

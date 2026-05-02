@@ -6,15 +6,13 @@ tags:
   - specification
 ---
 
-# <!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
+# Architecture Decision Record (ADR)
 
 !!! info "Quick facts"
     **Phase:** Develop | **Version:** 2.0.0 | **Category:** specification | **License:** Apache-2.0
 
 **Try it:** `/adr "Your context here"`
 { .md-button }
-
-# Architecture Decision Record (ADR)
 
 An Architecture Decision Record documents a significant technical decision along with its context and consequences. ADRs capture the "why" behind architectural choices so future team members understand the reasoning . especially important when they question why something was done a particular way. This skill follows Michael Nygard's lightweight ADR format.
 

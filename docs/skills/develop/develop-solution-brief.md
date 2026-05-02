@@ -6,15 +6,13 @@ tags:
   - ideation
 ---
 
-# <!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
+# Solution Brief
 
 !!! info "Quick facts"
     **Phase:** Develop | **Version:** 2.0.0 | **Category:** ideation | **License:** Apache-2.0
 
 **Try it:** `/solution-brief "Your context here"`
 { .md-button }
-
-# Solution Brief
 
 A solution brief is a concise, one-page document that communicates the proposed solution to a problem. It serves as the bridge between problem understanding and detailed specification, providing enough context for stakeholders to align on the approach without getting lost in implementation details. The one-page constraint forces clarity and prioritization.
 

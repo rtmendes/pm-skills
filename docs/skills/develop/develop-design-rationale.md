@@ -6,15 +6,13 @@ tags:
   - specification
 ---
 
-# <!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
+# Design Rationale
 
 !!! info "Quick facts"
     **Phase:** Develop | **Version:** 2.0.0 | **Category:** specification | **License:** Apache-2.0
 
 **Try it:** `/design-rationale "Your context here"`
 { .md-button }
-
-# Design Rationale
 
 A design rationale document captures the "why" behind design decisions.the context, constraints, alternatives considered, and reasoning that led to a particular solution. While designs themselves show what was built, rationale documents preserve institutional knowledge about why it was built that way.
 

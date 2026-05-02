@@ -6,15 +6,13 @@ tags:
   - coordination
 ---
 
-# <!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
+# Launch Checklist
 
 !!! info "Quick facts"
     **Phase:** Deliver | **Version:** 2.0.0 | **Category:** coordination | **License:** Apache-2.0
 
 **Try it:** `/launch-checklist "Your context here"`
 { .md-button }
-
-# Launch Checklist
 
 A launch checklist is a comprehensive verification document that ensures all functions are ready before releasing a feature or product. It coordinates across engineering, QA, design, marketing, support, legal, and operations to prevent launch-day surprises. Good launch checklists surface blockers early and create shared accountability for launch readiness.
 

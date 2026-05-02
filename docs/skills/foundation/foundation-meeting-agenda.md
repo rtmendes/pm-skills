@@ -6,15 +6,13 @@ tags:
   - meeting
 ---
 
-# <!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
+# Meeting Agenda
 
 !!! info "Quick facts"
     **Classification:** Foundation | **Version:** 1.0.0 | **Category:** meeting | **License:** Apache-2.0
 
 **Try it:** `/meeting-agenda "Your context here"`
 { .md-button }
-
-# Meeting Agenda
 
 A meeting agenda is the attendee-facing structural document that sets expectations before a meeting. It answers "what will we discuss, who owns each topic, how will we spend the time, and what does done look like?" Distinct from a meeting brief, which is the user's private strategic prep; the agenda is shared with participants and focused on structure and flow.
 

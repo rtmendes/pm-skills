@@ -6,15 +6,13 @@ tags:
   - research
 ---
 
-# <!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
+# Stakeholder Summary
 
 !!! info "Quick facts"
     **Phase:** Discover | **Version:** 2.0.0 | **Category:** research | **License:** Apache-2.0
 
 **Try it:** `/stakeholder-summary "Your context here"`
 { .md-button }
-
-# Stakeholder Summary
 
 A stakeholder summary documents the people and groups who have interest in or influence over a project, capturing their needs, concerns, and relationships. Effective stakeholder management often determines project success more than technical execution, making this document essential for navigating organizational complexity.
 

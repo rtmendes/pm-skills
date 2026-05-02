@@ -6,15 +6,13 @@ tags:
   - validation
 ---
 
-# <!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
+# Instrumentation Spec
 
 !!! info "Quick facts"
     **Phase:** Measure | **Version:** 2.0.0 | **Category:** validation | **License:** Apache-2.0
 
 **Try it:** `/instrumentation-spec "Your context here"`
 { .md-button }
-
-# Instrumentation Spec
 
 An instrumentation spec defines what analytics events to track, when to fire them, and what properties to include. It serves as a contract between product and engineering, ensuring consistent data collection that enables accurate measurement. Good instrumentation specs prevent the "we can't answer that question because we didn't track it" problem.
 

@@ -6,15 +6,13 @@ tags:
   - research
 ---
 
-# <!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
+# Persona Builder
 
 !!! info "Quick facts"
     **Classification:** Foundation | **Version:** 2.5.0 | **Category:** research | **License:** Apache-2.0
 
 **Try it:** `/persona "Your context here"`
 { .md-button }
-
-# Persona Builder
 
 This skill produces decision-usable personas from one canonical template pack.
 

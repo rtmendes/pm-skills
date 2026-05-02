@@ -1,5 +1,6 @@
 # MkDocs build output
 site/
+.memsearch/
 
 # OS generated files
 .DS_Store
@@ -48,6 +49,7 @@ _staging/
 .claude/commands/
 dist/
 */_archived/*
+_LOCAL/
 docs/internal/milestones/**/_archived/
 
 # Agent working files

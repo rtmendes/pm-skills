@@ -6,15 +6,13 @@ tags:
   - specification
 ---
 
-# <!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
+# Edge Cases
 
 !!! info "Quick facts"
     **Phase:** Deliver | **Version:** 2.0.0 | **Category:** specification | **License:** Apache-2.0
 
 **Try it:** `/edge-cases "Your context here"`
 { .md-button }
-
-# Edge Cases
 
 An edge cases document systematically catalogs the unusual, boundary, and error scenarios for a feature. While happy-path flows are typically well-specified, edge cases often get discovered in production . causing bugs, poor user experience, and support burden. Documenting edge cases upfront ensures engineering handles them intentionally and QA knows what to test.
 

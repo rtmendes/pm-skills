@@ -6,15 +6,13 @@ tags:
   - meeting
 ---
 
-# <!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
+# Stakeholder Update
 
 !!! info "Quick facts"
     **Classification:** Foundation | **Version:** 1.0.0 | **Category:** meeting | **License:** Apache-2.0
 
 **Try it:** `/stakeholder-update "Your context here"`
 { .md-button }
-
-# Stakeholder Update
 
 A stakeholder update is async communication to readers who need to know the outcomes of a meeting. Primary audience is non-attendees; secondary audience is some attendees who want a reference version (came in late, stepped out, need something to forward).
 

@@ -6,15 +6,13 @@ tags:
   - reflection
 ---
 
-# <!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
+# Experiment Results
 
 !!! info "Quick facts"
     **Phase:** Measure | **Version:** 2.0.0 | **Category:** reflection | **License:** Apache-2.0
 
 **Try it:** `/experiment-results "Your context here"`
 { .md-button }
-
-# Experiment Results
 
 An experiment results document captures what happened when you tested a hypothesis, including statistical outcomes, segment analysis, learnings, and clear recommendations. Good results documentation turns individual experiments into organizational knowledge that improves future decision-making.
 

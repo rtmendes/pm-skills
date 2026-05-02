@@ -6,15 +6,13 @@ tags:
   - validation
 ---
 
-# <!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
+# Experiment Design
 
 !!! info "Quick facts"
     **Phase:** Measure | **Version:** 2.0.0 | **Category:** validation | **License:** Apache-2.0
 
 **Try it:** `/experiment-design "Your context here"`
 { .md-button }
-
-# Experiment Design
 
 An experiment design document defines all parameters needed to run a rigorous A/B test or controlled experiment. It ensures the team aligns on what you're testing, how you'll measure success, and how long to run the test before drawing conclusions. Good experiment design prevents common pitfalls: underpowered tests, unclear success criteria, and decisions based on noise rather than signal.
 

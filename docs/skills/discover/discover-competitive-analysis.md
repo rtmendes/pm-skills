@@ -6,15 +6,13 @@ tags:
   - research
 ---
 
-# <!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
+# Competitive Analysis
 
 !!! info "Quick facts"
     **Phase:** Discover | **Version:** 2.0.0 | **Category:** research | **License:** Apache-2.0
 
 **Try it:** `/competitive-analysis "Your context here"`
 { .md-button }
-
-# Competitive Analysis
 
 A competitive analysis provides structured insight into the competitive landscape, helping product teams understand where they stand relative to alternatives and identify opportunities for differentiation. Rather than exhaustively cataloging every competitor, an effective analysis focuses on actionable insights that inform product strategy.
 

@@ -6,15 +6,13 @@ tags:
   - research
 ---
 
-# <!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
+# Interview Synthesis
 
 !!! info "Quick facts"
     **Phase:** Discover | **Version:** 2.0.0 | **Category:** research | **License:** Apache-2.0
 
 **Try it:** `/interview-synthesis "Your context here"`
 { .md-button }
-
-# Interview Synthesis
 
 An interview synthesis transforms raw user research data into structured insights that drive product decisions. Rather than simply listing what participants said, a good synthesis identifies patterns across conversations, connects observations to underlying user needs, and translates findings into actionable recommendations.
 

@@ -6,15 +6,13 @@ tags:
   - problem-framing
 ---
 
-# <!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
+# Jobs to be Done Canvas
 
 !!! info "Quick facts"
     **Phase:** Define | **Version:** 2.0.0 | **Category:** problem-framing | **License:** Apache-2.0
 
 **Try it:** `/jtbd-canvas "Your context here"`
 { .md-button }
-
-# Jobs to be Done Canvas
 
 A Jobs to be Done (JTBD) canvas captures the complete picture of why customers "hire" products to make progress in their lives. Based on Clayton Christensen's framework, JTBD goes beyond features and demographics to understand the underlying motivations.functional, emotional, and social.that drive customer behavior.
 

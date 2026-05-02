@@ -1,6 +1,6 @@
 ﻿# PM Skills Sample Library
 
-120 sample outputs across 38 PM skills, organized into three narrative threads that follow fictional product teams through the full Triple Diamond lifecycle. Each sample is a complete, realistic artifact that shows what a PM team would produce when invoking a pm-skills slash command against a real product context. Utility skills have single-thread samples (storevine) demonstrating their meta-skill outputs. Meeting-family skills (foundation-meeting-*) have three samples per skill (one per thread) following the SAMPLE_CREATION.md thread standards. Certain phase skills carry additional legacy and orbit samples beyond the canonical thread trio for historical calibration.
+126 sample outputs across 40 PM skills, organized into three narrative threads that follow fictional product teams through the full Triple Diamond lifecycle. Each sample is a complete, realistic artifact that shows what a PM team would produce when invoking a pm-skills slash command against a real product context. Utility skills have single-thread samples (storevine) demonstrating their meta-skill outputs. Meeting-family skills (foundation-meeting-*) have three samples per skill (one per thread) following the SAMPLE_CREATION.md thread standards. Certain phase skills carry additional legacy and orbit samples beyond the canonical thread trio for historical calibration.
 
 ## Table of Contents
 
@@ -20,16 +20,17 @@
 
 ## What Is This?
 
-This folder contains 120 sample outputs:
+This folder contains 126 sample outputs:
 
-- **72 canonical-thread phase-skill samples** . 3 per thread (storevine / brainshelf / workbench) × 24 phase skills
+- **75 canonical-thread phase-skill samples** . 3 per thread (storevine / brainshelf / workbench) × 25 phase skills
 - **11 additional legacy / orbit / extra samples on select phase skills** . `discover-competitive-analysis`, `discover-interview-synthesis`, `discover-stakeholder-summary` carry 6 samples each (3 canonical + 3 legacy = 9 extras total); `deliver-prd` carries 5 samples (3 canonical + 2 orbit = 2 extras)
 - **12 foundation-persona samples** . 4 variants per thread (product brief, product detailed, marketing brief, marketing detailed) × 3 threads
 - **3 foundation-lean-canvas samples** . 1 per thread (companion HTML rendering files exist alongside but are not counted as separate samples)
 - **7 single-thread samples** . utility skills (mermaid-diagrams, pm-skill-builder, pm-skill-iterate, pm-skill-validate, slideshow-creator, update-pm-skills) and deliver-acceptance-criteria, all storevine-only
 - **15 foundation-meeting-* family samples** . 3 per skill × 5 skills (agenda, brief, recap, synthesize, stakeholder-update), one per thread
+- **3 foundation-okr-writer samples** . 1 per thread (storevine, brainshelf, workbench), introduced in v2.12.0 as the first half of the OKR Skills set
 
-72 + 11 + 12 + 3 + 7 + 15 = 120.
+75 + 11 + 12 + 3 + 7 + 15 + 3 = 126.
 
 The samples serve two purposes:
 
@@ -114,6 +115,7 @@ Each row links to three sample outputs for the same skill, one per thread. The f
 | Foundation | meeting-recap | Topic-segmented post-meeting summary with decisions highlighted and actions inline | [storevine](foundation-meeting-recap/sample_foundation-meeting-recap_storevine_campaigns-pricing-decision.md) | [brainshelf](foundation-meeting-recap/sample_foundation-meeting-recap_brainshelf_resurface-scope-cut.md) | [workbench](foundation-meeting-recap/sample_foundation-meeting-recap_workbench_blueprints-customer-feedback.md) |
 | Foundation | meeting-synthesize | Cross-meeting archaeology surfacing patterns and contradictions | [storevine](foundation-meeting-synthesize/sample_foundation-meeting-synthesize_storevine_q1-campaigns-retro.md) | [brainshelf](foundation-meeting-synthesize/sample_foundation-meeting-synthesize_brainshelf_resurface-design-iteration.md) | [workbench](foundation-meeting-synthesize/sample_foundation-meeting-synthesize_workbench_blueprints-board-prep.md) |
 | Foundation | stakeholder-update | Async comms from a meeting recap with channel and audience variants | [storevine](foundation-stakeholder-update/sample_foundation-stakeholder-update_storevine_campaigns-slack-support.md) | [brainshelf](foundation-stakeholder-update/sample_foundation-stakeholder-update_brainshelf_resurface-email-beta-users.md) | [workbench](foundation-stakeholder-update/sample_foundation-stakeholder-update_workbench_blueprints-notion-enterprise-cs.md) |
+| Foundation | okr-writer | Drafts, reviews, rewrites, or coaches outcome-based OKR sets with empowered-team diagnostic, anti-pattern catalog, and Quality Audit Rubric | [storevine](foundation-okr-writer/sample_foundation-okr-writer_storevine_campaigns-q3.md) | [brainshelf](foundation-okr-writer/sample_foundation-okr-writer_brainshelf_resurface-q3.md) | [workbench](foundation-okr-writer/sample_foundation-okr-writer_workbench_blueprints-q3.md) |
 | Discover | competitive-analysis | Structured competitor landscape with feature matrix and positioning map | [storevine](discover-competitive-analysis/sample_discover-competitive-analysis_storevine_campaigns.md) | [brainshelf](discover-competitive-analysis/sample_discover-competitive-analysis_brainshelf_resurface.md) | [workbench](discover-competitive-analysis/sample_discover-competitive-analysis_workbench_blueprints.md) |
 | Discover | interview-synthesis | Thematic synthesis of user research interviews with quotes and recommendations | [storevine](discover-interview-synthesis/sample_discover-interview-synthesis_storevine_campaigns.md) | [brainshelf](discover-interview-synthesis/sample_discover-interview-synthesis_brainshelf_resurface.md) | [workbench](discover-interview-synthesis/sample_discover-interview-synthesis_workbench_blueprints.md) |
 | Discover | stakeholder-summary | Influence/interest map with detailed profiles and communication plan | [storevine](discover-stakeholder-summary/sample_discover-stakeholder-summary_storevine_campaigns.md) | [brainshelf](discover-stakeholder-summary/sample_discover-stakeholder-summary_brainshelf_resurface.md) | [workbench](discover-stakeholder-summary/sample_discover-stakeholder-summary_workbench_blueprints.md) |
@@ -135,6 +137,7 @@ Each row links to three sample outputs for the same skill, one per thread. The f
 | Measure | instrumentation-spec | Event tracking specification with event inventory, properties, and PII handling | [storevine](measure-instrumentation-spec/sample_measure-instrumentation-spec_storevine_campaigns.md) | [brainshelf](measure-instrumentation-spec/sample_measure-instrumentation-spec_brainshelf_resurface.md) | [workbench](measure-instrumentation-spec/sample_measure-instrumentation-spec_workbench_blueprints.md) |
 | Measure | dashboard-requirements | Analytics dashboard requirements with charts, filters, alerts, and acceptance criteria | [storevine](measure-dashboard-requirements/sample_measure-dashboard-requirements_storevine_campaigns.md) | [brainshelf](measure-dashboard-requirements/sample_measure-dashboard-requirements_brainshelf_resurface.md) | [workbench](measure-dashboard-requirements/sample_measure-dashboard-requirements_workbench_blueprints.md) |
 | Measure | experiment-results | Experiment results with statistical analysis, segments, learnings, and ship decision | [storevine](measure-experiment-results/sample_measure-experiment-results_storevine_campaigns.md) | [brainshelf](measure-experiment-results/sample_measure-experiment-results_brainshelf_resurface.md) | [workbench](measure-experiment-results/sample_measure-experiment-results_workbench_blueprints.md) |
+| Measure | okr-grader | Cycle-close OKR scoring per the canonical type enum with evidence quality, learning synthesis, and next-cycle recommendations | [storevine](measure-okr-grader/sample_measure-okr-grader_storevine_campaigns-q3.md) | [brainshelf](measure-okr-grader/sample_measure-okr-grader_brainshelf_resurface-q3.md) | [workbench](measure-okr-grader/sample_measure-okr-grader_workbench_blueprints-q3.md) |
 | Iterate | retrospective | Team retrospective with wins, improvements, and prioritized action items | [storevine](iterate-retrospective/sample_iterate-retrospective_storevine_campaigns.md) | [brainshelf](iterate-retrospective/sample_iterate-retrospective_brainshelf_resurface.md) | [workbench](iterate-retrospective/sample_iterate-retrospective_workbench_blueprints.md) |
 | Iterate | lessons-log | Structured lesson learned with root cause, recommendations, and applicability | [storevine](iterate-lessons-log/sample_iterate-lessons-log_storevine_campaigns.md) | [brainshelf](iterate-lessons-log/sample_iterate-lessons-log_brainshelf_resurface.md) | [workbench](iterate-lessons-log/sample_iterate-lessons-log_workbench_blueprints.md) |
 | Iterate | refinement-notes | Backlog refinement session notes with stories, decisions, and blockers | [storevine](iterate-refinement-notes/sample_iterate-refinement-notes_storevine_campaigns.md) | [brainshelf](iterate-refinement-notes/sample_iterate-refinement-notes_brainshelf_resurface.md) | [workbench](iterate-refinement-notes/sample_iterate-refinement-notes_workbench_blueprints.md) |
@@ -163,6 +166,7 @@ The Storevine thread follows the PM team building **Campaigns**, a built-in emai
 | Foundation | [persona - product detailed](foundation-persona/sample_foundation-persona_storevine_product-detailed-campaigns.md) | Multi-location merchant product persona for cross-store campaign management |
 | Foundation | [persona - marketing brief](foundation-persona/sample_foundation-persona_storevine_marketing-brief-campaigns.md) | Self-serve SMB acquisition persona for competitive positioning against Shopify+Klaviyo |
 | Foundation | [persona - marketing detailed](foundation-persona/sample_foundation-persona_storevine_marketing-detailed-campaigns.md) | Committee-buying marketing persona for Campaigns launch and enablement planning |
+| Foundation | [okr-writer](foundation-okr-writer/sample_foundation-okr-writer_storevine_campaigns-q3.md) | Q3 2026 Campaigns OKR set: weekly active senders, 90-day retention, CTR guardrail; aspirational empowered-team |
 | Discover | [competitive-analysis](discover-competitive-analysis/sample_discover-competitive-analysis_storevine_campaigns.md) | Email/SMS campaign tool landscape for built-in vs. third-party positioning |
 | Discover | [interview-synthesis](discover-interview-synthesis/sample_discover-interview-synthesis_storevine_campaigns.md) | 8 merchant interviews on email tool dependency and Klaviyo lock-in |
 | Discover | [stakeholder-summary](discover-stakeholder-summary/sample_discover-stakeholder-summary_storevine_campaigns.md) | Power-user merchants, Klaviyo integration partner, merchant success team |
@@ -183,6 +187,7 @@ The Storevine thread follows the PM team building **Campaigns**, a built-in emai
 | Measure | [instrumentation-spec](measure-instrumentation-spec/sample_measure-instrumentation-spec_storevine_campaigns.md) | campaign_created, template_selected, send_scheduled, email_opened, link_clicked |
 | Measure | [dashboard-requirements](measure-dashboard-requirements/sample_measure-dashboard-requirements_storevine_campaigns.md) | Merchant adoption, first-send rate, open/click/unsubscribe, revenue attribution |
 | Measure | [experiment-results](measure-experiment-results/sample_measure-experiment-results_storevine_campaigns.md) | Template treatment: +22% first-send rate [fictional], p=0.01, shipping |
+| Measure | [okr-grader](measure-okr-grader/sample_measure-okr-grader_storevine_campaigns-q3.md) | Q3 cycle close: KR1 0.86 aspirational hit; KR2 deferred (90-day window past close); Templates v2 thesis invalidated |
 | Iterate | [retrospective](iterate-retrospective/sample_iterate-retrospective_storevine_campaigns.md) | Q2 Sprint 12: deliverability delay, 3 wins, 4 action items |
 | Iterate | [lessons-log](iterate-lessons-log/sample_iterate-lessons-log_storevine_campaigns.md) | Email list validation must happen at import, not at send time |
 | Iterate | [refinement-notes](iterate-refinement-notes/sample_iterate-refinement-notes_storevine_campaigns.md) | 5 stories for Campaigns v1.1: A/B variants, purchase automations, unsubscribe page |
@@ -203,6 +208,7 @@ The Brainshelf thread follows the PM team building **Resurface**, a contextual m
 | Foundation | [persona - product detailed](foundation-persona/sample_foundation-persona_brainshelf_product-detailed-resurface.md) | Power-curator product persona for curation-aware resurfacing and topic filters |
 | Foundation | [persona - marketing brief](foundation-persona/sample_foundation-persona_brainshelf_marketing-brief-resurface.md) | Newsletter-creator acquisition persona for curation positioning and Curator tier |
 | Foundation | [persona - marketing detailed](foundation-persona/sample_foundation-persona_brainshelf_marketing-detailed-resurface.md) | Freemium-to-paid conversion persona for subscription messaging and trial design |
+| Foundation | [okr-writer](foundation-okr-writer/sample_foundation-okr-writer_brainshelf_resurface-q3.md) | Q3 2026 Resurface OKR set: weekly Resurface-active members, 30-day retention, relevance guardrail; aspirational empowered-team |
 | Discover | [competitive-analysis](discover-competitive-analysis/sample_discover-competitive-analysis_brainshelf_resurface.md) | PKM/read-later landscape: resurfacing and curation positioning |
 | Discover | [interview-synthesis](discover-interview-synthesis/sample_discover-interview-synthesis_brainshelf_resurface.md) | 7 user interviews on save-for-later behavior and the "guilt pile" problem |
 | Discover | [stakeholder-summary](discover-stakeholder-summary/sample_discover-stakeholder-summary_brainshelf_resurface.md) | Power savers, open-source PKM community, newsletter curators |
@@ -223,6 +229,7 @@ The Brainshelf thread follows the PM team building **Resurface**, a contextual m
 | Measure | [instrumentation-spec](measure-instrumentation-spec/sample_measure-instrumentation-spec_brainshelf_resurface.md) | item_resurfaced, resurface_clicked, item_read_time_logged, resurface_dismissed |
 | Measure | [dashboard-requirements](measure-dashboard-requirements/sample_measure-dashboard-requirements_brainshelf_resurface.md) | Resurface open rate, click-through, re-read completion, 30-day retention by cohort |
 | Measure | [experiment-results](measure-experiment-results/sample_measure-experiment-results_brainshelf_resurface.md) | Email digest treatment: +15% click rate [fictional], p=0.04, shipping with monitoring |
+| Measure | [okr-grader](measure-okr-grader/sample_measure-okr-grader_brainshelf_resurface-q3.md) | Q3 cycle close: KR1 0.74 aspirational hit; retention multiplier finding (1.6x at scale vs 3.4x in beta) invalidates strategy assumption |
 | Iterate | [retrospective](iterate-retrospective/sample_iterate-retrospective_brainshelf_resurface.md) | Sprint 8: notification timing bug, 2 wins, 3 action items |
 | Iterate | [lessons-log](iterate-lessons-log/sample_iterate-lessons-log_brainshelf_resurface.md) | Paywall detection must be explicit; silent failure destroys trust |
 | Iterate | [refinement-notes](iterate-refinement-notes/sample_iterate-refinement-notes_brainshelf_resurface.md) | 4 stories for Resurface v1.1: quiet hours, source filtering, frequency controls, snooze |
@@ -243,6 +250,7 @@ The Workbench thread follows the PM team building **Blueprints**, reusable docum
 | Foundation | [persona - product detailed](foundation-persona/sample_foundation-persona_workbench_product-detailed-blueprints.md) | Approval-governance product persona for enterprise operations workflows |
 | Foundation | [persona - marketing brief](foundation-persona/sample_foundation-persona_workbench_marketing-brief-blueprints.md) | Internal champion marketing persona for enterprise sales playbook and pilot-to-expansion |
 | Foundation | [persona - marketing detailed](foundation-persona/sample_foundation-persona_workbench_marketing-detailed-blueprints.md) | Economic buyer marketing persona for ROI justification and enterprise proposal templates |
+| Foundation | [okr-writer](foundation-okr-writer/sample_foundation-okr-writer_workbench_blueprints-q3.md) | Q3 2026 Blueprints OKR set: 12 contracted onboardings, execution-rate aspirational KR, HIPAA compliance, SLA guardrail; mixed-empowerment with Disclosure |
 | Discover | [competitive-analysis](discover-competitive-analysis/sample_discover-competitive-analysis_workbench_blueprints.md) | Enterprise docs/collaboration landscape: governance and template positioning |
 | Discover | [interview-synthesis](discover-interview-synthesis/sample_discover-interview-synthesis_workbench_blueprints.md) | 6 enterprise team lead interviews on documentation consistency and Confluence fatigue |
 | Discover | [stakeholder-summary](discover-stakeholder-summary/sample_discover-stakeholder-summary_workbench_blueprints.md) | IT security, legal/compliance, department heads, Confluence-migrant accounts |
@@ -263,6 +271,7 @@ The Workbench thread follows the PM team building **Blueprints**, reusable docum
 | Measure | [instrumentation-spec](measure-instrumentation-spec/sample_measure-instrumentation-spec_workbench_blueprints.md) | blueprint_created, section_completed, approval_requested, approval_granted, blueprint_published |
 | Measure | [dashboard-requirements](measure-dashboard-requirements/sample_measure-dashboard-requirements_workbench_blueprints.md) | Blueprint adoption by department, time-to-approved, approval cycle, compliance rate |
 | Measure | [experiment-results](measure-experiment-results/sample_measure-experiment-results_workbench_blueprints.md) | Required sections: -40% time-to-approved [fictional], p=0.001, shipping |
+| Measure | [okr-grader](measure-okr-grader/sample_measure-okr-grader_workbench_blueprints-q3.md) | Q3 cycle close: committed KR1 fail (10/12 onboardings) not softened, compliance_or_safety KR3 not-yet-fully-observable on partial audit, KR4 SLA guardrail held |
 | Iterate | [retrospective](iterate-retrospective/sample_iterate-retrospective_workbench_blueprints.md) | Post-GA retro: approval UX confusion, SSO incident day 2, 3 wins, 5 action items |
 | Iterate | [lessons-log](iterate-lessons-log/sample_iterate-lessons-log_workbench_blueprints.md) | Required sections caused skip-and-submit; enforce at approval gate, not authoring time |
 | Iterate | [refinement-notes](iterate-refinement-notes/sample_iterate-refinement-notes_workbench_blueprints.md) | 6 stories for Blueprints v1.1: version history, approval delegation, section commenting |
@@ -270,7 +279,7 @@ The Workbench thread follows the PM team building **Blueprints**, reusable docum
 
 ---
 
-*Part of pm-skills v2.6.1 -- [github.com/product-on-purpose/pm-skills](https://github.com/product-on-purpose/pm-skills)*
+*Part of pm-skills v2.12.0 -- [github.com/product-on-purpose/pm-skills](https://github.com/product-on-purpose/pm-skills)*
 
 
 

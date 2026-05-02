@@ -6,15 +6,13 @@ tags:
   - reflection
 ---
 
-# <!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
+# Lessons Log
 
 !!! info "Quick facts"
     **Phase:** Iterate | **Version:** 2.0.0 | **Category:** reflection | **License:** Apache-2.0
 
 **Try it:** `/lessons-log "Your context here"`
 { .md-button }
-
-# Lessons Log
 
 A lessons log entry captures significant learning from projects, incidents, or experiences in a format that's useful to future teams who weren't there. Unlike retrospectives (which focus on team improvement), lessons logs focus on organizational knowledge that transcends individual teams.patterns, anti-patterns, and hard-won wisdom.
 

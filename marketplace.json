@@ -4,13 +4,13 @@
   "plugins": [
     {
       "name": "pm-skills",
-      "description": "38 PM skills covering the full product lifecycle: 25 phase skills, 7 foundation skills (including the v2.11.0 Meeting Skills Family of 5 cross-cutting skills + lean-canvas + persona), and 6 utility skills. Includes templates, examples, workflows, thread-aligned samples, and lifecycle tools for creating, validating, and iterating skills. First release with a canonical skill-family contract pattern enforced by CI. Follows the agentskills.io specification.",
-      "version": "2.11.1",
+      "description": "40 PM skills covering the full product lifecycle: 26 phase skills, 8 foundation skills (including the v2.12.0 OKR Skills set, the v2.11.0 Meeting Skills Family of 5 cross-cutting skills, lean-canvas, and persona), and 6 utility skills. Includes templates, examples, workflows, thread-aligned samples, and lifecycle tools for creating, validating, and iterating skills. Adds the OKR write-and-score cycle pair in v2.12.0. Follows the agentskills.io specification.",
+      "version": "2.12.0",
       "source": ".",
       "author": "product-on-purpose",
       "homepage": "https://github.com/product-on-purpose/pm-skills",
       "license": "Apache-2.0",
-      "keywords": ["product-management", "pm", "prd", "user-stories", "agent-skills", "agentskills-io"]
+      "keywords": ["product-management", "pm", "prd", "user-stories", "okrs", "agent-skills", "agentskills-io"]
     }
   ]
 }

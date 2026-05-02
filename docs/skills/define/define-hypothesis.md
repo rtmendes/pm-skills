@@ -6,15 +6,13 @@ tags:
   - ideation
 ---
 
-# <!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
+# Hypothesis
 
 !!! info "Quick facts"
     **Phase:** Define | **Version:** 2.0.0 | **Category:** ideation | **License:** Apache-2.0
 
 **Try it:** `/hypothesis "Your context here"`
 { .md-button }
-
-# Hypothesis
 
 A hypothesis is a testable prediction about how a change will affect user behavior or business outcomes. It transforms assumptions into explicit statements that can be validated or invalidated through experimentation. Well-formed hypotheses prevent teams from building features based on untested beliefs and create shared understanding of what success looks like.
 

@@ -33,7 +33,7 @@ This skill is a coach, not a template filler. It drafts, reviews, rewrites, and 
 - You only need event tracking . use `/instrumentation-spec`
 - You only need an experiment . use `/experiment-design`
 - You only need a hypothesis . use `/hypothesis`
-- The cycle has ended and you need formal scoring with evidence and learning synthesis. A dedicated grader skill is planned but not yet shipped; until then, use this skill's Audit Only mode to review the OKR set against final values, and use `/retrospective` plus `/lessons-log` for cycle-close reflection
+- The cycle has ended and you need formal scoring with evidence and learning synthesis . use `/okr-grader`
 - The team is purely business-as-usual and needs steady-state KPIs, not stretch outcomes . OKRs are the wrong artifact
 
 ## How to Use

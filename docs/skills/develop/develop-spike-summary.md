@@ -6,15 +6,13 @@ tags:
   - coordination
 ---
 
-# <!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
+# Spike Summary
 
 !!! info "Quick facts"
     **Phase:** Develop | **Version:** 2.0.0 | **Category:** coordination | **License:** Apache-2.0
 
 **Try it:** `/spike-summary "Your context here"`
 { .md-button }
-
-# Spike Summary
 
 A spike summary documents the results of a time-boxed exploration . a focused investigation to reduce uncertainty before committing to implementation. Spikes answer specific questions like "Can we integrate with this API?" or "Is this technology viable for our use case?" The summary captures findings so the team can make informed decisions without the spike participants needing to repeat explanations.
 

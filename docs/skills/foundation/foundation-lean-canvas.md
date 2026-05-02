@@ -6,15 +6,13 @@ tags:
   - problem-framing
 ---
 
-# <!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
+# Lean Canvas
 
 !!! info "Quick facts"
     **Classification:** Foundation | **Version:** 1.0.0 | **Category:** problem-framing | **License:** Apache-2.0
 
 **Try it:** `/lean-canvas "Your context here"`
 { .md-button }
-
-# Lean Canvas
 
 A lean canvas is a one-page business thesis that makes your assumptions about problem, customer, solution, and viability explicit and testable. Developed by Ash Maurya from Alex Osterwalder's Business Model Canvas, it is specifically adapted for startups and product teams operating under uncertainty. Nine interlocking blocks force you to articulate the whole picture at once so that changing one block's assumptions surfaces the ripple effect on the others.
 
