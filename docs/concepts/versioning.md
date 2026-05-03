@@ -87,7 +87,7 @@ The [lifecycle tools](skill-lifecycle.md) integrate with versioning:
 
 ## Current Skill Versions
 
-All 25 domain skills and the foundation skill are at version **2.0.0** (from the v2.0 flat-structure restructure). The 3 utility skills are at **1.0.0** (shipped in v2.7.0 and v2.8.0). No skill has iterated past its initial version yet . the first version bumps will come from the [quality convergence effort](https://github.com/product-on-purpose/pm-skills/blob/main/docs/internal/efforts/F-12-skill-quality-convergence.md).
+Skill versions are tracked individually in each `skills/{name}/SKILL.md` frontmatter and aggregated per release in `docs/internal/release-plans/vX.Y.Z/skills-manifest.yaml`. As of v2.12.0 (40 skills: 26 domain + 8 foundation + 6 utility), the original 25 domain skills and `foundation-persona` are at **2.0.0** (lifted during the v2.0 flat-structure restructure); every other skill is at **1.0.0** (its first stable version). No skill has iterated past its current version yet . the first version bumps will come from the [quality convergence effort](https://github.com/product-on-purpose/pm-skills/blob/main/docs/internal/efforts/F-12-skill-quality-convergence.md).
 
 ## Traceability
 

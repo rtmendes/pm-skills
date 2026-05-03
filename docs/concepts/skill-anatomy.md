@@ -91,10 +91,9 @@ Meta-skills that operate on the repository, workflow, or other skills.
 
 ## Frontmatter
 
-Every SKILL.md begins with an HTML comment and YAML frontmatter:
+Every SKILL.md begins with YAML frontmatter on line 1. The opening `---` MUST be the first line of the file, with no preceding HTML comment, BOM, or blank line. The optional attribution comment goes AFTER the closing `---`, not before:
 
 ```yaml
-<!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
 ---
 name: deliver-prd
 description: Creates a comprehensive Product Requirements Document...
@@ -107,6 +106,7 @@ metadata:
   frameworks: [triple-diamond, lean-startup, design-thinking]
   author: product-on-purpose
 ---
+<!-- PM-Skills | https://github.com/product-on-purpose/pm-skills | Apache 2.0 -->
 ```
 
 **Required fields**: `name`, `description`, `version`, `updated`, `license`
@@ -119,6 +119,7 @@ metadata:
 - `name` must exactly match the directory name
 - `description` must be 20-100 words on a single line (no `>-` or `|` folding)
 - `version` must be quoted and appear exactly once at the root level (no `metadata.version`)
+- **First line must be `---`**: enforced by `scripts/lint-skills-frontmatter.sh`. Skills with a leading HTML comment or BOM are silently dropped by the open `skills` CLI (the issue v2.11.1 fixed for the 6 foundation skills). Library samples and TEMPLATE/EXAMPLE files keep the leading attribution comment because they are not loaded as skills; only `SKILL.md` is governed by this rule.
 
 For the full schema, see [frontmatter-schema.yaml](../reference/frontmatter-schema.yaml).
 

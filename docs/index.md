@@ -1,13 +1,13 @@
 ---
 title: PM Skills
-description: 38 AI agent skills for product managers - open-source, spec-compliant, and ready for Claude Code, Cursor, GitHub Copilot, and more.
+description: 40 AI agent skills for product managers - open-source, spec-compliant, and ready for Claude Code, Cursor, GitHub Copilot, and more.
 tags:
   - Home
 ---
 
 # PM Skills
 
-**38 best-practice product management skills for AI agents.**
+**40 best-practice product management skills for AI agents.**
 
 PM Skills teaches AI assistants how to produce professional PM artifacts - PRDs, user stories, acceptance criteria, experiment designs, and more. One command, consistent output, every time.
 
@@ -24,7 +24,7 @@ graph LR
         D3["Develop<br/>4 skills"] --> D4["Deliver<br/>6 skills"]
     end
     subgraph "Learning Space"
-        D5["Measure<br/>4 skills"] --> D6["Iterate<br/>4 skills"]
+        D5["Measure<br/>5 skills"] --> D6["Iterate<br/>4 skills"]
     end
     D2 --> D3
     D4 --> D5
@@ -69,11 +69,11 @@ graph LR
 
     [:octicons-arrow-right-24: Browse](skills/deliver/)
 
--   :material-chart-line: **Measure** - 4 skills
+-   :material-chart-line: **Measure** - 5 skills
 
     ---
 
-    Experiments, instrumentation, dashboards, results
+    Experiments, instrumentation, dashboards, results, OKR grading
 
     [:octicons-arrow-right-24: Browse](skills/measure/)
 
@@ -85,11 +85,11 @@ graph LR
 
     [:octicons-arrow-right-24: Browse](skills/iterate/)
 
--   :material-layers-triple: **Foundation** - 7 skills
+-   :material-layers-triple: **Foundation** - 8 skills
 
     ---
 
-    Cross-cutting persona generation
+    Cross-cutting skills: persona, OKR writer, lean canvas, meeting lifecycle, stakeholder update
 
     [:octicons-arrow-right-24: Browse](skills/foundation/)
 
@@ -105,7 +105,7 @@ graph LR
 
 ## Skills by Phase
 
-25 domain skills across 6 phases, plus foundation and utility:
+26 domain skills across 6 phases, plus foundation and utility:
 
 ```mermaid
 block-beta
@@ -145,6 +145,7 @@ block-beta
         m2["/instrumentation-spec"]
         m3["/dashboard-requirements"]
         m4["/experiment-results"]
+        m5["/okr-grader"]
     end
 
     block:iterate["Iterate"]:1
@@ -157,7 +158,7 @@ block-beta
     discover --> define --> develop --> deliver --> measure --> iterate
 ```
 
-**Plus:** `/lean-canvas` `/persona` `/meeting-agenda` `/meeting-brief` `/meeting-recap` `/meeting-synthesize` `/stakeholder-update` (Foundation - cross-cutting) · `/pm-skill-builder` `/pm-skill-validate` `/pm-skill-iterate` `/mermaid-diagrams` `/slideshow-creator` `/update-pm-skills` (Utility)
+**Plus:** `/lean-canvas` `/persona` `/okr-writer` `/meeting-agenda` `/meeting-brief` `/meeting-recap` `/meeting-synthesize` `/stakeholder-update` (Foundation - cross-cutting) · `/pm-skill-builder` `/pm-skill-validate` `/pm-skill-iterate` `/mermaid-diagrams` `/slideshow-creator` `/update-pm-skills` (Utility)
 
 ## The Skill Lifecycle
 
