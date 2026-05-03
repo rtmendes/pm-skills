@@ -9,7 +9,7 @@ Agent: Claude Opus 4.7
 
 Create `scripts/validate-skill-family-registration.sh` + `.ps1` + `.md`. a generic validator that detects skill-family membership via a `metadata.frameworks` frontmatter marker, loads the declared family's contract path from convention, and invokes the family's per-family validator. Scales the meeting-skills family pattern to any future cross-cutting skill family without requiring per-family hardcoding.
 
-Surfaced by the post-v2.11.0 CI audit (see `docs/internal/audit-ci/2026-04-18_ci-audit_post-v2.11.0.md`, gap G2). Complements F-31 (pm-skill-validate family-awareness).
+Surfaced by the post-v2.11.0 CI audit (see `docs/internal/audit/_archived/2026-04-18_ci-audit_post-v2.11.0.md`, gap G2; refreshed 2026-05-01 in `docs/internal/audit/2026-05-01_ci-audit_addendum.md`). Complements F-31 (pm-skill-validate family-awareness).
 
 ## Problem
 

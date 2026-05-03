@@ -31,7 +31,7 @@ pm-skills/
 
 ---
 
-## `/skills/` . The 38 PM Skills (flat)
+## `/skills/` . The 40 PM Skills (flat)
 
 Skills are the core of PM-Skills. Each skill teaches AI assistants how to produce a specific PM artifact with professional quality.
 
@@ -139,7 +139,7 @@ skills/{skill-name}/
 
 Contains Claude Code slash command definitions. Each `.md` maps a `/command` to its skill (or workflow).
 
-**Commands (39 total: 32 skill commands + 7 workflow commands)**
+**Commands (47 total: 40 skill commands + 7 workflow commands)**
 | Command | Target skill/workflow |
 | --- | --- |
 | `/competitive-analysis` | discover-competitive-analysis |
@@ -192,7 +192,7 @@ Workflows chain multiple skills together into guided, end-to-end sequences.
 |----------|---------|-----------------|
 | `feature-kickoff.md` | New feature development | problem-statement → hypothesis → prd → user-stories → launch-checklist |
 | `lean-startup.md` | Rapid validation cycle | hypothesis → experiment-design → experiment-results → pivot-decision |
-| `triple-diamond.md` | Complete product development | All 25 phase skills across 6 phases |
+| `triple-diamond.md` | Complete product development | All 26 phase skills across 6 phases |
 | `customer-discovery.md` | Transform raw research into a validated problem | interview-synthesis → stakeholder-summary → problem-statement → hypothesis |
 | `sprint-planning.md` | Prepare sprint-ready stories from a backlog | user-stories → acceptance-criteria → edge-cases |
 | `product-strategy.md` | Frame a major strategic initiative | competitive-analysis → opportunity-tree → problem-statement → solution-brief |

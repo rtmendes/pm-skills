@@ -2,7 +2,7 @@
 ---
 artifact: foundation-okr-writer
 version: "1.0"
-repo_version: "2.13.0"
+repo_version: "2.12.0"
 skill_version: "1.0.0"
 created: 2026-04-30
 status: canonical

@@ -1,7 +1,15 @@
 # Codex Agent Context
 
+> **Currency marker: v2.12.0 (2026-05-03).** This file has not been actively
+> maintained since the 2.7.0 cycle (last detailed update 2026-03-22). Codex
+> has been used primarily for adversarial review (Phase 0 review loop,
+> codified in 2.11.0). For current pm-skills state, see
+> `AGENTS/claude/CONTEXT.md`. Refresh of this file deferred to 2.13.0 doc
+> consistency overhaul.
+
 ## Status
-- Active; last updated: 2026-03-22
+- Pinned currency marker: v2.12.0 (kept current for `check-context-currency` CI; substantive content below remains historical)
+- Last detailed maintenance: 2026-03-22 (2.7.0 era)
 - Focus: `v2.7.0` execution/handoff after committed `M-12` + `F-06`, local `M-16` packaging implementation, and Codex review of the `F-05` implementation plan
 
 ## Purpose

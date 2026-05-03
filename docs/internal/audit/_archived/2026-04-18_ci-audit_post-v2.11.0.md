@@ -343,7 +343,7 @@ Utility skills like `pm-skill-builder` embed example skill counts and specific s
 
 **F-32 (v2.12.0)** addresses by making the builder regenerate its own samples; a dedicated `check-utility-skill-currency` would extend to SKILL.md + EXAMPLE.md content-level references.
 
-### P2 (consider for v2.12.0–v2.13.0)
+### P2 (consider for v2.12.0 to v2.13.0)
 
 **G4: Link checking in docs**
 
@@ -455,7 +455,7 @@ graph TD
 - G2 partially closed by F-31, fully closed if F-36 is added
 - G3 partially closed by F-32
 
-**Six nice-to-have improvements** (G4–G9). none are release-blocking; candidates for v2.12.0–v2.13.0 hardening passes.
+**Six nice-to-have improvements** (G4 to G9). none are release-blocking; candidates for v2.12.0 to v2.13.0 hardening passes.
 
 **Next audit recommended**: post-v2.12.0 tag, to evaluate whether F-31/F-32/F-33/F-36 adequately close G1/G2/G3 and whether any new gaps surface from the sample-automation changes.
 
@@ -479,4 +479,4 @@ No scripts were executed as part of this audit. it is a static review of configu
 
 | Date | Change |
 |------|--------|
-| 2026-04-18 | Initial CI audit authored at post-v2.11.0 time. Static review of scripts/ and .github/workflows/. Gaps G1–G9 identified; G1–G3 already in v2.12.0 backlog via F-31/F-32/F-33. |
+| 2026-04-18 | Initial CI audit authored at post-v2.11.0 time. Static review of scripts/ and .github/workflows/. Gaps G1 to G9 identified; G1 to G3 already in v2.12.0 backlog via F-31/F-32/F-33. |

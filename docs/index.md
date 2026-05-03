@@ -245,7 +245,7 @@ Follow three fictional companies through the complete product lifecycle - from d
 |----------|----------|--------|
 | [Feature Kickoff](workflows/feature-kickoff.md) | New features | problem-statement → hypothesis → prd → user-stories → launch-checklist |
 | [Lean Startup](workflows/lean-startup.md) | Rapid validation | hypothesis → experiment-design → experiment-results → pivot-decision |
-| [Triple Diamond](workflows/triple-diamond.md) | Major initiatives | All 25 phase skills across 6 phases |
+| [Triple Diamond](workflows/triple-diamond.md) | Major initiatives | All 26 phase skills across 6 phases |
 | [Customer Discovery](workflows/customer-discovery.md) | Research → problem | interview-synthesis → jtbd-canvas → opportunity-tree → problem-statement |
 | [Sprint Planning](workflows/sprint-planning.md) | Sprint-ready stories | refinement-notes → user-stories → edge-cases |
 | [Product Strategy](workflows/product-strategy.md) | Strategic framing | competitive-analysis → stakeholder-summary → opportunity-tree → solution-brief → adr |
@@ -259,7 +259,8 @@ Follow three fictional companies through the complete product lifecycle - from d
 
 | Version | Date | Highlights |
 |---------|------|-----------|
-| **[v2.11.1](releases/Release_v2.11.1.md)** | 2026-04-22 | skills.sh CLI compatibility patch: unblocks `npx skills add product-on-purpose/pm-skills`; lint hardening; em-dash sweep completion |
+| **[v2.12.0](releases/Release_v2.12.0.md)** | 2026-05-03 | OKR Skills Launch: `foundation-okr-writer` + `measure-okr-grader` with canonical type and indicator-class enums; 38 to 40 skills |
+| [v2.11.1](releases/Release_v2.11.1.md) | 2026-04-22 | skills.sh CLI compatibility patch: unblocks `npx skills add product-on-purpose/pm-skills`; lint hardening; em-dash sweep completion |
 | **[v2.11.0](releases/Release_v2.11.0.md)** | 2026-04-18 | Meeting Skills Family: 5 foundation skills + canonical contract + enforcing CI; lean-canvas; 32 to 38 skills |
 | [v2.10.2](releases/Release_v2.10.2.md) | 2026-04-14 | Manifest drift fix + JSON count CI extension |
 | [v2.10.1](releases/Release_v2.10.1.md) | 2026-04-13 | Post-v2.10.0 polish: dynamic skill-page counts, backlog spec drafts |

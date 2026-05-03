@@ -6,7 +6,7 @@
 npx skills add product-on-purpose/pm-skills
 ```
 
-Installs all 38 skills into your agent's default skills directory. Works with Claude Code, Cursor, GitHub Copilot, Cline, and any agent supported by the open [`skills` CLI](https://github.com/vercel-labs/skills). Shipped in v2.11.1 and now the recommended install path.
+Installs all 40 skills into your agent's default skills directory. Works with Claude Code, Cursor, GitHub Copilot, Cline, and any agent supported by the open [`skills` CLI](https://github.com/vercel-labs/skills). Shipped in v2.11.1 and now the recommended install path.
 
 **Alternative: Clone-based Quick Start (3 steps)**
 
@@ -45,7 +45,7 @@ Welcome to PM-Skills! This guide will help you understand what this repository o
 
 ## What is PM-Skills?
 
-**PM-Skills** is an open-source collection of 38 product management skills that teach AI assistants how to create professional PM documents. The current repo includes 25 phase skills, 7 foundation skills, and 6 utility skills. Think of it as a playbook that transforms generic AI responses into polished, consistent PM artifacts.
+**PM-Skills** is an open-source collection of 40 product management skills that teach AI assistants how to create professional PM documents. The current repo includes 26 phase skills, 8 foundation skills, and 6 utility skills. Think of it as a playbook that transforms generic AI responses into polished, consistent PM artifacts.
 
 ### The Problem It Solves
 
@@ -65,7 +65,7 @@ AI: *Produces a comprehensive PRD with problem statement, success metrics,
 
 ### What You Get
 
-- **38 skills in `skills/`** covering the PM lifecycle (25 phase skills + 7 foundation skills + 6 utility skills)
+- **40 skills in `skills/`** covering the PM lifecycle (26 phase skills + 8 foundation skills + 6 utility skills)
 - **Professional templates** based on industry best practices
 - **Real-world examples** showing what good looks like
 - **Works with any AI assistant** (Claude, ChatGPT, Copilot, etc.)
@@ -220,7 +220,7 @@ Claude Code discovers the registered skill set via `AGENTS.md` and command defin
 
 #### Available Commands
 
-The repo currently ships 39 command markdown files: 32 skill commands plus 7 workflow commands.
+The repo currently ships 47 command markdown files: 40 skill commands plus 7 workflow commands.
 
 | Phase | Commands |
 |-------|----------|
@@ -272,7 +272,7 @@ git submodule add https://github.com/product-on-purpose/pm-skills.git .pm-skills
 #### How It Works
 
 Modern AI coding assistants discover skills through the `AGENTS.md` file at the repository root. This file:
-- Lists all 32 registered skills with paths and descriptions
+- Lists all 40 registered skills with paths and descriptions
 - Provides workflows
 - Documents available commands
 
@@ -620,7 +620,7 @@ Workflows are pre-defined sequences of skills for common PM processes.
 
 **Use when:** Comprehensive product development
 
-**Skills included:** All 25 phase skills across 6 phases
+**Skills included:** All 26 phase skills across 6 phases
 
 ### Additional Workflows (v2.9.0)
 

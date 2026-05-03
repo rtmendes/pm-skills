@@ -128,7 +128,7 @@ git clone https://github.com/product-on-purpose/pm-skills.git && cd pm-skills
 <details open>
 <summary>v2.11.1 - skills.sh CLI Compatibility Patch</summary>
 
-- **Install in one command**: `npx skills add product-on-purpose/pm-skills` now installs all 38 skills through the open [`skills` CLI](https://github.com/vercel-labs/skills) and the [skills.sh directory](https://skills.sh). Previously broken for 6 foundation skills due to a YAML-frontmatter quirk.
+- **Install in one command (v2.11.1)**: `npx skills add product-on-purpose/pm-skills` now installs all 38 skills through the open [`skills` CLI](https://github.com/vercel-labs/skills) and the [skills.sh directory](https://skills.sh). Previously broken for 6 foundation skills due to a YAML-frontmatter quirk.
 - **6 foundation SKILL.md files fixed**: leading HTML attribution comment removed (it was breaking strict YAML parsers). Attribution preserved via the identical comment right after the frontmatter.
 - **`foundation-meeting-synthesize`**: description reworded to remove inline `: ` that was truncating it under strict YAML; version 1.0.0 to 1.0.1.
 - **25 stale tracked files removed** from `.claude/skills/` (pre-v1 personal-setup relics that were shipping as phantom bonus skills on install).
@@ -136,7 +136,7 @@ git clone https://github.com/product-on-purpose/pm-skills.git && cd pm-skills
 - **README install surface**: new `npx skills add` one-liner at the top of Getting Started + skills.sh badge + Installation Options table row.
 - **Distribution plan**: six-phase skills.sh submission approach documented at [`docs/internal/distribution/2026-04-22_skills-sh.md`](docs/internal/distribution/2026-04-22_skills-sh.md). Phases 0 through 3 complete with this release; Phase 5 (soft-launch for install telemetry) is a post-release workstream.
 - **Em-dash sweep completion**: 376 tracked files, 5,805 em-dash characters replaced per the 2026-04-13 standing style rule.
-- **Stale skill-count reconciliation**: 8 current-state references to `27 skills` or `31 skills` updated to `38 skills` across 5 files. Historical per-release snapshots in this section preserved as accurate records.
+- **Stale skill-count reconciliation (v2.11.1)**: 8 current-state references to `27 skills` or `31 skills` updated to `38 skills` across 5 files. Historical per-release snapshots in this section preserved as accurate records.
 - No behavioral changes to any skill. Safe patch upgrade.
 - Release note: [`docs/releases/Release_v2.11.1.md`](docs/releases/Release_v2.11.1.md).
 
@@ -156,7 +156,7 @@ git clone https://github.com/product-on-purpose/pm-skills.git && cd pm-skills
 - **New end-user guide**: [Using the Meeting Skills Family](docs/guides/using-meeting-skills.md) with mermaid diagrams covering skill chain, go-mode flow, and family lifecycle.
 - **Sample library**: 94 → 120 outputs; 15 thread-aligned samples (3 per meeting skill × storevine/brainshelf/workbench) added.
 - **Process improvement**: Pre-release checklist now requires a Phase 0 Adversarial Review Loop (Codex adversarial review → resolution → re-run until findings stabilize below IMPORTANT). Codified from v2.11.0 experience where Round 2 of review surfaced 6 additional IMPORTANT issues in the Round 1 resolution pass itself.
-- Repo now ships 38 skills (25 phase + 7 foundation + 6 utility), 45 command docs, and 9 workflows.
+- v2.11.0: Repo now ships 38 skills (25 phase + 7 foundation + 6 utility), 45 command docs, and 9 workflows.
 - Release note: [`docs/releases/Release_v2.11.0.md`](docs/releases/Release_v2.11.0.md).
 
 </details>
@@ -166,9 +166,9 @@ git clone https://github.com/product-on-purpose/pm-skills.git && cd pm-skills
 - **New skill**: `utility-mermaid-diagrams` (`/mermaid-diagrams`) . 15 diagram types with dual-lens navigation (type catalog + PM use-case guide), dedicated syntax validity reference, and worked examples.
 - **New skill**: `utility-slideshow-creator` (`/slideshow-creator`) . generates professional presentations from JSON deck specs; 18 slide types with dark/light variants and Google Slides compatibility.
 - **New skill**: `utility-update-pm-skills` (`/update-pm-skills`) . checks for newer releases, previews changes with `--report-only`, and applies updates with confirmation. Includes backup, value-delta report, and post-update smoke test.
-- **Sample library**: 84 → 91 outputs, now covering all 32 skills.
+- **Sample library (v2.10.x)**: 84 → 91 outputs, now covering all 32 skills.
 - **Tooling**: `generate-skill-pages.py` now computes skill/command/workflow counts dynamically, eliminating stale-count drift.
-- Repo now ships 32 skills, 39 command docs, and 9 workflows.
+- v2.10.x: Repo now ships 32 skills, 39 command docs, and 9 workflows.
 - v2.10.1 patch: backlog spec drafts for 10 upcoming skills, generated docs/skills/ pages, F-25 scope moved to agent-config-toolkit.
 - v2.10.2 patch: corrected plugin / marketplace manifest skill counts (29 → 32) to match repo state; extended `check-count-consistency` CI to scan JSON manifests and closed an off-by-one in its threshold comparison; fixed README "10 workflows" to "9 workflows".
 
@@ -183,7 +183,7 @@ git clone https://github.com/product-on-purpose/pm-skills.git && cd pm-skills
 - **New script**: `scripts/generate-workflow-pages.py` . generates docs site pages from source workflows
 - **URL redirects** for old `/bundles/*` doc site paths via `mkdocs-redirects`
 - **Terminology guard**: `scripts/check-stale-bundle-refs.sh/.ps1` prevents regression
-- Repo now ships 31 skills, 38 command docs, and 9 workflows.
+- v2.9.0: Repo now ships 31 skills, 38 command docs, and 9 workflows.
 - Release note: [`docs/releases/Release_v2.9.0.md`](docs/releases/Release_v2.9.0.md).
 
 </details>
@@ -195,7 +195,7 @@ git clone https://github.com/product-on-purpose/pm-skills.git && cd pm-skills
 - **New CI**: `validate-skill-history` and `validate-skills-manifest` advisory scripts for skill versioning governance.
 - **New guide**: `docs/pm-skill-lifecycle.md` . workflow patterns for the Create → Validate → Iterate lifecycle.
 - **Governance**: `docs/internal/skill-versioning.md` . SemVer rules, HISTORY.md contract, skills-manifest.yaml format.
-- Repo now ships 29 skills, 30 command docs, and 3 workflows.
+- v2.8.0: Repo now ships 29 skills, 30 command docs, and 3 workflows.
 - Release note: [`docs/releases/Release_v2.8.0.md`](docs/releases/Release_v2.8.0.md).
 
 </details>
@@ -207,7 +207,7 @@ git clone https://github.com/product-on-purpose/pm-skills.git && cd pm-skills
 - **Enhanced CI**: extended frontmatter linter, AGENTS.md sync validator, MCP impact detection.
 - **Release packaging**: `docs/internal/**` excluded from published ZIPs while staying tracked in-repo.
 - **Documentation**: new `docs/pm-skill-anatomy.md` guide, comprehensive public docs refresh.
-- Repo now ships 27 skills, 28 command docs, and 3 workflows.
+- v2.7.0: Repo now ships 27 skills, 28 command docs, and 3 workflows.
 - Release note: [`docs/releases/Release_v2.7.0.md`](docs/releases/Release_v2.7.0.md).
 
 </details>
@@ -266,7 +266,7 @@ Every time you ask an AI to help with product management, you start from zero. G
 
 ### Key Features
 
-- ✅ **32 Production-Ready Skills** covering the complete product lifecycle (25 phase skills + 1 foundation skill + 6 utility skills)
+- ✅ **40 Production-Ready Skills** covering the complete product lifecycle (26 phase skills + 8 foundation skills + 6 utility skills)
 - ✅ **Triple Diamond Framework** organizing Discover, Define, Develop, Deliver, Measure, and Iterate phases
 - ✅ **9 Workflows** for common PM processes (Feature Kickoff, Lean Startup, Triple Diamond, and 6 more)
 - ✅ **Slash Commands** for Claude Code users-instant access to every skill
@@ -389,7 +389,7 @@ PM-Skills follows the **[Agent Skills Specification](https://agentskills.io/spec
 - You're using Claude Desktop, Cursor, or any MCP client
 - You want programmatic tool access without managing files
 
-Both approaches give you access to the same 32 production-ready PM skills (25 phase skills + 1 foundation skill + 6 utility skills).
+Both approaches give you access to the same 40 production-ready PM skills (26 phase skills + 8 foundation skills + 6 utility skills).
 
 See the [Ecosystem Overview](docs/reference/ecosystem.md) for a detailed comparison.
 
@@ -399,7 +399,7 @@ See the [Ecosystem Overview](docs/reference/ecosystem.md) for a detailed compari
 
 ## Getting Started
 
-**Fastest path:** Install all 38 skills into your agent with one command, using the open [`skills` CLI](https://github.com/vercel-labs/skills):
+**Fastest path:** Install all 40 skills into your agent with one command, using the open [`skills` CLI](https://github.com/vercel-labs/skills):
 
 ```bash
 npx skills add product-on-purpose/pm-skills
@@ -456,7 +456,7 @@ cd pm-skills
 npx skills add product-on-purpose/pm-skills
 ```
 
-Installs all 38 skills into your agent's default skills directory. Slash commands (`/prd`, `/hypothesis`, `/user-stories`, etc.) become available immediately. No clone, no sync helper.
+Installs all 40 skills into your agent's default skills directory. Slash commands (`/prd`, `/hypothesis`, `/user-stories`, etc.) become available immediately. No clone, no sync helper.
 
 **Alternative: clone the full repo** (gives you the sample library, library/skill-output-samples, internal docs, and workflows alongside the skills):
 
@@ -471,7 +471,7 @@ cd pm-skills
 /user-stories "Recurring tasks feature from PRD"
 ```
 
-All 38 skills are available as `/skill-name` commands. See [commands/](commands/) for the full list.
+All 40 skills are available as `/skill-name` commands. See [commands/](commands/) for the full list.
 
 Need `.claude/skills` for openskills or certain discovery flows? After cloning, run:
 
@@ -568,7 +568,7 @@ Both IDEs auto-discover skills via `AGENTS.md`:
 git clone https://github.com/product-on-purpose/pm-skills.git
 ```
 
-Open the folder in Cursor or Windsurf. The AI assistant will automatically discover and can use all 38 skills.
+Open the folder in Cursor or Windsurf. The AI assistant will automatically discover and can use all 40 skills.
 
 </details>
 
@@ -624,7 +624,7 @@ The open [`skills` CLI](https://github.com/vercel-labs/skills) from Vercel Labs 
 npx skills add product-on-purpose/pm-skills
 ```
 
-This clones pm-skills, scans the `skills/` directory, and installs all 38 skills into your agent's default skills directory. Supported agents include Claude Code, Cursor, GitHub Copilot, Cline, and others. Discoverable via the [skills.sh directory](https://skills.sh/product-on-purpose/pm-skills).
+This clones pm-skills, scans the `skills/` directory, and installs all 40 skills into your agent's default skills directory. Supported agents include Claude Code, Cursor, GitHub Copilot, Cline, and others. Discoverable via the [skills.sh directory](https://skills.sh/product-on-purpose/pm-skills).
 
 Telemetry is anonymous and opt-out via `DISABLE_TELEMETRY=1` or `DO_NOT_TRACK=1` in your environment.
 
@@ -679,7 +679,7 @@ skills/{phase-skill}/
 
 ### The Skills
 
-PM-Skills covers the complete product lifecycle using the **Triple Diamond** framework (25 phase skills) plus foundation and utility capabilities:
+PM-Skills covers the complete product lifecycle using the **Triple Diamond** framework (26 phase skills) plus foundation and utility capabilities:
 
 #### 🔍 Discover - *Find the right problem*
 
@@ -797,7 +797,7 @@ Each workflow provides a **sequence of skills** with handoff guidance between st
 | ------------------------------------------------------- | ----------------- | ---------------------------------------------------------------------- |
 | **[Feature Kickoff](_workflows/feature-kickoff.md)** | New features      | problem-statement → hypothesis → prd → user-stories → launch-checklist |
 | **[Lean Startup](_workflows/lean-startup.md)**       | Rapid validation  | hypothesis → experiment-design → experiment-results → pivot-decision   |
-| **[Triple Diamond](_workflows/triple-diamond.md)**   | Major initiatives | Full 25 phase-skill flow across 6 phases                                |
+| **[Triple Diamond](_workflows/triple-diamond.md)**   | Major initiatives | Full 26 phase-skill flow across 6 phases                                |
 | **[Customer Discovery](_workflows/customer-discovery.md)** | Research synthesis | Transform raw research into a validated problem |
 | **[Sprint Planning](_workflows/sprint-planning.md)** | Sprint prep | Prepare sprint-ready stories from a backlog |
 | **[Product Strategy](_workflows/product-strategy.md)** | Strategic initiatives | Frame a major strategic initiative |
@@ -830,7 +830,7 @@ Build → Measure → Learn cycle with hypothesis, experiments, and pivot decisi
 **For major initiatives**, use the [Triple Diamond](_workflows/triple-diamond.md) workflow:
 
 ```
-Complete product development across all 6 phases and 25 phase skills
+Complete product development across all 6 phases and 26 phase skills
 ```
 
 For detailed skill documentation and examples, see the [skills/](skills/) directory.
@@ -845,7 +845,7 @@ For detailed skill documentation and examples, see the [skills/](skills/) direct
 
 ```
 pm-skills/
-├── skills/                     # 38 PM skills (25 phase + 7 foundation + 6 utility)
+├── skills/                     # 40 PM skills (26 phase + 8 foundation + 6 utility)
 ├── commands/                   # Slash commands (45) mapping to skills/workflows
 ├── _workflows/                 # 9 workflows: feature-kickoff, lean-startup, triple-diamond, and 6 more
 ├── library/                    # Sample output library (skill-output-samples) and related corpus docs
@@ -1045,7 +1045,7 @@ Please try to create bug reports that are:
 ## FAQ
 
 <details>
-<summary><strong>Do I need to install all 38 skills?</strong></summary>
+<summary><strong>Do I need to install all 40 skills?</strong></summary>
 
 No! You can use individual skills as needed. Each skill is self-contained and works independently. If you only need PRDs, just reference the `skills/deliver-prd/` skill. The workflows are optional guides, not requirements.
 
@@ -1097,7 +1097,7 @@ Slash commands (like `/prd` or `/hypothesis`) are shortcuts that invoke the corr
 <details>
 <summary><strong>What's the difference between pm-skills and pm-skills-mcp?</strong></summary>
 
-**pm-skills** (this repo) is the source skill library with all 38 PM skills as markdown files. It's best for Claude Code slash commands, file browsing, and customization.
+**pm-skills** (this repo) is the source skill library with all 40 PM skills as markdown files. It's best for Claude Code slash commands, file browsing, and customization.
 
 **pm-skills-mcp** wraps these same skills in an MCP server for programmatic access. It's best for Claude Desktop, Cursor, and any MCP-compatible client.
 

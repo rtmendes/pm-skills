@@ -429,7 +429,7 @@ Context from user: $ARGUMENTS
 
     ### Existing skills checked
 
-    All 38 skills reviewed. Closest matches:
+    All 40 skills reviewed. Closest matches:
 
     - `deliver-release-notes` . produces external-facing release announcements
     - `deliver-launch-checklist` . tracks cross-functional launch readiness

@@ -193,7 +193,7 @@ CI-only automation scripts live in `.github/scripts/` (for example, `validate-mc
 ### check-count-consistency.sh / check-count-consistency.ps1
 **Purpose:** Detect stale hardcoded skill/command/workflow counts in documentation.
 
-**Why:** Docs pages reference counts like "38 skills" which go stale when skills are added. This detects mismatches automatically.
+**Why:** Docs pages reference hardcoded counts which go stale when skills are added or removed. This detects mismatches automatically.
 
 **Use when:** After adding skills, commands, or workflows; before release; in CI (advisory).
 
